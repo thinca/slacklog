@@ -1,0 +1,1 @@
+let tailSpaces = '(\s|　)+$'
