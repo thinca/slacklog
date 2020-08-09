@@ -1,0 +1,1 @@
+return /\b(wip|do not merge|work in progress)\b/i.test(string)
