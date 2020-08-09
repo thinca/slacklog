@@ -1,0 +1,12 @@
+class Hoge {
+    public readonly hoge: string
+    public setHoge(str: string) {
+        Object.defineProperty(this, "hoge", {
+            get: () => str
+        })
+    }
+}
+
+const a = new Hoge()
+a.setHoge("hoge")
+console.log(a.hoge)
