@@ -1,0 +1,3771 @@
+<!doctype html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>vim-jp &raquo; vim-jp.slack.com log - &#35update - 2017年06月</title>
+<link rel="stylesheet" href="/slacklog/assets/css/site.css" type="text/css" />
+<link rel="stylesheet" href="https://unpkg.com/@primer/css/dist/primer.css" type="text/css" />
+<link rel="stylesheet" href="https://unpkg.com/prismjs@1.20.0/themes/prism-tomorrow.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="//vim-jp.org/rss.xml" />
+<link rel="canonical" href="/slacklog/C0NUFLFU3/2017/06/" />
+<link rel="shortcut icon" type="image/x-icon" href="/assets/images/favicon.ico" />
+<link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://unpkg.com/prismjs@1.20.0/components/prism-core.min.js"></script>
+<script src="https://unpkg.com/prismjs@1.20.0/plugins/autoloader/prism-autoloader.min.js"></script>
+<script src="/slacklog/assets/javascripts/slacklog.js"></script>
+</head>
+<body>
+  <div class="body">
+    <div id="content">
+      <!-- header -->
+      <div class="pagehead ml-3">
+        <h1>
+          <span class="author">
+            <a href="//vim-jp.org" class="url fn" >vim-jp</a>
+          </span>
+          <span class="path-divider">/</span>
+          <a href="/slacklog">slacklog</a>
+        </h1>
+      </div>
+      <!-- /header -->
+      <div>
+        <div class="m-3">
+          <nav aria-label="Breadcrumb">
+            <ol>
+              <li class="breadcrumb-item f4"><a href="/slacklog/C0NUFLFU3/">&#35update</a></li>
+              <li class="breadcrumb-item f4" aria-current="page">2017年06月</li>
+            </ol>
+          </nav>
+          <h4 class="text-gray pb-2 border-bottom"></h4>
+        </div>
+        <div class="clearfix m-3" id="ts-1496581998.414720">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://a.slack-edge.com/8f51/img/services/ifttt_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">IFTTT</span>
+              <a href="#ts-1496581998.414720">4日 22:13:18</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C0NUFLFU3/p1496581998414720" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                
+              </div>
+
+              <div>
+              </div>
+            <div class="mt-2 border p-2" id="ts-1496581998.414720">
+              
+    <div class="d-flex">
+        <div class="flex-self-baseline f4 ml-2">
+          <span class="Label Label--outline">
+            <a href="https://github.com/vim/vim/commit/45e5fd135da5710f24a1acc142692f120f8b0b78" target="_blank" rel="noopener noreferrer">patch 8.0.0607: after :bwipe  :new bufref might still be valid</a>
+          </span>
+        </div>
+    </div>
+      <div class="d-flex">
+        <div class="mt-2"><br><br>patch 8.0.0607: after :bwipe + :new bufref might still be valid<br><br>Problem:    When creating a bufref, then using :bwipe and :new it might get<br>            the same memory and bufref_valid() returns true.<br>Solution:   Add br_fnum to check the buffer number didn&#39;t change.<br></div>
+      </div>
+      <div class="d-flex">
+        <div class="mt-2">
+          <img src="https://ifttt.com/images/no_image_card.png" width="400" height="247" alt="patch 8.0.0607: after :bwipe  :new bufref might still be valid" />
+        </div>
+      </div>
+
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1496583487.486429">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://a.slack-edge.com/8f51/img/services/ifttt_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">IFTTT</span>
+              <a href="#ts-1496583487.486429">4日 22:38:07</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C0NUFLFU3/p1496583487486429" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                
+              </div>
+
+              <div>
+              </div>
+            <div class="mt-2 border p-2" id="ts-1496583487.486429">
+              
+    <div class="d-flex">
+        <div class="flex-self-baseline f4 ml-2">
+          <span class="Label Label--outline">
+            <a href="https://github.com/vim/vim/commit/a3921f48c6b31a035c80fda49925dd3b42df0dec" target="_blank" rel="noopener noreferrer">patch 8.0.0608: cannot manipulate other than the current quickfix list</a>
+          </span>
+        </div>
+    </div>
+      <div class="d-flex">
+        <div class="mt-2"><br><br>patch 8.0.0608: cannot manipulate other than the current quickfix list<br><br>Problem:    Cannot manipulate other than the current quickfix list.<br>Solution:   Pass the list index to quickfix functions. (Yegappan Lakshmanan)<br></div>
+      </div>
+      <div class="d-flex">
+        <div class="mt-2">
+          <img src="https://ifttt.com/images/no_image_card.png" width="400" height="247" alt="patch 8.0.0608: cannot manipulate other than the current quickfix list" />
+        </div>
+      </div>
+
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1496583487.486447">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://a.slack-edge.com/8f51/img/services/ifttt_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">IFTTT</span>
+              <a href="#ts-1496583487.486447">4日 22:38:07</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C0NUFLFU3/p1496583487486447" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                
+              </div>
+
+              <div>
+              </div>
+            <div class="mt-2 border p-2" id="ts-1496583487.486447">
+              
+    <div class="d-flex">
+        <div class="flex-self-baseline f4 ml-2">
+          <span class="Label Label--outline">
+            <a href="https://github.com/vim/vim/commit/28a8193e3113f676f89fb6312b099d849df881d3" target="_blank" rel="noopener noreferrer">patch 8.0.0609: some people still don&#39;t know how to quit</a>
+          </span>
+        </div>
+    </div>
+      <div class="d-flex">
+        <div class="mt-2"><br><br>patch 8.0.0609: some people still don&#39;t know how to quit<br><br>Problem:    For some people the hint about quitting is not sufficient.<br>Solution:   Put &lt;Enter&gt; separately.  Also use &#34;:qa!&#34; to get out even when<br>            there are changes.<br></div>
+      </div>
+      <div class="d-flex">
+        <div class="mt-2">
+          <img src="https://ifttt.com/images/no_image_card.png" width="400" height="247" alt="patch 8.0.0609: some people still don&#39;t know how to quit" />
+        </div>
+      </div>
+
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1496583488.486462">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://a.slack-edge.com/8f51/img/services/ifttt_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">IFTTT</span>
+              <a href="#ts-1496583488.486462">4日 22:38:08</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C0NUFLFU3/p1496583488486462" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                
+              </div>
+
+              <div>
+              </div>
+            <div class="mt-2 border p-2" id="ts-1496583488.486462">
+              
+    <div class="d-flex">
+        <div class="flex-self-baseline f4 ml-2">
+          <span class="Label Label--outline">
+            <a href="https://github.com/vim/vim/commit/4b974d54434b8020771be7225da94648e9ec961a" target="_blank" rel="noopener noreferrer">patch 8.0.0610: the screen is redrawn when default &#39;background&#39; is de</a>
+          </span>
+        </div>
+    </div>
+      <div class="d-flex">
+        <div class="mt-2"><br><br>patch 8.0.0610: the screen is redrawn when default &#39;background&#39; is detected<br><br>Problem:    The screen is redrawn when t_BG is set and used to detect the<br>            value for &#39;background&#39;.<br>Solution:   Don&#39;t redraw when the value of &#39;background&#39; didn&#39;t change.<br></div>
+      </div>
+      <div class="d-flex">
+        <div class="mt-2">
+          <img src="https://ifttt.com/images/no_image_card.png" width="400" height="247" alt="patch 8.0.0610: the screen is redrawn when default &#39;background&#39; is de" />
+        </div>
+      </div>
+
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1496584104.515849">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://a.slack-edge.com/8f51/img/services/ifttt_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">IFTTT</span>
+              <a href="#ts-1496584104.515849">4日 22:48:24</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C0NUFLFU3/p1496584104515849" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                
+              </div>
+
+              <div>
+              </div>
+            <div class="mt-2 border p-2" id="ts-1496584104.515849">
+              
+    <div class="d-flex">
+        <div class="flex-self-baseline f4 ml-2">
+          <span class="Label Label--outline">
+            <a href="https://github.com/vim/vim/commit/976787d1f31451ca7a88e774a03e6c24ddc67876" target="_blank" rel="noopener noreferrer">patch 8.0.0611: the screen is not redrawn after sending t_u7</a>
+          </span>
+        </div>
+    </div>
+      <div class="d-flex">
+        <div class="mt-2"><br><br>patch 8.0.0611: the screen is not redrawn after sending t_u7<br><br>Problem:    When t_u7 is sent a few characters in the second screen line are<br>            overwritten and not redrawn later. (Rastislav Barlik)<br>Solution:   Move redrawing the screen to after overwriting the characters.<br></div>
+      </div>
+      <div class="d-flex">
+        <div class="mt-2">
+          <img src="https://ifttt.com/images/no_image_card.png" width="400" height="247" alt="patch 8.0.0611: the screen is not redrawn after sending t_u7" />
+        </div>
+      </div>
+
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1496591615.913427">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://a.slack-edge.com/8f51/img/services/ifttt_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">IFTTT</span>
+              <a href="#ts-1496591615.913427">5日 00:53:35</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C0NUFLFU3/p1496591615913427" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                
+              </div>
+
+              <div>
+              </div>
+            <div class="mt-2 border p-2" id="ts-1496591615.913427">
+              
+    <div class="d-flex">
+        <div class="flex-self-baseline f4 ml-2">
+          <span class="Label Label--outline">
+            <a href="https://github.com/vim/vim/commit/ce876aaa9a250a5a0d0e34b3a2625e51cf9bf5bb" target="_blank" rel="noopener noreferrer">patch 8.0.0612: pack dirs are added to &#39;runtimepath&#39; too late</a>
+          </span>
+        </div>
+    </div>
+      <div class="d-flex">
+        <div class="mt-2"><br><br>patch 8.0.0612: pack dirs are added to &#39;runtimepath&#39; too late<br><br>Problem:    Package directories are added to &#39;runtimepath&#39; only after loading<br>            non-package plugins.<br>Solution:   Split off the code to add package directories to &#39;runtimepath&#39;.<br>            (Ingo Karkat, closes #1680)<br></div>
+      </div>
+      <div class="d-flex">
+        <div class="mt-2">
+          <img src="https://ifttt.com/images/no_image_card.png" width="400" height="247" alt="patch 8.0.0612: pack dirs are added to &#39;runtimepath&#39; too late" />
+        </div>
+      </div>
+
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1496601790.496281">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://a.slack-edge.com/8f51/img/services/ifttt_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">IFTTT</span>
+              <a href="#ts-1496601790.496281">5日 03:43:10</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C0NUFLFU3/p1496601790496281" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                
+              </div>
+
+              <div>
+              </div>
+            <div class="mt-2 border p-2" id="ts-1496601790.496281">
+              
+    <div class="d-flex">
+        <div class="flex-self-baseline f4 ml-2">
+          <span class="Label Label--outline">
+            <a href="https://github.com/vim/vim/commit/3e54569b17683318e0cb6693ab0024c2ad1e3e8f" target="_blank" rel="noopener noreferrer">patch 8.0.0613: the conf filetype is used before ftdetect from packages</a>
+          </span>
+        </div>
+    </div>
+      <div class="d-flex">
+        <div class="mt-2"><br><br>patch 8.0.0613: the conf filetype is used before ftdetect from packages<br><br>Problem:    The conf filetype detection is done before ftdetect scripts from<br>            packages that are added later.<br>Solution:   Add the FALLBACK argument to :setfiletype. (closes #1679,<br>            closes #1693)<br></div>
+      </div>
+      <div class="d-flex">
+        <div class="mt-2">
+          <img src="https://ifttt.com/images/no_image_card.png" width="400" height="247" alt="patch 8.0.0613: the conf filetype is used before ftdetect from packages" />
+        </div>
+      </div>
+
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1496601791.496336">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://a.slack-edge.com/8f51/img/services/ifttt_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">IFTTT</span>
+              <a href="#ts-1496601791.496336">5日 03:43:11</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C0NUFLFU3/p1496601791496336" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                
+              </div>
+
+              <div>
+              </div>
+            <div class="mt-2 border p-2" id="ts-1496601791.496336">
+              
+    <div class="d-flex">
+        <div class="flex-self-baseline f4 ml-2">
+          <span class="Label Label--outline">
+            <a href="https://github.com/vim/vim/commit/863e80b4451b5102b41bebf9ddca3a420de746fa" target="_blank" rel="noopener noreferrer">patch 8.0.0614: float2nr() is not exactly right</a>
+          </span>
+        </div>
+    </div>
+      <div class="d-flex">
+        <div class="mt-2"><br><br>patch 8.0.0614: float2nr() is not exactly right<br><br>Problem:    float2nr() is not exactly right.<br>Solution:   Make float2nr() more accurate.  Turn test64 into a new style test.<br>            (Hirohito Higashi, closes #1688)<br></div>
+      </div>
+      <div class="d-flex">
+        <div class="mt-2">
+          <img src="https://ifttt.com/images/no_image_card.png" width="400" height="247" alt="patch 8.0.0614: float2nr() is not exactly right" />
+        </div>
+      </div>
+
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1496609046.904609">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://a.slack-edge.com/8f51/img/services/ifttt_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">IFTTT</span>
+              <a href="#ts-1496609046.904609">5日 05:44:06</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C0NUFLFU3/p1496609046904609" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                
+              </div>
+
+              <div>
+              </div>
+            <div class="mt-2 border p-2" id="ts-1496609046.904609">
+              
+    <div class="d-flex">
+        <div class="flex-self-baseline f4 ml-2">
+          <span class="Label Label--outline">
+            <a href="https://github.com/vim/vim/commit/bf15b8d78b22661db8b19d662b62bb9a061cdd37" target="_blank" rel="noopener noreferrer">patch 8.0.0615: using % with :hardcopy wrongly escapes spaces</a>
+          </span>
+        </div>
+    </div>
+      <div class="d-flex">
+        <div class="mt-2"><br><br>patch 8.0.0615: using % with :hardcopy wrongly escapes spaces<br><br>Problem:    Using % with :hardcopy wrongly escapes spaces. (Alexey Muranov)<br>Solution:   Expand % differently. (Christian Brabandt, closes #1682)<br></div>
+      </div>
+      <div class="d-flex">
+        <div class="mt-2">
+          <img src="https://ifttt.com/images/no_image_card.png" width="400" height="247" alt="patch 8.0.0615: using % with :hardcopy wrongly escapes spaces" />
+        </div>
+      </div>
+
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1496609047.904629">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://a.slack-edge.com/8f51/img/services/ifttt_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">IFTTT</span>
+              <a href="#ts-1496609047.904629">5日 05:44:07</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C0NUFLFU3/p1496609047904629" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                
+              </div>
+
+              <div>
+              </div>
+            <div class="mt-2 border p-2" id="ts-1496609047.904629">
+              
+    <div class="d-flex">
+        <div class="flex-self-baseline f4 ml-2">
+          <span class="Label Label--outline">
+            <a href="https://github.com/vim/vim/commit/1615b36b91b094263240d7b555283ddf33208f62" target="_blank" rel="noopener noreferrer">patch 8.0.0616: not always setting &#39;background&#39; correctly after :hi N</a>
+          </span>
+        </div>
+    </div>
+      <div class="d-flex">
+        <div class="mt-2"><br><br>patch 8.0.0616: not always setting &#39;background&#39; correctly after :hi Normal<br><br>Problem:    When setting the cterm background with &#34;:hi Normal&#34; the value of<br>            &#39;background&#39; may be set wrongly.<br>Solution:   Check that the color is less than 16.  Don&#39;t set &#39;background&#39; when<br>            it was set explicitly. (Lemonboy, closes #1710)<br></div>
+      </div>
+      <div class="d-flex">
+        <div class="mt-2">
+          <img src="https://ifttt.com/images/no_image_card.png" width="400" height="247" alt="patch 8.0.0616: not always setting &#39;background&#39; correctly after :hi N" />
+        </div>
+      </div>
+
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1496609047.904648">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://a.slack-edge.com/8f51/img/services/ifttt_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">IFTTT</span>
+              <a href="#ts-1496609047.904648">5日 05:44:07</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C0NUFLFU3/p1496609047904648" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                
+              </div>
+
+              <div>
+              </div>
+            <div class="mt-2 border p-2" id="ts-1496609047.904648">
+              
+    <div class="d-flex">
+        <div class="flex-self-baseline f4 ml-2">
+          <span class="Label Label--outline">
+            <a href="https://github.com/vim/vim/commit/763209c57bf50ae777f9c2929eeea01eff7ae6ee" target="_blank" rel="noopener noreferrer">patch 8.0.0617: hardcopy test hangs on MS-Windows</a>
+          </span>
+        </div>
+    </div>
+      <div class="d-flex">
+        <div class="mt-2"><br><br>patch 8.0.0617: hardcopy test hangs on MS-Windows<br><br>Problem:    Hardcopy test hangs on MS-Windows.<br>Solution:   Check the postscript feature is supported.<br></div>
+      </div>
+      <div class="d-flex">
+        <div class="mt-2">
+          <img src="https://ifttt.com/images/no_image_card.png" width="400" height="247" alt="patch 8.0.0617: hardcopy test hangs on MS-Windows" />
+        </div>
+      </div>
+
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1496666896.354063">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://a.slack-edge.com/8f51/img/services/ifttt_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">IFTTT</span>
+              <a href="#ts-1496666896.354063">5日 21:48:16</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C0NUFLFU3/p1496666896354063" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                
+              </div>
+
+              <div>
+              </div>
+            <div class="mt-2 border p-2" id="ts-1496666896.354063">
+              
+    <div class="d-flex">
+        <div class="flex-self-baseline f4 ml-2">
+          <span class="Label Label--outline">
+            <a href="https://github.com/vim/vim/commit/bb7943b7920ef2f88cb9b6f46c34c7946c370819" target="_blank" rel="noopener noreferrer">patch 8.0.0618: NFA regex engine handles [0-z] incorrectly</a>
+          </span>
+        </div>
+    </div>
+      <div class="d-flex">
+        <div class="mt-2"><br><br>patch 8.0.0618: NFA regex engine handles [0-z] incorrectly<br><br>Problem:    NFA regex engine handles [0-z] incorrectly.<br>Solution:   Return at the right point. (James McCoy, closes #1703)<br></div>
+      </div>
+      <div class="d-flex">
+        <div class="mt-2">
+          <img src="https://ifttt.com/images/no_image_card.png" width="400" height="247" alt="patch 8.0.0618: NFA regex engine handles [0-z] incorrectly" />
+        </div>
+      </div>
+
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1496666896.354142">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://a.slack-edge.com/8f51/img/services/ifttt_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">IFTTT</span>
+              <a href="#ts-1496666896.354142">5日 21:48:16</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C0NUFLFU3/p1496666896354142" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                
+              </div>
+
+              <div>
+              </div>
+            <div class="mt-2 border p-2" id="ts-1496666896.354142">
+              
+    <div class="d-flex">
+        <div class="flex-self-baseline f4 ml-2">
+          <span class="Label Label--outline">
+            <a href="https://github.com/vim/vim/commit/9472eec83c3f9c191814dc81dd82498c10b1fc9c" target="_blank" rel="noopener noreferrer">patch 8.0.0619: GUI gets stuck if timer uses feedkeys()</a>
+          </span>
+        </div>
+    </div>
+      <div class="d-flex">
+        <div class="mt-2"><br><br>patch 8.0.0619: GUI gets stuck if timer uses feedkeys()<br><br>Problem:    In the GUI, when a timer uses feedkeys(), it still waits for an<br>            event. (Raymond Ko)<br>Solution:   Check tb_change_cnt in one more place.<br></div>
+      </div>
+      <div class="d-flex">
+        <div class="mt-2">
+          <img src="https://ifttt.com/images/no_image_card.png" width="400" height="247" alt="patch 8.0.0619: GUI gets stuck if timer uses feedkeys()" />
+        </div>
+      </div>
+
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1496668411.711899">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://a.slack-edge.com/8f51/img/services/ifttt_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">IFTTT</span>
+              <a href="#ts-1496668411.711899">5日 22:13:31</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C0NUFLFU3/p1496668411711899" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                
+              </div>
+
+              <div>
+              </div>
+            <div class="mt-2 border p-2" id="ts-1496668411.711899">
+              
+    <div class="d-flex">
+        <div class="flex-self-baseline f4 ml-2">
+          <span class="Label Label--outline">
+            <a href="https://github.com/vim/vim/commit/6aa8cea46d4179b2617daae034063dd0d8054e35" target="_blank" rel="noopener noreferrer">Update runtime files.</a>
+          </span>
+        </div>
+    </div>
+      <div class="d-flex">
+        <div class="mt-2"><br><br>Update runtime files.<br></div>
+      </div>
+      <div class="d-flex">
+        <div class="mt-2">
+          <img src="https://ifttt.com/images/no_image_card.png" width="400" height="247" alt="Update runtime files." />
+        </div>
+      </div>
+
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1496668412.712100">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://a.slack-edge.com/8f51/img/services/ifttt_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">IFTTT</span>
+              <a href="#ts-1496668412.712100">5日 22:13:32</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C0NUFLFU3/p1496668412712100" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                
+              </div>
+
+              <div>
+              </div>
+            <div class="mt-2 border p-2" id="ts-1496668412.712100">
+              
+    <div class="d-flex">
+        <div class="flex-self-baseline f4 ml-2">
+          <span class="Label Label--outline">
+            <a href="https://github.com/vim/vim/commit/b463e8d999ec812d656876f313efbeaeed663b45" target="_blank" rel="noopener noreferrer">patch 8.0.0620: checking for HAVE_GTK_MULTIHEAD is not needed</a>
+          </span>
+        </div>
+    </div>
+      <div class="d-flex">
+        <div class="mt-2"><br><br>patch 8.0.0620: checking for HAVE_GTK_MULTIHEAD is not needed<br><br>Problem:    Since we only support GTK versions that have it, the ckeck for<br>            HAVE_GTK_MULTIHEAD is no longer needed.<br>Solution:   Remove HAVE_GTK_MULTIHEAD. (Kazunobu Kuriyama)<br></div>
+      </div>
+      <div class="d-flex">
+        <div class="mt-2">
+          <img src="https://ifttt.com/images/no_image_card.png" width="400" height="247" alt="patch 8.0.0620: checking for HAVE_GTK_MULTIHEAD is not needed" />
+        </div>
+      </div>
+
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1496671713.699746">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://a.slack-edge.com/8f51/img/services/ifttt_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">IFTTT</span>
+              <a href="#ts-1496671713.699746">5日 23:08:33</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C0NUFLFU3/p1496671713699746" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                
+              </div>
+
+              <div>
+              </div>
+            <div class="mt-2 border p-2" id="ts-1496671713.699746">
+              
+    <div class="d-flex">
+        <div class="flex-self-baseline f4 ml-2">
+          <span class="Label Label--outline">
+            <a href="https://github.com/vim/vim/commit/8ad80dea089ffeb1a845199c013e9bb4be1cd22e" target="_blank" rel="noopener noreferrer">patch 8.0.0621: :stag does not respect &#39;switchbuf&#39;</a>
+          </span>
+        </div>
+    </div>
+      <div class="d-flex">
+        <div class="mt-2"><br><br>patch 8.0.0621: :stag does not respect &#39;switchbuf&#39;<br><br>Problem:    The &#34;:stag&#34; command does not respect &#39;switchbuf&#39;.<br>Solution:   Check &#39;switchbuf&#39; for tag commands that may open a new window.<br>            (Ingo Karkat, closes #1681)  Define macros for the return values<br>            of getfile().<br></div>
+      </div>
+      <div class="d-flex">
+        <div class="mt-2">
+          <img src="https://ifttt.com/images/no_image_card.png" width="400" height="247" alt="patch 8.0.0621: :stag does not respect &#39;switchbuf&#39;" />
+        </div>
+      </div>
+
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1496673839.437283">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://a.slack-edge.com/8f51/img/services/ifttt_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">IFTTT</span>
+              <a href="#ts-1496673839.437283">5日 23:43:59</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C0NUFLFU3/p1496673839437283" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                
+              </div>
+
+              <div>
+              </div>
+            <div class="mt-2 border p-2" id="ts-1496673839.437283">
+              
+    <div class="d-flex">
+        <div class="flex-self-baseline f4 ml-2">
+          <span class="Label Label--outline">
+            <a href="https://github.com/vim/vim/commit/c5e2b040b490c2f4dd50c945840bc176bfcccb29" target="_blank" rel="noopener noreferrer">patch 8.0.0622: selecting quoted text fails with &#39;selection&#39; &#34;exclusive&#34;</a>
+          </span>
+        </div>
+    </div>
+      <div class="d-flex">
+        <div class="mt-2"><br><br>patch 8.0.0622: selecting quoted text fails with &#39;selection&#39; &#34;exclusive&#34;<br><br>Problem:    Using a text object to select quoted text fails when &#39;selection&#39;<br>            is set to &#34;exclusive&#34;. (Guraga)<br>Solution:   Swap cursor and visual start position. (Christian Brabandt,<br>            closes #1687)<br></div>
+      </div>
+      <div class="d-flex">
+        <div class="mt-2">
+          <img src="https://ifttt.com/images/no_image_card.png" width="400" height="247" alt="patch 8.0.0622: selecting quoted text fails with &#39;selection&#39; &#34;exclusive&#34;" />
+        </div>
+      </div>
+
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1496674720.757397">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://a.slack-edge.com/8f51/img/services/ifttt_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">IFTTT</span>
+              <a href="#ts-1496674720.757397">5日 23:58:40</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C0NUFLFU3/p1496674720757397" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                
+              </div>
+
+              <div>
+              </div>
+            <div class="mt-2 border p-2" id="ts-1496674720.757397">
+              
+    <div class="d-flex">
+        <div class="flex-self-baseline f4 ml-2">
+          <span class="Label Label--outline">
+            <a href="https://github.com/vim/vim/commit/966e58e413ffa88af8d748e697aa2999571fcd7b" target="_blank" rel="noopener noreferrer">patch 8.0.0623: error for invalid regexp is not very informative</a>
+          </span>
+        </div>
+    </div>
+      <div class="d-flex">
+        <div class="mt-2"><br><br>patch 8.0.0623: error for invalid regexp is not very informative<br><br>Problem:    The message &#34;Invalid range&#34; is used for multiple errors.<br>Solution:   Add two more specific error messages. (Itchyny, Ken Hamada)<br></div>
+      </div>
+      <div class="d-flex">
+        <div class="mt-2">
+          <img src="https://ifttt.com/images/no_image_card.png" width="400" height="247" alt="patch 8.0.0623: error for invalid regexp is not very informative" />
+        </div>
+      </div>
+
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1496678650.215781">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://a.slack-edge.com/8f51/img/services/ifttt_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">IFTTT</span>
+              <a href="#ts-1496678650.215781">6日 01:04:10</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C0NUFLFU3/p1496678650215781" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                
+              </div>
+
+              <div>
+              </div>
+            <div class="mt-2 border p-2" id="ts-1496678650.215781">
+              
+    <div class="d-flex">
+        <div class="flex-self-baseline f4 ml-2">
+          <span class="Label Label--outline">
+            <a href="https://github.com/vim/vim/commit/6c95fbc9ae64f3a7619070e830f0c35aa4f0ada9" target="_blank" rel="noopener noreferrer">patch 8.0.0624: warning for unused variable in tiny build</a>
+          </span>
+        </div>
+    </div>
+      <div class="d-flex">
+        <div class="mt-2"><br><br>patch 8.0.0624: warning for unused variable in tiny build<br><br>Problem:    Warning for unused variable in tiny build. (Tony Mechelynck)<br>Solution:   Add an #ifdef.<br></div>
+      </div>
+      <div class="d-flex">
+        <div class="mt-2">
+          <img src="https://ifttt.com/images/no_image_card.png" width="400" height="247" alt="patch 8.0.0624: warning for unused variable in tiny build" />
+        </div>
+      </div>
+
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1496688213.671641">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://a.slack-edge.com/8f51/img/services/ifttt_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">IFTTT</span>
+              <a href="#ts-1496688213.671641">6日 03:43:33</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C0NUFLFU3/p1496688213671641" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                
+              </div>
+
+              <div>
+              </div>
+            <div class="mt-2 border p-2" id="ts-1496688213.671641">
+              
+    <div class="d-flex">
+        <div class="flex-self-baseline f4 ml-2">
+          <span class="Label Label--outline">
+            <a href="https://github.com/vim/vim/commit/206155280def51160a9d81d983aed639015ffb44" target="_blank" rel="noopener noreferrer">patch 8.0.0625: shellescape() always escapes a newline</a>
+          </span>
+        </div>
+    </div>
+      <div class="d-flex">
+        <div class="mt-2"><br><br>patch 8.0.0625: shellescape() always escapes a newline<br><br>Problem:    shellescape() always escapes a newline, which does not work with<br>            some shells. (Harm te Hennepe)<br>Solution:   Only escape a newline when the &#34;special&#34; argument is non-zero.<br>            (Christian Brabandt, closes #1590)<br></div>
+      </div>
+      <div class="d-flex">
+        <div class="mt-2">
+          <img src="https://ifttt.com/images/no_image_card.png" width="400" height="247" alt="patch 8.0.0625: shellescape() always escapes a newline" />
+        </div>
+      </div>
+
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1496688214.671800">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://a.slack-edge.com/8f51/img/services/ifttt_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">IFTTT</span>
+              <a href="#ts-1496688214.671800">6日 03:43:34</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C0NUFLFU3/p1496688214671800" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                
+              </div>
+
+              <div>
+              </div>
+            <div class="mt-2 border p-2" id="ts-1496688214.671800">
+              
+    <div class="d-flex">
+        <div class="flex-self-baseline f4 ml-2">
+          <span class="Label Label--outline">
+            <a href="https://github.com/vim/vim/commit/e21d69eec1870a3f4732653aa8ee25d5da10128c" target="_blank" rel="noopener noreferrer">patch 8.0.0626: in the GUI the cursor may flicker</a>
+          </span>
+        </div>
+    </div>
+      <div class="d-flex">
+        <div class="mt-2"><br><br>patch 8.0.0626: in the GUI the cursor may flicker<br><br>Problem:    In the GUI the cursor may flicker.<br>Solution:   Check the cmd_silent flag before updating the cursor shape.<br>            (Hirohito Higashi, closes #1637)<br></div>
+      </div>
+      <div class="d-flex">
+        <div class="mt-2">
+          <img src="https://ifttt.com/images/no_image_card.png" width="400" height="247" alt="patch 8.0.0626: in the GUI the cursor may flicker" />
+        </div>
+      </div>
+
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1496688214.671978">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://a.slack-edge.com/8f51/img/services/ifttt_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">IFTTT</span>
+              <a href="#ts-1496688214.671978">6日 03:43:34</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C0NUFLFU3/p1496688214671978" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                
+              </div>
+
+              <div>
+              </div>
+            <div class="mt-2 border p-2" id="ts-1496688214.671978">
+              
+    <div class="d-flex">
+        <div class="flex-self-baseline f4 ml-2">
+          <span class="Label Label--outline">
+            <a href="https://github.com/vim/vim/commit/add8dce38de65a0c64e8f54d6bdcadb45a8de2cf" target="_blank" rel="noopener noreferrer">patch 8.0.0627: &#34;gn&#34; selects only one character with &#39;nowrapscan&#39;</a>
+          </span>
+        </div>
+    </div>
+      <div class="d-flex">
+        <div class="mt-2"><br><br>patch 8.0.0627: &#34;gn&#34; selects only one character with &#39;nowrapscan&#39;<br><br>Problem:    When &#39;wrapscan&#39; is off &#34;gn&#34; does not select the whole pattern when<br>            it&#39;s the last one in the text. (KeyboardFire)<br>Solution:   Check if the search fails. (Christian Brabandt, closes #1683)<br></div>
+      </div>
+      <div class="d-flex">
+        <div class="mt-2">
+          <img src="https://ifttt.com/images/no_image_card.png" width="400" height="247" alt="patch 8.0.0627: &#34;gn&#34; selects only one character with &#39;nowrapscan&#39;" />
+        </div>
+      </div>
+
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1496861002.666008">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://a.slack-edge.com/8f51/img/services/ifttt_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">IFTTT</span>
+              <a href="#ts-1496861002.666008">8日 03:43:22</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C0NUFLFU3/p1496861002666008" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                
+              </div>
+
+              <div>
+              </div>
+            <div class="mt-2 border p-2" id="ts-1496861002.666008">
+              
+    <div class="d-flex">
+        <div class="flex-self-baseline f4 ml-2">
+          <span class="Label Label--outline">
+            <a href="https://github.com/vim/vim/commit/f085f4266e07b36279c56d43fd0d73ed080046ae" target="_blank" rel="noopener noreferrer">patch 8.0.0628: cursor disappears after silent mapping</a>
+          </span>
+        </div>
+    </div>
+      <div class="d-flex">
+        <div class="mt-2"><br><br>patch 8.0.0628: cursor disappears after silent mapping<br><br>Problem:    Cursor disappears after silent mapping. (Ramel Eshed)<br>Solution:   Do restore the cursor when it was changed, but don&#39;t change it in<br>            the first place for a silent mapping.<br></div>
+      </div>
+      <div class="d-flex">
+        <div class="mt-2">
+          <img src="https://ifttt.com/images/no_image_card.png" width="400" height="247" alt="patch 8.0.0628: cursor disappears after silent mapping" />
+        </div>
+      </div>
+
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1497037029.765664">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://a.slack-edge.com/8f51/img/services/ifttt_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">IFTTT</span>
+              <a href="#ts-1497037029.765664">10日 04:37:09</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C0NUFLFU3/p1497037029765664" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                
+              </div>
+
+              <div>
+              </div>
+            <div class="mt-2 border p-2" id="ts-1497037029.765664">
+              
+    <div class="d-flex">
+        <div class="flex-self-baseline f4 ml-2">
+          <span class="Label Label--outline">
+            <a href="https://github.com/vim/vim/commit/6b1da3312e15c065b373c9ec2732f31a77cee61f" target="_blank" rel="noopener noreferrer">patch 8.0.0629: checking for ambigous width is not working</a>
+          </span>
+        </div>
+    </div>
+      <div class="d-flex">
+        <div class="mt-2"><br><br>patch 8.0.0629: checking for ambigous width is not working<br><br>Problem:    Checking for ambigous width is not working. (Hirohito Higashi)<br>Solution:   Reset &#34;starting&#34; earlier.<br></div>
+      </div>
+      <div class="d-flex">
+        <div class="mt-2">
+          <img src="https://ifttt.com/images/no_image_card.png" width="400" height="247" alt="patch 8.0.0629: checking for ambigous width is not working" />
+        </div>
+      </div>
+
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1497098223.143240">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://a.slack-edge.com/8f51/img/services/ifttt_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">IFTTT</span>
+              <a href="#ts-1497098223.143240">10日 21:37:03</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C0NUFLFU3/p1497098223143240" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                
+              </div>
+
+              <div>
+              </div>
+            <div class="mt-2 border p-2" id="ts-1497098223.143240">
+              
+    <div class="d-flex">
+        <div class="flex-self-baseline f4 ml-2">
+          <span class="Label Label--outline">
+            <a href="https://github.com/vim/vim/commit/f84b122a99da75741ae686fabb6f81b8b4755998" target="_blank" rel="noopener noreferrer">patch 8.0.0630: it is not easy to work on lines without a match</a>
+          </span>
+        </div>
+    </div>
+      <div class="d-flex">
+        <div class="mt-2"><br><br>patch 8.0.0630: it is not easy to work on lines without a match<br><br>Problem:    The :global command does not work recursively, which makes it<br>            difficult to execute a command on a line where one pattern matches<br>            and another does not match. (Miles Cranmer)<br>Solution:   Allow for recursion if it is for only one line. (closes #1760)<br></div>
+      </div>
+      <div class="d-flex">
+        <div class="mt-2">
+          <img src="https://ifttt.com/images/no_image_card.png" width="400" height="247" alt="patch 8.0.0630: it is not easy to work on lines without a match" />
+        </div>
+      </div>
+
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1497102731.365667">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://a.slack-edge.com/8f51/img/services/ifttt_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">IFTTT</span>
+              <a href="#ts-1497102731.365667">10日 22:52:11</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C0NUFLFU3/p1497102731365667" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                
+              </div>
+
+              <div>
+              </div>
+            <div class="mt-2 border p-2" id="ts-1497102731.365667">
+              
+    <div class="d-flex">
+        <div class="flex-self-baseline f4 ml-2">
+          <span class="Label Label--outline">
+            <a href="https://github.com/vim/vim/commit/fa4161cb0c266378012d3fde0eca56da8739528d" target="_blank" rel="noopener noreferrer">patch 8.0.0631: can&#39;t build with Perl 5.26</a>
+          </span>
+        </div>
+    </div>
+      <div class="d-flex">
+        <div class="mt-2"><br><br>patch 8.0.0631: can&#39;t build with Perl 5.26<br><br>Problem:    Perl 5.26 also needs S_TOPMARK and S_POPMARK defined.<br>Solution:   Define the functions when needed. (Jesin, closes #1748)<br></div>
+      </div>
+      <div class="d-flex">
+        <div class="mt-2">
+          <img src="https://ifttt.com/images/no_image_card.png" width="400" height="247" alt="patch 8.0.0631: can&#39;t build with Perl 5.26" />
+        </div>
+      </div>
+
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1497105441.513753">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://a.slack-edge.com/8f51/img/services/ifttt_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">IFTTT</span>
+              <a href="#ts-1497105441.513753">10日 23:37:21</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C0NUFLFU3/p1497105441513753" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                
+              </div>
+
+              <div>
+              </div>
+            <div class="mt-2 border p-2" id="ts-1497105441.513753">
+              
+    <div class="d-flex">
+        <div class="flex-self-baseline f4 ml-2">
+          <span class="Label Label--outline">
+            <a href="https://github.com/vim/vim/commit/1c13c0fe3e7b15750464ffbc39a4648aa5c639be" target="_blank" rel="noopener noreferrer">patch 8.0.0632: the quotestar test is still a bit flaky</a>
+          </span>
+        </div>
+    </div>
+      <div class="d-flex">
+        <div class="mt-2"><br><br>patch 8.0.0632: the quotestar test is still a bit flaky<br><br>Problem:    The quotestar test is still a bit flaky.<br>Solution:   Kill any existing server to make the retry work.  Wait for the<br>            register to be filled.<br></div>
+      </div>
+      <div class="d-flex">
+        <div class="mt-2">
+          <img src="https://ifttt.com/images/no_image_card.png" width="400" height="247" alt="patch 8.0.0632: the quotestar test is still a bit flaky" />
+        </div>
+      </div>
+
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1497107544.635057">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://a.slack-edge.com/8f51/img/services/ifttt_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">IFTTT</span>
+              <a href="#ts-1497107544.635057">11日 00:12:24</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C0NUFLFU3/p1497107544635057" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                
+              </div>
+
+              <div>
+              </div>
+            <div class="mt-2 border p-2" id="ts-1497107544.635057">
+              
+    <div class="d-flex">
+        <div class="flex-self-baseline f4 ml-2">
+          <span class="Label Label--outline">
+            <a href="https://github.com/vim/vim/commit/60964f68740b8abcbb2d3f0f3aeade21d1bacb22" target="_blank" rel="noopener noreferrer">patch 8.0.0633: the client-server test is still a bit flaky</a>
+          </span>
+        </div>
+    </div>
+      <div class="d-flex">
+        <div class="mt-2"><br><br>patch 8.0.0633: the client-server test is still a bit flaky<br><br>Problem:    The client-server test is still a bit flaky.<br>Solution:   Wait a bit for the GUI to start.  Check that the version number<br>            can be obtained.<br></div>
+      </div>
+      <div class="d-flex">
+        <div class="mt-2">
+          <img src="https://ifttt.com/images/no_image_card.png" width="400" height="247" alt="patch 8.0.0633: the client-server test is still a bit flaky" />
+        </div>
+      </div>
+
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1497190645.572439">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://a.slack-edge.com/8f51/img/services/ifttt_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">IFTTT</span>
+              <a href="#ts-1497190645.572439">11日 23:17:25</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C0NUFLFU3/p1497190645572439" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                
+              </div>
+
+              <div>
+              </div>
+            <div class="mt-2 border p-2" id="ts-1497190645.572439">
+              
+    <div class="d-flex">
+        <div class="flex-self-baseline f4 ml-2">
+          <span class="Label Label--outline">
+            <a href="https://github.com/vim/vim/commit/875feea6ce223462d55543735143d747dcaf4287" target="_blank" rel="noopener noreferrer">patch 8.0.0634: cannot easily get to the last quickfix list</a>
+          </span>
+        </div>
+    </div>
+      <div class="d-flex">
+        <div class="mt-2"><br><br>patch 8.0.0634: cannot easily get to the last quickfix list<br><br>Problem:    Cannot easily get to the last quickfix list.<br>Solution:   Add &#34;$&#34; as a value for the &#34;nr&#34; argument of getqflist() and<br>            setqflist(). (Yegappan Lakshmanan)<br></div>
+      </div>
+      <div class="d-flex">
+        <div class="mt-2">
+          <img src="https://ifttt.com/images/no_image_card.png" width="400" height="247" alt="patch 8.0.0634: cannot easily get to the last quickfix list" />
+        </div>
+      </div>
+
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1497194236.762726">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://a.slack-edge.com/8f51/img/services/ifttt_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">IFTTT</span>
+              <a href="#ts-1497194236.762726">12日 00:17:16</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C0NUFLFU3/p1497194236762726" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                
+              </div>
+
+              <div>
+              </div>
+            <div class="mt-2 border p-2" id="ts-1497194236.762726">
+              
+    <div class="d-flex">
+        <div class="flex-self-baseline f4 ml-2">
+          <span class="Label Label--outline">
+            <a href="https://github.com/vim/vim/commit/3a429efb628a3925d13c3fe415e02a7ce117071f" target="_blank" rel="noopener noreferrer">patch 8.0.0635: when &#39;ignorecase&#39; is set script detection is inaccurate</a>
+          </span>
+        </div>
+    </div>
+      <div class="d-flex">
+        <div class="mt-2"><br><br>patch 8.0.0635: when &#39;ignorecase&#39; is set script detection is inaccurate<br><br>Problem:    When &#39;ignorecase&#39; is set script detection is inaccurate.<br>Solution:   Enforce matching case for text. (closes #1753)<br></div>
+      </div>
+      <div class="d-flex">
+        <div class="mt-2">
+          <img src="https://ifttt.com/images/no_image_card.png" width="400" height="247" alt="patch 8.0.0635: when &#39;ignorecase&#39; is set script detection is inaccurate" />
+        </div>
+      </div>
+
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1497215471.014649">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://a.slack-edge.com/8f51/img/services/ifttt_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">IFTTT</span>
+              <a href="#ts-1497215471.014649">12日 06:11:11</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C0NUFLFU3/p1497215471014649" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                
+              </div>
+
+              <div>
+              </div>
+            <div class="mt-2 border p-2" id="ts-1497215471.014649">
+              
+    <div class="d-flex">
+        <div class="flex-self-baseline f4 ml-2">
+          <span class="Label Label--outline">
+            <a href="https://github.com/vim/vim/commit/56f2db562ddc6c69026d55360f0cfaacd8adc26a" target="_blank" rel="noopener noreferrer">patch 8.0.0636: when reading the undo file fails may use uninitialize</a>
+          </span>
+        </div>
+    </div>
+      <div class="d-flex">
+        <div class="mt-2"><br><br>patch 8.0.0636: when reading the undo file fails may use uninitialized data<br><br>Problem:    When reading the undo file fails may use uninitialized data.<br>Solution:   Always clear the buffer on failure.<br></div>
+      </div>
+      <div class="d-flex">
+        <div class="mt-2">
+          <img src="https://ifttt.com/images/no_image_card.png" width="400" height="247" alt="patch 8.0.0636: when reading the undo file fails may use uninitialize" />
+        </div>
+      </div>
+
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1497357670.828146">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://a.slack-edge.com/8f51/img/services/ifttt_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">IFTTT</span>
+              <a href="#ts-1497357670.828146">13日 21:41:10</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C0NUFLFU3/p1497357670828146" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                
+              </div>
+
+              <div>
+              </div>
+            <div class="mt-2 border p-2" id="ts-1497357670.828146">
+              
+    <div class="d-flex">
+        <div class="flex-self-baseline f4 ml-2">
+          <span class="Label Label--outline">
+            <a href="https://github.com/vim/vim/commit/21b34b63b3f63dd54b338c4433fa7117dad9507b" target="_blank" rel="noopener noreferrer">patch 8.0.0637: crash when using some version of GTK 3</a>
+          </span>
+        </div>
+    </div>
+      <div class="d-flex">
+        <div class="mt-2"><br><br>patch 8.0.0637: crash when using some version of GTK 3<br><br>Problem:    Crash when using some version of GTK 3.<br>Solution:   Add #ifdefs around incrementing the menu index. (Kazunobu<br>            Kuriyama)<br></div>
+      </div>
+      <div class="d-flex">
+        <div class="mt-2">
+          <img src="https://ifttt.com/images/no_image_card.png" width="400" height="247" alt="patch 8.0.0637: crash when using some version of GTK 3" />
+        </div>
+      </div>
+
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1497360365.656864">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://a.slack-edge.com/8f51/img/services/ifttt_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">IFTTT</span>
+              <a href="#ts-1497360365.656864">13日 22:26:05</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C0NUFLFU3/p1497360365656864" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                
+              </div>
+
+              <div>
+              </div>
+            <div class="mt-2 border p-2" id="ts-1497360365.656864">
+              
+    <div class="d-flex">
+        <div class="flex-self-baseline f4 ml-2">
+          <span class="Label Label--outline">
+            <a href="https://github.com/vim/vim/commit/d7383881c8e9f474a909b54b21abb0aa2b412ba2" target="_blank" rel="noopener noreferrer">patch 8.0.0638: cannot build with new MSVC version</a>
+          </span>
+        </div>
+    </div>
+      <div class="d-flex">
+        <div class="mt-2"><br><br>patch 8.0.0638: cannot build with new MSVC version<br><br>Problem:    Cannot build with new MSVC version VS2017.<br>Solution:   Change the compiler arguments. (Leonardo Manera, closes #1731,<br>            closes #1747)<br></div>
+      </div>
+      <div class="d-flex">
+        <div class="mt-2">
+          <img src="https://ifttt.com/images/no_image_card.png" width="400" height="247" alt="patch 8.0.0638: cannot build with new MSVC version" />
+        </div>
+      </div>
+
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1497363363.815236">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://a.slack-edge.com/8f51/img/services/ifttt_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">IFTTT</span>
+              <a href="#ts-1497363363.815236">13日 23:16:03</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C0NUFLFU3/p1497363363815236" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                
+              </div>
+
+              <div>
+              </div>
+            <div class="mt-2 border p-2" id="ts-1497363363.815236">
+              
+    <div class="d-flex">
+        <div class="flex-self-baseline f4 ml-2">
+          <span class="Label Label--outline">
+            <a href="https://github.com/vim/vim/commit/9a48961d8bd7ffea14330b9b0181a6cdbe9288f7" target="_blank" rel="noopener noreferrer">patch 8.0.0639: the cursor position is set when editing a new commit</a>
+          </span>
+        </div>
+    </div>
+      <div class="d-flex">
+        <div class="mt-2"><br><br>patch 8.0.0639: the cursor position is set when editing a new commit message<br><br>Problem:    The cursor position is set to the last position in a new commit<br>            message.<br>Solution:   Don&#39;t set the position if the filetype matches &#34;commit&#34;.<br>            (Christian Brabandt)<br></div>
+      </div>
+      <div class="d-flex">
+        <div class="mt-2">
+          <img src="https://ifttt.com/images/no_image_card.png" width="400" height="247" alt="patch 8.0.0639: the cursor position is set when editing a new commit" />
+        </div>
+      </div>
+
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1497364876.444379">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://a.slack-edge.com/8f51/img/services/ifttt_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">IFTTT</span>
+              <a href="#ts-1497364876.444379">13日 23:41:16</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C0NUFLFU3/p1497364876444379" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                
+              </div>
+
+              <div>
+              </div>
+            <div class="mt-2 border p-2" id="ts-1497364876.444379">
+              
+    <div class="d-flex">
+        <div class="flex-self-baseline f4 ml-2">
+          <span class="Label Label--outline">
+            <a href="https://github.com/vim/vim/commit/83064068eaabf75a7d235b0eec561dccbcb96b31" target="_blank" rel="noopener noreferrer">patch 8.0.0640: mismatch between help and actual message</a>
+          </span>
+        </div>
+    </div>
+      <div class="d-flex">
+        <div class="mt-2"><br><br>patch 8.0.0640: mismatch between help and actual message<br><br>Problem:    Mismatch between help and actual message for &#34;:syn conceal&#34;.<br>Solution:   Change the message to match the help. (Ken Takata)<br></div>
+      </div>
+      <div class="d-flex">
+        <div class="mt-2">
+          <img src="https://ifttt.com/images/no_image_card.png" width="400" height="247" alt="patch 8.0.0640: mismatch between help and actual message" />
+        </div>
+      </div>
+
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1497367292.482105">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://a.slack-edge.com/8f51/img/services/ifttt_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">IFTTT</span>
+              <a href="#ts-1497367292.482105">14日 00:21:32</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C0NUFLFU3/p1497367292482105" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                
+              </div>
+
+              <div>
+              </div>
+            <div class="mt-2 border p-2" id="ts-1497367292.482105">
+              
+    <div class="d-flex">
+        <div class="flex-self-baseline f4 ml-2">
+          <span class="Label Label--outline">
+            <a href="https://github.com/vim/vim/commit/2102035488e80ef6fd5038ed15d21672712ba0f6" target="_blank" rel="noopener noreferrer">patch 8.0.0641: cannot set a separate highlighting for the quickfix line</a>
+          </span>
+        </div>
+    </div>
+      <div class="d-flex">
+        <div class="mt-2"><br><br>patch 8.0.0641: cannot set a separate highlighting for the quickfix line<br><br>Problem:    Cannot set a separate highlighting for the current line in the<br>            quickfix window.<br>Solution:   Add QuickFixLine. (anishsane, closes #1755)<br></div>
+      </div>
+      <div class="d-flex">
+        <div class="mt-2">
+          <img src="https://ifttt.com/images/no_image_card.png" width="400" height="247" alt="patch 8.0.0641: cannot set a separate highlighting for the quickfix line" />
+        </div>
+      </div>
+
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1497370896.970605">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://a.slack-edge.com/8f51/img/services/ifttt_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">IFTTT</span>
+              <a href="#ts-1497370896.970605">14日 01:21:36</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C0NUFLFU3/p1497370896970605" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                
+              </div>
+
+              <div>
+              </div>
+            <div class="mt-2 border p-2" id="ts-1497370896.970605">
+              
+    <div class="d-flex">
+        <div class="flex-self-baseline f4 ml-2">
+          <span class="Label Label--outline">
+            <a href="https://github.com/vim/vim/commit/3ec574f2b549f456f664f689d6da36dc5719aeb9" target="_blank" rel="noopener noreferrer">Update runtime files.</a>
+          </span>
+        </div>
+    </div>
+      <div class="d-flex">
+        <div class="mt-2"><br><br>Update runtime files.<br><br>Includes changing &amp;sw to shiftwidth() for all indent scripts.<br></div>
+      </div>
+      <div class="d-flex">
+        <div class="mt-2">
+          <img src="https://ifttt.com/images/no_image_card.png" width="400" height="247" alt="Update runtime files." />
+        </div>
+      </div>
+
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1497375986.864767">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://a.slack-edge.com/8f51/img/services/ifttt_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">IFTTT</span>
+              <a href="#ts-1497375986.864767">14日 02:46:26</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C0NUFLFU3/p1497375986864767" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                
+              </div>
+
+              <div>
+              </div>
+            <div class="mt-2 border p-2" id="ts-1497375986.864767">
+              
+    <div class="d-flex">
+        <div class="flex-self-baseline f4 ml-2">
+          <span class="Label Label--outline">
+            <a href="https://github.com/vim/vim/commit/8cf91286ca46a501d24e4b7d631b193256782c88" target="_blank" rel="noopener noreferrer">patch 8.0.0642: writefile() continues after detecting an error</a>
+          </span>
+        </div>
+    </div>
+      <div class="d-flex">
+        <div class="mt-2"><br><br>patch 8.0.0642: writefile() continues after detecting an error<br><br>Problem:    writefile() continues after detecting an error.<br>Solution:   Bail out as soon as an error is detected. (suggestions by Nikolai<br>            Pavlov, closes #1476)<br></div>
+      </div>
+      <div class="d-flex">
+        <div class="mt-2">
+          <img src="https://ifttt.com/images/no_image_card.png" width="400" height="247" alt="patch 8.0.0642: writefile() continues after detecting an error" />
+        </div>
+      </div>
+
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1497717983.154413">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://a.slack-edge.com/8f51/img/services/ifttt_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">IFTTT</span>
+              <a href="#ts-1497717983.154413">18日 01:46:23</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C0NUFLFU3/p1497717983154413" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                
+              </div>
+
+              <div>
+              </div>
+            <div class="mt-2 border p-2" id="ts-1497717983.154413">
+              
+    <div class="d-flex">
+        <div class="flex-self-baseline f4 ml-2">
+          <span class="Label Label--outline">
+            <a href="https://github.com/vim/vim/commit/fbd0b0af6800f6ff89857863d6a07ea03f09ff6c" target="_blank" rel="noopener noreferrer">patch 8.0.0643: when a pattern search is slow Vim becomes unusable</a>
+          </span>
+        </div>
+    </div>
+      <div class="d-flex">
+        <div class="mt-2"><br><br>patch 8.0.0643: when a pattern search is slow Vim becomes unusable<br><br>Problem:    When &#39;hlsearch&#39; is set and matching with the last search pattern<br>            is very slow, Vim becomes unusable.  Cannot quit search by<br>            pressing CTRL-C.<br>Solution:   When the search times out set a flag and don&#39;t try again.  Check<br>            for timeout and CTRL-C in NFA loop that adds states.<br></div>
+      </div>
+      <div class="d-flex">
+        <div class="mt-2">
+          <img src="https://ifttt.com/images/no_image_card.png" width="400" height="247" alt="patch 8.0.0643: when a pattern search is slow Vim becomes unusable" />
+        </div>
+      </div>
+
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1497720084.283672">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://a.slack-edge.com/8f51/img/services/ifttt_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">IFTTT</span>
+              <a href="#ts-1497720084.283672">18日 02:21:24</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C0NUFLFU3/p1497720084283672" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                
+              </div>
+
+              <div>
+              </div>
+            <div class="mt-2 border p-2" id="ts-1497720084.283672">
+              
+    <div class="d-flex">
+        <div class="flex-self-baseline f4 ml-2">
+          <span class="Label Label--outline">
+            <a href="https://github.com/vim/vim/commit/5b1affefd0e96154517ec6f71300086ae6d22d24" target="_blank" rel="noopener noreferrer">patch 8.0.0644: the timeout for &#39;hlsearch&#39; is not tested</a>
+          </span>
+        </div>
+    </div>
+      <div class="d-flex">
+        <div class="mt-2"><br><br>patch 8.0.0644: the timeout for &#39;hlsearch&#39; is not tested<br><br>Problem:    There is no test for &#39;hlsearch&#39; timing out.<br>Solution:   Add a test.<br></div>
+      </div>
+      <div class="d-flex">
+        <div class="mt-2">
+          <img src="https://ifttt.com/images/no_image_card.png" width="400" height="247" alt="patch 8.0.0644: the timeout for &#39;hlsearch&#39; is not tested" />
+        </div>
+      </div>
+
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1497723391.486029">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://a.slack-edge.com/8f51/img/services/ifttt_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">IFTTT</span>
+              <a href="#ts-1497723391.486029">18日 03:16:31</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C0NUFLFU3/p1497723391486029" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                
+              </div>
+
+              <div>
+              </div>
+            <div class="mt-2 border p-2" id="ts-1497723391.486029">
+              
+    <div class="d-flex">
+        <div class="flex-self-baseline f4 ml-2">
+          <span class="Label Label--outline">
+            <a href="https://github.com/vim/vim/commit/1ef9bbe215e13a273e74fccaddd8fc5a42c76b6e" target="_blank" rel="noopener noreferrer">patch 8.0.0645: no error for illegal back reference in NFA engine</a>
+          </span>
+        </div>
+    </div>
+      <div class="d-flex">
+        <div class="mt-2"><br><br>patch 8.0.0645: no error for illegal back reference in NFA engine<br><br>Problem:    The new regexp engine does not give an error for using a back<br>            reference where it is not allowed. (Dominique Pelle)<br>Solution:   Check the back reference like the old engine. (closes #1774)<br></div>
+      </div>
+      <div class="d-flex">
+        <div class="mt-2">
+          <img src="https://ifttt.com/images/no_image_card.png" width="400" height="247" alt="patch 8.0.0645: no error for illegal back reference in NFA engine" />
+        </div>
+      </div>
+
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1497725781.622891">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://a.slack-edge.com/8f51/img/services/ifttt_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">IFTTT</span>
+              <a href="#ts-1497725781.622891">18日 03:56:21</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C0NUFLFU3/p1497725781622891" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                
+              </div>
+
+              <div>
+              </div>
+            <div class="mt-2 border p-2" id="ts-1497725781.622891">
+              
+    <div class="d-flex">
+        <div class="flex-self-baseline f4 ml-2">
+          <span class="Label Label--outline">
+            <a href="https://github.com/vim/vim/commit/0946326580e6f034fe2c88d041407ea0fde980ab" target="_blank" rel="noopener noreferrer">patch 8.0.0646: the hlsearch test fails on fast systems</a>
+          </span>
+        </div>
+    </div>
+      <div class="d-flex">
+        <div class="mt-2"><br><br>patch 8.0.0646: the hlsearch test fails on fast systems<br><br>Problem:    The hlsearch test fails on fast systems.<br>Solution:   Make the search pattern slower.  Fix that the old regexp engine<br>            doesn&#39;t timeout properly.<br></div>
+      </div>
+      <div class="d-flex">
+        <div class="mt-2">
+          <img src="https://ifttt.com/images/no_image_card.png" width="400" height="247" alt="patch 8.0.0646: the hlsearch test fails on fast systems" />
+        </div>
+      </div>
+
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1497818609.829686">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://a.slack-edge.com/8f51/img/services/ifttt_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">IFTTT</span>
+              <a href="#ts-1497818609.829686">19日 05:43:29</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C0NUFLFU3/p1497818609829686" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                
+              </div>
+
+              <div>
+              </div>
+            <div class="mt-2 border p-2" id="ts-1497818609.829686">
+              
+    <div class="d-flex">
+        <div class="flex-self-baseline f4 ml-2">
+          <span class="Label Label--outline">
+            <a href="https://github.com/vim/vim/commit/06f1ed2f78c5c03af95054fc3a8665df39dec362" target="_blank" rel="noopener noreferrer">patch 8.0.0647: syntax highlighting can make cause a freeze</a>
+          </span>
+        </div>
+    </div>
+      <div class="d-flex">
+        <div class="mt-2"><br><br>patch 8.0.0647: syntax highlighting can make cause a freeze<br><br>Problem:    Syntax highlighting can make cause a freeze.<br>Solution:   Apply &#39;redrawtime&#39; to syntax highlighting, per window.<br></div>
+      </div>
+      <div class="d-flex">
+        <div class="mt-2">
+          <img src="https://ifttt.com/images/no_image_card.png" width="400" height="247" alt="patch 8.0.0647: syntax highlighting can make cause a freeze" />
+        </div>
+      </div>
+
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1497897798.491828">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://a.slack-edge.com/8f51/img/services/ifttt_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">IFTTT</span>
+              <a href="#ts-1497897798.491828">20日 03:43:18</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C0NUFLFU3/p1497897798491828" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                
+              </div>
+
+              <div>
+              </div>
+            <div class="mt-2 border p-2" id="ts-1497897798.491828">
+              
+    <div class="d-flex">
+        <div class="flex-self-baseline f4 ml-2">
+          <span class="Label Label--outline">
+            <a href="https://github.com/vim/vim/commit/fadacf01d0dbcc7a96ef5eee0ad57956eeab04d7" target="_blank" rel="noopener noreferrer">patch 8.0.0648: possible use of NULL pointer</a>
+          </span>
+        </div>
+    </div>
+      <div class="d-flex">
+        <div class="mt-2"><br><br>patch 8.0.0648: possible use of NULL pointer<br><br>Problem:    Possible use of NULL pointer if buflist_new() returns NULL.<br>            (Coverity)<br>Solution:   Check for NULL pointer in set_bufref().<br></div>
+      </div>
+      <div class="d-flex">
+        <div class="mt-2">
+          <img src="https://ifttt.com/images/no_image_card.png" width="400" height="247" alt="patch 8.0.0648: possible use of NULL pointer" />
+        </div>
+      </div>
+
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1498134295.703350">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://a.slack-edge.com/8f51/img/services/ifttt_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">IFTTT</span>
+              <a href="#ts-1498134295.703350">22日 21:24:55</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C0NUFLFU3/p1498134295703350" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                
+              </div>
+
+              <div>
+              </div>
+            <div class="mt-2 border p-2" id="ts-1498134295.703350">
+              
+    <div class="d-flex">
+        <div class="flex-self-baseline f4 ml-2">
+          <span class="Label Label--outline">
+            <a href="https://github.com/vim/vim/commit/9049298f8d0bbc237b7c666c7ad6cdabe738e8fc" target="_blank" rel="noopener noreferrer">patch 8.0.0649: when opening a help file the filetype is set several</a>
+          </span>
+        </div>
+    </div>
+      <div class="d-flex">
+        <div class="mt-2"><br><br>patch 8.0.0649: when opening a help file the filetype is set several times<br><br>Problem:    When opening a help file the filetype is set several times.<br>Solution:   When setting the filetype to the same value from a modeline, don&#39;t<br>            trigger FileType autocommands.  Don&#39;t set the filetype to &#34;help&#34;<br>            when it&#39;s already set correctly.<br></div>
+      </div>
+
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1498135768.088274">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://a.slack-edge.com/8f51/img/services/ifttt_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">IFTTT</span>
+              <a href="#ts-1498135768.088274">22日 21:49:28</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C0NUFLFU3/p1498135768088274" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                
+              </div>
+
+              <div>
+              </div>
+            <div class="mt-2 border p-2" id="ts-1498135768.088274">
+              
+    <div class="d-flex">
+        <div class="flex-self-baseline f4 ml-2">
+          <span class="Label Label--outline">
+            <a href="https://github.com/vim/vim/commit/868831f1224cfc17a4de21fb7386873254592308" target="_blank" rel="noopener noreferrer">patch 8.0.0650: for extra help files the filetype is set more than once</a>
+          </span>
+        </div>
+    </div>
+      <div class="d-flex">
+        <div class="mt-2"><br><br>patch 8.0.0650: for extra help files the filetype is set more than once<br><br>Problem:    For extra help files the filetype is set more than once.<br>Solution:   In *.txt files check that there is no help file modline.<br></div>
+      </div>
+      <div class="d-flex">
+        <div class="mt-2">
+          <img src="https://ifttt.com/images/no_image_card.png" width="400" height="247" alt="patch 8.0.0650: for extra help files the filetype is set more than once" />
+        </div>
+      </div>
+
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1498136681.364098">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://a.slack-edge.com/8f51/img/services/ifttt_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">IFTTT</span>
+              <a href="#ts-1498136681.364098">22日 22:04:41</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C0NUFLFU3/p1498136681364098" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                
+              </div>
+
+              <div>
+              </div>
+            <div class="mt-2 border p-2" id="ts-1498136681.364098">
+              
+    <div class="d-flex">
+        <div class="flex-self-baseline f4 ml-2">
+          <span class="Label Label--outline">
+            <a href="https://github.com/vim/vim/commit/157069b04e64eff72d2b34a2f727dfb6e2190cf3" target="_blank" rel="noopener noreferrer">patch 8.0.0651: build failure without the auto command feature</a>
+          </span>
+        </div>
+    </div>
+      <div class="d-flex">
+        <div class="mt-2"><br><br>patch 8.0.0651: build failure without the auto command feature<br><br>Problem:    Build failure without the auto command feature.<br>Solution:   Add #ifdef. (closes #1782)<br></div>
+      </div>
+      <div class="d-flex">
+        <div class="mt-2">
+          <img src="https://ifttt.com/images/no_image_card.png" width="400" height="247" alt="patch 8.0.0651: build failure without the auto command feature" />
+        </div>
+      </div>
+
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1498138447.961321">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://a.slack-edge.com/8f51/img/services/ifttt_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">IFTTT</span>
+              <a href="#ts-1498138447.961321">22日 22:34:07</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C0NUFLFU3/p1498138447961321" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                
+              </div>
+
+              <div>
+              </div>
+            <div class="mt-2 border p-2" id="ts-1498138447.961321">
+              
+    <div class="d-flex">
+        <div class="flex-self-baseline f4 ml-2">
+          <span class="Label Label--outline">
+            <a href="https://github.com/vim/vim/commit/383aa84c0d3456c12987ba7e12042dcffba0eac6" target="_blank" rel="noopener noreferrer">patch 8.0.0652: unicode information is outdated</a>
+          </span>
+        </div>
+    </div>
+      <div class="d-flex">
+        <div class="mt-2"><br><br>patch 8.0.0652: unicode information is outdated<br><br>Problem:    Unicode information is outdated.<br>Solution:   Update to Unicode 10. (Christian Brabandt)<br></div>
+      </div>
+      <div class="d-flex">
+        <div class="mt-2">
+          <img src="https://ifttt.com/images/no_image_card.png" width="400" height="247" alt="patch 8.0.0652: unicode information is outdated" />
+        </div>
+      </div>
+
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1498140571.790584">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://a.slack-edge.com/8f51/img/services/ifttt_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">IFTTT</span>
+              <a href="#ts-1498140571.790584">22日 23:09:31</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C0NUFLFU3/p1498140571790584" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                
+              </div>
+
+              <div>
+              </div>
+            <div class="mt-2 border p-2" id="ts-1498140571.790584">
+              
+    <div class="d-flex">
+        <div class="flex-self-baseline f4 ml-2">
+          <span class="Label Label--outline">
+            <a href="https://github.com/vim/vim/commit/c768a208ca8e0e0fec900c18d5d9a593357ad793" target="_blank" rel="noopener noreferrer">patch 8.0.0653: the default highlight for QuickFixLine is not good</a>
+          </span>
+        </div>
+    </div>
+      <div class="d-flex">
+        <div class="mt-2"><br><br>patch 8.0.0653: the default highlight for QuickFixLine is not good<br><br>Problem:    The default highlight for QuickFixLine does not work for several<br>            color schemes. (Manas Thakur)<br>Solution:   Make the default use the old color. (closes #1780)<br></div>
+      </div>
+      <div class="d-flex">
+        <div class="mt-2">
+          <img src="https://ifttt.com/images/no_image_card.png" width="400" height="247" alt="patch 8.0.0653: the default highlight for QuickFixLine is not good" />
+        </div>
+      </div>
+
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1498151675.341691">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://a.slack-edge.com/8f51/img/services/ifttt_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">IFTTT</span>
+              <a href="#ts-1498151675.341691">23日 02:14:35</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C0NUFLFU3/p1498151675341691" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                
+              </div>
+
+              <div>
+              </div>
+            <div class="mt-2 border p-2" id="ts-1498151675.341691">
+              
+    <div class="d-flex">
+        <div class="flex-self-baseline f4 ml-2">
+          <span class="Label Label--outline">
+            <a href="https://github.com/vim/vim/commit/663bb2331626944cea156374858131fcd323b9e9" target="_blank" rel="noopener noreferrer">patch 8.0.0654: no warning for text after :endfunction</a>
+          </span>
+        </div>
+    </div>
+      <div class="d-flex">
+        <div class="mt-2"><br><br>patch 8.0.0654: no warning for text after :endfunction<br><br>Problem:    Text found after :endfunction is silently ignored.<br>Solution:   Give a warning if &#39;verbose&#39; is set.  When | or \n are used,<br>            execute the text as a command.<br></div>
+      </div>
+      <div class="d-flex">
+        <div class="mt-2">
+          <img src="http://ifttt.com/images/no_image_card.png" width="400" height="247" alt="patch 8.0.0654: no warning for text after :endfunction" />
+        </div>
+      </div>
+
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1498152281.566453">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://a.slack-edge.com/8f51/img/services/ifttt_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">IFTTT</span>
+              <a href="#ts-1498152281.566453">23日 02:24:41</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C0NUFLFU3/p1498152281566453" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                
+              </div>
+
+              <div>
+              </div>
+            <div class="mt-2 border p-2" id="ts-1498152281.566453">
+              
+    <div class="d-flex">
+        <div class="flex-self-baseline f4 ml-2">
+          <span class="Label Label--outline">
+            <a href="https://github.com/vim/vim/commit/d6abcd154cdc6a8dd4b7c6ccad37617ea8a1b4aa" target="_blank" rel="noopener noreferrer">patch 8.0.0655: not easy to make sure a function does not exist</a>
+          </span>
+        </div>
+    </div>
+      <div class="d-flex">
+        <div class="mt-2"><br><br>patch 8.0.0655: not easy to make sure a function does not exist<br><br>Problem:    Not easy to make sure a function does not exist.<br>Solution:   Add ! as an optional argument to :delfunc.<br></div>
+      </div>
+      <div class="d-flex">
+        <div class="mt-2">
+          <img src="https://ifttt.com/images/no_image_card.png" width="400" height="247" alt="patch 8.0.0655: not easy to make sure a function does not exist" />
+        </div>
+      </div>
+
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1498157083.398000">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://a.slack-edge.com/8f51/img/services/ifttt_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">IFTTT</span>
+              <a href="#ts-1498157083.398000">23日 03:44:43</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C0NUFLFU3/p1498157083398000" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                
+              </div>
+
+              <div>
+              </div>
+            <div class="mt-2 border p-2" id="ts-1498157083.398000">
+              
+    <div class="d-flex">
+        <div class="flex-self-baseline f4 ml-2">
+          <span class="Label Label--outline">
+            <a href="https://github.com/vim/vim/commit/6f9a476b2f2f0bb5c50d703ec4fc535ffd5bfe8f" target="_blank" rel="noopener noreferrer">patch 8.0.0656: cannot use ! after some user commands</a>
+          </span>
+        </div>
+    </div>
+      <div class="d-flex">
+        <div class="mt-2"><br><br>patch 8.0.0656: cannot use ! after some user commands<br><br>Problem:    Cannot use ! after some user commands.<br>Solution:   Properly check for existing command. (Higashi Higashi)<br></div>
+      </div>
+
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1498160349.561635">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://a.slack-edge.com/8f51/img/services/ifttt_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">IFTTT</span>
+              <a href="#ts-1498160349.561635">23日 04:39:09</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C0NUFLFU3/p1498160349561635" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                
+              </div>
+
+              <div>
+              </div>
+            <div class="mt-2 border p-2" id="ts-1498160349.561635">
+              
+    <div class="d-flex">
+        <div class="flex-self-baseline f4 ml-2">
+          <span class="Label Label--outline">
+            <a href="https://github.com/vim/vim/commit/6a8958db259d4444da6e6956e54a6513c1af8860" target="_blank" rel="noopener noreferrer">patch 8.0.0657: cannot get and set quickfix list items</a>
+          </span>
+        </div>
+    </div>
+      <div class="d-flex">
+        <div class="mt-2"><br><br>patch 8.0.0657: cannot get and set quickfix list items<br><br>Problem:    Cannot get and set quickfix list items.<br>Solution:   Add the &#34;items&#34; argument to getqflist() and setqflist(). (Yegappan<br>            Lakshmanan)<br></div>
+      </div>
+      <div class="d-flex">
+        <div class="mt-2">
+          <img src="https://ifttt.com/images/no_image_card.png" width="400" height="247" alt="patch 8.0.0657: cannot get and set quickfix list items" />
+        </div>
+      </div>
+
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1498160979.776972">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://a.slack-edge.com/8f51/img/services/ifttt_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">IFTTT</span>
+              <a href="#ts-1498160979.776972">23日 04:49:39</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C0NUFLFU3/p1498160979776972" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                
+              </div>
+
+              <div>
+              </div>
+            <div class="mt-2 border p-2" id="ts-1498160979.776972">
+              
+    <div class="d-flex">
+        <div class="flex-self-baseline f4 ml-2">
+          <span class="Label Label--outline">
+            <a href="https://github.com/vim/vim/commit/d2c061d24c0534f1f1b92f3462ed6ae8fa848a9a" target="_blank" rel="noopener noreferrer">patch 8.0.0658: spell test is old style</a>
+          </span>
+        </div>
+    </div>
+      <div class="d-flex">
+        <div class="mt-2"><br><br>patch 8.0.0658: spell test is old style<br><br>Problem:    Spell test is old style.<br>Solution:   Turn the spell test into a new style test (pschuh, closes #1778)<br></div>
+      </div>
+
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1498161920.110537">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://a.slack-edge.com/8f51/img/services/ifttt_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">IFTTT</span>
+              <a href="#ts-1498161920.110537">23日 05:05:20</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C0NUFLFU3/p1498161920110537" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                
+              </div>
+
+              <div>
+              </div>
+            <div class="mt-2 border p-2" id="ts-1498161920.110537">
+              
+    <div class="d-flex">
+        <div class="flex-self-baseline f4 ml-2">
+          <span class="Label Label--outline">
+            <a href="https://github.com/vim/vim/commit/4d785895d1f8b54cdd3fabd87446ca692f49e94e" target="_blank" rel="noopener noreferrer">patch 8.0.0659: no test for conceal mode</a>
+          </span>
+        </div>
+    </div>
+      <div class="d-flex">
+        <div class="mt-2"><br><br>patch 8.0.0659: no test for conceal mode<br><br>Problem:    No test for conceal mode.<br>Solution:   Add a conceal mode test. (Dominique Pelle, closes #1783)<br></div>
+      </div>
+      <div class="d-flex">
+        <div class="mt-2">
+          <img src="https://ifttt.com/images/no_image_card.png" width="400" height="247" alt="patch 8.0.0659: no test for conceal mode" />
+        </div>
+      </div>
+
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1498161936.116252">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://a.slack-edge.com/8f51/img/services/ifttt_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">IFTTT</span>
+              <a href="#ts-1498161936.116252">23日 05:05:36</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C0NUFLFU3/p1498161936116252" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                
+              </div>
+
+              <div>
+              </div>
+            <div class="mt-2 border p-2" id="ts-1498161936.116252">
+              
+    <div class="d-flex">
+        <div class="flex-self-baseline f4 ml-2">
+          <span class="Label Label--outline">
+            <a href="https://github.com/vim/vim/commit/a1fed064d1eca6ae2c526311ec5464175c6f19e2" target="_blank" rel="noopener noreferrer">patch 8.0.0660: silent install on MS-Windows shows dialog</a>
+          </span>
+        </div>
+    </div>
+      <div class="d-flex">
+        <div class="mt-2"><br><br>patch 8.0.0660: silent install on MS-Windows shows dialog<br><br>Problem:    Silent install on MS-Windows does show a dialog.<br>Solution:   Add /SD to the default choice. (allburov, closes #1772)<br></div>
+      </div>
+      <div class="d-flex">
+        <div class="mt-2">
+          <img src="https://ifttt.com/images/no_image_card.png" width="400" height="247" alt="patch 8.0.0660: silent install on MS-Windows shows dialog" />
+        </div>
+      </div>
+
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1498163977.811426">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://a.slack-edge.com/8f51/img/services/ifttt_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">IFTTT</span>
+              <a href="#ts-1498163977.811426">23日 05:39:37</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C0NUFLFU3/p1498163977811426" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                
+              </div>
+
+              <div>
+              </div>
+            <div class="mt-2 border p-2" id="ts-1498163977.811426">
+              
+    <div class="d-flex">
+        <div class="flex-self-baseline f4 ml-2">
+          <span class="Label Label--outline">
+            <a href="https://github.com/vim/vim/commit/a529ce068ba84d53343f3732b6a1ed4ad1fe3a68" target="_blank" rel="noopener noreferrer">patch 8.0.0661: recognizing urxvt mouse codes does not work well</a>
+          </span>
+        </div>
+    </div>
+      <div class="d-flex">
+        <div class="mt-2"><br><br>patch 8.0.0661: recognizing urxvt mouse codes does not work well<br><br>Problem:    Recognizing urxvt mouse codes does not work well.<br>Solution:   Recognize &#34;Esc[*M&#34; and &#34;Esc[*m&#34;. (Maurice Bos, closes #1486)<br></div>
+      </div>
+      <div class="d-flex">
+        <div class="mt-2">
+          <img src="https://ifttt.com/images/no_image_card.png" width="400" height="247" alt="patch 8.0.0661: recognizing urxvt mouse codes does not work well" />
+        </div>
+      </div>
+
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1498165805.428936">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://a.slack-edge.com/8f51/img/services/ifttt_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">IFTTT</span>
+              <a href="#ts-1498165805.428936">23日 06:10:05</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C0NUFLFU3/p1498165805428936" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                
+              </div>
+
+              <div>
+              </div>
+            <div class="mt-2 border p-2" id="ts-1498165805.428936">
+              
+    <div class="d-flex">
+        <div class="flex-self-baseline f4 ml-2">
+          <span class="Label Label--outline">
+            <a href="https://github.com/vim/vim/commit/4670490673ed98502a09b74fbabe785b47e3d289" target="_blank" rel="noopener noreferrer">patch 8.0.0662: stray FIXME for fixed problem</a>
+          </span>
+        </div>
+    </div>
+      <div class="d-flex">
+        <div class="mt-2"><br><br>patch 8.0.0662: stray FIXME for fixed problem<br><br>Problem:    Stray FIXME for fixed problem.<br>Solution:   Remove the comment. (Dominique Pelle)<br></div>
+      </div>
+      <div class="d-flex">
+        <div class="mt-2">
+          <img src="https://ifttt.com/images/no_image_card.png" width="400" height="247" alt="patch 8.0.0662: stray FIXME for fixed problem" />
+        </div>
+      </div>
+
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1498244049.405492">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://a.slack-edge.com/8f51/img/services/ifttt_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">IFTTT</span>
+              <a href="#ts-1498244049.405492">24日 03:54:09</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C0NUFLFU3/p1498244049405492" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                
+              </div>
+
+              <div>
+              </div>
+            <div class="mt-2 border p-2" id="ts-1498244049.405492">
+              
+    <div class="d-flex">
+        <div class="flex-self-baseline f4 ml-2">
+          <span class="Label Label--outline">
+            <a href="https://github.com/vim/vim/commit/f8be461d0284110b321be748fea206d4169b98bb" target="_blank" rel="noopener noreferrer">patch 8.0.0663: unexpected error message only when &#39;verbose&#39; is set</a>
+          </span>
+        </div>
+    </div>
+      <div class="d-flex">
+        <div class="mt-2"><br><br>patch 8.0.0663: unexpected error message only when &#39;verbose&#39; is set<br><br>Problem:    Giving an error message only when &#39;verbose&#39; set is unexpected.<br>Solution:   Give a warning message instead.<br></div>
+      </div>
+      <div class="d-flex">
+        <div class="mt-2">
+          <img src="https://ifttt.com/images/no_image_card.png" width="400" height="247" alt="patch 8.0.0663: unexpected error message only when &#39;verbose&#39; is set" />
+        </div>
+      </div>
+
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1498250253.258335">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://a.slack-edge.com/8f51/img/services/ifttt_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">IFTTT</span>
+              <a href="#ts-1498250253.258335">24日 05:37:33</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C0NUFLFU3/p1498250253258335" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                
+              </div>
+
+              <div>
+              </div>
+            <div class="mt-2 border p-2" id="ts-1498250253.258335">
+              
+    <div class="d-flex">
+        <div class="flex-self-baseline f4 ml-2">
+          <span class="Label Label--outline">
+            <a href="https://github.com/vim/vim/commit/6d006f9e950364898240b7a6358516bbf73fe458" target="_blank" rel="noopener noreferrer">patch 8.0.0664: mouse does not work in tmux</a>
+          </span>
+        </div>
+    </div>
+      <div class="d-flex">
+        <div class="mt-2"><br><br>patch 8.0.0664: mouse does not work in tmux<br><br>Problem:    Mouse does not work in tmux. (lilydjwg)<br>Solution:   Add flag for SGR release being present.<br></div>
+      </div>
+      <div class="d-flex">
+        <div class="mt-2">
+          <img src="https://ifttt.com/images/no_image_card.png" width="400" height="247" alt="patch 8.0.0664: mouse does not work in tmux" />
+        </div>
+      </div>
+
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1498251137.498957">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://a.slack-edge.com/8f51/img/services/ifttt_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">IFTTT</span>
+              <a href="#ts-1498251137.498957">24日 05:52:17</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C0NUFLFU3/p1498251137498957" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                
+              </div>
+
+              <div>
+              </div>
+            <div class="mt-2 border p-2" id="ts-1498251137.498957">
+              
+    <div class="d-flex">
+        <div class="flex-self-baseline f4 ml-2">
+          <span class="Label Label--outline">
+            <a href="https://github.com/vim/vim/commit/090209bfbd41af5d8c8e44f8366d290431ffbf18" target="_blank" rel="noopener noreferrer">patch 8.0.0665: warning for uninitialized variable</a>
+          </span>
+        </div>
+    </div>
+      <div class="d-flex">
+        <div class="mt-2"><br><br>patch 8.0.0665: warning for uninitialized variable<br><br>Problem:    Warning for uninitialized variable. (Tony Mechelynck)<br>Solution:   Initialize it.<br></div>
+      </div>
+      <div class="d-flex">
+        <div class="mt-2">
+          <img src="https://ifttt.com/images/no_image_card.png" width="400" height="247" alt="patch 8.0.0665: warning for uninitialized variable" />
+        </div>
+      </div>
+
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1498251758.671554">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://a.slack-edge.com/8f51/img/services/ifttt_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">IFTTT</span>
+              <a href="#ts-1498251758.671554">24日 06:02:38</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C0NUFLFU3/p1498251758671554" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                
+              </div>
+
+              <div>
+              </div>
+            <div class="mt-2 border p-2" id="ts-1498251758.671554">
+              
+    <div class="d-flex">
+        <div class="flex-self-baseline f4 ml-2">
+          <span class="Label Label--outline">
+            <a href="https://github.com/vim/vim/commit/5fe691240bff11e9618252486147f0156e875666" target="_blank" rel="noopener noreferrer">patch 8.0.0666: dead for loop</a>
+          </span>
+        </div>
+    </div>
+      <div class="d-flex">
+        <div class="mt-2"><br><br>patch 8.0.0666: dead for loop<br><br>Problem:    Dead for loop. (Coverity)<br>Solution:   Remove the for loop.<br></div>
+      </div>
+      <div class="d-flex">
+        <div class="mt-2">
+          <img src="https://ifttt.com/images/no_image_card.png" width="400" height="247" alt="patch 8.0.0666: dead for loop" />
+        </div>
+      </div>
+
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1498308738.633139">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://a.slack-edge.com/8f51/img/services/ifttt_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">IFTTT</span>
+              <a href="#ts-1498308738.633139">24日 21:52:18</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C0NUFLFU3/p1498308738633139" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                
+              </div>
+
+              <div>
+              </div>
+            <div class="mt-2 border p-2" id="ts-1498308738.633139">
+              
+    <div class="d-flex">
+        <div class="flex-self-baseline f4 ml-2">
+          <span class="Label Label--outline">
+            <a href="https://github.com/vim/vim/commit/53564f7c1a2998d92568e07fff1f2a4c1cecb646" target="_blank" rel="noopener noreferrer">patch 8.0.0667: memory access error when command follows :endfunc</a>
+          </span>
+        </div>
+    </div>
+      <div class="d-flex">
+        <div class="mt-2"><br><br>patch 8.0.0667: memory access error when command follows :endfunc<br><br>Problem:    Memory access error when command follows :endfunction. (Nikolai<br>            Pavlov)<br>Solution:   Make memory handling in :function straightforward. (closes #1793)<br></div>
+      </div>
+      <div class="d-flex">
+        <div class="mt-2">
+          <img src="https://ifttt.com/images/no_image_card.png" width="400" height="247" alt="patch 8.0.0667: memory access error when command follows :endfunc" />
+        </div>
+      </div>
+
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1498309930.694842">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://a.slack-edge.com/8f51/img/services/ifttt_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">IFTTT</span>
+              <a href="#ts-1498309930.694842">24日 22:12:10</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C0NUFLFU3/p1498309930694842" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                
+              </div>
+
+              <div>
+              </div>
+            <div class="mt-2 border p-2" id="ts-1498309930.694842">
+              
+    <div class="d-flex">
+        <div class="flex-self-baseline f4 ml-2">
+          <span class="Label Label--outline">
+            <a href="https://github.com/vim/vim/commit/a1bd86e0f2056f796390bc0cd3aba5c89513d0d2" target="_blank" rel="noopener noreferrer">patch 8.0.0668: nsis installer script does not work</a>
+          </span>
+        </div>
+    </div>
+      <div class="d-flex">
+        <div class="mt-2"><br><br>patch 8.0.0668: nsis installer script does not work<br><br>Problem:    Nsis installer script does not work. (Christian Brabandt)<br>Solution:   Fix the syntax of /SD.<br></div>
+      </div>
+      <div class="d-flex">
+        <div class="mt-2">
+          <img src="https://ifttt.com/images/no_image_card.png" width="400" height="247" alt="patch 8.0.0668: nsis installer script does not work" />
+        </div>
+      </div>
+
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1498311755.789337">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://a.slack-edge.com/8f51/img/services/ifttt_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">IFTTT</span>
+              <a href="#ts-1498311755.789337">24日 22:42:35</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C0NUFLFU3/p1498311755789337" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                
+              </div>
+
+              <div>
+              </div>
+            <div class="mt-2 border p-2" id="ts-1498311755.789337">
+              
+    <div class="d-flex">
+        <div class="flex-self-baseline f4 ml-2">
+          <span class="Label Label--outline">
+            <a href="https://github.com/vim/vim/commit/24a9e348aa88a6c60ae0cdf5c4a777d8c03b08ca" target="_blank" rel="noopener noreferrer">patch 8.0.0669: CTRL-N at start of the buffer does not work correctly</a>
+          </span>
+        </div>
+    </div>
+      <div class="d-flex">
+        <div class="mt-2"><br><br>patch 8.0.0669: CTRL-N at start of the buffer does not work correctly<br><br>Problem:    In Insert mode, CTRL-N at start of the buffer does not work<br>            correctly. (zuloloxi)<br>Solution:   Wrap around the start of the buffer. (Christian Brabandt)<br></div>
+      </div>
+      <div class="d-flex">
+        <div class="mt-2">
+          <img src="https://ifttt.com/images/no_image_card.png" width="400" height="247" alt="patch 8.0.0669: CTRL-N at start of the buffer does not work correctly" />
+        </div>
+      </div>
+
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1498313526.887371">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://a.slack-edge.com/8f51/img/services/ifttt_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">IFTTT</span>
+              <a href="#ts-1498313526.887371">24日 23:12:06</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C0NUFLFU3/p1498313526887371" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                
+              </div>
+
+              <div>
+              </div>
+            <div class="mt-2 border p-2" id="ts-1498313526.887371">
+              
+    <div class="d-flex">
+        <div class="flex-self-baseline f4 ml-2">
+          <span class="Label Label--outline">
+            <a href="https://github.com/vim/vim/commit/1e8e14552e0cc8881411eb8fbe39a654dae42554" target="_blank" rel="noopener noreferrer">patch 8.0.0670: can&#39;t use input() in a timer callback</a>
+          </span>
+        </div>
+    </div>
+      <div class="d-flex">
+        <div class="mt-2"><br><br>patch 8.0.0670: can&#39;t use input() in a timer callback<br><br>Problem:    Can&#39;t use input() in a timer callback. (Cosmin Popescu)<br>Solution:   Reset vgetc_busy and set timer_busy. (Ozaki Kiichi, closes #1790,<br>            closes #1129)<br></div>
+      </div>
+      <div class="d-flex">
+        <div class="mt-2">
+          <img src="https://ifttt.com/images/no_image_card.png" width="400" height="247" alt="patch 8.0.0670: can&#39;t use input() in a timer callback" />
+        </div>
+      </div>
+
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1498323428.489059">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://a.slack-edge.com/8f51/img/services/ifttt_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">IFTTT</span>
+              <a href="#ts-1498323428.489059">25日 01:57:08</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C0NUFLFU3/p1498323428489059" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                
+              </div>
+
+              <div>
+              </div>
+            <div class="mt-2 border p-2" id="ts-1498323428.489059">
+              
+    <div class="d-flex">
+        <div class="flex-self-baseline f4 ml-2">
+          <span class="Label Label--outline">
+            <a href="https://github.com/vim/vim/commit/4eb6531b03445b4d492bc52fea0b6dcd886583af" target="_blank" rel="noopener noreferrer">patch 8.0.0671: hang when typing CTRL-C in confirm() in timer</a>
+          </span>
+        </div>
+    </div>
+      <div class="d-flex">
+        <div class="mt-2"><br><br>patch 8.0.0671: hang when typing CTRL-C in confirm() in timer<br><br>Problem:    When a function invoked from a timer calls confirm() and the user<br>            types CTRL-C then Vim hangs.<br>Solution:   Reset typebuf_was_filled. (Ozaki Kiichi, closes #1791)<br></div>
+      </div>
+      <div class="d-flex">
+        <div class="mt-2">
+          <img src="https://ifttt.com/images/no_image_card.png" width="400" height="247" alt="patch 8.0.0671: hang when typing CTRL-C in confirm() in timer" />
+        </div>
+      </div>
+
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1498336641.242799">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://a.slack-edge.com/8f51/img/services/ifttt_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">IFTTT</span>
+              <a href="#ts-1498336641.242799">25日 05:37:21</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C0NUFLFU3/p1498336641242799" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                
+              </div>
+
+              <div>
+              </div>
+            <div class="mt-2 border p-2" id="ts-1498336641.242799">
+              
+    <div class="d-flex">
+        <div class="flex-self-baseline f4 ml-2">
+          <span class="Label Label--outline">
+            <a href="https://github.com/vim/vim/commit/cc0750dc6e878394ab0fd922b7ea4280918ae406" target="_blank" rel="noopener noreferrer">patch 8.0.0672: third item of synconcealed() changes too often</a>
+          </span>
+        </div>
+    </div>
+      <div class="d-flex">
+        <div class="mt-2"><br><br>patch 8.0.0672: third item of synconcealed() changes too often<br><br>Problem:    Third item of synconcealed() changes too often. (Dominique Pelle)<br>Solution:   Reset the sequence number at the start of each line.<br></div>
+      </div>
+      <div class="d-flex">
+        <div class="mt-2">
+          <img src="https://ifttt.com/images/no_image_card.png" width="400" height="247" alt="patch 8.0.0672: third item of synconcealed() changes too often" />
+        </div>
+      </div>
+
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1498337876.303011">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://a.slack-edge.com/8f51/img/services/ifttt_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">IFTTT</span>
+              <a href="#ts-1498337876.303011">25日 05:57:56</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C0NUFLFU3/p1498337876303011" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                
+              </div>
+
+              <div>
+              </div>
+            <div class="mt-2 border p-2" id="ts-1498337876.303011">
+              
+    <div class="d-flex">
+        <div class="flex-self-baseline f4 ml-2">
+          <span class="Label Label--outline">
+            <a href="https://github.com/vim/vim/commit/ea20de81462a7e1a7f8fc1d53ad618efb0663c17" target="_blank" rel="noopener noreferrer">patch 8.0.0673: build failure without conceal feature</a>
+          </span>
+        </div>
+    </div>
+      <div class="d-flex">
+        <div class="mt-2"><br><br>patch 8.0.0673: build failure without conceal feature<br><br>Problem:    Build failure without conceal feature.<br>Solution:   Add #ifdef.<br></div>
+      </div>
+      <div class="d-flex">
+        <div class="mt-2">
+          <img src="https://ifttt.com/images/no_image_card.png" width="400" height="247" alt="patch 8.0.0673: build failure without conceal feature" />
+        </div>
+      </div>
+
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1498390953.289532">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://a.slack-edge.com/8f51/img/services/ifttt_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">IFTTT</span>
+              <a href="#ts-1498390953.289532">25日 20:42:33</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C0NUFLFU3/p1498390953289532" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                
+              </div>
+
+              <div>
+              </div>
+            <div class="mt-2 border p-2" id="ts-1498390953.289532">
+              
+    <div class="d-flex">
+        <div class="flex-self-baseline f4 ml-2">
+          <span class="Label Label--outline">
+            <a href="https://github.com/vim/vim/commit/5d7be4f0fa04a9210a14fca69b4f9e34613b378f" target="_blank" rel="noopener noreferrer">patch 8.0.0674: cannot build with eval but without timers</a>
+          </span>
+        </div>
+    </div>
+      <div class="d-flex">
+        <div class="mt-2"><br><br>patch 8.0.0674: cannot build with eval but without timers<br><br>Problem:    Cannot build with eval but without timers.<br>Solution:   Add #ifdef (John Marriott)<br></div>
+      </div>
+      <div class="d-flex">
+        <div class="mt-2">
+          <img src="https://ifttt.com/images/no_image_card.png" width="400" height="247" alt="patch 8.0.0674: cannot build with eval but without timers" />
+        </div>
+      </div>
+
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1498407142.056068">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://a.slack-edge.com/8f51/img/services/ifttt_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">IFTTT</span>
+              <a href="#ts-1498407142.056068">26日 01:12:22</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C0NUFLFU3/p1498407142056068" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                
+              </div>
+
+              <div>
+              </div>
+            <div class="mt-2 border p-2" id="ts-1498407142.056068">
+              
+    <div class="d-flex">
+        <div class="flex-self-baseline f4 ml-2">
+          <span class="Label Label--outline">
+            <a href="https://github.com/vim/vim/commit/774e5a9673260b1b8b88463669213a96637f72e8" target="_blank" rel="noopener noreferrer">patch 8.0.0675: &#39;colorcolumn&#39; has a higher priority than &#39;hlsearch&#39;</a>
+          </span>
+        </div>
+    </div>
+      <div class="d-flex">
+        <div class="mt-2"><br><br>patch 8.0.0675: &#39;colorcolumn&#39; has a higher priority than &#39;hlsearch&#39;<br><br>Problem:    &#39;colorcolumn&#39; has a higher priority than &#39;hlsearch&#39;, it should be<br>            the other way around. (Nazri Ramliy)<br>Solution:   Change the priorities. (LemonBoy, closes #1794)<br></div>
+      </div>
+      <div class="d-flex">
+        <div class="mt-2">
+          <img src="https://ifttt.com/images/no_image_card.png" width="400" height="247" alt="patch 8.0.0675: &#39;colorcolumn&#39; has a higher priority than &#39;hlsearch&#39;" />
+        </div>
+      </div>
+
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1498417664.645983">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://a.slack-edge.com/8f51/img/services/ifttt_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">IFTTT</span>
+              <a href="#ts-1498417664.645983">26日 04:07:44</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C0NUFLFU3/p1498417664645983" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                
+              </div>
+
+              <div>
+              </div>
+            <div class="mt-2 border p-2" id="ts-1498417664.645983">
+              
+    <div class="d-flex">
+        <div class="flex-self-baseline f4 ml-2">
+          <span class="Label Label--outline">
+            <a href="https://github.com/vim/vim/commit/182a17b1e80b92826204d967808df0d30eb2ef27" target="_blank" rel="noopener noreferrer">patch 8.0.0676: crash when closing quickfix window in autocmd</a>
+          </span>
+        </div>
+    </div>
+      <div class="d-flex">
+        <div class="mt-2"><br><br>patch 8.0.0676: crash when closing quickfix window in autocmd<br><br>Problem:    Crash when closing the quickfix window in a FileType autocommand<br>            that triggers when the quickfix window is opened.<br>Solution:   Save the new value before triggering the OptionSet autocommand.<br>            Add the &#34;starting&#34; flag to test_override() to make the text work.<br></div>
+      </div>
+
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1498418599.699265">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://a.slack-edge.com/8f51/img/services/ifttt_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">IFTTT</span>
+              <a href="#ts-1498418599.699265">26日 04:23:19</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C0NUFLFU3/p1498418599699265" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                
+              </div>
+
+              <div>
+              </div>
+            <div class="mt-2 border p-2" id="ts-1498418599.699265">
+              
+    <div class="d-flex">
+        <div class="flex-self-baseline f4 ml-2">
+          <span class="Label Label--outline">
+            <a href="https://github.com/vim/vim/commit/1814183b865059679f6ee526ec23fc575e536e66" target="_blank" rel="noopener noreferrer">patch 8.0.0677: setting &#39;filetype&#39; may switch buffers</a>
+          </span>
+        </div>
+    </div>
+      <div class="d-flex">
+        <div class="mt-2"><br><br>patch 8.0.0677: setting &#39;filetype&#39; may switch buffers<br><br>Problem:    Setting &#39;filetype&#39; internally may cause the current buffer and<br>            window to change unexpectedly.<br>Solution:   Set curbuf_lock. (closes #1734)<br></div>
+      </div>
+
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1498418836.712814">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://a.slack-edge.com/8f51/img/services/ifttt_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">IFTTT</span>
+              <a href="#ts-1498418836.712814">26日 04:27:16</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C0NUFLFU3/p1498418836712814" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                
+              </div>
+
+              <div>
+              </div>
+            <div class="mt-2 border p-2" id="ts-1498418836.712814">
+              
+    <div class="d-flex">
+        <div class="flex-self-baseline f4 ml-2">
+          <span class="Label Label--outline">
+            <a href="https://github.com/vim/vim/commit/1814183b865059679f6ee526ec23fc575e536e66" target="_blank" rel="noopener noreferrer">patch 8.0.0677: setting &#39;filetype&#39; may switch buffers</a>
+          </span>
+        </div>
+    </div>
+      <div class="d-flex">
+        <div class="mt-2"><br><br>patch 8.0.0677: setting &#39;filetype&#39; may switch buffers<br><br>Problem:    Setting &#39;filetype&#39; internally may cause the current buffer and<br>            window to change unexpectedly.<br>Solution:   Set curbuf_lock. (closes #1734)<br></div>
+      </div>
+
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1498423982.999405">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://a.slack-edge.com/8f51/img/services/ifttt_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">IFTTT</span>
+              <a href="#ts-1498423982.999405">26日 05:53:02</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C0NUFLFU3/p1498423982999405" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                
+              </div>
+
+              <div>
+              </div>
+            <div class="mt-2 border p-2" id="ts-1498423982.999405">
+              
+    <div class="d-flex">
+        <div class="flex-self-baseline f4 ml-2">
+          <span class="Label Label--outline">
+            <a href="https://github.com/vim/vim/commit/8eeeba8c025ff844e6514c4a60cec11bf1fc1b35" target="_blank" rel="noopener noreferrer">patch 8.0.0678: closing a window does not trigger resizing</a>
+          </span>
+        </div>
+    </div>
+      <div class="d-flex">
+        <div class="mt-2"><br><br>patch 8.0.0678: closing a window does not trigger resizing<br><br>Problem:    When &#39;equalalways&#39; is set and closing a window in a separate<br>            frame, not all window sizes are adjusted. (Glacambre)<br>Solution:   Resize all windows if the new current window is not in the same<br>            frame as the closed window. (closes #1707)<br></div>
+      </div>
+
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1498424269.014974">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://a.slack-edge.com/8f51/img/services/ifttt_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">IFTTT</span>
+              <a href="#ts-1498424269.014974">26日 05:57:49</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C0NUFLFU3/p1498424269014974" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                
+              </div>
+
+              <div>
+              </div>
+            <div class="mt-2 border p-2" id="ts-1498424269.014974">
+              
+    <div class="d-flex">
+        <div class="flex-self-baseline f4 ml-2">
+          <span class="Label Label--outline">
+            <a href="https://github.com/vim/vim/commit/8eeeba8c025ff844e6514c4a60cec11bf1fc1b35" target="_blank" rel="noopener noreferrer">patch 8.0.0678: closing a window does not trigger resizing</a>
+          </span>
+        </div>
+    </div>
+      <div class="d-flex">
+        <div class="mt-2"><br><br>patch 8.0.0678: closing a window does not trigger resizing<br><br>Problem:    When &#39;equalalways&#39; is set and closing a window in a separate<br>            frame, not all window sizes are adjusted. (Glacambre)<br>Solution:   Resize all windows if the new current window is not in the same<br>            frame as the closed window. (closes #1707)<br></div>
+      </div>
+
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1498424572.033514">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://a.slack-edge.com/8f51/img/services/ifttt_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">IFTTT</span>
+              <a href="#ts-1498424572.033514">26日 06:02:52</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C0NUFLFU3/p1498424572033514" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                
+              </div>
+
+              <div>
+              </div>
+            <div class="mt-2 border p-2" id="ts-1498424572.033514">
+              
+    <div class="d-flex">
+        <div class="flex-self-baseline f4 ml-2">
+          <span class="Label Label--outline">
+            <a href="https://github.com/vim/vim/commit/8eeeba8c025ff844e6514c4a60cec11bf1fc1b35" target="_blank" rel="noopener noreferrer">patch 8.0.0678: closing a window does not trigger resizing</a>
+          </span>
+        </div>
+    </div>
+      <div class="d-flex">
+        <div class="mt-2"><br><br>patch 8.0.0678: closing a window does not trigger resizing<br><br>Problem:    When &#39;equalalways&#39; is set and closing a window in a separate<br>            frame, not all window sizes are adjusted. (Glacambre)<br>Solution:   Resize all windows if the new current window is not in the same<br>            frame as the closed window. (closes #1707)<br></div>
+      </div>
+
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1498424865.050020">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://a.slack-edge.com/8f51/img/services/ifttt_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">IFTTT</span>
+              <a href="#ts-1498424865.050020">26日 06:07:45</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C0NUFLFU3/p1498424865050020" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                
+              </div>
+
+              <div>
+              </div>
+            <div class="mt-2 border p-2" id="ts-1498424865.050020">
+              
+    <div class="d-flex">
+        <div class="flex-self-baseline f4 ml-2">
+          <span class="Label Label--outline">
+            <a href="https://github.com/vim/vim/commit/8eeeba8c025ff844e6514c4a60cec11bf1fc1b35" target="_blank" rel="noopener noreferrer">patch 8.0.0678: closing a window does not trigger resizing</a>
+          </span>
+        </div>
+    </div>
+      <div class="d-flex">
+        <div class="mt-2"><br><br>patch 8.0.0678: closing a window does not trigger resizing<br><br>Problem:    When &#39;equalalways&#39; is set and closing a window in a separate<br>            frame, not all window sizes are adjusted. (Glacambre)<br>Solution:   Resize all windows if the new current window is not in the same<br>            frame as the closed window. (closes #1707)<br></div>
+      </div>
+
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1498425165.066458">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://a.slack-edge.com/8f51/img/services/ifttt_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">IFTTT</span>
+              <a href="#ts-1498425165.066458">26日 06:12:45</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C0NUFLFU3/p1498425165066458" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                
+              </div>
+
+              <div>
+              </div>
+            <div class="mt-2 border p-2" id="ts-1498425165.066458">
+              
+    <div class="d-flex">
+        <div class="flex-self-baseline f4 ml-2">
+          <span class="Label Label--outline">
+            <a href="https://github.com/vim/vim/commit/8eeeba8c025ff844e6514c4a60cec11bf1fc1b35" target="_blank" rel="noopener noreferrer">patch 8.0.0678: closing a window does not trigger resizing</a>
+          </span>
+        </div>
+    </div>
+      <div class="d-flex">
+        <div class="mt-2"><br><br>patch 8.0.0678: closing a window does not trigger resizing<br><br>Problem:    When &#39;equalalways&#39; is set and closing a window in a separate<br>            frame, not all window sizes are adjusted. (Glacambre)<br>Solution:   Resize all windows if the new current window is not in the same<br>            frame as the closed window. (closes #1707)<br></div>
+      </div>
+
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1498467425.181178">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://a.slack-edge.com/8f51/img/services/ifttt_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">IFTTT</span>
+              <a href="#ts-1498467425.181178">26日 17:57:05</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C0NUFLFU3/p1498467425181178" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                
+              </div>
+
+              <div>
+              </div>
+            <div class="mt-2 border p-2" id="ts-1498467425.181178">
+              
+    <div class="d-flex">
+        <div class="flex-self-baseline f4 ml-2">
+          <span class="Label Label--outline">
+            <a href="https://github.com/vim/vim/commit/41cc038ff83498c589c7d25b3d2984145528eb92" target="_blank" rel="noopener noreferrer">patch 8.0.0679: using freed memory</a>
+          </span>
+        </div>
+    </div>
+      <div class="d-flex">
+        <div class="mt-2"><br><br>patch 8.0.0679: using freed memory<br><br>Problem:    Using freed memory.<br>Solution:   Get the parent frame pointer earlier.<br></div>
+      </div>
+      <div class="d-flex">
+        <div class="mt-2">
+          <img src="https://ifttt.com/images/no_image_card.png" width="400" height="247" alt="patch 8.0.0679: using freed memory" />
+        </div>
+      </div>
+
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1498567665.619880">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://a.slack-edge.com/8f51/img/services/ifttt_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">IFTTT</span>
+              <a href="#ts-1498567665.619880">27日 21:47:45</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C0NUFLFU3/p1498567665619880" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                
+              </div>
+
+              <div>
+              </div>
+            <div class="mt-2 border p-2" id="ts-1498567665.619880">
+              
+    <div class="d-flex">
+        <div class="flex-self-baseline f4 ml-2">
+          <span class="Label Label--outline">
+            <a href="https://github.com/vim/vim/commit/07ecfa64a18609a986f21d6132d04ee8934f3200" target="_blank" rel="noopener noreferrer">patch 8.0.0680: plugins in start packages are sourced twice</a>
+          </span>
+        </div>
+    </div>
+      <div class="d-flex">
+        <div class="mt-2"><br><br>patch 8.0.0680: plugins in start packages are sourced twice<br><br>Problem:    Plugins in start packages are sourced twice. (mseplowitz)<br>Solution:   Use the unmodified runtime path when loading plugins (test by Ingo<br>            Karkat, closes #1801)<br></div>
+      </div>
+      <div class="d-flex">
+        <div class="mt-2">
+          <img src="https://ifttt.com/images/no_image_card.png" width="400" height="247" alt="patch 8.0.0680: plugins in start packages are sourced twice" />
+        </div>
+      </div>
+
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1498570938.708224">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://a.slack-edge.com/8f51/img/services/ifttt_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">IFTTT</span>
+              <a href="#ts-1498570938.708224">27日 22:42:18</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C0NUFLFU3/p1498570938708224" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                
+              </div>
+
+              <div>
+              </div>
+            <div class="mt-2 border p-2" id="ts-1498570938.708224">
+              
+    <div class="d-flex">
+        <div class="flex-self-baseline f4 ml-2">
+          <span class="Label Label--outline">
+            <a href="https://github.com/vim/vim/commit/18d90b95c49d9ff1c635dd762864022aab8e71f1" target="_blank" rel="noopener noreferrer">patch 8.0.0681: unnamed register only contains the last deleted text</a>
+          </span>
+        </div>
+    </div>
+      <div class="d-flex">
+        <div class="mt-2"><br><br>patch 8.0.0681: unnamed register only contains the last deleted text<br><br>Problem:    Unnamed register only contains the last deleted text when<br>            appending deleted text to a register. (Wolfgang Jeltsch)<br>Solution:   Only set y_previous when not using y_append. (Christian Brabandt)<br></div>
+      </div>
+      <div class="d-flex">
+        <div class="mt-2">
+          <img src="https://ifttt.com/images/no_image_card.png" width="400" height="247" alt="patch 8.0.0681: unnamed register only contains the last deleted text" />
+        </div>
+      </div>
+
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1498571243.825671">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://a.slack-edge.com/8f51/img/services/ifttt_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">IFTTT</span>
+              <a href="#ts-1498571243.825671">27日 22:47:23</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C0NUFLFU3/p1498571243825671" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                
+              </div>
+
+              <div>
+              </div>
+            <div class="mt-2 border p-2" id="ts-1498571243.825671">
+              
+    <div class="d-flex">
+        <div class="flex-self-baseline f4 ml-2">
+          <span class="Label Label--outline">
+            <a href="https://github.com/vim/vim/commit/0b2eef24bcbe2c85c90bbde914a1782cbedc5c72" target="_blank" rel="noopener noreferrer">patch 8.0.0682: no test for synIDtrans()</a>
+          </span>
+        </div>
+    </div>
+      <div class="d-flex">
+        <div class="mt-2"><br><br>patch 8.0.0682: no test for synIDtrans()<br><br>Problem:    No test for synIDtrans().<br>Solution:   Add a test. (Dominique Pelle, closes #1796)<br></div>
+      </div>
+      <div class="d-flex">
+        <div class="mt-2">
+          <img src="https://ifttt.com/images/no_image_card.png" width="400" height="247" alt="patch 8.0.0682: no test for synIDtrans()" />
+        </div>
+      </div>
+
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1498576447.036948">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://a.slack-edge.com/8f51/img/services/ifttt_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">IFTTT</span>
+              <a href="#ts-1498576447.036948">28日 00:14:07</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C0NUFLFU3/p1498576447036948" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                
+              </div>
+
+              <div>
+              </div>
+            <div class="mt-2 border p-2" id="ts-1498576447.036948">
+              
+    <div class="d-flex">
+        <div class="flex-self-baseline f4 ml-2">
+          <span class="Label Label--outline">
+            <a href="https://github.com/vim/vim/commit/2e147caa14f622dfd1c1def8e07c113b9b85d4b2" target="_blank" rel="noopener noreferrer">patch 8.0.0683: visual bell flashes too quickly</a>
+          </span>
+        </div>
+    </div>
+      <div class="d-flex">
+        <div class="mt-2"><br><br>patch 8.0.0683: visual bell flashes too quickly<br><br>Problem:    When using a visual bell there is no delay, causing the flash to<br>            be very short, possibly unnoticeable.  Also, the flash and the<br>            beep can lockup the UI when repeated often.<br>Solution:   Do the delay in Vim or flush the output before the delay. Limit the<br>            bell to once per half a second. (Ozaki Kiichi, closes #1789)<br></div>
+      </div>
+      <div class="d-flex">
+        <div class="mt-2">
+          <img src="https://ifttt.com/images/no_image_card.png" width="400" height="247" alt="patch 8.0.0683: visual bell flashes too quickly" />
+        </div>
+      </div>
+
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1498581496.122661">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://a.slack-edge.com/8f51/img/services/ifttt_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">IFTTT</span>
+              <a href="#ts-1498581496.122661">28日 01:38:16</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C0NUFLFU3/p1498581496122661" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                
+              </div>
+
+              <div>
+              </div>
+            <div class="mt-2 border p-2" id="ts-1498581496.122661">
+              
+    <div class="d-flex">
+        <div class="flex-self-baseline f4 ml-2">
+          <span class="Label Label--outline">
+            <a href="https://github.com/vim/vim/commit/28b238225ae618f63cfe5d3d723120960a941da7" target="_blank" rel="noopener noreferrer">patch 8.0.0684: old style tests are not nice</a>
+          </span>
+        </div>
+    </div>
+      <div class="d-flex">
+        <div class="mt-2"><br><br>patch 8.0.0684: old style tests are not nice<br><br>Problem:    Old style tests are not nice.<br>Solution:   Turn two tests into new style. (pschuh, closes #1797)<br></div>
+      </div>
+      <div class="d-flex">
+        <div class="mt-2">
+          <img src="https://ifttt.com/images/no_image_card.png" width="400" height="247" alt="patch 8.0.0684: old style tests are not nice" />
+        </div>
+      </div>
+
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1498594630.057455">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://a.slack-edge.com/8f51/img/services/ifttt_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">IFTTT</span>
+              <a href="#ts-1498594630.057455">28日 05:17:10</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C0NUFLFU3/p1498594630057455" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                
+              </div>
+
+              <div>
+              </div>
+            <div class="mt-2 border p-2" id="ts-1498594630.057455">
+              
+    <div class="d-flex">
+        <div class="flex-self-baseline f4 ml-2">
+          <span class="Label Label--outline">
+            <a href="https://github.com/vim/vim/commit/e6bf655bc4de1b7f4586e1f5c2fc4978141c3aa3" target="_blank" rel="noopener noreferrer">patch 8.0.0685: when conversion fails written file may be truncated</a>
+          </span>
+        </div>
+    </div>
+      <div class="d-flex">
+        <div class="mt-2"><br><br>patch 8.0.0685: when conversion fails written file may be truncated<br><br>Problem:    When making backups is disabled and conversion with iconv fails<br>            the written file is truncated. (Luo Chen)<br>Solution:   First try converting the file and write the file only when it did<br>            not fail. (partly by Christian Brabandt)<br></div>
+      </div>
+      <div class="d-flex">
+        <div class="mt-2">
+          <img src="https://ifttt.com/images/no_image_card.png" width="400" height="247" alt="patch 8.0.0685: when conversion fails written file may be truncated" />
+        </div>
+      </div>
+
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1498675647.671495">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://a.slack-edge.com/8f51/img/services/ifttt_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">IFTTT</span>
+              <a href="#ts-1498675647.671495">29日 03:47:27</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C0NUFLFU3/p1498675647671495" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                
+              </div>
+
+              <div>
+              </div>
+            <div class="mt-2 border p-2" id="ts-1498675647.671495">
+              
+    <div class="d-flex">
+        <div class="flex-self-baseline f4 ml-2">
+          <span class="Label Label--outline">
+            <a href="https://github.com/vim/vim/commit/9f5f7bf4d5f757ef885acf74ce03c25429a328aa" target="_blank" rel="noopener noreferrer">patch 8.0.0686: extra redraw when using CTRL-L in second window</a>
+          </span>
+        </div>
+    </div>
+      <div class="d-flex">
+        <div class="mt-2"><br><br>patch 8.0.0686: extra redraw when using CTRL-L in second window<br><br>Problem:    When typing CTRL-L in a window that&#39;s not the first one, another<br>            redraw will happen later. (Christian Brabandt)<br>Solution:   Reset must_redraw after calling screenclear().<br></div>
+      </div>
+      <div class="d-flex">
+        <div class="mt-2">
+          <img src="https://ifttt.com/images/no_image_card.png" width="400" height="247" alt="patch 8.0.0686: extra redraw when using CTRL-L in second window" />
+        </div>
+      </div>
+
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1498678045.560567">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://a.slack-edge.com/8f51/img/services/ifttt_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">IFTTT</span>
+              <a href="#ts-1498678045.560567">29日 04:27:25</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C0NUFLFU3/p1498678045560567" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                
+              </div>
+
+              <div>
+              </div>
+            <div class="mt-2 border p-2" id="ts-1498678045.560567">
+              
+    <div class="d-flex">
+        <div class="flex-self-baseline f4 ml-2">
+          <span class="Label Label--outline">
+            <a href="https://github.com/vim/vim/commit/86f100dc0922e83bead7bcd5fd2bb2abbf153f46" target="_blank" rel="noopener noreferrer">patch 8.0.0687: minor issues related to quickfix</a>
+          </span>
+        </div>
+    </div>
+      <div class="d-flex">
+        <div class="mt-2"><br><br>patch 8.0.0687: minor issues related to quickfix<br><br>Problem:    Minor issues related to quickfix.<br>Solution:   Set the proper return status for all cases in setqflist() and at<br>            test cases for this.  Move the &#34;adding&#34; flag outside of<br>            FEAT_WINDOWS. Minor update to the setqflist() help text. (Yegappan<br>            Lakshmanan)<br></div>
+      </div>
+      <div class="d-flex">
+        <div class="mt-2">
+          <img src="https://ifttt.com/images/no_image_card.png" width="400" height="247" alt="patch 8.0.0687: minor issues related to quickfix" />
+        </div>
+      </div>
+
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1498681690.845101">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://a.slack-edge.com/8f51/img/services/ifttt_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">IFTTT</span>
+              <a href="#ts-1498681690.845101">29日 05:28:10</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C0NUFLFU3/p1498681690845101" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                
+              </div>
+
+              <div>
+              </div>
+            <div class="mt-2 border p-2" id="ts-1498681690.845101">
+              
+    <div class="d-flex">
+        <div class="flex-self-baseline f4 ml-2">
+          <span class="Label Label--outline">
+            <a href="https://github.com/vim/vim/commit/9c4fefffb65a2ed9b4a5b0f1bde0da8f349470b5" target="_blank" rel="noopener noreferrer">patch 8.0.0688: cannot resize the window in a FileType autocommand</a>
+          </span>
+        </div>
+    </div>
+      <div class="d-flex">
+        <div class="mt-2"><br><br>patch 8.0.0688: cannot resize the window in a FileType autocommand<br><br>Problem:    Cannot resize the window in a FileType autocommand. (Ingo Karkat)<br>Solution:   Add the CMDWIN flag to :resize. (test by Ingo Karkat,<br>            closes #1804)<br></div>
+      </div>
+      <div class="d-flex">
+        <div class="mt-2">
+          <img src="https://ifttt.com/images/no_image_card.png" width="400" height="247" alt="patch 8.0.0688: cannot resize the window in a FileType autocommand" />
+        </div>
+      </div>
+
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1498768100.400856">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://a.slack-edge.com/8f51/img/services/ifttt_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">IFTTT</span>
+              <a href="#ts-1498768100.400856">30日 05:28:20</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C0NUFLFU3/p1498768100400856" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                
+              </div>
+
+              <div>
+              </div>
+            <div class="mt-2 border p-2" id="ts-1498768100.400856">
+              
+    <div class="d-flex">
+        <div class="flex-self-baseline f4 ml-2">
+          <span class="Label Label--outline">
+            <a href="https://github.com/vim/vim/commit/a693d0584b9a7ccce98813dda3a6badb209904c7" target="_blank" rel="noopener noreferrer">patch 8.0.0689:  character not escaped when extending search pattern</a>
+          </span>
+        </div>
+    </div>
+      <div class="d-flex">
+        <div class="mt-2"><br><br>patch 8.0.0689: <del> character not escaped when extending search pattern<br><br>Problem:    The </del> character is not escaped when adding to the search pattern<br>            with CTRL-L. (Ramel Eshed)<br>Solution:   Escape the character. (Christian Brabandt)<br></div>
+      </div>
+      <div class="d-flex">
+        <div class="mt-2">
+          <img src="https://ifttt.com/images/no_image_card.png" width="400" height="247" alt="patch 8.0.0689:  character not escaped when extending search pattern" />
+        </div>
+      </div>
+
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1498768444.522223">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://a.slack-edge.com/8f51/img/services/ifttt_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">IFTTT</span>
+              <a href="#ts-1498768444.522223">30日 05:34:04</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C0NUFLFU3/p1498768444522223" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                
+              </div>
+
+              <div>
+              </div>
+            <div class="mt-2 border p-2" id="ts-1498768444.522223">
+              
+    <div class="d-flex">
+        <div class="flex-self-baseline f4 ml-2">
+          <span class="Label Label--outline">
+            <a href="https://github.com/vim/vim/commit/c2226845eb207bcd1a24e1afa941acbfecbc5170" target="_blank" rel="noopener noreferrer">patch 8.0.0690: compiler warning on non-Unix system</a>
+          </span>
+        </div>
+    </div>
+      <div class="d-flex">
+        <div class="mt-2"><br><br>patch 8.0.0690: compiler warning on non-Unix system<br><br>Problem:    Compiler warning on non-Unix system.<br>Solution:   Add #ifdef. (John Marriott)<br></div>
+      </div>
+      <div class="d-flex">
+        <div class="mt-2">
+          <img src="https://ifttt.com/images/no_image_card.png" width="400" height="247" alt="patch 8.0.0690: compiler warning on non-Unix system" />
+        </div>
+      </div>
+
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1498768703.614528">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://a.slack-edge.com/8f51/img/services/ifttt_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">IFTTT</span>
+              <a href="#ts-1498768703.614528">30日 05:38:23</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C0NUFLFU3/p1498768703614528" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                
+              </div>
+
+              <div>
+              </div>
+            <div class="mt-2 border p-2" id="ts-1498768703.614528">
+              
+    <div class="d-flex">
+        <div class="flex-self-baseline f4 ml-2">
+          <span class="Label Label--outline">
+            <a href="https://github.com/vim/vim/commit/a83fe75ca76f6f74daa1e5a620054b973b43379b" target="_blank" rel="noopener noreferrer">patch 8.0.0691: compiler warning without the linebreak feature</a>
+          </span>
+        </div>
+    </div>
+      <div class="d-flex">
+        <div class="mt-2"><br><br>patch 8.0.0691: compiler warning without the linebreak feature<br><br>Problem:    Compiler warning without the linebreak feature.<br>Solution:   Add #ifdef. (John Marriott)<br></div>
+      </div>
+      <div class="d-flex">
+        <div class="mt-2">
+          <img src="https://ifttt.com/images/no_image_card.png" width="400" height="247" alt="patch 8.0.0691: compiler warning without the linebreak feature" />
+        </div>
+      </div>
+
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- footer -->
+    <div class="clearfix"></div>
+    <div id="footer">
+      <p>
+        Powered by <a href="https://github.com/" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </p>
+    </div>
+    <!-- /footer -->
+  </div>
+</body>

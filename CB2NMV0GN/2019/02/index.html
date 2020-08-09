@@ -1,0 +1,3591 @@
+<!doctype html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>vim-jp &raquo; vim-jp.slack.com log - &#35lang-ruby - 2019年02月</title>
+<link rel="stylesheet" href="/slacklog/assets/css/site.css" type="text/css" />
+<link rel="stylesheet" href="https://unpkg.com/@primer/css/dist/primer.css" type="text/css" />
+<link rel="stylesheet" href="https://unpkg.com/prismjs@1.20.0/themes/prism-tomorrow.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="//vim-jp.org/rss.xml" />
+<link rel="canonical" href="/slacklog/CB2NMV0GN/2019/02/" />
+<link rel="shortcut icon" type="image/x-icon" href="/assets/images/favicon.ico" />
+<link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://unpkg.com/prismjs@1.20.0/components/prism-core.min.js"></script>
+<script src="https://unpkg.com/prismjs@1.20.0/plugins/autoloader/prism-autoloader.min.js"></script>
+<script src="/slacklog/assets/javascripts/slacklog.js"></script>
+</head>
+<body>
+  <div class="body">
+    <div id="content">
+      <!-- header -->
+      <div class="pagehead ml-3">
+        <h1>
+          <span class="author">
+            <a href="//vim-jp.org" class="url fn" >vim-jp</a>
+          </span>
+          <span class="path-divider">/</span>
+          <a href="/slacklog">slacklog</a>
+        </h1>
+      </div>
+      <!-- /header -->
+      <div>
+        <div class="m-3">
+          <nav aria-label="Breadcrumb">
+            <ol>
+              <li class="breadcrumb-item f4"><a href="/slacklog/CB2NMV0GN/">&#35lang-ruby</a></li>
+              <li class="breadcrumb-item f4" aria-current="page">2019年02月</li>
+            </ol>
+          </nav>
+          <h4 class="text-gray pb-2 border-bottom"></h4>
+        </div>
+        <div class="clearfix m-3" id="ts-1548984655.049900">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2018-07-31/407982080133_30e238cd92e6c88883f9_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">mattn</span>
+              <a href="#ts-1548984655.049900">1日 10:30:55</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CB2NMV0GN/p1548984655049900" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                thinca さんの環境で補完効かないのもう一つ可能性があるかも。
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1548984664.050300">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2018-07-31/407982080133_30e238cd92e6c88883f9_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">mattn</span>
+              <a href="#ts-1548984664.050300">1日 10:31:04</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CB2NMV0GN/p1548984664050300" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                <pre><br>if executable(&#39;solargraph&#39;)<br>  augroup LspRuby<br>    au!<br>    autocmd User lsp_setup call lsp#register_server({<br>        \ &#39;name&#39;: &#39;solargraph&#39;,<br>        \ &#39;cmd&#39;: {server_info-&gt;[&amp;shell, &amp;shellcmdflag, &#39;solargraph stdio&#39;]},<br>        \ &#39;root_uri&#39;:{server_info-&gt;lsp#utils#path_to_uri(lsp#utils#find_nearest_parent_file_directory(lsp#utils#get_buffer_path(), &#39;Rakefile&#39;))},<br>        \ &#39;whitelist&#39;: [&#39;ruby&#39;],<br>        \ })<br>    autocmd FileType ruby setlocal omnifunc=lsp#complete<br>  augroup END<br>endif<br></pre><br>root_uri が無いのかも。
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1548985003.051700">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2015-01-15/3417067010_04a676b32692fb2507e1_48.jpg" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">thinca</span>
+              <a href="#ts-1548985003.051700">1日 10:36:43</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CB2NMV0GN/p1548985003051700" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                お、試したの書捨てで適当に作ったファイルだったので可能性高そう。後で試します！
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1549015803.052100">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2018-07-31/407982080133_30e238cd92e6c88883f9_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">mattn</span>
+              <a href="#ts-1549015803.052100">1日 19:10:03</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CB2NMV0GN/p1549015803052100" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                solargraph の作者とめっちゃバグの検出で詰めてる。
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1549015817.052300">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2018-07-31/407982080133_30e238cd92e6c88883f9_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">mattn</span>
+              <a href="#ts-1549015817.052300">1日 19:10:17</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CB2NMV0GN/p1549015817052300" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                <a href='https://github.com/castwide/solargraph/pull/151'>https://github.com/castwide/solargraph/pull/151</a>
+              </div>
+
+              <div>
+              </div>
+            <div class="mt-2 border p-2" id="ts-1549015817.052300">
+              
+    <div class="d-flex">
+      <div>
+        <img class="avatar avatar-small" width="32" height="32" src="https://a.slack-edge.com/bfaba/img/unfurl_icons/github.png" alt="GitHub" />
+      </div>
+      <div class="flex-self-baseline f4 ml-2">
+        <span class="Label Label--outline">
+          <a href="https://github.com/castwide/solargraph/pull/151" target="_blank" rel="noopener noreferrer">Synchronized didChange by mattn · Pull Request #151 · castwide/solargraph</a>
+        </span>
+      </div>
+    </div>
+    <div class="d-flex pl-2 mb-2">
+      <div class="mt-2">When received completion after didchange immediately, completion got empty result since didchange call async_update.</div>
+    </div>
+
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1549424874.053000">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2015-01-15/3417067010_04a676b32692fb2507e1_48.jpg" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">thinca</span>
+              <a href="#ts-1549424874.053000">6日 12:47:54</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CB2NMV0GN/p1549424874053000" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                Performance/RedundantMatch: Use <code>=<del></code> in places where the <code>MatchData</code> returned by <code>#match</code> will not be used.<br>これを言われた通りに直したら<br>Performance/RegexpMatch: Use <code>match?</code> instead of <code>=</del></code> when <code>MatchData</code> is not used.<br>こう怒られた…イケてない…
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1549424905.053500">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2015-01-15/3417067010_04a676b32692fb2507e1_48.jpg" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">thinca</span>
+              <a href="#ts-1549424905.053500">6日 12:48:25</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CB2NMV0GN/p1549424905053500" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                直せそうかソース見てみるか
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1549424936.053900">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2015-01-15/3417067010_04a676b32692fb2507e1_48.jpg" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">thinca</span>
+              <a href="#ts-1549424936.053900">6日 12:48:56</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CB2NMV0GN/p1549424936053900" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                そもそも最新版でも同じかも確認しないとか
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1549425211.054500">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2015-01-15/3417067010_04a676b32692fb2507e1_48.jpg" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">thinca</span>
+              <a href="#ts-1549425211.054500">6日 12:53:31</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CB2NMV0GN/p1549425211054500" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                うーん、いきなり PR じゃなくてこう直してほしいって言うのが先っぽそう (だるい)
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1549427676.054700">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://secure.gravatar.com/avatar/d9d0ceb387e3b6de5c4562af78e8a910.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0004-48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">ujihisa</span>
+              <a href="#ts-1549427676.054700">6日 13:34:36</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CB2NMV0GN/p1549427676054700" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                rubocop
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1549434792.055100">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2015-01-15/3417067010_04a676b32692fb2507e1_48.jpg" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">thinca</span>
+              <a href="#ts-1549434792.055100">6日 15:33:12</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CB2NMV0GN/p1549434792055100" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                色々アレなので一旦 rubocop-jp で相談するか
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1549444296.055600">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2015-01-15/3417067010_04a676b32692fb2507e1_48.jpg" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">thinca</span>
+              <a href="#ts-1549444296.055600">6日 18:11:36</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CB2NMV0GN/p1549444296055600" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                問題報告しようと最小構成作ってたら <code>RegexpMatch</code> の方のエラーが出ない。なんでだ
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1549444386.056600">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://secure.gravatar.com/avatar/110cd4dcaed019b3bd9809e541afdeb6.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0010-48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">okuramasafumi</span>
+              <a href="#ts-1549444386.056600">6日 18:13:06</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CB2NMV0GN/p1549444386056600" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                私もこの問題興味あります。<br>@thinca 最小構成をGistなどで共有していただいてもよろしいですか？
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1549444422.057000">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2015-01-15/3417067010_04a676b32692fb2507e1_48.jpg" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">thinca</span>
+              <a href="#ts-1549444422.057000">6日 18:13:42</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CB2NMV0GN/p1549444422057000" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                最小構成を作ろうとしたら再現ができなくて困ってるところです…
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1549444717.058000">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2015-01-15/3417067010_04a676b32692fb2507e1_48.jpg" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">thinca</span>
+              <a href="#ts-1549444717.058000">6日 18:18:37</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CB2NMV0GN/p1549444717058000" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                $ rubocop -V<br>0.63.1 (using Parser 2.5.3.0, running on ruby 2.5.3 x86_64-darwin18)<br><br>今この環境ですが、<br><br><pre><br>puts &#39;foo&#39; if &#39;foo&#39; =~ /foo/<br></pre><br><br>このコードで <code>Performance/RegexpMatch</code> が出てくれないんですよね
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1549444899.058300">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2015-01-15/3417067010_04a676b32692fb2507e1_48.jpg" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">thinca</span>
+              <a href="#ts-1549444899.058300">6日 18:21:39</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CB2NMV0GN/p1549444899058300" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                <code>0.63.1 (using Parser 2.6.0.0, running on ruby 2.6.0 x86_64-linux)</code> の環境で試しても変わらず…
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1549444953.058900">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://secure.gravatar.com/avatar/110cd4dcaed019b3bd9809e541afdeb6.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0010-48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">okuramasafumi</span>
+              <a href="#ts-1549444953.058900">6日 18:22:33</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CB2NMV0GN/p1549444953058900" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                あー、if修飾子のときは出ないみたいですね。if文だと出ました。
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1549445013.059200">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2015-01-15/3417067010_04a676b32692fb2507e1_48.jpg" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">thinca</span>
+              <a href="#ts-1549445013.059200">6日 18:23:33</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CB2NMV0GN/p1549445013059200" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                あれー、if 文でも出ないんですよね…
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1549445105.061100">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2015-01-15/3417067010_04a676b32692fb2507e1_48.jpg" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">thinca</span>
+              <a href="#ts-1549445105.061100">6日 18:25:05</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CB2NMV0GN/p1549445105061100" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                ともあれ、その状態であれば、その if 文の中身が <code>&#39;foo&#39;.match(/foo/)</code> だと <code>Performance/RedundantMatch</code> さんが <code>=<del></code> 使えやって言ってきて、いざ <code>=</del></code> にすると今度は <code>Performance/RegexpMatch</code> さんが <code>match?</code> 使えやって言ってくると言う二段構えになるはず
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1549445188.062400">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2015-01-15/3417067010_04a676b32692fb2507e1_48.jpg" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">thinca</span>
+              <a href="#ts-1549445188.062400">6日 18:26:28</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CB2NMV0GN/p1549445188062400" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                問題の本質は同じなので <code>Performance/RedundantMatch</code> さんはもう不要で <code>Performance/RegexpMatch</code> さんが両方指摘してくれれば良い予感がしてます
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1549445195.062600">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://secure.gravatar.com/avatar/110cd4dcaed019b3bd9809e541afdeb6.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0010-48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">okuramasafumi</span>
+              <a href="#ts-1549445195.062600">6日 18:26:35</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CB2NMV0GN/p1549445195062600" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                <pre><br># frozen_string_literal: true<br><br>if &#39;foo&#39;.match(/foo/)<br>  puts &#39;foo&#39;<br>  puts &#39;foo&#39;<br>end<br></pre><br><br>この状態で保存したとき、<br><br><pre><br># frozen_string_literal: true<br><br>if &#39;foo&#39;.match?(/foo/)<br>  puts &#39;foo&#39;<br>  puts &#39;foo&#39;<br>end<br></pre><br><br>に修正されますね、二段構えにはならなかったです。<br><code>0.63.1 (using Parser 2.6.0.0, running on ruby 2.6.0 x86_64-darwin15)</code><br>です。
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1549445245.063100">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2015-01-15/3417067010_04a676b32692fb2507e1_48.jpg" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">thinca</span>
+              <a href="#ts-1549445245.063100">6日 18:27:25</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CB2NMV0GN/p1549445245063100" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                なんと。自動修正しない場合はどの Cop が反応してますか?
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1549445293.064200">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://secure.gravatar.com/avatar/110cd4dcaed019b3bd9809e541afdeb6.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0010-48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">okuramasafumi</span>
+              <a href="#ts-1549445293.064200">6日 18:28:13</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CB2NMV0GN/p1549445293064200" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                <code>Performance/RegexpMatch</code>だけが反応しているようでした。<br>ちなみに、設定で<code>Performance/RegexpMatch</code>をDisabledにした場合はきちんと<code>Performance/RedundantMatch</code>が反応していますね。
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1549445324.064600">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2015-01-15/3417067010_04a676b32692fb2507e1_48.jpg" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">thinca</span>
+              <a href="#ts-1549445324.064600">6日 18:28:44</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CB2NMV0GN/p1549445324064600" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                むむ。そもそもなんで私のところだと反応しないのだろう…
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1549445407.064800">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2015-01-15/3417067010_04a676b32692fb2507e1_48.jpg" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">thinca</span>
+              <a href="#ts-1549445407.064800">6日 18:30:07</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CB2NMV0GN/p1549445407064800" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                設定ファイルは何も置いてないですよね…
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1549445493.065100">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://secure.gravatar.com/avatar/110cd4dcaed019b3bd9809e541afdeb6.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0010-48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">okuramasafumi</span>
+              <a href="#ts-1549445493.065100">6日 18:31:33</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CB2NMV0GN/p1549445493065100" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                設定ファイルを削除しても同じ結果でした。
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1549445530.065900">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://secure.gravatar.com/avatar/110cd4dcaed019b3bd9809e541afdeb6.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0010-48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">okuramasafumi</span>
+              <a href="#ts-1549445530.065900">6日 18:32:10</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CB2NMV0GN/p1549445530065900" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                <pre><br>Offenses:<br><br>sample.rb:3:4: C: [Corrected] Performance/RedundantMatch: Use =~ in places where the MatchData returned by #match will not be used.<br>if &#39;foo&#39;.match(/foo/)<br>   ^^^^^^^^^^^^^^^^^^<br>sample.rb:3:4: C: [Corrected] Performance/RegexpMatch: Use match? instead of =~ when MatchData is not used.<br>if &#39;foo&#39; =~ /foo/<br>   ^^^^^^^^^^^^^^<br>sample.rb:3:4: C: [Corrected] Performance/RegexpMatch: Use match? instead of match when MatchData is not used.<br>if &#39;foo&#39;.match(/foo/)<br>   ^^^^^^^^^^^^^^^^^^<br><br>1 file inspected, 3 offenses detected, 3 offenses corrected<br></pre><br><br><code>bundle exec rubocop -a</code>の結果なのですが、なぜか3回修正が走っているところが興味深いです。
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1549445631.066600">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2015-01-15/3417067010_04a676b32692fb2507e1_48.jpg" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">thinca</span>
+              <a href="#ts-1549445631.066600">6日 18:33:51</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CB2NMV0GN/p1549445631066600" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                なかなか謎のメッセージですね…
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1549445647.066900">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2015-01-15/3417067010_04a676b32692fb2507e1_48.jpg" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">thinca</span>
+              <a href="#ts-1549445647.066900">6日 18:34:07</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CB2NMV0GN/p1549445647066900" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                関係ないと思うけど Ruby 2.6 をインストールしてみています
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1549445690.067500">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2015-01-15/3417067010_04a676b32692fb2507e1_48.jpg" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">thinca</span>
+              <a href="#ts-1549445690.067500">6日 18:34:50</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CB2NMV0GN/p1549445690067500" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                rubocop は私はグローバルで <code>gem i rubocop</code> したやつ使ってるんですが、…関係ないですよね
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1549445708.067800">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2015-01-15/3417067010_04a676b32692fb2507e1_48.jpg" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">thinca</span>
+              <a href="#ts-1549445708.067800">6日 18:35:08</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CB2NMV0GN/p1549445708067800" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                (<code>bundle exec</code> はしてないと言う意味)
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1549445758.068300">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://secure.gravatar.com/avatar/110cd4dcaed019b3bd9809e541afdeb6.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0010-48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">okuramasafumi</span>
+              <a href="#ts-1549445758.068300">6日 18:35:58</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CB2NMV0GN/p1549445758068300" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                念の為<code>bundle exec</code>を外してみましたが、変わらず…
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1549445785.068700">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2015-01-15/3417067010_04a676b32692fb2507e1_48.jpg" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">thinca</span>
+              <a href="#ts-1549445785.068700">6日 18:36:25</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CB2NMV0GN/p1549445785068700" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                <pre><br>if &#39;foo&#39; =~ /foo/<br>  puts &#39;foo&#39;<br>  puts &#39;foo&#39;<br>end<br></pre><br><br>このコードに対して <code>rubocop foo.rb</code> しても何もエラーが出ず
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1549445868.069300">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2015-01-15/3417067010_04a676b32692fb2507e1_48.jpg" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">thinca</span>
+              <a href="#ts-1549445868.069300">6日 18:37:48</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CB2NMV0GN/p1549445868069300" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                たぶん私の環境がおかしい気がするのだけど Mac でも Linux でも起きないので何がおかしいのか全然わからない
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1549445910.069800">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://secure.gravatar.com/avatar/110cd4dcaed019b3bd9809e541afdeb6.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0010-48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">okuramasafumi</span>
+              <a href="#ts-1549445910.069800">6日 18:38:30</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CB2NMV0GN/p1549445910069800" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                ホームディレクトリに <code>.rubocop.yml</code> がある、とかですかねえ…
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1549445978.070200">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2015-01-15/3417067010_04a676b32692fb2507e1_48.jpg" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">thinca</span>
+              <a href="#ts-1549445978.070200">6日 18:39:38</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CB2NMV0GN/p1549445978070200" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                ないんですよねぇ
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1549446047.071100">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2015-01-15/3417067010_04a676b32692fb2507e1_48.jpg" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">thinca</span>
+              <a href="#ts-1549446047.071100">6日 18:40:47</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CB2NMV0GN/p1549446047071100" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                <code>rubocop -d</code> で実行したところ、 <code>~/.anyenv/envs/rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/rubocop-0.63.1/config/default.yml</code> の設定ファイルが使われているということはわかったんですが、これ同じでしょうか?
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1549446080.071500">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2018-07-31/407982080133_30e238cd92e6c88883f9_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">mattn</span>
+              <a href="#ts-1549446080.071500">6日 18:41:20</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CB2NMV0GN/p1549446080071500" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                僕の環境(Windows)での実行結果です。
+              </div>
+
+              <div>
+              </div>
+              <div class="mt-2 border p-3">
+                <div>
+                  <a href="/slacklog/files/FG0SLLLCW/image.png" target="_blank" rel="noopener noreferrer">
+                  <img src="/slacklog/files/FG0SLLLCW/image.png" width="554" height="189" alt="画像がペーストされた日時: 2019-02-06, 6:41 午後" />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1549446127.072000">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2018-07-31/407982080133_30e238cd92e6c88883f9_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">mattn</span>
+              <a href="#ts-1549446127.072000">6日 18:42:07</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CB2NMV0GN/p1549446127072000" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                ん？ \r\n で保存しろって言ってるの？w
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1549446136.072200">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2015-01-15/3417067010_04a676b32692fb2507e1_48.jpg" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">thinca</span>
+              <a href="#ts-1549446136.072200">6日 18:42:16</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CB2NMV0GN/p1549446136072200" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                !?
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1549446149.072500">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2018-07-31/407982080133_30e238cd92e6c88883f9_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">mattn</span>
+              <a href="#ts-1549446149.072500">6日 18:42:29</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CB2NMV0GN/p1549446149072500" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                ウソやろwww ff=dos にしたらエラー消えたわw
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1549446183.072800">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2015-01-15/3417067010_04a676b32692fb2507e1_48.jpg" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">thinca</span>
+              <a href="#ts-1549446183.072800">6日 18:43:03</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CB2NMV0GN/p1549446183072800" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                Linux で再度試したら <code>Performance/RedundantMatch</code> の方が出ました
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1549446213.073700">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2015-01-15/3417067010_04a676b32692fb2507e1_48.jpg" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">thinca</span>
+              <a href="#ts-1549446213.073700">6日 18:43:33</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CB2NMV0GN/p1549446213073700" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                さっき試した時は修飾子だったかも…ただ Mac では変わらずでない…
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1549446257.074400">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://secure.gravatar.com/avatar/110cd4dcaed019b3bd9809e541afdeb6.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0010-48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">okuramasafumi</span>
+              <a href="#ts-1549446257.074400">6日 18:44:17</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CB2NMV0GN/p1549446257074400" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                うわあ、怪しい挙動を見つけました…<br>親ディレクトリに<br><br><pre><br>Style/TrailingCommaInArguments:<br>  EnforcedStyleForMultiline: consistent_comma<br></pre><br><br>という内容の <code>.rubocop.yml</code> ファイルがあったので、一旦リネームして再実行したら結果が変わりました…
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1549446305.075200">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2015-01-15/3417067010_04a676b32692fb2507e1_48.jpg" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">thinca</span>
+              <a href="#ts-1549446305.075200">6日 18:45:05</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CB2NMV0GN/p1549446305075200" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                おお…
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1549446309.075400">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://secure.gravatar.com/avatar/110cd4dcaed019b3bd9809e541afdeb6.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0010-48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">okuramasafumi</span>
+              <a href="#ts-1549446309.075400">6日 18:45:09</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CB2NMV0GN/p1549446309075400" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                Before:<br><br><pre><br>For /Users/okuramasafumi/sandbox/ruby/2.6/rubocop_match: configuration from /Users/okuramasafumi/sandbox/ruby/2.6/.rubocop.yml<br>Default configuration from /Users/okuramasafumi/.gem/ruby/2.6.0/gems/rubocop-0.63.1/config/default.yml<br>Inspecting 1 file<br>Scanning /Users/okuramasafumi/sandbox/ruby/2.6/rubocop_match/sample.rb<br>C<br><br>Offenses:<br><br>sample.rb:3:4: C: Performance/RedundantMatch: Use =~ in places where the MatchData returned by #match will not be used.<br>if &#39;foo&#39;.match(/foo/)<br>   ^^^^^^^^^^^^^^^^^^<br>sample.rb:3:4: C: Performance/RegexpMatch: Use match? instead of =~ when MatchData is not used.<br>if &#39;foo&#39;.match(/foo/)<br>   ^^^^^^^^^^^^^^<br>sample.rb:3:4: C: Performance/RegexpMatch: Use match? instead of match when MatchData is not used.<br>if &#39;foo&#39;.match(/foo/)<br>   ^^^^^^^^^^^^^^^^^^<br><br>1 file inspected, 3 offenses detected<br></pre><br><br>After:<br><br><pre><br>For /Users/okuramasafumi/sandbox/ruby/2.6/rubocop_match: configuration from /Users/okuramasafumi/.gem/ruby/2.6.0/gems/rubocop-0.63.1/config/default.yml<br>Inspecting 1 file<br>Scanning /Users/okuramasafumi/sandbox/ruby/2.6/rubocop_match/sample.rb<br>C<br><br>Offenses:<br><br>sample.rb:3:4: C: Performance/RedundantMatch: Use =~ in places where the MatchData returned by #match will not be used.<br>if &#39;foo&#39;.match(/foo/)<br>   ^^^^^^^^^^^^^^^^^^<br>sample.rb:3:4: C: Performance/RegexpMatch: Use match? instead of match when MatchData is not used.<br>if &#39;foo&#39;.match(/foo/)<br>   ^^^^^^^^^^^^^^^^^^<br><br>1 file inspected, 2 offenses detected<br></pre>
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1549446406.076400">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://secure.gravatar.com/avatar/d9d0ceb387e3b6de5c4562af78e8a910.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0004-48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">ujihisa</span>
+              <a href="#ts-1549446406.076400">6日 18:46:46</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CB2NMV0GN/p1549446406076400" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                全く本題と関係ないけどこのケースの場合普通は if /foo/ =~ &#39;foo&#39;\nと書きそう
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1549446493.077300">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2015-01-15/3417067010_04a676b32692fb2507e1_48.jpg" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">thinca</span>
+              <a href="#ts-1549446493.077300">6日 18:48:13</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CB2NMV0GN/p1549446493077300" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                &gt; Linux で再度試したら <code>Performance/RedundantMatch</code> の方が出ました<br><br>これを <code>=~</code> に直したら、エラー出なくなった… <code>Performance/RegexpMatch</code> が出て欲しいやつ
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1549446504.077500">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2015-01-15/3417067010_04a676b32692fb2507e1_48.jpg" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">thinca</span>
+              <a href="#ts-1549446504.077500">6日 18:48:24</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CB2NMV0GN/p1549446504077500" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                そもそも両方一緒に出るのが正しいのか
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1549446850.078100">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2015-01-15/3417067010_04a676b32692fb2507e1_48.jpg" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">thinca</span>
+              <a href="#ts-1549446850.078100">6日 18:54:10</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CB2NMV0GN/p1549446850078100" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                よし…先生を呼ぼう
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1549446945.079200">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2015-01-15/3417067010_04a676b32692fb2507e1_48.jpg" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">thinca</span>
+              <a href="#ts-1549446945.079200">6日 18:55:45</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CB2NMV0GN/p1549446945079200" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                @pocke Rubocop の挙動について色々検証してたのですがよくわからなくなってしまったので、まとまってなくて大変申し訳ないんですが時間あったら見ていただく…<br><a href='https://vim-jp.slack.com/archives/CB2NMV0GN/p1549424874053000'>https://vim-jp.slack.com/archives/CB2NMV0GN/p1549424874053000</a><br>この辺りからのログを見てもらえると
+              </div>
+
+              <div>
+              </div>
+            <div class="mt-2 border p-2" id="ts-1549446945.079200">
+              
+    <div class="d-flex">
+    </div>
+      <div class="d-flex">
+        <div class="mt-2">Performance/RedundantMatch: Use <code>=<del></code> in places where the <code>MatchData</code> returned by <code>#match</code> will not be used.<br>これを言われた通りに直したら<br>Performance/RegexpMatch: Use <code>match?</code> instead of <code>=</del></code> when <code>MatchData</code> is not used.<br>こう怒られた…イケてない…</div>
+      </div>
+
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1549447022.079900">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://secure.gravatar.com/avatar/d9d0ceb387e3b6de5c4562af78e8a910.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0004-48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">ujihisa</span>
+              <a href="#ts-1549447022.079900">6日 18:57:02</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CB2NMV0GN/p1549447022079900" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                詳しそうな人だ
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1549447044.080100">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2017-10-03/249912295025_b257f23ddc1b26619ce1_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">pocke</span>
+              <a href="#ts-1549447044.080100">6日 18:57:24</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CB2NMV0GN/p1549447044080100" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                詳しそう
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1549447052.080500">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2015-01-15/3417067010_04a676b32692fb2507e1_48.jpg" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">thinca</span>
+              <a href="#ts-1549447052.080500">6日 18:57:32</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CB2NMV0GN/p1549447052080500" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                そして反応がめっちゃ早い
+              </div>
+
+              <div>
+                  <div>
+                    <ul class="d-flex list-style-none flex-justify-start pt-2">
+                        <li>
+                          <span class="tooltipped tooltipped-ne tooltipped-align-left-1 p-1" aria-label="ujihisa">
+                              <img class="slacklog-emoji" alt="sokudo" title="sokudo" src="/slacklog/emojis/sokudo.png"><span class="ml-1">1</span>
+                          </span>
+                        </li>
+                    </ul>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1549447096.082000">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2017-10-03/249912295025_b257f23ddc1b26619ce1_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">pocke</span>
+              <a href="#ts-1549447096.082000">6日 18:58:16</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CB2NMV0GN/p1549447096082000" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                RegexpMatchはTargetRubyVersionが2.4ぐらいから動くので、なにか差分があるとしたらそのへんですかね
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1549447138.082900">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2017-10-03/249912295025_b257f23ddc1b26619ce1_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">pocke</span>
+              <a href="#ts-1549447138.082900">6日 18:58:58</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CB2NMV0GN/p1549447138082900" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                .ruby-versionの有無とかも見てそう
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1549447150.083100">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2015-01-15/3417067010_04a676b32692fb2507e1_48.jpg" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">thinca</span>
+              <a href="#ts-1549447150.083100">6日 18:59:10</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CB2NMV0GN/p1549447150083100" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                なるほど。特に設定ファイルがない場合に TargetRubyVersion が何によって決まるのかですかね
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1549447201.084100">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2015-01-15/3417067010_04a676b32692fb2507e1_48.jpg" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">thinca</span>
+              <a href="#ts-1549447201.084100">6日 19:00:01</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CB2NMV0GN/p1549447201084100" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                .ruby-version は参照されるので私が試した環境ではファイルがないことを確認してました。大倉さんの方にはファイルが置いてあったとかかな
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1549447256.085200">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2017-10-03/249912295025_b257f23ddc1b26619ce1_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">pocke</span>
+              <a href="#ts-1549447256.085200">6日 19:00:56</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CB2NMV0GN/p1549447256085200" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                <code>rubocop --show-applied-config</code> みたいなのがあると便利そう
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1549447280.085400">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2015-01-15/3417067010_04a676b32692fb2507e1_48.jpg" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">thinca</span>
+              <a href="#ts-1549447280.085400">6日 19:01:20</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CB2NMV0GN/p1549447280085400" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                便利そう
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1549447319.086300">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2015-01-15/3417067010_04a676b32692fb2507e1_48.jpg" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">thinca</span>
+              <a href="#ts-1549447319.086300">6日 19:01:59</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CB2NMV0GN/p1549447319086300" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                一応 <code>--debug</code> で読み込まれた設定ファイルはわかるっぽいですが、 <code>TargetRubyVersion</code> に何が適用されたのかはわからなそう
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1549447358.087600">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://secure.gravatar.com/avatar/110cd4dcaed019b3bd9809e541afdeb6.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0010-48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">okuramasafumi</span>
+              <a href="#ts-1549447358.087600">6日 19:02:38</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CB2NMV0GN/p1549447358087600" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                私の検証環境では、親ディレクトリに <code>.ruby-version</code>が <code>2.6.0</code>で置いてあります。
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1549447386.088400">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2015-01-15/3417067010_04a676b32692fb2507e1_48.jpg" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">thinca</span>
+              <a href="#ts-1549447386.088400">6日 19:03:06</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CB2NMV0GN/p1549447386088400" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                私もファイル置いて試してみます
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1549447397.088900">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://secure.gravatar.com/avatar/110cd4dcaed019b3bd9809e541afdeb6.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0010-48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">okuramasafumi</span>
+              <a href="#ts-1549447397.088900">6日 19:03:17</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CB2NMV0GN/p1549447397088900" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                <a href='https://github.com/rubocop-hq/rubocop/issues/6739'>https://github.com/rubocop-hq/rubocop/issues/6739</a><br>さっき見つけた変な挙動をファイルしました。
+              </div>
+
+              <div>
+              </div>
+            <div class="mt-2 border p-2" id="ts-1549447397.088900">
+              
+    <div class="d-flex">
+      <div>
+        <img class="avatar avatar-small" width="32" height="32" src="https://a.slack-edge.com/bfaba/img/unfurl_icons/github.png" alt="GitHub" />
+      </div>
+      <div class="flex-self-baseline f4 ml-2">
+        <span class="Label Label--outline">
+          <a href="https://github.com/rubocop-hq/rubocop/issues/6739" target="_blank" rel="noopener noreferrer">Performance/RegexpMatch cop behaves differently with unrelated config file · Issue #6739 · rubocop-hq/rubocop</a>
+        </span>
+      </div>
+    </div>
+    <div class="d-flex pl-2 mb-2">
+      <div class="mt-2">When .rubocop.yml is just like Style/TrailingCommaInArguments: EnforcedStyleForMultiline: consistent_comma the result of Performance/RegexpMatch cop changed, which never should change. Expected beh...</div>
+    </div>
+
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1549447414.089600">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2017-10-03/249912295025_b257f23ddc1b26619ce1_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">pocke</span>
+              <a href="#ts-1549447414.089600">6日 19:03:34</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CB2NMV0GN/p1549447414089600" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                modifier ifかどうかで挙動が変わるようになってたかな、matchdataを見られるかどうかがちょっと違うので結果が変わるかも
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1549447433.090200">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2017-10-03/249912295025_b257f23ddc1b26619ce1_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">pocke</span>
+              <a href="#ts-1549447433.090200">6日 19:03:53</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CB2NMV0GN/p1549447433090200" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                今スマホなのであとでちゃんと見ます！
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1549447449.090500">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2015-01-15/3417067010_04a676b32692fb2507e1_48.jpg" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">thinca</span>
+              <a href="#ts-1549447449.090500">6日 19:04:09</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CB2NMV0GN/p1549447449090500" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                ありがとうございます！スマホでここまでやってたのすごい
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1549447937.091700">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2015-01-15/3417067010_04a676b32692fb2507e1_48.jpg" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">thinca</span>
+              <a href="#ts-1549447937.091700">6日 19:12:17</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CB2NMV0GN/p1549447937091700" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                とりあえず <code>.ruby-version</code> を置いたら <code>Performance/RegexpMatch</code> が出るようになりました。てことはデフォルトは Ruby のインタプリタのバージョンを見たりはしてないってことか
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1549448118.092800">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2015-01-15/3417067010_04a676b32692fb2507e1_48.jpg" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">thinca</span>
+              <a href="#ts-1549448118.092800">6日 19:15:18</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CB2NMV0GN/p1549448118092800" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                <pre><br>foo.rb:3:4: C: Performance/RedundantMatch: Use =~ in places where the MatchData returned by #match will not be used.<br>if &#39;foo&#39;.match(/foo/)<br>   ^^^^^^^^^^^^^^^^^^<br>foo.rb:3:4: C: Performance/RegexpMatch: Use match? instead of match when MatchData is not used.<br>if &#39;foo&#39;.match(/foo/)<br>   ^^^^^^^^^^^^^^^^^^<br></pre><br>2 つ出ますね。 <code>=~</code> にすると <code>RedundantMatch</code> は消えますが <code>RegexpMatch</code> は残ります。
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1549457687.094300">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2017-10-03/249912295025_b257f23ddc1b26619ce1_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">pocke</span>
+              <a href="#ts-1549457687.094300">6日 21:54:47</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CB2NMV0GN/p1549457687094300" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                <a href='https://vim-jp.slack.com/archives/CB2NMV0GN/p1549445530065900'>https://vim-jp.slack.com/archives/CB2NMV0GN/p1549445530065900</a> 3回auto correctが走っているのは、auto correct(1巡目)でRedundantMatchとRegexpMatchの両方のauto correctが同時に走って、恐らくRegexpMatchのauto correctが負けて上書きされたので、2巡目でもう一度RegexpMatchのauto correctが走っているように見えますね
+              </div>
+
+              <div>
+              </div>
+            <div class="mt-2 border p-2" id="ts-1549457687.094300">
+              
+    <div class="d-flex">
+    </div>
+      <div class="d-flex">
+        <div class="mt-2"><pre><br>Offenses:<br><br>sample.rb:3:4: C: [Corrected] Performance/RedundantMatch: Use =~ in places where the MatchData returned by #match will not be used.<br>if &#39;foo&#39;.match(/foo/)<br>   ^^^^^^^^^^^^^^^^^^<br>sample.rb:3:4: C: [Corrected] Performance/RegexpMatch: Use match? instead of =~ when MatchData is not used.<br>if &#39;foo&#39; =~ /foo/<br>   ^^^^^^^^^^^^^^<br>sample.rb:3:4: C: [Corrected] Performance/RegexpMatch: Use match? instead of match when MatchData is not used.<br>if &#39;foo&#39;.match(/foo/)<br>   ^^^^^^^^^^^^^^^^^^<br><br>1 file inspected, 3 offenses detected, 3 offenses corrected<br></pre><br><br><code>bundle exec rubocop -a</code>の結果なのですが、なぜか3回修正が走っているところが興味深いです。</div>
+      </div>
+
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1549458702.094900">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2017-10-03/249912295025_b257f23ddc1b26619ce1_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">pocke</span>
+              <a href="#ts-1549458702.094900">6日 22:11:42</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CB2NMV0GN/p1549458702094900" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                <a href='https://vim-jp.slack.com/archives/CB2NMV0GN/p1549446309075400'>https://vim-jp.slack.com/archives/CB2NMV0GN/p1549446309075400</a> この差分は全くわからんけど、beforeのほうが挙動がおかしく見える
+              </div>
+
+              <div>
+              </div>
+            <div class="mt-2 border p-2" id="ts-1549458702.094900">
+              
+    <div class="d-flex">
+    </div>
+      <div class="d-flex">
+        <div class="mt-2">Before:<br><br><pre><br>For /Users/okuramasafumi/sandbox/ruby/2.6/rubocop_match: configuration from /Users/okuramasafumi/sandbox/ruby/2.6/.rubocop.yml<br>Default configuration from /Users/okuramasafumi/.gem/ruby/2.6.0/gems/rubocop-0.63.1/config/default.yml<br>Inspecting 1 file<br>Scanning /Users/okuramasafumi/sandbox/ruby/2.6/rubocop_match/sample.rb<br>C<br><br>Offenses:<br><br>sample.rb:3:4: C: Performance/RedundantMatch: Use =~ in places where the MatchData returned by #match will not be used.<br>if &#39;foo&#39;.match(/foo/)<br>   ^^^^^^^^^^^^^^^^^^<br>sample.rb:3:4: C: Performance/RegexpMatch: Use match? instead of =~ when MatchData is not used.<br>if &#39;foo&#39;.match(/foo/)<br>   ^^^^^^^^^^^^^^<br>sample.rb:3:4: C: Performance/RegexpMatch: Use match? instead of match when MatchData is not used.<br>if &#39;foo&#39;.match(/foo/)<br>   ^^^^^^^^^^^^^^^^^^<br><br>1 file inspected, 3 offenses detected<br></pre><br><br>After:<br><br><pre><br>For /Users/okuramasafumi/sandbox/ruby/2.6/rubocop_match: configuration from /Users/okuramasafumi/.gem/ruby/2.6.0/gems/rubocop-0.63.1/config/default.yml<br>Inspecting 1 file<br>Scanning /Users/okuramasafumi/sandbox/ruby/2.6/rubocop_match/sample.rb<br>C<br><br>Offenses:<br><br>sample.rb:3:4: C: Performance/RedundantMatch: Use =~ in places where the MatchData returned by #match will not be used.<br>if &#39;foo&#39;.match(/foo/)<br>   ^^^^^^^^^^^^^^^^^^<br>sample.rb:3:4: C: Performance/RegexpMatch: Use match? instead of match when MatchData is not used.<br>if &#39;foo&#39;.match(/foo/)<br>   ^^^^^^^^^^^^^^^^^^<br><br>1 file inspected, 2 offenses detected<br></pre></div>
+      </div>
+
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1549517224.096300">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://secure.gravatar.com/avatar/110cd4dcaed019b3bd9809e541afdeb6.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0010-48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">okuramasafumi</span>
+              <a href="#ts-1549517224.096300">7日 14:27:04</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CB2NMV0GN/p1549517224096300" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                <a href='https://github.com/rubocop-hq/rubocop/issues/6739#issuecomment-461292606'>https://github.com/rubocop-hq/rubocop/issues/6739#issuecomment-461292606</a><br>無意味なエントリーを <code>.rubocop.yml</code> に追加すると問題が直ることが判明しました。設定ファイル中のエントリーが一つしかないときに起こるようです。
+              </div>
+
+              <div>
+              </div>
+            <div class="mt-2 border p-2" id="ts-1549517224.096300">
+              
+    <div class="d-flex">
+      <div>
+        <img class="avatar avatar-small" width="32" height="32" src="https://a.slack-edge.com/bfaba/img/unfurl_icons/github.png" alt="GitHub" />
+      </div>
+      <div class="flex-self-baseline f4 ml-2">
+        <span class="Label Label--outline">
+          <a href="https://github.com/rubocop-hq/rubocop/issues/6739#issuecomment-461292606" target="_blank" rel="noopener noreferrer">Performance/RegexpMatch cop behaves differently with unrelated config file · Issue #6739 · rubocop-hq/rubocop</a>
+        </span>
+      </div>
+    </div>
+    <div class="d-flex pl-2 mb-2">
+      <div class="mt-2">When .rubocop.yml is just like Style/TrailingCommaInArguments: EnforcedStyleForMultiline: consistent_comma the result of Performance/RegexpMatch cop changed, which never should change. Expected beh...</div>
+    </div>
+
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1549537119.097000">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2015-01-15/3417067010_04a676b32692fb2507e1_48.jpg" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">thinca</span>
+              <a href="#ts-1549537119.097000">7日 19:58:39</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CB2NMV0GN/p1549537119097000" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                今日はでかめの rspec ファイルを見ていて自分がどこにいるのかわからなくなったので簡易パンくずリストを実装した
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1549537192.097500">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2015-01-15/3417067010_04a676b32692fb2507e1_48.jpg" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">thinca</span>
+              <a href="#ts-1549537192.097500">7日 19:59:52</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CB2NMV0GN/p1549537192097500" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                最低限使えるものになって満足したので帰る (なお仕事の進捗はお察し…)
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1549537537.098800">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2015-01-15/3417067010_04a676b32692fb2507e1_48.jpg" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">thinca</span>
+              <a href="#ts-1549537537.098800">7日 20:05:37</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CB2NMV0GN/p1549537537098800" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                プラグイン化どうしようかな…これ冷静に考えると機能的には outline 系プラグインのサブセットなのよな。あととりあえず動くものってんでカスタマイズ性とか一切ない。vimrc に関数べた書きの段階
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1549545898.099000">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2017-10-03/249912295025_b257f23ddc1b26619ce1_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">pocke</span>
+              <a href="#ts-1549545898.099000">7日 22:24:58</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CB2NMV0GN/p1549545898099000" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                <a href='https://github.com/pocke/yaml-path.vim'>https://github.com/pocke/yaml-path.vim</a>
+              </div>
+
+              <div>
+              </div>
+            <div class="mt-2 border p-2" id="ts-1549545898.099000">
+              
+    <div class="d-flex">
+      <div>
+        <img class="avatar avatar-small" width="32" height="32" src="https://a.slack-edge.com/bfaba/img/unfurl_icons/github.png" alt="GitHub" />
+      </div>
+      <div class="flex-self-baseline f4 ml-2">
+        <span class="Label Label--outline">
+          <a href="https://github.com/pocke/yaml-path.vim" target="_blank" rel="noopener noreferrer">pocke/yaml-path.vim</a>
+        </span>
+      </div>
+    </div>
+    <div class="d-flex pl-2 mb-2">
+      <div class="mt-2">Display the path of YAML on cursor. Contribute to pocke/yaml-path.vim development by creating an account on GitHub.</div>
+    </div>
+
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1549545912.099400">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2017-10-03/249912295025_b257f23ddc1b26619ce1_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">pocke</span>
+              <a href="#ts-1549545912.099400">7日 22:25:12</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CB2NMV0GN/p1549545912099400" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                outlineよさそう
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1549552489.099600">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2015-01-15/3417067010_04a676b32692fb2507e1_48.jpg" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">thinca</span>
+              <a href="#ts-1549552489.099600">8日 00:14:49</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CB2NMV0GN/p1549552489099600" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                シンプル
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1549552512.099900">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://secure.gravatar.com/avatar/d9d0ceb387e3b6de5c4562af78e8a910.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0004-48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">ujihisa</span>
+              <a href="#ts-1549552512.099900">8日 00:15:12</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CB2NMV0GN/p1549552512099900" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                イズ
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1549552536.100100">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2015-01-15/3417067010_04a676b32692fb2507e1_48.jpg" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">thinca</span>
+              <a href="#ts-1549552536.100100">8日 00:15:36</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CB2NMV0GN/p1549552536100100" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                簡単
+              </div>
+
+              <div>
+                  <div>
+                    <ul class="d-flex list-style-none flex-justify-start pt-2">
+                        <li>
+                          <span class="tooltipped tooltipped-ne tooltipped-align-left-1 p-1" aria-label="ujihisa, KoRoN">
+                              <img class="slacklog-emoji" alt="hai-small" title="hai-small" src="/slacklog/emojis/hai-small.png"><span class="ml-1">2</span>
+                          </span>
+                        </li>
+                    </ul>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1549702938.100900">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://secure.gravatar.com/avatar/d9d0ceb387e3b6de5c4562af78e8a910.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0004-48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">ujihisa</span>
+              <a href="#ts-1549702938.100900">9日 18:02:18</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CB2NMV0GN/p1549702938100900" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                RubyKaigi 2019 採択!
+              </div>
+
+              <div>
+                  <div>
+                    <ul class="d-flex list-style-none flex-justify-start pt-2">
+                        <li>
+                          <span class="tooltipped tooltipped-ne tooltipped-align-left-1 p-1" aria-label="pocke, okuramasafumi, KoRoN">
+                              <span>🎉3</span>
+                          </span>
+                        </li>
+                    </ul>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1549702943.101200">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://secure.gravatar.com/avatar/d9d0ceb387e3b6de5c4562af78e8a910.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0004-48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">ujihisa</span>
+              <a href="#ts-1549702943.101200">9日 18:02:23</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CB2NMV0GN/p1549702943101200" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                というわけでがんばって発表してきます
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1549719041.101500">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2017-10-03/249912295025_b257f23ddc1b26619ce1_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">pocke</span>
+              <a href="#ts-1549719041.101500">9日 22:30:41</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CB2NMV0GN/p1549719041101500" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                <a href='https://github.com/soutaro/steep/pull/79'>https://github.com/soutaro/steep/pull/79</a>
+              </div>
+
+              <div>
+              </div>
+            <div class="mt-2 border p-2" id="ts-1549719041.101500">
+              
+    <div class="d-flex">
+      <div>
+        <img class="avatar avatar-small" width="32" height="32" src="https://a.slack-edge.com/bfaba/img/unfurl_icons/github.png" alt="GitHub" />
+      </div>
+      <div class="flex-self-baseline f4 ml-2">
+        <span class="Label Label--outline">
+          <a href="https://github.com/soutaro/steep/pull/79" target="_blank" rel="noopener noreferrer">Experimental Language Server Protocol support by wata727 · Pull Request #79 · soutaro/steep</a>
+        </span>
+      </div>
+    </div>
+    <div class="d-flex pl-2 mb-2">
+      <div class="mt-2">This PR introduces a new command steep langserver. This server communicates with a client via stdio according to the specification of Language Server Protocol v3.14.0. As a first step, this experim...</div>
+    </div>
+
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1549720902.101800">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2015-01-15/3417067010_04a676b32692fb2507e1_48.jpg" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">thinca</span>
+              <a href="#ts-1549720902.101800">9日 23:01:42</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CB2NMV0GN/p1549720902101800" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                !!
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1549763887.102200">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2018-07-31/407982080133_30e238cd92e6c88883f9_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">mattn</span>
+              <a href="#ts-1549763887.102200">10日 10:58:07</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CB2NMV0GN/p1549763887102200" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                !!
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1549764326.102500">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://secure.gravatar.com/avatar/d9d0ceb387e3b6de5c4562af78e8a910.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0004-48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">ujihisa</span>
+              <a href="#ts-1549764326.102500">10日 11:05:26</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CB2NMV0GN/p1549764326102500" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                lsp + steep最強の一角では
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1549938769.000500">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2015-01-15/3417067010_04a676b32692fb2507e1_48.jpg" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">thinca</span>
+              <a href="#ts-1549938769.000500">12日 11:32:49</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CB2NMV0GN/p1549938769000500" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                まだ何も試してないのだけど、上記の steep のやつはやはり型定義ファイルがないとダメなのよね、たぶん
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1549966503.001200">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2018-07-31/407982080133_30e238cd92e6c88883f9_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">mattn</span>
+              <a href="#ts-1549966503.001200">12日 19:15:03</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CB2NMV0GN/p1549966503001200" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                solargraph、 <code>$AAA = 1</code> のまんなからへんでシンボル問い合わせすると <code>$AAA = 1</code> というのが返ってくる。
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1550451471.001400">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://secure.gravatar.com/avatar/d9d0ceb387e3b6de5c4562af78e8a910.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0004-48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">ujihisa</span>
+              <a href="#ts-1550451471.001400">18日 09:57:51</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CB2NMV0GN/p1550451471001400" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                明日夜asakusa.rb いってきます <a href='https://asakusarb.esa.io/posts/924'>https://asakusarb.esa.io/posts/924</a>
+              </div>
+
+              <div>
+                  <div>
+                    <ul class="d-flex list-style-none flex-justify-start pt-2">
+                        <li>
+                          <span class="tooltipped tooltipped-ne tooltipped-align-left-1 p-1" aria-label="KoRoN">
+                              <span>👍1</span>
+                          </span>
+                        </li>
+                    </ul>
+                  </div>
+              </div>
+            <div class="mt-2 border p-2" id="ts-1550451471.001400">
+              
+    <div class="d-flex">
+        <div>
+          <img class="avatar avatar-small" width="32" height="32" src="https://assets.esa.io/assets/apple-touch-icon-5a2ad22bc8989c252dc965fd4d7a5823fd072bf704d0d27b6b89a15b1b299c58.png" alt="esa.io" />
+        </div>
+        <div class="flex-self-baseline f4 ml-2">
+          <span class="Label Label--outline">
+            <a href="https://asakusarb.esa.io/posts/924" target="_blank" rel="noopener noreferrer">meetup/2019/02/19/第501回</a>
+          </span>
+        </div>
+    </div>
+      <div class="d-flex">
+        <div class="mt-2">@all 、明日、02/19(火) 19:30～ は、501回目(Not Implemented)のミートアップです。 会場は、19:00から入場可能です。 今回は、秋葉原の 株式会社ケーシーエスキャロットで行います。 参加される方は、このエントリにコメントお願いします。 入館については次のリンクをご確認ください。 <a href='https://gist.github.com/emorima/fb6edef68776055e824f9c71986a3c35'>https://gist.github.com/emorima/fb6edef68776055e824f9c71986a3c35</a> 19:00以降 正面玄関からは、入館できなくなりますので、</div>
+      </div>
+
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1550452703.001800">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://secure.gravatar.com/avatar/d9d0ceb387e3b6de5c4562af78e8a910.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0004-48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">ujihisa</span>
+              <a href="#ts-1550452703.001800">18日 10:18:23</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CB2NMV0GN/p1550452703001800" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                rubykaigi登壇スライド作ってる途中にちょっと学びを整理したく、超久々に個人ブログに雑記事投稿 <a href='https://ujihisa.wordpress.com/2019/02/18/how-to-get-callers-token-in-ruby/'>https://ujihisa.wordpress.com/2019/02/18/how-to-get-callers-token-in-ruby/</a>
+              </div>
+
+              <div>
+              </div>
+            <div class="mt-2 border p-2" id="ts-1550452703.001800">
+              
+    <div class="d-flex">
+        <div>
+          <img class="avatar avatar-small" width="32" height="32" src="https://s2.wp.com/i/webclip.png" alt="standards" />
+        </div>
+        <div class="flex-self-baseline f4 ml-2">
+          <span class="Label Label--outline">
+            <a href="https://ujihisa.wordpress.com/2019/02/18/how-to-get-callers-token-in-ruby/" target="_blank" rel="noopener noreferrer">How to get caller’s token in Ruby</a>
+          </span>
+        </div>
+    </div>
+      <div class="d-flex">
+        <div class="mt-2">TL;DR You can’t, so far as I know.<br>Problem<br>When you are in a method, how do you get the caller’s token location?<br><br>def f(x)<br>  if x == 234<br>    # I want to get caller&#39;s token as filename, line number, and column number,<br>    # such as a.rb:8:9<br>  end<br>end<br><br>f(123); f(234)<br><br>Solutions<br>It is easy to get the filename and line number by caller and caller_locations methods in Kernel.<br><br>caller<br>#=&gt; [&#34;/tmp/vD5fH5c/566:7:in <code>&#39;&#34;]  [&#34;/tmp/vD5fH5c/567:7:in </code>&#39;&#34;]  [:absolute_path, :base_label, :label, :lineno, :path]<br><br>However, it doesn’t give you column number.<br>See VM iseq<br>With using Kernel#.caller_locations you have the caller file, let’s first dump the iseq with using RubyVM::InstructionSequence#disasm<br><br>def f(x)<br>  if x == 234<br>    filepath = caller_locations[0].path<br>    iseq = RubyVM::InstructionSequence.compile_file(filepath)<br>    puts iseq.disasm<br>  end<br>end<br><br>f(123); f(234)<br><br>result:<br><br>== disasm: #@/tmp/vD5fH5c/581:1 (1,0)-(9,14)&gt; (catch: FALSE)<br>0000 putspecialobject             1                                   (   1)[Li]<br>0002 putobject                    :f<br>0004 putiseq                      f<br>0006 opt_send_without_block       , <br>0009 pop<br>0010 putself                                                          (   9)[Li]<br>0011 putobject                    123<br>0013 opt_send_without_block       , <br>0016 pop<br>0017 putself<br>0018 putobject                    234<br>0020 opt_send_without_block       , <br>0023 leave<br><br>== disasm: # (catch: FALSE)<br>local table (size: 3, argc: 1 [opts: 0, rest: -1, post: 0, block: -1, kw: -1@-1, kwrest: -1])<br>[ 3] x@0   [ 2] filepath@1 [ 1] iseq@2<br>0000 getlocal_WC_0                x@0                                 (   2)[LiCa]<br>0002 putobject                    234<br>0004 opt_eq                       , <br>0007 branchunless                 48<br>0009 putself                                                          (   3)[Li]<br>0010 opt_send_without_block       , <br>0013 putobject_INT2FIX_0_<br>0014 opt_aref                     , <br>0017 opt_send_without_block       , <br>0020 setlocal_WC_0                filepath@1<br>0022 opt_getinlinecache           31, 0&gt;0&gt;’’’’’’</div>
+      </div>
+      <div class="d-flex">
+        <div class="mt-2">
+          <img src="https://ujihisa.files.wordpress.com/2019/02/screenshot_2019-02-18_10-16-41.png?w=1200&fit=200%2C150" width="200" height="45" alt="How to get caller’s token in Ruby" />
+        </div>
+      </div>
+
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1550466043.002400">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2015-01-15/3417067010_04a676b32692fb2507e1_48.jpg" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">thinca</span>
+              <a href="#ts-1550466043.002400">18日 14:00:43</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CB2NMV0GN/p1550466043002400" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                Ruby の <code>def xxx=(val)</code> みたいなメソッドの総称ってあるかな?
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1550466328.003000">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://secure.gravatar.com/avatar/4b5a6f711a4e22e617b74058239ade53.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0007-48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">KoRoN</span>
+              <a href="#ts-1550466328.003000">18日 14:05:28</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CB2NMV0GN/p1550466328003000" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                C++ならオペレータオーバーロード?
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1550466387.003400">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2015-01-15/3417067010_04a676b32692fb2507e1_48.jpg" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">thinca</span>
+              <a href="#ts-1550466387.003400">18日 14:06:27</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CB2NMV0GN/p1550466387003400" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                それは <code>def +(val)</code> が該当しそうですね
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1550466411.003900">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2015-01-15/3417067010_04a676b32692fb2507e1_48.jpg" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">thinca</span>
+              <a href="#ts-1550466411.003900">18日 14:06:51</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CB2NMV0GN/p1550466411003900" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                <code>xxx=</code> はただのアトリビュートの代入
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1550466460.004400">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://secure.gravatar.com/avatar/4b5a6f711a4e22e617b74058239ade53.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0007-48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">KoRoN</span>
+              <a href="#ts-1550466460.004400">18日 14:07:40</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CB2NMV0GN/p1550466460004400" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                代入「演算子 (=オペレーター)」という意味で。
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1550466620.004900">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2015-01-15/3417067010_04a676b32692fb2507e1_48.jpg" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">thinca</span>
+              <a href="#ts-1550466620.004900">18日 14:10:20</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CB2NMV0GN/p1550466620004900" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                あーすいません。あえて呼ぶならというより、公式の名称があったりするかなーと言う意味でした
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1550466676.005700">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://secure.gravatar.com/avatar/4b5a6f711a4e22e617b74058239ade53.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0007-48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">KoRoN</span>
+              <a href="#ts-1550466676.005700">18日 14:11:16</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CB2NMV0GN/p1550466676005700" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                <img class='slacklog-emoji' title=':cat-salute:' alt=':cat-salute:' src='/slacklog/emojis/cat-salute.png'>  僕も気になって調べていたけど、そもそも属性の代入のオーバーライドがなんでできるのかにまだたどり着けてないw
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1550466817.006300">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://secure.gravatar.com/avatar/4b5a6f711a4e22e617b74058239ade53.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0007-48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">KoRoN</span>
+              <a href="#ts-1550466817.006300">18日 14:13:37</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CB2NMV0GN/p1550466817006300" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                ここの属性参照にそれっぽいのがあるんだけど…<br><a href='https://docs.ruby-lang.org/ja/latest/doc/spec=2foperator.html#assign'>https://docs.ruby-lang.org/ja/latest/doc/spec=2foperator.html#assign</a>
+              </div>
+
+              <div>
+              </div>
+            <div class="mt-2 border p-2" id="ts-1550466817.006300">
+              
+    <div class="d-flex">
+        <div>
+          <img class="avatar avatar-small" width="32" height="32" src="https://docs.ruby-lang.org/ja/latest/rurema.png" alt="docs.ruby-lang.org" />
+        </div>
+        <div class="flex-self-baseline f4 ml-2">
+          <span class="Label Label--outline">
+            <a href="https://docs.ruby-lang.org/ja/latest/doc/spec=2foperator.html#assign" target="_blank" rel="noopener noreferrer">演算子式 (Ruby 2.6.0)</a>
+          </span>
+        </div>
+    </div>
+      <div class="d-flex">
+        <div class="mt-2">* [[ref:assign]] * [[ref:selfassign]] * [[ref:multiassign]] * [[ref:range]] * [[ref:range_cond]] * [[ref:and]] * [[ref:or]] * [[ref:not]] * [[ref:cond]]</div>
+      </div>
+
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1550466906.006700">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2015-01-15/3417067010_04a676b32692fb2507e1_48.jpg" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">thinca</span>
+              <a href="#ts-1550466906.006700">18日 14:15:06</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CB2NMV0GN/p1550466906006700" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                私もそこで詰まりました…w
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1550466958.007000">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2017-10-03/249912295025_b257f23ddc1b26619ce1_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">pocke</span>
+              <a href="#ts-1550466958.007000">18日 14:15:58</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CB2NMV0GN/p1550466958007000" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                <a href='https://docs.ruby-lang.org/ja/latest/method/Module/i/attr_writer.html'>https://docs.ruby-lang.org/ja/latest/method/Module/i/attr_writer.html</a> 書き込みメソッド <img class='slacklog-emoji' title=':thinking_vim:' alt=':thinking_vim:' src='/slacklog/emojis/thinking_vim.png'>
+              </div>
+
+              <div>
+              </div>
+            <div class="mt-2 border p-2" id="ts-1550466958.007000">
+              
+    <div class="d-flex">
+        <div>
+          <img class="avatar avatar-small" width="32" height="32" src="https://docs.ruby-lang.org/ja/latest/rurema.png" alt="docs.ruby-lang.org" />
+        </div>
+        <div class="flex-self-baseline f4 ml-2">
+          <span class="Label Label--outline">
+            <a href="https://docs.ruby-lang.org/ja/latest/method/Module/i/attr_writer.html" target="_blank" rel="noopener noreferrer">instance method Module#attr_writer (Ruby 2.6.0)</a>
+          </span>
+        </div>
+    </div>
+      <div class="d-flex">
+        <div class="mt-2">インスタンス変数 name への書き込みメソッド (name=) を定義します。</div>
+      </div>
+
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1550467018.007400">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2015-01-15/3417067010_04a676b32692fb2507e1_48.jpg" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">thinca</span>
+              <a href="#ts-1550467018.007400">18日 14:16:58</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CB2NMV0GN/p1550467018007400" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                書き込みメソッド、なるほど
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1550467046.008300">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2015-01-15/3417067010_04a676b32692fb2507e1_48.jpg" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">thinca</span>
+              <a href="#ts-1550467046.008300">18日 14:17:26</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CB2NMV0GN/p1550467046008300" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                単に書き込みメソッドって言って Rubyist に伝わるかは怪しいかもw
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1550467103.008700">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2017-10-03/249912295025_b257f23ddc1b26619ce1_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">pocke</span>
+              <a href="#ts-1550467103.008700">18日 14:18:23</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CB2NMV0GN/p1550467103008700" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                <a href='https://github.com/ruby/ruby/blob/124957566f041e5c6e8f678dfaf62cae381826dc/object.c#L2362-L2373'>https://github.com/ruby/ruby/blob/124957566f041e5c6e8f678dfaf62cae381826dc/object.c#L2362-L2373</a><br>assignment accessor method とかのほうがわかりやすい気はしますね。。
+              </div>
+
+              <div>
+              </div>
+            <div class="mt-2 border p-2" id="ts-1550467103.008700">
+              
+    <div class="d-flex">
+      <div>
+        <img class="avatar avatar-small" width="32" height="32" src="https://a.slack-edge.com/bfaba/img/unfurl_icons/github.png" alt="GitHub" />
+      </div>
+      <div class="flex-self-baseline f4 ml-2">
+        <span class="Label Label--outline">
+          <a href="https://github.com/ruby/ruby/blob/124957566f041e5c6e8f678dfaf62cae381826dc/object.c#L2362-L2373" target="_blank" rel="noopener noreferrer">ruby/ruby</a>
+        </span>
+      </div>
+    </div>
+    <div class="d-flex pl-2 mb-2">
+      <div class="mt-2">The Ruby Programming Language [mirror]. Contribute to ruby/ruby development by creating an account on GitHub.</div>
+    </div>
+
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1550467200.009100">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2015-01-15/3417067010_04a676b32692fb2507e1_48.jpg" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">thinca</span>
+              <a href="#ts-1550467200.009100">18日 14:20:00</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CB2NMV0GN/p1550467200009100" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                ソースコード便利すぎる…
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1550467265.009700">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2015-01-15/3417067010_04a676b32692fb2507e1_48.jpg" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">thinca</span>
+              <a href="#ts-1550467265.009700">18日 14:21:05</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CB2NMV0GN/p1550467265009700" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                Ruby そこそこ長く使ってるけどそう言えば未だに gem すら作ったことがないので実質使ったことがない気がしてきた
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1550467337.010000">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2017-10-03/249912295025_b257f23ddc1b26619ce1_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">pocke</span>
+              <a href="#ts-1550467337.010000">18日 14:22:17</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CB2NMV0GN/p1550467337010000" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                (単にセッターでいいような気もしてきました)
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1550467352.010400">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2017-10-03/249912295025_b257f23ddc1b26619ce1_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">pocke</span>
+              <a href="#ts-1550467352.010400">18日 14:22:32</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CB2NMV0GN/p1550467352010400" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                使っているけど使ったことがない、謎掛けだ
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1550467420.010700">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2015-01-15/3417067010_04a676b32692fb2507e1_48.jpg" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">thinca</span>
+              <a href="#ts-1550467420.010700">18日 14:23:40</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CB2NMV0GN/p1550467420010700" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                確かにセッター盲点…
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1550467449.011100">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2015-01-15/3417067010_04a676b32692fb2507e1_48.jpg" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">thinca</span>
+              <a href="#ts-1550467449.011100">18日 14:24:09</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CB2NMV0GN/p1550467449011100" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                一度 gem 作っておきたい気がする (特に案はない)
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1550467638.011400">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2017-10-03/249912295025_b257f23ddc1b26619ce1_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">pocke</span>
+              <a href="#ts-1550467638.011400">18日 14:27:18</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CB2NMV0GN/p1550467638011400" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                CLIでマンボウを育てるGem
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1550467659.011600">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2015-01-15/3417067010_04a676b32692fb2507e1_48.jpg" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">thinca</span>
+              <a href="#ts-1550467659.011600">18日 14:27:39</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CB2NMV0GN/p1550467659011600" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                すぐ死ぬ
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1550469618.012000">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://secure.gravatar.com/avatar/d9d0ceb387e3b6de5c4562af78e8a910.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0004-48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">ujihisa</span>
+              <a href="#ts-1550469618.012000">18日 15:00:18</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CB2NMV0GN/p1550469618012000" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                ログみて最初にsetterかなと思ったけど間に合い力不足だった
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1550469627.012300">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://secure.gravatar.com/avatar/d9d0ceb387e3b6de5c4562af78e8a910.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0004-48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">ujihisa</span>
+              <a href="#ts-1550469627.012300">18日 15:00:27</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CB2NMV0GN/p1550469627012300" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                catan gem作ろう
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1550469897.012700">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2015-01-15/3417067010_04a676b32692fb2507e1_48.jpg" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">thinca</span>
+              <a href="#ts-1550469897.012700">18日 15:04:57</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CB2NMV0GN/p1550469897012700" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                便利そう
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1550470142.012900">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://secure.gravatar.com/avatar/d9d0ceb387e3b6de5c4562af78e8a910.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0004-48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">ujihisa</span>
+              <a href="#ts-1550470142.012900">18日 15:09:02</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CB2NMV0GN/p1550470142012900" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                期待
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1550471520.013400">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2015-01-15/3417067010_04a676b32692fb2507e1_48.jpg" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">thinca</span>
+              <a href="#ts-1550471520.013400">18日 15:32:00</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CB2NMV0GN/p1550471520013400" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                今日も Rubocop の調教を延々とやってる。給料泥棒になってないか不安になるレベル
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1550471589.014600">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2015-01-15/3417067010_04a676b32692fb2507e1_48.jpg" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">thinca</span>
+              <a href="#ts-1550471589.014600">18日 15:33:09</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CB2NMV0GN/p1550471589014600" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                <code>foo unless xxx.present?</code> を <code>foo if xxx.blank?</code> と書けっていう cop さんがいるのだけど、わからないでもないけど強制するほどかと言われると 🤔<br>無効にしようか悩む
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1550471897.015100">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://secure.gravatar.com/avatar/d9d0ceb387e3b6de5c4562af78e8a910.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0004-48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">ujihisa</span>
+              <a href="#ts-1550471897.015100">18日 15:38:17</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CB2NMV0GN/p1550471897015100" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                書き手の意図的に前者の方がスムーズなら前者であるべき
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1550472131.015600">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://secure.gravatar.com/avatar/110cd4dcaed019b3bd9809e541afdeb6.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0010-48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">okuramasafumi</span>
+              <a href="#ts-1550472131.015600">18日 15:42:11</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CB2NMV0GN/p1550472131015600" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                <a href='https://github.com/testdouble/standard'>https://github.com/testdouble/standard</a><br>設定不要なgemとしてはstandardというのが最近出てきましたね。
+              </div>
+
+              <div>
+                  <div>
+                    <ul class="d-flex list-style-none flex-justify-start pt-2">
+                        <li>
+                          <span class="tooltipped tooltipped-ne tooltipped-align-left-1 p-1" aria-label="pocke">
+                              <span>👀1</span>
+                          </span>
+                        </li>
+                    </ul>
+                  </div>
+              </div>
+            <div class="mt-2 border p-2" id="ts-1550472131.015600">
+              
+    <div class="d-flex">
+      <div>
+        <img class="avatar avatar-small" width="32" height="32" src="https://a.slack-edge.com/bfaba/img/unfurl_icons/github.png" alt="GitHub" />
+      </div>
+      <div class="flex-self-baseline f4 ml-2">
+        <span class="Label Label--outline">
+          <a href="https://github.com/testdouble/standard" target="_blank" rel="noopener noreferrer">testdouble/standard</a>
+        </span>
+      </div>
+    </div>
+    <div class="d-flex pl-2 mb-2">
+      <div class="mt-2">🌟 Ruby Style Guide, with linter &amp; automatic code fixer - testdouble/standard</div>
+    </div>
+
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1550472403.016000">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2015-01-15/3417067010_04a676b32692fb2507e1_48.jpg" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">thinca</span>
+              <a href="#ts-1550472403.016000">18日 15:46:43</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CB2NMV0GN/p1550472403016000" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                ほほー
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1550472474.017100">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2015-01-15/3417067010_04a676b32692fb2507e1_48.jpg" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">thinca</span>
+              <a href="#ts-1550472474.017100">18日 15:47:54</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CB2NMV0GN/p1550472474017100" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                しかし Rubocop の例を見るに好みによって変えたい箇所が大量にある以上、設定不要と言うのは実質使えないパターンが多そう… Go みたいに言語自体がオフィシャルで出してるのならともかく
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1550472639.017700">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://secure.gravatar.com/avatar/110cd4dcaed019b3bd9809e541afdeb6.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0010-48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">okuramasafumi</span>
+              <a href="#ts-1550472639.017700">18日 15:50:39</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CB2NMV0GN/p1550472639017700" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                こういう側面はRubyの良さでもあり、つらみでもありますね。
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1550472715.018300">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2015-01-15/3417067010_04a676b32692fb2507e1_48.jpg" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">thinca</span>
+              <a href="#ts-1550472715.018300">18日 15:51:55</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CB2NMV0GN/p1550472715018300" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                &gt; 書き手の意図的に前者の方がスムーズなら前者であるべき<br><br>ですよね。これは結局コンテキスト依存だと言えるのでルールを無効化した
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1550472786.018700">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://secure.gravatar.com/avatar/110cd4dcaed019b3bd9809e541afdeb6.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0010-48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">okuramasafumi</span>
+              <a href="#ts-1550472786.018700">18日 15:53:06</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CB2NMV0GN/p1550472786018700" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                Rubyっぽく書きたいなと思うと、結局ルールを無効化していくケースが多いんですよねえ…
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1550472855.018900">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2015-01-15/3417067010_04a676b32692fb2507e1_48.jpg" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">thinca</span>
+              <a href="#ts-1550472855.018900">18日 15:54:15</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CB2NMV0GN/p1550472855018900" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                つらみ〜
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1550473169.020000">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2015-01-15/3417067010_04a676b32692fb2507e1_48.jpg" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">thinca</span>
+              <a href="#ts-1550473169.020000">18日 15:59:29</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CB2NMV0GN/p1550473169020000" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                Rubocop、特定のファイルでは特定の Cop を無効化するってファイルの先頭と末尾に disable/enable コメントを入れないとできないんかな
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1550473242.020600">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2015-01-15/3417067010_04a676b32692fb2507e1_48.jpg" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">thinca</span>
+              <a href="#ts-1550473242.020600">18日 16:00:42</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CB2NMV0GN/p1550473242020600" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                ファイル単位だったら先頭だけに書けばいい説もあるけどそうすると <code>Lint/MissingCopEnableDirective</code> さんが文句を言ってきてカオス
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1550473561.021000">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://secure.gravatar.com/avatar/110cd4dcaed019b3bd9809e541afdeb6.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0010-48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">okuramasafumi</span>
+              <a href="#ts-1550473561.021000">18日 16:06:01</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CB2NMV0GN/p1550473561021000" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                <code>.rubocop.yml</code> に <code>Exclude</code> を書く手もありますね。
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1550475354.021200">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2015-01-15/3417067010_04a676b32692fb2507e1_48.jpg" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">thinca</span>
+              <a href="#ts-1550475354.021200">18日 16:35:54</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CB2NMV0GN/p1550475354021200" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                特定のルールのみってできましたっけ
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1550475466.021800">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://secure.gravatar.com/avatar/110cd4dcaed019b3bd9809e541afdeb6.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0010-48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">okuramasafumi</span>
+              <a href="#ts-1550475466.021800">18日 16:37:46</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CB2NMV0GN/p1550475466021800" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                <pre><br>HogeCop:<br>  Exclude:<br>    - fuga.rb<br></pre><br>みたいな感じで書けると思います。
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1550475604.022600">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2015-01-15/3417067010_04a676b32692fb2507e1_48.jpg" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">thinca</span>
+              <a href="#ts-1550475604.022600">18日 16:40:04</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CB2NMV0GN/p1550475604022600" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                お、なるほど！ありがとうございます。<br>改めてドキュメント探したら該当の記述を発見できました
+              </div>
+
+              <div>
+                  <div>
+                    <ul class="d-flex list-style-none flex-justify-start pt-2">
+                        <li>
+                          <span class="tooltipped tooltipped-ne tooltipped-align-left-1 p-1" aria-label="okuramasafumi">
+                              <img class="slacklog-emoji" alt="benri" title="benri" src="/slacklog/emojis/benri.png"><span class="ml-1">1</span>
+                          </span>
+                        </li>
+                    </ul>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1551254209.000700">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://secure.gravatar.com/avatar/110cd4dcaed019b3bd9809e541afdeb6.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0010-48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">okuramasafumi</span>
+              <a href="#ts-1551254209.000700">27日 16:56:49</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CB2NMV0GN/p1551254209000700" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                <a href='https://github.com/neoclide/coc.nvim'>https://github.com/neoclide/coc.nvim</a><br><a href='https://github.com/prabirshrestha/vim-lsp'>https://github.com/prabirshrestha/vim-lsp</a><br><a href='https://github.com/autozimu/LanguageClient-neovim'>https://github.com/autozimu/LanguageClient-neovim</a><br><br>Rubyistの方々はどのLSPクライアントをお使いですか？（あるいは、使っていない？）
+              </div>
+
+              <div>
+              </div>
+            <div class="mt-2 border p-2" id="ts-1551254209.000700">
+              
+    <div class="d-flex">
+      <div>
+        <img class="avatar avatar-small" width="32" height="32" src="https://a.slack-edge.com/bfaba/img/unfurl_icons/github.png" alt="GitHub" />
+      </div>
+      <div class="flex-self-baseline f4 ml-2">
+        <span class="Label Label--outline">
+          <a href="https://github.com/neoclide/coc.nvim" target="_blank" rel="noopener noreferrer">neoclide/coc.nvim</a>
+        </span>
+      </div>
+    </div>
+    <div class="d-flex pl-2 mb-2">
+      <div class="mt-2">Intellisense engine for vim8 &amp; neovim, full language server protocol support as VSCode - neoclide/coc.nvim</div>
+    </div>
+    <div class="d-flex">
+      <div>
+        <img class="avatar avatar-small" width="32" height="32" src="https://a.slack-edge.com/bfaba/img/unfurl_icons/github.png" alt="GitHub" />
+      </div>
+      <div class="flex-self-baseline f4 ml-2">
+        <span class="Label Label--outline">
+          <a href="https://github.com/prabirshrestha/vim-lsp" target="_blank" rel="noopener noreferrer">prabirshrestha/vim-lsp</a>
+        </span>
+      </div>
+    </div>
+    <div class="d-flex pl-2 mb-2">
+      <div class="mt-2">async language server protocol plugin for vim and neovim - prabirshrestha/vim-lsp</div>
+    </div>
+    <div class="d-flex">
+      <div>
+        <img class="avatar avatar-small" width="32" height="32" src="https://a.slack-edge.com/bfaba/img/unfurl_icons/github.png" alt="GitHub" />
+      </div>
+      <div class="flex-self-baseline f4 ml-2">
+        <span class="Label Label--outline">
+          <a href="https://github.com/autozimu/LanguageClient-neovim" target="_blank" rel="noopener noreferrer">autozimu/LanguageClient-neovim</a>
+        </span>
+      </div>
+    </div>
+    <div class="d-flex pl-2 mb-2">
+      <div class="mt-2">Language Server Protocol (LSP) support for vim and neovim. - autozimu/LanguageClient-neovim</div>
+    </div>
+
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1551254235.001200">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2018-07-31/407982080133_30e238cd92e6c88883f9_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">mattn</span>
+              <a href="#ts-1551254235.001200">27日 16:57:15</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CB2NMV0GN/p1551254235001200" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                Rubyist ではないけど vim-lsp と solargraph
+              </div>
+
+              <div>
+                  <div>
+                    <ul class="d-flex list-style-none flex-justify-start pt-2">
+                        <li>
+                          <span class="tooltipped tooltipped-ne tooltipped-align-left-1 p-1" aria-label="okuramasafumi">
+                              <span>🙇‍♂️1</span>
+                          </span>
+                        </li>
+                    </ul>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1551255913.002700">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2018-03-09/327298108645_48b1c10b3cf4092337c5_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">ycino</span>
+              <a href="#ts-1551255913.002700">27日 17:25:13</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CB2NMV0GN/p1551255913002700" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                このチャンネル知らなかった
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1551255922.003000">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2018-03-09/327298108645_48b1c10b3cf4092337c5_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">ycino</span>
+              <a href="#ts-1551255922.003000">27日 17:25:22</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CB2NMV0GN/p1551255922003000" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                自分もvim-lspとsolargraph使ってます
+              </div>
+
+              <div>
+                  <div>
+                    <ul class="d-flex list-style-none flex-justify-start pt-2">
+                        <li>
+                          <span class="tooltipped tooltipped-ne tooltipped-align-left-1 p-1" aria-label="okuramasafumi">
+                              <span>🙇‍♂️1</span>
+                          </span>
+                        </li>
+                    </ul>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1551255935.003300">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2018-03-09/327298108645_48b1c10b3cf4092337c5_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">ycino</span>
+              <a href="#ts-1551255935.003300">27日 17:25:35</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CB2NMV0GN/p1551255935003300" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                neovim + deopleteで
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1551259039.003900">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://secure.gravatar.com/avatar/d9d0ceb387e3b6de5c4562af78e8a910.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0004-48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">ujihisa</span>
+              <a href="#ts-1551259039.003900">27日 18:17:19</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CB2NMV0GN/p1551259039003900" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                mtsmfmさんのもありそう
+              </div>
+
+              <div>
+              </div>
+              <details class="details-reset mt-3">
+                <summary class="btn-link">
+                  <span class="f5">2 件の返信 最終返信:19:46:45 <span class="dropdown-caret"></span>
+                  </span>
+                </summary>
+                <div class="border mt-2">
+                  <div class="p-2" id="ts-1551262918.004300">
+                    <div class="float-left mr-2">
+                      <img class="avatar" width="36" height="36" src="https://secure.gravatar.com/avatar/110cd4dcaed019b3bd9809e541afdeb6.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0010-48.png" />
+                    </div>
+                    <div>
+                      <span class="text-bold mr-1">okuramasafumi</span>
+                      <a href="#ts-1551262918.004300">27日 19:21:58</a>
+                    </div>
+                    <div class="overflow-hidden">
+                      サーバー側とクライアント側で複数選択肢があるので、組み合わせが多いんですよねえ…
+                    </div>
+                  </div>
+                  <div class="p-2" id="ts-1551264405.004500">
+                    <div class="float-left mr-2">
+                      <img class="avatar" width="36" height="36" src="https://secure.gravatar.com/avatar/110cd4dcaed019b3bd9809e541afdeb6.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0010-48.png" />
+                    </div>
+                    <div>
+                      <span class="text-bold mr-1">okuramasafumi</span>
+                      <a href="#ts-1551264405.004500">27日 19:46:45</a>
+                    </div>
+                    <div class="overflow-hidden">
+                      クライアント：<br>• coc<br>• lsp<br>• LanguageClient<br><br>サーバー：<br>• solargraph<br>• language_server-ruby
+                    </div>
+                  </div>
+                </div>
+              </details>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1551264566.004900">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="" />
+            </div>
+            <div>
+              <span class="text-bold mr-1"></span>
+              <a href="#ts-1551264566.004900">27日 19:49:26</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CB2NMV0GN/p1551264566004900" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                *Language Server Protocolのクライアント側のプラグインは何を使っていますか？* _(Choose one)_
+              </div>
+
+              <div>
+              </div>
+            <div class="mt-2 border p-2" id="ts-1551264566.004900">
+              
+    <div class="d-flex">
+    </div>
+      <div class="d-flex">
+        <div class="mt-2">███████ (7) vim-lsp<br>████ (4) LanguageClient<br> (0) coc<br> (0) Abstain<br></div>
+      </div>
+
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1551278649.010400">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://secure.gravatar.com/avatar/179d39a4424a04a32ed0c2ec67e4a3cf.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0014-48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">hmichael</span>
+              <a href="#ts-1551278649.010400">27日 23:44:09</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CB2NMV0GN/p1551278649010400" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                LanguageClient-nvim使っていますがsolargraphは会社のプロジェクトで使うとメモリ食われすぎるので使わなくなっちゃいました（あとRubyは正直grepだけで不便感じない
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1551278923.011000">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2018-07-31/407982080133_30e238cd92e6c88883f9_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">mattn</span>
+              <a href="#ts-1551278923.011000">27日 23:48:43</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CB2NMV0GN/p1551278923011000" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                solargraph はなぜかサーバ側のメモリストレージが遅いんですよねー。何をやってるんだか。
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1551334173.000600">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2015-01-15/3417067010_04a676b32692fb2507e1_48.jpg" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">thinca</span>
+              <a href="#ts-1551334173.000600">28日 15:09:33</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CB2NMV0GN/p1551334173000600" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                まだ原因追いきれてないのだけど、最近 Ruby のインデントがおかしくなる。インデントするべきところでしてくれなかったり
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1551334208.001400">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2015-01-15/3417067010_04a676b32692fb2507e1_48.jpg" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">thinca</span>
+              <a href="#ts-1551334208.001400">28日 15:10:08</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CB2NMV0GN/p1551334208001400" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                Ruby のインデントが syntax 情報を一部参照しているっぽく、iro.vim を使うと syntax 情報が全部なくなっちゃうのでそのせいかもしれないけど本当かどうかはまだ追いきれてない
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1551336664.001800">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2018-03-09/327298108645_48b1c10b3cf4092337c5_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">ycino</span>
+              <a href="#ts-1551336664.001800">28日 15:51:04</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CB2NMV0GN/p1551336664001800" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                endってメソッドがあってバグったことあります
+              </div>
+
+              <div>
+                  <div>
+                    <ul class="d-flex list-style-none flex-justify-start pt-2">
+                        <li>
+                          <span class="tooltipped tooltipped-ne tooltipped-align-left-1 p-1" aria-label="okuramasafumi, hmichael, buzztaiki, youchan">
+                              <img class="slacklog-emoji" alt="goodpoem" title="goodpoem" src="/slacklog/emojis/goodpoem.png"><span class="ml-1">4</span>
+                          </span>
+                        </li>
+                    </ul>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- footer -->
+    <div class="clearfix"></div>
+    <div id="footer">
+      <p>
+        Powered by <a href="https://github.com/" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </p>
+    </div>
+    <!-- /footer -->
+  </div>
+</body>
