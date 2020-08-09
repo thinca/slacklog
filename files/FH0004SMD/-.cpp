@@ -1,0 +1,1 @@
+textLayout->Draw(&context, &renderer, FLOAT(x), FLOAT(y) - 0.5f);
