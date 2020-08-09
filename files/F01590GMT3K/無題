@@ -1,0 +1,10 @@
+  const connect = createConnect(
+    createExecuteCommandSelector,
+    (executeCommand) => {
+      console.log("subscribe!")
+      console.log(lines)
+      console.log(executeCommand)
+    },
+    { once: true }
+  )
+  connect()
