@@ -5888,6 +5888,420 @@
             </div>
           </div>
         </div>
+        <div class="clearfix m-3" id="ts-1597292962.284700">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2020-07-16/1251666533476_e5c5f7bd79e42dac04e7_48.jpg" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">aiotter</span>
+              <a href="#ts-1597292962.284700">13日 13:29:22</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CJMV3MSLR/p1597292962284700" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                :q でバッファを閉じた際に，開かれている visible なバッファが quickrun output だけだった場合それを閉じるようにしようとしていて，最初は <code>ls</code>  の結果を抽出して作ろうとしていたのですが，だいぶ遠回りな気がしています．良い方法ありますでしょうか．
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1597293038.285200">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2015-01-15/3417067010_04a676b32692fb2507e1_48.jpg" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">thinca</span>
+              <a href="#ts-1597293038.285200">13日 13:30:38</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CJMV3MSLR/p1597293038285200" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                :h tabpagebuflist()
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1597293038.285300">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2019-10-31/816062168560_170f8c3ffca39a8b27f7_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">vim-jp-bot</span>
+              <a href="#ts-1597293038.285300">13日 13:30:38</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CJMV3MSLR/p1597293038285300" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                <pre><br>tabpagebuflist([{arg}])                                 *tabpagebuflist()*<br>                カレントタブページ内の各ウィンドウに表示されているバッファの番<br>                号を要素とするリスト|List|を返す。{arg}は対象とするタブページ<br>                の番号を指定する。省略したときはカレントタブページを対象とする。<br>                {arg}が無効なときは数値0を返す。<br>                全タブページ中の全バッファのリストを得るには次のようにする:  <br>                        let buflist = []<br>                        for i in range(tabpagenr(&#39;$&#39;))<br>                           call extend(buflist, tabpagebuflist(i + 1))<br>                        endfor<br>                Note 1つのバッファが複数のウィンドウに表示されている場合がある<br>                ことに注意。<br> <br>                |method| としても使用できる:  <br>                        GetTabpage()-&gt;tabpagebuflist()<br></pre>
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1597293649.287500">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2018-05-31/373472791093_ed16847a152da533e013_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">Tsuyoshi CHO</span>
+              <a href="#ts-1597293649.287500">13日 13:40:49</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CJMV3MSLR/p1597293649287500" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                filetypeがquickrunだったら、でチェックするのはどうだろう?
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1597293688.288100">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2015-01-15/3417067010_04a676b32692fb2507e1_48.jpg" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">thinca</span>
+              <a href="#ts-1597293688.288100">13日 13:41:28</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CJMV3MSLR/p1597293688288100" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                使い方次第だけど、一応 filetype は変更可能。変更するような使い方を一切してないのであれば問題なし
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1597294203.289300">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2020-07-16/1251666533476_e5c5f7bd79e42dac04e7_48.jpg" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">aiotter</span>
+              <a href="#ts-1597294203.289300">13日 13:50:03</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CJMV3MSLR/p1597294203289300" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                <pre>augroup only_quickrun_is_left<br>  au!<br>  autocmd BufEnter * if len(tabpagebuflist()) == 1 &amp;&amp; @% == &#39;[quickrun output]&#39; | quit | endif<br>augroup END</pre><br>これでやりたかったことができました．ありがとうございました！
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1597294411.289800">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2015-01-15/3417067010_04a676b32692fb2507e1_48.jpg" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">thinca</span>
+              <a href="#ts-1597294411.289800">13日 13:53:31</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CJMV3MSLR/p1597294411289800" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                カレントタブページのウィンドウ数が取りたいのであれば、 <code>winnr(&#39;$&#39;)</code> でも可能です
+              </div>
+
+              <div>
+                  <div>
+                    <ul class="d-flex list-style-none flex-justify-start pt-2">
+                        <li>
+                          <span class="tooltipped tooltipped-ne tooltipped-align-left-1 p-1" aria-label="aiotter">
+                              <img class="slacklog-emoji" alt="rikai" title="rikai" src="/slacklog/emojis/rikai.png"><span class="ml-1">1</span>
+                          </span>
+                        </li>
+                    </ul>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1597294445.290400">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://secure.gravatar.com/avatar/d9d0ceb387e3b6de5c4562af78e8a910.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0004-48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">ujihisa</span>
+              <a href="#ts-1597294445.290400">13日 13:54:05</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CJMV3MSLR/p1597294445290400" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                quickrunでfiletype指定うちのなにかでやってた気がする
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1597294488.291400">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2015-01-15/3417067010_04a676b32692fb2507e1_48.jpg" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">thinca</span>
+              <a href="#ts-1597294488.291400">13日 13:54:48</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CJMV3MSLR/p1597294488291400" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                最初に <code>tabpagebuflist()</code> を提示したのは、quickrun output が複数開かれていた場合に対応するにはこの情報が必要だと思ったから
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1597309857.291800">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://s3-us-west-2.amazonaws.com/slack-files2/bot_icons/2019-10-29/814941997319_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">[Vim]の新着質問一覧｜teratail（テラテイル）</span>
+              <a href="#ts-1597309857.291800">13日 18:10:57</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CJMV3MSLR/p1597309857291800" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                <a href='https://teratail.com/questions/284472?rss=all'>Karabiner-elementsを使って、ctrl+[を押して日本語→英語入力に切り替えたい（neovimをterminalから使っている）</a><br>前提・実現したいこと<br>macにて、terminalからneovimを使っていて、insert modeからnormal modeに切り替える時に日本語入力だったものを英語入力にしたいです。そのため、karabiner-elementsを使って解決策を模索していました。  <br>解決策は、karabiner-elementsを使うのが良いのかな？と思っていたが、もし別の良い方法があれば教えて欲しいです。  <br>発生している問題・エラーメッセージ<br>karabiner-elementsのjsonコード（以下）で、ctrl + [ではなく、ctrl + {(control+shift+[)で思い通りに作動してし...<br><br><a href='https://teratail.com/questions/284472?rss=all'>続きを見る</a>
+              </div>
+
+              <div>
+              </div>
+            <div class="mt-2 border p-2" id="ts-1597309857.291800">
+              
+    <div class="d-flex">
+        <div>
+          <img class="avatar avatar-small" width="32" height="32" src="https://teratail.com/favicon.ico" alt="teratail[テラテイル]" />
+        </div>
+        <div class="flex-self-baseline f4 ml-2">
+          <span class="Label Label--outline">
+            <a href="https://teratail.com/questions/284472?rss=all" target="_blank" rel="noopener noreferrer">Karabiner-elementsを使って、ctrl+[を押して日本語→英語入力に切り替えたい（neovimをterminalから使っている）｜teratail</a>
+          </span>
+        </div>
+    </div>
+      <div class="d-flex">
+        <div class="mt-2">前提・実現したいことmacにて、terminalからneovimを使っていて、insert modeからnormal modeに切り替える時に日本語入力だったものを英語入力にしたいです。そのため、karabiner-elementsを使って解決策を模索していました。 解決策は、</div>
+      </div>
+      <div class="d-flex">
+        <div class="mt-2">
+          <img src="https://teratail.com/img/imgFacebookShare.png" width="1200" height="630" alt="Karabiner-elementsを使って、ctrl+[を押して日本語→英語入力に切り替えたい（neovimをterminalから使っている）｜teratail" />
+        </div>
+      </div>
+
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1597310029.292300">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2020-04-14/1081287266064_cb2d6ab85d9530d8a126_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">yutakatay</span>
+              <a href="#ts-1597310029.292300">13日 18:13:49</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CJMV3MSLR/p1597310029292300" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                お、話題のTeratail
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1597310072.293000">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2020-04-14/1081287266064_cb2d6ab85d9530d8a126_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">yutakatay</span>
+              <a href="#ts-1597310072.293000">13日 18:14:32</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CJMV3MSLR/p1597310072293000" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                Win,LinuxだとIME側にやらせるのがベターだと思ってるけどMacだとどうなんだろう・・・？
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1597319111.293600">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2020-07-16/1251666533476_e5c5f7bd79e42dac04e7_48.jpg" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">aiotter</span>
+              <a href="#ts-1597319111.293600">13日 20:45:11</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CJMV3MSLR/p1597319111293600" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                私 karrabiner-elements で esc 押すと同時に英数に切り替えるようにしてますね (macOS)
+              </div>
+
+              <div>
+                  <div>
+                    <ul class="d-flex list-style-none flex-justify-start pt-2">
+                        <li>
+                          <span class="tooltipped tooltipped-ne tooltipped-align-left-1 p-1" aria-label="yutakatay">
+                              <img class="slacklog-emoji" alt="hee" title="hee" src="/slacklog/emojis/hee.png"><span class="ml-1">1</span>
+                          </span>
+                        </li>
+                    </ul>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1597324754.294800">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2019-06-23/667212021009_557c3073c5b377011dbb_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">ゴリラ(森に帰るので探さないでください)</span>
+              <a href="#ts-1597324754.294800">13日 22:19:14</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CJMV3MSLR/p1597324754294800" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                Ctrl + [ + 無変換(英字変換にマップ)<br>でいつも切り替えてます
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1597324757.295000">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2019-06-23/667212021009_557c3073c5b377011dbb_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">ゴリラ(森に帰るので探さないでください)</span>
+              <a href="#ts-1597324757.295000">13日 22:19:17</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CJMV3MSLR/p1597324757295000" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                自力
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1597325709.295400">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2018-03-19/331496519296_b6fceab653cf61d7dd8b_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">kuu</span>
+              <a href="#ts-1597325709.295400">13日 22:35:09</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CJMV3MSLR/p1597325709295400" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                Vimの中ではeskk使ってるので勝手に切れる
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1597325713.295600">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2018-03-19/331496519296_b6fceab653cf61d7dd8b_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">kuu</span>
+              <a href="#ts-1597325713.295600">13日 22:35:13</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CJMV3MSLR/p1597325713295600" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                まあ参考にならんなw
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <!-- footer -->
