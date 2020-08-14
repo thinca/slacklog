@@ -4772,46 +4772,10 @@
             </div>
               <details class="details-reset mt-3">
                 <summary class="btn-link">
-                  <span class="f5">8 件の返信 最終返信:16:50:10 <span class="dropdown-caret"></span>
+                  <span class="f5">8 件の返信 最終返信:17:37:46 <span class="dropdown-caret"></span>
                   </span>
                 </summary>
                 <div class="border mt-2">
-                  <div class="p-2" id="ts-1578299859.462600">
-                    <div class="float-left mr-2">
-                      <img class="avatar" width="36" height="36" src="https://secure.gravatar.com/avatar/5fdf83c448b8503add52517c7de0e3cc.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0026-48.png" />
-                    </div>
-                    <div>
-                      <span class="text-bold mr-1">tyru</span>
-                      <a href="#ts-1578299859.462600">6日 17:37:39</a>
-                    </div>
-                    <div class="overflow-hidden">
-                      Vim のバッファでやるか外部コマンド + terminal でやるか分かってないですが、<br>前者だったら prompt_setcallback() って機能もあったりします。<br>Vim でシェル的なものを実現するのに便利（なはず）
-                    </div>
-                  </div>
-                  <div class="p-2" id="ts-1578299866.462800">
-                    <div class="float-left mr-2">
-                      <img class="avatar" width="36" height="36" src="https://secure.gravatar.com/avatar/5fdf83c448b8503add52517c7de0e3cc.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0026-48.png" />
-                    </div>
-                    <div>
-                      <span class="text-bold mr-1">tyru</span>
-                      <a href="#ts-1578299866.462800">6日 17:37:46</a>
-                    </div>
-                    <div class="overflow-hidden">
-                      :h prompt_setcallback()
-                    </div>
-                  </div>
-                  <div class="p-2" id="ts-1578299866.463000">
-                    <div class="float-left mr-2">
-                      <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2019-10-31/816062168560_170f8c3ffca39a8b27f7_48.png" />
-                    </div>
-                    <div>
-                      <span class="text-bold mr-1">vim-jp-bot</span>
-                      <a href="#ts-1578299866.463000">6日 17:37:46</a>
-                    </div>
-                    <div class="overflow-hidden">
-                      <pre><br>prompt_setcallback({buf}, {expr})                       *prompt_setcallback()*<br>                バッファ {buf} のプロンプトコールバックを {expr} に設定する。<br>                {expr} が空文字列の場合、コールバックは取り除かれる。これは<br>                {buf} の &#39;buftype&#39; が &#34;prompt&#34; に設定されている場合のみ有効で<br>                ある。<br> <br>                このコールバックは Enter を押したときに呼び出される。カレント<br>                バッファは必ずプロンプトバッファである。コールバックの呼び出し<br>                の前に次のプロンプト用の新しい行が追加されるので、コールバック<br>                が呼び出されたプロンプトは最後から 2 番目の行になる。<br>                コールバックがバッファにテキストを追加する場合、最後の行は現在<br>                のプロンプトであるため、その上に追加しなければならない。これは<br>                非同期に行われる可能性がある。<br>                コールバックは、プロンプトに入力されたテキストを唯一の引数とし<br>                て呼び出される。ユーザーが Enter のみをタイプした場合は空文字<br>                となる。<br>                例:  <br>                   call prompt_setcallback(bufnr(), function(&#39;s:TextEntered&#39;))<br>                   func s:TextEntered(text)<br>                     if a:text == &#39;exit&#39; || a:text == &#39;quit&#39;<br>                       stopinsert<br>                       close<br>                     else<br>                       call append(line(&#39;$&#39;) - 1, &#39;Entered: &#34;&#39; . a:text . &#39;&#34;&#39;)<br>                       &#34; Reset &#39;modified&#39; to allow the buffer to be closed.<br>                       set nomodified<br>                     endif<br>                   endfunc<br> <br>                |method| としても使用できる:  <br>                        GetBuffer()-&gt;prompt_setcallback(callback)<br></pre>
-                    </div>
-                  </div>
                   <div class="p-2" id="ts-1578296376.442100">
                     <div class="float-left mr-2">
                       <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2019-08-09/721207338820_626bbc95c10c7b6c7738_48.png" />
@@ -4870,6 +4834,42 @@
                     </div>
                     <div class="overflow-hidden">
                       巡り巡ってできそうな気がしてきた。vim力無だけどやってみよう。
+                    </div>
+                  </div>
+                  <div class="p-2" id="ts-1578299859.462600">
+                    <div class="float-left mr-2">
+                      <img class="avatar" width="36" height="36" src="https://secure.gravatar.com/avatar/5fdf83c448b8503add52517c7de0e3cc.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0026-48.png" />
+                    </div>
+                    <div>
+                      <span class="text-bold mr-1">tyru</span>
+                      <a href="#ts-1578299859.462600">6日 17:37:39</a>
+                    </div>
+                    <div class="overflow-hidden">
+                      Vim のバッファでやるか外部コマンド + terminal でやるか分かってないですが、<br>前者だったら prompt_setcallback() って機能もあったりします。<br>Vim でシェル的なものを実現するのに便利（なはず）
+                    </div>
+                  </div>
+                  <div class="p-2" id="ts-1578299866.462800">
+                    <div class="float-left mr-2">
+                      <img class="avatar" width="36" height="36" src="https://secure.gravatar.com/avatar/5fdf83c448b8503add52517c7de0e3cc.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0026-48.png" />
+                    </div>
+                    <div>
+                      <span class="text-bold mr-1">tyru</span>
+                      <a href="#ts-1578299866.462800">6日 17:37:46</a>
+                    </div>
+                    <div class="overflow-hidden">
+                      :h prompt_setcallback()
+                    </div>
+                  </div>
+                  <div class="p-2" id="ts-1578299866.463000">
+                    <div class="float-left mr-2">
+                      <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2019-10-31/816062168560_170f8c3ffca39a8b27f7_48.png" />
+                    </div>
+                    <div>
+                      <span class="text-bold mr-1">vim-jp-bot</span>
+                      <a href="#ts-1578299866.463000">6日 17:37:46</a>
+                    </div>
+                    <div class="overflow-hidden">
+                      <pre><br>prompt_setcallback({buf}, {expr})                       *prompt_setcallback()*<br>                バッファ {buf} のプロンプトコールバックを {expr} に設定する。<br>                {expr} が空文字列の場合、コールバックは取り除かれる。これは<br>                {buf} の &#39;buftype&#39; が &#34;prompt&#34; に設定されている場合のみ有効で<br>                ある。<br> <br>                このコールバックは Enter を押したときに呼び出される。カレント<br>                バッファは必ずプロンプトバッファである。コールバックの呼び出し<br>                の前に次のプロンプト用の新しい行が追加されるので、コールバック<br>                が呼び出されたプロンプトは最後から 2 番目の行になる。<br>                コールバックがバッファにテキストを追加する場合、最後の行は現在<br>                のプロンプトであるため、その上に追加しなければならない。これは<br>                非同期に行われる可能性がある。<br>                コールバックは、プロンプトに入力されたテキストを唯一の引数とし<br>                て呼び出される。ユーザーが Enter のみをタイプした場合は空文字<br>                となる。<br>                例:  <br>                   call prompt_setcallback(bufnr(), function(&#39;s:TextEntered&#39;))<br>                   func s:TextEntered(text)<br>                     if a:text == &#39;exit&#39; || a:text == &#39;quit&#39;<br>                       stopinsert<br>                       close<br>                     else<br>                       call append(line(&#39;$&#39;) - 1, &#39;Entered: &#34;&#39; . a:text . &#39;&#34;&#39;)<br>                       &#34; Reset &#39;modified&#39; to allow the buffer to be closed.<br>                       set nomodified<br>                     endif<br>                   endfunc<br> <br>                |method| としても使用できる:  <br>                        GetBuffer()-&gt;prompt_setcallback(callback)<br></pre>
                     </div>
                   </div>
                 </div>
@@ -71415,10 +71415,22 @@ struct qfline_S
               </div>
               <details class="details-reset mt-3">
                 <summary class="btn-link">
-                  <span class="f5">2 件の返信 最終返信:15:12:53 <span class="dropdown-caret"></span>
+                  <span class="f5">2 件の返信 最終返信:17:46:23 <span class="dropdown-caret"></span>
                   </span>
                 </summary>
                 <div class="border mt-2">
+                  <div class="p-2" id="ts-1580451173.116600">
+                    <div class="float-left mr-2">
+                      <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2020-02-25/956372982963_479264cbe2e1ea3d83ee_48.png" />
+                    </div>
+                    <div>
+                      <span class="text-bold mr-1">hrsh7th</span>
+                      <a href="#ts-1580451173.116600">31日 15:12:53</a>
+                    </div>
+                    <div class="overflow-hidden">
+                      今回は強気でいくことにしますｗ
+                    </div>
+                  </div>
                   <div class="p-2" id="ts-1580460383.182500">
                     <div class="d-flex flex-wrap">
                       <div class="f6 ml-3 text-gray-light">#←</div>
@@ -71433,18 +71445,6 @@ struct qfline_S
                     </div>
                     <div class="overflow-hidden">
                       このカラースキームをdeinの別名機能を使って入れてみることにしました。<br>衝突すると分ってれば、案外対応できる気がしますね。
-                    </div>
-                  </div>
-                  <div class="p-2" id="ts-1580451173.116600">
-                    <div class="float-left mr-2">
-                      <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2020-02-25/956372982963_479264cbe2e1ea3d83ee_48.png" />
-                    </div>
-                    <div>
-                      <span class="text-bold mr-1">hrsh7th</span>
-                      <a href="#ts-1580451173.116600">31日 15:12:53</a>
-                    </div>
-                    <div class="overflow-hidden">
-                      今回は強気でいくことにしますｗ
                     </div>
                   </div>
                 </div>

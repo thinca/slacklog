@@ -2434,6 +2434,90 @@
                   </span>
                 </summary>
                 <div class="border mt-2">
+                  <div class="p-2" id="ts-1574407307.069100">
+                    <div class="float-left mr-2">
+                      <img class="avatar" width="36" height="36" src="https://secure.gravatar.com/avatar/7f5a1bfaf8b64cbcdfaf82a7de92506b.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0017-48.png" />
+                    </div>
+                    <div>
+                      <span class="text-bold mr-1">Shougo</span>
+                      <a href="#ts-1574407307.069100">22日 16:21:47</a>
+                    </div>
+                    <div class="overflow-hidden">
+                      ちなみに、私はこの問題を認識してますよ。<br>これをどうにかしたくて、deopleteではかなりがんばったけれど完全には難しかった。<br>一つにneovim pythonモジュールの実装に問題があります
+                    </div>
+                  </div>
+                  <div class="p-2" id="ts-1574407796.069300">
+                    <div class="float-left mr-2">
+                      <img class="avatar" width="36" height="36" src="https://secure.gravatar.com/avatar/7f5a1bfaf8b64cbcdfaf82a7de92506b.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0017-48.png" />
+                    </div>
+                    <div>
+                      <span class="text-bold mr-1">Shougo</span>
+                      <a href="#ts-1574407796.069300">22日 16:29:56</a>
+                    </div>
+                    <div class="overflow-hidden">
+                      deopleteで改良できる部分があれば教えて欲しい…
+                    </div>
+                  </div>
+                  <div class="p-2" id="ts-1574408028.069500">
+                    <div class="float-left mr-2">
+                      <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2020-02-25/956372982963_479264cbe2e1ea3d83ee_48.png" />
+                    </div>
+                    <div>
+                      <span class="text-bold mr-1">hrsh7th</span>
+                      <a href="#ts-1574408028.069500">22日 16:33:48</a>
+                    </div>
+                    <div class="overflow-hidden">
+                      個人的には trigger_characters 方式に対応してもらえるのが一番うれしいですｗ<br>ちらつき？（というか、段階的な補完提案）は一応書きましたが、個人的にはそこまで気にしてなかったんですよね。。。（理解可能な動作だったので）
+                    </div>
+                  </div>
+                  <div class="p-2" id="ts-1574408566.069700">
+                    <div class="float-left mr-2">
+                      <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2020-02-25/956372982963_479264cbe2e1ea3d83ee_48.png" />
+                    </div>
+                    <div>
+                      <span class="text-bold mr-1">hrsh7th</span>
+                      <a href="#ts-1574408566.069700">22日 16:42:46</a>
+                    </div>
+                    <div class="overflow-hidden">
+                      あ、とはいえ、現状の deoplete でもできるっちゃできるのか。。。
+                    </div>
+                  </div>
+                  <div class="p-2" id="ts-1574409048.069900">
+                    <div class="float-left mr-2">
+                      <img class="avatar" width="36" height="36" src="https://secure.gravatar.com/avatar/7f5a1bfaf8b64cbcdfaf82a7de92506b.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0017-48.png" />
+                    </div>
+                    <div>
+                      <span class="text-bold mr-1">Shougo</span>
+                      <a href="#ts-1574409048.069900">22日 16:50:48</a>
+                    </div>
+                    <div class="overflow-hidden">
+                      trigger charactersに対応すると何が嬉しいのですかね
+                    </div>
+                  </div>
+                  <div class="p-2" id="ts-1574409176.070100">
+                    <div class="float-left mr-2">
+                      <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2020-02-25/956372982963_479264cbe2e1ea3d83ee_48.png" />
+                    </div>
+                    <div>
+                      <span class="text-bold mr-1">hrsh7th</span>
+                      <a href="#ts-1574409176.070100">22日 16:52:56</a>
+                    </div>
+                    <div class="overflow-hidden">
+                      trigger character に対応した上で、complete の start_col を trigger_character の位置にすることができれば、php の $ 問題なんかもクリアできるのでは？！と思ったのですが、勘違いだったかもしれません。。。
+                    </div>
+                  </div>
+                  <div class="p-2" id="ts-1574409447.070300">
+                    <div class="float-left mr-2">
+                      <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2020-02-25/956372982963_479264cbe2e1ea3d83ee_48.png" />
+                    </div>
+                    <div>
+                      <span class="text-bold mr-1">hrsh7th</span>
+                      <a href="#ts-1574409447.070300">22日 16:57:27</a>
+                    </div>
+                    <div class="overflow-hidden">
+                      よくよく考えると、php の場合はやっぱり 変数名に $ を含めるように iskeyword+=$ するしかないですね。。。<br>iskeyword が変化したら deoplete の <code>deoplete#custom#option(&#39;keyword_patterns&#39;, { &#39;_&#39;: &#39;\k\+&#39; })</code> が更新されれば全く問題なかった。
+                    </div>
+                  </div>
                   <div class="p-2" id="ts-1574410264.070700">
                     <div class="float-left mr-2">
                       <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2020-02-25/956372982963_479264cbe2e1ea3d83ee_48.png" />
@@ -2590,90 +2674,6 @@
                       そうです
                     </div>
                   </div>
-                  <div class="p-2" id="ts-1574407307.069100">
-                    <div class="float-left mr-2">
-                      <img class="avatar" width="36" height="36" src="https://secure.gravatar.com/avatar/7f5a1bfaf8b64cbcdfaf82a7de92506b.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0017-48.png" />
-                    </div>
-                    <div>
-                      <span class="text-bold mr-1">Shougo</span>
-                      <a href="#ts-1574407307.069100">22日 16:21:47</a>
-                    </div>
-                    <div class="overflow-hidden">
-                      ちなみに、私はこの問題を認識してますよ。<br>これをどうにかしたくて、deopleteではかなりがんばったけれど完全には難しかった。<br>一つにneovim pythonモジュールの実装に問題があります
-                    </div>
-                  </div>
-                  <div class="p-2" id="ts-1574407796.069300">
-                    <div class="float-left mr-2">
-                      <img class="avatar" width="36" height="36" src="https://secure.gravatar.com/avatar/7f5a1bfaf8b64cbcdfaf82a7de92506b.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0017-48.png" />
-                    </div>
-                    <div>
-                      <span class="text-bold mr-1">Shougo</span>
-                      <a href="#ts-1574407796.069300">22日 16:29:56</a>
-                    </div>
-                    <div class="overflow-hidden">
-                      deopleteで改良できる部分があれば教えて欲しい…
-                    </div>
-                  </div>
-                  <div class="p-2" id="ts-1574408028.069500">
-                    <div class="float-left mr-2">
-                      <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2020-02-25/956372982963_479264cbe2e1ea3d83ee_48.png" />
-                    </div>
-                    <div>
-                      <span class="text-bold mr-1">hrsh7th</span>
-                      <a href="#ts-1574408028.069500">22日 16:33:48</a>
-                    </div>
-                    <div class="overflow-hidden">
-                      個人的には trigger_characters 方式に対応してもらえるのが一番うれしいですｗ<br>ちらつき？（というか、段階的な補完提案）は一応書きましたが、個人的にはそこまで気にしてなかったんですよね。。。（理解可能な動作だったので）
-                    </div>
-                  </div>
-                  <div class="p-2" id="ts-1574408566.069700">
-                    <div class="float-left mr-2">
-                      <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2020-02-25/956372982963_479264cbe2e1ea3d83ee_48.png" />
-                    </div>
-                    <div>
-                      <span class="text-bold mr-1">hrsh7th</span>
-                      <a href="#ts-1574408566.069700">22日 16:42:46</a>
-                    </div>
-                    <div class="overflow-hidden">
-                      あ、とはいえ、現状の deoplete でもできるっちゃできるのか。。。
-                    </div>
-                  </div>
-                  <div class="p-2" id="ts-1574409048.069900">
-                    <div class="float-left mr-2">
-                      <img class="avatar" width="36" height="36" src="https://secure.gravatar.com/avatar/7f5a1bfaf8b64cbcdfaf82a7de92506b.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0017-48.png" />
-                    </div>
-                    <div>
-                      <span class="text-bold mr-1">Shougo</span>
-                      <a href="#ts-1574409048.069900">22日 16:50:48</a>
-                    </div>
-                    <div class="overflow-hidden">
-                      trigger charactersに対応すると何が嬉しいのですかね
-                    </div>
-                  </div>
-                  <div class="p-2" id="ts-1574409176.070100">
-                    <div class="float-left mr-2">
-                      <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2020-02-25/956372982963_479264cbe2e1ea3d83ee_48.png" />
-                    </div>
-                    <div>
-                      <span class="text-bold mr-1">hrsh7th</span>
-                      <a href="#ts-1574409176.070100">22日 16:52:56</a>
-                    </div>
-                    <div class="overflow-hidden">
-                      trigger character に対応した上で、complete の start_col を trigger_character の位置にすることができれば、php の $ 問題なんかもクリアできるのでは？！と思ったのですが、勘違いだったかもしれません。。。
-                    </div>
-                  </div>
-                  <div class="p-2" id="ts-1574409447.070300">
-                    <div class="float-left mr-2">
-                      <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2020-02-25/956372982963_479264cbe2e1ea3d83ee_48.png" />
-                    </div>
-                    <div>
-                      <span class="text-bold mr-1">hrsh7th</span>
-                      <a href="#ts-1574409447.070300">22日 16:57:27</a>
-                    </div>
-                    <div class="overflow-hidden">
-                      よくよく考えると、php の場合はやっぱり 変数名に $ を含めるように iskeyword+=$ するしかないですね。。。<br>iskeyword が変化したら deoplete の <code>deoplete#custom#option(&#39;keyword_patterns&#39;, { &#39;_&#39;: &#39;\k\+&#39; })</code> が更新されれば全く問題なかった。
-                    </div>
-                  </div>
                   <div class="p-2" id="ts-1575340457.098000">
                     <div class="float-left mr-2">
                       <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2020-02-25/956372982963_479264cbe2e1ea3d83ee_48.png" />
@@ -2801,6 +2801,45 @@
                   </span>
                 </summary>
                 <div class="border mt-2">
+                  <div class="p-2" id="ts-1574579804.076400">
+                    <div class="float-left mr-2">
+                      <img class="avatar" width="36" height="36" src="https://secure.gravatar.com/avatar/2be992d8a8cd8b523ca0b1467e165376.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0010-48.png" />
+                    </div>
+                    <div>
+                      <span class="text-bold mr-1">lambdalisue</span>
+                      <a href="#ts-1574579804.076400">24日 16:16:44</a>
+                    </div>
+                    <div class="overflow-hidden">
+                      ちなみに vim-racer だと補間候補ちゃんと出ます。
+                    </div>
+                  </div>
+                  <div class="p-2" id="ts-1574580652.076800">
+                    <div class="float-left mr-2">
+                      <img class="avatar" width="36" height="36" src="https://secure.gravatar.com/avatar/2be992d8a8cd8b523ca0b1467e165376.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0010-48.png" />
+                    </div>
+                    <div>
+                      <span class="text-bold mr-1">lambdalisue</span>
+                      <a href="#ts-1574580652.076800">24日 16:30:52</a>
+                    </div>
+                    <div class="overflow-hidden">
+                      <a href='https://github.com/rust-lang/rls-vscode/issues/681'>https://github.com/rust-lang/rls-vscode/issues/681</a> っぽい？
+                    </div>
+                      
+    <div class="d-flex">
+      <div>
+        <img class="avatar avatar-small" width="32" height="32" src="https://a.slack-edge.com/80588/img/unfurl_icons/github.png" alt="GitHub" />
+      </div>
+      <div class="flex-self-baseline f4 ml-2">
+        <span class="Label Label--outline">
+          <a href="https://github.com/rust-lang/rls-vscode/issues/681" target="_blank" rel="noopener noreferrer">No completion, no auto import trait. · Issue #681 · rust-lang/rls-vscode</a>
+        </span>
+      </div>
+    </div>
+    <div class="d-flex pl-2 mb-2">
+      <div class="mt-2">Following Chapter 2 of the book, rand::thread_rng()., no completion for gen_range(). Expect behavior: When typing rand::thread_rng()., popup gen_range() completion. When gen_range() selected, auto ...</div>
+    </div>
+
+                  </div>
                   <div class="p-2" id="ts-1574583675.077100">
                     <div class="float-left mr-2">
                       <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2020-04-14/1081287266064_cb2d6ab85d9530d8a126_48.png" />
@@ -2895,45 +2934,6 @@
                     <div class="overflow-hidden">
                       なるほど。<code>rand = &#34;0.3.0</code> だったので、それっぽいですね
                     </div>
-                  </div>
-                  <div class="p-2" id="ts-1574579804.076400">
-                    <div class="float-left mr-2">
-                      <img class="avatar" width="36" height="36" src="https://secure.gravatar.com/avatar/2be992d8a8cd8b523ca0b1467e165376.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0010-48.png" />
-                    </div>
-                    <div>
-                      <span class="text-bold mr-1">lambdalisue</span>
-                      <a href="#ts-1574579804.076400">24日 16:16:44</a>
-                    </div>
-                    <div class="overflow-hidden">
-                      ちなみに vim-racer だと補間候補ちゃんと出ます。
-                    </div>
-                  </div>
-                  <div class="p-2" id="ts-1574580652.076800">
-                    <div class="float-left mr-2">
-                      <img class="avatar" width="36" height="36" src="https://secure.gravatar.com/avatar/2be992d8a8cd8b523ca0b1467e165376.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0010-48.png" />
-                    </div>
-                    <div>
-                      <span class="text-bold mr-1">lambdalisue</span>
-                      <a href="#ts-1574580652.076800">24日 16:30:52</a>
-                    </div>
-                    <div class="overflow-hidden">
-                      <a href='https://github.com/rust-lang/rls-vscode/issues/681'>https://github.com/rust-lang/rls-vscode/issues/681</a> っぽい？
-                    </div>
-                      
-    <div class="d-flex">
-      <div>
-        <img class="avatar avatar-small" width="32" height="32" src="https://a.slack-edge.com/80588/img/unfurl_icons/github.png" alt="GitHub" />
-      </div>
-      <div class="flex-self-baseline f4 ml-2">
-        <span class="Label Label--outline">
-          <a href="https://github.com/rust-lang/rls-vscode/issues/681" target="_blank" rel="noopener noreferrer">No completion, no auto import trait. · Issue #681 · rust-lang/rls-vscode</a>
-        </span>
-      </div>
-    </div>
-    <div class="d-flex pl-2 mb-2">
-      <div class="mt-2">Following Chapter 2 of the book, rand::thread_rng()., no completion for gen_range(). Expect behavior: When typing rand::thread_rng()., popup gen_range() completion. When gen_range() selected, auto ...</div>
-    </div>
-
                   </div>
                   <div class="p-2" id="ts-1574612935.084000">
                     <div class="float-left mr-2">
