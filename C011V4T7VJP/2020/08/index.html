@@ -1211,6 +1211,154 @@
             </div>
           </div>
         </div>
+        <div class="clearfix m-3" id="ts-1598078928.000100">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2018-05-31/373472791093_ed16847a152da533e013_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">Tsuyoshi CHO</span>
+              <a href="#ts-1598078928.000100">22日 15:48:48</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C011V4T7VJP/p1598078928000100" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                <a href='https://i.gyazo.com/ba807d47ffd4b3397df81aaab5782c03.gif'>https://i.gyazo.com/ba807d47ffd4b3397df81aaab5782c03.gif</a><br>よーし、やっとできたー。<br>これでco-author付けるのがはかどる。
+              </div>
+
+              <div>
+              </div>
+              <div class="mt-2 border p-3">
+                <div>
+                  <a href="/slacklog/files/F01A0H7TTFA/gitconfig.alias" target="_blank" rel="noopener noreferrer">
+                  <span class="f5">[[ダウンロード: gitconfig.alias(Shell)]]</span>
+                  </a>
+                  <pre><code class='language-shell'>	coauthoradd = "!f () {\
+		if [ \"${#}\" -gt 1 ]; then\
+			echo \"not support argment greater than 1\";\
+		else\
+			output=$(git log -1 --pretty='%b');\
+			test -z \"${output}\";\
+			hasbody=${?};\
+			output=$(git log -1 --pretty='%(trailers:key=Co-authored-by)');\
+			test -z \"${output}\";\
+			hastrailers=${?};\
+			outputformat=\"%s\";\
+			newline=\"\n\n\";\
+			if [ \"${hasbody}\" -eq 1 ]; then\
+				outputformat=\"%s%n%n%b\";\
+				if [ \"${hastrailers}\" -eq 1 ]; then\
+					newline=\"\n\";\
+				fi;\
+			else\
+				newline=\"\n\n\";\
+			fi;\
+			common_opt=\"--prompt=author> --query=${*}\";\
+			if which fzf >/dev/null 2>&1; then\
+			add_opt=\"--header=co-author\";\
+			coauthor=\"\";\
+				if which bat >/dev/null 2>&1; then\
+					coauthor=$(git log -1000 --pretty=\"%an <%ae>, %ae\"\
+						| sort -f -k 2 -t , | uniq -i -f 1 | cut -d, -f1\
+						| fzf ${common_opt} ${add_opt} --preview='git show | bat -l gitlog --color always --style plain');\
+				else\
+					coauthor=$(git log -1000 --pretty=\"%an <%ae>, %ae\"\
+						| sort -f -k 2 -t , | uniq -i -f 1 | cut -d, -f1\
+						| fzf ${common_opt} ${add_opt} --preview='git show');\
+				fi;\
+				if [ -n \"${coauthor}\" ]; then\
+					printf \"%s%sCo-authored-by: %s\" \"$(git log -1 --pretty=${outputformat})\" \"${newline}\" \"${coauthor}\"\
+						| git commit --file - --amend;\
+				fi;\
+			elif which peco >/dev/null 2>&1; then\
+				coauthor=$(git log -1000 --pretty=\"%an <%ae>, %ae\"\
+					| sort -f -k 2 -t , | uniq -i -f 1 | cut -d, -f1\
+					| peco ${common_opt});\
+				if [ -n \"${coauthor}\" ]; then\
+					printf \"%s%sCo-authored-by: %s\" \"$(git log -1 --pretty=${outputformat})\" \"${newline}\" \"${coauthor}\"\
+						| git commit --file - --amend;\
+				fi;\
+			fi;\
+		fi;\
+	};f"
+</code></pre>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1598078951.000600">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2018-05-31/373472791093_ed16847a152da533e013_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">Tsuyoshi CHO</span>
+              <a href="#ts-1598078951.000600">22日 15:49:11</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C011V4T7VJP/p1598078951000600" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                あ、画像展開されないや<br><a href='https://i.gyazo.com/ba807d47ffd4b3397df81aaab5782c03.gif'>https://i.gyazo.com/ba807d47ffd4b3397df81aaab5782c03.gif</a>
+              </div>
+
+              <div>
+              </div>
+            <div class="mt-2 border p-2" id="ts-1598078951.000600">
+              
+
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1598080700.000900">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2019-11-14/833953864853_aa245483338df08cd3b2_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">heavenshell</span>
+              <a href="#ts-1598080700.000900">22日 16:18:20</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C011V4T7VJP/p1598080700000900" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                便利そう！
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1598081982.001500">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2018-05-31/373472791093_ed16847a152da533e013_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">Tsuyoshi CHO</span>
+              <a href="#ts-1598081982.001500">22日 16:39:42</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C011V4T7VJP/p1598081982001500" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                git commit --amend でコミットログを改変するので、基本はpush前にやることになるかなと
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <!-- footer -->
