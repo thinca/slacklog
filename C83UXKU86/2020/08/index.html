@@ -6114,6 +6114,45 @@ src/lua.h:411:#define lua_newuserdata(L,s)      lua_newuserdatauv(L,s,1)</code><
 
               <div>
               </div>
+              <details class="details-reset mt-3">
+                <summary class="btn-link">
+                  <span class="f5">0 件の返信 最終返信: <span class="dropdown-caret"></span>
+                  </span>
+                </summary>
+                <div class="border mt-2">
+                  <div class="p-2" id="ts-1598165395.034400">
+                    <div class="d-flex flex-wrap">
+                      <div class="f6 ml-3 text-gray-light">#←</div>
+                      <div class="f6 ml-2 text-gray-light">チャンネルにも投稿済</div>
+                    </div>
+                    <div class="float-left mr-2">
+                      <img class="avatar" width="36" height="36" src="https://secure.gravatar.com/avatar/7817559eedcf07a777dbf9dd734cc0b1.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0001-48.png" />
+                    </div>
+                    <div>
+                      <span class="text-bold mr-1">Ken Takata</span>
+                      <a href="#ts-1598165395.034400">23日 15:49:55</a>
+                    </div>
+                    <div class="overflow-hidden">
+                      MinGW で取得したカバレッジを codecov にアップロードすることも出来た。(codecov.yml を用意してパス名を修正する必要があったが。)<br><a href='https://github.com/sakura-editor/sakura/issues/1301#issuecomment-678735680'>https://github.com/sakura-editor/sakura/issues/1301#issuecomment-678735680</a><br>Vimにも適用すべきだろうか？
+                    </div>
+                      
+    <div class="d-flex">
+      <div>
+        <img class="avatar avatar-small" width="32" height="32" src="https://a.slack-edge.com/80588/img/unfurl_icons/github.png" alt="GitHub" />
+      </div>
+      <div class="flex-self-baseline f4 ml-2">
+        <span class="Label Label--outline">
+          <a href="https://github.com/sakura-editor/sakura/issues/1301#issuecomment-678735680" target="_blank" rel="noopener noreferrer">スモークテストを導入したい · Issue #1301 · sakura-editor/sakura</a>
+        </span>
+      </div>
+    </div>
+    <div class="d-flex pl-2 mb-2">
+      <div class="mt-2">スモークテストって何だ？ スモーク の名前が示す通り もやっとしたテスト です。 アプリに備わった色んな機能をざっくりと動かします。 なんとなく今まで通り を検証することを目的とします。 単体テストと何が違うの？ 単体テストは 内部仕様の妥当性 を検証する ガラス張りテスト です。 スモークテストは 操作と処理結果の妥当性 を検証する ブラックボックステスト です。 スモークテストを導入する...</div>
+    </div>
+
+                  </div>
+                </div>
+              </details>
             </div>
           </div>
         </div>
@@ -6277,6 +6316,451 @@ src/lua.h:411:#define lua_newuserdata(L,s)      lua_newuserdatauv(L,s,1)</code><
 
               <div>
               </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1598112685.025600">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2015-01-15/3417067010_04a676b32692fb2507e1_48.jpg" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">thinca</span>
+              <a href="#ts-1598112685.025600">23日 01:11:25</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C83UXKU86/p1598112685025600" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                themis.vim のテストが失敗する件、深堀りしていったらどうも Vim 本体のバグ説が出てきて、本体のソースコードの海に潜っている…<br>themis.vim を使えば 100% 再現するのだけど、最小の再現コードまでまだ辿り着けていない…<br>わかっているのは、 v8.2.1189 <a href='https://github.com/vim/vim/commit/8af81d656a4c501611f6211b6379ea9dd650c545'>https://github.com/vim/vim/commit/8af81d656a4c501611f6211b6379ea9dd650c545</a> から再現すると言うことと、 <code>eval(&#39;0 ? 0&#39;)</code> (条件演算子の条件が 0 かつ : 以降がない、文法エラー) をすると何かがおかしくなる、ということ…
+              </div>
+
+              <div>
+              </div>
+            <div class="mt-2 border p-2" id="ts-1598112685.025600">
+              
+    <div class="d-flex">
+      <div>
+        <img class="avatar avatar-small" width="32" height="32" src="https://a.slack-edge.com/80588/img/unfurl_icons/github.png" alt="GitHub" />
+      </div>
+      <div class="flex-self-baseline f4 ml-2">
+        <span class="Label Label--outline">
+          <a href="https://github.com/vim/vim/commit/8af81d656a4c501611f6211b6379ea9dd650c545" target="_blank" rel="noopener noreferrer">patch 8.2.1189: Vim9: line continuation in lambda doesn&#39;t always work · vim/vim@8af81d6</a>
+        </span>
+      </div>
+    </div>
+    <div class="d-flex pl-2 mb-2">
+      <div class="mt-2">Problem: Vim9: line continuation in lambda doesn&#39;t always work. Solution: Do not use a local evalarg unless there isn&#39;t one. (closes #6439)</div>
+    </div>
+
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1598114309.025900">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://secure.gravatar.com/avatar/09aab32950ce6edc99beced8dae978d9.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0018-48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">Milly</span>
+              <a href="#ts-1598114309.025900">23日 01:38:29</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C83UXKU86/p1598114309025900" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                沼だ
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1598115056.026100">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2018-07-31/407982080133_30e238cd92e6c88883f9_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">mattn</span>
+              <a href="#ts-1598115056.026100">23日 01:50:56</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C83UXKU86/p1598115056026100" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                たぶんこれで直る。<br><pre>diff --git a/src/eval.c b/src/eval.c<br>index 4b1e0f19b..7d9db1c49 100644<br>--- a/src/eval.c<br>+++ b/src/eval.c<br>@@ -2178,6 +2178,7 @@ eval1(char_u **arg, typval_T *rettv, evalarg_T *evalarg)<br> 	    emsg(_(e_missing_colon));<br> 	    if (evaluate &amp;&amp; result)<br> 		clear_tv(rettv);<br>+	    evalarg_used-&gt;eval_flags = orig_flags;<br> 	    return FAIL;<br> 	}<br> 	if (getnext)</pre>
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1598115246.026300">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2018-07-31/407982080133_30e238cd92e6c88883f9_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">mattn</span>
+              <a href="#ts-1598115246.026300">23日 01:54:06</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C83UXKU86/p1598115246026300" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                <a href='https://github.com/vim/vim/pull/6776'>https://github.com/vim/vim/pull/6776</a>
+              </div>
+
+              <div>
+              </div>
+            <div class="mt-2 border p-2" id="ts-1598115246.026300">
+              
+    <div class="d-flex">
+      <div>
+        <img class="avatar avatar-small" width="32" height="32" src="https://a.slack-edge.com/80588/img/unfurl_icons/github.png" alt="GitHub" />
+      </div>
+      <div class="flex-self-baseline f4 ml-2">
+        <span class="Label Label--outline">
+          <a href="https://github.com/vim/vim/pull/6776" target="_blank" rel="noopener noreferrer">0 ? 0 break next evaluation. by mattn · Pull Request #6776 · vim/vim</a>
+        </span>
+      </div>
+    </div>
+    <div class="d-flex pl-2 mb-2">
+      <div class="mt-2">When evaluate broken ternary operator 0 ? 0, it break next evaluations.</div>
+    </div>
+
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1598115640.026600">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2018-07-31/407982080133_30e238cd92e6c88883f9_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">mattn</span>
+              <a href="#ts-1598115640.026600">23日 02:00:40</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C83UXKU86/p1598115640026600" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                <a href='https://github.com/vim/vim/issues/6767'>https://github.com/vim/vim/issues/6767</a>
+              </div>
+
+              <div>
+              </div>
+            <div class="mt-2 border p-2" id="ts-1598115640.026600">
+              
+    <div class="d-flex">
+      <div>
+        <img class="avatar avatar-small" width="32" height="32" src="https://a.slack-edge.com/80588/img/unfurl_icons/github.png" alt="GitHub" />
+      </div>
+      <div class="flex-self-baseline f4 ml-2">
+        <span class="Label Label--outline">
+          <a href="https://github.com/vim/vim/issues/6767" target="_blank" rel="noopener noreferrer">Multibyte characters break pasting in visual block mode · Issue #6767 · vim/vim</a>
+        </span>
+      </div>
+    </div>
+    <div class="d-flex pl-2 mb-2">
+      <div class="mt-2">Description When pasting text in visual block mode, multibyte characters on the left of the selected block insert invalid bytes in their lines. To reproduce Run vim --clean. Type this in a buffer (...</div>
+    </div>
+
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1598115651.027000">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2018-07-31/407982080133_30e238cd92e6c88883f9_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">mattn</span>
+              <a href="#ts-1598115651.027000">23日 02:00:51</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C83UXKU86/p1598115651027000" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                LANG と encoding について答えなさい
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1598116725.027500">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2015-01-15/3417067010_04a676b32692fb2507e1_48.jpg" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">thinca</span>
+              <a href="#ts-1598116725.027500">23日 02:18:45</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C83UXKU86/p1598116725027500" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                ずっとデバッガを追っていたら PR が出されていた時の顔 (ありがとうございます 🙇‍♂️)
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1598116778.027800">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2015-01-15/3417067010_04a676b32692fb2507e1_48.jpg" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">thinca</span>
+              <a href="#ts-1598116778.027800">23日 02:19:38</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C83UXKU86/p1598116778027800" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                テストを足してくれって言われてますね
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1598116922.028900">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2015-01-15/3417067010_04a676b32692fb2507e1_48.jpg" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">thinca</span>
+              <a href="#ts-1598116922.028900">23日 02:22:02</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C83UXKU86/p1598116922028900" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                Vim 本体のバグなので themis.vim 側では特に対策はしなくていいかな…テストが落ちていたのもテスト内で <code>0 ? 0</code> が評価されていたからなので themis.vim 本体に問題はない
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1598117437.029500">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2015-01-15/3417067010_04a676b32692fb2507e1_48.jpg" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">thinca</span>
+              <a href="#ts-1598117437.029500">23日 02:30:37</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C83UXKU86/p1598117437029500" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                @mattn<br><br><pre>def s:a()<br>  silent! call eval(&#39;0 ? 1:&#39;)<br>enddef</pre><br>これで死ぬっぽいです (Vim9script)
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1598117592.030800">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2015-01-15/3417067010_04a676b32692fb2507e1_48.jpg" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">thinca</span>
+              <a href="#ts-1598117592.030800">23日 02:33:12</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C83UXKU86/p1598117592030800" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                <pre>def s:a()<br>  silent! call eval(&#39;0 ? 1 :1&#39;)<br>enddef</pre><br>これでも死ぬ (Vim9script は演算子の前後にスペースを必須としているので <code>:</code> の前後のスペースチェックで早期 return してしまっているので例のフラグが直らなくて死ぬ…)
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1598145688.031300">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2018-07-31/407982080133_30e238cd92e6c88883f9_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">mattn</span>
+              <a href="#ts-1598145688.031300">23日 10:21:28</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C83UXKU86/p1598145688031300" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                thinca さんのは直った模様。
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1598145883.031800">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2018-05-31/373472791093_ed16847a152da533e013_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">Tsuyoshi CHO</span>
+              <a href="#ts-1598145883.031800">23日 10:24:43</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C83UXKU86/p1598145883031800" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                <img class='slacklog-emoji' title=':goodpoem:' alt=':goodpoem:' src='/slacklog/emojis/goodpoem.png'>
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1598150981.032400">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://secure.gravatar.com/avatar/09aab32950ce6edc99beced8dae978d9.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0018-48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">Milly</span>
+              <a href="#ts-1598150981.032400">23日 11:49:41</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C83UXKU86/p1598150981032400" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                themis に PR したばっかりにこんな……と思っていたので <img class='slacklog-emoji' title=':goodpoem:' alt=':goodpoem:' src='/slacklog/emojis/goodpoem.png'>
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1598151825.033200">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2015-01-15/3417067010_04a676b32692fb2507e1_48.jpg" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">thinca</span>
+              <a href="#ts-1598151825.033200">23日 12:03:45</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C83UXKU86/p1598151825033200" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                Milly さんの変更はまったく関係ありませんでしたw
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1598156725.033600">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://secure.gravatar.com/avatar/09aab32950ce6edc99beced8dae978d9.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0018-48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">Milly</span>
+              <a href="#ts-1598156725.033600">23日 13:25:25</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C83UXKU86/p1598156725033600" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                最新だけだったのでそうかなとは思ってました
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1598165395.034400">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://secure.gravatar.com/avatar/7817559eedcf07a777dbf9dd734cc0b1.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0001-48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">Ken Takata</span>
+              <a href="#ts-1598165395.034400">23日 15:49:55</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C83UXKU86/p1598165395034400" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                MinGW で取得したカバレッジを codecov にアップロードすることも出来た。(codecov.yml を用意してパス名を修正する必要があったが。)<br><a href='https://github.com/sakura-editor/sakura/issues/1301#issuecomment-678735680'>https://github.com/sakura-editor/sakura/issues/1301#issuecomment-678735680</a><br>Vimにも適用すべきだろうか？
+              </div>
+
+              <div>
+              </div>
+            <span class="f6 text-gray-light">
+              このスレッドに返信しました : <a href="#ts-1598057776.016800">あとは、結果を codecov にアップ ...</a>
+            </span>
+            <div class="mt-2 border p-2" id="ts-1598165395.034400">
+              
+    <div class="d-flex">
+      <div>
+        <img class="avatar avatar-small" width="32" height="32" src="https://a.slack-edge.com/80588/img/unfurl_icons/github.png" alt="GitHub" />
+      </div>
+      <div class="flex-self-baseline f4 ml-2">
+        <span class="Label Label--outline">
+          <a href="https://github.com/sakura-editor/sakura/issues/1301#issuecomment-678735680" target="_blank" rel="noopener noreferrer">スモークテストを導入したい · Issue #1301 · sakura-editor/sakura</a>
+        </span>
+      </div>
+    </div>
+    <div class="d-flex pl-2 mb-2">
+      <div class="mt-2">スモークテストって何だ？ スモーク の名前が示す通り もやっとしたテスト です。 アプリに備わった色んな機能をざっくりと動かします。 なんとなく今まで通り を検証することを目的とします。 単体テストと何が違うの？ 単体テストは 内部仕様の妥当性 を検証する ガラス張りテスト です。 スモークテストは 操作と処理結果の妥当性 を検証する ブラックボックステスト です。 スモークテストを導入する...</div>
+    </div>
+
+            </div>
             </div>
           </div>
         </div>

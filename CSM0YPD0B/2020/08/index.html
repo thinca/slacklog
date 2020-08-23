@@ -3963,6 +3963,481 @@
             </div>
           </div>
         </div>
+        <div class="clearfix m-3" id="ts-1598157997.046500">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2015-01-15/3417067010_04a676b32692fb2507e1_48.jpg" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">thinca</span>
+              <a href="#ts-1598157997.046500">23日 13:46:37</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CSM0YPD0B/p1598157997046500" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                さて、Vim の最新でバグが直ったので、ここで「なぜか Docker Hub の thinca/vim の自動更新が止まっていて、CI がこのイメージを使っているので最新版でテストできない」と言う問題に帰着したぞ
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1598158517.046900">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2018-05-31/373472791093_ed16847a152da533e013_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">Tsuyoshi CHO</span>
+              <a href="#ts-1598158517.046900">23日 13:55:17</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CSM0YPD0B/p1598158517046900" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                長い旅路...というか大変な手順だ...
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1598158682.049200">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2015-01-15/3417067010_04a676b32692fb2507e1_48.jpg" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">thinca</span>
+              <a href="#ts-1598158682.049200">23日 13:58:02</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CSM0YPD0B/p1598158682049200" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                Docker Hub は GitHub のリポジトリと連携して、GitHub に push があったら自動でビルドをするって機能があるのだけど、これがなぜかこの 1,2 ヶ月くらいで止まってしまっている。原因不明。<br>Docker Hub 自体のビルド周りが最近不安定で、ビルドのログとかも一切見れなくなってしまったし、もうダメそうって感じなので、GitHub Actions でビルドして push する作戦に切り替える。ビルド速度もたぶんこっちの方が速い。GitHub ありがたい…。
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1598158741.050300">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2015-01-15/3417067010_04a676b32692fb2507e1_48.jpg" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">thinca</span>
+              <a href="#ts-1598158741.050300">23日 13:59:01</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CSM0YPD0B/p1598158741050300" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                で、ビルドする時にキャッシュしたいよねって話があって、Docker Hub に push したやつからは --cache-from が効いたけど GitHub Packages に push したやつだと効かない、というのが前回までのあらすじ
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1598158775.050900">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2015-01-15/3417067010_04a676b32692fb2507e1_48.jpg" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">thinca</span>
+              <a href="#ts-1598158775.050900">23日 13:59:35</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CSM0YPD0B/p1598158775050900" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                ちゃんと調べるか、もうどうでもいいので Docker Hub にキャッシュを置いておくことにして先に進むか
+              </div>
+
+              <div>
+                  <div>
+                    <ul class="d-flex list-style-none flex-justify-start pt-2">
+                        <li>
+                          <span class="tooltipped tooltipped-ne tooltipped-align-left-1 p-1" aria-label="Tsuyoshi CHO">
+                              <img class="slacklog-emoji" alt="naruhodo" title="naruhodo" src="/slacklog/emojis/naruhodo.png"><span class="ml-1">1</span>
+                          </span>
+                        </li>
+                    </ul>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1598158896.051600">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2015-01-15/3417067010_04a676b32692fb2507e1_48.jpg" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">thinca</span>
+              <a href="#ts-1598158896.051600">23日 14:01:36</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CSM0YPD0B/p1598158896051600" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                そういえば GitHub のパッケージレジストリは、単に pull するだけの場合でも認証が必要になるのはなんでなんだろうなぁ
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1598159024.052600">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2018-05-31/373472791093_ed16847a152da533e013_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">Tsuyoshi CHO</span>
+              <a href="#ts-1598159024.052600">23日 14:03:44</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CSM0YPD0B/p1598159024052600" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                エンタープライズの認証系そのままで、処理共通にして開発コスト(含む品質のためのコスト)を抑えてるとか?
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1598159159.052800">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2015-01-15/3417067010_04a676b32692fb2507e1_48.jpg" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">thinca</span>
+              <a href="#ts-1598159159.052800">23日 14:05:59</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CSM0YPD0B/p1598159159052800" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                <a href='https://qiita.com/yoichiwo7/items/dcea47782a5189d1c1c9'>https://qiita.com/yoichiwo7/items/dcea47782a5189d1c1c9</a> ふーむ
+              </div>
+
+              <div>
+              </div>
+            <div class="mt-2 border p-2" id="ts-1598159159.052800">
+              
+    <div class="d-flex">
+        <div>
+          <img class="avatar avatar-small" width="32" height="32" src="https://cdn.qiita.com/assets/favicons/public/apple-touch-icon-ec5ba42a24ae923f16825592efdc356f.png" alt="Qiita" />
+        </div>
+        <div class="flex-self-baseline f4 ml-2">
+          <span class="Label Label--outline">
+            <a href="https://qiita.com/yoichiwo7/items/dcea47782a5189d1c1c9" target="_blank" rel="noopener noreferrer">GitHub Package RegistryのDockerイメージは認証無しではPullできない (2020/01/12時点) - Qiita</a>
+          </span>
+        </div>
+    </div>
+      <div class="d-flex">
+        <div class="mt-2">ハマる人がいるかもしれないのでMEMOです。 2020/01/12時点ではGitHub PackagesのDockerレジストリ(<a href='http://docker.pkg.github.com'>docker.pkg.github.com</a>)に登録されているDockerイメージはdocker log...</div>
+      </div>
+
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1598159240.053500">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2015-01-15/3417067010_04a676b32692fb2507e1_48.jpg" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">thinca</span>
+              <a href="#ts-1598159240.053500">23日 14:07:20</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CSM0YPD0B/p1598159240053500" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                public な image の pull に認証が必要なの、色々ともったいないなぁと思うので改善されてほしいところ
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1598159253.054200">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2018-03-19/331496519296_b6fceab653cf61d7dd8b_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">kuu</span>
+              <a href="#ts-1598159253.054200">23日 14:07:33</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CSM0YPD0B/p1598159253054200" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                ActionsからDocker Hubに送れないもの？
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1598159258.054300">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2015-01-15/3417067010_04a676b32692fb2507e1_48.jpg" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">thinca</span>
+              <a href="#ts-1598159258.054300">23日 14:07:38</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CSM0YPD0B/p1598159258054300" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                それはさておき、この件は私が今やろうとしていることとはまったく関係ないのであった
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1598159266.054600">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2015-01-15/3417067010_04a676b32692fb2507e1_48.jpg" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">thinca</span>
+              <a href="#ts-1598159266.054600">23日 14:07:46</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CSM0YPD0B/p1598159266054600" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                送れますよー。なのでそれをやろうと思ってます
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1598159282.054800">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2018-03-19/331496519296_b6fceab653cf61d7dd8b_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">kuu</span>
+              <a href="#ts-1598159282.054800">23日 14:08:02</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CSM0YPD0B/p1598159282054800" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                <img class='slacklog-emoji' title=':naruhodo:' alt=':naruhodo:' src='/slacklog/emojis/naruhodo.png'>
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1598159336.055600">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2015-01-15/3417067010_04a676b32692fb2507e1_48.jpg" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">thinca</span>
+              <a href="#ts-1598159336.055600">23日 14:08:56</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CSM0YPD0B/p1598159336055600" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                色々やってて知ったのだけど、Docker って一度 push したイメージはレジストリサービス側で別途 UI を提供していない限り削除できないんですよね
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1598159353.056100">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2015-01-15/3417067010_04a676b32692fb2507e1_48.jpg" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">thinca</span>
+              <a href="#ts-1598159353.056100">23日 14:09:13</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CSM0YPD0B/p1598159353056100" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                すでに一度、 test とか言う tag を push してしまって、ぐぬぬ～ん、となっている
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1598159382.057100">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2018-03-19/331496519296_b6fceab653cf61d7dd8b_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">kuu</span>
+              <a href="#ts-1598159382.057100">23日 14:09:42</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CSM0YPD0B/p1598159382057100" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                上書きするしか(しても履歴残ってたような)
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1598159400.057500">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2015-01-15/3417067010_04a676b32692fb2507e1_48.jpg" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">thinca</span>
+              <a href="#ts-1598159400.057500">23日 14:10:00</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CSM0YPD0B/p1598159400057500" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                上書きは可能だけど削除はできないので test は消せないんですよねw
+              </div>
+
+              <div>
+                  <div>
+                    <ul class="d-flex list-style-none flex-justify-start pt-2">
+                        <li>
+                          <span class="tooltipped tooltipped-ne tooltipped-align-left-1 p-1" aria-label="kuu">
+                              <img class="slacklog-emoji" alt="gunnyari" title="gunnyari" src="/slacklog/emojis/gunnyari.png"><span class="ml-1">1</span>
+                          </span>
+                        </li>
+                    </ul>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1598159453.058600">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2015-01-15/3417067010_04a676b32692fb2507e1_48.jpg" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">thinca</span>
+              <a href="#ts-1598159453.058600">23日 14:10:53</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CSM0YPD0B/p1598159453058600" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                で、キャッシュ用のイメージはどこに push しておこうかなーと。まあ現時点では Docker Hub 一択なので、いつでも消せるように独立したキャッシュ用のイメージに置いとこうかな
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1598159602.059200">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2015-01-15/3417067010_04a676b32692fb2507e1_48.jpg" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">thinca</span>
+              <a href="#ts-1598159602.059200">23日 14:13:22</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CSM0YPD0B/p1598159602059200" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                ああー、いや、Docker Hub の方は普通に tag 消せそう。リポジトリ分けんでもいいか
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1598159647.060100">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2015-01-15/3417067010_04a676b32692fb2507e1_48.jpg" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">thinca</span>
+              <a href="#ts-1598159647.060100">23日 14:14:07</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CSM0YPD0B/p1598159647060100" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                GitHub 側も消せるようになってほしい。private リポジトリなら消せるのだけど、そのために一時的に private にすると star がすべて吹っ飛ぶので star してくれた人に申し訳なさ
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <!-- footer -->
