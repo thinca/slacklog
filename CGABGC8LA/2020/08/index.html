@@ -34113,6 +34113,2198 @@ Usage of C:\Users\koron\go\bin\gjo.exe:
             </div>
           </div>
         </div>
+        <div class="clearfix m-3" id="ts-1598199670.123500">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2019-06-23/667212021009_557c3073c5b377011dbb_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">ゴリラ(バナナ探している)</span>
+              <a href="#ts-1598199670.123500">24日 01:21:10</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CGABGC8LA/p1598199670123500" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                [質問]<br>done &lt;- err しても select のところまで処理が行かないんですが、どこが悪いのか検討つかない状態ですが、どなたかわかりますか…？<br><br><a href='https://github.com/skanehira/docker-streamer/blob/20d1647726eacca2ca5ad55f8ce41c3e8db23987/streamer.go#L146'>https://github.com/skanehira/docker-streamer/blob/20d1647726eacca2ca5ad55f8ce41c3e8db23987/streamer.go#L146</a><br><a href='https://github.com/skanehira/docker-streamer/blob/20d1647726eacca2ca5ad55f8ce41c3e8db23987/streamer.go#L89'>https://github.com/skanehira/docker-streamer/blob/20d1647726eacca2ca5ad55f8ce41c3e8db23987/streamer.go#L89</a><br><br>ちなみに、コードをコンパクトにすると↓のようなことをしています（このコードはちゃんと 1 が出力される）<br><br><pre>func main() {<br>	done := a()<br>	select {<br>	case &lt;-done:<br>		println(1)<br>	}<br>}<br><br>func a() &lt;-chan error {<br>	done := make(chan error, 1)<br><br>	func() {<br>		time.Sleep(1 * time.Second)<br>		done &lt;- nil<br>	}()<br><br>	return done<br>}</pre>
+              </div>
+
+              <div>
+              </div>
+            <div class="mt-2 border p-2" id="ts-1598199670.123500">
+              
+    <div class="d-flex">
+      <div>
+        <img class="avatar avatar-small" width="32" height="32" src="https://a.slack-edge.com/80588/img/unfurl_icons/github.png" alt="GitHub" />
+      </div>
+      <div class="flex-self-baseline f4 ml-2">
+        <span class="Label Label--outline">
+          <a href="https://github.com/skanehira/docker-streamer/blob/20d1647726eacca2ca5ad55f8ce41c3e8db23987/streamer.go#L146" target="_blank" rel="noopener noreferrer">skanehira/docker-streamer</a>
+        </span>
+      </div>
+    </div>
+    <div class="d-flex pl-2 mb-2">
+      <div class="mt-2">Contribute to skanehira/docker-streamer development by creating an account on GitHub.</div>
+    </div>
+    <div class="d-flex">
+      <div>
+        <img class="avatar avatar-small" width="32" height="32" src="https://a.slack-edge.com/80588/img/unfurl_icons/github.png" alt="GitHub" />
+      </div>
+      <div class="flex-self-baseline f4 ml-2">
+        <span class="Label Label--outline">
+          <a href="https://github.com/skanehira/docker-streamer/blob/20d1647726eacca2ca5ad55f8ce41c3e8db23987/streamer.go#L89" target="_blank" rel="noopener noreferrer">skanehira/docker-streamer</a>
+        </span>
+      </div>
+    </div>
+    <div class="d-flex pl-2 mb-2">
+      <div class="mt-2">Contribute to skanehira/docker-streamer development by creating an account on GitHub.</div>
+    </div>
+
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1598200435.123900">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2018-07-31/407982080133_30e238cd92e6c88883f9_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">mattn</span>
+              <a href="#ts-1598200435.123900">24日 01:33:55</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CGABGC8LA/p1598200435123900" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                他の select が実行されてしまったのでは。
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1598200506.124400">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2019-06-23/667212021009_557c3073c5b377011dbb_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">ゴリラ(バナナ探している)</span>
+              <a href="#ts-1598200506.124400">24日 01:35:06</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CGABGC8LA/p1598200506124400" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                print仕込んでいるんですが、実行されていないですね…
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1598200615.125500">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2019-06-23/667212021009_557c3073c5b377011dbb_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">ゴリラ(バナナ探している)</span>
+              <a href="#ts-1598200615.125500">24日 01:36:55</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CGABGC8LA/p1598200615125500" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                responseがcloseされたら done &lt;- err が実行されて select の case が実行されるはずなんですが…
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1598200626.125800">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2019-06-23/667212021009_557c3073c5b377011dbb_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">ゴリラ(バナナ探している)</span>
+              <a href="#ts-1598200626.125800">24日 01:37:06</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CGABGC8LA/p1598200626125800" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                数時間悩んだがわからず
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1598200696.126200">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2018-07-31/407982080133_30e238cd92e6c88883f9_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">mattn</span>
+              <a href="#ts-1598200696.126200">24日 01:38:16</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CGABGC8LA/p1598200696126200" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                本当に outDone 以外の実行されてないですか？ <a href='https://github.com/skanehira/docker-streamer/blob/20d1647726eacca2ca5ad55f8ce41c3e8db23987/streamer.go#L88-L100'>https://github.com/skanehira/docker-streamer/blob/20d1647726eacca2ca5ad55f8ce41c3e8db23987/streamer.go#L88-L100</a>
+              </div>
+
+              <div>
+              </div>
+            <div class="mt-2 border p-2" id="ts-1598200696.126200">
+              
+    <div class="d-flex">
+      <div>
+        <img class="avatar avatar-small" width="32" height="32" src="https://a.slack-edge.com/80588/img/unfurl_icons/github.png" alt="GitHub" />
+      </div>
+      <div class="flex-self-baseline f4 ml-2">
+        <span class="Label Label--outline">
+          <a href="https://github.com/skanehira/docker-streamer/blob/20d1647726eacca2ca5ad55f8ce41c3e8db23987/streamer.go#L88-L100" target="_blank" rel="noopener noreferrer">skanehira/docker-streamer</a>
+        </span>
+      </div>
+    </div>
+    <div class="d-flex pl-2 mb-2">
+      <div class="mt-2">Contribute to skanehira/docker-streamer development by creating an account on GitHub.</div>
+    </div>
+
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1598200923.126400">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2019-06-23/667212021009_557c3073c5b377011dbb_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">ゴリラ(バナナ探している)</span>
+              <a href="#ts-1598200923.126400">24日 01:42:03</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CGABGC8LA/p1598200923126400" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                
+              </div>
+
+              <div>
+              </div>
+              <div class="mt-2 border p-3">
+                <div>
+                  <a href="/slacklog/files/F019BRGDHSP/image.png" target="_blank" rel="noopener noreferrer">
+                  <img src="/slacklog/files/F019BRGDHSP/image.png" width="751" height="661" alt="image.png" />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1598201013.127900">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2019-06-23/667212021009_557c3073c5b377011dbb_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">ゴリラ(バナナ探している)</span>
+              <a href="#ts-1598201013.127900">24日 01:43:33</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CGABGC8LA/p1598201013127900" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                ↑を仕込んだ状態で動かす 2 が出力されます
+              </div>
+
+              <div>
+              </div>
+              <div class="mt-2 border p-3">
+                <div>
+                  <a href="/slacklog/files/F019HQXFRC4/Peek%202020-08-24%2001-41.gif" target="_blank" rel="noopener noreferrer">
+                  <img src="/slacklog/files/F019HQXFRC4/Peek%202020-08-24%2001-41.gif" width="473" height="408" alt="Peek 2020-08-24 01-41.gif" />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1598201041.128400">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2019-06-23/667212021009_557c3073c5b377011dbb_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">ゴリラ(バナナ探している)</span>
+              <a href="#ts-1598201041.128400">24日 01:44:01</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CGABGC8LA/p1598201041128400" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                あ、1か
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1598201095.128700">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2019-06-23/667212021009_557c3073c5b377011dbb_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">ゴリラ(バナナ探している)</span>
+              <a href="#ts-1598201095.128700">24日 01:44:55</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CGABGC8LA/p1598201095128700" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                むー<br>余計にわからんくなってきた
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1598201582.129000">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2019-06-23/667212021009_557c3073c5b377011dbb_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">ゴリラ(バナナ探している)</span>
+              <a href="#ts-1598201582.129000">24日 01:53:02</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CGABGC8LA/p1598201582129000" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                ねむい…<br>一旦あきらめようかな
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1598202385.129500">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2019-06-23/667212021009_557c3073c5b377011dbb_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">ゴリラ(バナナ探している)</span>
+              <a href="#ts-1598202385.129500">24日 02:06:25</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CGABGC8LA/p1598202385129500" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                これ、2が出力されるのか<br>selectの動作、勘違いしていた
+              </div>
+
+              <div>
+              </div>
+              <div class="mt-2 border p-3">
+                <div>
+                  <a href="/slacklog/files/F018WTBUJ3Z/%E7%84%A1%E9%A1%8C.go" target="_blank" rel="noopener noreferrer">
+                  <span class="f5">[[ダウンロード: 無題(Go)]]</span>
+                  </a>
+                  <pre><code class='language-go'>func main() {
+	a := a()
+	b := b()
+
+L:
+	for {
+		select {
+		case <-a:
+			println(1)
+		case <-b:
+			println(2)
+			break L
+		}
+	}
+}
+
+func a() <-chan error {
+	done := make(chan error, 1)
+
+	func() {
+		time.Sleep(1 * time.Second)
+		done <- nil
+		close(done)
+	}()
+
+	return done
+}
+
+func b() <-chan error {
+	done := make(chan error, 1)
+
+	func() {
+		time.Sleep(2 * time.Second)
+		done <- nil
+		close(done)
+	}()
+
+	return done
+}
+</code></pre>
+                </div>
+              </div>
+              <details class="details-reset mt-3">
+                <summary class="btn-link">
+                  <span class="f5">3 件の返信 最終返信:11:08:13 <span class="dropdown-caret"></span>
+                  </span>
+                </summary>
+                <div class="border mt-2">
+                  <div class="p-2" id="ts-1598232742.135900">
+                    <div class="float-left mr-2">
+                      <img class="avatar" width="36" height="36" src="https://secure.gravatar.com/avatar/f588267d3e7e23475cad3933226c1e96.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0014-48.png" />
+                    </div>
+                    <div>
+                      <span class="text-bold mr-1">Shintaro Abe</span>
+                      <a href="#ts-1598232742.135900">24日 10:32:22</a>
+                    </div>
+                    <div class="overflow-hidden">
+                      これ、a, b 関数の中の <code>func</code> は <code>go</code> 抜けてません？
+                    </div>
+                  </div>
+                  <div class="p-2" id="ts-1598233511.136100">
+                    <div class="float-left mr-2">
+                      <img class="avatar" width="36" height="36" src="https://secure.gravatar.com/avatar/f588267d3e7e23475cad3933226c1e96.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0014-48.png" />
+                    </div>
+                    <div>
+                      <span class="text-bold mr-1">Shintaro Abe</span>
+                      <a href="#ts-1598233511.136100">24日 10:45:11</a>
+                    </div>
+                    <div class="overflow-hidden">
+                      念の為、 <code>go</code> 入れると <code>close(done)</code> があるので、L8 の <code>case &lt;-a</code> は複数回通ります。
+                    </div>
+                  </div>
+                  <div class="p-2" id="ts-1598234893.136400">
+                    <div class="float-left mr-2">
+                      <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2019-06-23/667212021009_557c3073c5b377011dbb_48.png" />
+                    </div>
+                    <div>
+                      <span class="text-bold mr-1">ゴリラ(バナナ探している)</span>
+                      <a href="#ts-1598234893.136400">24日 11:08:13</a>
+                    </div>
+                    <div class="overflow-hidden">
+                      めっちゃ抜けていますね…
+                    </div>
+                  </div>
+                </div>
+              </details>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1598202469.130100">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2019-06-23/667212021009_557c3073c5b377011dbb_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">ゴリラ(バナナ探している)</span>
+              <a href="#ts-1598202469.130100">24日 02:07:49</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CGABGC8LA/p1598202469130100" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                1と2がともに出力されると勘違いしていた
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1598202982.131500">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://secure.gravatar.com/avatar/4b5a6f711a4e22e617b74058239ade53.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0007-48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">KoRoN</span>
+              <a href="#ts-1598202982.131500">24日 02:16:22</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CGABGC8LA/p1598202982131500" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                ああ <code>select</code> は待ってるイベントが同時に発生した場合、どれが選ばれるかは保証されてないんですが、どれか1つが選ばれるんですよ。上から順番に選ばれるという説もありましたが、違うはず。
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1598203028.131700">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2019-06-23/667212021009_557c3073c5b377011dbb_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">ゴリラ(バナナ探している)</span>
+              <a href="#ts-1598203028.131700">24日 02:17:08</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CGABGC8LA/p1598203028131700" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                ふむ…
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1598203108.133000">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2019-06-23/667212021009_557c3073c5b377011dbb_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">ゴリラ(バナナ探している)</span>
+              <a href="#ts-1598203108.133000">24日 02:18:28</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CGABGC8LA/p1598203108133000" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                docker-streamer は docker exec のソースコードを見ながら書いたやつなんですが、<br>select周りはほぼそのまま写したけど、なんでdockerは動くんだろう…
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1598203123.133200">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2019-06-23/667212021009_557c3073c5b377011dbb_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">ゴリラ(バナナ探している)</span>
+              <a href="#ts-1598203123.133200">24日 02:18:43</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CGABGC8LA/p1598203123133200" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                ますます謎い
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1598203155.133800">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2019-06-23/667212021009_557c3073c5b377011dbb_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">ゴリラ(バナナ探している)</span>
+              <a href="#ts-1598203155.133800">24日 02:19:15</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CGABGC8LA/p1598203155133800" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                outDoneだけにしてもselectに入っていかないな…<br><pre>	select {<br>	case err := &lt;-outDone:<br>		return err<br>	}</pre>
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1598203631.134000">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2019-06-23/667212021009_557c3073c5b377011dbb_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">ゴリラ(バナナ探している)</span>
+              <a href="#ts-1598203631.134000">24日 02:27:11</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CGABGC8LA/p1598203631134000" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                <a href='https://github.com/docker/cli/blob/697b25eb820f463e459e19f2ce49af991e5cd345/cli/command/container/hijack.go#L51-L71'>https://github.com/docker/cli/blob/697b25eb820f463e459e19f2ce49af991e5cd345/cli/command/container/hijack.go#L51-L71</a>
+              </div>
+
+              <div>
+              </div>
+            <div class="mt-2 border p-2" id="ts-1598203631.134000">
+              
+    <div class="d-flex">
+      <div>
+        <img class="avatar avatar-small" width="32" height="32" src="https://a.slack-edge.com/80588/img/unfurl_icons/github.png" alt="GitHub" />
+      </div>
+      <div class="flex-self-baseline f4 ml-2">
+        <span class="Label Label--outline">
+          <a href="https://github.com/docker/cli/blob/697b25eb820f463e459e19f2ce49af991e5cd345/cli/command/container/hijack.go#L51-L71" target="_blank" rel="noopener noreferrer">docker/cli</a>
+        </span>
+      </div>
+    </div>
+    <div class="d-flex pl-2 mb-2">
+      <div class="mt-2">The Docker CLI. Contribute to docker/cli development by creating an account on GitHub.</div>
+    </div>
+
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1598203747.135500">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2019-06-23/667212021009_557c3073c5b377011dbb_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">ゴリラ(バナナ探している)</span>
+              <a href="#ts-1598203747.135500">24日 02:29:07</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CGABGC8LA/p1598203747135500" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                dockerだと outputDone &lt;- err したらちゃんと select の case err := &lt;-outputDone に入るのは print デバッグで確認済み<br><a href='https://github.com/docker/cli/blob/697b25eb820f463e459e19f2ce49af991e5cd345/cli/command/container/hijack.go#L138'>https://github.com/docker/cli/blob/697b25eb820f463e459e19f2ce49af991e5cd345/cli/command/container/hijack.go#L138</a>
+              </div>
+
+              <div>
+              </div>
+            <div class="mt-2 border p-2" id="ts-1598203747.135500">
+              
+    <div class="d-flex">
+      <div>
+        <img class="avatar avatar-small" width="32" height="32" src="https://a.slack-edge.com/80588/img/unfurl_icons/github.png" alt="GitHub" />
+      </div>
+      <div class="flex-self-baseline f4 ml-2">
+        <span class="Label Label--outline">
+          <a href="https://github.com/docker/cli/blob/697b25eb820f463e459e19f2ce49af991e5cd345/cli/command/container/hijack.go#L138" target="_blank" rel="noopener noreferrer">docker/cli</a>
+        </span>
+      </div>
+    </div>
+    <div class="d-flex pl-2 mb-2">
+      <div class="mt-2">The Docker CLI. Contribute to docker/cli development by creating an account on GitHub.</div>
+    </div>
+
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1598204475.135800">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2019-06-23/667212021009_557c3073c5b377011dbb_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">ゴリラ(バナナ探している)</span>
+              <a href="#ts-1598204475.135800">24日 02:41:15</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CGABGC8LA/p1598204475135800" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                わからん、寝よ
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1598253437.138600">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://secure.gravatar.com/avatar/4b5a6f711a4e22e617b74058239ade53.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0007-48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">KoRoN</span>
+              <a href="#ts-1598253437.138600">24日 16:17:17</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CGABGC8LA/p1598253437138600" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                goで書いたZ80のエミュレータのテストを動かすと、自宅のi9-9900Kは1つのコアがキッチリ1コア100%使い切って実行するのだけれど、会社のRyzen9で動かすと複数のCPU渡り歩いてる気がする…結果、遅くなりそうな雰囲気がしてる…
+              </div>
+
+              <div>
+                  <div>
+                    <ul class="d-flex list-style-none flex-justify-start pt-2">
+                        <li>
+                          <span class="tooltipped tooltipped-ne tooltipped-align-left-1 p-1" aria-label="Shintaro Abe">
+                              <span>👀1</span>
+                          </span>
+                        </li>
+                    </ul>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1598253519.139000">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://secure.gravatar.com/avatar/4b5a6f711a4e22e617b74058239ade53.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0007-48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">KoRoN</span>
+              <a href="#ts-1598253519.139000">24日 16:18:39</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CGABGC8LA/p1598253519139000" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                うわー1分まるまる遅いわ… え、こんなことってあり?
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1598253747.139300">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://secure.gravatar.com/avatar/4b5a6f711a4e22e617b74058239ade53.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0007-48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">KoRoN</span>
+              <a href="#ts-1598253747.139300">24日 16:22:27</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CGABGC8LA/p1598253747139300" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                LockOSThread使ってこんな感じ。
+              </div>
+
+              <div>
+              </div>
+              <div class="mt-2 border p-3">
+                <div>
+                  <a href="/slacklog/files/F019QSN523T/image.png" target="_blank" rel="noopener noreferrer">
+                  <img src="/slacklog/files/F019QSN523T/image.png" width="721" height="850" alt="image.png" />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1598253950.139900">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://secure.gravatar.com/avatar/4b5a6f711a4e22e617b74058239ade53.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0007-48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">KoRoN</span>
+              <a href="#ts-1598253950.139900">24日 16:25:50</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CGABGC8LA/p1598253950139900" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                CPU温度は今見たら42℃で余裕だな…
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1598254035.141100">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://secure.gravatar.com/avatar/4b5a6f711a4e22e617b74058239ade53.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0007-48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">KoRoN</span>
+              <a href="#ts-1598254035.141100">24日 16:27:15</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CGABGC8LA/p1598254035141100" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                うんThread Lockしても大してかわらない。やっぱコア単品で見ると9th GenでもIntelのが速いのか…
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1598254068.141800">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://secure.gravatar.com/avatar/4b5a6f711a4e22e617b74058239ade53.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0007-48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">KoRoN</span>
+              <a href="#ts-1598254068.141800">24日 16:27:48</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CGABGC8LA/p1598254068141800" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                そもそもプログラム小さいから、CPUに近いキャッシュに乗り切ると思うんだよね。そうなると純粋にコア勝負。
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1598254086.142300">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://secure.gravatar.com/avatar/4b5a6f711a4e22e617b74058239ade53.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0007-48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">KoRoN</span>
+              <a href="#ts-1598254086.142300">24日 16:28:06</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CGABGC8LA/p1598254086142300" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                なんかRyzenが本気出せないようなロックかかってしまってるんやろか?
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1598254113.142500">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2018-05-31/373472791093_ed16847a152da533e013_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">Tsuyoshi CHO</span>
+              <a href="#ts-1598254113.142500">24日 16:28:33</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CGABGC8LA/p1598254113142500" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                なんでしょねえ
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1598254346.142900">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2018-07-31/407982080133_30e238cd92e6c88883f9_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">mattn</span>
+              <a href="#ts-1598254346.142900">24日 16:32:26</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CGABGC8LA/p1598254346142900" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                なんかの CPU 命令がどっちかだけにしかないのかな。わからん。
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1598254543.145800">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://secure.gravatar.com/avatar/4b5a6f711a4e22e617b74058239ade53.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0007-48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">KoRoN</span>
+              <a href="#ts-1598254543.145800">24日 16:35:43</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CGABGC8LA/p1598254543145800" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                んーまずなにもしないとCPUを渡り歩くのがわからない。いうても基本forループ回してるだけだからさ。<br><br>さらにLock ThreadしてもCPUの使用率が低い。<br><br>OSの電源管理周りで制限かかってんのかなぁ。
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1598254619.146300">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2018-07-31/407982080133_30e238cd92e6c88883f9_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">mattn</span>
+              <a href="#ts-1598254619.146300">24日 16:36:59</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CGABGC8LA/p1598254619146300" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                どうやって走らせられますか？
+              </div>
+
+              <div>
+              </div>
+              <details class="details-reset mt-3">
+                <summary class="btn-link">
+                  <span class="f5">2 件の返信 最終返信:16:40:31 <span class="dropdown-caret"></span>
+                  </span>
+                </summary>
+                <div class="border mt-2">
+                  <div class="p-2" id="ts-1598254799.147600">
+                    <div class="float-left mr-2">
+                      <img class="avatar" width="36" height="36" src="https://secure.gravatar.com/avatar/4b5a6f711a4e22e617b74058239ade53.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0007-48.png" />
+                    </div>
+                    <div>
+                      <span class="text-bold mr-1">KoRoN</span>
+                      <a href="#ts-1598254799.147600">24日 16:39:59</a>
+                    </div>
+                    <div class="overflow-hidden">
+                      <a href='https://github.com/koron-go/z80'>https://github.com/koron-go/z80</a> これのmasterで <code>make zexdoc</code> してみてください。
+                    </div>
+                      
+    <div class="d-flex">
+      <div>
+        <img class="avatar avatar-small" width="32" height="32" src="https://a.slack-edge.com/80588/img/unfurl_icons/github.png" alt="GitHub" />
+      </div>
+      <div class="flex-self-baseline f4 ml-2">
+        <span class="Label Label--outline">
+          <a href="https://github.com/koron-go/z80" target="_blank" rel="noopener noreferrer">koron-go/z80</a>
+        </span>
+      </div>
+    </div>
+    <div class="d-flex pl-2 mb-2">
+      <div class="mt-2">WIP: Experimental Z80 emulator. Contribute to koron-go/z80 development by creating an account on GitHub.</div>
+    </div>
+
+                  </div>
+                  <div class="p-2" id="ts-1598254831.147900">
+                    <div class="float-left mr-2">
+                      <img class="avatar" width="36" height="36" src="https://secure.gravatar.com/avatar/4b5a6f711a4e22e617b74058239ade53.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0007-48.png" />
+                    </div>
+                    <div>
+                      <span class="text-bold mr-1">KoRoN</span>
+                      <a href="#ts-1598254831.147900">24日 16:40:31</a>
+                    </div>
+                    <div class="overflow-hidden">
+                      zmacがないって怒られたら<a href='http://48k.ca/zmac.htmlこれいれるかtouch'>http://48k.ca/zmac.htmlこれいれるかtouch</a> ./cmd/zexdoc/zexdoc.cimするとよいはず。
+                    </div>
+                  </div>
+                </div>
+              </details>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1598254662.146800">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2018-05-31/373472791093_ed16847a152da533e013_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">Tsuyoshi CHO</span>
+              <a href="#ts-1598254662.146800">24日 16:37:42</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CGABGC8LA/p1598254662146800" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                <a href='https://www.4gamer.net/games/300/G030061/20170407084/'>https://www.4gamer.net/games/300/G030061/20170407084/</a><br>RyzenなんかWindowsでCPUスケジュール関係いろいろあったけど、こういうのも関係するかな?
+              </div>
+
+              <div>
+              </div>
+            <div class="mt-2 border p-2" id="ts-1598254662.146800">
+              
+    <div class="d-flex">
+        <div>
+          <img class="avatar avatar-small" width="32" height="32" src="https://www.4gamer.net/favicon.ico" alt="4gamer.net" />
+        </div>
+        <div class="flex-self-baseline f4 ml-2">
+          <span class="Label Label--outline">
+            <a href="https://www.4gamer.net/games/300/G030061/20170407084/" target="_blank" rel="noopener noreferrer">「Ryzen」に最適化したWindows 10用電源プランをAMDが公開。ユーザーはぜひ導入しよう</a>
+          </span>
+        </div>
+    </div>
+      <div class="d-flex">
+        <div class="mt-2">　北米時間2017年4月6日，AMDは公式blogで，CPU「Ryzen」の性能を引き出せるよう最適化したというWindows 10用の電源プラン設定の配信を開始した。この電源プラン設定を選択すると，Windows 10標準の「バランス」設定を選んだときよりも，Ryzen搭載PCで実行したゲームのフレームレートが若干向上するとのことだ。</div>
+      </div>
+
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1598254750.147300">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://secure.gravatar.com/avatar/4b5a6f711a4e22e617b74058239ade53.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0007-48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">KoRoN</span>
+              <a href="#ts-1598254750.147300">24日 16:39:10</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CGABGC8LA/p1598254750147300" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                スレッドロック外してパフォーマンス最大化
+              </div>
+
+              <div>
+              </div>
+              <div class="mt-2 border p-3">
+                <div>
+                  <a href="/slacklog/files/F019CF3TB3M/image.png" target="_blank" rel="noopener noreferrer">
+                  <img src="/slacklog/files/F019CF3TB3M/image.png" width="728" height="847" alt="image.png" />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1598254896.148800">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://secure.gravatar.com/avatar/4b5a6f711a4e22e617b74058239ade53.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0007-48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">KoRoN</span>
+              <a href="#ts-1598254896.148800">24日 16:41:36</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CGABGC8LA/p1598254896148800" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                4つのコアを渡り歩いて1%(4/300)くらいの差がでた。
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1598255059.149100">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2018-07-31/407982080133_30e238cd92e6c88883f9_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">mattn</span>
+              <a href="#ts-1598255059.149100">24日 16:44:19</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CGABGC8LA/p1598255059149100" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                
+              </div>
+
+              <div>
+                  <div>
+                    <ul class="d-flex list-style-none flex-justify-start pt-2">
+                        <li>
+                          <span class="tooltipped tooltipped-ne tooltipped-align-left-1 p-1" aria-label="KoRoN">
+                              <span>👍1</span>
+                          </span>
+                        </li>
+                    </ul>
+                  </div>
+              </div>
+              <div class="mt-2 border p-3">
+                <div>
+                  <a href="/slacklog/files/F019QTQQJ1X/image.png" target="_blank" rel="noopener noreferrer">
+                  <img src="/slacklog/files/F019QTQQJ1X/image.png" width="636" height="437" alt="image.png" />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1598255070.149500">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://secure.gravatar.com/avatar/4b5a6f711a4e22e617b74058239ade53.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0007-48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">KoRoN</span>
+              <a href="#ts-1598255070.149500">24日 16:44:30</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CGABGC8LA/p1598255070149500" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                お、サチっとるねぇ
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1598255102.150200">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://secure.gravatar.com/avatar/4b5a6f711a4e22e617b74058239ade53.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0007-48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">KoRoN</span>
+              <a href="#ts-1598255102.150200">24日 16:45:02</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CGABGC8LA/p1598255102150200" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                4～6分で終わるかと思います。
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1598255143.150600">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://secure.gravatar.com/avatar/4b5a6f711a4e22e617b74058239ade53.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0007-48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">KoRoN</span>
+              <a href="#ts-1598255143.150600">24日 16:45:43</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CGABGC8LA/p1598255143150600" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                いまHigh Performanceでやってる。
+              </div>
+
+              <div>
+              </div>
+              <div class="mt-2 border p-3">
+                <div>
+                  <a href="/slacklog/files/F019C9DBA10/image.png" target="_blank" rel="noopener noreferrer">
+                  <img src="/slacklog/files/F019C9DBA10/image.png" width="244" height="69" alt="image.png" />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1598255280.152100">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://secure.gravatar.com/avatar/4b5a6f711a4e22e617b74058239ade53.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0007-48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">KoRoN</span>
+              <a href="#ts-1598255280.152100">24日 16:48:00</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CGABGC8LA/p1598255280152100" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                32コアあって1コアCPUがブン回ったところで大した発熱にはならないから、CPU温度が42℃のままってのはまぁわかる。なのでサーマルスロットリングの線は薄かろう。
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1598255378.152600">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://secure.gravatar.com/avatar/4b5a6f711a4e22e617b74058239ade53.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0007-48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">KoRoN</span>
+              <a href="#ts-1598255378.152600">24日 16:49:38</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CGABGC8LA/p1598255378152600" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                とりあえず電源プラン、いくらか変えて試してみたけど有意な差はなかったわ。
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1598255491.153200">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2018-07-31/407982080133_30e238cd92e6c88883f9_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">mattn</span>
+              <a href="#ts-1598255491.153200">24日 16:51:31</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CGABGC8LA/p1598255491153200" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                テスト終わったけど、結局1個の CPU に張り付いてました。
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1598255552.153800">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://secure.gravatar.com/avatar/4b5a6f711a4e22e617b74058239ade53.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0007-48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">KoRoN</span>
+              <a href="#ts-1598255552.153800">24日 16:52:32</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CGABGC8LA/p1598255552153800" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                それが正常だとおもうんですよね。
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1598255581.154500">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://secure.gravatar.com/avatar/4b5a6f711a4e22e617b74058239ade53.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0007-48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">KoRoN</span>
+              <a href="#ts-1598255581.154500">24日 16:53:01</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CGABGC8LA/p1598255581154500" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                このマシンがCPUを渡り歩く理由がわからない…
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1598255622.155300">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2018-05-31/373472791093_ed16847a152da533e013_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">Tsuyoshi CHO</span>
+              <a href="#ts-1598255622.155300">24日 16:53:42</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CGABGC8LA/p1598255622155300" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                謎だ...
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1598255628.155400">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://secure.gravatar.com/avatar/4b5a6f711a4e22e617b74058239ade53.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0007-48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">KoRoN</span>
+              <a href="#ts-1598255628.155400">24日 16:53:48</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CGABGC8LA/p1598255628155400" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                そんなのGoの内部的になんかある?
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1598255651.156100">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://secure.gravatar.com/avatar/4b5a6f711a4e22e617b74058239ade53.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0007-48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">KoRoN</span>
+              <a href="#ts-1598255651.156100">24日 16:54:11</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CGABGC8LA/p1598255651156100" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                ctx.Doneとかのselectはやってるけれども…
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1598255659.156500">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2018-07-31/407982080133_30e238cd92e6c88883f9_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">mattn</span>
+              <a href="#ts-1598255659.156500">24日 16:54:19</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CGABGC8LA/p1598255659156500" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                <pre>go version devel +46ca7b5ee2 Thu Aug 20 01:12:34 2020 +0000 windows/amd64</pre>
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1598255675.157000">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://secure.gravatar.com/avatar/4b5a6f711a4e22e617b74058239ade53.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0007-48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">KoRoN</span>
+              <a href="#ts-1598255675.157000">24日 16:54:35</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CGABGC8LA/p1598255675157000" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                お、まっつんさんにしては古い(4日前
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1598255683.157300">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2018-05-31/373472791093_ed16847a152da533e013_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">Tsuyoshi CHO</span>
+              <a href="#ts-1598255683.157300">24日 16:54:43</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CGABGC8LA/p1598255683157300" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                他のではこういうのが観測されないなら、go(あるいはこのプログラムで)固有でしょうけど、なにか類似なgo以外ででたらCPU/OSのスケジューリングの問題になりそう?
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1598255686.157400">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://secure.gravatar.com/avatar/4b5a6f711a4e22e617b74058239ade53.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0007-48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">KoRoN</span>
+              <a href="#ts-1598255686.157400">24日 16:54:46</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CGABGC8LA/p1598255686157400" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                <pre>&gt; go version<br>go version go1.15 windows/amd64</pre>
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1598255709.157700">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://secure.gravatar.com/avatar/4b5a6f711a4e22e617b74058239ade53.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0007-48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">KoRoN</span>
+              <a href="#ts-1598255709.157700">24日 16:55:09</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CGABGC8LA/p1598255709157700" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                Cかなにかでぶん回してみる?ただ構造全然違うからな。
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1598256407.158000">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://secure.gravatar.com/avatar/4b5a6f711a4e22e617b74058239ade53.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0007-48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">KoRoN</span>
+              <a href="#ts-1598256407.158000">24日 17:06:47</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CGABGC8LA/p1598256407158000" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                とりまGoで
+              </div>
+
+              <div>
+              </div>
+              <div class="mt-2 border p-3">
+                <div>
+                  <a href="/slacklog/files/F019AV1SNJZ/image.png" target="_blank" rel="noopener noreferrer">
+                  <img src="/slacklog/files/F019AV1SNJZ/image_1024.png" width="1024" height="397" alt="image.png" />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1598256481.158700">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://secure.gravatar.com/avatar/4b5a6f711a4e22e617b74058239ade53.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0007-48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">KoRoN</span>
+              <a href="#ts-1598256481.158700">24日 17:08:01</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CGABGC8LA/p1598256481158700" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                このプログラムでLockOSThread入れてもダメ(=分散する)だな
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1598256489.158900">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2018-05-31/373472791093_ed16847a152da533e013_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">Tsuyoshi CHO</span>
+              <a href="#ts-1598256489.158900">24日 17:08:09</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CGABGC8LA/p1598256489158900" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                ふらふらですね...
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1598256554.160100">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2018-05-31/373472791093_ed16847a152da533e013_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">Tsuyoshi CHO</span>
+              <a href="#ts-1598256554.160100">24日 17:09:14</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CGABGC8LA/p1598256554160100" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                1物理CPUセット(2物理CPU4論理CPU)で共有されるキャッシュにのって、その中で移動、みたいな感じ?
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1598256571.160500">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2018-07-31/407982080133_30e238cd92e6c88883f9_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">mattn</span>
+              <a href="#ts-1598256571.160500">24日 17:09:31</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CGABGC8LA/p1598256571160500" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                blocking API でもないのになんで CPU スイッチしてるん。
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1598256732.161000">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://secure.gravatar.com/avatar/4b5a6f711a4e22e617b74058239ade53.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0007-48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">KoRoN</span>
+              <a href="#ts-1598256732.161000">24日 17:12:12</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CGABGC8LA/p1598256732161000" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                Cでもスイッチしてるw これCPUコアの中で勝手に起こってるのかな?w
+              </div>
+
+              <div>
+              </div>
+              <div class="mt-2 border p-3">
+                <div>
+                  <a href="/slacklog/files/F019AVAUXRB/image.png" target="_blank" rel="noopener noreferrer">
+                  <img src="/slacklog/files/F019AVAUXRB/image_1024.png" width="1024" height="627" alt="image.png" />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1598256830.161700">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2018-05-31/373472791093_ed16847a152da533e013_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">Tsuyoshi CHO</span>
+              <a href="#ts-1598256830.161700">24日 17:13:50</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CGABGC8LA/p1598256830161700" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                型番で検索して、なにか癖があるか、みたいな情報さがしてもいいのかもしれない
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1598256860.162400">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://secure.gravatar.com/avatar/4b5a6f711a4e22e617b74058239ade53.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0007-48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">KoRoN</span>
+              <a href="#ts-1598256860.162400">24日 17:14:20</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CGABGC8LA/p1598256860162400" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                OSがこんなこと実現できるかな?
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1598256913.163400">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://secure.gravatar.com/avatar/4b5a6f711a4e22e617b74058239ade53.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0007-48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">KoRoN</span>
+              <a href="#ts-1598256913.163400">24日 17:15:13</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CGABGC8LA/p1598256913163400" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                僕が知ってる限りだとそういう制御はOSレベルでは不可能だと思うんだけど、その可能性がないという援護射撃が欲しいw
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1598257093.163600">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://secure.gravatar.com/avatar/09aab32950ce6edc99beced8dae978d9.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0018-48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">Milly</span>
+              <a href="#ts-1598257093.163600">24日 17:18:13</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CGABGC8LA/p1598257093163600" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                OSを変えて試す
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1598257294.163800">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://secure.gravatar.com/avatar/4b5a6f711a4e22e617b74058239ade53.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0007-48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">KoRoN</span>
+              <a href="#ts-1598257294.163800">24日 17:21:34</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CGABGC8LA/p1598257294163800" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                んーむずかしいなw
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1598257626.164100">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://secure.gravatar.com/avatar/09aab32950ce6edc99beced8dae978d9.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0018-48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">Milly</span>
+              <a href="#ts-1598257626.164100">24日 17:27:06</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CGABGC8LA/p1598257626164100" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                SuperPi を試す(なつかしい
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1598258541.164300">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://secure.gravatar.com/avatar/09aab32950ce6edc99beced8dae978d9.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0018-48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">Milly</span>
+              <a href="#ts-1598258541.164300">24日 17:42:21</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CGABGC8LA/p1598258541164300" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                <a href='https://stackoverflow.com/questions/28921328/why-does-windows-switch-processes-between-processors'>https://stackoverflow.com/questions/28921328/why-does-windows-switch-processes-between-processors</a>
+              </div>
+
+              <div>
+              </div>
+            <div class="mt-2 border p-2" id="ts-1598258541.164300">
+              
+    <div class="d-flex">
+        <div>
+          <img class="avatar avatar-small" width="32" height="32" src="https://cdn.sstatic.net/Sites/stackoverflow/Img/apple-touch-icon.png?v=c78bd457575a" alt="Stack Overflow" />
+        </div>
+        <div class="flex-self-baseline f4 ml-2">
+          <span class="Label Label--outline">
+            <a href="https://stackoverflow.com/questions/28921328/why-does-windows-switch-processes-between-processors" target="_blank" rel="noopener noreferrer">Why does Windows switch processes between processors?</a>
+          </span>
+        </div>
+    </div>
+      <div class="d-flex">
+        <div class="mt-2">If a single threaded process is busy and uses 100% of a single core it seems like Windows is switching this process between the cores, because in Task Managers core overview all cores are equal use...</div>
+      </div>
+      <div class="d-flex">
+        <div class="mt-2">
+          <img src="https://cdn.sstatic.net/Sites/stackoverflow/Img/apple-touch-icon@2.png?v=73d79a89bded" width="80" alt="Why does Windows switch processes between processors?" />
+        </div>
+      </div>
+
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1598258633.164800">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://secure.gravatar.com/avatar/4b5a6f711a4e22e617b74058239ade53.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0007-48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">KoRoN</span>
+              <a href="#ts-1598258633.164800">24日 17:43:53</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CGABGC8LA/p1598258633164800" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                んーだとすると自宅やまっつんさんのところで起こらない理由がわからない…
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1598258640.165000">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://secure.gravatar.com/avatar/4b5a6f711a4e22e617b74058239ade53.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0007-48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">KoRoN</span>
+              <a href="#ts-1598258640.165000">24日 17:44:00</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CGABGC8LA/p1598258640165000" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                あと5年前だし…
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1598258714.165900">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://secure.gravatar.com/avatar/4b5a6f711a4e22e617b74058239ade53.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0007-48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">KoRoN</span>
+              <a href="#ts-1598258714.165900">24日 17:45:14</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CGABGC8LA/p1598258714165900" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                しかもどうも4つのCPU、つまり2物理コア内でスイッチしてるように…いやCのやつは1物理コアなんかコレ
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1598258747.166200">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://secure.gravatar.com/avatar/09aab32950ce6edc99beced8dae978d9.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0018-48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">Milly</span>
+              <a href="#ts-1598258747.166200">24日 17:45:47</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CGABGC8LA/p1598258747166200" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                <code>start /affinity &lt;mask&gt; prog.exe</code>  で固定できる
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1598258842.166800">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://secure.gravatar.com/avatar/09aab32950ce6edc99beced8dae978d9.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0018-48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">Milly</span>
+              <a href="#ts-1598258842.166800">24日 17:47:22</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CGABGC8LA/p1598258842166800" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                Core i5 の私のノートPCでも勝手に分散されました
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1598258851.167000">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://secure.gravatar.com/avatar/4b5a6f711a4e22e617b74058239ade53.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0007-48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">KoRoN</span>
+              <a href="#ts-1598258851.167000">24日 17:47:31</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CGABGC8LA/p1598258851167000" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                ほほう
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1598258867.167600">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://secure.gravatar.com/avatar/4b5a6f711a4e22e617b74058239ade53.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0007-48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">KoRoN</span>
+              <a href="#ts-1598258867.167600">24日 17:47:47</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CGABGC8LA/p1598258867167600" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                そうなるとされるのとされないののさがまたよくわからないな…
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1598258880.167900">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://secure.gravatar.com/avatar/4b5a6f711a4e22e617b74058239ade53.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0007-48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">KoRoN</span>
+              <a href="#ts-1598258880.167900">24日 17:48:00</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CGABGC8LA/p1598258880167900" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                正確なCPUの型番わかります?
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1598258938.168200">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://secure.gravatar.com/avatar/09aab32950ce6edc99beced8dae978d9.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0018-48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">Milly</span>
+              <a href="#ts-1598258938.168200">24日 17:48:58</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CGABGC8LA/p1598258938168200" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                Windows 10 Pro 1909 18363.1016<br>Core i5-8265U
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1598258960.168900">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://secure.gravatar.com/avatar/4b5a6f711a4e22e617b74058239ade53.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0007-48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">KoRoN</span>
+              <a href="#ts-1598258960.168900">24日 17:49:20</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CGABGC8LA/p1598258960168900" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                あざます! 8thですね
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1598258985.169400">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2018-05-31/373472791093_ed16847a152da533e013_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">Tsuyoshi CHO</span>
+              <a href="#ts-1598258985.169400">24日 17:49:45</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CGABGC8LA/p1598258985169400" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                <a href='https://stackoverflow.com/questions/30098205/how-set-process-to-a-cpu-using-go-in-windows'>https://stackoverflow.com/questions/30098205/how-set-process-to-a-cpu-using-go-in-windows</a><br>的にgo内からaffinity固定せんとあかんのか...なんかそれも違うなあという気持ち
+              </div>
+
+              <div>
+              </div>
+            <div class="mt-2 border p-2" id="ts-1598258985.169400">
+              
+    <div class="d-flex">
+        <div>
+          <img class="avatar avatar-small" width="32" height="32" src="https://cdn.sstatic.net/Sites/stackoverflow/Img/apple-touch-icon.png?v=c78bd457575a" alt="Stack Overflow" />
+        </div>
+        <div class="flex-self-baseline f4 ml-2">
+          <span class="Label Label--outline">
+            <a href="https://stackoverflow.com/questions/30098205/how-set-process-to-a-cpu-using-go-in-windows" target="_blank" rel="noopener noreferrer">How set process to a CPU using Go in windows?</a>
+          </span>
+        </div>
+    </div>
+      <div class="d-flex">
+        <div class="mt-2">I want set a process to a CPU using Go in win7, the below code: package main import ( &#34;fmt&#34; &#34;math&#34; &#34;runtime&#34; &#34;syscall&#34; &#34;unsafe&#34; ) func SetAffinity(pid int, mask *int64) {</div>
+      </div>
+      <div class="d-flex">
+        <div class="mt-2">
+          <img src="https://cdn.sstatic.net/Sites/stackoverflow/Img/apple-touch-icon@2.png?v=73d79a89bded" width="80" alt="How set process to a CPU using Go in windows?" />
+        </div>
+      </div>
+
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1598259139.169900">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2019-09-19/766087996341_c4b0930af904f66d8057_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">johejo</span>
+              <a href="#ts-1598259139.169900">24日 17:52:19</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CGABGC8LA/p1598259139169900" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                numaとかそういうやつかな
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1598259808.170100">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2018-05-31/373472791093_ed16847a152da533e013_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">Tsuyoshi CHO</span>
+              <a href="#ts-1598259808.170100">24日 18:03:28</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CGABGC8LA/p1598259808170100" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                <a href='https://news.mynavi.jp/article/20170925-threadripper/2'>https://news.mynavi.jp/article/20170925-threadripper/2</a>
+              </div>
+
+              <div>
+              </div>
+            <div class="mt-2 border p-2" id="ts-1598259808.170100">
+              
+    <div class="d-flex">
+        <div>
+          <img class="avatar avatar-small" width="32" height="32" src="https://news.mynavi.jp/favicon.ico" alt="マイナビニュース" />
+        </div>
+        <div class="flex-self-baseline f4 ml-2">
+          <span class="Label Label--outline">
+            <a href="https://news.mynavi.jp/article/20170925-threadripper/2" target="_blank" rel="noopener noreferrer">内部解析で探るRyzen ThreadRipper - UMAとNUMAの両モードでもテストを追加 (2) 押さえておきたいUMAとNUMA</a>
+          </span>
+        </div>
+    </div>
+      <div class="d-flex">
+        <div class="mt-2">ファーストインプレッションからちょっと間が空いてしまったが、Ryzen ThreadRipper(ThreadRipper)の詳細なレビューをお届けしたい。通常のベンチマークテストに加えてSandraによる内部解析でAMDのハイエンドCPUに迫りたい。</div>
+      </div>
+
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1598275584.170500">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2018-03-19/331496519296_b6fceab653cf61d7dd8b_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">kuu</span>
+              <a href="#ts-1598275584.170500">24日 22:26:24</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CGABGC8LA/p1598275584170500" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                これよさそう <a href='https://www.reddit.com/r/golang/comments/ifo15p/echelon_hierarchical_progress_in_terminals/'>https://www.reddit.com/r/golang/comments/ifo15p/echelon_hierarchical_progress_in_terminals/</a>
+              </div>
+
+              <div>
+              </div>
+            <div class="mt-2 border p-2" id="ts-1598275584.170500">
+              
+    <div class="d-flex">
+        <div>
+          <img class="avatar avatar-small" width="32" height="32" src="http://www.redditstatic.com/desktop2x/img/favicon/apple-icon-57x57.png" alt="reddit" />
+        </div>
+        <div class="flex-self-baseline f4 ml-2">
+          <span class="Label Label--outline">
+            <a href="https://www.reddit.com/r/golang/comments/ifo15p/echelon_hierarchical_progress_in_terminals/" target="_blank" rel="noopener noreferrer">Echelon - hierarchical progress in terminals</a>
+          </span>
+        </div>
+    </div>
+      <div class="d-flex">
+        <div class="mt-2">Posted in r/golang by u/fkorotkov • 11 points and 4 comments</div>
+      </div>
+
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1598276572.170800">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2015-01-15/3417067010_04a676b32692fb2507e1_48.jpg" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">thinca</span>
+              <a href="#ts-1598276572.170800">24日 22:42:52</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CGABGC8LA/p1598276572170800" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                Vim にほしい
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1598276632.171300">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2015-01-15/3417067010_04a676b32692fb2507e1_48.jpg" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">thinca</span>
+              <a href="#ts-1598276632.171300">24日 22:43:52</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CGABGC8LA/p1598276632171300" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                そういえば並列実行のそれぞれの進捗が出したいことってあるよねぇ
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1598276665.171700">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2018-03-19/331496519296_b6fceab653cf61d7dd8b_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">kuu</span>
+              <a href="#ts-1598276665.171700">24日 22:44:25</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CGABGC8LA/p1598276665171700" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                vim-plugのアップデート画面とかdocker pullの進捗表示とか好きですねー
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <!-- footer -->
