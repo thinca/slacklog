@@ -19281,6 +19281,339 @@
             </div>
           </div>
         </div>
+        <div class="clearfix m-3" id="ts-1598399037.038100">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2019-09-17/765044446022_f43f87e54f5be751759f_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">nabezokodaikon</span>
+              <a href="#ts-1598399037.038100">26日 08:43:57</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CJMV3MSLR/p1598399037038100" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                質問です。<br>nvim-lspでのluaの書き方なんですが、<br><code>rust-analyzer.completion.addCallArgumentSnippets</code> の要な設定項目の場合、<br><pre>require&#39;nvim_lsp&#39;.rust_analyzer.setup {<br>    settings = {<br>        rust_analyzer = {<br>            completion = {<br>                addCallArgumentSnippets = false,<br>            },<br>        },<br>    },<br>}</pre><br>のようなふうに記述すればよいのでしょうか？
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1598403145.039300">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://secure.gravatar.com/avatar/a36a7ed02d64ce6f40a20ebfe0a9f59d.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0025-48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">yaegassy</span>
+              <a href="#ts-1598403145.039300">26日 09:52:25</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CJMV3MSLR/p1598403145039300" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                lua で ハイフン書きたいけど怒られるので <code>[&#39;rust-analyzer&#39;]</code> っぽいです。僕、nvim-lsp常用してないので他に書き方あるなら詳しい人や、nvim-lspを常用してる人が教えてくれそう<br><pre>lua &lt;&lt; EOF<br>require&#39;nvim_lsp&#39;.rust_analyzer.setup{<br>    settings = {<br>        [&#39;rust-analyzer&#39;] = {<br>            completion = {<br>                addCallArgumentSnippets = false,<br>            },<br>        },<br>    },<br>}<br>EOF</pre>
+              </div>
+
+              <div>
+              </div>
+              <details class="details-reset mt-3">
+                <summary class="btn-link">
+                  <span class="f5">14 件の返信 最終返信:21:16:56 <span class="dropdown-caret"></span>
+                  </span>
+                </summary>
+                <div class="border mt-2">
+                  <div class="p-2" id="ts-1598404462.041600">
+                    <div class="float-left mr-2">
+                      <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2019-09-17/765044446022_f43f87e54f5be751759f_48.png" />
+                    </div>
+                    <div>
+                      <span class="text-bold mr-1">nabezokodaikon</span>
+                      <a href="#ts-1598404462.041600">26日 10:14:22</a>
+                    </div>
+                    <div class="overflow-hidden">
+                      ありがとうございます。エラーみたいなのは出ないんですが、イマイチ効果がわからないんですよね。
+                    </div>
+                  </div>
+                  <div class="p-2" id="ts-1598404722.041800">
+                    <div class="float-left mr-2">
+                      <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2019-09-17/765044446022_f43f87e54f5be751759f_48.png" />
+                    </div>
+                    <div>
+                      <span class="text-bold mr-1">nabezokodaikon</span>
+                      <a href="#ts-1598404722.041800">26日 10:18:42</a>
+                    </div>
+                    <div class="overflow-hidden">
+                      すみません。話逸れますが、引数のスニペットが無効になるとは、どういうことなのでしょう？<br><code>fn $0() {}</code>みたいなスニペットから <code>$0</code> が除外されるということなのでしょうか？
+                    </div>
+                  </div>
+                  <div class="p-2" id="ts-1598404724.042000">
+                    <div class="float-left mr-2">
+                      <img class="avatar" width="36" height="36" src="https://secure.gravatar.com/avatar/a36a7ed02d64ce6f40a20ebfe0a9f59d.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0025-48.png" />
+                    </div>
+                    <div>
+                      <span class="text-bold mr-1">yaegassy</span>
+                      <a href="#ts-1598404724.042000">26日 10:18:44</a>
+                    </div>
+                    <div class="overflow-hidden">
+                      えっと nabezokodaikon さんのは <code>rust_analyzer = {</code> って書いてるのでエラーが出ないのだと思います。単純に設定を無視されてる状況かと。 <code>rust-analyzer = {</code>  って書くと僕の環境ではエラーでますね。とりあえず設定できたようでよかったですね！
+                    </div>
+                  </div>
+                  <div class="p-2" id="ts-1598404896.042400">
+                    <div class="float-left mr-2">
+                      <img class="avatar" width="36" height="36" src="https://secure.gravatar.com/avatar/a36a7ed02d64ce6f40a20ebfe0a9f59d.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0025-48.png" />
+                    </div>
+                    <div>
+                      <span class="text-bold mr-1">yaegassy</span>
+                      <a href="#ts-1598404896.042400">26日 10:21:36</a>
+                    </div>
+                    <div class="overflow-hidden">
+                      <code>std::alloc::alloc</code> を使う例だと上記のオプションが true (デフォルト) の場合は <code>std::alloc::alloc(layout)</code> が表示されて <code>layout</code> がスニペットになりますね。今回の設定で false に設定すると <code>layout</code> のスニペットが無効になるという感じだと思います。
+                    </div>
+                  </div>
+                  <div class="p-2" id="ts-1598405111.042700">
+                    <div class="float-left mr-2">
+                      <img class="avatar" width="36" height="36" src="https://secure.gravatar.com/avatar/a36a7ed02d64ce6f40a20ebfe0a9f59d.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0025-48.png" />
+                    </div>
+                    <div>
+                      <span class="text-bold mr-1">yaegassy</span>
+                      <a href="#ts-1598405111.042700">26日 10:25:11</a>
+                    </div>
+                    <div class="overflow-hidden">
+                      それにしても nvim-lsp の rust-analyzer のこの件、皆さんハマりそうなので README に設定例がちょっとでも書いてると皆さんハッピーになるかもかもしれませんね。nabezokodaikon さん、PRチャンスかもしれませんね。
+                    </div>
+                  </div>
+                  <div class="p-2" id="ts-1598405205.042900">
+                    <div class="float-left mr-2">
+                      <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2019-09-17/765044446022_f43f87e54f5be751759f_48.png" />
+                    </div>
+                    <div>
+                      <span class="text-bold mr-1">nabezokodaikon</span>
+                      <a href="#ts-1598405205.042900">26日 10:26:45</a>
+                    </div>
+                    <div class="overflow-hidden">
+                      <code>std::alloc::alloc(layout)</code> が無効になること確認できました！<br>でも、<code>fn</code> の <code>fn $0() {</code> というスニペットは消えないんですよ。まだまだ発展途上ということでしょうか。<br>ありがとうございます。調べ続けてみます。
+                    </div>
+                  </div>
+                  <div class="p-2" id="ts-1598405372.043100">
+                    <div class="float-left mr-2">
+                      <img class="avatar" width="36" height="36" src="https://secure.gravatar.com/avatar/a36a7ed02d64ce6f40a20ebfe0a9f59d.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0025-48.png" />
+                    </div>
+                    <div>
+                      <span class="text-bold mr-1">yaegassy</span>
+                      <a href="#ts-1598405372.043100">26日 10:29:32</a>
+                    </div>
+                    <div class="overflow-hidden">
+                      それを消す専用の設定があるのかもしれませんし僕もちょっとわかりませんね。rust-analyzerは沢山、設定項目があるようなのでこれを機に試してみると良いかもしれません。ここを参考にnvim-lsp流にlua構文で設定を書いてみてとかで <a href='https://github.com/rust-analyzer/rust-analyzer/blob/master/editors/code/package.json#L199-L623'>https://github.com/rust-analyzer/rust-analyzer/blob/master/editors/code/package.json#L199-L623</a>
+                    </div>
+                      
+    <div class="d-flex">
+      <div>
+        <img class="avatar avatar-small" width="32" height="32" src="https://a.slack-edge.com/80588/img/unfurl_icons/github.png" alt="GitHub" />
+      </div>
+      <div class="flex-self-baseline f4 ml-2">
+        <span class="Label Label--outline">
+          <a href="https://github.com/rust-analyzer/rust-analyzer/blob/master/editors/code/package.json#L199-L623" target="_blank" rel="noopener noreferrer">rust-analyzer/rust-analyzer</a>
+        </span>
+      </div>
+    </div>
+    <div class="d-flex pl-2 mb-2">
+      <div class="mt-2">An experimental Rust compiler front-end for IDEs. Contribute to rust-analyzer/rust-analyzer development by creating an account on GitHub.</div>
+    </div>
+
+                  </div>
+                  <div class="p-2" id="ts-1598405598.043400">
+                    <div class="float-left mr-2">
+                      <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2019-09-17/765044446022_f43f87e54f5be751759f_48.png" />
+                    </div>
+                    <div>
+                      <span class="text-bold mr-1">nabezokodaikon</span>
+                      <a href="#ts-1598405598.043400">26日 10:33:18</a>
+                    </div>
+                    <div class="overflow-hidden">
+                      貴重な情報ありがとうございます！
+                    </div>
+                  </div>
+                  <div class="p-2" id="ts-1598405652.043600">
+                    <div class="float-left mr-2">
+                      <img class="avatar" width="36" height="36" src="https://secure.gravatar.com/avatar/a36a7ed02d64ce6f40a20ebfe0a9f59d.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0025-48.png" />
+                    </div>
+                    <div>
+                      <span class="text-bold mr-1">yaegassy</span>
+                      <a href="#ts-1598405652.043600">26日 10:34:12</a>
+                    </div>
+                    <div class="overflow-hidden">
+                      rust-analyzer の機能レベルでオフにできたら良いのですが、もし、まだそれがない？とかみつからない場合は nvim-lsp レベルで rust-analyzer を使うときだけスニペット機能を無効にするということならできそうです。 capabilities とか書いてるこのブロックを追加してみてください。<br><pre>lua &lt;&lt; EOF<br>require&#39;nvim_lsp&#39;.rust_analyzer.setup{<br>    settings = {<br>        [&#39;rust-analyzer&#39;] = {<br>            completion = {<br>                addCallArgumentSnippets = false,<br>            },<br>        },<br>    },<br>    capabilities = {<br>        textDocument = {<br>            completion = {<br>                completionItem = {<br>                    snippetSupport = false<br>                }<br>            }<br>        }<br>    },<br>}<br>EOF</pre>
+                    </div>
+                  </div>
+                  <div class="p-2" id="ts-1598405855.043800">
+                    <div class="float-left mr-2">
+                      <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2019-09-17/765044446022_f43f87e54f5be751759f_48.png" />
+                    </div>
+                    <div>
+                      <span class="text-bold mr-1">nabezokodaikon</span>
+                      <a href="#ts-1598405855.043800">26日 10:37:35</a>
+                    </div>
+                    <div class="overflow-hidden">
+                      おお！これです！できました！<br>ちなみにですが、こういう情報はどのへんから仕入れているのでしょうか？
+                    </div>
+                  </div>
+                  <div class="p-2" id="ts-1598405964.044000">
+                    <div class="float-left mr-2">
+                      <img class="avatar" width="36" height="36" src="https://secure.gravatar.com/avatar/a36a7ed02d64ce6f40a20ebfe0a9f59d.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0025-48.png" />
+                    </div>
+                    <div>
+                      <span class="text-bold mr-1">yaegassy</span>
+                      <a href="#ts-1598405964.044000">26日 10:39:24</a>
+                    </div>
+                    <div class="overflow-hidden">
+                      うーん、、覚えてません。neovimのlspのドキュメントかnvim-lspのissueやドキュメントか。どこだろう。
+                    </div>
+                  </div>
+                  <div class="p-2" id="ts-1598406050.044200">
+                    <div class="float-left mr-2">
+                      <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2019-09-17/765044446022_f43f87e54f5be751759f_48.png" />
+                    </div>
+                    <div>
+                      <span class="text-bold mr-1">nabezokodaikon</span>
+                      <a href="#ts-1598406050.044200">26日 10:40:50</a>
+                    </div>
+                    <div class="overflow-hidden">
+                      じゃあ今回のキーワードを元に今後調べてみます。<br>ありがとうございました。
+                    </div>
+                  </div>
+                  <div class="p-2" id="ts-1598409342.044600">
+                    <div class="float-left mr-2">
+                      <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2019-09-17/765044446022_f43f87e54f5be751759f_48.png" />
+                    </div>
+                    <div>
+                      <span class="text-bold mr-1">nabezokodaikon</span>
+                      <a href="#ts-1598409342.044600">26日 11:35:42</a>
+                    </div>
+                    <div class="overflow-hidden">
+                      ガッツリ書いてありますね…。<br><a href='https://github.com/neovim/neovim/blob/43202964f39eed4e28fd8ad6ad0ec79a1868c33f/runtime/lua/vim/lsp/protocol.lua'>https://github.com/neovim/neovim/blob/43202964f39eed4e28fd8ad6ad0ec79a1868c33f/runtime/lua/vim/lsp/protocol.lua</a>
+                    </div>
+                      
+    <div class="d-flex">
+      <div>
+        <img class="avatar avatar-small" width="32" height="32" src="https://a.slack-edge.com/80588/img/unfurl_icons/github.png" alt="GitHub" />
+      </div>
+      <div class="flex-self-baseline f4 ml-2">
+        <span class="Label Label--outline">
+          <a href="https://github.com/neovim/neovim/blob/43202964f39eed4e28fd8ad6ad0ec79a1868c33f/runtime/lua/vim/lsp/protocol.lua" target="_blank" rel="noopener noreferrer">neovim/neovim</a>
+        </span>
+      </div>
+    </div>
+    <div class="d-flex pl-2 mb-2">
+      <div class="mt-2">Vim-fork focused on extensibility and usability. Contribute to neovim/neovim development by creating an account on GitHub.</div>
+    </div>
+
+                  </div>
+                  <div class="p-2" id="ts-1598444216.045100">
+                    <div class="float-left mr-2">
+                      <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2019-09-17/765044446022_f43f87e54f5be751759f_48.png" />
+                    </div>
+                    <div>
+                      <span class="text-bold mr-1">nabezokodaikon</span>
+                      <a href="#ts-1598444216.045100">26日 21:16:56</a>
+                    </div>
+                    <div class="overflow-hidden">
+                      使用する値を一つ一つ精査していったところ、<code>rust-analyzer</code> は<br><code>[&#34;rust-analyzer&#34;]</code> と記述するのではなく、<code>rust_analyzer</code> というように、ハイフンをアンダーバーしないと機能しないようです。
+                    </div>
+                  </div>
+                </div>
+              </details>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1598403242.039700">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://secure.gravatar.com/avatar/a36a7ed02d64ce6f40a20ebfe0a9f59d.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0025-48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">yaegassy</span>
+              <a href="#ts-1598403242.039700">26日 09:54:02</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CJMV3MSLR/p1598403242039700" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                これとか参考で。 <a href='https://github.com/neovim/nvim-lsp/issues/214'>https://github.com/neovim/nvim-lsp/issues/214</a>
+              </div>
+
+              <div>
+              </div>
+            <div class="mt-2 border p-2" id="ts-1598403242.039700">
+              
+    <div class="d-flex">
+      <div>
+        <img class="avatar avatar-small" width="32" height="32" src="https://a.slack-edge.com/80588/img/unfurl_icons/github.png" alt="GitHub" />
+      </div>
+      <div class="flex-self-baseline f4 ml-2">
+        <span class="Label Label--outline">
+          <a href="https://github.com/neovim/nvim-lsp/issues/214" target="_blank" rel="noopener noreferrer">Usability question: how do you add settings for rust_analyzer? · Issue #214 · neovim/nvim-lsp</a>
+        </span>
+      </div>
+    </div>
+    <div class="d-flex pl-2 mb-2">
+      <div class="mt-2">E.g. how can I disable rust-analyzer.completion.addCallArgumentSnippets? I&amp;#39;ve tried these two versions (both are just inline in the settings): nvim_lsp.rust_analyzer.setup { on_attach = on_atta...</div>
+    </div>
+
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1598403398.040900">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://secure.gravatar.com/avatar/a36a7ed02d64ce6f40a20ebfe0a9f59d.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0025-48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">yaegassy</span>
+              <a href="#ts-1598403398.040900">26日 09:56:38</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CJMV3MSLR/p1598403398040900" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                僕の手元の nvim-lsp + rust_analyzer では上記の設定で引数のスニペットは無効になりましたので正常動作してそう
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1598403420.041400">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2018-05-31/373472791093_ed16847a152da533e013_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">Tsuyoshi CHO</span>
+              <a href="#ts-1598403420.041400">26日 09:57:00</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CJMV3MSLR/p1598403420041400" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                lua 書かないわけではないけど、ハイフンがどうなのか、とか、こういう構造を即値で書いてないので <img class='slacklog-emoji' title=':wakaranai:' alt=':wakaranai:' src='/slacklog/emojis/wakaranai.png'>
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <!-- footer -->
