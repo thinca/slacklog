@@ -19631,7 +19631,7 @@
 #7  0x00000000004e7881 in alloc_clear (size=0x840) at misc2.c:851
 #8  0x00000000005ea3c3 in call_user_func (fp=0x1f621b0, argcount=0x3, argvars=0x7ffe072b05b0, rettv=0x7ffe072b08e0, firstline=0x0, lastline=0x0, selfdict=0x0)
     at userfunc.c:805
-#9  0x00000000005ebe28 in call_func (funcname=0x2004d30 "<SNR>11_popup_filter", len=0xffffffff, rettv=0x7ffe072b08e0, argcount_in=0x2, argvars_in=0x7ffe072b08a0,
+#9  0x00000000005ebe28 in call_func (funcname=0x2004d30 &#34;&lt;SNR&gt;11_popup_filter&#34;, len=0xffffffff, rettv=0x7ffe072b08e0, argcount_in=0x2, argvars_in=0x7ffe072b08a0,
     argv_func=0x0, firstline=0x0, lastline=0x0, doesrange=0x7ffe072b08dc, evaluate=0x1, partial=0x2034050, selfdict_in=0x0) at userfunc.c:1621
 #10 0x00000000005eb9b6 in call_callback (callback=0x2034630, len=0xffffffff, rettv=0x7ffe072b08e0, argcount=0x2, argvars=0x7ffe072b08a0, argv_func=0x0, firstline=0x0,
     lastline=0x0, doesrange=0x7ffe072b08dc, evaluate=0x1, selfdict=0x0) at userfunc.c:1465
@@ -21952,7 +21952,7 @@
 #14 0x00000000004359dd in eval1 (arg=0x7ffc180e5ae8, rettv=0x7ffc180e59a0,
     evaluate=0x1) at eval.c:3690
 #15 0x00000000005ea03e in get_func_tv (
-    name=0x1c15700 "job_start( ['curl', 'https://tenki.jp/amedas/3/17/46106.html', '-x', 'http://21023163:%21hiic5@133.144.14.240:8888'], {'out_cb', function('s:show_rainfall')})", len=0x9, rettv=0x7ffc180e5ff0, arg=0x7ffc180e5f88,
+    name=0x1c15700 &#34;job_start( [&#39;curl&#39;, &#39;https://tenki.jp/amedas/3/17/46106.html&#39;, &#39;-x&#39;, &#39;http://21023163:%21hiic5@133.144.14.240:8888&#39;], {&#39;out_cb&#39;, function(&#39;s:show_rainfall&#39;)})&#34;, len=0x9, rettv=0x7ffc180e5ff0, arg=0x7ffc180e5f88,
     firstline=0x5, lastline=0x5, doesrange=0x7ffc180e5b74, evaluate=0x1,
     partial=0x0, selfdict=0x0) at userfunc.c:460
 #16 0x0000000000437292 in eval7 (arg=0x7ffc180e5f88, rettv=0x7ffc180e5ff0,
@@ -21970,23 +21970,23 @@
 #22 0x00000000004359dd in eval1 (arg=0x7ffc180e5f88, rettv=0x7ffc180e5ff0,
     evaluate=0x1) at eval.c:3690
 #23 0x0000000000435921 in eval0 (
-    arg=0x1c0eefe "job_start( ['curl', 'https://tenki.jp/amedas/3/17/46106.html', '-x', 'http://21023163:%21hiic5@133.144.14.240:8888'], {'out_cb', function('s:---Type <return> to continue, or q <return> to quit---
-show_rainfall')})", rettv=0x7ffc180e5ff0, nextcmd=0x7ffc180e6188, evaluate=0x1)
+    arg=0x1c0eefe &#34;job_start( [&#39;curl&#39;, &#39;https://tenki.jp/amedas/3/17/46106.html&#39;, &#39;-x&#39;, &#39;http://21023163:%21hiic5@133.144.14.240:8888&#39;], {&#39;out_cb&#39;, function(&#39;s:---Type &lt;return&gt; to continue, or q &lt;return&gt; to quit---
+show_rainfall&#39;)})&#34;, rettv=0x7ffc180e5ff0, nextcmd=0x7ffc180e6188, evaluate=0x1)
     at eval.c:3648
 #24 0x0000000000430f38 in ex_let_const (eap=0x7ffc180e6180, is_const=0x0)
     at eval.c:1447
 #25 0x0000000000430b84 in ex_let (eap=0x7ffc180e6180) at eval.c:1348
 #26 0x00000000004741d1 in do_one_cmd (cmdlinep=0x7ffc180e6818, sourcing=0x1,
-    cstack=0x7ffc180e6370, fgetline=0x5f067d <get_func_line>, cookie=0x1cdd980)
+    cstack=0x7ffc180e6370, fgetline=0x5f067d &lt;get_func_line&gt;, cookie=0x1cdd980)
     at ex_docmd.c:2500
 #27 0x0000000000471955 in do_cmdline (cmdline=0x0,
-    fgetline=0x5f067d <get_func_line>, cookie=0x1cdd980, flags=0x7)
+    fgetline=0x5f067d &lt;get_func_line&gt;, cookie=0x1cdd980, flags=0x7)
     at ex_docmd.c:995
 #28 0x00000000005eb4ca in call_user_func (fp=0x1b4bb80, argcount=0x1,
     argvars=0x7ffc180e6f90, rettv=0x7ffc180e6fc0, firstline=0x0, lastline=0x0,
     selfdict=0x0) at userfunc.c:1063
 #29 0x00000000005ec393 in call_func (
-    funcname=0x1b4bd10 "<SNR>53_get_rainfall", len=0xffffffff,
+    funcname=0x1b4bd10 &#34;&lt;SNR&gt;53_get_rainfall&#34;, len=0xffffffff,
     rettv=0x7ffc180e6fc0, argcount_in=0x1, argvars_in=0x7ffc180e6f90,
     argv_func=0x0, firstline=0x0, lastline=0x0, doesrange=0x7ffc180e6fbc,
     evaluate=0x1, partial=0x0, selfdict_in=0x0) at userfunc.c:1621
@@ -21997,19 +21997,19 @@ show_rainfall')})", rettv=0x7ffc180e5ff0, nextcmd=0x7ffc180e6188, evaluate=0x1)
 #31 0x0000000000469a20 in timer_callback (timer=0x1cdd920) at ex_cmds2.c:328
 #32 0x0000000000469bda in check_due_timer () at ex_cmds2.c:390
 #33 0x00000000005ddfb1 in ui_wait_for_chars_or_timer (wtime=0xfa0,
-    wait_func=0x52c164 <WaitForCharOrMouse>, interrupted=0x7ffc180e7150,
+    wait_func=0x52c164 &lt;WaitForCharOrMouse&gt;, interrupted=0x7ffc180e7150,
     ignore_input=0x0) at ui.c:454
 #34 0x000000000052c159 in WaitForChar (msec=0xfa0, interrupted=0x7ffc180e7150,
     ignore_input=0x0) at os_unix.c:5940
-#35 0x00000000005ddec2 in inchar_loop (buf=0x8c539b <typebuf_init+59> "\r",
+#35 0x00000000005ddec2 in inchar_loop (buf=0x8c539b &lt;typebuf_init+59&gt; &#34;\r&#34;,
     maxlen=0x44, wtime=0xffffffffffffffff, tb_change_cnt=0x18,
-    wait_func=0x52c12e <WaitForChar>, resize_func=0x5274c8 <resize_func>)
+    wait_func=0x52c12e &lt;WaitForChar&gt;, resize_func=0x5274c8 &lt;resize_func&gt;)
     at ui.c:383
-#36 0x0000000000527531 in mch_inchar (buf=0x8c539b <typebuf_init+59> "\r",
+#36 0x0000000000527531 in mch_inchar (buf=0x8c539b &lt;typebuf_init+59&gt; &#34;\r&#34;,
     maxlen=0x44, wtime=0xffffffffffffffff, tb_change_cnt=0x18) at os_unix.c:388
-#37 0x00000000005ddcbe in ui_inchar (buf=0x8c539b <typebuf_init+59> "\r",
+#37 0x00000000005ddcbe in ui_inchar (buf=0x8c539b &lt;typebuf_init+59&gt; &#34;\r&#34;,
     maxlen=0x44, wtime=0xffffffffffffffff, tb_change_cnt=0x18) at ui.c:231
-#38 0x00000000004addf9 in inchar (buf=0x8c539b <typebuf_init+59> "\r",
+#38 0x00000000004addf9 in inchar (buf=0x8c539b &lt;typebuf_init+59&gt; &#34;\r&#34;,
     maxlen=0xcd, wait_time=0xffffffffffffffff) at getchar.c:3092
 #39 0x00000000004ada43 in vgetorpeek (advance=0x1) at getchar.c:2870
 #40 0x00000000004abdb5 in vgetc () at getchar.c:1602
@@ -22052,15 +22052,15 @@ show_rainfall')})", rettv=0x7ffc180e5ff0, nextcmd=0x7ffc180e6188, evaluate=0x1)
 
 function s:get_rainfall(timer) abort
   let l:job = job_start(
-        \ ['curl', 'https://tenki.jp/amedas/3/17/46106.html'],
-        \ {'out_cb', function('s:show_rainfall')})
+        \ [&#39;curl&#39;, &#39;https://tenki.jp/amedas/3/17/46106.html&#39;],
+        \ {&#39;out_cb&#39;, function(&#39;s:show_rainfall&#39;)})
 endfunction
 
 function s:show_rainfall(ch, msg) abort
-  call popup_create('rain', {'time': 1000, 'border': []})
+  call popup_create(&#39;rain&#39;, {&#39;time&#39;: 1000, &#39;border&#39;: []})
 endfunction
 
-let timer = timer_start(2000, function('s:get_rainfall'), {'repeat': -1})</code></pre>
+let timer = timer_start(2000, function(&#39;s:get_rainfall&#39;), {&#39;repeat&#39;: -1})</code></pre>
                 </div>
               </div>
             </div>
@@ -22398,7 +22398,7 @@ Shadow bytes around the buggy address:
   0x0c267fffdb10: fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd
   0x0c267fffdb20: fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd
   0x0c267fffdb30: fd fd fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-=>0x0c267fffdb40: fd fd fd fd fd[fd]fd fd fd fd fd fd fd fd fd fd
+=&gt;0x0c267fffdb40: fd fd fd fd fd[fd]fd fd fd fd fd fd fd fd fd fd
   0x0c267fffdb50: fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd
   0x0c267fffdb60: fd fd fd fd fd fd fd fd fd fd fa fa fa fa fa fa
   0x0c267fffdb70: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
@@ -23156,13 +23156,13 @@ Shadow byte legend (one shadow byte represents 8 application bytes):
             did_throw = FALSE;
 +           may_garbage_collect = FALSE;
             current_exception = NULL;
-            save_vimvars(&vvsave);
+            save_vimvars(&amp;vvsave);
 +
-            timer->tr_firing = TRUE;
+            timer-&gt;tr_firing = TRUE;
             timer_callback(timer);
-            timer->tr_firing = FALSE;
+            timer-&gt;tr_firing = FALSE;
 
-            timer_next = timer->tr_next;
+            timer_next = timer-&gt;tr_next;
             did_one = TRUE;
 +
             timer_busy = save_timer_busy;
@@ -23174,13 +23174,13 @@ Shadow byte legend (one shadow byte represents 8 application bytes):
             did_throw = save_did_throw;
 +           may_garbage_collect = save_may_garbage_collect;
             current_exception = save_current_exception;
-            restore_vimvars(&vvsave);
+            restore_vimvars(&amp;vvsave);
             if (must_redraw != 0)
 --- a/src/getchar.c
 +++ b/src/getchar.c
 @@ -2540,13 +2540,18 @@ vgetorpeek(int advance)
                          */
-                        if (mp->m_expr)
+                        if (mp-&gt;m_expr)
                         {
 -                           int         save_vgetc_busy = vgetc_busy;
 +                           int save_vgetc_busy = vgetc_busy;
@@ -23189,8 +23189,8 @@ Shadow byte legend (one shadow byte represents 8 application bytes):
                             vgetc_busy = 0;
 +                           may_garbage_collect = FALSE;
 +
-                            save_m_keys = vim_strsave(mp->m_keys);
-                            save_m_str = vim_strsave(mp->m_str);
+                            save_m_keys = vim_strsave(mp-&gt;m_keys);
+                            save_m_str = vim_strsave(mp-&gt;m_str);
                             s = eval_map_expr(save_m_str, NUL);
 +
                             vgetc_busy = save_vgetc_busy;

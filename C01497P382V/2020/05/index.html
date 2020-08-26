@@ -3017,13 +3017,13 @@
                   <pre><code class='language-go'>package main
 
 import (
-	"bufio"
-	"fmt"
-	"log"
-	"os"
-	"path/filepath"
-	"regexp"
-	"sync"
+	&#34;bufio&#34;
+	&#34;fmt&#34;
+	&#34;log&#34;
+	&#34;os&#34;
+	&#34;path/filepath&#34;
+	&#34;regexp&#34;
+	&#34;sync&#34;
 )
 
 var (
@@ -3036,7 +3036,7 @@ func grep(path string, re *regexp.Regexp) {
 	defer wg.Done()
 	h, err := os.Open(path)
 	if err != nil {
-		log.Printf("can't access %s", path)
+		log.Printf(&#34;can&#39;t access %s&#34;, path)
 	}
 	s := bufio.NewScanner(h)
 
@@ -3046,13 +3046,13 @@ func grep(path string, re *regexp.Regexp) {
 		lnum++
 		t := s.Text()
 		if re.MatchString(t) {
-			res := fmt.Sprintf("%s:%d: %s", path, lnum, t)
+			res := fmt.Sprintf(&#34;%s:%d: %s&#34;, path, lnum, t)
 			matches = append(matches, res)
 		}
 	}
 
 	if len(matches) != 0 {
-		results <- matches
+		results &lt;- matches
 	}
 }
 
@@ -3062,14 +3062,14 @@ func output() {
 			fmt.Println(m)
 		}
 	}
-	outputDone <- struct{}{}
+	outputDone &lt;- struct{}{}
 }
 
 func run() error {
 	re := regexp.MustCompile(os.Args[1])
-	err := filepath.Walk(".", func(path string, info os.FileInfo, err error) error {
+	err := filepath.Walk(&#34;.&#34;, func(path string, info os.FileInfo, err error) error {
 		if err != nil {
-			fmt.Printf("prevent panic by handling failure accessing a path %q: %v\n", path, err)
+			fmt.Printf(&#34;prevent panic by handling failure accessing a path %q: %v\n&#34;, path, err)
 			return err
 		}
 
@@ -3086,7 +3086,7 @@ func run() error {
 	go output()
 	wg.Wait()
 	close(results)
-	<-outputDone
+	&lt;-outputDone
 	return nil
 }
 

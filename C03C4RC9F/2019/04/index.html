@@ -11677,7 +11677,7 @@
                   <a href="/slacklog/files/FHM5EBNMV/______.rs" target="_blank" rel="noopener noreferrer">
                   <span class="f5">[[ダウンロード: 無題(Rust)]]</span>
                   </a>
-                  <pre><code class='language-rust'>let tailSpaces = '(\s|　)+$'</code></pre>
+                  <pre><code class='language-rust'>let tailSpaces = &#39;(\s|　)+$&#39;</code></pre>
                 </div>
               </div>
             </div>
@@ -12177,24 +12177,24 @@
                   <span class="f5">[[ダウンロード: ほむ〜、、、。文末の全角スペース消えない・・・(JavaScript/JSON)]]</span>
                   </a>
                   <pre><code class='language-javascript'>command! TrimEnd call s:trimEnd()
-function! s:trimEnd() abort "{{{
+function! s:trimEnd() abort &#34;{{{
 
-    " mark origin position
+    &#34; mark origin position
     :normal! ma
 
-    let l:range = '%'
+    let l:range = &#39;%&#39;
 
-    let l:unicodeSpaces = '\v
+    let l:unicodeSpaces = &#39;\v
       \   %u180E|%u2028|%u2029|%u00A0|%u2000|%u2001
       \  |%u2002|%u2003|%u2004|%u2005|%u2006|%u2007
-      \  |%u2008|%u2009|%u200A|%u202F|%u205F|%u3000'
+      \  |%u2008|%u2009|%u200A|%u202F|%u205F|%u3000&#39;
 
-    " Replace unicode spaces to normal space
-    :execute l:range 'substitute' '/\v\(' . l:unicodeSpaces . '\)+$//ge'
-    " back to origin position
+    &#34; Replace unicode spaces to normal space
+    :execute l:range &#39;substitute&#39; &#39;/\v\(&#39; . l:unicodeSpaces . &#39;\)+$//ge&#39;
+    &#34; back to origin position
     :normal! `a
 
-  endfunction "}}}
+  endfunction &#34;}}}
 </code></pre>
                 </div>
               </div>
@@ -12896,27 +12896,27 @@ function! s:trimEnd() abort "{{{
                   <a href="/slacklog/files/FHHLX32LQ/_________.js" target="_blank" rel="noopener noreferrer">
                   <span class="f5">[[ダウンロード: ふふふ(JavaScript/JSON)]]</span>
                   </a>
-                  <pre><code class='language-javascript'>  function! s:trimEnd() abort "{{{
+                  <pre><code class='language-javascript'>  function! s:trimEnd() abort &#34;{{{
 
-    " mark origin position
+    &#34; mark origin position
     :normal! ma
 
-    let l:range = '%'
+    let l:range = &#39;%&#39;
 
-    let l:unicodeSpaces = '\v
+    let l:unicodeSpaces = &#39;\v
       \ %u180E|%u2028|%u2029|%u00A0|%u2000|%u2001
       \|%u2002|%u2003|%u2004|%u2005|%u2006|%u2007
-      \|%u2008|%u2009|%u200A|%u202F|%u205F|%u3000'
+      \|%u2008|%u2009|%u200A|%u202F|%u205F|%u3000&#39;
 
-    let l:space = '\v\s'
+    let l:space = &#39;\v\s&#39;
 
-    " Trim end spaces
-    :execute l:range 'substitute' '/\v('l:unicodeSpaces . '|' . l:space')+$//ge'
+    &#34; Trim end spaces
+    :execute l:range &#39;substitute&#39; &#39;/\v(&#39;l:unicodeSpaces . &#39;|&#39; . l:space&#39;)+$//ge&#39;
 
-    " back to origin position
+    &#34; back to origin position
     :normal! `a
 
-  endfunction "}}}
+  endfunction &#34;}}}
 
 </code></pre>
                 </div>
@@ -33726,9 +33726,9 @@ function! s:trimEnd() abort "{{{
                   <a href="/slacklog/files/FHZPS8UQ6/-.txt" target="_blank" rel="noopener noreferrer">
                   <span class="f5">[[ダウンロード: Untitled(Plain Text)]]</span>
                   </a>
-                  <pre><code class='language-none'>Because of Vi compatibility the following strange commands are supported: >
-	:|			print current line (like ":p")
-	:3|			print line 3 (like ":3p")
+                  <pre><code class='language-none'>Because of Vi compatibility the following strange commands are supported: &gt;
+	:|			print current line (like &#34;:p&#34;)
+	:3|			print line 3 (like &#34;:3p&#34;)
 	:3			goto line 3</code></pre>
                 </div>
               </div>
@@ -38802,19 +38802,19 @@ function! s:trimEnd() abort "{{{
                   <span class="f5">[[ダウンロード: Untitled(Plain Text)]]</span>
                   </a>
                   <pre><code class='language-none'>koron@FATE C:\Users\koron\Downloads
-> .\msdos\source\binary\i486_x64\msdos.exe EDLIN.COM test.txt
+&gt; .\msdos\source\binary\i486_x64\msdos.exe EDLIN.COM test.txt
 File name must be specified
 koron@FATE C:\Users\koron\Downloads
-> dir
+&gt; dir
  ドライブ C のボリューム ラベルがありません。
  ボリューム シリアル番号は FAFB-6CFB です
 
  C:\Users\koron\Downloads のディレクトリ
 
-2019/04/15  17:58    <DIR>          .
-2019/04/15  17:58    <DIR>          ..
+2019/04/15  17:58    &lt;DIR&gt;          .
+2019/04/15  17:58    &lt;DIR&gt;          ..
 2019/04/15  17:56             4,389 EDLIN.COM
-2019/04/15  17:56    <DIR>          msdos
+2019/04/15  17:56    &lt;DIR&gt;          msdos
 2019/04/15  17:55         2,450,296 msdos.zip
 2019/04/15  17:58                22 test.txt</code></pre>
                 </div>

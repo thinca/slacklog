@@ -28555,62 +28555,62 @@
                   <span class="f5">[[ダウンロード: 無題(Plain Text)]]</span>
                   </a>
                   <pre><code class='language-none'>let s:registers = [
-			\ '0',
-			\ '1',
-			\ '2',
-			\ '3',
-			\ '4',
-			\ '5',
-			\ '6',
-			\ '7',
-			\ '8',
-			\ '9',
-			\ 'a',
-			\ 'b',
-			\ 'c',
-			\ 'd',
-			\ 'e',
-			\ 'g',
-			\ 'h',
-			\ 'i',
-			\ 'j',
-			\ 'k',
-			\ 'n',
-			\ 'p',
-			\ 'q',
-			\ 'r',
-			\ 's',
-			\ 'v',
-			\ 'w',
-			\ 'x',
-			\ 'y',
-			\ 'z',
-			\ '-',
-			\ '*',
-			\ '.',
-			\ ':',
-			\ '%',
-			\ '#',
-			\ '/',
-			\ '='
+			\ &#39;0&#39;,
+			\ &#39;1&#39;,
+			\ &#39;2&#39;,
+			\ &#39;3&#39;,
+			\ &#39;4&#39;,
+			\ &#39;5&#39;,
+			\ &#39;6&#39;,
+			\ &#39;7&#39;,
+			\ &#39;8&#39;,
+			\ &#39;9&#39;,
+			\ &#39;a&#39;,
+			\ &#39;b&#39;,
+			\ &#39;c&#39;,
+			\ &#39;d&#39;,
+			\ &#39;e&#39;,
+			\ &#39;g&#39;,
+			\ &#39;h&#39;,
+			\ &#39;i&#39;,
+			\ &#39;j&#39;,
+			\ &#39;k&#39;,
+			\ &#39;n&#39;,
+			\ &#39;p&#39;,
+			\ &#39;q&#39;,
+			\ &#39;r&#39;,
+			\ &#39;s&#39;,
+			\ &#39;v&#39;,
+			\ &#39;w&#39;,
+			\ &#39;x&#39;,
+			\ &#39;y&#39;,
+			\ &#39;z&#39;,
+			\ &#39;-&#39;,
+			\ &#39;*&#39;,
+			\ &#39;.&#39;,
+			\ &#39;:&#39;,
+			\ &#39;%&#39;,
+			\ &#39;#&#39;,
+			\ &#39;/&#39;,
+			\ &#39;=&#39;
 			\ ]
 
 function! s:get_reg(bufnr, registers, id, idx) abort
 	let name = s:registers[a:idx-1]
-	call setbufline(a:bufnr, 55, "gorilla")
+	call setbufline(a:bufnr, 55, &#34;gorilla&#34;)
 endfunction
 
 function! regpop#registers() abort
-	let curpos = getpos('.')
-	let curbuf = bufnr('$')
+	let curpos = getpos(&#39;.&#39;)
+	let curbuf = bufnr(&#39;$&#39;)
 	let registers = s:get_registers()
-	call popup_menu(map(copy(s:registers), 'v:val .. "\t" .. registers[v:val][:20] .. "..."'), {
-				\ 'filter': 'popup_filter_menu',
-				\ 'callback': function('s:get_reg', [curbuf, registers]),
-				\ 'maxwidth': 50,
-				\ 'maxheight': 30
+	call popup_menu(map(copy(s:registers), &#39;v:val .. &#34;\t&#34; .. registers[v:val][:20] .. &#34;...&#34;&#39;), {
+				\ &#39;filter&#39;: &#39;popup_filter_menu&#39;,
+				\ &#39;callback&#39;: function(&#39;s:get_reg&#39;, [curbuf, registers]),
+				\ &#39;maxwidth&#39;: 50,
+				\ &#39;maxheight&#39;: 30
 				\ })
-	call setpos('.', curpos)
+	call setpos(&#39;.&#39;, curpos)
 endfunction
 
 function! s:get_registers() abort

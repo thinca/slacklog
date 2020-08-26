@@ -46708,7 +46708,7 @@
                   <pre><code class='language-go'>package main
 
 func main() {
-	fmt.Println("知らなかった！")
+	fmt.Println(&#34;知らなかった！&#34;)
 }
 </code></pre>
                 </div>
@@ -50732,12 +50732,12 @@ func main() {
                   </a>
                   <pre><code class='language-shell'>function vim () {
   if [ -t 0 ]; then
-    command vim $@ < /dev/tty
+    command vim $@ &lt; /dev/tty
   else
     local f=$(mktemp)
-    cat /dev/stdin > "$f"
-    command vim "$f" < /dev/tty
-    rm -f "$f" || :
+    cat /dev/stdin &gt; &#34;$f&#34;
+    command vim &#34;$f&#34; &lt; /dev/tty
+    rm -f &#34;$f&#34; || :
   fi
 }</code></pre>
                 </div>

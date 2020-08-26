@@ -1733,17 +1733,17 @@
                   </a>
                   <pre><code class='language-c'>	case Ctrl_C:	/* End input mode */
 #ifdef FEAT_CMDWIN
-	    if (c == Ctrl_C && cmdwin_type != 0)
+	    if (c == Ctrl_C &amp;&amp; cmdwin_type != 0)
 	    {
 		/* Close the cmdline window. */
 		cmdwin_result = K_IGNORE;
-		got_int = FALSE; /* don't stop executing autocommands et al. */
+		got_int = FALSE; /* don&#39;t stop executing autocommands et al. */
 		nomove = TRUE;
 		goto doESCkey;
 	    }
 #endif
 #ifdef FEAT_JOB_CHANNEL
-	    if (c == Ctrl_C && bt_prompt(curbuf))
+	    if (c == Ctrl_C &amp;&amp; bt_prompt(curbuf))
 	    {
 		if (invoke_prompt_interrupt())
 		{
@@ -1759,7 +1759,7 @@
 #ifdef UNIX
 do_intr:
 #endif
-	    /* when 'insertmode' set, and not halfway a mapping, don't leave
+	    /* when &#39;insertmode&#39; set, and not halfway a mapping, don&#39;t leave
 	     * Insert mode */
 	    if (goto_im())
 	    {
@@ -1776,17 +1776,17 @@ doESCkey:
 	    /*
 	     * This is the ONLY return from edit()!
 	     */
-	    /* Always update o_lnum, so that a "CTRL-O ." that adds a line
+	    /* Always update o_lnum, so that a &#34;CTRL-O .&#34; that adds a line
 	     * still puts the cursor back after the inserted text. */
-	    if (ins_at_eol && gchar_cursor() == NUL)
-		o_lnum = curwin->w_cursor.lnum;
+	    if (ins_at_eol &amp;&amp; gchar_cursor() == NUL)
+		o_lnum = curwin-&gt;w_cursor.lnum;
 
-	    if (ins_esc(&count, cmdchar, nomove))
+	    if (ins_esc(&amp;count, cmdchar, nomove))
 	    {
 		// When CTRL-C was typed got_int will be set, with the result
-		// that the autocommands won't be executed. When mapped got_int
-		// is not set, but let's keep the behavior the same.
-		if (cmdchar != 'r' && cmdchar != 'v' && c != Ctrl_C)
+		// that the autocommands won&#39;t be executed. When mapped got_int
+		// is not set, but let&#39;s keep the behavior the same.
+		if (cmdchar != &#39;r&#39; &amp;&amp; cmdchar != &#39;v&#39; &amp;&amp; c != Ctrl_C)
 		    ins_apply_autocmds(EVENT_INSERTLEAVE);
 		did_cursorhold = FALSE;
 		return (c == Ctrl_O);

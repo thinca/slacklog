@@ -19148,36 +19148,36 @@ index 7e3046a..bf3c987 100644
 +++ b/plugin/fzf.vim
 @@ -844,6 +844,9 @@ endif
  function! s:popup(opts) abort
-   " Size and position
-   let width = min([max([0, float2nr(&columns * a:opts.width)]), &columns])
-+  if &ambiwidth == 'double'
+   &#34; Size and position
+   let width = min([max([0, float2nr(&amp;columns * a:opts.width)]), &amp;columns])
++  if &amp;ambiwidth == &#39;double&#39;
 +    let width += width % 2
 +  endif
-   let height = min([max([0, float2nr(&lines * a:opts.height)]), &lines - has('nvim')])
-   let row = float2nr(get(a:opts, 'yoffset', 0.5) * (&lines - height))
-   let col = float2nr(get(a:opts, 'xoffset', 0.5) * (&columns - width))
+   let height = min([max([0, float2nr(&amp;lines * a:opts.height)]), &amp;lines - has(&#39;nvim&#39;)])
+   let row = float2nr(get(a:opts, &#39;yoffset&#39;, 0.5) * (&amp;lines - height))
+   let col = float2nr(get(a:opts, &#39;xoffset&#39;, 0.5) * (&amp;columns - width))
 @@ -860,16 +863,21 @@ function! s:popup(opts) abort
-     let style = 'sharp'
+     let style = &#39;sharp&#39;
    endif
  
 +  let ambidouble = 1
-+  if &ambiwidth == 'double'
++  if &amp;ambiwidth == &#39;double&#39;
 +    let ambidouble = 2
 +  endif
 +
-   if style == 'horizontal'
--    let hor = repeat('─', width)
-+    let hor = repeat('─', width / ambidouble)
-     let mid = repeat(' ', width)
+   if style == &#39;horizontal&#39;
+-    let hor = repeat(&#39;─&#39;, width)
++    let hor = repeat(&#39;─&#39;, width / ambidouble)
+     let mid = repeat(&#39; &#39;, width)
      let border = [hor] + repeat([mid], height - 2) + [hor]
      let margin = 0
    else
-     let edges = style == 'sharp' ? ['┌', '┐', '└', '┘'] : ['╭', '╮', '╰', '╯']
--    let bar = repeat('─', width - 2)
-+    let bar = repeat('─', width / ambidouble - 2)
+     let edges = style == &#39;sharp&#39; ? [&#39;┌&#39;, &#39;┐&#39;, &#39;└&#39;, &#39;┘&#39;] : [&#39;╭&#39;, &#39;╮&#39;, &#39;╰&#39;, &#39;╯&#39;]
+-    let bar = repeat(&#39;─&#39;, width - 2)
++    let bar = repeat(&#39;─&#39;, width / ambidouble - 2)
      let top = edges[0] .. bar .. edges[1]
--    let mid = '│' .. repeat(' ', width - 2) .. '│'
-+    let mid = '│' .. repeat(' ', width - 2 * ambidouble) .. '│'
+-    let mid = &#39;│&#39; .. repeat(&#39; &#39;, width - 2) .. &#39;│&#39;
++    let mid = &#39;│&#39; .. repeat(&#39; &#39;, width - 2 * ambidouble) .. &#39;│&#39;
      let bot = edges[2] .. bar .. edges[3]
      let border = [top] + repeat([mid], height - 2) + [bot]
      let margin = 2</code></pre>

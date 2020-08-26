@@ -17960,34 +17960,34 @@ index b18f33d..016d573 100644
 --- a/.eslintrc.js
 +++ b/.eslintrc.js
 @@ -6,10 +6,13 @@ module.exports = {
-     "plugin:@typescript-eslint/recommended",
-     "plugin:@typescript-eslint/recommended-requiring-type-checking",
-     "plugin:node/recommended",
-+    "plugin:import/errors",
-+    "plugin:import/warnings",
-+    "plugin:import/typescript",
-     "plugin:prettier/recommended",
-     "prettier/@typescript-eslint"
+     &#34;plugin:@typescript-eslint/recommended&#34;,
+     &#34;plugin:@typescript-eslint/recommended-requiring-type-checking&#34;,
+     &#34;plugin:node/recommended&#34;,
++    &#34;plugin:import/errors&#34;,
++    &#34;plugin:import/warnings&#34;,
++    &#34;plugin:import/typescript&#34;,
+     &#34;plugin:prettier/recommended&#34;,
+     &#34;prettier/@typescript-eslint&#34;
    ],
--  plugins: ["@typescript-eslint", "prettier"],
-+  plugins: ["@typescript-eslint", "node", "import", "prettier"],
+-  plugins: [&#34;@typescript-eslint&#34;, &#34;prettier&#34;],
++  plugins: [&#34;@typescript-eslint&#34;, &#34;node&#34;, &#34;import&#34;, &#34;prettier&#34;],
    env: {
      jest: true
    },
 @@ -20,15 +23,10 @@ module.exports = {
    },
    settings: {
-     "import/resolver": {
+     &#34;import/resolver&#34;: {
 -      node: {
--        extensions: [".ts"]
+-        extensions: [&#34;.ts&#34;]
 -      }
 +      typescript: {}
      },
-     "import/parsers": {
-       "@typescript-eslint/parser": [".ts"]
+     &#34;import/parsers&#34;: {
+       &#34;@typescript-eslint/parser&#34;: [&#34;.ts&#34;]
 -    },
 -    node: {
--      tryExtensions: [".ts", ".js"]
+-      tryExtensions: [&#34;.ts&#34;, &#34;.js&#34;]
      }
    },
    rules: {
@@ -17995,34 +17995,34 @@ index b18f33d..016d573 100644
        }
      ],
 
-+    "no-restricted-imports": ["error", { "patterns": ["./", "../"] }],
-     "import/prefer-default-export": "off",
-     "import/extensions": ["error", "ignorePackages", { ts: "never" }],
++    &#34;no-restricted-imports&#34;: [&#34;error&#34;, { &#34;patterns&#34;: [&#34;./&#34;, &#34;../&#34;] }],
+     &#34;import/prefer-default-export&#34;: &#34;off&#34;,
+     &#34;import/extensions&#34;: [&#34;error&#34;, &#34;ignorePackages&#34;, { ts: &#34;never&#34; }],
 
 @@ -57,6 +56,7 @@ module.exports = {
-     "@typescript-eslint/ban-ts-ignore": "off",
+     &#34;@typescript-eslint/ban-ts-ignore&#34;: &#34;off&#34;,
 
-     "node/no-unsupported-features/es-syntax": "off",
-+    "node/no-missing-import": "off",
+     &#34;node/no-unsupported-features/es-syntax&#34;: &#34;off&#34;,
++    &#34;node/no-missing-import&#34;: &#34;off&#34;,
 
-     "prettier/prettier": "error"
+     &#34;prettier/prettier&#34;: &#34;error&#34;
    }
 diff --git a/tsconfig.json b/tsconfig.json
 index 1375690..7c3caf6 100644
 --- a/tsconfig.json
 +++ b/tsconfig.json
 @@ -7,6 +7,11 @@
-     "skipLibCheck": true,
-     "strict": true,
-     "strictNullChecks": true,
-+    "rootDir": "./src",
-+    "baseUrl": "./",
-+    "paths": {
-+      "@/*": ["src/*"]
+     &#34;skipLibCheck&#34;: true,
+     &#34;strict&#34;: true,
+     &#34;strictNullChecks&#34;: true,
++    &#34;rootDir&#34;: &#34;./src&#34;,
++    &#34;baseUrl&#34;: &#34;./&#34;,
++    &#34;paths&#34;: {
++      &#34;@/*&#34;: [&#34;src/*&#34;]
 +    },
-     "outDir": "./build"
+     &#34;outDir&#34;: &#34;./build&#34;
    },
-   "exclude": ["node_modules"],</code></pre>
+   &#34;exclude&#34;: [&#34;node_modules&#34;],</code></pre>
                 </div>
               </div>
             </div>
@@ -19355,44 +19355,44 @@ index 1375690..7c3caf6 100644
                   <a href="/slacklog/files/F014XSYFUJD/%E7%84%A1%E9%A1%8C.js" target="_blank" rel="noopener noreferrer">
                   <span class="f5">[[ダウンロード: 無題(JavaScript/JSON)]]</span>
                   </a>
-                  <pre><code class='language-javascript'>const foo = ({ product, storage, ingredient, ingredientSubscription }) => {
+                  <pre><code class='language-javascript'>const foo = ({ product, storage, ingredient, ingredientSubscription }) =&gt; {
   const pProduct = (100 * product) / storage
   const pIngredient = (100 * ingredient) / storage
   const pIngredientSubscription = (100 * ingredientSubscription) / storage
   return bar({ pProduct, pIngredient, pIngredientSubscription })
 }
 
-const bar = ({ pProduct, pIngredient, pIngredientSubscription }) => (
-  <div className="progress">
-    <div
-      className="progress-bar bg-primary"
-      role="progressbar"
+const bar = ({ pProduct, pIngredient, pIngredientSubscription }) =&gt; (
+  &lt;div className=&#34;progress&#34;&gt;
+    &lt;div
+      className=&#34;progress-bar bg-primary&#34;
+      role=&#34;progressbar&#34;
       style={{ width: `${pProduct}%` }}
-      aria-valuemin="0"
-      aria-valuemax="100"
+      aria-valuemin=&#34;0&#34;
+      aria-valuemax=&#34;100&#34;
       aria-valuenow={pProduct}
-    >
+    &gt;
       P
-    </div>
-    <div
-      className="progress-bar bg-info"
-      role="progressbar"
+    &lt;/div&gt;
+    &lt;div
+      className=&#34;progress-bar bg-info&#34;
+      role=&#34;progressbar&#34;
       style={{ width: `${pIngredient}%` }}
-      aria-valuemin="0"
-      aria-valuemax="100"
+      aria-valuemin=&#34;0&#34;
+      aria-valuemax=&#34;100&#34;
       aria-valuenow={pIngredient}
-    >
+    &gt;
       I
-    </div>
-    <div
-      className="progress-bar bg-info"
-      role="progressbar"
-      style={{ width: `${pIngredientSubscription}%`, height: "2px" }}
-      aria-valuemin="0"
-      aria-valuemax="100"
+    &lt;/div&gt;
+    &lt;div
+      className=&#34;progress-bar bg-info&#34;
+      role=&#34;progressbar&#34;
+      style={{ width: `${pIngredientSubscription}%`, height: &#34;2px&#34; }}
+      aria-valuemin=&#34;0&#34;
+      aria-valuemax=&#34;100&#34;
       aria-valuenow={pIngredientSubscription}
-    ></div>
-  </div>
+    &gt;&lt;/div&gt;
+  &lt;/div&gt;
 )
 </code></pre>
                 </div>

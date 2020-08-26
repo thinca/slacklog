@@ -7924,10 +7924,10 @@
                   <a href="/slacklog/files/FRDAQMCRH/Untitled.txt" target="_blank" rel="noopener noreferrer">
                   <span class="f5">[[ダウンロード: Untitled(Plain Text)]]</span>
                   </a>
-                  <pre><code class='language-none'>> go test -race ./cmd/mocqserv
+                  <pre><code class='language-none'>&gt; go test -race ./cmd/mocqserv
 # runtime/cgo
-gcc_libinit_windows.c: In function 'x_cgo_sys_thread_create':
-gcc_libinit_windows.c:57:12: error: implicit declaration of function '_beginthread' [-Werror=implicit-function-declaration]
+gcc_libinit_windows.c: In function &#39;x_cgo_sys_thread_create&#39;:
+gcc_libinit_windows.c:57:12: error: implicit declaration of function &#39;_beginthread&#39; [-Werror=implicit-function-declaration]
    57 |  thandle = _beginthread(func, 0, arg);
       |            ^~~~~~~~~~~~
 cc1: all warnings being treated as errors</code></pre>

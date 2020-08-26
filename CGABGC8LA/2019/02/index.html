@@ -1119,7 +1119,7 @@
                   <a href="/slacklog/files/FGA9KQG03/-.txt" target="_blank" rel="noopener noreferrer">
                   <span class="f5">[[ダウンロード: Untitled(Plain Text)]]</span>
                   </a>
-                  <pre><code class='language-none'>2019/02/19 15:11:04:["<---(stderr)",1,"go-lang",["panic: runtime error: invalid memory address or nil pointer dereference","[signal 0xc0000005 code=0x0 addr=0x8 pc=0x6bbde2]","","goroutine 12944 [running]:","golang.org/x/tools/go/analysis/passes/ctrlflow.run(0xc00759aa20, 0xc010049570, 0xb24d20, 0xc038366ba8, 0x8a6760)","\tC:/Users/koron/go/src/golang.org/x/tools/go/analysis/passes/ctrlflow/ctrlflow.go:116 +0x1e2","golang.org/x/tools/internal/lsp/source.(*action).execOnce(0xc040a72a00)","\tC:/Users/koron/go/src/golang.org/x/tools/internal/lsp/source/analysis.go:204 +0x5e7","golang.org/x/tools/internal/lsp/source.(*action).execOnce-fm()","\tC:/Users/koron/go/src/golang.org/x/tools/internal/lsp/source/analysis.go:143 +0x31","sync.(*Once).Do(0xc040a72a00, 0xc0243ddf98)","\tC:/Local/Go/current/src/sync/once.go:44 +0xba","golang.org/x/tools/internal/lsp/source.(*action).exec(0xc040a72a00)","\tC:/Users/koron/go/src/golang.org/x/tools/internal/lsp/source/analysis.go:143 +0x57","golang.org/x/tools/internal/lsp/source.execAll.func1(0xc040a72a00)","\tC:/Users/koron/go/src/golang.org/x/tools/internal/lsp/source/analysis.go:135 +0x3b","created by golang.org/x/tools/internal/lsp/source.execAll","\tC:/Users/koron/go/src/golang.org/x/tools/internal/lsp/source/analysis.go:138 +0x61",""]]</code></pre>
+                  <pre><code class='language-none'>2019/02/19 15:11:04:[&#34;&lt;---(stderr)&#34;,1,&#34;go-lang&#34;,[&#34;panic: runtime error: invalid memory address or nil pointer dereference&#34;,&#34;[signal 0xc0000005 code=0x0 addr=0x8 pc=0x6bbde2]&#34;,&#34;&#34;,&#34;goroutine 12944 [running]:&#34;,&#34;golang.org/x/tools/go/analysis/passes/ctrlflow.run(0xc00759aa20, 0xc010049570, 0xb24d20, 0xc038366ba8, 0x8a6760)&#34;,&#34;\tC:/Users/koron/go/src/golang.org/x/tools/go/analysis/passes/ctrlflow/ctrlflow.go:116 +0x1e2&#34;,&#34;golang.org/x/tools/internal/lsp/source.(*action).execOnce(0xc040a72a00)&#34;,&#34;\tC:/Users/koron/go/src/golang.org/x/tools/internal/lsp/source/analysis.go:204 +0x5e7&#34;,&#34;golang.org/x/tools/internal/lsp/source.(*action).execOnce-fm()&#34;,&#34;\tC:/Users/koron/go/src/golang.org/x/tools/internal/lsp/source/analysis.go:143 +0x31&#34;,&#34;sync.(*Once).Do(0xc040a72a00, 0xc0243ddf98)&#34;,&#34;\tC:/Local/Go/current/src/sync/once.go:44 +0xba&#34;,&#34;golang.org/x/tools/internal/lsp/source.(*action).exec(0xc040a72a00)&#34;,&#34;\tC:/Users/koron/go/src/golang.org/x/tools/internal/lsp/source/analysis.go:143 +0x57&#34;,&#34;golang.org/x/tools/internal/lsp/source.execAll.func1(0xc040a72a00)&#34;,&#34;\tC:/Users/koron/go/src/golang.org/x/tools/internal/lsp/source/analysis.go:135 +0x3b&#34;,&#34;created by golang.org/x/tools/internal/lsp/source.execAll&#34;,&#34;\tC:/Users/koron/go/src/golang.org/x/tools/internal/lsp/source/analysis.go:138 +0x61&#34;,&#34;&#34;]]</code></pre>
                 </div>
               </div>
             </div>
@@ -2428,19 +2428,19 @@ index 2bf79f79..60bd9dcf 100644
 --- a/internal/lsp/cmd/serve.go
 +++ b/internal/lsp/cmd/serve.go
 @@ -12,6 +12,8 @@ import (
- 	"io"
- 	"log"
- 	"net"
-+	"net/http"
-+	_ "net/http/pprof"
- 	"os"
- 	"path/filepath"
- 	"strings"
+ 	&#34;io&#34;
+ 	&#34;log&#34;
+ 	&#34;net&#34;
++	&#34;net/http&#34;
++	_ &#34;net/http/pprof&#34;
+ 	&#34;os&#34;
+ 	&#34;path/filepath&#34;
+ 	&#34;strings&#34;
 @@ -30,6 +32,8 @@ type Serve struct {
- 	Port    int    `flag:"port" help:"port on which to run gopls for debugging purposes"`
- 	Address string `flag:"listen" help:"address on which to listen for remote connections"`
+ 	Port    int    `flag:&#34;port&#34; help:&#34;port on which to run gopls for debugging purposes&#34;`
+ 	Address string `flag:&#34;listen&#34; help:&#34;address on which to listen for remote connections&#34;`
  
-+	PprofServer string `flag:"pprof.server" help:"address to enable pprof server"`
++	PprofServer string `flag:&#34;pprof.server&#34; help:&#34;address to enable pprof server&#34;`
 +
  	app *Application
  }
@@ -2449,12 +2449,12 @@ index 2bf79f79..60bd9dcf 100644
  		log.SetOutput(io.MultiWriter(os.Stderr, f))
  		out = f
  	}
-+	if s.PprofServer != "" {
++	if s.PprofServer != &#34;&#34; {
 +		go func() {
 +			log.Println(http.ListenAndServe(s.PprofServer, nil))
 +		}()
 +	}
- 	if s.app.Remote != "" {
+ 	if s.app.Remote != &#34;&#34; {
  		return s.forward()
  	}</code></pre>
                 </div>
@@ -2991,7 +2991,7 @@ index 99a8fd9f..302b6994 100644
 +	runAnalyses(NewAnalysisCache(), pkg, func(a *analysis.Analyzer, diag analysis.Diagnostic) {
  		pos := pkg.Fset.Position(diag.Pos)
  		category := a.Name
- 		if diag.Category != "" {</code></pre>
+ 		if diag.Category != &#34;&#34; {</code></pre>
                 </div>
               </div>
             </div>
@@ -3343,13 +3343,13 @@ index d75c6916..9deba82b 100644
 --- a/internal/lsp/cache/file.go
 +++ b/internal/lsp/cache/file.go
 @@ -8,6 +8,7 @@ import (
- 	"go/ast"
- 	"go/token"
- 	"io/ioutil"
-+	"sync"
+ 	&#34;go/ast&#34;
+ 	&#34;go/token&#34;
+ 	&#34;io/ioutil&#34;
++	&#34;sync&#34;
  
- 	"golang.org/x/tools/go/packages"
- 	"golang.org/x/tools/internal/lsp/source"
+ 	&#34;golang.org/x/tools/go/packages&#34;
+ 	&#34;golang.org/x/tools/internal/lsp/source&#34;
 @@ -22,13 +23,14 @@ type File struct {
  	ast     *ast.File
  	token   *token.File
@@ -11105,7 +11105,7 @@ index 8c719ead..895a7cb8 100644
 +		}
 +		parsedPkg[pkg.PkgPath] = struct{}{}
  		// TODO(rstambler): Get real TypeSizes from go/packages (golang.org/issues/30139).
- 		pkg.TypesSizes = &types.StdSizes{}
+ 		pkg.TypesSizes = &amp;types.StdSizes{}
  </code></pre>
                 </div>
               </div>
@@ -12114,7 +12114,7 @@ index 988b8ba8..1d5ce1a8 100644
 @@ -159,7 +159,7 @@ func (v *View) parse(uri source.URI) error {
  			go imp.Import(importPath)
  		}
- 		log.Printf("parse->importPackage: %s", pkg.PkgPath)
+ 		log.Printf(&#34;parse-&gt;importPackage: %s&#34;, pkg.PkgPath)
 -		imp.importPackage(pkg.PkgPath)
 +		imp.importPackage(pkg.PkgPath, true)
  
@@ -12133,13 +12133,13 @@ index 988b8ba8..1d5ce1a8 100644
  
 -func (imp *importer) importPackage(pkgPath string) (*types.Package, error) {
 +func (imp *importer) importPackage(pkgPath string, checkBody bool) (*types.Package, error) {
- 	log.Printf("importPackage: BEGIN %s", pkgPath)
+ 	log.Printf(&#34;importPackage: BEGIN %s&#34;, pkgPath)
  	imp.mu.Lock()
  	pkg, ok := imp.packages[pkgPath]
 @@ -261,6 +261,7 @@ func (imp *importer) importPackage(pkgPath string) (*types.Package, error) {
  	}
  	pkg.Syntax = files
- 	cfg := &types.Config{
+ 	cfg := &amp;types.Config{
 +		IgnoreFuncBodies: !checkBody,
  		Error:            appendError,
  		Importer:         imp,

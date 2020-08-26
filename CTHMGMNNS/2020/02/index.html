@@ -2879,38 +2879,38 @@
 *  subject: C=US; ST=California; L=Mountain View; O=Google LLC; CN=www.google.com
 *  start date: Jan 14 09:35:57 2020 GMT
 *  expire date: Apr  7 09:35:57 2020 GMT
-*  subjectAltName: host "www.google.com" matched cert's "www.google.com"
+*  subjectAltName: host &#34;www.google.com&#34; matched cert&#39;s &#34;www.google.com&#34;
 *  issuer: C=US; O=Google Trust Services; CN=GTS CA 1O1
 *  SSL certificate verify ok.
 * Using HTTP2, server supports multi-use
 * Connection state changed (HTTP/2 confirmed)
 * Copying HTTP/2 data in stream buffer to connection buffer after upgrade: len=0
 * Using Stream ID: 1 (easy handle 0x5575eadd81d0)
-> GET / HTTP/2
-> Host: www.google.com
-> User-Agent: curl/7.65.3
-> Accept: */*
-> 
+&gt; GET / HTTP/2
+&gt; Host: www.google.com
+&gt; User-Agent: curl/7.65.3
+&gt; Accept: */*
+&gt; 
 * TLSv1.3 (IN), TLS handshake, Newsession Ticket (4):
 * TLSv1.3 (IN), TLS handshake, Newsession Ticket (4):
 * old SSL session ID is stale, removing
 * Connection state changed (MAX_CONCURRENT_STREAMS == 100)!
-< HTTP/2 200 
-< date: Mon, 03 Feb 2020 09:12:42 GMT
-< expires: -1
-< cache-control: private, max-age=0
-< content-type: text/html; charset=ISO-8859-1
-< p3p: CP="This is not a P3P policy! See g.co/p3phelp for more info."
-< server: gws
-< x-xss-protection: 0
-< x-frame-options: SAMEORIGIN
-< set-cookie: 1P_JAR=2020-02-03-09; expires=Wed, 04-Mar-2020 09:12:42 GMT; path=/; domain=.google.com; Secure
-< set-cookie: NID=197=UlulQ6rZn0DvGZ8xyvwW6ftDXw4NUXlxJlwYqpR3MAGDpaLaTr-eWEmsyj8gH_0NBN8u8ogbJOJ5QB6UegEc_QvFMQfTR4sfiR-TuV0r9oRNoH9xzhidBsJIOVWgcpqey-Hh6U4592NmxhTvMn6_tHMhNMDVc4UVh4kDFRxj3-8; expires=Tue, 04-Au
+&lt; HTTP/2 200 
+&lt; date: Mon, 03 Feb 2020 09:12:42 GMT
+&lt; expires: -1
+&lt; cache-control: private, max-age=0
+&lt; content-type: text/html; charset=ISO-8859-1
+&lt; p3p: CP=&#34;This is not a P3P policy! See g.co/p3phelp for more info.&#34;
+&lt; server: gws
+&lt; x-xss-protection: 0
+&lt; x-frame-options: SAMEORIGIN
+&lt; set-cookie: 1P_JAR=2020-02-03-09; expires=Wed, 04-Mar-2020 09:12:42 GMT; path=/; domain=.google.com; Secure
+&lt; set-cookie: NID=197=UlulQ6rZn0DvGZ8xyvwW6ftDXw4NUXlxJlwYqpR3MAGDpaLaTr-eWEmsyj8gH_0NBN8u8ogbJOJ5QB6UegEc_QvFMQfTR4sfiR-TuV0r9oRNoH9xzhidBsJIOVWgcpqey-Hh6U4592NmxhTvMn6_tHMhNMDVc4UVh4kDFRxj3-8; expires=Tue, 04-Au
 g-2020 09:12:42 GMT; path=/; domain=.google.com; HttpOnly
-< alt-svc: quic=":443"; ma=2592000; v="46,43",h3-Q050=":443"; ma=2592000,h3-Q049=":443"; ma=2592000,h3-Q048=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443"; ma=2592000
-< accept-ranges: none
-< vary: Accept-Encoding
-< </code></pre>
+&lt; alt-svc: quic=&#34;:443&#34;; ma=2592000; v=&#34;46,43&#34;,h3-Q050=&#34;:443&#34;; ma=2592000,h3-Q049=&#34;:443&#34;; ma=2592000,h3-Q048=&#34;:443&#34;; ma=2592000,h3-Q046=&#34;:443&#34;; ma=2592000,h3-Q043=&#34;:443&#34;; ma=2592000
+&lt; accept-ranges: none
+&lt; vary: Accept-Encoding
+&lt; </code></pre>
                 </div>
               </div>
             </div>
@@ -3550,28 +3550,28 @@ g-2020 09:12:42 GMT; path=/; domain=.google.com; HttpOnly
 *  subject: CN=www.kaoriya.net
 *  start date: Jan  6 15:08:39 2020 GMT
 *  expire date: Apr  5 15:08:39 2020 GMT
-*  subjectAltName: host "www.kaoriya.net" matched cert's "www.kaoriya.net"
-*  issuer: C=US; O=Let's Encrypt; CN=Let's Encrypt Authority X3
+*  subjectAltName: host &#34;www.kaoriya.net&#34; matched cert&#39;s &#34;www.kaoriya.net&#34;
+*  issuer: C=US; O=Let&#39;s Encrypt; CN=Let&#39;s Encrypt Authority X3
 *  SSL certificate verify ok.
-> GET / HTTP/1.1
-> Host: www.kaoriya.net
-> User-Agent: curl/7.65.3
-> Accept: */*
->
+&gt; GET / HTTP/1.1
+&gt; Host: www.kaoriya.net
+&gt; User-Agent: curl/7.65.3
+&gt; Accept: */*
+&gt;
 * TLSv1.3 (IN), TLS handshake, Newsession Ticket (4):
 * TLSv1.3 (IN), TLS handshake, Newsession Ticket (4):
 * old SSL session ID is stale, removing
 * Mark bundle as not supporting multiuse
-< HTTP/1.1 200 OK
-< Server: nginx/1.16.1
-< Date: Mon, 03 Feb 2020 09:25:59 GMT
-< Content-Type: text/html
-< Content-Length: 5643
-< Last-Modified: Mon, 20 Jan 2020 14:38:09 GMT
-< Connection: keep-alive
-< ETag: "5e25bb51-160b"
-< Strict-Transport-Security: max-age=31536000
-< Accept-Ranges: bytes
+&lt; HTTP/1.1 200 OK
+&lt; Server: nginx/1.16.1
+&lt; Date: Mon, 03 Feb 2020 09:25:59 GMT
+&lt; Content-Type: text/html
+&lt; Content-Length: 5643
+&lt; Last-Modified: Mon, 20 Jan 2020 14:38:09 GMT
+&lt; Connection: keep-alive
+&lt; ETag: &#34;5e25bb51-160b&#34;
+&lt; Strict-Transport-Security: max-age=31536000
+&lt; Accept-Ranges: bytes
 </code></pre>
                 </div>
               </div>

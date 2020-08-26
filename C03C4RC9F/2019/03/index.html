@@ -51598,36 +51598,36 @@
                   </a>
                   <pre><code class='language-none'>set encoding=utf-8
 
-let g:python3_host_prog = expand('~\AppData\Local\Programs\Python\Python36\python.exe')
+let g:python3_host_prog = expand(&#39;~\AppData\Local\Programs\Python\Python36\python.exe&#39;)
 
-if &compatible
+if &amp;compatible
     set nocompatible
 endif
 set runtimepath+=~/vimfiles/dein/repos/github.com/Shougo/dein.vim
 
-if dein#load_state(expand('~/vimfiles/dein/repos/github.com/Shougo/dein.vim'))
-call dein#begin(expand('~/vimfiles/dein'))
-call dein#add(expand('~/vimfiles/dein/repos/github.com/Shougo/dein.vim'))
+if dein#load_state(expand(&#39;~/vimfiles/dein/repos/github.com/Shougo/dein.vim&#39;))
+call dein#begin(expand(&#39;~/vimfiles/dein&#39;))
+call dein#add(expand(&#39;~/vimfiles/dein/repos/github.com/Shougo/dein.vim&#39;))
 
-call dein#add('Shougo/defx.nvim')
-if !has('nvim')
-call dein#add('roxma/nvim-yarp')
-call dein#add('roxma/vim-hug-neovim-rpc')
+call dein#add(&#39;Shougo/defx.nvim&#39;)
+if !has(&#39;nvim&#39;)
+call dein#add(&#39;roxma/nvim-yarp&#39;)
+call dein#add(&#39;roxma/vim-hug-neovim-rpc&#39;)
 endif
 autocmd FileType defx call s:defx_my_settings()
 
 function! s:defx_my_settings() abort
-" Define mappings
-nnoremap <silent><buffer><expr> <CR>
-\ defx#do_action('drop')
-nnoremap <silent><buffer><expr> l 
+&#34; Define mappings
+nnoremap &lt;silent&gt;&lt;buffer&gt;&lt;expr&gt; &lt;CR&gt;
+\ defx#do_action(&#39;drop&#39;)
+nnoremap &lt;silent&gt;&lt;buffer&gt;&lt;expr&gt; l 
 \ defx#is_directory() ?
-\ defx#do_action('open') :
-\ defx#do_action('drop')
-nnoremap <silent><buffer><expr> N
-\ defx#do_action('new_file')
-nnoremap <silent><buffer><expr> q
-\ defx#do_action('quit')
+\ defx#do_action(&#39;open&#39;) :
+\ defx#do_action(&#39;drop&#39;)
+nnoremap &lt;silent&gt;&lt;buffer&gt;&lt;expr&gt; N
+\ defx#do_action(&#39;new_file&#39;)
+nnoremap &lt;silent&gt;&lt;buffer&gt;&lt;expr&gt; q
+\ defx#do_action(&#39;quit&#39;)
 
 endfunction
 call dein#end()
@@ -51864,7 +51864,7 @@ syntax enable</code></pre>
                   </a>
                   <pre><code class='language-none'>For Vim 8:
   roxma/vim-hug-neovim-rpc
-  g:python3_host_prog pointed to your python3 executable, or echo exepath('python3') is not empty.
+  g:python3_host_prog pointed to your python3 executable, or echo exepath(&#39;python3&#39;) is not empty.
   pynvim (pip3 install pynvim)</code></pre>
                 </div>
               </div>

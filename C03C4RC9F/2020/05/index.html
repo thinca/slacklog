@@ -69946,7 +69946,7 @@
                   <span class="f5">[[ダウンロード: code.c(C)]]</span>
                   </a>
                   <pre><code class='language-c'>#ifdef FEAT_PROP_POPUP
-# define WIN_IS_POPUP(wp)             ((wp)->w_popup_flags != 0)
+# define WIN_IS_POPUP(wp)             ((wp)-&gt;w_popup_flags != 0)
 # define ERROR_IF_POPUP_WINDOW()      error_if_popup_window(FALSE)
 # define ERROR_IF_ANY_POPUP_WINDOW()  error_if_popup_window(TRUE)
 #else
@@ -69954,13 +69954,13 @@
 # define ERROR_IF_POPUP_WINDOW()      (void)0
 # define ERROR_IF_ANY_POPUP_WINDOW()  (void)0
 #endif
-#if defined(FEAT_PROP_POPUP) && defined(FEAT_TERMINAL)
+#if defined(FEAT_PROP_POPUP) &amp;&amp; defined(FEAT_TERMINAL)
 # define ERROR_IF_TERM_POPUP_WINDOW() error_if_term_popup_window()
 #else
 # define ERROR_IF_TERM_POPUP_WINDOW() (void)0
 #endif
 
-if (eap->cmdidx != CMD_pedit && ERROR_IF_POPUP_WINDOW()){
+if (eap-&gt;cmdidx != CMD_pedit &amp;&amp; ERROR_IF_POPUP_WINDOW()){
   ERROR_IF_TERM_POPUP_WINDOW();
   return;
 }
@@ -85854,16 +85854,16 @@ e4d4ce8 HEAD@{28}: reset: moving to HEAD^
                   <a href="/slacklog/files/F014HS5LNAH/~_.config_fontconfig_fonts.conf" target="_blank" rel="noopener noreferrer">
                   <span class="f5">[[ダウンロード: ~/.config/fontconfig/fonts.conf(XML)]]</span>
                   </a>
-                  <pre><code class='language-xml'><?xml version="1.0"?>
-<!DOCTYPE fontconfig SYSTEM "fonts.dtd">
-<fontconfig>
-    <alias>
-        <family>monospace</family>
-        <prefer>
-            <family>Cica</family>
-        </prefer>
-    </alias>
-</fontconfig>
+                  <pre><code class='language-xml'>&lt;?xml version=&#34;1.0&#34;?&gt;
+&lt;!DOCTYPE fontconfig SYSTEM &#34;fonts.dtd&#34;&gt;
+&lt;fontconfig&gt;
+    &lt;alias&gt;
+        &lt;family&gt;monospace&lt;/family&gt;
+        &lt;prefer&gt;
+            &lt;family&gt;Cica&lt;/family&gt;
+        &lt;/prefer&gt;
+    &lt;/alias&gt;
+&lt;/fontconfig&gt;
 </code></pre>
                 </div>
               </div>

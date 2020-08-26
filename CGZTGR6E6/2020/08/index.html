@@ -1389,59 +1389,59 @@ index 1f63046..295c9be 100644
 --- a/package.json
 +++ b/package.json
 @@ -23,8 +23,11 @@
-     "proxyquire": "^2.1.3",
-     "source-map-support": "^0.5.19",
-     "temp": "^0.9.1",
-+    "ts-loader": "^8.0.2",
-     "ts-node": "^8.10.2",
--    "typescript": "^3.9.7"
-+    "typescript": "^3.9.7",
-+    "webpack": "^4.44.1",
-+    "webpack-cli": "^3.3.12"
+     &#34;proxyquire&#34;: &#34;^2.1.3&#34;,
+     &#34;source-map-support&#34;: &#34;^0.5.19&#34;,
+     &#34;temp&#34;: &#34;^0.9.1&#34;,
++    &#34;ts-loader&#34;: &#34;^8.0.2&#34;,
+     &#34;ts-node&#34;: &#34;^8.10.2&#34;,
+-    &#34;typescript&#34;: &#34;^3.9.7&#34;
++    &#34;typescript&#34;: &#34;^3.9.7&#34;,
++    &#34;webpack&#34;: &#34;^4.44.1&#34;,
++    &#34;webpack-cli&#34;: &#34;^3.3.12&#34;
    },
-   "engines": {
-     "node": ">=12.10.0"
+   &#34;engines&#34;: {
+     &#34;node&#34;: &#34;&gt;=12.10.0&#34;
 @@ -45,7 +48,7 @@
-     "url": "https://github.com/thinca/node-vimhelp.git"
+     &#34;url&#34;: &#34;https://github.com/thinca/node-vimhelp.git&#34;
    },
-   "scripts": {
--    "build": "tsc",
-+    "build": "webpack",
-     "clean": "rm -fr coverage lib",
-     "lint": "eslint src test",
-     "test": "nyc --reporter=lcovonly --reporter=text mocha",
+   &#34;scripts&#34;: {
+-    &#34;build&#34;: &#34;tsc&#34;,
++    &#34;build&#34;: &#34;webpack&#34;,
+     &#34;clean&#34;: &#34;rm -fr coverage lib&#34;,
+     &#34;lint&#34;: &#34;eslint src test&#34;,
+     &#34;test&#34;: &#34;nyc --reporter=lcovonly --reporter=text mocha&#34;,
 diff --git a/webpack.config.js b/webpack.config.js
 new file mode 100644
 index 0000000..8601d4b
 --- /dev/null
 +++ b/webpack.config.js
 @@ -0,0 +1,41 @@
-+const path = require("path")
++const path = require(&#34;path&#34;)
 +
 +module.exports = {
-+  target: "node",
-+  mode: "none",
++  target: &#34;node&#34;,
++  mode: &#34;none&#34;,
 +  resolve: {
-+    mainFields: ["module", "main"],
-+    extensions: [".js", ".ts"],
++    mainFields: [&#34;module&#34;, &#34;main&#34;],
++    extensions: [&#34;.js&#34;, &#34;.ts&#34;],
 +    alias: {
-+      "@": path.resolve(__dirname, "src"),
++      &#34;@&#34;: path.resolve(__dirname, &#34;src&#34;),
 +    },
 +  },
-+  entry: "./src/index.ts",
++  entry: &#34;./src/index.ts&#34;,
 +  output: {
-+    path: path.join(__dirname, "lib"),
-+    filename: "index.js",
-+    libraryTarget: "commonjs",
++    path: path.join(__dirname, &#34;lib&#34;),
++    filename: &#34;index.js&#34;,
++    libraryTarget: &#34;commonjs&#34;,
 +  },
 +  module: {
 +    rules: [
 +      {
 +        test: /\.ts$/,
-+        include: [path.resolve(__dirname, "src")],
++        include: [path.resolve(__dirname, &#34;src&#34;)],
 +        use: [
 +          {
-+            loader: "ts-loader",
++            loader: &#34;ts-loader&#34;,
 +            options: {
 +              compilerOptions: {
 +                sourceMap: true,
@@ -1641,49 +1641,49 @@ index 0000000..8601d4b
                   <a href="/slacklog/files/F017U5S7DTR/%E7%84%A1%E9%A1%8C.js" target="_blank" rel="noopener noreferrer">
                   <span class="f5">[[ダウンロード: 無題(JavaScript/JSON)]]</span>
                   </a>
-                  <pre><code class='language-javascript'>Object.defineProperty(exports, "VimHelp", { enumerable: true, get: function () { return vimhelp_1.VimHelp; } });
+                  <pre><code class='language-javascript'>Object.defineProperty(exports, &#34;VimHelp&#34;, { enumerable: true, get: function () { return vimhelp_1.VimHelp; } });
 var plugin_manager_1 = __webpack_require__(4);
-Object.defineProperty(exports, "PluginManager", { enumerable: true, get: function () { return plugin_manager_1.PluginManager; } });
+Object.defineProperty(exports, &#34;PluginManager&#34;, { enumerable: true, get: function () { return plugin_manager_1.PluginManager; } });
 
 
 /***/ }),
 /* 1 */
 /***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
+&#34;use strict&#34;;
 
-Object.defineProperty(exports, "__esModule", { value: true });
+Object.defineProperty(exports, &#34;__esModule&#34;, { value: true });
 exports.VimHelp = void 0;
 const exec_vim_1 = __webpack_require__(2);
 class VimHelp {
-    constructor(vimBin = "vim") {
+    constructor(vimBin = &#34;vim&#34;) {
         this.vimBin = vimBin;
         this.vimBin = vimBin;
         this.helplang = [];
     }
     search(word) {
         var _a;
-        const safeWord = word.replace(/\|/g, "bar");
+        const safeWord = word.replace(/\|/g, &#34;bar&#34;);
         const commands = [
             `verbose silent help ${safeWord}`,
             [
-                "?\\%(^\\s*$\\|[^*]$\\)?",
-                "/\\*\\S\\+\\*/",
-                ";",
-                "/^*\\|[^*]$/",
-                "-1",
-                "/^\\s*\\*\\S\\+\\*\\|\\*\\S\\+\\*\\s*\\%(>\\)\\=$/",
-                "?^[^=-].*[^=-]$?",
-                "print"
-            ].join("")
+                &#34;?\\%(^\\s*$\\|[^*]$\\)?&#34;,
+                &#34;/\\*\\S\\+\\*/&#34;,
+                &#34;;&#34;,
+                &#34;/^*\\|[^*]$/&#34;,
+                &#34;-1&#34;,
+                &#34;/^\\s*\\*\\S\\+\\*\\|\\*\\S\\+\\*\\s*\\%(&gt;\\)\\=$/&#34;,
+                &#34;?^[^=-].*[^=-]$?&#34;,
+                &#34;print&#34;
+            ].join(&#34;&#34;)
         ];
         const runtimepaths = ((_a = this.rtpProvider) === null || _a === void 0 ? void 0 : _a.call(this)) || [];
-        const preCommands = runtimepaths.map((rtp) => `set runtimepath+=${rtp.replace(/[\\, ]/, "\\\0")}`);
-        preCommands.push(`set helplang=${this.helplang.join(",")}`);
+        const preCommands = runtimepaths.map((rtp) =&gt; `set runtimepath+=${rtp.replace(/[\\, ]/, &#34;\\\0&#34;)}`);
+        preCommands.push(`set helplang=${this.helplang.join(&#34;,&#34;)}`);
         return this._execVim(preCommands.concat(commands));
     }
     _execVim(commands) {
-        return exec_vim_1.execVim(this.vimBin, [...commands, "qall!"]);
+        return exec_vim_1.execVim(this.vimBin, [...commands, &#34;qall!&#34;]);
     }
     setRTPProvider(provider) {
         this.rtpProvider = provider;

@@ -131,13 +131,13 @@
                   <span class="f5">[[ダウンロード: 無題(Plain Text)]]</span>
                   </a>
                   <pre><code class='language-none'>function! Complete(...) abort
-  call call(function("complete"), a:000)
-  return ""
+  call call(function(&#34;complete&#34;), a:000)
+  return &#34;&#34;
 endfunction
 
 set completeopt=menuone,noinsert
-inoremap a <C-r>=Complete(col('.'), [])<CR>
-inoremap b <C-r>=Complete(col('.'), ['hoge','piyo'])<CR></code></pre>
+inoremap a &lt;C-r&gt;=Complete(col(&#39;.&#39;), [])&lt;CR&gt;
+inoremap b &lt;C-r&gt;=Complete(col(&#39;.&#39;), [&#39;hoge&#39;,&#39;piyo&#39;])&lt;CR&gt;</code></pre>
                 </div>
               </div>
             </div>

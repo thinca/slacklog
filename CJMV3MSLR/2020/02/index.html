@@ -7437,18 +7437,18 @@
                   <a href="/slacklog/files/FTH6K8WSG/%E7%84%A1%E9%A1%8C.txt" target="_blank" rel="noopener noreferrer">
                   <span class="f5">[[ダウンロード: 無題(Plain Text)]]</span>
                   </a>
-                  <pre><code class='language-none'>call plug#begin('~/.vim/plugged')
+                  <pre><code class='language-none'>call plug#begin(&#39;~/.vim/plugged&#39;)
 
-Plug 'Shougo/denite.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'editorconfig/editorconfig-vim'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-Plug 'prabirshrestha/async.vim'
-Plug 'prabirshrestha/asyncomplete.vim'
-Plug 'prabirshrestha/asyncomplete-lsp.vim'
-Plug 'prabirshrestha/vim-lsp'
-Plug 'mattn/vim-lsp-settings'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug &#39;Shougo/denite.nvim&#39;, { &#39;do&#39;: &#39;:UpdateRemotePlugins&#39; }
+Plug &#39;editorconfig/editorconfig-vim&#39;
+Plug &#39;vim-airline/vim-airline&#39;
+Plug &#39;vim-airline/vim-airline-themes&#39;
+Plug &#39;prabirshrestha/async.vim&#39;
+Plug &#39;prabirshrestha/asyncomplete.vim&#39;
+Plug &#39;prabirshrestha/asyncomplete-lsp.vim&#39;
+Plug &#39;prabirshrestha/vim-lsp&#39;
+Plug &#39;mattn/vim-lsp-settings&#39;
+Plug &#39;neoclide/coc.nvim&#39;, {&#39;branch&#39;: &#39;release&#39;}
 
 call plug#end()</code></pre>
                 </div>
@@ -20306,14 +20306,14 @@ set smartcase</code></pre>
   function! Posthook_lexima(char) abort
     call lexima#insmode#_default_posthook(a:char)
     let b:deoplete_disable_auto_complete = 0
-    return ''
+    return &#39;&#39;
   endfunction
 
   function! Set_prehook_and_posthook_lexima() abort
     let l:dict = lexima#insmode#get_rules()
     for key in keys(lexima#insmode#get_rules())
-      let l:dict[key]['prehook']  = function('Prehook_lexima')
-      let l:dict[key]['posthook'] = function('Posthook_lexima')
+      let l:dict[key][&#39;prehook&#39;]  = function(&#39;Prehook_lexima&#39;)
+      let l:dict[key][&#39;posthook&#39;] = function(&#39;Posthook_lexima&#39;)
     endfor
   endfunction
 
@@ -21413,11 +21413,11 @@ rem -- Run Vim --
 
 setlocal
 set VIM_EXE_DIR=C:\Program Files (x86)\Vim\vim82
-if exist "%VIM%\vim82\gvim.exe" set VIM_EXE_DIR=%VIM%\vim82
-if exist "%VIMRUNTIME%\gvim.exe" set VIM_EXE_DIR=%VIMRUNTIME%
+if exist &#34;%VIM%\vim82\gvim.exe&#34; set VIM_EXE_DIR=%VIM%\vim82
+if exist &#34;%VIMRUNTIME%\gvim.exe&#34; set VIM_EXE_DIR=%VIMRUNTIME%
 
-if exist "%VIM_EXE_DIR%\gvim.exe" goto havevim
-echo "%VIM_EXE_DIR%\gvim.exe" not found
+if exist &#34;%VIM_EXE_DIR%\gvim.exe&#34; goto havevim
+echo &#34;%VIM_EXE_DIR%\gvim.exe&#34; not found
 goto eof
 
 :havevim
@@ -21440,21 +21440,21 @@ goto loopstart
 if .%OS%==.Windows_NT goto ntaction
 
 if .%VIMNOFORK%==.1 goto nofork
-start "%VIM_EXE_DIR%\gvim.exe"  %VIMARGS%
+start &#34;%VIM_EXE_DIR%\gvim.exe&#34;  %VIMARGS%
 goto eof
 
 :nofork
-start /w "%VIM_EXE_DIR%\gvim.exe"  %VIMARGS%
+start /w &#34;%VIM_EXE_DIR%\gvim.exe&#34;  %VIMARGS%
 goto eof
 
 :ntaction
 rem for WinNT we can use %*
 if .%VIMNOFORK%==.1 goto noforknt
-start "dummy" /b "%VIM_EXE_DIR%\gvim.exe"  %*
+start &#34;dummy&#34; /b &#34;%VIM_EXE_DIR%\gvim.exe&#34;  %*
 goto eof
 
 :noforknt
-start "dummy" /b /wait "%VIM_EXE_DIR%\gvim.exe"  %*
+start &#34;dummy&#34; /b /wait &#34;%VIM_EXE_DIR%\gvim.exe&#34;  %*
 
 :eof
 set VIMARGS=
@@ -31092,13 +31092,13 @@ set VIMNOFORK=
                   <span class="f5">[[ダウンロード: 無題(Plain Text)]]</span>
                   </a>
                   <pre><code class='language-none'>function! s:binary_search(list, value, ...) abort
-  let Predicate = a:0 >= 1 ? a:1 : 's:_basic_comparator'
-  let dic = a:0 >= 2 ? a:2 : {}
+  let Predicate = a:0 &gt;= 1 ? a:1 : &#39;s:_basic_comparator&#39;
+  let dic = a:0 &gt;= 2 ? a:2 : {}
   let start = 0
   let end = len(a:list) - 1
 
   while 1
-    if start > end
+    if start &gt; end
       return -1
     endif
 
@@ -31106,9 +31106,9 @@ set VIMNOFORK=
 
     let compared = call(Predicate, [a:value, a:list[middle]], dic)
 
-    if compared < 0
+    if compared &lt; 0
       let end = middle - 1
-    elseif compared > 0
+    elseif compared &gt; 0
       let start = middle + 1
     else
       return middle
@@ -31117,12 +31117,12 @@ set VIMNOFORK=
 endfunction
 
 function! s:linear_search(list, value, ...) abort
-  let Predicate = a:0 >= 1 ? a:1 : 's:_basic_comparator'
+  let Predicate = a:0 &gt;= 1 ? a:1 : &#39;s:_basic_comparator&#39;
   let start = 0
-  let dic = a:0 >= 2 ? a:2 : {}
+  let dic = a:0 &gt;= 2 ? a:2 : {}
   let end = len(a:list) - 1
   while 1
-    if start > end
+    if start &gt; end
       return -1
     endif
     let compared = call(Predicate, [a:value, a:list[start]], dic)
@@ -31134,12 +31134,12 @@ function! s:linear_search(list, value, ...) abort
   endwhile
 endfunction
 
-def! s:ls9(list: list<any>, value: any, Cmp: any): number
+def! s:ls9(list: list&lt;any&gt;, value: any, Cmp: any): number
   let start = 0
   let dic = {}
   let end = len(list) - 1
   while 1
-    if start > end
+    if start &gt; end
       return -1
     endif
     let compared = Cmp(value, list[start])
@@ -31155,23 +31155,23 @@ enddef
 let hoge = range(100000)
 
 function! s:compare(a, b)
-  return a:a > a:b ? 1 : a:a == a:b ? 0 : -1
+  return a:a &gt; a:b ? 1 : a:a == a:b ? 0 : -1
 endfunction
 
 def! s:compare9(a: number, b: number):number
-  return a > b ? 1 : a == b ? 0 : -1
+  return a &gt; b ? 1 : a == b ? 0 : -1
 enddef
 
 let t = reltime()
-let a = s:binary_search(hoge, 10000, "s:compare9")
+let a = s:binary_search(hoge, 10000, &#34;s:compare9&#34;)
 echo reltimestr(reltime(t))
 
 let t = reltime()
-let a = s:linear_search(hoge, 10000, "s:compare9")
+let a = s:linear_search(hoge, 10000, &#34;s:compare9&#34;)
 echo reltimestr(reltime(t))
 
 let t = reltime()
-let a = s:ls9(hoge, 10000, funcref("s:compare9"))
+let a = s:ls9(hoge, 10000, funcref(&#34;s:compare9&#34;))
 echo reltimestr(reltime(t))</code></pre>
                 </div>
               </div>
@@ -31366,13 +31366,13 @@ echo reltimestr(reltime(t))</code></pre>
                   <span class="f5">[[ダウンロード: 無題(Plain Text)]]</span>
                   </a>
                   <pre><code class='language-none'>function! s:binary_search(list, value, ...) abort
-  let Predicate = a:0 >= 1 ? a:1 : 's:_basic_comparator'
-  let dic = a:0 >= 2 ? a:2 : {}
+  let Predicate = a:0 &gt;= 1 ? a:1 : &#39;s:_basic_comparator&#39;
+  let dic = a:0 &gt;= 2 ? a:2 : {}
   let start = 0
   let end = len(a:list) - 1
 
   while 1
-    if start > end
+    if start &gt; end
       return -1
     endif
 
@@ -31380,9 +31380,9 @@ echo reltimestr(reltime(t))</code></pre>
 
     let compared = call(Predicate, [a:value, a:list[middle]], dic)
 
-    if compared < 0
+    if compared &lt; 0
       let end = middle - 1
-    elseif compared > 0
+    elseif compared &gt; 0
       let start = middle + 1
     else
       return middle
@@ -31390,12 +31390,12 @@ echo reltimestr(reltime(t))</code></pre>
   endwhile
 endfunction
 
-def! s:bs9(list: list<any>, value: any, Cmp: any): number
+def! s:bs9(list: list&lt;any&gt;, value: any, Cmp: any): number
   let start = 0
   let end = len(list) - 1
 
   while 1
-    if start > end
+    if start &gt; end
       return -1
     endif
 
@@ -31403,9 +31403,9 @@ def! s:bs9(list: list<any>, value: any, Cmp: any): number
 
     let compared = Cmp(value, list[middle])
 
-    if compared < 0
+    if compared &lt; 0
       end = middle - 1
-    elseif compared > 0
+    elseif compared &gt; 0
       start = middle + 1
     else
       return middle
@@ -31415,12 +31415,12 @@ def! s:bs9(list: list<any>, value: any, Cmp: any): number
 enddef
 
 function! s:linear_search(list, value, ...) abort
-  let Predicate = a:0 >= 1 ? a:1 : 's:_basic_comparator'
+  let Predicate = a:0 &gt;= 1 ? a:1 : &#39;s:_basic_comparator&#39;
   let start = 0
-  let dic = a:0 >= 2 ? a:2 : {}
+  let dic = a:0 &gt;= 2 ? a:2 : {}
   let end = len(a:list) - 1
   while 1
-    if start > end
+    if start &gt; end
       return -1
     endif
     let compared = call(Predicate, [a:value, a:list[start]], dic)
@@ -31432,12 +31432,12 @@ function! s:linear_search(list, value, ...) abort
   endwhile
 endfunction
 
-def! s:ls9(list: list<any>, value: any, Cmp: any): number
+def! s:ls9(list: list&lt;any&gt;, value: any, Cmp: any): number
   let start = 0
   let dic = {}
   let end = len(list) - 1
   while 1
-    if start > end
+    if start &gt; end
       return -1
     endif
     let compared = Cmp(value, list[start])
@@ -31453,27 +31453,27 @@ enddef
 let hoge = range(1000000)
 
 function! s:compare(a, b)
-  return a:a > a:b ? 1 : a:a == a:b ? 0 : -1
+  return a:a &gt; a:b ? 1 : a:a == a:b ? 0 : -1
 endfunction
 
 def! s:compare9(a: number, b: number):number
-  return a > b ? 1 : a == b ? 0 : -1
+  return a &gt; b ? 1 : a == b ? 0 : -1
 enddef
 
 let t = reltime()
-let a = s:binary_search(hoge, 100000, "s:compare9")
+let a = s:binary_search(hoge, 100000, &#34;s:compare9&#34;)
 echo reltimestr(reltime(t))
 
 let t = reltime()
-let a = s:linear_search(hoge, 100000, "s:compare9")
+let a = s:linear_search(hoge, 100000, &#34;s:compare9&#34;)
 echo reltimestr(reltime(t))
 
 let t = reltime()
-let a = s:ls9(hoge, 100000, funcref("s:compare9"))
+let a = s:ls9(hoge, 100000, funcref(&#34;s:compare9&#34;))
 echo reltimestr(reltime(t))
 
 let t = reltime()
-let a = s:bs9(hoge, 100000, funcref("s:compare9"))
+let a = s:bs9(hoge, 100000, funcref(&#34;s:compare9&#34;))
 echo reltimestr(reltime(t))</code></pre>
                 </div>
               </div>
@@ -35856,71 +35856,71 @@ echo reltimestr(reltime(t))</code></pre>
                   <a href="/slacklog/files/FTXL5MX1R/Untitled.txt" target="_blank" rel="noopener noreferrer">
                   <span class="f5">[[ダウンロード: Untitled(Plain Text)]]</span>
                   </a>
-                  <pre><code class='language-none'>" 一旦ファイルタイプ関連を無効化する
+                  <pre><code class='language-none'>&#34; 一旦ファイルタイプ関連を無効化する
 filetype off
 
-" <leader>キー
-let mapleader = ","
+&#34; &lt;leader&gt;キー
+let mapleader = &#34;,&#34;
 
-" dein scripts
-if &compatible
+&#34; dein scripts
+if &amp;compatible
   set nocompatible
 endif
 
 set runtimepath+=$HOME/.cache/dein/repos/github.com/Shougo/dein.vim
 
-if dein#load_state("$HOME/.cache/dein")
-  call dein#begin("$HOME/.cache/dein")
+if dein#load_state(&#34;$HOME/.cache/dein&#34;)
+  call dein#begin(&#34;$HOME/.cache/dein&#34;)
 
-  call dein#add("$HOME/.cache/dein/repos/github.com/Shougo/dein.vim")
-  call dein#add('Shougo/deoplete.nvim')
-  if !has('nvim')
-    call dein#add('roxma/nvim-yarp')
-    call dein#add('roxma/vim-hug-neovim-rpc')
+  call dein#add(&#34;$HOME/.cache/dein/repos/github.com/Shougo/dein.vim&#34;)
+  call dein#add(&#39;Shougo/deoplete.nvim&#39;)
+  if !has(&#39;nvim&#39;)
+    call dein#add(&#39;roxma/nvim-yarp&#39;)
+    call dein#add(&#39;roxma/vim-hug-neovim-rpc&#39;)
   endif
 
-  call dein#add('Shougo/vimproc.vim', {
-        \ 'build': {
-        \     'cygwim'  : 'make -f make_cygwin.mak',
-        \     'mac'     : 'make -f make_mac.mak',
-        \     'linux'   : 'make',
-        \     'unix'    : 'gmake',
+  call dein#add(&#39;Shougo/vimproc.vim&#39;, {
+        \ &#39;build&#39;: {
+        \     &#39;cygwim&#39;  : &#39;make -f make_cygwin.mak&#39;,
+        \     &#39;mac&#39;     : &#39;make -f make_mac.mak&#39;,
+        \     &#39;linux&#39;   : &#39;make&#39;,
+        \     &#39;unix&#39;    : &#39;gmake&#39;,
         \   },
         \ })
 
-  " plantuml
-  call dein#add('aklt/plantuml-syntax')
-  let g:plantuml_executable_script = "~/file/plantuml.sh"
+  &#34; plantuml
+  call dein#add(&#39;aklt/plantuml-syntax&#39;)
+  let g:plantuml_executable_script = &#34;~/file/plantuml.sh&#34;
 
-  " html補完 emmet
-  call dein#add('mattn/emmet-vim')
+  &#34; html補完 emmet
+  call dein#add(&#39;mattn/emmet-vim&#39;)
 
-  " URLを開いたりググったりできる
-  " call dein#add('open-browser.vim')
-  " let g:netrw_nogx = 1 " disable netrw's gx mapping.
-  " nmap gx <Plug>(openbrowser-smart-search)
-  " vmap gx <Plug>(openbrowser-smart-search)
-  " command! OpenBrowserCurrent execute '!xdg-open' expand("%:p")
+  &#34; URLを開いたりググったりできる
+  &#34; call dein#add(&#39;open-browser.vim&#39;)
+  &#34; let g:netrw_nogx = 1 &#34; disable netrw&#39;s gx mapping.
+  &#34; nmap gx &lt;Plug&gt;(openbrowser-smart-search)
+  &#34; vmap gx &lt;Plug&gt;(openbrowser-smart-search)
+  &#34; command! OpenBrowserCurrent execute &#39;!xdg-open&#39; expand(&#34;%:p&#34;)
 
-  " html5のコードをシンタックス表示する
-  call dein#add('hail2u/vim-css3-syntax')
+  &#34; html5のコードをシンタックス表示する
+  call dein#add(&#39;hail2u/vim-css3-syntax&#39;)
 
-  " color picker
-  call dein#add('KabbAmine/vCoolor.vim')
-  let g:vcoolor_map = '<leader>c'
+  &#34; color picker
+  call dein#add(&#39;KabbAmine/vCoolor.vim&#39;)
+  let g:vcoolor_map = &#39;&lt;leader&gt;c&#39;
 
-echomsg 'インターネットください'
+echomsg &#39;インターネットください&#39;
 finish
 
-  " Ag - the silver search -
-  call dein#add('rking/ag.vim')
-  " use Ag for unite grep and ctrlpvim
-  if executable('ag')
+  &#34; Ag - the silver search -
+  call dein#add(&#39;rking/ag.vim&#39;)
+  &#34; use Ag for unite grep and ctrlpvim
+  if executable(&#39;ag&#39;)
     let g:ctrlp_use_caching=0
-    let g:ctrlp_user_command='ag %s -i --nocolor --nogroup -g ""'
-    let g:unite_source_grep_command = 'ag'
-    let g:unite_source_grep_default_opts = '--nogroup --nocolor --column'
-    let g:unite_source_grep_recursive_opt = ''
+    let g:ctrlp_user_command=&#39;ag %s -i --nocolor --nogroup -g &#34;&#34;&#39;
+    let g:unite_source_grep_command = &#39;ag&#39;
+    let g:unite_source_grep_default_opts = &#39;--nogroup --nocolor --column&#39;
+    let g:unite_source_grep_recursive_opt = &#39;&#39;
   endif
 </code></pre>
                 </div>
@@ -36226,82 +36226,82 @@ finish
                   <a href="/slacklog/files/FU94RPW00/Untitled.txt" target="_blank" rel="noopener noreferrer">
                   <span class="f5">[[ダウンロード: Untitled(Plain Text)]]</span>
                   </a>
-                  <pre><code class='language-none'>  " unite.vim
-  call dein#add('Shougo/unite.vim')
+                  <pre><code class='language-none'>  &#34; unite.vim
+  call dein#add(&#39;Shougo/unite.vim&#39;)
   let g:unite_enable_start_insert = 1
   let g:unite_enable_ignore_case = 1
   let g:unite_enable_smart_case = 1
-  " バッファ一覧
-  nnoremap <C-b> :Unite buffer<CR>
-  " ファイル一覧 なければ新規ファイル
-  noremap <C-N> :Unite file -buffer-name=file file/new<CR>
-  " 再帰的にファイル検索
-  nnoremap <leader>rec :Unite file_rec<CR>
-  " 最近使ったファイルの一覧
-  noremap <C-Z> :Unite file_mru<CR>
-  " sourcesを「今開いているファイルのディレクトリ」とする
-  noremap :uff :<C-u>UniteWithBufferDir file file/new -buffer-name=file<CR>
-  " 新規ファイル作成
+  &#34; バッファ一覧
+  nnoremap &lt;C-b&gt; :Unite buffer&lt;CR&gt;
+  &#34; ファイル一覧 なければ新規ファイル
+  noremap &lt;C-N&gt; :Unite file -buffer-name=file file/new&lt;CR&gt;
+  &#34; 再帰的にファイル検索
+  nnoremap &lt;leader&gt;rec :Unite file_rec&lt;CR&gt;
+  &#34; 最近使ったファイルの一覧
+  noremap &lt;C-Z&gt; :Unite file_mru&lt;CR&gt;
+  &#34; sourcesを「今開いているファイルのディレクトリ」とする
+  noremap :uff :&lt;C-u&gt;UniteWithBufferDir file file/new -buffer-name=file&lt;CR&gt;
+  &#34; 新規ファイル作成
   noremap :file_new :Unite -buffer-name=file file/new
-  " ウィンドウを分割して開く
-  au FileType unite nnoremap <silent> <buffer> <expr> <C-J> unite#do_action('split')
-  au FileType unite inoremap <silent> <buffer> <expr> <C-J> unite#do_action('split')
-  " ウィンドウを縦に分割して開く
-  au FileType unite nnoremap <silent> <buffer> <expr> <C-K> unite#do_action('vsplit')
-  au FileType unite inoremap <silent> <buffer> <expr> <C-K> unite#do_action('vsplit')
-  " ESCキーを2回押すと終了する
-  au FileType unite nnoremap <silent> <buffer> <ESC><ESC> :q<CR>
-  au FileType unite inoremap <silent> <buffer> <ESC><ESC> <ESC>:q<CR>
-  " grep検索 起点を変更してgrep
-  nnoremap <silent> <leader>g :<C-u>Unite grep: -buffer-name=search-buffer<CR>
-  " カーソル位置の単語をgrep検索
-  nnoremap <silent> <leader>cg :<C-u>Unite grep:. -buffer-name=search-buffer<CR><C-R><C-W>
-  " grep検索結果の再呼び出し
-  nnoremap <silent> <leader>ur :<C-u>UniteResume search-buffer<CR>
+  &#34; ウィンドウを分割して開く
+  au FileType unite nnoremap &lt;silent&gt; &lt;buffer&gt; &lt;expr&gt; &lt;C-J&gt; unite#do_action(&#39;split&#39;)
+  au FileType unite inoremap &lt;silent&gt; &lt;buffer&gt; &lt;expr&gt; &lt;C-J&gt; unite#do_action(&#39;split&#39;)
+  &#34; ウィンドウを縦に分割して開く
+  au FileType unite nnoremap &lt;silent&gt; &lt;buffer&gt; &lt;expr&gt; &lt;C-K&gt; unite#do_action(&#39;vsplit&#39;)
+  au FileType unite inoremap &lt;silent&gt; &lt;buffer&gt; &lt;expr&gt; &lt;C-K&gt; unite#do_action(&#39;vsplit&#39;)
+  &#34; ESCキーを2回押すと終了する
+  au FileType unite nnoremap &lt;silent&gt; &lt;buffer&gt; &lt;ESC&gt;&lt;ESC&gt; :q&lt;CR&gt;
+  au FileType unite inoremap &lt;silent&gt; &lt;buffer&gt; &lt;ESC&gt;&lt;ESC&gt; &lt;ESC&gt;:q&lt;CR&gt;
+  &#34; grep検索 起点を変更してgrep
+  nnoremap &lt;silent&gt; &lt;leader&gt;g :&lt;C-u&gt;Unite grep: -buffer-name=search-buffer&lt;CR&gt;
+  &#34; カーソル位置の単語をgrep検索
+  nnoremap &lt;silent&gt; &lt;leader&gt;cg :&lt;C-u&gt;Unite grep:. -buffer-name=search-buffer&lt;CR&gt;&lt;C-R&gt;&lt;C-W&gt;
+  &#34; grep検索結果の再呼び出し
+  nnoremap &lt;silent&gt; &lt;leader&gt;ur :&lt;C-u&gt;UniteResume search-buffer&lt;CR&gt;
 
-  " Unite.vimで最近使ったファイルを表示できるようにする
-  call dein#add('Shougo/neomru.vim')
+  &#34; Unite.vimで最近使ったファイルを表示できるようにする
+  call dein#add(&#39;Shougo/neomru.vim&#39;)
 
-  " denite.nvim
-  " call dein#add('Shougo/denite.nvim')
-  " if !has('nvim')
-  "   call dein#add('roxma/nvim-yarp')
-  "   call dein#add('roxma/vim-hug-neovim-rpc')
-  " endif
-  let g:python3_host_prog = '~/.asdf/shims/python'
-  " nnoremap <leader>rec :Denite file_rec<CR>
+  &#34; denite.nvim
+  &#34; call dein#add(&#39;Shougo/denite.nvim&#39;)
+  &#34; if !has(&#39;nvim&#39;)
+  &#34;   call dein#add(&#39;roxma/nvim-yarp&#39;)
+  &#34;   call dein#add(&#39;roxma/vim-hug-neovim-rpc&#39;)
+  &#34; endif
+  let g:python3_host_prog = &#39;~/.asdf/shims/python&#39;
+  &#34; nnoremap &lt;leader&gt;rec :Denite file_rec&lt;CR&gt;
 
-  " vin-devicons
-  call dein#add('ryanoasis/vim-devicons')
+  &#34; vin-devicons
+  call dein#add(&#39;ryanoasis/vim-devicons&#39;)
   let g:WebDeviconsUnicodeDecorateFolderNodes = 1
   let g:webdevicons_conceal_nerdtree_brackets = 1
-  let g:WebDevIconsNerdTreeAfterGlyphPadding = ' '
+  let g:WebDevIconsNerdTreeAfterGlyphPadding = &#39; &#39;
 
-  " ファイルをtree表示してくれる
-  call dein#add('scrooloose/nerdtree')
-  nnoremap <silent><C-e> :NERDTree<CR>
+  &#34; ファイルをtree表示してくれる
+  call dein#add(&#39;scrooloose/nerdtree&#39;)
+  nnoremap &lt;silent&gt;&lt;C-e&gt; :NERDTree&lt;CR&gt;
 
-  " vim-elixir シンタックスハイライト
-  call dein#add('elixir-editors/vim-elixir')
-  " vim-mix :Mix でコマンド実行可能
-  call dein#add('mattreduce/vim-mix')
-  " vim-extest テスト実行プラグイン
-  call dein#add('BjRo/vim-extest')
-  " elixir alchemist.vim
-  call dein#add('slashmili/alchemist.vim')
+  &#34; vim-elixir シンタックスハイライト
+  call dein#add(&#39;elixir-editors/vim-elixir&#39;)
+  &#34; vim-mix :Mix でコマンド実行可能
+  call dein#add(&#39;mattreduce/vim-mix&#39;)
+  &#34; vim-extest テスト実行プラグイン
+  call dein#add(&#39;BjRo/vim-extest&#39;)
+  &#34; elixir alchemist.vim
+  call dein#add(&#39;slashmili/alchemist.vim&#39;)
 
-  " NerdTreeのカラーリング
-  call dein#add('tiagofumo/vim-nerdtree-syntax-highlight')
-  let s:rspec_red = 'FE405F'
-  let s:git_orange = 'F54D27'
-  let g:NERDTreeExactMatchHighlightColor = {} " this line is needed to avoid error
-  let g:NERDTreeExactMatchHighlightColor['.gitignore'] = s:git_orange " sets the color for .gitignore files
-  let g:NERDTreePatternMatchHighlightColor = {} " this line is needed to avoid error
-  let g:NERDTreePatternMatchHighlightColor['.*_spec\.rb$'] = s:rspec_red " sets the color for files ending with _spec.rb
+  &#34; NerdTreeのカラーリング
+  call dein#add(&#39;tiagofumo/vim-nerdtree-syntax-highlight&#39;)
+  let s:rspec_red = &#39;FE405F&#39;
+  let s:git_orange = &#39;F54D27&#39;
+  let g:NERDTreeExactMatchHighlightColor = {} &#34; this line is needed to avoid error
+  let g:NERDTreeExactMatchHighlightColor[&#39;.gitignore&#39;] = s:git_orange &#34; sets the color for .gitignore files
+  let g:NERDTreePatternMatchHighlightColor = {} &#34; this line is needed to avoid error
+  let g:NERDTreePatternMatchHighlightColor[&#39;.*_spec\.rb$&#39;] = s:rspec_red &#34; sets the color for files ending with _spec.rb
   let g:NERDTreeLimitedSyntax = 1
 
 
-echomsg 'インターネットください'
+echomsg &#39;インターネットください&#39;
 finish
 </code></pre>
                 </div>
@@ -36378,103 +36378,103 @@ finish
                   <span class="f5">[[ダウンロード: Untitled(Plain Text)]]</span>
                   </a>
                   <pre><code class='language-none'>
-  " Rails向けのコマンドを提供する
-  " call dein#add('tpope/vim-rails')
-  " Ruby向けにendを自動挿入してくれる
-  call dein#add('tpope/vim-endwise')
+  &#34; Rails向けのコマンドを提供する
+  &#34; call dein#add(&#39;tpope/vim-rails&#39;)
+  &#34; Ruby向けにendを自動挿入してくれる
+  call dein#add(&#39;tpope/vim-endwise&#39;)
 
-  " コメントON/OFFを手軽に実行
-  call dein#add('tomtom/tcomment_vim')
+  &#34; コメントON/OFFを手軽に実行
+  call dein#add(&#39;tomtom/tcomment_vim&#39;)
 
-  " シングルクオートとダブルクオートの入れ替え等
-  call dein#add('tpope/vim-surround')
+  &#34; シングルクオートとダブルクオートの入れ替え等
+  call dein#add(&#39;tpope/vim-surround&#39;)
 
-  " vim-go
-  call dein#add('fatih/vim-go')
+  &#34; vim-go
+  call dein#add(&#39;fatih/vim-go&#39;)
   let g:go_version_warning = 0
 
-  " インデントに色を付けて見やすくする
-  call dein#add('nathanaelkane/vim-indent-guides')
-  " ログファイルを色づけしてくれる
-  call dein#add('vim-scripts/AnsiEsc.vim')
-  " 行末の半角スペースを可視化
-  call dein#add('bronson/vim-trailing-whitespace')
-  " less用のsyntaxハイライト
-  " call dein#add('KohPoll/vim-less')
+  &#34; インデントに色を付けて見やすくする
+  call dein#add(&#39;nathanaelkane/vim-indent-guides&#39;)
+  &#34; ログファイルを色づけしてくれる
+  call dein#add(&#39;vim-scripts/AnsiEsc.vim&#39;)
+  &#34; 行末の半角スペースを可視化
+  call dein#add(&#39;bronson/vim-trailing-whitespace&#39;)
+  &#34; less用のsyntaxハイライト
+  &#34; call dein#add(&#39;KohPoll/vim-less&#39;)
 
-  " markdown設定
-  call dein#add('tpope/vim-markdown')
-  call dein#add('kannokanno/previm')
-  call dein#add('skanehira/preview-markdown.vim')
+  &#34; markdown設定
+  call dein#add(&#39;tpope/vim-markdown&#39;)
+  call dein#add(&#39;kannokanno/previm&#39;)
+  call dein#add(&#39;skanehira/preview-markdown.vim&#39;)
   let g:preview_markdown_vertical = 1
 
 
-  """ markdown {{{{
-    let g:previm_open_cmd = 'google-chrome'
+  &#34;&#34;&#34; markdown {{{{
+    let g:previm_open_cmd = &#39;google-chrome&#39;
     augroup PrevimSetting
       autocmd!
       autocmd BufNewFile,BufRead *.{md,mdwn,mkd,mkdn,mark*} set filetype=markdown
     augroup END
-    " Need: kannokanno/previm
-    nnoremap <silent> <C-p> :PrevimOpen<CR>
-    " 自動で折りたたまないようにする
+    &#34; Need: kannokanno/previm
+    nnoremap &lt;silent&gt; &lt;C-p&gt; :PrevimOpen&lt;CR&gt;
+    &#34; 自動で折りたたまないようにする
     let g:vim_markdown_folding_disabled=1
     let g:previm_enable_realtime=1
-  " }}}}
+  &#34; }}}}
 
-  " RubyMineのように自動保存する
-  call dein#add('907th/vim-auto-save')
+  &#34; RubyMineのように自動保存する
+  call dein#add(&#39;907th/vim-auto-save&#39;)
   let g:auto_save = 1
 
-  " Rubyメソッド自動補完
-  call dein#add('Shougo/neocomplcache.vim')
-  call dein#add('NigoroJr/rsense')
-  call dein#add('Shougo/neocomplcache-rsense.vim')
-  " let g:neocomplcache_force_overwrite_completefunc=1
-  let g:rsenseHome = expand("~/.asdf/shims/rsense")
+  &#34; Rubyメソッド自動補完
+  call dein#add(&#39;Shougo/neocomplcache.vim&#39;)
+  call dein#add(&#39;NigoroJr/rsense&#39;)
+  call dein#add(&#39;Shougo/neocomplcache-rsense.vim&#39;)
+  &#34; let g:neocomplcache_force_overwrite_completefunc=1
+  let g:rsenseHome = expand(&#34;~/.asdf/shims/rsense&#34;)
   let g:rsenseUseOmniFunc = 1
 
   let g:acp_enableAtStartup = 0
   let g:neocomplcache#enable_at_startup = 1
   let g:neocomplcache#enable_smart_case = 1
 
-  " Set minimum syntax keyword length.
+  &#34; Set minimum syntax keyword length.
   let g:neocomplcache_min_syntax_length = 3
-  let g:neocomplcache_lock_buffer_name_pattern = '\*ku\*'
+  let g:neocomplcache_lock_buffer_name_pattern = &#39;\*ku\*&#39;
   let g:neocomplcache_enable_camel_case_completion = 1
   let g:neocomplcache_enable_underbar_completion = 1
 
-  " rubocop
-  " call dein#add('ngmy/vim-rubocop')
-  " call dein#add('scrooloose/syntastic')
+  &#34; rubocop
+  &#34; call dein#add(&#39;ngmy/vim-rubocop&#39;)
+  &#34; call dein#add(&#39;scrooloose/syntastic&#39;)
 
-  " let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': ['ruby'] }
-  " let g:syntastic_ruby_checkers=['rubocop', 'mri']
+  &#34; let g:syntastic_mode_map = { &#39;mode&#39;: &#39;passive&#39;, &#39;active_filetypes&#39;: [&#39;ruby&#39;] }
+  &#34; let g:syntastic_ruby_checkers=[&#39;rubocop&#39;, &#39;mri&#39;]
 
-  " 切り替え
-  call dein#add('AndrewRadev/switch.vim')
-  " -で切り替え
-  let g:switch_mapping = "-"
+  &#34; 切り替え
+  call dein#add(&#39;AndrewRadev/switch.vim&#39;)
+  &#34; -で切り替え
+  let g:switch_mapping = &#34;-&#34;
 
-  " react native用のプラグイン追加
-  call dein#add('pangloss/vim-javascript', { 'for': ['javascript', 'javascript.jsx'] })
-  call dein#add('othree/yajs.vim', { 'for': ['javascript', 'javascript.jsx'] })
-  call dein#add('othree/es.next.syntax.vim', { 'for': ['javascript', 'javascript.jsx'] })
-  call dein#add('othree/javascript-libraries-syntax.vim', { 'for': ['javascript', 'javascript.jsx'] })
-  " react native用コード補完
-  call dein#add('ternjs/tern_for_vim', { 'for': ['javascript', 'javascript.jsx'], 'do': 'npm install' })
+  &#34; react native用のプラグイン追加
+  call dein#add(&#39;pangloss/vim-javascript&#39;, { &#39;for&#39;: [&#39;javascript&#39;, &#39;javascript.jsx&#39;] })
+  call dein#add(&#39;othree/yajs.vim&#39;, { &#39;for&#39;: [&#39;javascript&#39;, &#39;javascript.jsx&#39;] })
+  call dein#add(&#39;othree/es.next.syntax.vim&#39;, { &#39;for&#39;: [&#39;javascript&#39;, &#39;javascript.jsx&#39;] })
+  call dein#add(&#39;othree/javascript-libraries-syntax.vim&#39;, { &#39;for&#39;: [&#39;javascript&#39;, &#39;javascript.jsx&#39;] })
+  &#34; react native用コード補完
+  call dein#add(&#39;ternjs/tern_for_vim&#39;, { &#39;for&#39;: [&#39;javascript&#39;, &#39;javascript.jsx&#39;], &#39;do&#39;: &#39;npm install&#39; })
 
-  " HTML5のプラグイン
-  call dein#add('othree/html5.vim')
+  &#34; HTML5のプラグイン
+  call dein#add(&#39;othree/html5.vim&#39;)
 
-  " vimでtwitter
+  &#34; vimでtwitter
   let twitvim_enable_python = 1
-  let twitvim_browser_cmd = 'google-chrome'
+  let twitvim_browser_cmd = &#39;google-chrome&#39;
   let twitvim_force_ssl = 1
   let twitvim_count = 100
 
 
-echomsg 'インターネットください'
+echomsg &#39;インターネットください&#39;
 finish
 </code></pre>
                 </div>

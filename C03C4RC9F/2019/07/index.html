@@ -14593,36 +14593,36 @@
                   </a>
                   <pre><code class='language-javascript'>function s:make_gragh(percent_cpu, percent_mem) abort
 	let gragh = []
-	call add(gragh, "    ------------------------")
+	call add(gragh, &#34;    ------------------------&#34;)
 	for line_num in [100,90,80,70,60,50,40,30,20,10,0]
-		" 偶数行はパーセンテージの値を表示する
-		let line = ""
+		&#34; 偶数行はパーセンテージの値を表示する
+		let line = &#34;&#34;
 		if line_num % 20 ==# 0
-			let line = printf("%3d -",line_num)
+			let line = printf(&#34;%3d -&#34;,line_num)
 		else
-			let line = "    |"
+			let line = &#34;    |&#34;
 		endif
 
-		if line_num <= a:percent_cpu
-			let line = line .. "  ■■■■■■"
+		if line_num &lt;= a:percent_cpu
+			let line = line .. &#34;  ■■■■■■&#34;
 		else
-			let line = line .. "        "
+			let line = line .. &#34;        &#34;
 		endif
-		if line_num <= a:percent_mem
-			let line =line .. "      ■■■■■■  |"
+		if line_num &lt;= a:percent_mem
+			let line =line .. &#34;      ■■■■■■  |&#34;
 		else
-			let line =line .. "              |"
+			let line =line .. &#34;              |&#34;
 		endif
 
 		call add(gragh, line)
 	endfor
-	call add(gragh, "    ------------------------")
-	call add(gragh, printf("      CPU(%d%%)     MEM(%d%%)", a:percent_cpu, a:percent_mem))
+	call add(gragh, &#34;    ------------------------&#34;)
+	call add(gragh, printf(&#34;      CPU(%d%%)     MEM(%d%%)&#34;, a:percent_cpu, a:percent_mem))
 	return gragh
 endfunction
 
 call popup_create(s:make_gragh(30,40),{
-			\ 'moved': 'any',
+			\ &#39;moved&#39;: &#39;any&#39;,
 			\ })
 </code></pre>
                 </div>
@@ -19010,10 +19010,10 @@ call popup_create(s:make_gragh(30,40),{
 @@ -63,6 +63,7 @@ blob_copy(typval_T *from, typval_T *to)
      int	    ret = OK;
  
-     to->v_type = VAR_BLOB;
-+    to->v_lock = 0;
-     if (from->vval.v_blob == NULL)
- 	to->vval.v_blob = NULL;
+     to-&gt;v_type = VAR_BLOB;
++    to-&gt;v_lock = 0;
+     if (from-&gt;vval.v_blob == NULL)
+ 	to-&gt;vval.v_blob = NULL;
      else if (rettv_blob_alloc(to) == FAIL)
 </code></pre>
                 </div>

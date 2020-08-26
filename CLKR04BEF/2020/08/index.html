@@ -739,32 +739,32 @@
                   <span class="f5">[[ダウンロード: dein.toml(TOML)]]</span>
                   </a>
                   <pre><code class='language-toml'>[[plugins]]
-repo = 'lambdalisue/glyph-palette.vim'
-hook_add = '''
-  " custom glyph
-  let g:glyph_palette#palette = get(g:, 'glyph_palette#palette' ,{})
+repo = &#39;lambdalisue/glyph-palette.vim&#39;
+hook_add = &#39;&#39;&#39;
+  &#34; custom glyph
+  let g:glyph_palette#palette = get(g:, &#39;glyph_palette#palette&#39; ,{})
 
-  let g:glyph_palette#palette['GlyphPalette1'] = extend(get(g:glyph_palette#palette, 'GlyphPalette1', []), [])
-  let g:glyph_palette#palette['GlyphPalette2'] = extend(get(g:glyph_palette#palette, 'GlyphPalette2', []), [])
-  let g:glyph_palette#palette['GlyphPalette3'] = extend(get(g:glyph_palette#palette, 'GlyphPalette3', []), [
+  let g:glyph_palette#palette[&#39;GlyphPalette1&#39;] = extend(get(g:glyph_palette#palette, &#39;GlyphPalette1&#39;, []), [])
+  let g:glyph_palette#palette[&#39;GlyphPalette2&#39;] = extend(get(g:glyph_palette#palette, &#39;GlyphPalette2&#39;, []), [])
+  let g:glyph_palette#palette[&#39;GlyphPalette3&#39;] = extend(get(g:glyph_palette#palette, &#39;GlyphPalette3&#39;, []), [
     \ nr2char(0xe736),
     \ nr2char(0xe749),
     \ nr2char(0xf48a),
     \ nr2char(0xf0f6),
     \ ])
-  let g:glyph_palette#palette['GlyphPalette4'] = extend(get(g:glyph_palette#palette, 'GlyphPalette4', []), [])
-  let g:glyph_palette#palette['GlyphPalette5'] = extend(get(g:glyph_palette#palette, 'GlyphPalette5', []), [])
-  let g:glyph_palette#palette['GlyphPalette6'] = extend(get(g:glyph_palette#palette, 'GlyphPalette6', []), [])
-  let g:glyph_palette#palette['GlyphPalette7'] = extend(get(g:glyph_palette#palette, 'GlyphPalette7', []), [])
-  let g:glyph_palette#palette['GlyphPalette8'] = extend(get(g:glyph_palette#palette, 'GlyphPalette8', []), [])
-  let g:glyph_palette#palette['GlyphPalette9'] = extend(get(g:glyph_palette#palette, 'GlyphPalette9', []), [])
+  let g:glyph_palette#palette[&#39;GlyphPalette4&#39;] = extend(get(g:glyph_palette#palette, &#39;GlyphPalette4&#39;, []), [])
+  let g:glyph_palette#palette[&#39;GlyphPalette5&#39;] = extend(get(g:glyph_palette#palette, &#39;GlyphPalette5&#39;, []), [])
+  let g:glyph_palette#palette[&#39;GlyphPalette6&#39;] = extend(get(g:glyph_palette#palette, &#39;GlyphPalette6&#39;, []), [])
+  let g:glyph_palette#palette[&#39;GlyphPalette7&#39;] = extend(get(g:glyph_palette#palette, &#39;GlyphPalette7&#39;, []), [])
+  let g:glyph_palette#palette[&#39;GlyphPalette8&#39;] = extend(get(g:glyph_palette#palette, &#39;GlyphPalette8&#39;, []), [])
+  let g:glyph_palette#palette[&#39;GlyphPalette9&#39;] = extend(get(g:glyph_palette#palette, &#39;GlyphPalette9&#39;, []), [])
 
   augroup vimrc-init_nerdfont
     autocmd!
     autocmd FileType fern     call glyph_palette#apply()
-    " autocmd FileType startify call glyph_palette#apply()
+    &#34; autocmd FileType startify call glyph_palette#apply()
   augroup END
-'''</code></pre>
+&#39;&#39;&#39;</code></pre>
                 </div>
               </div>
             </div>
@@ -839,15 +839,15 @@ hook_add = '''
                   <span class="f5">[[ダウンロード: output.txt(Plain Text)]]</span>
                   </a>
                   <pre><code class='language-none'>g:glyph_palette#palette = {
-  'GlyphPalette1': [],
-  'GlyphPalette2': [],
-  'GlyphPalette3': ['', '', '', ''],
-  'GlyphPalette4': [],
-  'GlyphPalette5': [],
-  'GlyphPalette6': [],
-  'GlyphPalette7': [],
-  'GlyphPalette8': [],
-  'GlyphPalette9': []
+  &#39;GlyphPalette1&#39;: [],
+  &#39;GlyphPalette2&#39;: [],
+  &#39;GlyphPalette3&#39;: [&#39;&#39;, &#39;&#39;, &#39;&#39;, &#39;&#39;],
+  &#39;GlyphPalette4&#39;: [],
+  &#39;GlyphPalette5&#39;: [],
+  &#39;GlyphPalette6&#39;: [],
+  &#39;GlyphPalette7&#39;: [],
+  &#39;GlyphPalette8&#39;: [],
+  &#39;GlyphPalette9&#39;: []
 }
 </code></pre>
                 </div>
@@ -23594,56 +23594,56 @@ hook_add = '''
                   <a href="/slacklog/files/F019QF1EP97/%E7%84%A1%E9%A1%8C.txt" target="_blank" rel="noopener noreferrer">
                   <span class="f5">[[ダウンロード: 無題(プレーンテキスト)]]</span>
                   </a>
-                  <pre><code class='language-none'>repo = 'fatih/vim-go'
-repo = 'prabirshrestha/vim-lsp'
-repo = 'godlygeek/tabular'
-repo = 'junegunn/fzf'
-repo = 'junegunn/fzf.vim'
-repo = 'previm/previm'
-repo = 'cohama/lexima.vim'
-repo = 'simeji/winresizer'
-repo = 'glidenote/memolist.vim'
-repo = 'mattn/emmet-vim'
-repo = 'itchyny/lightline.vim'
-repo = 'mattn/sonictemplate-vim'
-repo = 'airblade/vim-gitgutter'
-repo = 'lambdalisue/gina.vim'
-repo = 'markonm/traces.vim'
-repo = 'posva/vim-vue'
-repo = 'plasticboy/vim-markdown'
-repo = 'cespare/vim-toml'
-repo = 'dag/vim-fish'
-repo = 'mattn/vim-maketable'
-repo = 'thinca/vim-quickrun'
-repo = 'cocopon/iceberg.vim'
-repo = 'vim-jp/vimdoc-ja'
-repo = 'skanehira/translate.vim'
-repo = 'vim-jp/vital.vim'
-repo = 'mattn/webapi-vim'
-repo = 'mattn/gist-vim'
-repo = 'tokorom/vim-review'
-repo = 'Shougo/dein.vim'
-repo = 'skanehira/docker.vim'
-repo = 'skanehira/docker-compose.vim'
-repo = 'LeafCage/vimhelpgenerator'
-repo = 'kshenoy/vim-signature'
-repo = 'thinca/vim-themis'
-repo = 'skanehira/preview-markdown.vim'
-repo = 'tweekmonster/helpful.vim'
-repo = 'gyim/vim-boxdraw'
-repo = 'tyru/open-browser-github.vim'
-repo = 'tyru/open-browser.vim'
-repo = 'liuchengxu/vista.vim'
-repo = 'tweekmonster/helpful.vim'
-repo = 'andymass/vim-matchup'
-repo = 'mattn/vim-lsp-settings'
-repo = 'skanehira/google-map.vim'
-repo = 'lambdalisue/fern.vim'
-repo = 'kristijanhusak/vim-carbon-now-sh'
-repo = 'skanehira/code2img.vim'
-repo = 'lambdalisue/fern-git-status.vim'
-repo = 'basyura/TweetVim'
-repo = 'basyura/twibill.vim'</code></pre>
+                  <pre><code class='language-none'>repo = &#39;fatih/vim-go&#39;
+repo = &#39;prabirshrestha/vim-lsp&#39;
+repo = &#39;godlygeek/tabular&#39;
+repo = &#39;junegunn/fzf&#39;
+repo = &#39;junegunn/fzf.vim&#39;
+repo = &#39;previm/previm&#39;
+repo = &#39;cohama/lexima.vim&#39;
+repo = &#39;simeji/winresizer&#39;
+repo = &#39;glidenote/memolist.vim&#39;
+repo = &#39;mattn/emmet-vim&#39;
+repo = &#39;itchyny/lightline.vim&#39;
+repo = &#39;mattn/sonictemplate-vim&#39;
+repo = &#39;airblade/vim-gitgutter&#39;
+repo = &#39;lambdalisue/gina.vim&#39;
+repo = &#39;markonm/traces.vim&#39;
+repo = &#39;posva/vim-vue&#39;
+repo = &#39;plasticboy/vim-markdown&#39;
+repo = &#39;cespare/vim-toml&#39;
+repo = &#39;dag/vim-fish&#39;
+repo = &#39;mattn/vim-maketable&#39;
+repo = &#39;thinca/vim-quickrun&#39;
+repo = &#39;cocopon/iceberg.vim&#39;
+repo = &#39;vim-jp/vimdoc-ja&#39;
+repo = &#39;skanehira/translate.vim&#39;
+repo = &#39;vim-jp/vital.vim&#39;
+repo = &#39;mattn/webapi-vim&#39;
+repo = &#39;mattn/gist-vim&#39;
+repo = &#39;tokorom/vim-review&#39;
+repo = &#39;Shougo/dein.vim&#39;
+repo = &#39;skanehira/docker.vim&#39;
+repo = &#39;skanehira/docker-compose.vim&#39;
+repo = &#39;LeafCage/vimhelpgenerator&#39;
+repo = &#39;kshenoy/vim-signature&#39;
+repo = &#39;thinca/vim-themis&#39;
+repo = &#39;skanehira/preview-markdown.vim&#39;
+repo = &#39;tweekmonster/helpful.vim&#39;
+repo = &#39;gyim/vim-boxdraw&#39;
+repo = &#39;tyru/open-browser-github.vim&#39;
+repo = &#39;tyru/open-browser.vim&#39;
+repo = &#39;liuchengxu/vista.vim&#39;
+repo = &#39;tweekmonster/helpful.vim&#39;
+repo = &#39;andymass/vim-matchup&#39;
+repo = &#39;mattn/vim-lsp-settings&#39;
+repo = &#39;skanehira/google-map.vim&#39;
+repo = &#39;lambdalisue/fern.vim&#39;
+repo = &#39;kristijanhusak/vim-carbon-now-sh&#39;
+repo = &#39;skanehira/code2img.vim&#39;
+repo = &#39;lambdalisue/fern-git-status.vim&#39;
+repo = &#39;basyura/TweetVim&#39;
+repo = &#39;basyura/twibill.vim&#39;</code></pre>
                 </div>
               </div>
             </div>
@@ -25050,24 +25050,24 @@ repo = 'basyura/twibill.vim'</code></pre>
                   </a>
                   <pre><code class='language-javascript'>liberator.modules.mappings.addUserMap(
     [liberator.modules.modes.NORMAL],
-    ["<C-f>"],
-    "Fuzzy Tab Switch",
+    [&#34;&lt;C-f&gt;&#34;],
+    &#34;Fuzzy Tab Switch&#34;,
     function(argument){
         tab_length = liberator.modules.tabs.count;
         if(isNaN(input = parseInt(argument))){
             switch(argument){
-            case "a": input = 1; break;
-            case "s": input = 2; break;
-            case "d": input = 3; break;
-            case "f": input = 4; break;
-            case "g": input = 5; break;
-            case "h": input = 6; break;
-            case "j": input = 7; break;
-            case "k": input = 8; break;
-            case "l": input = 9; break;
-            case ";": input = 0; break;
+            case &#34;a&#34;: input = 1; break;
+            case &#34;s&#34;: input = 2; break;
+            case &#34;d&#34;: input = 3; break;
+            case &#34;f&#34;: input = 4; break;
+            case &#34;g&#34;: input = 5; break;
+            case &#34;h&#34;: input = 6; break;
+            case &#34;j&#34;: input = 7; break;
+            case &#34;k&#34;: input = 8; break;
+            case &#34;l&#34;: input = 9; break;
+            case &#34;;&#34;: input = 0; break;
                 defalut:
-                liberator.echoerr("Invalid input.");
+                liberator.echoerr(&#34;Invalid input.&#34;);
                 return;
             }
         }

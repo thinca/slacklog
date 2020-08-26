@@ -4111,9 +4111,9 @@
 .\src\INSTALLpc.txt:325:MSYS2 has its own git package, and you can also install it via pacman:
 .\src\INSTALLpc.txt:327:    $ pacman -S git
 .\src\INSTALLpc.txt:335:    $ pacman -Syu
-.\src\testdir\test_filetype.vim:143:    \ 'dosini': ['.editorconfig', '/etc/pacman.conf', '/etc/yum.conf', 'file.ini', 'npmrc', '.npmrc', 'php.ini', 'php.ini-5'],
-.\src\testdir\test_filetype.vim:673:  call writefile(['[Trigger]', 'this is pacman config'], 'Xfile.hook')
-.\src\testdir\test_filetype.vim:678:  call writefile(['not pacman'], 'Xfile.hook')
+.\src\testdir\test_filetype.vim:143:    \ &#39;dosini&#39;: [&#39;.editorconfig&#39;, &#39;/etc/pacman.conf&#39;, &#39;/etc/yum.conf&#39;, &#39;file.ini&#39;, &#39;npmrc&#39;, &#39;.npmrc&#39;, &#39;php.ini&#39;, &#39;php.ini-5&#39;],
+.\src\testdir\test_filetype.vim:673:  call writefile([&#39;[Trigger]&#39;, &#39;this is pacman config&#39;], &#39;Xfile.hook&#39;)
+.\src\testdir\test_filetype.vim:678:  call writefile([&#39;not pacman&#39;], &#39;Xfile.hook&#39;)
 
 
 ag pacman . | vim - in vim/vim
@@ -4122,11 +4122,11 @@ runtime/doc/version8.txt:47647:Problem:    No filetype set for pacman config fil
 
 runtime/doc/version8.txt:47648:Solution:   Recognize pacman.conf and *.hook. (Guido Cella, closes #6335)
 
-runtime/filetype.vim:1143:" Pacman Config (close enough to dosini)
+runtime/filetype.vim:1143:&#34; Pacman Config (close enough to dosini)
 
 runtime/filetype.vim:1144:au BufNewFile,BufRead */etc/pacman.conf		setf dosini
 
-runtime/filetype.vim:1146:" Pacman hooks
+runtime/filetype.vim:1146:&#34; Pacman hooks
 
 src/INSTALLpc.txt:290:    $ pacman -Syu
 
@@ -4146,11 +4146,11 @@ src/INSTALLpc.txt:327:    $ pacman -S git
 
 src/INSTALLpc.txt:335:    $ pacman -Syu
 
-src/testdir/test_filetype.vim:143:    \ 'dosini': ['.editorconfig', '/etc/pacman.conf', '/etc/yum.conf', 'file.ini', 'npmrc', '.npmrc', 'php.ini', 'php.ini-5'],
+src/testdir/test_filetype.vim:143:    \ &#39;dosini&#39;: [&#39;.editorconfig&#39;, &#39;/etc/pacman.conf&#39;, &#39;/etc/yum.conf&#39;, &#39;file.ini&#39;, &#39;npmrc&#39;, &#39;.npmrc&#39;, &#39;php.ini&#39;, &#39;php.ini-5&#39;],
 
-src/testdir/test_filetype.vim:673:  call writefile(['[Trigger]', 'this is pacman config'], 'Xfile.hook')
+src/testdir/test_filetype.vim:673:  call writefile([&#39;[Trigger]&#39;, &#39;this is pacman config&#39;], &#39;Xfile.hook&#39;)
 
-src/testdir/test_filetype.vim:678:  call writefile(['not pacman'], 'Xfile.hook')
+src/testdir/test_filetype.vim:678:  call writefile([&#39;not pacman&#39;], &#39;Xfile.hook&#39;)
 
 </code></pre>
                 </div>
@@ -5743,7 +5743,7 @@ src/testdir/test_filetype.vim:678:  call writefile(['not pacman'], 'Xfile.hook')
                   <span class="f5">[[ダウンロード: Untitled(プレーンテキスト)]]</span>
                   </a>
                   <pre><code class='language-none'>~/Downloads/lua-5.4.0
-$ grep -nr 'lua\(L_typeerror\|_newuserdatauv\)' src
+$ grep -nr &#39;lua\(L_typeerror\|_newuserdatauv\)&#39; src
 src/lapi.c:1298:LUA_API void *lua_newuserdatauv (lua_State *L, size_t size, int nuvalue) {
 src/lauxlib.c:193:int luaL_typeerror (lua_State *L, int arg, const char *tname) {
 src/lauxlib.c:208:  luaL_typeerror(L, arg, lua_typename(L, tag));

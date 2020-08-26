@@ -15883,27 +15883,27 @@ https://github.com/SirVer/ultisnips/blob/master/CONTRIBUTING.md#reproducing-bugs
 
 Following is the full stack trace:
 Traceback (most recent call last):
-  File "/home/dohq/.vim/plugins/ultisnips/pythonx/UltiSnips/err_to_scratch_buffer.py", line 18, in wrapper
+  File &#34;/home/dohq/.vim/plugins/ultisnips/pythonx/UltiSnips/err_to_scratch_buffer.py&#34;, line 18, in wrapper
     return func(self, *args, **kwds)
-  File "/home/dohq/.vim/plugins/ultisnips/pythonx/UltiSnips/snippet_manager.py", line 185, in expand_or_jump
+  File &#34;/home/dohq/.vim/plugins/ultisnips/pythonx/UltiSnips/snippet_manager.py&#34;, line 185, in expand_or_jump
     rv = self._try_expand()
-  File "/home/dohq/.vim/plugins/ultisnips/pythonx/UltiSnips/snippet_manager.py", line 804, in _try_expand
+  File &#34;/home/dohq/.vim/plugins/ultisnips/pythonx/UltiSnips/snippet_manager.py&#34;, line 804, in _try_expand
     self._do_snippet(snippet, before)
-  File "/home/dohq/.vim/plugins/ultisnips/pythonx/UltiSnips/snippet_manager.py", line 756, in _do_snippet
+  File &#34;/home/dohq/.vim/plugins/ultisnips/pythonx/UltiSnips/snippet_manager.py&#34;, line 756, in _do_snippet
     snippet_instance = snippet.launch(
-  File "/home/dohq/.vim/plugins/ultisnips/pythonx/UltiSnips/snippet/definition/base.py", line 488, in launch
+  File &#34;/home/dohq/.vim/plugins/ultisnips/pythonx/UltiSnips/snippet/definition/base.py&#34;, line 488, in launch
     snippet_instance.update_textobjects(vim_helper.buf)
-  File "/home/dohq/.vim/plugins/ultisnips/pythonx/UltiSnips/text_objects/snippet_instance.py", line 93, in update_textobjects
+  File &#34;/home/dohq/.vim/plugins/ultisnips/pythonx/UltiSnips/text_objects/snippet_instance.py&#34;, line 93, in update_textobjects
     if obj._update(done, buf):
-  File "/home/dohq/.vim/plugins/ultisnips/pythonx/UltiSnips/text_objects/python_code.py", line 268, in _update
+  File &#34;/home/dohq/.vim/plugins/ultisnips/pythonx/UltiSnips/text_objects/python_code.py&#34;, line 268, in _update
     exec(code, self._locals)  # pylint:disable=exec-used
-  File "<string>", line 2, in <module>
-  File "/home/dohq/.vim/plugins/vim-snippets/pythonx/vimsnippets.py", line 84, in make_box
+  File &#34;&lt;string&gt;&#34;, line 2, in &lt;module&gt;
+  File &#34;/home/dohq/.vim/plugins/vim-snippets/pythonx/vimsnippets.py&#34;, line 84, in make_box
     b, m, e, i = (s.strip() for s in get_comment_format())
-  File "/home/dohq/.vim/plugins/vim-snippets/pythonx/vimsnippets.py", line 76, in get_comment_format
-    comments = _parse_comments(vim.eval("&comments"))
-  File "/home/dohq/.vim/plugins/vim-snippets/pythonx/vimsnippets.py", line 35, in _parse_comments
-    flags, text = next(i).split(':', 1)
+  File &#34;/home/dohq/.vim/plugins/vim-snippets/pythonx/vimsnippets.py&#34;, line 76, in get_comment_format
+    comments = _parse_comments(vim.eval(&#34;&amp;comments&#34;))
+  File &#34;/home/dohq/.vim/plugins/vim-snippets/pythonx/vimsnippets.py&#34;, line 35, in _parse_comments
+    flags, text = next(i).split(&#39;:&#39;, 1)
 ValueError: not enough values to unpack (expected 2, got 1)
 
 Executed snippet code:
@@ -16132,30 +16132,30 @@ https://github.com/SirVer/ultisnips/issues/new.
 
 Following is the full stack trace:
 Traceback (most recent call last):
-  File "/home/yabuki/.vim/pythonx/UltiSnips/snippet_manager.py", line 61, in wrapper
+  File &#34;/home/yabuki/.vim/pythonx/UltiSnips/snippet_manager.py&#34;, line 61, in wrapper
     return func(self, *args, **kwds)
-  File "/home/yabuki/.vim/pythonx/UltiSnips/snippet_manager.py", line 163, in expand
+  File &#34;/home/yabuki/.vim/pythonx/UltiSnips/snippet_manager.py&#34;, line 163, in expand
     if not self._try_expand():
-  File "/home/yabuki/.vim/pythonx/UltiSnips/snippet_manager.py", line 725, in _try_expand
+  File &#34;/home/yabuki/.vim/pythonx/UltiSnips/snippet_manager.py&#34;, line 725, in _try_expand
     self._do_snippet(snippet, before)
-  File "/home/yabuki/.vim/pythonx/UltiSnips/snippet_manager.py", line 679, in _do_snippet
+  File &#34;/home/yabuki/.vim/pythonx/UltiSnips/snippet_manager.py&#34;, line 679, in _do_snippet
     si = snippet.launch(text_before, self._visual_content,
-  File "/home/yabuki/.vim/pythonx/UltiSnips/snippet/definition/_base.py", line 421, in launch
+  File &#34;/home/yabuki/.vim/pythonx/UltiSnips/snippet/definition/_base.py&#34;, line 421, in launch
     snippet_instance.update_textobjects()
-  File "/home/yabuki/.vim/pythonx/UltiSnips/text_objects/_snippet_instance.py", line 79, in update_textobjects
+  File &#34;/home/yabuki/.vim/pythonx/UltiSnips/text_objects/_snippet_instance.py&#34;, line 79, in update_textobjects
     if obj._update(done):
-  File "/home/yabuki/.vim/pythonx/UltiSnips/text_objects/_python_code.py", line 271, in _update
+  File &#34;/home/yabuki/.vim/pythonx/UltiSnips/text_objects/_python_code.py&#34;, line 271, in _update
     exec(code, self._locals)  # pylint:disable=exec-used
-  File "<string>", line 2, in <module>
-  File "<string>", line 51, in make_box
-  File "<string>", line 47, in _get_comment_format
-  File "<string>", line 15, in _parse_comments
+  File &#34;&lt;string&gt;&#34;, line 2, in &lt;module&gt;
+  File &#34;&lt;string&gt;&#34;, line 51, in make_box
+  File &#34;&lt;string&gt;&#34;, line 47, in _get_comment_format
+  File &#34;&lt;string&gt;&#34;, line 15, in _parse_comments
 ValueError: not enough values to unpack (expected 2, got 1)
 
 Executed snippet code:
   1
   2   box = make_box(len(t[1]))
-  3   snip.rv = box[0] + '\n' + box[1]
+  3   snip.rv = box[0] + &#39;\n&#39; + box[1]
   4
 </code></pre>
                 </div>
@@ -43141,19 +43141,19 @@ index 2688a62a8..65b16a177 100644
 @@ -24,7 +24,7 @@ function! remote#define#CommandOnHost(host, method, sync, name, opts)
    endif
  
-   if has_key(a:opts, 'nargs')
--    call add(forward_args, ' <args>')
-+    call add(forward_args, '" .. <q-args>')
+   if has_key(a:opts, &#39;nargs&#39;)
+-    call add(forward_args, &#39; &lt;args&gt;&#39;)
++    call add(forward_args, &#39;&#34; .. &lt;q-args&gt;&#39;)
    endif
  
    exe s:GetCommandPrefix(a:name, a:opts)
 @@ -33,7 +33,7 @@ function! remote#define#CommandOnHost(host, method, sync, name, opts)
-         \ .                                ', '.string(a:sync)
-         \ .                                ', "'.a:name.'"'
-         \ .                                ', '.string(a:opts).''
--        \ .                                ', "'.join(forward_args, '').'"'
-+        \ .                                ', "'.join(forward_args, '')
-         \ .                                ')'
+         \ .                                &#39;, &#39;.string(a:sync)
+         \ .                                &#39;, &#34;&#39;.a:name.&#39;&#34;&#39;
+         \ .                                &#39;, &#39;.string(a:opts).&#39;&#39;
+-        \ .                                &#39;, &#34;&#39;.join(forward_args, &#39;&#39;).&#39;&#34;&#39;
++        \ .                                &#39;, &#34;&#39;.join(forward_args, &#39;&#39;)
+         \ .                                &#39;)&#39;
  endfunction</code></pre>
                 </div>
               </div>

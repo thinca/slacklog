@@ -837,7 +837,7 @@
                   <a href="/slacklog/files/FK22A2857/-.js" target="_blank" rel="noopener noreferrer">
                   <span class="f5">[[ダウンロード: Untitled(JavaScript/JSON)]]</span>
                   </a>
-                  <pre><code class='language-javascript'>Author: secracon <secracon@gmail.com>
+                  <pre><code class='language-javascript'>Author: secracon &lt;secracon@gmail.com&gt;
 Date:   Sat Dec 8 22:45:19 2018 +0100
 
     Use golang context pkg instead of gorilla/context to fix memory leaks (#175)
@@ -5754,13 +5754,13 @@ Thu Jun 20 09:03:45 UTC 2019
 vagrant@minimal-xenial ~
 $ psql
 psql (9.6.9, server 9.6.12)
-Type "help" for help.
+Type &#34;help&#34; for help.
 
 pg=# \d api_key
-                                     Table "public.api_key"
+                                     Table &#34;public.api_key&#34;
    Column   |            Type             |                      Modifiers
 ------------+-----------------------------+------------------------------------------------------
- id         | bigint                      | not null default nextval('api_key_id_seq'::regclass)
+ id         | bigint                      | not null default nextval(&#39;api_key_id_seq&#39;::regclass)
  expire_at  | timestamp without time zone |
 
 pg=# select * from api_key where id = 122;
@@ -5823,17 +5823,17 @@ pg=# select * from api_key where id = 122;
                   <pre><code class='language-go'>package main
 
 import (
-	"database/sql"
-	"fmt"
-	"log"
-	"time"
+	&#34;database/sql&#34;
+	&#34;fmt&#34;
+	&#34;log&#34;
+	&#34;time&#34;
 
-	_ "github.com/lib/pq"
-	"golang.org/x/xerrors"
+	_ &#34;github.com/lib/pq&#34;
+	&#34;golang.org/x/xerrors&#34;
 )
 
 func run() error {
-	db, err := sql.Open("postgres", "postgres://postgres:abcd1234@127.0.0.1/pg?sslmode=disable")
+	db, err := sql.Open(&#34;postgres&#34;, &#34;postgres://postgres:abcd1234@127.0.0.1/pg?sslmode=disable&#34;)
 	if err != nil {
 		return err
 	}
@@ -5841,16 +5841,16 @@ func run() error {
 
 	rs, err := db.Query(`SELECT expire_at FROM api_key WHERE id = 122`)
 	if err != nil {
-		return xerrors.Errorf("failed to query: %w", err)
+		return xerrors.Errorf(&#34;failed to query: %w&#34;, err)
 	}
 	for rs.Next() {
 		var v time.Time
-		err := rs.Scan(&v)
+		err := rs.Scan(&amp;v)
 		if err != nil {
 			rs.Close()
 			return err
 		}
-		fmt.Printf("date: %v\n", v)
+		fmt.Printf(&#34;date: %v\n&#34;, v)
 	}
 	rs.Close()
 	return nil
@@ -6065,23 +6065,23 @@ date: 2019-06-04 14:46:08 +0000 +0000</code></pre>
                   <pre><code class='language-go'>package main
 
 import (
-	"database/sql"
-	"fmt"
-	"log"
-	"time"
+	&#34;database/sql&#34;
+	&#34;fmt&#34;
+	&#34;log&#34;
+	&#34;time&#34;
 
-	_ "github.com/lib/pq"
+	_ &#34;github.com/lib/pq&#34;
 )
 
 func run() error {
-	db, err := sql.Open("postgres", "postgres://postgres:abcd1234@127.0.0.1/pg?sslmode=disable")
+	db, err := sql.Open(&#34;postgres&#34;, &#34;postgres://postgres:abcd1234@127.0.0.1/pg?sslmode=disable&#34;)
 	if err != nil {
 		return err
 	}
 	defer db.Close()
 
 	now := time.Now()
-	fmt.Printf("now: %v\n", now)
+	fmt.Printf(&#34;now: %v\n&#34;, now)
 
 	err = write(db, 9999, now)
 	if err != nil {
@@ -6095,7 +6095,7 @@ func run() error {
 }
 
 func write(db *sql.DB, id int64, expire_at time.Time) error {
-	_, err := db.Exec(`INSERT INTO api_key (id, token, expire_at) VALUES ($1, $2, $3)`, id, "foobar", expire_at)
+	_, err := db.Exec(`INSERT INTO api_key (id, token, expire_at) VALUES ($1, $2, $3)`, id, &#34;foobar&#34;, expire_at)
 	return err
 }
 
@@ -6108,12 +6108,12 @@ func read(db *sql.DB, id int64) error {
 
 	for rs.Next() {
 		var v time.Time
-		err := rs.Scan(&v)
+		err := rs.Scan(&amp;v)
 		if err != nil {
 			rs.Close()
 			return err
 		}
-		fmt.Printf("expire_at: %v\n", v)
+		fmt.Printf(&#34;expire_at: %v\n&#34;, v)
 	}
 	return nil
 }

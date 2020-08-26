@@ -2010,12 +2010,12 @@ scriptencoding utf-8
 set rtp+=$HOME/.cache/dein/repos/github.com/thinca/vim-quickrun_new-buffer-outputter
 
 let s:quickrun_config = {}
-let s:quickrun_config['_'] = {}
-let s:quickrun_config['_']['outputter'] = 'buffer'
-let s:quickrun_config['_']['outputter/buffer/opener'] = ':rightbelow 8sp'
-let s:quickrun_config['_']['outputter/buffer/close_on_empty'] = 1
+let s:quickrun_config[&#39;_&#39;] = {}
+let s:quickrun_config[&#39;_&#39;][&#39;outputter&#39;] = &#39;buffer&#39;
+let s:quickrun_config[&#39;_&#39;][&#39;outputter/buffer/opener&#39;] = &#39;:rightbelow 8sp&#39;
+let s:quickrun_config[&#39;_&#39;][&#39;outputter/buffer/close_on_empty&#39;] = 1
 
-let g:quickrun_config = extend(s:quickrun_config, get(g:, 'quickrun_config', {}), "keep")
+let g:quickrun_config = extend(s:quickrun_config, get(g:, &#39;quickrun_config&#39;, {}), &#34;keep&#34;)
 
 filetype plugin indent on
 syntax on

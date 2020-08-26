@@ -365,12 +365,12 @@
                   <span class="f5">[[ダウンロード: Untitled(JavaScript/JSON)]]</span>
                   </a>
                   <pre><code class='language-javascript'>  function escapeHTML(html) {
-    const dummy = document.createElement('dummy');
+    const dummy = document.createElement(&#39;dummy&#39;);
     const text = document.createTextNode(html);
     dummy.appendChild(text);
     return dummy.innerHTML;
   }
-  console.log(escapeHTML('<script>alert("hello");</script>'));  // => "&lt;script&gt;alert("hello");&lt;/script&gt;"</code></pre>
+  console.log(escapeHTML(&#39;&lt;script&gt;alert(&#34;hello&#34;);&lt;/script&gt;&#39;));  // =&gt; &#34;&amp;lt;script&amp;gt;alert(&#34;hello&#34;);&amp;lt;/script&amp;gt;&#34;</code></pre>
                 </div>
               </div>
             </div>

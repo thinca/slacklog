@@ -1957,7 +1957,7 @@
                   <span class="f5">[[ダウンロード: Untitled(Plain Text)]]</span>
                   </a>
                   <pre><code class='language-none'>select {
-case ch <- v:
+case ch &lt;- v:
     return nil
 default:
     return ErrChanExceed
@@ -6690,7 +6690,7 @@ amount of work the garbage collector has to do.
 When passing a value that is not a pointer to a function that accepts
 an interface, the value needs to be placed on the heap, which means an
 additional allocation. Slices are a common thing to put in sync.Pools,
-and they're structs with 3 fields (length, capacity, and a pointer to
+and they&#39;re structs with 3 fields (length, capacity, and a pointer to
 an array). In order to avoid the extra allocation, one should store a
 pointer to the slice instead.
 
@@ -9583,11 +9583,11 @@ Available since
                   </a>
                   <pre><code class='language-go'>// If no version suffix is specified, assume @upgrade.
 // If -u=patch was specified, assume @patch instead.
-if vers == "" {
-	if getU != "" {
+if vers == &#34;&#34; {
+	if getU != &#34;&#34; {
 		vers = string(getU)
 	} else {
-		vers = "upgrade"
+		vers = &#34;upgrade&#34;
 	}
 }</code></pre>
                 </div>
@@ -9813,7 +9813,7 @@ if vers == "" {
                   <span class="f5">[[ダウンロード: Untitled(Plain Text)]]</span>
                   </a>
                   <pre><code class='language-none'>$ GO111MODULE=on go get vendor/golang.org
-go get vendor/golang.org: malformed module path "vendor/golang.org": missing dot in first path element</code></pre>
+go get vendor/golang.org: malformed module path &#34;vendor/golang.org&#34;: missing dot in first path element</code></pre>
                 </div>
               </div>
             </div>
@@ -9955,7 +9955,7 @@ go get vendor/golang.org: malformed module path "vendor/golang.org": missing dot
                   </a>
                   <pre><code class='language-none'>$ GOPROXY=direct GO111MODULE=on go get github.com/mattn/jvgrep@latest
 go: downloading github.com/mattn/jvgrep v4.9.0+incompatible
-go: github.com/mattn/jvgrep latest => v4.9.0+incompatible
+go: github.com/mattn/jvgrep latest =&gt; v4.9.0+incompatible
 go: finding module for package golang.org/x/net/html/charset
 go: finding module for package github.com/mattn/go-colorable
 go: finding module for package github.com/mattn/go-isatty
@@ -10500,7 +10500,7 @@ go get github.com/mattn/jvgrep@v5.8.5: github.com/mattn/jvgrep@v5.8.5: invalid v
                   </a>
                   <pre><code class='language-none'>$ GO111MODULE=on go get github.com/mattn/jvgrep/v5
 go: downloading github.com/mattn/jvgrep/v5 v5.8.6
-go: github.com/mattn/jvgrep/v5 upgrade => v5.8.6
+go: github.com/mattn/jvgrep/v5 upgrade =&gt; v5.8.6
 go: finding module for package github.com/mattn/jvgrep/mmap
 go: found github.com/mattn/jvgrep/mmap in github.com/mattn/jvgrep v5.8.1+incompatible
 
@@ -15558,7 +15558,7 @@ $ rm jvgrep.exe
 
 koron@unicorn ~/go/bin
 $ GO111MODULE=on go get -v github.com/mattn/jvgrep
-go: github.com/mattn/jvgrep upgrade => v5.8.1+incompatible
+go: github.com/mattn/jvgrep upgrade =&gt; v5.8.1+incompatible
 go: finding module for package golang.org/x/text/transform
 go: finding module for package github.com/mattn/go-colorable
 go: finding module for package golang.org/x/net/html/charset
@@ -15620,7 +15620,7 @@ go: found golang.org/x/text/transform in golang.org/x/text v0.3.2</code></pre>
                   </a>
                   <pre><code class='language-none'>koron@unicorn ~/go/bin
 $ GO111MODULE=on go get -u -v github.com/mattn/jvgrep
-go: github.com/mattn/jvgrep upgrade => v5.8.1+incompatible
+go: github.com/mattn/jvgrep upgrade =&gt; v5.8.1+incompatible
 go: finding module for package github.com/mattn/go-isatty
 go: finding module for package github.com/mattn/go-colorable
 go: finding module for package golang.org/x/text/transform
@@ -15629,8 +15629,8 @@ go: found github.com/mattn/go-colorable in github.com/mattn/go-colorable v0.1.6
 go: found github.com/mattn/go-isatty in github.com/mattn/go-isatty v0.0.12
 go: found golang.org/x/net/html/charset in golang.org/x/net v0.0.0-20200602114024-627f9648deb9
 go: found golang.org/x/text/transform in golang.org/x/text v0.3.2
-go: golang.org/x/text upgrade => v0.3.2
-go: golang.org/x/sys upgrade => v0.0.0-20200610111108-226ff32320da</code></pre>
+go: golang.org/x/text upgrade =&gt; v0.3.2
+go: golang.org/x/sys upgrade =&gt; v0.0.0-20200610111108-226ff32320da</code></pre>
                 </div>
               </div>
             </div>
@@ -15685,14 +15685,14 @@ go: golang.org/x/sys upgrade => v0.0.0-20200610111108-226ff32320da</code></pre>
                   <pre><code class='language-none'>koron@unicorn ~/go/bin
 $ GO111MODULE=on go get -u -v github.com/mattn/jvgrep/v5
 go: downloading github.com/mattn/jvgrep/v5 v5.8.7
-go: github.com/mattn/jvgrep/v5 upgrade => v5.8.7
+go: github.com/mattn/jvgrep/v5 upgrade =&gt; v5.8.7
 go: finding module for package github.com/mattn/jvgrep/mmap
 go: found github.com/mattn/jvgrep/mmap in github.com/mattn/jvgrep v5.8.1+incompatible
-go: golang.org/x/sys upgrade => v0.0.0-20200610111108-226ff32320da
-go: golang.org/x/net upgrade => v0.0.0-20200602114024-627f9648deb9
-go: golang.org/x/text upgrade => v0.3.2
-go: golang.org/x/sync upgrade => v0.0.0-20200317015054-43a5402ce75a
-go: github.com/saracen/walker upgrade => v0.1.1
+go: golang.org/x/sys upgrade =&gt; v0.0.0-20200610111108-226ff32320da
+go: golang.org/x/net upgrade =&gt; v0.0.0-20200602114024-627f9648deb9
+go: golang.org/x/text upgrade =&gt; v0.3.2
+go: golang.org/x/sync upgrade =&gt; v0.0.0-20200317015054-43a5402ce75a
+go: github.com/saracen/walker upgrade =&gt; v0.1.1
 go: downloading github.com/saracen/walker v0.1.1
 github.com/saracen/walker
 github.com/mattn/jvgrep/v5
@@ -17456,8 +17456,8 @@ $ jvgrep --version
                   <span class="f5">[[ダウンロード: Untitled(Plain Text)]]</span>
                   </a>
                   <pre><code class='language-none'>replace (
-	github.com/golang/protobuf v1.4.0 => ./_replace/github.com/golang/protobuf@v1.4.0
-	xorm.io/xorm v1.0.1 => ./_replace/xorm.io/xorm@v1.0.1
+	github.com/golang/protobuf v1.4.0 =&gt; ./_replace/github.com/golang/protobuf@v1.4.0
+	xorm.io/xorm v1.0.1 =&gt; ./_replace/xorm.io/xorm@v1.0.1
 )</code></pre>
                 </div>
               </div>
@@ -18396,13 +18396,13 @@ Writing objects: 100% (8/8), 2.13 KiB | 1.06 MiB/s, done.
 Total 8 (delta 4), reused 0 (delta 0), pack-reused 0
 remote: Resolving deltas: 100% (4/4), completed with 3 local objects.
 To github.com:koron/proxyexam.git
-   0022aac..e077c51  master -> master
+   0022aac..e077c51  master -&gt; master
 Enumerating objects: 1, done.
 Counting objects: 100% (1/1), done.
 Writing objects: 100% (1/1), 815 bytes | 815.00 KiB/s, done.
 Total 1 (delta 0), reused 0 (delta 0), pack-reused 0
 To github.com:koron/proxyexam.git
- * [new tag]         v0.2.0 -> v0.2.0
+ * [new tag]         v0.2.0 -&gt; v0.2.0
 
 v0.2.0 released
 
@@ -18412,7 +18412,7 @@ v0.0.1
 v0.1.0
 
 _log/v0.2.0/latest.json
-{"Version":"v0.1.0","Time":"2020-06-15T15:14:14Z"}
+{&#34;Version&#34;:&#34;v0.1.0&#34;,&#34;Time&#34;:&#34;2020-06-15T15:14:14Z&#34;}
 
 $ ./_bin/logproxy v0.2.0
 _log/v0.2.0/list.txt
@@ -18420,7 +18420,7 @@ v0.0.1
 v0.1.0
 
 _log/v0.2.0/latest.json
-{"Version":"v0.1.0","Time":"2020-06-15T15:14:14Z"}
+{&#34;Version&#34;:&#34;v0.1.0&#34;,&#34;Time&#34;:&#34;2020-06-15T15:14:14Z&#34;}
 
 $ ./_bin/logproxy v0.2.0
 _log/v0.2.0/list.txt
@@ -18428,7 +18428,7 @@ v0.0.1
 v0.1.0
 
 _log/v0.2.0/latest.json
-{"Version":"v0.1.0","Time":"2020-06-15T15:14:14Z"}</code></pre>
+{&#34;Version&#34;:&#34;v0.1.0&#34;,&#34;Time&#34;:&#34;2020-06-15T15:14:14Z&#34;}</code></pre>
                 </div>
               </div>
             </div>
@@ -30554,14 +30554,14 @@ _log/v0.2.0/latest.json
                   <pre><code class='language-go'>// Tell the linker that the libc_* functions are to be found
 // in a system library, with the libc_ prefix missing.
 
-//go:cgo_import_dynamic libc_pthread_attr_init pthread_attr_init "/usr/lib/libSystem.B.dylib"
-//go:cgo_import_dynamic libc_pthread_attr_getstacksize pthread_attr_getstacksize "/usr/lib/libSystem.B.dylib"
-//go:cgo_import_dynamic libc_pthread_attr_setdetachstate pthread_attr_setdetachstate "/usr/lib/libSystem.B.dylib"
-//go:cgo_import_dynamic libc_pthread_create pthread_create "/usr/lib/libSystem.B.dylib"
-//go:cgo_import_dynamic libc_pthread_self pthread_self "/usr/lib/libSystem.B.dylib"
-//go:cgo_import_dynamic libc_pthread_kill pthread_kill "/usr/lib/libSystem.B.dylib"
-//go:cgo_import_dynamic libc_exit exit "/usr/lib/libSystem.B.dylib"
-//go:cgo_import_dynamic libc_raise raise "/usr/lib/libSystem.B.dylib"</code></pre>
+//go:cgo_import_dynamic libc_pthread_attr_init pthread_attr_init &#34;/usr/lib/libSystem.B.dylib&#34;
+//go:cgo_import_dynamic libc_pthread_attr_getstacksize pthread_attr_getstacksize &#34;/usr/lib/libSystem.B.dylib&#34;
+//go:cgo_import_dynamic libc_pthread_attr_setdetachstate pthread_attr_setdetachstate &#34;/usr/lib/libSystem.B.dylib&#34;
+//go:cgo_import_dynamic libc_pthread_create pthread_create &#34;/usr/lib/libSystem.B.dylib&#34;
+//go:cgo_import_dynamic libc_pthread_self pthread_self &#34;/usr/lib/libSystem.B.dylib&#34;
+//go:cgo_import_dynamic libc_pthread_kill pthread_kill &#34;/usr/lib/libSystem.B.dylib&#34;
+//go:cgo_import_dynamic libc_exit exit &#34;/usr/lib/libSystem.B.dylib&#34;
+//go:cgo_import_dynamic libc_raise raise &#34;/usr/lib/libSystem.B.dylib&#34;</code></pre>
                 </div>
               </div>
             </div>
@@ -31938,103 +31938,103 @@ _log/v0.2.0/latest.json
                   <a href="/slacklog/files/F015RD5CZFZ/goextratype.vim" target="_blank" rel="noopener noreferrer">
                   <span class="f5">[[ダウンロード: goextratype.vim(Plain Text)]]</span>
                   </a>
-                  <pre><code class='language-none'>syn match goExtraType /\<tar\.\(Format\|Header\|Reader\|Writer\)\>/
-syn match goExtraType /\<zip\.\(Compressor\|Decompressor\|File\|FileHeader\|ReadCloser\|Reader\|Writer\)\>/
-syn match goExtraType /\<bufio\.\(ReadWriter\|Reader\|Scanner\|SplitFunc\|Writer\)\>/
-syn match goExtraType /\<bytes\.\(Buffer\|Reader\)\>/
-syn match goExtraType /\<bzip2\.\(StructuralError\)\>/
-syn match goExtraType /\<flate\.\(CorruptInputError\|InternalError\|ReadError\|Reader\|Resetter\|WriteError\|Writer\)\>/
-syn match goExtraType /\<gzip\.\(Header\|Reader\|Writer\)\>/
-syn match goExtraType /\<lzw\.\(Order\)\>/
-syn match goExtraType /\<zlib\.\(Resetter\|Writer\)\>/
-syn match goExtraType /\<list\.\(Element\|List\)\>/
-syn match goExtraType /\<ring\.\(Ring\)\>/
-syn match goExtraType /\<context\.\(CancelFunc\|Context\)\>/
-syn match goExtraType /\<crypto\.\(Decrypter\|DecrypterOpts\|Hash\|PrivateKey\|PublicKey\|Signer\|SignerOpts\)\>/
-syn match goExtraType /\<aes\.\(KeySizeError\)\>/
-syn match goExtraType /\<cipher\.\(AEAD\|Block\|BlockMode\|Stream\|StreamReader\|StreamWriter\)\>/
-syn match goExtraType /\<des\.\(KeySizeError\)\>/
-syn match goExtraType /\<dsa\.\(ParameterSizes\|Parameters\|PrivateKey\|PublicKey\)\>/
-syn match goExtraType /\<ecdsa\.\(PrivateKey\|PublicKey\)\>/
-syn match goExtraType /\<ed25519\.\(PrivateKey\|PublicKey\)\>/
-syn match goExtraType /\<elliptic\.\(Curve\|CurveParams\)\>/
-syn match goExtraType /\<rc4\.\(Cipher\|KeySizeError\)\>/
-syn match goExtraType /\<rsa\.\(CRTValue\|OAEPOptions\|PKCS1v15DecryptOptions\|PSSOptions\|PrecomputedValues\|PrivateKey\|PublicKey\)\>/
-syn match goExtraType /\<tls\.\(Certificate\|CertificateRequestInfo\|CipherSuite\|ClientAuthType\|ClientHelloInfo\|ClientSessionCache\|ClientSessionState\|Config\|Conn\|ConnectionState\|CurveID\|RecordHeaderError\|RenegotiationSupport\|SignatureScheme\)\>/
-syn match goExtraType /\<x509\.\(CertPool\|Certificate\|CertificateInvalidError\|CertificateRequest\|ConstraintViolationError\|ExtKeyUsage\|HostnameError\|InsecureAlgorithmError\|InvalidReason\|KeyUsage\|PEMCipher\|PublicKeyAlgorithm\|SignatureAlgorithm\|SystemRootsError\|UnhandledCriticalExtension\|UnknownAuthorityError\|VerifyOptions\)\>/
-syn match goExtraType /\<pkix\.\(AlgorithmIdentifier\|AttributeTypeAndValue\|AttributeTypeAndValueSET\|CertificateList\|Extension\|Name\|RDNSequence\|RelativeDistinguishedNameSET\|RevokedCertificate\|TBSCertificateList\)\>/
-syn match goExtraType /\<sql\.\(ColumnType\|Conn\|DB\|DBStats\|IsolationLevel\|NamedArg\|NullBool\|NullFloat64\|NullInt32\|NullInt64\|NullString\|NullTime\|Out\|RawBytes\|Result\|Row\|Rows\|Scanner\|Stmt\|Tx\|TxOptions\)\>/
-syn match goExtraType /\<gosym\.\(DecodingError\|Func\|LineTable\|Obj\|Sym\|Table\|UnknownFileError\|UnknownLineError\)\>/
-syn match goExtraType /\<encoding\.\(BinaryMarshaler\|BinaryUnmarshaler\|TextMarshaler\|TextUnmarshaler\)\>/
-syn match goExtraType /\<ascii85\.\(CorruptInputError\)\>/
-syn match goExtraType /\<asn1\.\(BitString\|Enumerated\|Flag\|ObjectIdentifier\|RawContent\|RawValue\|StructuralError\|SyntaxError\)\>/
-syn match goExtraType /\<base32\.\(CorruptInputError\|Encoding\)\>/
-syn match goExtraType /\<base64\.\(CorruptInputError\|Encoding\)\>/
-syn match goExtraType /\<binary\.\(ByteOrder\)\>/
-syn match goExtraType /\<csv\.\(ParseError\|Reader\|Writer\)\>/
-syn match goExtraType /\<gob\.\(CommonType\|Decoder\|Encoder\|GobDecoder\|GobEncoder\)\>/
-syn match goExtraType /\<hex\.\(InvalidByteError\)\>/
-syn match goExtraType /\<json\.\(Decoder\|Delim\|Encoder\|InvalidUTF8Error\|InvalidUnmarshalError\|Marshaler\|MarshalerError\|Number\|RawMessage\|SyntaxError\|Token\|UnmarshalFieldError\|UnmarshalTypeError\|Unmarshaler\|UnsupportedTypeError\|UnsupportedValueError\)\>/
-syn match goExtraType /\<pem\.\(Block\)\>/
-syn match goExtraType /\<xml\.\(Attr\|CharData\|Comment\|Decoder\|Directive\|Encoder\|EndElement\|Marshaler\|MarshalerAttr\|Name\|ProcInst\|StartElement\|SyntaxError\|TagPathError\|Token\|TokenReader\|UnmarshalError\|Unmarshaler\|UnmarshalerAttr\|UnsupportedTypeError\)\>/
-syn match goExtraType /\<expvar\.\(Float\|Func\|Int\|KeyValue\|Map\|String\|Var\)\>/
-syn match goExtraType /\<flag\.\(ErrorHandling\|Flag\|FlagSet\|Getter\|Value\)\>/
-syn match goExtraType /\<fmt\.\(Formatter\|GoStringer\|ScanState\|Scanner\|State\|Stringer\)\>/
-syn match goExtraType /\<hash\.\(Hash\|Hash32\|Hash64\)\>/
-syn match goExtraType /\<crc32\.\(Table\)\>/
-syn match goExtraType /\<crc64\.\(Table\)\>/
-syn match goExtraType /\<maphash\.\(Hash\|Seed\)\>/
-syn match goExtraType /\<template\.\(CSS\|Error\|ErrorCode\|FuncMap\|HTML\|HTMLAttr\|JS\|JSStr\|Srcset\|Template\|URL\)\>/
-syn match goExtraType /\<image\.\(Alpha\|Alpha16\|CMYK\|Config\|Gray\|Gray16\|Image\|NRGBA\|NRGBA64\|NYCbCrA\|Paletted\|PalettedImage\|Point\|RGBA\|RGBA64\|Rectangle\|Uniform\|YCbCr\|YCbCrSubsampleRatio\)\>/
-syn match goExtraType /\<color\.\(Alpha\|Alpha16\|CMYK\|Color\|Gray\|Gray16\|Model\|NRGBA\|NRGBA64\|NYCbCrA\|Palette\|RGBA\|RGBA64\|YCbCr\)\>/
-syn match goExtraType /\<draw\.\(Drawer\|Image\|Op\|Quantizer\)\>/
-syn match goExtraType /\<gif\.\(GIF\|Options\)\>/
-syn match goExtraType /\<jpeg\.\(FormatError\|Options\|Reader\|UnsupportedError\)\>/
-syn match goExtraType /\<png\.\(CompressionLevel\|Encoder\|EncoderBuffer\|EncoderBufferPool\|FormatError\|UnsupportedError\)\>/
-syn match goExtraType /\<suffixarray\.\(Index\)\>/
-syn match goExtraType /\<io\.\(ByteReader\|ByteScanner\|ByteWriter\|Closer\|LimitedReader\|PipeReader\|PipeWriter\|ReadCloser\|ReadSeeker\|ReadWriteCloser\|ReadWriteSeeker\|ReadWriter\|Reader\|ReaderAt\|ReaderFrom\|RuneReader\|RuneScanner\|SectionReader\|Seeker\|StringWriter\|WriteCloser\|WriteSeeker\|Writer\|WriterAt\|WriterTo\)\>/
-syn match goExtraType /\<log\.\(Logger\)\>/
-syn match goExtraType /\<syslog\.\(Priority\|Writer\)\>/
-syn match goExtraType /\<big\.\(Accuracy\|ErrNaN\|Float\|Int\|Rat\|RoundingMode\|Word\)\>/
-syn match goExtraType /\<rand\.\(Rand\|Source\|Source64\|Zipf\)\>/
-syn match goExtraType /\<mime\.\(WordDecoder\|WordEncoder\)\>/
-syn match goExtraType /\<multipart\.\(File\|FileHeader\|Form\|Part\|Reader\|Writer\)\>/
-syn match goExtraType /\<quotedprintable\.\(Reader\|Writer\)\>/
-syn match goExtraType /\<net\.\(Addr\|AddrError\|Buffers\|Conn\|DNSConfigError\|DNSError\|Dialer\|Error\|Flags\|HardwareAddr\|IP\|IPAddr\|IPConn\|IPMask\|IPNet\|Interface\|InvalidAddrError\|ListenConfig\|Listener\|MX\|NS\|OpError\|PacketConn\|ParseError\|Resolver\|SRV\|TCPAddr\|TCPConn\|TCPListener\|UDPAddr\|UDPConn\|UnixAddr\|UnixConn\|UnixListener\|UnknownNetworkError\)\>/
-syn match goExtraType /\<http\.\(Client\|CloseNotifier\|ConnState\|Cookie\|CookieJar\|Dir\|File\|FileSystem\|Flusher\|Handler\|HandlerFunc\|Header\|Hijacker\|ProtocolError\|PushOptions\|Pusher\|Request\|Response\|ResponseWriter\|RoundTripper\|SameSite\|ServeMux\|Server\|Transport\)\>/
-syn match goExtraType /\<cgi\.\(Handler\)\>/
-syn match goExtraType /\<cookiejar\.\(Jar\|Options\|PublicSuffixList\)\>/
-syn match goExtraType /\<httptest\.\(ResponseRecorder\|Server\)\>/
-syn match goExtraType /\<httptrace\.\(ClientTrace\|DNSDoneInfo\|DNSStartInfo\|GotConnInfo\|WroteRequestInfo\)\>/
-syn match goExtraType /\<httputil\.\(BufferPool\|ClientConn\|ReverseProxy\|ServerConn\)\>/
-syn match goExtraType /\<mail\.\(Address\|AddressParser\|Header\|Message\)\>/
-syn match goExtraType /\<rpc\.\(Call\|Client\|ClientCodec\|Request\|Response\|Server\|ServerCodec\|ServerError\)\>/
-syn match goExtraType /\<smtp\.\(Auth\|Client\|ServerInfo\)\>/
-syn match goExtraType /\<textproto\.\(Conn\|Error\|MIMEHeader\|Pipeline\|ProtocolError\|Reader\|Writer\)\>/
-syn match goExtraType /\<url\.\(Error\|EscapeError\|InvalidHostError\|URL\|Userinfo\|Values\)\>/
-syn match goExtraType /\<os\.\(File\|FileInfo\|FileMode\|LinkError\|PathError\|ProcAttr\|Process\|ProcessState\|Signal\|SyscallError\)\>/
-syn match goExtraType /\<exec\.\(Cmd\|Error\|ExitError\)\>/
-syn match goExtraType /\<filepath\.\(WalkFunc\)\>/
-syn match goExtraType /\<plugin\.\(Plugin\|Symbol\)\>/
-syn match goExtraType /\<reflect\.\(ChanDir\|Kind\|MapIter\|Method\|SelectCase\|SelectDir\|SliceHeader\|StringHeader\|StructField\|StructTag\|Type\|Value\|ValueError\)\>/
-syn match goExtraType /\<regexp\.\(Regexp\)\>/
-syn match goExtraType /\<syntax\.\(EmptyOp\|Error\|ErrorCode\|Flags\|Inst\|InstOp\|Op\|Prog\|Regexp\)\>/
-syn match goExtraType /\<debug\.\(BuildInfo\|GCStats\|Module\)\>/
-syn match goExtraType /\<pprof\.\(LabelSet\|Profile\)\>/
-syn match goExtraType /\<trace\.\(Region\|Task\)\>/
-syn match goExtraType /\<sort\.\(Float64Slice\|IntSlice\|Interface\|StringSlice\)\>/
-syn match goExtraType /\<strconv\.\(NumError\)\>/
-syn match goExtraType /\<strings\.\(Builder\|Reader\|Replacer\)\>/
-syn match goExtraType /\<sync\.\(Cond\|Locker\|Map\|Mutex\|Once\|Pool\|RWMutex\|WaitGroup\)\>/
-syn match goExtraType /\<atomic\.\(Value\)\>/
-syn match goExtraType /\<js\.\(Error\|Func\|Type\|Value\|ValueError\|Wrapper\)\>/
-syn match goExtraType /\<testing\.\(B\|BenchmarkResult\|Cover\|CoverBlock\|InternalBenchmark\|InternalExample\|InternalTest\|M\|PB\|T\|TB\)\>/
-syn match goExtraType /\<quick\.\(CheckEqualError\|CheckError\|Config\|Generator\|SetupError\)\>/
-syn match goExtraType /\<tabwriter\.\(Writer\)\>/
-syn match goExtraType /\<template\.\(ExecError\|FuncMap\|Template\)\>/
-syn match goExtraType /\<time\.\(Duration\|Location\|Month\|ParseError\|Ticker\|Time\|Timer\|Weekday\)\>/
-syn match goExtraType /\<unicode\.\(CaseRange\|Range16\|Range32\|RangeTable\|SpecialCase\)\>/
-syn match goExtraType /\<unsafe\.\(ArbitraryType\|Pointer\)\>/</code></pre>
+                  <pre><code class='language-none'>syn match goExtraType /\&lt;tar\.\(Format\|Header\|Reader\|Writer\)\&gt;/
+syn match goExtraType /\&lt;zip\.\(Compressor\|Decompressor\|File\|FileHeader\|ReadCloser\|Reader\|Writer\)\&gt;/
+syn match goExtraType /\&lt;bufio\.\(ReadWriter\|Reader\|Scanner\|SplitFunc\|Writer\)\&gt;/
+syn match goExtraType /\&lt;bytes\.\(Buffer\|Reader\)\&gt;/
+syn match goExtraType /\&lt;bzip2\.\(StructuralError\)\&gt;/
+syn match goExtraType /\&lt;flate\.\(CorruptInputError\|InternalError\|ReadError\|Reader\|Resetter\|WriteError\|Writer\)\&gt;/
+syn match goExtraType /\&lt;gzip\.\(Header\|Reader\|Writer\)\&gt;/
+syn match goExtraType /\&lt;lzw\.\(Order\)\&gt;/
+syn match goExtraType /\&lt;zlib\.\(Resetter\|Writer\)\&gt;/
+syn match goExtraType /\&lt;list\.\(Element\|List\)\&gt;/
+syn match goExtraType /\&lt;ring\.\(Ring\)\&gt;/
+syn match goExtraType /\&lt;context\.\(CancelFunc\|Context\)\&gt;/
+syn match goExtraType /\&lt;crypto\.\(Decrypter\|DecrypterOpts\|Hash\|PrivateKey\|PublicKey\|Signer\|SignerOpts\)\&gt;/
+syn match goExtraType /\&lt;aes\.\(KeySizeError\)\&gt;/
+syn match goExtraType /\&lt;cipher\.\(AEAD\|Block\|BlockMode\|Stream\|StreamReader\|StreamWriter\)\&gt;/
+syn match goExtraType /\&lt;des\.\(KeySizeError\)\&gt;/
+syn match goExtraType /\&lt;dsa\.\(ParameterSizes\|Parameters\|PrivateKey\|PublicKey\)\&gt;/
+syn match goExtraType /\&lt;ecdsa\.\(PrivateKey\|PublicKey\)\&gt;/
+syn match goExtraType /\&lt;ed25519\.\(PrivateKey\|PublicKey\)\&gt;/
+syn match goExtraType /\&lt;elliptic\.\(Curve\|CurveParams\)\&gt;/
+syn match goExtraType /\&lt;rc4\.\(Cipher\|KeySizeError\)\&gt;/
+syn match goExtraType /\&lt;rsa\.\(CRTValue\|OAEPOptions\|PKCS1v15DecryptOptions\|PSSOptions\|PrecomputedValues\|PrivateKey\|PublicKey\)\&gt;/
+syn match goExtraType /\&lt;tls\.\(Certificate\|CertificateRequestInfo\|CipherSuite\|ClientAuthType\|ClientHelloInfo\|ClientSessionCache\|ClientSessionState\|Config\|Conn\|ConnectionState\|CurveID\|RecordHeaderError\|RenegotiationSupport\|SignatureScheme\)\&gt;/
+syn match goExtraType /\&lt;x509\.\(CertPool\|Certificate\|CertificateInvalidError\|CertificateRequest\|ConstraintViolationError\|ExtKeyUsage\|HostnameError\|InsecureAlgorithmError\|InvalidReason\|KeyUsage\|PEMCipher\|PublicKeyAlgorithm\|SignatureAlgorithm\|SystemRootsError\|UnhandledCriticalExtension\|UnknownAuthorityError\|VerifyOptions\)\&gt;/
+syn match goExtraType /\&lt;pkix\.\(AlgorithmIdentifier\|AttributeTypeAndValue\|AttributeTypeAndValueSET\|CertificateList\|Extension\|Name\|RDNSequence\|RelativeDistinguishedNameSET\|RevokedCertificate\|TBSCertificateList\)\&gt;/
+syn match goExtraType /\&lt;sql\.\(ColumnType\|Conn\|DB\|DBStats\|IsolationLevel\|NamedArg\|NullBool\|NullFloat64\|NullInt32\|NullInt64\|NullString\|NullTime\|Out\|RawBytes\|Result\|Row\|Rows\|Scanner\|Stmt\|Tx\|TxOptions\)\&gt;/
+syn match goExtraType /\&lt;gosym\.\(DecodingError\|Func\|LineTable\|Obj\|Sym\|Table\|UnknownFileError\|UnknownLineError\)\&gt;/
+syn match goExtraType /\&lt;encoding\.\(BinaryMarshaler\|BinaryUnmarshaler\|TextMarshaler\|TextUnmarshaler\)\&gt;/
+syn match goExtraType /\&lt;ascii85\.\(CorruptInputError\)\&gt;/
+syn match goExtraType /\&lt;asn1\.\(BitString\|Enumerated\|Flag\|ObjectIdentifier\|RawContent\|RawValue\|StructuralError\|SyntaxError\)\&gt;/
+syn match goExtraType /\&lt;base32\.\(CorruptInputError\|Encoding\)\&gt;/
+syn match goExtraType /\&lt;base64\.\(CorruptInputError\|Encoding\)\&gt;/
+syn match goExtraType /\&lt;binary\.\(ByteOrder\)\&gt;/
+syn match goExtraType /\&lt;csv\.\(ParseError\|Reader\|Writer\)\&gt;/
+syn match goExtraType /\&lt;gob\.\(CommonType\|Decoder\|Encoder\|GobDecoder\|GobEncoder\)\&gt;/
+syn match goExtraType /\&lt;hex\.\(InvalidByteError\)\&gt;/
+syn match goExtraType /\&lt;json\.\(Decoder\|Delim\|Encoder\|InvalidUTF8Error\|InvalidUnmarshalError\|Marshaler\|MarshalerError\|Number\|RawMessage\|SyntaxError\|Token\|UnmarshalFieldError\|UnmarshalTypeError\|Unmarshaler\|UnsupportedTypeError\|UnsupportedValueError\)\&gt;/
+syn match goExtraType /\&lt;pem\.\(Block\)\&gt;/
+syn match goExtraType /\&lt;xml\.\(Attr\|CharData\|Comment\|Decoder\|Directive\|Encoder\|EndElement\|Marshaler\|MarshalerAttr\|Name\|ProcInst\|StartElement\|SyntaxError\|TagPathError\|Token\|TokenReader\|UnmarshalError\|Unmarshaler\|UnmarshalerAttr\|UnsupportedTypeError\)\&gt;/
+syn match goExtraType /\&lt;expvar\.\(Float\|Func\|Int\|KeyValue\|Map\|String\|Var\)\&gt;/
+syn match goExtraType /\&lt;flag\.\(ErrorHandling\|Flag\|FlagSet\|Getter\|Value\)\&gt;/
+syn match goExtraType /\&lt;fmt\.\(Formatter\|GoStringer\|ScanState\|Scanner\|State\|Stringer\)\&gt;/
+syn match goExtraType /\&lt;hash\.\(Hash\|Hash32\|Hash64\)\&gt;/
+syn match goExtraType /\&lt;crc32\.\(Table\)\&gt;/
+syn match goExtraType /\&lt;crc64\.\(Table\)\&gt;/
+syn match goExtraType /\&lt;maphash\.\(Hash\|Seed\)\&gt;/
+syn match goExtraType /\&lt;template\.\(CSS\|Error\|ErrorCode\|FuncMap\|HTML\|HTMLAttr\|JS\|JSStr\|Srcset\|Template\|URL\)\&gt;/
+syn match goExtraType /\&lt;image\.\(Alpha\|Alpha16\|CMYK\|Config\|Gray\|Gray16\|Image\|NRGBA\|NRGBA64\|NYCbCrA\|Paletted\|PalettedImage\|Point\|RGBA\|RGBA64\|Rectangle\|Uniform\|YCbCr\|YCbCrSubsampleRatio\)\&gt;/
+syn match goExtraType /\&lt;color\.\(Alpha\|Alpha16\|CMYK\|Color\|Gray\|Gray16\|Model\|NRGBA\|NRGBA64\|NYCbCrA\|Palette\|RGBA\|RGBA64\|YCbCr\)\&gt;/
+syn match goExtraType /\&lt;draw\.\(Drawer\|Image\|Op\|Quantizer\)\&gt;/
+syn match goExtraType /\&lt;gif\.\(GIF\|Options\)\&gt;/
+syn match goExtraType /\&lt;jpeg\.\(FormatError\|Options\|Reader\|UnsupportedError\)\&gt;/
+syn match goExtraType /\&lt;png\.\(CompressionLevel\|Encoder\|EncoderBuffer\|EncoderBufferPool\|FormatError\|UnsupportedError\)\&gt;/
+syn match goExtraType /\&lt;suffixarray\.\(Index\)\&gt;/
+syn match goExtraType /\&lt;io\.\(ByteReader\|ByteScanner\|ByteWriter\|Closer\|LimitedReader\|PipeReader\|PipeWriter\|ReadCloser\|ReadSeeker\|ReadWriteCloser\|ReadWriteSeeker\|ReadWriter\|Reader\|ReaderAt\|ReaderFrom\|RuneReader\|RuneScanner\|SectionReader\|Seeker\|StringWriter\|WriteCloser\|WriteSeeker\|Writer\|WriterAt\|WriterTo\)\&gt;/
+syn match goExtraType /\&lt;log\.\(Logger\)\&gt;/
+syn match goExtraType /\&lt;syslog\.\(Priority\|Writer\)\&gt;/
+syn match goExtraType /\&lt;big\.\(Accuracy\|ErrNaN\|Float\|Int\|Rat\|RoundingMode\|Word\)\&gt;/
+syn match goExtraType /\&lt;rand\.\(Rand\|Source\|Source64\|Zipf\)\&gt;/
+syn match goExtraType /\&lt;mime\.\(WordDecoder\|WordEncoder\)\&gt;/
+syn match goExtraType /\&lt;multipart\.\(File\|FileHeader\|Form\|Part\|Reader\|Writer\)\&gt;/
+syn match goExtraType /\&lt;quotedprintable\.\(Reader\|Writer\)\&gt;/
+syn match goExtraType /\&lt;net\.\(Addr\|AddrError\|Buffers\|Conn\|DNSConfigError\|DNSError\|Dialer\|Error\|Flags\|HardwareAddr\|IP\|IPAddr\|IPConn\|IPMask\|IPNet\|Interface\|InvalidAddrError\|ListenConfig\|Listener\|MX\|NS\|OpError\|PacketConn\|ParseError\|Resolver\|SRV\|TCPAddr\|TCPConn\|TCPListener\|UDPAddr\|UDPConn\|UnixAddr\|UnixConn\|UnixListener\|UnknownNetworkError\)\&gt;/
+syn match goExtraType /\&lt;http\.\(Client\|CloseNotifier\|ConnState\|Cookie\|CookieJar\|Dir\|File\|FileSystem\|Flusher\|Handler\|HandlerFunc\|Header\|Hijacker\|ProtocolError\|PushOptions\|Pusher\|Request\|Response\|ResponseWriter\|RoundTripper\|SameSite\|ServeMux\|Server\|Transport\)\&gt;/
+syn match goExtraType /\&lt;cgi\.\(Handler\)\&gt;/
+syn match goExtraType /\&lt;cookiejar\.\(Jar\|Options\|PublicSuffixList\)\&gt;/
+syn match goExtraType /\&lt;httptest\.\(ResponseRecorder\|Server\)\&gt;/
+syn match goExtraType /\&lt;httptrace\.\(ClientTrace\|DNSDoneInfo\|DNSStartInfo\|GotConnInfo\|WroteRequestInfo\)\&gt;/
+syn match goExtraType /\&lt;httputil\.\(BufferPool\|ClientConn\|ReverseProxy\|ServerConn\)\&gt;/
+syn match goExtraType /\&lt;mail\.\(Address\|AddressParser\|Header\|Message\)\&gt;/
+syn match goExtraType /\&lt;rpc\.\(Call\|Client\|ClientCodec\|Request\|Response\|Server\|ServerCodec\|ServerError\)\&gt;/
+syn match goExtraType /\&lt;smtp\.\(Auth\|Client\|ServerInfo\)\&gt;/
+syn match goExtraType /\&lt;textproto\.\(Conn\|Error\|MIMEHeader\|Pipeline\|ProtocolError\|Reader\|Writer\)\&gt;/
+syn match goExtraType /\&lt;url\.\(Error\|EscapeError\|InvalidHostError\|URL\|Userinfo\|Values\)\&gt;/
+syn match goExtraType /\&lt;os\.\(File\|FileInfo\|FileMode\|LinkError\|PathError\|ProcAttr\|Process\|ProcessState\|Signal\|SyscallError\)\&gt;/
+syn match goExtraType /\&lt;exec\.\(Cmd\|Error\|ExitError\)\&gt;/
+syn match goExtraType /\&lt;filepath\.\(WalkFunc\)\&gt;/
+syn match goExtraType /\&lt;plugin\.\(Plugin\|Symbol\)\&gt;/
+syn match goExtraType /\&lt;reflect\.\(ChanDir\|Kind\|MapIter\|Method\|SelectCase\|SelectDir\|SliceHeader\|StringHeader\|StructField\|StructTag\|Type\|Value\|ValueError\)\&gt;/
+syn match goExtraType /\&lt;regexp\.\(Regexp\)\&gt;/
+syn match goExtraType /\&lt;syntax\.\(EmptyOp\|Error\|ErrorCode\|Flags\|Inst\|InstOp\|Op\|Prog\|Regexp\)\&gt;/
+syn match goExtraType /\&lt;debug\.\(BuildInfo\|GCStats\|Module\)\&gt;/
+syn match goExtraType /\&lt;pprof\.\(LabelSet\|Profile\)\&gt;/
+syn match goExtraType /\&lt;trace\.\(Region\|Task\)\&gt;/
+syn match goExtraType /\&lt;sort\.\(Float64Slice\|IntSlice\|Interface\|StringSlice\)\&gt;/
+syn match goExtraType /\&lt;strconv\.\(NumError\)\&gt;/
+syn match goExtraType /\&lt;strings\.\(Builder\|Reader\|Replacer\)\&gt;/
+syn match goExtraType /\&lt;sync\.\(Cond\|Locker\|Map\|Mutex\|Once\|Pool\|RWMutex\|WaitGroup\)\&gt;/
+syn match goExtraType /\&lt;atomic\.\(Value\)\&gt;/
+syn match goExtraType /\&lt;js\.\(Error\|Func\|Type\|Value\|ValueError\|Wrapper\)\&gt;/
+syn match goExtraType /\&lt;testing\.\(B\|BenchmarkResult\|Cover\|CoverBlock\|InternalBenchmark\|InternalExample\|InternalTest\|M\|PB\|T\|TB\)\&gt;/
+syn match goExtraType /\&lt;quick\.\(CheckEqualError\|CheckError\|Config\|Generator\|SetupError\)\&gt;/
+syn match goExtraType /\&lt;tabwriter\.\(Writer\)\&gt;/
+syn match goExtraType /\&lt;template\.\(ExecError\|FuncMap\|Template\)\&gt;/
+syn match goExtraType /\&lt;time\.\(Duration\|Location\|Month\|ParseError\|Ticker\|Time\|Timer\|Weekday\)\&gt;/
+syn match goExtraType /\&lt;unicode\.\(CaseRange\|Range16\|Range32\|RangeTable\|SpecialCase\)\&gt;/
+syn match goExtraType /\&lt;unsafe\.\(ArbitraryType\|Pointer\)\&gt;/</code></pre>
                 </div>
               </div>
             </div>

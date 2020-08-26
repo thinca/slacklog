@@ -32560,12 +32560,12 @@
                   <span class="f5">[[ダウンロード: 無題(Plain Text)]]</span>
                   </a>
                   <pre><code class='language-none'>let s:jobs = {}
-let s:plugdir = "~/.vim/pack/temp/start"
+let s:plugdir = &#34;~/.vim/pack/temp/start&#34;
 function! s:gitclone_end(ch) abort
   let j = ch_getjob(a:ch)
   packloadall
   helptags ALL
-  echomsg s:jobs[j] .. " installed."
+  echomsg s:jobs[j] .. &#34; installed.&#34;
 endfunction
 
 function! s:echo(_, msg) abort
@@ -32573,15 +32573,15 @@ function! s:echo(_, msg) abort
 endfunction
 
 function! s:gitclone_temp(url) abort
-  let cmd = printf('mkdir -p %s ; cd %s ; git clone --progress %s |& stdbuf -i0 -o0 tr "\r" "\n"', s:plugdir, s:plugdir, a:url)
-  let j = job_start(["bash", "-c", cmd], {
-        \ "out_cb": funcref("s:echo"),
-        \ "close_cb": funcref("s:gitclone_end"),
+  let cmd = printf(&#39;mkdir -p %s ; cd %s ; git clone --progress %s |&amp; stdbuf -i0 -o0 tr &#34;\r&#34; &#34;\n&#34;&#39;, s:plugdir, s:plugdir, a:url)
+  let j = job_start([&#34;bash&#34;, &#34;-c&#34;, cmd], {
+        \ &#34;out_cb&#34;: funcref(&#34;s:echo&#34;),
+        \ &#34;close_cb&#34;: funcref(&#34;s:gitclone_end&#34;),
         \ })
   let s:jobs[j] = a:url
 endfunction
 
-command! -nargs=1 Templug call s:gitclone_temp(<f-args>)</code></pre>
+command! -nargs=1 Templug call s:gitclone_temp(&lt;f-args&gt;)</code></pre>
                 </div>
               </div>
             </div>

@@ -11071,17 +11071,17 @@
                   <pre><code class='language-none'>function! s:hoge() abort
   let cl = getcmdline()
   function! s:sink(line) abort closure
-    call feedkeys(":" .. cl .. a:line, "n")
+    call feedkeys(&#34;:&#34; .. cl .. a:line, &#34;n&#34;)
   endfunction
   function! s:run(...) abort closure
-    call fzf#run({'source': 'ls -1', 'sink': funcref("s:sink")})
+    call fzf#run({&#39;source&#39;: &#39;ls -1&#39;, &#39;sink&#39;: funcref(&#34;s:sink&#34;)})
   endfunction
-  call timer_start(0, funcref("s:run"))
+  call timer_start(0, funcref(&#34;s:run&#34;))
   redraw
-  return "\<C-c>"
+  return &#34;\&lt;C-c&gt;&#34;
 endfunction
 
-cnoremap <expr> <Tab> <SID>hoge()</code></pre>
+cnoremap &lt;expr&gt; &lt;Tab&gt; &lt;SID&gt;hoge()</code></pre>
                 </div>
               </div>
             </div>
@@ -15447,36 +15447,36 @@ cnoremap <expr> <Tab> <SID>hoge()</code></pre>
                   <a href="/slacklog/files/F0175S6E1AA/investigate_syntax.vim" target="_blank" rel="noopener noreferrer">
                   <span class="f5">[[ダウンロード: investigate_syntax.vim(Plain Text)]]</span>
                   </a>
-                  <pre><code class='language-none'>" vim:set ts=8 sts=2 sw=2 tw=0 et:
+                  <pre><code class='language-none'>&#34; vim:set ts=8 sts=2 sw=2 tw=0 et:
 
 function! s:investigate_syntax()
-  let l:synstack = reverse(synstack(line("."), col(".")))
-  if l:synstack->len() == 0
-    echo "(NONE)"
+  let l:synstack = reverse(synstack(line(&#34;.&#34;), col(&#34;.&#34;)))
+  if l:synstack-&gt;len() == 0
+    echo &#34;(NONE)&#34;
     return
   endif
   let l:num = 0
-  let l:msg = ""
+  let l:msg = &#34;&#34;
   for id in l:synstack
-    if l:num > 0
-      let l:msg ..= " "
+    if l:num &gt; 0
+      let l:msg ..= &#34; &#34;
     endif
     let l:num += 1
-    let l:msg ..= printf("%d:%s", l:num, id->synIDattr("name"))
-    let l:id2 = id->synIDtrans()
+    let l:msg ..= printf(&#34;%d:%s&#34;, l:num, id-&gt;synIDattr(&#34;name&#34;))
+    let l:id2 = id-&gt;synIDtrans()
     if l:id2 == id
       continue
     endif
     while l:id2 != id
-      let l:msg ..= "->" .. l:id2->synIDattr("name")
+      let l:msg ..= &#34;-&gt;&#34; .. l:id2-&gt;synIDattr(&#34;name&#34;)
       let id = l:id2
-      let l:id2 = id->synIDtrans()
+      let l:id2 = id-&gt;synIDtrans()
     endwhile
   endfor
   echo l:msg
 endfunction
 
-nnoremap <F12> :call <SID>investigate_syntax()<CR></code></pre>
+nnoremap &lt;F12&gt; :call &lt;SID&gt;investigate_syntax()&lt;CR&gt;</code></pre>
                 </div>
               </div>
             </div>
@@ -28737,57 +28737,57 @@ nnoremap <F12> :call <SID>investigate_syntax()<CR></code></pre>
                   </a>
                   <pre><code class='language-diff'>$ diff /tmp/vim_bat /tmp/neovim_bat
 1c1
-< import { commands, ExtensionContext, workspace } from "coc.nvim"
+&lt; import { commands, ExtensionContext, workspace } from &#34;coc.nvim&#34;
 ---
-> import { commands, ExtensionContext, workspace } from "coc.nvim"
+&gt; import { commands, ExtensionContext, workspace } from &#34;coc.nvim&#34;
 3,10c3,10
-< import {
-<   initializeExtension,
-<   registerAutocmds,
-<   registerCommands,
-<   registerFunctions,
-<   registerProcesses,
-<   setRuntimePath,
-< } from "@/register/coc"
+&lt; import {
+&lt;   initializeExtension,
+&lt;   registerAutocmds,
+&lt;   registerCommands,
+&lt;   registerFunctions,
+&lt;   registerProcesses,
+&lt;   setRuntimePath,
+&lt; } from &#34;@/register/coc&#34;
 ---
-> import {
->   initializeExtension,
->   registerAutocmds,
->   registerCommands,
->   registerFunctions,
->   registerProcesses,
->   setRuntimePath,
-> } from "@/register/coc"
+&gt; import {
+&gt;   initializeExtension,
+&gt;   registerAutocmds,
+&gt;   registerCommands,
+&gt;   registerFunctions,
+&gt;   registerProcesses,
+&gt;   setRuntimePath,
+&gt; } from &#34;@/register/coc&#34;
 12,15c12,15
-< // eslint-disable-next-line @typescript-eslint/require-await
-< export async function activate(context: ExtensionContext): Promise<void> {
-<   await setRuntimePath(context, workspace)
-<   await initializeExtension(workspace)
+&lt; // eslint-disable-next-line @typescript-eslint/require-await
+&lt; export async function activate(context: ExtensionContext): Promise&lt;void&gt; {
+&lt;   await setRuntimePath(context, workspace)
+&lt;   await initializeExtension(workspace)
 ---
-> // eslint-disable-next-line @typescript-eslint/require-await
-> export async function activate(context: ExtensionContext): Promise<void> {
->   await setRuntimePath(context, workspace)
->   await initializeExtension(workspace)
+&gt; // eslint-disable-next-line @typescript-eslint/require-await
+&gt; export async function activate(context: ExtensionContext): Promise&lt;void&gt; {
+&gt;   await setRuntimePath(context, workspace)
+&gt;   await initializeExtension(workspace)
 17,22c17,22
-<   context.subscriptions.push(
-<     ...registerCommands(commands),
-<     ...registerProcesses(commands),
-<     ...registerFunctions(commands),
-<     ...registerAutocmds(workspace)
-<   )
+&lt;   context.subscriptions.push(
+&lt;     ...registerCommands(commands),
+&lt;     ...registerProcesses(commands),
+&lt;     ...registerFunctions(commands),
+&lt;     ...registerAutocmds(workspace)
+&lt;   )
 ---
->   context.subscriptions.push(
->     ...registerCommands(commands),
->     ...registerProcesses(commands),
->     ...registerFunctions(commands),
->     ...registerAutocmds(workspace)
->   )
+&gt;   context.subscriptions.push(
+&gt;     ...registerCommands(commands),
+&gt;     ...registerProcesses(commands),
+&gt;     ...registerFunctions(commands),
+&gt;     ...registerAutocmds(workspace)
+&gt;   )
 24,25c24,25
-<   await workspace.nvim.command("silent doautocmd User fzf_preview#initialized")
-< }
+&lt;   await workspace.nvim.command(&#34;silent doautocmd User fzf_preview#initialized&#34;)
+&lt; }
 ---
->   await workspace.nvim.command("silent doautocmd User fzf_preview#initialized")
-> }</code></pre>
+&gt;   await workspace.nvim.command(&#34;silent doautocmd User fzf_preview#initialized&#34;)
+&gt; }</code></pre>
                 </div>
               </div>
             </div>

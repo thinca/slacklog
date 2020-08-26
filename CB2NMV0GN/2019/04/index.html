@@ -1990,25 +1990,25 @@
                   <pre><code class='language-none'>% cat r.rb
 class String
   def deconstruct
-    raise "override"
+    raise &#34;override&#34;
   end
 end
 using Module.new {
   refine String do
     def deconstruct
-      raise "refine"
+      raise &#34;refine&#34;
     end
   end
 }
 
-case ""
+case &#34;&#34;
 in [a]
 end
 % ruby r.rb
 r.rb:14: warning: Pattern matching is experimental, and the behavior may change in future versions of Ruby!
 Traceback (most recent call last):
-	1: from r.rb:15:in `<main>'
-r.rb:9:in `deconstruct': refine (RuntimeError)</code></pre>
+	1: from r.rb:15:in `&lt;main&gt;&#39;
+r.rb:9:in `deconstruct&#39;: refine (RuntimeError)</code></pre>
                 </div>
               </div>
             </div>

@@ -3356,18 +3356,18 @@
                   <pre><code class='language-go'>package main
 
 import (
-	"fmt"
+	&#34;fmt&#34;
 )
 
 type Foo struct{}
 
 func main() {
-	a := &Foo{}
-	b := &Foo{}
+	a := &amp;Foo{}
+	b := &amp;Foo{}
 	fmt.Println(a == b)
 
 	// この行のコメントを外すと↑が true になる
-	//fmt.Printf("%p %p", a, b)
+	//fmt.Printf(&#34;%p %p&#34;, a, b)
 }</code></pre>
                 </div>
               </div>
@@ -17007,19 +17007,19 @@ func main() {
 //
 // Interpreting the heap statistics requires some knowledge of
 // how Go organizes memory. Go divides the virtual address
-// space of the heap into "spans", which are contiguous
+// space of the heap into &#34;spans&#34;, which are contiguous
 // regions of memory 8K or larger. A span may be in one of
 // three states:
 //
-// An "idle" span contains no objects or other data. The
+// An &#34;idle&#34; span contains no objects or other data. The
 // physical memory backing an idle span can be released back
 // to the OS (but the virtual address space never is), or it
-// can be converted into an "in use" or "stack" span.
+// can be converted into an &#34;in use&#34; or &#34;stack&#34; span.
 //
-// An "in use" span contains at least one heap object and may
+// An &#34;in use&#34; span contains at least one heap object and may
 // have free space available to allocate more heap objects.
 //
-// A "stack" span is used for goroutine stacks. Stack spans
+// A &#34;stack&#34; span is used for goroutine stacks. Stack spans
 // are not considered part of the heap. A span can change
 // between heap and stack memory; it is never used for both
 // simultaneously.</code></pre>
@@ -17208,11 +17208,11 @@ func main() {
 	// The hackery here rounds FixedStack0 up to a power of 2.
 	_FixedStack0 = _StackMin + _StackSystem
 	_FixedStack1 = _FixedStack0 - 1
-	_FixedStack2 = _FixedStack1 | (_FixedStack1 >> 1)
-	_FixedStack3 = _FixedStack2 | (_FixedStack2 >> 2)
-	_FixedStack4 = _FixedStack3 | (_FixedStack3 >> 4)
-	_FixedStack5 = _FixedStack4 | (_FixedStack4 >> 8)
-	_FixedStack6 = _FixedStack5 | (_FixedStack5 >> 16)
+	_FixedStack2 = _FixedStack1 | (_FixedStack1 &gt;&gt; 1)
+	_FixedStack3 = _FixedStack2 | (_FixedStack2 &gt;&gt; 2)
+	_FixedStack4 = _FixedStack3 | (_FixedStack3 &gt;&gt; 4)
+	_FixedStack5 = _FixedStack4 | (_FixedStack4 &gt;&gt; 8)
+	_FixedStack6 = _FixedStack5 | (_FixedStack5 &gt;&gt; 16)
 	_FixedStack  = _FixedStack6 + 1</code></pre>
                 </div>
               </div>
@@ -39217,27 +39217,27 @@ func main() {
                   <pre><code class='language-shell'>function update-go {
   echo updating go
   cd ~
-  local bin="\"$(go env GOPATH)/bin/\""
-  local fmt="\"%.$((${#$(go env GOPATH)}+5))s\""
-  fmt="$(
-    echo -n "{{if eq ${bin} (printf ${fmt} .Target)}}";
-    echo -n "{{.Target}} {{.ImportPath}}";
-    echo -n "{{end}}";
-  )" 
-  go list -f "${fmt}" all 2>/dev/null | while read line ; do
-    local pkg="${line##* }"
-    if [ -x "${line%% *}" ]; then
-      echo "update ${pkg}"
-      go get -u "${pkg}" || :
+  local bin=&#34;\&#34;$(go env GOPATH)/bin/\&#34;&#34;
+  local fmt=&#34;\&#34;%.$((${#$(go env GOPATH)}+5))s\&#34;&#34;
+  fmt=&#34;$(
+    echo -n &#34;{{if eq ${bin} (printf ${fmt} .Target)}}&#34;;
+    echo -n &#34;{{.Target}} {{.ImportPath}}&#34;;
+    echo -n &#34;{{end}}&#34;;
+  )&#34; 
+  go list -f &#34;${fmt}&#34; all 2&gt;/dev/null | while read line ; do
+    local pkg=&#34;${line##* }&#34;
+    if [ -x &#34;${line%% *}&#34; ]; then
+      echo &#34;update ${pkg}&#34;
+      go get -u &#34;${pkg}&#34; || :
     fi
   done
   # gogh list --primary --format full | while read project; do
-  #   cd "${project}"
-  #   echo "$(go list -f "${fmt}" ./... 2>/dev/null || :)" | while read line ; do
-  #     local pkg="${line##* }"
-  #     if [ -x "${line%% *}" ]; then
-  #       echo "update ${pkg}"
-  #       go get -u "${pkg}" || :
+  #   cd &#34;${project}&#34;
+  #   echo &#34;$(go list -f &#34;${fmt}&#34; ./... 2&gt;/dev/null || :)&#34; | while read line ; do
+  #     local pkg=&#34;${line##* }&#34;
+  #     if [ -x &#34;${line%% *}&#34; ]; then
+  #       echo &#34;update ${pkg}&#34;
+  #       go get -u &#34;${pkg}&#34; || :
   #     fi
   #   done
   # done

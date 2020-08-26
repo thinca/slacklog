@@ -1297,9 +1297,9 @@ index f25c47b53..6867fcb33 100644
  	    lua_pushvalue(L, pos);
 -	    luaV_CFuncState *state = ALLOC_CLEAR_ONE(luaV_CFuncState);
 +	    state = ALLOC_CLEAR_ONE(luaV_CFuncState);
- 	    state->lua_funcref = luaL_ref(L, LUA_REGISTRYINDEX);
- 	    state->L = L;
- 	    state->lua_tableref = LUA_NOREF;
+ 	    state-&gt;lua_funcref = luaL_ref(L, LUA_REGISTRYINDEX);
+ 	    state-&gt;L = L;
+ 	    state-&gt;lua_tableref = LUA_NOREF;
 @@ -639,8 +640,9 @@ luaV_totypval(lua_State *L, int pos, typval_T *tv)
  	}
  	case LUA_TTABLE:
@@ -1542,7 +1542,7 @@ Skipped:
 	Test_set_guifontwide(): Test not implemented yet for this GUI
 	Test_set_guiheadroom(): Feature/Option not supported by this GUI: guiheadroom
 	Test_set_guiheadroom(): Feature/Option not supported by this GUI: guiheadroom
-	Test_set_guioptions_for_p(): Feature/Option not supported by this GUI: 'p' of guioptions
+	Test_set_guioptions_for_p(): Feature/Option not supported by this GUI: &#39;p&#39; of guioptions
 	Test_empty_buffer(): postscript feature missing
 	Test_errors(): postscript feature missing
 	Test_fname_with_spaces(): postscript feature missing
@@ -1558,7 +1558,7 @@ Skipped:
 	Test_wincolor_listchars(): cannot make screendumps
 	Test_pum_with_folds_two_tabs(): cannot make screendumps
 	Test_pum_with_preview_win(): cannot make screendumps
-	Test_lua_list_table_insert_remove(): Lua version < 5.3
+	Test_lua_list_table_insert_remove(): Lua version &lt; 5.3
 	Test_error_in_map_expr(): cannot run Vim in a terminal window
 	Test_expr_map_restore_cursor(): cannot make screendumps
 	Test_matchadd_other_window(): cannot run Vim in a terminal window
@@ -1576,7 +1576,7 @@ Skipped:
 	Test_normal04_filter(): does not work on MS-Windows
 	Test_normal06_formatprg(): does not work on MS-Windows
 	Test_normal20_exmode(): does not work on MS-Windows
-	Test_normal35_g_cmd4(): output of g< can't be tested currently
+	Test_normal35_g_cmd4(): output of g&lt; can&#39;t be tested currently
 	Test_normal47_autocmd(): not possible to test cursorhold autocmd while waiting for input in normal_cmd
 	Test_normal_changecase_turkish(): Turkish locale not available
 	Test_relativenumber_colors(): cannot make screendumps
@@ -1633,7 +1633,7 @@ Skipped:
 	test_popupwin_textprop.vim: cannot make screendumps
 	Test_profile_typed_func(): cannot make screendumps
 	test_python2.vim: python feature missing
-	Test_unicode(): 'termencoding' is not empty
+	Test_unicode(): &#39;termencoding&#39; is not empty
 	test_pyx2.vim: python feature missing
 	Test_cwindow_highlight(): cannot make screendumps
 	Test_quotestar(): Test is not implemented yet for this platform.
@@ -1709,7 +1709,7 @@ Skipped:
 	Test_terminal_statusline(): only works on Unix
 	Test_terminal_write_stdin(): does not work on MS-Windows
 	Test_term_getcursor(): only works on Unix
-	Test_term_gettitle(): can't get/set title
+	Test_term_gettitle(): can&#39;t get/set title
 	Test_terminal_hidden(): only works on Unix
 	Test_terminal_hidden_and_close(): only works on Unix
 	Test_terminal_normal_mode(): cannot run Vim in a terminal window
@@ -1755,153 +1755,153 @@ Executed:  3308 Tests
 Failures: 
 	From test_function_lists.vim:
 	Found errors in Test_function_lists():
-	function RunTheTest[39]..Test_function_lists line 59: ":help functions" not sorted or incomplete: difference at byte 2255, line 237 after "mig" vs "min"
-	function RunTheTest[39]..Test_function_lists line 78: ":help functions-list" incomplete: difference at byte 2255, line 237 after "mig" vs "min"
+	function RunTheTest[39]..Test_function_lists line 59: &#34;:help functions&#34; not sorted or incomplete: difference at byte 2255, line 237 after &#34;mig&#34; vs &#34;min&#34;
+	function RunTheTest[39]..Test_function_lists line 78: &#34;:help functions-list&#34; incomplete: difference at byte 2255, line 237 after &#34;mig&#34; vs &#34;min&#34;
 	From test_gui.vim:
 	Found errors in Test_menu():
-	function RunTheTest[39]..Test_menu line 5: Pattern 'Overview' does not match '\n--- Menus ---\n9999 <83>w<83><8b><83>v(&H)\n  1 -->Detach\n      n*s  <t_ôX>&Help<CR>\n      v*s  <t_ôX>&Help<CR>\n      s*s  <t_ôX>&Help<CR>\n      o*s  <t_ôX>&Help<CR>\n  10 <8a>T<97><aa>(&O)^I<F1>\n      n*   :help<CR>\n      v*   <C-C>:help<CR><C-\\><C-G>\n      s*   <C-C>:help<CR><C-\\><C-G>\n      o*   <C-C>:help<CR><C-\\><C-G>\n  20 <83><86><81>[<83>U<81>[<83>}<83>j<83><85><83>A<83><8b>(&U)\n      n*   :help usr_toc<CR>\n      v*   <C-C>:help usr_toc<CR><C-\\><C-G>\n      s*   <C-C>:help usr_toc<CR><C-\\><C-G>\n      o*   <C-C>:help usr_toc<CR><C-\\><C-G>\n  30 &How-to<83><8a><83><93><83>N\n      n*   :help how-to<CR>\n      v*   <C-C>:help how-to<CR><C-\\><C-G>\n      s*   <C-C>:help how-to<CR><C-\\><C-G>\n      o*   <C-C>:help how-to<CR><C-\\><C-G>\n  40 <8c><9f><8d><f5>(&F)...\n      n*s  :call <SNR>1_Helpfind()<CR>\n      v*s  <C-C>:call <SNR>1_Helpfind()<CR><C-\\><C-G>\n      s*s  <C-C>:call <SNR>1_Helpfind()<CR><C-\\><C-G>\n      o*s  <C-C>:call <SNR>1_Helpfind()<CR><C-\\><C-G>\n  45 -sep1-\n      n*   <Nop>\n      v*   <Nop>\n      s*   <Nop>\n      o*   <Nop>\n  50 <83>N<83><8c><83>W<83>b<83>g(&C)\n      n*   :help credits<CR>\n      v*   <C-C>:help credits<CR><C-\\><C-G>\n      s*   <C-C>:help credits<CR><C-\\><C-G>\n      o*   <C-C>:help credits<CR><C-\\><C-G>\n  60 <92><98><8d>ìŒ Œ <8f><ee><95><f1>(&P)\n      n*   :help copying<CR>\n      v*   <C-C>:help copying<CR><C-\\><C-G>\n      s*   <C-C>:help copying<CR><C-\\><C-G>\n      o*   <C-C>:help copying<CR><C-\\><C-G>\n  70 <83>X<83>|<83><93><83>T<81>[/<93>o<98>^(&S)\n      n*   :help sponsor<CR>\n      v*   <C-C>:help sponsor<CR><C-\\><C-G>\n      s*   <C-C>:help sponsor<CR><C-\\><C-G>\n      o*   <C-C>:help sponsor<CR><C-\\><C-G>\n  70 <8c>Ç<99>(&R)\n      n*   :help kcc<CR>\n      v*   <C-C>:help kcc<CR><C-\\><C-G>\n      s*   <C-C>:help kcc<CR><C-\\><C-G>\n      o*   <C-C>:help kcc<CR><C-\\><C-G>\n  75 -sep2-\n      n*   <Nop>\n      v*   <Nop>\n      s*   <Nop>\n      o*   <Nop>\n  80 <83>o<81>[<83>W<83><87><83><93><8f><ee><95><f1>(&V)\n      n*   :version<CR>\n      v*   <C-C>:version<CR><C-\\><C-G>\n      s*   <C-C>:version<CR><C-\\><C-G>\n      o*   <C-C>:version<CR><C-\\><C-G>\n  90 Vim<82>É‚‚Â‚‚<a2><82><c4>(&A)\n      n*   :intro<CR>\n      v*   <C-C>:intro<CR><C-\\><C-G>\n      s*   <C-C>:intro<CR><C-\\><C-G>\n      o*   <C-C>:intro<CR><C-\\><C-G>'
+	function RunTheTest[39]..Test_menu line 5: Pattern &#39;Overview&#39; does not match &#39;\n--- Menus ---\n9999 &lt;83&gt;w&lt;83&gt;&lt;8b&gt;&lt;83&gt;v(&amp;H)\n  1 --&gt;Detach\n      n*s  &lt;t_ôX&gt;&amp;Help&lt;CR&gt;\n      v*s  &lt;t_ôX&gt;&amp;Help&lt;CR&gt;\n      s*s  &lt;t_ôX&gt;&amp;Help&lt;CR&gt;\n      o*s  &lt;t_ôX&gt;&amp;Help&lt;CR&gt;\n  10 &lt;8a&gt;T&lt;97&gt;&lt;aa&gt;(&amp;O)^I&lt;F1&gt;\n      n*   :help&lt;CR&gt;\n      v*   &lt;C-C&gt;:help&lt;CR&gt;&lt;C-\\&gt;&lt;C-G&gt;\n      s*   &lt;C-C&gt;:help&lt;CR&gt;&lt;C-\\&gt;&lt;C-G&gt;\n      o*   &lt;C-C&gt;:help&lt;CR&gt;&lt;C-\\&gt;&lt;C-G&gt;\n  20 &lt;83&gt;&lt;86&gt;&lt;81&gt;[&lt;83&gt;U&lt;81&gt;[&lt;83&gt;}&lt;83&gt;j&lt;83&gt;&lt;85&gt;&lt;83&gt;A&lt;83&gt;&lt;8b&gt;(&amp;U)\n      n*   :help usr_toc&lt;CR&gt;\n      v*   &lt;C-C&gt;:help usr_toc&lt;CR&gt;&lt;C-\\&gt;&lt;C-G&gt;\n      s*   &lt;C-C&gt;:help usr_toc&lt;CR&gt;&lt;C-\\&gt;&lt;C-G&gt;\n      o*   &lt;C-C&gt;:help usr_toc&lt;CR&gt;&lt;C-\\&gt;&lt;C-G&gt;\n  30 &amp;How-to&lt;83&gt;&lt;8a&gt;&lt;83&gt;&lt;93&gt;&lt;83&gt;N\n      n*   :help how-to&lt;CR&gt;\n      v*   &lt;C-C&gt;:help how-to&lt;CR&gt;&lt;C-\\&gt;&lt;C-G&gt;\n      s*   &lt;C-C&gt;:help how-to&lt;CR&gt;&lt;C-\\&gt;&lt;C-G&gt;\n      o*   &lt;C-C&gt;:help how-to&lt;CR&gt;&lt;C-\\&gt;&lt;C-G&gt;\n  40 &lt;8c&gt;&lt;9f&gt;&lt;8d&gt;&lt;f5&gt;(&amp;F)...\n      n*s  :call &lt;SNR&gt;1_Helpfind()&lt;CR&gt;\n      v*s  &lt;C-C&gt;:call &lt;SNR&gt;1_Helpfind()&lt;CR&gt;&lt;C-\\&gt;&lt;C-G&gt;\n      s*s  &lt;C-C&gt;:call &lt;SNR&gt;1_Helpfind()&lt;CR&gt;&lt;C-\\&gt;&lt;C-G&gt;\n      o*s  &lt;C-C&gt;:call &lt;SNR&gt;1_Helpfind()&lt;CR&gt;&lt;C-\\&gt;&lt;C-G&gt;\n  45 -sep1-\n      n*   &lt;Nop&gt;\n      v*   &lt;Nop&gt;\n      s*   &lt;Nop&gt;\n      o*   &lt;Nop&gt;\n  50 &lt;83&gt;N&lt;83&gt;&lt;8c&gt;&lt;83&gt;W&lt;83&gt;b&lt;83&gt;g(&amp;C)\n      n*   :help credits&lt;CR&gt;\n      v*   &lt;C-C&gt;:help credits&lt;CR&gt;&lt;C-\\&gt;&lt;C-G&gt;\n      s*   &lt;C-C&gt;:help credits&lt;CR&gt;&lt;C-\\&gt;&lt;C-G&gt;\n      o*   &lt;C-C&gt;:help credits&lt;CR&gt;&lt;C-\\&gt;&lt;C-G&gt;\n  60 &lt;92&gt;&lt;98&gt;&lt;8d&gt;ìŒ Œ &lt;8f&gt;&lt;ee&gt;&lt;95&gt;&lt;f1&gt;(&amp;P)\n      n*   :help copying&lt;CR&gt;\n      v*   &lt;C-C&gt;:help copying&lt;CR&gt;&lt;C-\\&gt;&lt;C-G&gt;\n      s*   &lt;C-C&gt;:help copying&lt;CR&gt;&lt;C-\\&gt;&lt;C-G&gt;\n      o*   &lt;C-C&gt;:help copying&lt;CR&gt;&lt;C-\\&gt;&lt;C-G&gt;\n  70 &lt;83&gt;X&lt;83&gt;|&lt;83&gt;&lt;93&gt;&lt;83&gt;T&lt;81&gt;[/&lt;93&gt;o&lt;98&gt;^(&amp;S)\n      n*   :help sponsor&lt;CR&gt;\n      v*   &lt;C-C&gt;:help sponsor&lt;CR&gt;&lt;C-\\&gt;&lt;C-G&gt;\n      s*   &lt;C-C&gt;:help sponsor&lt;CR&gt;&lt;C-\\&gt;&lt;C-G&gt;\n      o*   &lt;C-C&gt;:help sponsor&lt;CR&gt;&lt;C-\\&gt;&lt;C-G&gt;\n  70 &lt;8c&gt;Ç&lt;99&gt;(&amp;R)\n      n*   :help kcc&lt;CR&gt;\n      v*   &lt;C-C&gt;:help kcc&lt;CR&gt;&lt;C-\\&gt;&lt;C-G&gt;\n      s*   &lt;C-C&gt;:help kcc&lt;CR&gt;&lt;C-\\&gt;&lt;C-G&gt;\n      o*   &lt;C-C&gt;:help kcc&lt;CR&gt;&lt;C-\\&gt;&lt;C-G&gt;\n  75 -sep2-\n      n*   &lt;Nop&gt;\n      v*   &lt;Nop&gt;\n      s*   &lt;Nop&gt;\n      o*   &lt;Nop&gt;\n  80 &lt;83&gt;o&lt;81&gt;[&lt;83&gt;W&lt;83&gt;&lt;87&gt;&lt;83&gt;&lt;93&gt;&lt;8f&gt;&lt;ee&gt;&lt;95&gt;&lt;f1&gt;(&amp;V)\n      n*   :version&lt;CR&gt;\n      v*   &lt;C-C&gt;:version&lt;CR&gt;&lt;C-\\&gt;&lt;C-G&gt;\n      s*   &lt;C-C&gt;:version&lt;CR&gt;&lt;C-\\&gt;&lt;C-G&gt;\n      o*   &lt;C-C&gt;:version&lt;CR&gt;&lt;C-\\&gt;&lt;C-G&gt;\n  90 Vim&lt;82&gt;É‚‚Â‚‚&lt;a2&gt;&lt;82&gt;&lt;c4&gt;(&amp;A)\n      n*   :intro&lt;CR&gt;\n      v*   &lt;C-C&gt;:intro&lt;CR&gt;&lt;C-\\&gt;&lt;C-G&gt;\n      s*   &lt;C-C&gt;:intro&lt;CR&gt;&lt;C-\\&gt;&lt;C-G&gt;\n      o*   &lt;C-C&gt;:intro&lt;CR&gt;&lt;C-\\&gt;&lt;C-G&gt;&#39;
 	From test_system.vim:
 	Found errors in Test_System():
-	function RunTheTest[39]..Test_System line 10: Expected '123\n' but got '123'
-	function RunTheTest[39]..Test_System line 11: Expected ['123\r'] but got ['123']
-	function RunTheTest[39]..Test_System line 12: Expected ['as\r', 'df\r'] but got ['as\ndf']
-	function RunTheTest[39]..Test_System line 40: Expected ['asdf\r', 'pw\r', 'er\r', 'xxxx\r'] but got ['asdf', 'pw\ner', 'xxxx']
+	function RunTheTest[39]..Test_System line 10: Expected &#39;123\n&#39; but got &#39;123&#39;
+	function RunTheTest[39]..Test_System line 11: Expected [&#39;123\r&#39;] but got [&#39;123&#39;]
+	function RunTheTest[39]..Test_System line 12: Expected [&#39;as\r&#39;, &#39;df\r&#39;] but got [&#39;as\ndf&#39;]
+	function RunTheTest[39]..Test_System line 40: Expected [&#39;asdf\r&#39;, &#39;pw\r&#39;, &#39;er\r&#39;, &#39;xxxx\r&#39;] but got [&#39;asdf&#39;, &#39;pw\ner&#39;, &#39;xxxx&#39;]
 	From test_terminal.vim:
 	Found errors in Test_terminal_composing_unicode():
 	Run 1:
-	function RunTheTest[39]..Test_terminal_composing_unicode line 27: Pattern 'echo a¿¿ˆbc' does not match 'koron@UNICORN D:\\home\\koron\\work\\vim\\kaoriya\\vim\\src\\testdir'
-	function RunTheTest[39]..Test_terminal_composing_unicode[29]..WaitForAssert[2]..<SNR>14_WaitForCommon[11]..<lambda>8 line 1: Expected 'a¿¿ˆbc' but got '> echo a¿¿ˆbc'
-	function RunTheTest[39]..Test_terminal_composing_unicode line 31: Expected 'a¿¿ˆ' but got '>'
-	function RunTheTest[39]..Test_terminal_composing_unicode line 32: Expected 'b' but got ' '
-	function RunTheTest[39]..Test_terminal_composing_unicode line 33: Expected 'c' but got 'e'
-	function RunTheTest[39]..Test_terminal_composing_unicode line 39: Pattern 'echo ¿¿‹¿‚™¿¿¿¿‚™¿’¿¿“¿‚™' does not match ''
-	function RunTheTest[39]..Test_terminal_composing_unicode[41]..WaitForAssert[2]..<SNR>14_WaitForCommon[11]..<lambda>9 line 1: Expected '¿¿‹¿‚™¿¿¿¿‚™¿’¿¿“¿‚™' but got 'koron@UNICORN D:\\home\\koron\\work\\vim\\kaoriya\\vim\\src\\testdir'
-	function RunTheTest[39]..Test_terminal_composing_unicode line 43: Expected '¿¿‹¿‚™' but got 'k'
-	function RunTheTest[39]..Test_terminal_composing_unicode line 44: Expected '¿' but got 'r'
-	function RunTheTest[39]..Test_terminal_composing_unicode line 45: Expected '¿¿¿‚™' but got 'o'
-	function RunTheTest[39]..Test_terminal_composing_unicode line 46: Expected '¿’' but got '@'
-	function RunTheTest[39]..Test_terminal_composing_unicode line 47: Expected '¿¿“¿‚™' but got 'U'
-	function RunTheTest[39]..Test_terminal_composing_unicode line 53: Pattern 'echo abc ¿ ¿ˆ' does not match '¿¿‹¿‚™¿¿¿¿‚™¿’¿¿“¿‚™'
-	function RunTheTest[39]..Test_terminal_composing_unicode[55]..WaitForAssert[2]..<SNR>14_WaitForCommon[11]..<lambda>10 line 1: Expected 'abc ¿ ¿ˆ' but got ''
-	function RunTheTest[39]..Test_terminal_composing_unicode line 57: Expected ' ¿ ¿ˆ' but got ''
+	function RunTheTest[39]..Test_terminal_composing_unicode line 27: Pattern &#39;echo a¿¿ˆbc&#39; does not match &#39;koron@UNICORN D:\\home\\koron\\work\\vim\\kaoriya\\vim\\src\\testdir&#39;
+	function RunTheTest[39]..Test_terminal_composing_unicode[29]..WaitForAssert[2]..&lt;SNR&gt;14_WaitForCommon[11]..&lt;lambda&gt;8 line 1: Expected &#39;a¿¿ˆbc&#39; but got &#39;&gt; echo a¿¿ˆbc&#39;
+	function RunTheTest[39]..Test_terminal_composing_unicode line 31: Expected &#39;a¿¿ˆ&#39; but got &#39;&gt;&#39;
+	function RunTheTest[39]..Test_terminal_composing_unicode line 32: Expected &#39;b&#39; but got &#39; &#39;
+	function RunTheTest[39]..Test_terminal_composing_unicode line 33: Expected &#39;c&#39; but got &#39;e&#39;
+	function RunTheTest[39]..Test_terminal_composing_unicode line 39: Pattern &#39;echo ¿¿‹¿‚™¿¿¿¿‚™¿’¿¿“¿‚™&#39; does not match &#39;&#39;
+	function RunTheTest[39]..Test_terminal_composing_unicode[41]..WaitForAssert[2]..&lt;SNR&gt;14_WaitForCommon[11]..&lt;lambda&gt;9 line 1: Expected &#39;¿¿‹¿‚™¿¿¿¿‚™¿’¿¿“¿‚™&#39; but got &#39;koron@UNICORN D:\\home\\koron\\work\\vim\\kaoriya\\vim\\src\\testdir&#39;
+	function RunTheTest[39]..Test_terminal_composing_unicode line 43: Expected &#39;¿¿‹¿‚™&#39; but got &#39;k&#39;
+	function RunTheTest[39]..Test_terminal_composing_unicode line 44: Expected &#39;¿&#39; but got &#39;r&#39;
+	function RunTheTest[39]..Test_terminal_composing_unicode line 45: Expected &#39;¿¿¿‚™&#39; but got &#39;o&#39;
+	function RunTheTest[39]..Test_terminal_composing_unicode line 46: Expected &#39;¿’&#39; but got &#39;@&#39;
+	function RunTheTest[39]..Test_terminal_composing_unicode line 47: Expected &#39;¿¿“¿‚™&#39; but got &#39;U&#39;
+	function RunTheTest[39]..Test_terminal_composing_unicode line 53: Pattern &#39;echo abc ¿ ¿ˆ&#39; does not match &#39;¿¿‹¿‚™¿¿¿¿‚™¿’¿¿“¿‚™&#39;
+	function RunTheTest[39]..Test_terminal_composing_unicode[55]..WaitForAssert[2]..&lt;SNR&gt;14_WaitForCommon[11]..&lt;lambda&gt;10 line 1: Expected &#39;abc ¿ ¿ˆ&#39; but got &#39;&#39;
+	function RunTheTest[39]..Test_terminal_composing_unicode line 57: Expected &#39; ¿ ¿ˆ&#39; but got &#39;&#39;
 	Run 2:
-	function RunTheTest[39]..Test_terminal_composing_unicode line 27: Pattern 'echo a¿¿ˆbc' does not match 'koron@UNICORN D:\\home\\koron\\work\\vim\\kaoriya\\vim\\src\\testdir'
-	function RunTheTest[39]..Test_terminal_composing_unicode[29]..WaitForAssert[2]..<SNR>14_WaitForCommon[11]..<lambda>13 line 1: Expected 'a¿¿ˆbc' but got '> echo a¿¿ˆbc'
-	function RunTheTest[39]..Test_terminal_composing_unicode line 31: Expected 'a¿¿ˆ' but got '>'
-	function RunTheTest[39]..Test_terminal_composing_unicode line 32: Expected 'b' but got ' '
-	function RunTheTest[39]..Test_terminal_composing_unicode line 33: Expected 'c' but got 'e'
-	function RunTheTest[39]..Test_terminal_composing_unicode line 39: Pattern 'echo ¿¿‹¿‚™¿¿¿¿‚™¿’¿¿“¿‚™' does not match ''
-	function RunTheTest[39]..Test_terminal_composing_unicode[41]..WaitForAssert[2]..<SNR>14_WaitForCommon[11]..<lambda>14 line 1: Expected '¿¿‹¿‚™¿¿¿¿‚™¿’¿¿“¿‚™' but got 'koron@UNICORN D:\\home\\koron\\work\\vim\\kaoriya\\vim\\src\\testdir'
-	function RunTheTest[39]..Test_terminal_composing_unicode line 43: Expected '¿¿‹¿‚™' but got 'k'
-	function RunTheTest[39]..Test_terminal_composing_unicode line 44: Expected '¿' but got 'r'
-	function RunTheTest[39]..Test_terminal_composing_unicode line 45: Expected '¿¿¿‚™' but got 'o'
-	function RunTheTest[39]..Test_terminal_composing_unicode line 46: Expected '¿’' but got '@'
-	function RunTheTest[39]..Test_terminal_composing_unicode line 47: Expected '¿¿“¿‚™' but got 'U'
-	function RunTheTest[39]..Test_terminal_composing_unicode line 53: Pattern 'echo abc ¿ ¿ˆ' does not match '¿¿‹¿‚™¿¿¿¿‚™¿’¿¿“¿‚™'
-	function RunTheTest[39]..Test_terminal_composing_unicode[55]..WaitForAssert[2]..<SNR>14_WaitForCommon[11]..<lambda>15 line 1: Expected 'abc ¿ ¿ˆ' but got ''
-	function RunTheTest[39]..Test_terminal_composing_unicode line 57: Expected ' ¿ ¿ˆ' but got ''
+	function RunTheTest[39]..Test_terminal_composing_unicode line 27: Pattern &#39;echo a¿¿ˆbc&#39; does not match &#39;koron@UNICORN D:\\home\\koron\\work\\vim\\kaoriya\\vim\\src\\testdir&#39;
+	function RunTheTest[39]..Test_terminal_composing_unicode[29]..WaitForAssert[2]..&lt;SNR&gt;14_WaitForCommon[11]..&lt;lambda&gt;13 line 1: Expected &#39;a¿¿ˆbc&#39; but got &#39;&gt; echo a¿¿ˆbc&#39;
+	function RunTheTest[39]..Test_terminal_composing_unicode line 31: Expected &#39;a¿¿ˆ&#39; but got &#39;&gt;&#39;
+	function RunTheTest[39]..Test_terminal_composing_unicode line 32: Expected &#39;b&#39; but got &#39; &#39;
+	function RunTheTest[39]..Test_terminal_composing_unicode line 33: Expected &#39;c&#39; but got &#39;e&#39;
+	function RunTheTest[39]..Test_terminal_composing_unicode line 39: Pattern &#39;echo ¿¿‹¿‚™¿¿¿¿‚™¿’¿¿“¿‚™&#39; does not match &#39;&#39;
+	function RunTheTest[39]..Test_terminal_composing_unicode[41]..WaitForAssert[2]..&lt;SNR&gt;14_WaitForCommon[11]..&lt;lambda&gt;14 line 1: Expected &#39;¿¿‹¿‚™¿¿¿¿‚™¿’¿¿“¿‚™&#39; but got &#39;koron@UNICORN D:\\home\\koron\\work\\vim\\kaoriya\\vim\\src\\testdir&#39;
+	function RunTheTest[39]..Test_terminal_composing_unicode line 43: Expected &#39;¿¿‹¿‚™&#39; but got &#39;k&#39;
+	function RunTheTest[39]..Test_terminal_composing_unicode line 44: Expected &#39;¿&#39; but got &#39;r&#39;
+	function RunTheTest[39]..Test_terminal_composing_unicode line 45: Expected &#39;¿¿¿‚™&#39; but got &#39;o&#39;
+	function RunTheTest[39]..Test_terminal_composing_unicode line 46: Expected &#39;¿’&#39; but got &#39;@&#39;
+	function RunTheTest[39]..Test_terminal_composing_unicode line 47: Expected &#39;¿¿“¿‚™&#39; but got &#39;U&#39;
+	function RunTheTest[39]..Test_terminal_composing_unicode line 53: Pattern &#39;echo abc ¿ ¿ˆ&#39; does not match &#39;¿¿‹¿‚™¿¿¿¿‚™¿’¿¿“¿‚™&#39;
+	function RunTheTest[39]..Test_terminal_composing_unicode[55]..WaitForAssert[2]..&lt;SNR&gt;14_WaitForCommon[11]..&lt;lambda&gt;15 line 1: Expected &#39;abc ¿ ¿ˆ&#39; but got &#39;&#39;
+	function RunTheTest[39]..Test_terminal_composing_unicode line 57: Expected &#39; ¿ ¿ˆ&#39; but got &#39;&#39;
 	Flaky test failed too often, giving up
 	Found errors in Test_terminal_env():
 	Run 1:
-	function RunTheTest[39]..Test_terminal_env[11]..WaitForAssert[2]..<SNR>14_WaitForCommon[11]..<lambda>21 line 1: Expected 'correct' but got '> echo %TESTENV%'
+	function RunTheTest[39]..Test_terminal_env[11]..WaitForAssert[2]..&lt;SNR&gt;14_WaitForCommon[11]..&lt;lambda&gt;21 line 1: Expected &#39;correct&#39; but got &#39;&gt; echo %TESTENV%&#39;
 	Run 2:
-	function RunTheTest[39]..Test_terminal_env[11]..WaitForAssert[2]..<SNR>14_WaitForCommon[11]..<lambda>24 line 1: Expected 'correct' but got '> echo %TESTENV%'
+	function RunTheTest[39]..Test_terminal_env[11]..WaitForAssert[2]..&lt;SNR&gt;14_WaitForCommon[11]..&lt;lambda&gt;24 line 1: Expected &#39;correct&#39; but got &#39;&gt; echo %TESTENV%&#39;
 	Run 3:
-	function RunTheTest[39]..Test_terminal_env[11]..WaitForAssert[2]..<SNR>14_WaitForCommon[11]..<lambda>27 line 1: Expected 'correct' but got '> echo %TESTENV%'
+	function RunTheTest[39]..Test_terminal_env[11]..WaitForAssert[2]..&lt;SNR&gt;14_WaitForCommon[11]..&lt;lambda&gt;27 line 1: Expected &#39;correct&#39; but got &#39;&gt; echo %TESTENV%&#39;
 	Run 4:
-	function RunTheTest[39]..Test_terminal_env[11]..WaitForAssert[2]..<SNR>14_WaitForCommon[11]..<lambda>30 line 1: Expected 'correct' but got '> echo %TESTENV%'
+	function RunTheTest[39]..Test_terminal_env[11]..WaitForAssert[2]..&lt;SNR&gt;14_WaitForCommon[11]..&lt;lambda&gt;30 line 1: Expected &#39;correct&#39; but got &#39;&gt; echo %TESTENV%&#39;
 	Run 5:
-	function RunTheTest[39]..Test_terminal_env[11]..WaitForAssert[2]..<SNR>14_WaitForCommon[11]..<lambda>33 line 1: Expected 'correct' but got '> echo %TESTENV%'
+	function RunTheTest[39]..Test_terminal_env[11]..WaitForAssert[2]..&lt;SNR&gt;14_WaitForCommon[11]..&lt;lambda&gt;33 line 1: Expected &#39;correct&#39; but got &#39;&gt; echo %TESTENV%&#39;
 	Flaky test failed too often, giving up
 	Found errors in Test_terminal_noblock():
 	Run 1:
-	function RunTheTest[39]..Test_terminal_noblock[26]..WaitForAssert[2]..<SNR>14_WaitForCommon[11]..<lambda>53 line 1: Pattern 'done' does not match '//koron@UNICORN D:\\home\\koron\\work\\vim\\kaoriya\\vim\\src\\testdir'
-	function RunTheTest[39]..Test_terminal_noblock line 31: Pattern 'done' does not match ''
+	function RunTheTest[39]..Test_terminal_noblock[26]..WaitForAssert[2]..&lt;SNR&gt;14_WaitForCommon[11]..&lt;lambda&gt;53 line 1: Pattern &#39;done&#39; does not match &#39;//koron@UNICORN D:\\home\\koron\\work\\vim\\kaoriya\\vim\\src\\testdir&#39;
+	function RunTheTest[39]..Test_terminal_noblock line 31: Pattern &#39;done&#39; does not match &#39;&#39;
 	Run 2:
-	function RunTheTest[39]..Test_terminal_noblock[26]..WaitForAssert[2]..<SNR>14_WaitForCommon[11]..<lambda>55 line 1: Pattern 'done' does not match '//koron@UNICORN D:\\home\\koron\\work\\vim\\kaoriya\\vim\\src\\testdir'
-	function RunTheTest[39]..Test_terminal_noblock line 31: Pattern 'done' does not match ''
+	function RunTheTest[39]..Test_terminal_noblock[26]..WaitForAssert[2]..&lt;SNR&gt;14_WaitForCommon[11]..&lt;lambda&gt;55 line 1: Pattern &#39;done&#39; does not match &#39;//koron@UNICORN D:\\home\\koron\\work\\vim\\kaoriya\\vim\\src\\testdir&#39;
+	function RunTheTest[39]..Test_terminal_noblock line 31: Pattern &#39;done&#39; does not match &#39;&#39;
 	Run 3:
-	function RunTheTest[39]..Test_terminal_noblock[26]..WaitForAssert[2]..<SNR>14_WaitForCommon[11]..<lambda>57 line 1: Pattern 'done' does not match '//koron@UNICORN D:\\home\\koron\\work\\vim\\kaoriya\\vim\\src\\testdir'
-	function RunTheTest[39]..Test_terminal_noblock line 31: Pattern 'done' does not match ''
+	function RunTheTest[39]..Test_terminal_noblock[26]..WaitForAssert[2]..&lt;SNR&gt;14_WaitForCommon[11]..&lt;lambda&gt;57 line 1: Pattern &#39;done&#39; does not match &#39;//koron@UNICORN D:\\home\\koron\\work\\vim\\kaoriya\\vim\\src\\testdir&#39;
+	function RunTheTest[39]..Test_terminal_noblock line 31: Pattern &#39;done&#39; does not match &#39;&#39;
 	Run 4:
-	function RunTheTest[39]..Test_terminal_noblock[26]..WaitForAssert[2]..<SNR>14_WaitForCommon[11]..<lambda>59 line 1: Pattern 'done' does not match '//koron@UNICORN D:\\home\\koron\\work\\vim\\kaoriya\\vim\\src\\testdir'
-	function RunTheTest[39]..Test_terminal_noblock line 31: Pattern 'done' does not match ''
+	function RunTheTest[39]..Test_terminal_noblock[26]..WaitForAssert[2]..&lt;SNR&gt;14_WaitForCommon[11]..&lt;lambda&gt;59 line 1: Pattern &#39;done&#39; does not match &#39;//koron@UNICORN D:\\home\\koron\\work\\vim\\kaoriya\\vim\\src\\testdir&#39;
+	function RunTheTest[39]..Test_terminal_noblock line 31: Pattern &#39;done&#39; does not match &#39;&#39;
 	Run 5:
-	function RunTheTest[39]..Test_terminal_noblock[26]..WaitForAssert[2]..<SNR>14_WaitForCommon[11]..<lambda>61 line 1: Pattern 'done' does not match '//koron@UNICORN D:\\home\\koron\\work\\vim\\kaoriya\\vim\\src\\testdir'
-	function RunTheTest[39]..Test_terminal_noblock line 31: Pattern 'done' does not match ''
+	function RunTheTest[39]..Test_terminal_noblock[26]..WaitForAssert[2]..&lt;SNR&gt;14_WaitForCommon[11]..&lt;lambda&gt;61 line 1: Pattern &#39;done&#39; does not match &#39;//koron@UNICORN D:\\home\\koron\\work\\vim\\kaoriya\\vim\\src\\testdir&#39;
+	function RunTheTest[39]..Test_terminal_noblock line 31: Pattern &#39;done&#39; does not match &#39;&#39;
 	Flaky test failed too often, giving up
 	Found errors in Test_terminal_paste_register():
 	Run 1:
-	function RunTheTest[39]..Test_terminal_paste_register[8]..WaitForAssert[2]..<SNR>14_WaitForCommon[11]..<lambda>64 line 1: Pattern 'echo text to paste 42$' does not match 'koron@UNICORN D:\\home\\koron\\work\\vim\\kaoriya\\vim\\src\\testdir'
-	function RunTheTest[39]..Test_terminal_paste_register[9]..WaitForAssert[2]..<SNR>14_WaitForCommon[11]..<lambda>65 line 1: Expected 'text to paste 42' but got '> echo text to paste 42'
+	function RunTheTest[39]..Test_terminal_paste_register[8]..WaitForAssert[2]..&lt;SNR&gt;14_WaitForCommon[11]..&lt;lambda&gt;64 line 1: Pattern &#39;echo text to paste 42$&#39; does not match &#39;koron@UNICORN D:\\home\\koron\\work\\vim\\kaoriya\\vim\\src\\testdir&#39;
+	function RunTheTest[39]..Test_terminal_paste_register[9]..WaitForAssert[2]..&lt;SNR&gt;14_WaitForCommon[11]..&lt;lambda&gt;65 line 1: Expected &#39;text to paste 42&#39; but got &#39;&gt; echo text to paste 42&#39;
 	Run 2:
-	function RunTheTest[39]..Test_terminal_paste_register[8]..WaitForAssert[2]..<SNR>14_WaitForCommon[11]..<lambda>67 line 1: Pattern 'echo text to paste 42$' does not match 'koron@UNICORN D:\\home\\koron\\work\\vim\\kaoriya\\vim\\src\\testdir'
-	function RunTheTest[39]..Test_terminal_paste_register[9]..WaitForAssert[2]..<SNR>14_WaitForCommon[11]..<lambda>68 line 1: Expected 'text to paste 42' but got '> echo text to paste 42'
+	function RunTheTest[39]..Test_terminal_paste_register[8]..WaitForAssert[2]..&lt;SNR&gt;14_WaitForCommon[11]..&lt;lambda&gt;67 line 1: Pattern &#39;echo text to paste 42$&#39; does not match &#39;koron@UNICORN D:\\home\\koron\\work\\vim\\kaoriya\\vim\\src\\testdir&#39;
+	function RunTheTest[39]..Test_terminal_paste_register[9]..WaitForAssert[2]..&lt;SNR&gt;14_WaitForCommon[11]..&lt;lambda&gt;68 line 1: Expected &#39;text to paste 42&#39; but got &#39;&gt; echo text to paste 42&#39;
 	Run 3:
-	function RunTheTest[39]..Test_terminal_paste_register[8]..WaitForAssert[2]..<SNR>14_WaitForCommon[11]..<lambda>70 line 1: Pattern 'echo text to paste 42$' does not match 'koron@UNICORN D:\\home\\koron\\work\\vim\\kaoriya\\vim\\src\\testdir'
-	function RunTheTest[39]..Test_terminal_paste_register[9]..WaitForAssert[2]..<SNR>14_WaitForCommon[11]..<lambda>71 line 1: Expected 'text to paste 42' but got '> echo text to paste 42'
+	function RunTheTest[39]..Test_terminal_paste_register[8]..WaitForAssert[2]..&lt;SNR&gt;14_WaitForCommon[11]..&lt;lambda&gt;70 line 1: Pattern &#39;echo text to paste 42$&#39; does not match &#39;koron@UNICORN D:\\home\\koron\\work\\vim\\kaoriya\\vim\\src\\testdir&#39;
+	function RunTheTest[39]..Test_terminal_paste_register[9]..WaitForAssert[2]..&lt;SNR&gt;14_WaitForCommon[11]..&lt;lambda&gt;71 line 1: Expected &#39;text to paste 42&#39; but got &#39;&gt; echo text to paste 42&#39;
 	Run 4:
-	function RunTheTest[39]..Test_terminal_paste_register[8]..WaitForAssert[2]..<SNR>14_WaitForCommon[11]..<lambda>73 line 1: Pattern 'echo text to paste 42$' does not match 'koron@UNICORN D:\\home\\koron\\work\\vim\\kaoriya\\vim\\src\\testdir'
-	function RunTheTest[39]..Test_terminal_paste_register[9]..WaitForAssert[2]..<SNR>14_WaitForCommon[11]..<lambda>74 line 1: Expected 'text to paste 42' but got '> echo text to paste 42'
+	function RunTheTest[39]..Test_terminal_paste_register[8]..WaitForAssert[2]..&lt;SNR&gt;14_WaitForCommon[11]..&lt;lambda&gt;73 line 1: Pattern &#39;echo text to paste 42$&#39; does not match &#39;koron@UNICORN D:\\home\\koron\\work\\vim\\kaoriya\\vim\\src\\testdir&#39;
+	function RunTheTest[39]..Test_terminal_paste_register[9]..WaitForAssert[2]..&lt;SNR&gt;14_WaitForCommon[11]..&lt;lambda&gt;74 line 1: Expected &#39;text to paste 42&#39; but got &#39;&gt; echo text to paste 42&#39;
 	Run 5:
-	function RunTheTest[39]..Test_terminal_paste_register[8]..WaitForAssert[2]..<SNR>14_WaitForCommon[11]..<lambda>76 line 1: Pattern 'echo text to paste 42$' does not match 'koron@UNICORN D:\\home\\koron\\work\\vim\\kaoriya\\vim\\src\\testdir'
-	function RunTheTest[39]..Test_terminal_paste_register[9]..WaitForAssert[2]..<SNR>14_WaitForCommon[11]..<lambda>77 line 1: Expected 'text to paste 42' but got '> echo text to paste 42'
+	function RunTheTest[39]..Test_terminal_paste_register[8]..WaitForAssert[2]..&lt;SNR&gt;14_WaitForCommon[11]..&lt;lambda&gt;76 line 1: Pattern &#39;echo text to paste 42$&#39; does not match &#39;koron@UNICORN D:\\home\\koron\\work\\vim\\kaoriya\\vim\\src\\testdir&#39;
+	function RunTheTest[39]..Test_terminal_paste_register[9]..WaitForAssert[2]..&lt;SNR&gt;14_WaitForCommon[11]..&lt;lambda&gt;77 line 1: Expected &#39;text to paste 42&#39; but got &#39;&gt; echo text to paste 42&#39;
 	Flaky test failed too often, giving up
 	Found errors in Test_terminal_scrape_multibyte():
 	Caught exception in Test_terminal_scrape_multibyte(): WaitFor() timed out after 5000 msec @ function RunTheTest[39]..Test_terminal_scrape_multibyte[14]..WaitFor, line 4
 	Found errors in Test_terminal_scrollback():
 	Run 1:
-	function RunTheTest[39]..Test_terminal_scrollback[11]..WaitForAssert[2]..<SNR>14_WaitForCommon[11]..<lambda>83 line 1: Pattern '149' does not match 'koron@UNICORN D:\\home\\koron\\work\\vim\\kaoriya\\vim\\src\\testdir'
+	function RunTheTest[39]..Test_terminal_scrollback[11]..WaitForAssert[2]..&lt;SNR&gt;14_WaitForCommon[11]..&lt;lambda&gt;83 line 1: Pattern &#39;149&#39; does not match &#39;koron@UNICORN D:\\home\\koron\\work\\vim\\kaoriya\\vim\\src\\testdir&#39;
 	function RunTheTest[39]..Test_terminal_scrollback line 13: Expected range 91 - 100, but got 115
 	Run 2:
-	function RunTheTest[39]..Test_terminal_scrollback[11]..WaitForAssert[2]..<SNR>14_WaitForCommon[11]..<lambda>85 line 1: Pattern '149' does not match 'koron@UNICORN D:\\home\\koron\\work\\vim\\kaoriya\\vim\\src\\testdir'
+	function RunTheTest[39]..Test_terminal_scrollback[11]..WaitForAssert[2]..&lt;SNR&gt;14_WaitForCommon[11]..&lt;lambda&gt;85 line 1: Pattern &#39;149&#39; does not match &#39;koron@UNICORN D:\\home\\koron\\work\\vim\\kaoriya\\vim\\src\\testdir&#39;
 	function RunTheTest[39]..Test_terminal_scrollback line 13: Expected range 91 - 100, but got 115
 	Run 3:
-	function RunTheTest[39]..Test_terminal_scrollback[11]..WaitForAssert[2]..<SNR>14_WaitForCommon[11]..<lambda>87 line 1: Pattern '149' does not match 'koron@UNICORN D:\\home\\koron\\work\\vim\\kaoriya\\vim\\src\\testdir'
+	function RunTheTest[39]..Test_terminal_scrollback[11]..WaitForAssert[2]..&lt;SNR&gt;14_WaitForCommon[11]..&lt;lambda&gt;87 line 1: Pattern &#39;149&#39; does not match &#39;koron@UNICORN D:\\home\\koron\\work\\vim\\kaoriya\\vim\\src\\testdir&#39;
 	function RunTheTest[39]..Test_terminal_scrollback line 13: Expected range 91 - 100, but got 115
 	Run 4:
-	function RunTheTest[39]..Test_terminal_scrollback[11]..WaitForAssert[2]..<SNR>14_WaitForCommon[11]..<lambda>89 line 1: Pattern '149' does not match 'koron@UNICORN D:\\home\\koron\\work\\vim\\kaoriya\\vim\\src\\testdir'
+	function RunTheTest[39]..Test_terminal_scrollback[11]..WaitForAssert[2]..&lt;SNR&gt;14_WaitForCommon[11]..&lt;lambda&gt;89 line 1: Pattern &#39;149&#39; does not match &#39;koron@UNICORN D:\\home\\koron\\work\\vim\\kaoriya\\vim\\src\\testdir&#39;
 	function RunTheTest[39]..Test_terminal_scrollback line 13: Expected range 91 - 100, but got 115
 	Run 5:
-	function RunTheTest[39]..Test_terminal_scrollback[11]..WaitForAssert[2]..<SNR>14_WaitForCommon[11]..<lambda>91 line 1: Pattern '149' does not match 'koron@UNICORN D:\\home\\koron\\work\\vim\\kaoriya\\vim\\src\\testdir'
+	function RunTheTest[39]..Test_terminal_scrollback[11]..WaitForAssert[2]..&lt;SNR&gt;14_WaitForCommon[11]..&lt;lambda&gt;91 line 1: Pattern &#39;149&#39; does not match &#39;koron@UNICORN D:\\home\\koron\\work\\vim\\kaoriya\\vim\\src\\testdir&#39;
 	function RunTheTest[39]..Test_terminal_scrollback line 13: Expected range 91 - 100, but got 115
 	Flaky test failed too often, giving up
 	Found errors in Test_terminal_servername():
 	Run 1:
-	function RunTheTest[39]..Test_terminal_servername[4]..<SNR>12_test_environment[11]..WaitForAssert[2]..<SNR>14_WaitForCommon[11]..<lambda>95 line 1: Expected 'GVIM2' but got '> echo %VIM_SERVERNAME%'
+	function RunTheTest[39]..Test_terminal_servername[4]..&lt;SNR&gt;12_test_environment[11]..WaitForAssert[2]..&lt;SNR&gt;14_WaitForCommon[11]..&lt;lambda&gt;95 line 1: Expected &#39;GVIM2&#39; but got &#39;&gt; echo %VIM_SERVERNAME%&#39;
 	Run 2:
-	function RunTheTest[39]..Test_terminal_servername[4]..<SNR>12_test_environment[11]..WaitForAssert[2]..<SNR>14_WaitForCommon[11]..<lambda>98 line 1: Expected 'GVIM2' but got '> echo %VIM_SERVERNAME%'
+	function RunTheTest[39]..Test_terminal_servername[4]..&lt;SNR&gt;12_test_environment[11]..WaitForAssert[2]..&lt;SNR&gt;14_WaitForCommon[11]..&lt;lambda&gt;98 line 1: Expected &#39;GVIM2&#39; but got &#39;&gt; echo %VIM_SERVERNAME%&#39;
 	Run 3:
-	function RunTheTest[39]..Test_terminal_servername[4]..<SNR>12_test_environment[11]..WaitForAssert[2]..<SNR>14_WaitForCommon[11]..<lambda>101 line 1: Expected 'GVIM2' but got '> echo %VIM_SERVERNAME%'
+	function RunTheTest[39]..Test_terminal_servername[4]..&lt;SNR&gt;12_test_environment[11]..WaitForAssert[2]..&lt;SNR&gt;14_WaitForCommon[11]..&lt;lambda&gt;101 line 1: Expected &#39;GVIM2&#39; but got &#39;&gt; echo %VIM_SERVERNAME%&#39;
 	Run 4:
-	function RunTheTest[39]..Test_terminal_servername[4]..<SNR>12_test_environment[11]..WaitForAssert[2]..<SNR>14_WaitForCommon[11]..<lambda>104 line 1: Expected 'GVIM2' but got '> echo %VIM_SERVERNAME%'
+	function RunTheTest[39]..Test_terminal_servername[4]..&lt;SNR&gt;12_test_environment[11]..WaitForAssert[2]..&lt;SNR&gt;14_WaitForCommon[11]..&lt;lambda&gt;104 line 1: Expected &#39;GVIM2&#39; but got &#39;&gt; echo %VIM_SERVERNAME%&#39;
 	Run 5:
-	function RunTheTest[39]..Test_terminal_servername[4]..<SNR>12_test_environment[11]..WaitForAssert[2]..<SNR>14_WaitForCommon[11]..<lambda>107 line 1: Expected 'GVIM2' but got '> echo %VIM_SERVERNAME%'
+	function RunTheTest[39]..Test_terminal_servername[4]..&lt;SNR&gt;12_test_environment[11]..WaitForAssert[2]..&lt;SNR&gt;14_WaitForCommon[11]..&lt;lambda&gt;107 line 1: Expected &#39;GVIM2&#39; but got &#39;&gt; echo %VIM_SERVERNAME%&#39;
 	Flaky test failed too often, giving up
 	Found errors in Test_terminal_version():
 	Run 1:
-	function RunTheTest[39]..Test_terminal_version[1]..<SNR>12_test_environment[11]..WaitForAssert[2]..<SNR>14_WaitForCommon[11]..<lambda>115 line 1: Expected '802' but got '> echo %VIM_TERMINAL%'
+	function RunTheTest[39]..Test_terminal_version[1]..&lt;SNR&gt;12_test_environment[11]..WaitForAssert[2]..&lt;SNR&gt;14_WaitForCommon[11]..&lt;lambda&gt;115 line 1: Expected &#39;802&#39; but got &#39;&gt; echo %VIM_TERMINAL%&#39;
 	Run 2:
-	function RunTheTest[39]..Test_terminal_version[1]..<SNR>12_test_environment[11]..WaitForAssert[2]..<SNR>14_WaitForCommon[11]..<lambda>118 line 1: Expected '802' but got '> echo %VIM_TERMINAL%'
+	function RunTheTest[39]..Test_terminal_version[1]..&lt;SNR&gt;12_test_environment[11]..WaitForAssert[2]..&lt;SNR&gt;14_WaitForCommon[11]..&lt;lambda&gt;118 line 1: Expected &#39;802&#39; but got &#39;&gt; echo %VIM_TERMINAL%&#39;
 	Run 3:
-	function RunTheTest[39]..Test_terminal_version[1]..<SNR>12_test_environment[11]..WaitForAssert[2]..<SNR>14_WaitForCommon[11]..<lambda>121 line 1: Expected '802' but got '> echo %VIM_TERMINAL%'
+	function RunTheTest[39]..Test_terminal_version[1]..&lt;SNR&gt;12_test_environment[11]..WaitForAssert[2]..&lt;SNR&gt;14_WaitForCommon[11]..&lt;lambda&gt;121 line 1: Expected &#39;802&#39; but got &#39;&gt; echo %VIM_TERMINAL%&#39;
 	Run 4:
-	function RunTheTest[39]..Test_terminal_version[1]..<SNR>12_test_environment[11]..WaitForAssert[2]..<SNR>14_WaitForCommon[11]..<lambda>124 line 1: Expected '802' but got '> echo %VIM_TERMINAL%'
+	function RunTheTest[39]..Test_terminal_version[1]..&lt;SNR&gt;12_test_environment[11]..WaitForAssert[2]..&lt;SNR&gt;14_WaitForCommon[11]..&lt;lambda&gt;124 line 1: Expected &#39;802&#39; but got &#39;&gt; echo %VIM_TERMINAL%&#39;
 	Run 5:
-	function RunTheTest[39]..Test_terminal_version[1]..<SNR>12_test_environment[11]..WaitForAssert[2]..<SNR>14_WaitForCommon[11]..<lambda>127 line 1: Expected '802' but got '> echo %VIM_TERMINAL%'
+	function RunTheTest[39]..Test_terminal_version[1]..&lt;SNR&gt;12_test_environment[11]..WaitForAssert[2]..&lt;SNR&gt;14_WaitForCommon[11]..&lt;lambda&gt;127 line 1: Expected &#39;802&#39; but got &#39;&gt; echo %VIM_TERMINAL%&#39;
 	Flaky test failed too often, giving up
 	From test_undo.vim:
 	Found errors in Test_undofile_earlier():
-	function RunTheTest[39]..Test_undofile_earlier line 22: Expected '' but got '\e[0m\e[0K\e[?25l\e[0;32m123\e[0K\e[1G\e[?25h\e[?1005l\e[?1000h\e[?1002h\e[?1003h\e[?1015h\e[?1006h'
+	function RunTheTest[39]..Test_undofile_earlier line 22: Expected &#39;&#39; but got &#39;\e[0m\e[0K\e[?25l\e[0;32m123\e[0K\e[1G\e[?25h\e[?1005l\e[?1000h\e[?1002h\e[?1003h\e[?1015h\e[?1006h&#39;
 	From test_winbar.vim:
 	Found errors in Test_add_remove_menu():
-	function RunTheTest[39]..Test_add_remove_menu line 5: Pattern 'Next    Cont' does not match '  ŸŸ‚¿‚¿ƒoƒƒbƒƒtƒƒ@(&N)    Cont'
+	function RunTheTest[39]..Test_add_remove_menu line 5: Pattern &#39;Next    Cont&#39; does not match &#39;  ŸŸ‚¿‚¿ƒoƒƒbƒƒtƒƒ@(&amp;N)    Cont&#39;
 	Found errors in Test_click_in_other_winbar():
-	function RunTheTest[39]..Test_click_in_other_winbar[2]..SetupWinbar line 5: Pattern 'Next    Cont    Close' does not match '  ŸŸ‚¿‚¿ƒoƒƒbƒƒtƒƒ@(&N)    Cont    Close'
+	function RunTheTest[39]..Test_click_in_other_winbar[2]..SetupWinbar line 5: Pattern &#39;Next    Cont    Close&#39; does not match &#39;  ŸŸ‚¿‚¿ƒoƒƒbƒƒtƒƒ@(&amp;N)    Cont    Close&#39;
 	function RunTheTest[39]..Test_click_in_other_winbar line 21: Expected 12 but got 0
 	function RunTheTest[39]..Test_click_in_other_winbar line 29: Expected 2 but got 3
 	Found errors in Test_click_in_winbar():
-	function RunTheTest[39]..Test_click_in_winbar[2]..SetupWinbar line 5: Pattern 'Next    Cont    Close' does not match '  ŸŸ‚¿‚¿ƒoƒƒbƒƒtƒƒ@(&N)    Cont    Close'
+	function RunTheTest[39]..Test_click_in_winbar[2]..SetupWinbar line 5: Pattern &#39;Next    Cont    Close&#39; does not match &#39;  ŸŸ‚¿‚¿ƒoƒƒbƒƒtƒƒ@(&amp;N)    Cont    Close&#39;
 	function RunTheTest[39]..Test_click_in_winbar line 11: col 8: Expected 0 but got 11
 	function RunTheTest[39]..Test_click_in_winbar line 11: col 9: Expected 0 but got 11
 	function RunTheTest[39]..Test_click_in_winbar line 11: col 16: Expected 0 but got 11
@@ -1916,13 +1916,13 @@ Failures:
 	function RunTheTest[39]..Test_click_in_winbar line 26: col 15: Expected 12 but got 0
 	function RunTheTest[39]..Test_click_in_winbar line 32: Expected 1 but got 2
 	Found errors in Test_redraw_after_scroll():
-	function RunTheTest[39]..Test_redraw_after_scroll line 4: Expected '  Next' but got '  ŸŸ‚¿‚¿ƒoƒƒbƒƒtƒƒ@(&N)'
-	function RunTheTest[39]..Test_redraw_after_scroll line 7: Expected '  Next' but got '  ŸŸ‚¿‚¿ƒoƒƒbƒƒtƒƒ@(&N)'
+	function RunTheTest[39]..Test_redraw_after_scroll line 4: Expected &#39;  Next&#39; but got &#39;  ŸŸ‚¿‚¿ƒoƒƒbƒƒtƒƒ@(&amp;N)&#39;
+	function RunTheTest[39]..Test_redraw_after_scroll line 7: Expected &#39;  Next&#39; but got &#39;  ŸŸ‚¿‚¿ƒoƒƒbƒƒtƒƒ@(&amp;N)&#39;
 	From test_alot_utf8.vim:
 	Found errors in Test_classes_re1():
-	function RunTheTest[39]..Test_classes_re1[2]..<SNR>21_classes_test line 139: Expected '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ_abcdefghijklmnopqrstuvwxyzµµÀ€ÁÂ‚ÃƒÄ„Å…Æ†Ç‡ÈˆÉ‰ÊŠË‹ÌŒÍÎÏĞÑ‘Ò’Ó“Ô”Õ•Ö–×—Ø˜Ù™ÚšÛ›ÜœİŞßŸà á¡â¢ã£ä¤å¥æ¦ç§è¨é©êªë«ì¬í­î®ï¯ğ°ñ±ò²ó³ô´õµö¶÷·ø¸ù¹úºû»ü¼ı½ş¾ÿ¿' but got '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ_abcdefghijklmnopqrstuvwxyz€€‚‚ƒƒ„„……††‡‡ˆˆ‰‰ŠŠ‹‹ŒŒ‘‘’’““””••––——˜˜™™šš››œœŸŸ  ¡¡¢¢££¤¤¥¥¦¦§§µµÀ€ÁÂ‚ÃƒÄ„Å…Æ†Ç‡ÈˆÉ‰ÊŠË‹ÌŒÍÎÏĞÑ‘Ò’Ó“Ô”Õ•Ö–Ø˜Ù™ÚšÛ›ÜœİŞßŸà á¡â¢ã£ä¤å¥æ¦ç§è¨é©êªë«ì¬í­î®ï¯ğ°ñ±ò²ó³ô´õµö¶ø¸ù¹úºû»ü¼ı½ş¾ÿ¿'
+	function RunTheTest[39]..Test_classes_re1[2]..&lt;SNR&gt;21_classes_test line 139: Expected &#39;0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ_abcdefghijklmnopqrstuvwxyzµµÀ€ÁÂ‚ÃƒÄ„Å…Æ†Ç‡ÈˆÉ‰ÊŠË‹ÌŒÍÎÏĞÑ‘Ò’Ó“Ô”Õ•Ö–×—Ø˜Ù™ÚšÛ›ÜœİŞßŸà á¡â¢ã£ä¤å¥æ¦ç§è¨é©êªë«ì¬í­î®ï¯ğ°ñ±ò²ó³ô´õµö¶÷·ø¸ù¹úºû»ü¼ı½ş¾ÿ¿&#39; but got &#39;0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ_abcdefghijklmnopqrstuvwxyz€€‚‚ƒƒ„„……††‡‡ˆˆ‰‰ŠŠ‹‹ŒŒ‘‘’’““””••––——˜˜™™šš››œœŸŸ  ¡¡¢¢££¤¤¥¥¦¦§§µµÀ€ÁÂ‚ÃƒÄ„Å…Æ†Ç‡ÈˆÉ‰ÊŠË‹ÌŒÍÎÏĞÑ‘Ò’Ó“Ô”Õ•Ö–Ø˜Ù™ÚšÛ›ÜœİŞßŸà á¡â¢ã£ä¤å¥æ¦ç§è¨é©êªë«ì¬í­î®ï¯ğ°ñ±ò²ó³ô´õµö¶ø¸ù¹úºû»ü¼ı½ş¾ÿ¿&#39;
 	Found errors in Test_classes_re2():
-	function RunTheTest[39]..Test_classes_re2[2]..<SNR>21_classes_test line 139: Expected '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ_abcdefghijklmnopqrstuvwxyzµµÀ€ÁÂ‚ÃƒÄ„Å…Æ†Ç‡ÈˆÉ‰ÊŠË‹ÌŒÍÎÏĞÑ‘Ò’Ó“Ô”Õ•Ö–×—Ø˜Ù™ÚšÛ›ÜœİŞßŸà á¡â¢ã£ä¤å¥æ¦ç§è¨é©êªë«ì¬í­î®ï¯ğ°ñ±ò²ó³ô´õµö¶÷·ø¸ù¹úºû»ü¼ı½ş¾ÿ¿' but got '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ_abcdefghijklmnopqrstuvwxyz€€‚‚ƒƒ„„……††‡‡ˆˆ‰‰ŠŠ‹‹ŒŒ‘‘’’““””••––——˜˜™™šš››œœŸŸ  ¡¡¢¢££¤¤¥¥¦¦§§µµÀ€ÁÂ‚ÃƒÄ„Å…Æ†Ç‡ÈˆÉ‰ÊŠË‹ÌŒÍÎÏĞÑ‘Ò’Ó“Ô”Õ•Ö–Ø˜Ù™ÚšÛ›ÜœİŞßŸà á¡â¢ã£ä¤å¥æ¦ç§è¨é©êªë«ì¬í­î®ï¯ğ°ñ±ò²ó³ô´õµö¶ø¸ù¹úºû»ü¼ı½ş¾ÿ¿'
+	function RunTheTest[39]..Test_classes_re2[2]..&lt;SNR&gt;21_classes_test line 139: Expected &#39;0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ_abcdefghijklmnopqrstuvwxyzµµÀ€ÁÂ‚ÃƒÄ„Å…Æ†Ç‡ÈˆÉ‰ÊŠË‹ÌŒÍÎÏĞÑ‘Ò’Ó“Ô”Õ•Ö–×—Ø˜Ù™ÚšÛ›ÜœİŞßŸà á¡â¢ã£ä¤å¥æ¦ç§è¨é©êªë«ì¬í­î®ï¯ğ°ñ±ò²ó³ô´õµö¶÷·ø¸ù¹úºû»ü¼ı½ş¾ÿ¿&#39; but got &#39;0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ_abcdefghijklmnopqrstuvwxyz€€‚‚ƒƒ„„……††‡‡ˆˆ‰‰ŠŠ‹‹ŒŒ‘‘’’““””••––——˜˜™™šš››œœŸŸ  ¡¡¢¢££¤¤¥¥¦¦§§µµÀ€ÁÂ‚ÃƒÄ„Å…Æ†Ç‡ÈˆÉ‰ÊŠË‹ÌŒÍÎÏĞÑ‘Ò’Ó“Ô”Õ•Ö–Ø˜Ù™ÚšÛ›ÜœİŞßŸà á¡â¢ã£ä¤å¥æ¦ç§è¨é©êªë«ì¬í­î®ï¯ğ°ñ±ò²ó³ô´õµö¶ø¸ù¹úºû»ü¼ı½ş¾ÿ¿&#39;
 
 </code></pre>
                 </div>
@@ -2248,10 +2248,10 @@ Failures:
                   <span class="f5">[[ãƒ€ã‚¦ãƒ³ãƒ­ãƒ¼ãƒ‰: Untitled(Plain Text)]]</span>
                   </a>
                   <pre><code class='language-none'>	Found errors in Test_System():
-	function RunTheTest[39]..Test_System line 10: Expected '123\n' but got '123'
-	function RunTheTest[39]..Test_System line 11: Expected ['123\r'] but got ['123']
-	function RunTheTest[39]..Test_System line 12: Expected ['as\r', 'df\r'] but got ['as\ndf']
-	function RunTheTest[39]..Test_System line 40: Expected ['asdf\r', 'pw\r', 'er\r', 'xxxx\r'] but got ['asdf', 'pw\ner', 'xxxx']
+	function RunTheTest[39]..Test_System line 10: Expected &#39;123\n&#39; but got &#39;123&#39;
+	function RunTheTest[39]..Test_System line 11: Expected [&#39;123\r&#39;] but got [&#39;123&#39;]
+	function RunTheTest[39]..Test_System line 12: Expected [&#39;as\r&#39;, &#39;df\r&#39;] but got [&#39;as\ndf&#39;]
+	function RunTheTest[39]..Test_System line 40: Expected [&#39;asdf\r&#39;, &#39;pw\r&#39;, &#39;er\r&#39;, &#39;xxxx\r&#39;] but got [&#39;asdf&#39;, &#39;pw\ner&#39;, &#39;xxxx&#39;]
 </code></pre>
                 </div>
               </div>

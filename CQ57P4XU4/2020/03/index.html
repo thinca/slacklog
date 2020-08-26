@@ -23456,7 +23456,7 @@ commands:
   - title: Explorer
     command: explorer
     arguments:
-      - /select,"${INPUT}"
+      - /select,&#34;${INPUT}&#34;
     os: windows
   - title: Explorer
     command: open
@@ -23469,165 +23469,165 @@ languages:
       - lint-formats: []
         lint-stdin: false
         lint-offset: 0
-        lint-command: ""
+        lint-command: &#34;&#34;
         lint-ignore-exit-code: false
-        format-command: ""
+        format-command: &#34;&#34;
         format-stdin: false
-        symbol-command: ""
+        symbol-command: &#34;&#34;
         symbol-stdin: false
         symbol-formats: []
-        completion-command: ""
+        completion-command: &#34;&#34;
         hover-command: excitetranslate
         hover-stdin: true
-        hover-type: ""
+        hover-type: &#34;&#34;
         env: []
     c:
       - lint-formats:
-          - '%f:%l:%c: %m'
+          - &#39;%f:%l:%c: %m&#39;
         lint-stdin: false
         lint-offset: 0
         lint-command: cppcheck --enable=style --error-exitcode=1 ${INPUT}
         lint-ignore-exit-code: false
-        format-command: ""
+        format-command: &#34;&#34;
         format-stdin: false
-        symbol-command: ""
+        symbol-command: &#34;&#34;
         symbol-stdin: false
         symbol-formats: []
-        completion-command: ""
-        hover-command: ""
+        completion-command: &#34;&#34;
+        hover-command: &#34;&#34;
         hover-stdin: false
-        hover-type: ""
+        hover-type: &#34;&#34;
         env: []
     cpp:
       - lint-formats:
-          - '%f:%l:%c: %m'
+          - &#39;%f:%l:%c: %m&#39;
         lint-stdin: false
         lint-offset: 0
         lint-command: cppcheck --enable=style --error-exitcode=1 ${INPUT}
         lint-ignore-exit-code: false
-        format-command: ""
+        format-command: &#34;&#34;
         format-stdin: false
-        symbol-command: ""
+        symbol-command: &#34;&#34;
         symbol-stdin: false
         symbol-formats: []
-        completion-command: ""
-        hover-command: ""
+        completion-command: &#34;&#34;
+        hover-command: &#34;&#34;
         hover-stdin: false
-        hover-type: ""
+        hover-type: &#34;&#34;
         env: []
     css:
       - lint-formats:
-          - '%f:%l:%c: %m [%trror]'
-          - '%f:%l:%c: %m [%tarning]'
+          - &#39;%f:%l:%c: %m [%trror]&#39;
+          - &#39;%f:%l:%c: %m [%tarning]&#39;
         lint-stdin: true
         lint-offset: 0
         lint-command: npx --no-install stylelint --formatter unix --stdin --stdin-filename
             ${INPUT}
         lint-ignore-exit-code: false
-        format-command: ""
+        format-command: &#34;&#34;
         format-stdin: false
-        symbol-command: ""
+        symbol-command: &#34;&#34;
         symbol-stdin: false
         symbol-formats: []
-        completion-command: ""
-        hover-command: ""
+        completion-command: &#34;&#34;
+        hover-command: &#34;&#34;
         hover-stdin: false
-        hover-type: ""
+        hover-type: &#34;&#34;
         env: []
       - lint-formats: []
         lint-stdin: false
         lint-offset: 0
-        lint-command: ""
+        lint-command: &#34;&#34;
         lint-ignore-exit-code: false
         format-command: npx --no-install prettier ${INPUT}
         format-stdin: false
-        symbol-command: ""
+        symbol-command: &#34;&#34;
         symbol-stdin: false
         symbol-formats: []
-        completion-command: ""
-        hover-command: ""
+        completion-command: &#34;&#34;
+        hover-command: &#34;&#34;
         hover-stdin: false
-        hover-type: ""
+        hover-type: &#34;&#34;
         env: []
     graphql:
       - lint-formats: []
         lint-stdin: false
         lint-offset: 0
-        lint-command: ""
+        lint-command: &#34;&#34;
         lint-ignore-exit-code: false
         format-command: npx --no-install prettier ${INPUT}
         format-stdin: false
-        symbol-command: ""
+        symbol-command: &#34;&#34;
         symbol-stdin: false
         symbol-formats: []
-        completion-command: ""
-        hover-command: ""
+        completion-command: &#34;&#34;
+        hover-command: &#34;&#34;
         hover-stdin: false
-        hover-type: ""
+        hover-type: &#34;&#34;
         env: []
     help:
       - lint-formats:
-          - '%f:%l:%c:%*[^:]:%m'
+          - &#39;%f:%l:%c:%*[^:]:%m&#39;
         lint-stdin: false
         lint-offset: 0
         lint-command: vale --relative --output line ${INPUT}
         lint-ignore-exit-code: true
-        format-command: ""
+        format-command: &#34;&#34;
         format-stdin: false
-        symbol-command: ""
+        symbol-command: &#34;&#34;
         symbol-stdin: false
         symbol-formats: []
-        completion-command: ""
-        hover-command: ""
+        completion-command: &#34;&#34;
+        hover-command: &#34;&#34;
         hover-stdin: false
-        hover-type: ""
+        hover-type: &#34;&#34;
         env: []
       - lint-formats:
-          - '%f:%l: %m'
+          - &#39;%f:%l: %m&#39;
         lint-stdin: false
         lint-offset: 0
         lint-command: nvcheck ${INPUT}
         lint-ignore-exit-code: false
-        format-command: ""
+        format-command: &#34;&#34;
         format-stdin: false
-        symbol-command: ""
+        symbol-command: &#34;&#34;
         symbol-stdin: false
         symbol-formats: []
-        completion-command: ""
-        hover-command: ""
+        completion-command: &#34;&#34;
+        hover-command: &#34;&#34;
         hover-stdin: false
-        hover-type: ""
+        hover-type: &#34;&#34;
         env: []
       - lint-formats: []
         lint-stdin: false
         lint-offset: 0
-        lint-command: ""
+        lint-command: &#34;&#34;
         lint-ignore-exit-code: false
         format-command: nvcheck -r ${INPUT}
         format-stdin: false
-        symbol-command: ""
+        symbol-command: &#34;&#34;
         symbol-stdin: false
         symbol-formats: []
-        completion-command: ""
-        hover-command: ""
+        completion-command: &#34;&#34;
+        hover-command: &#34;&#34;
         hover-stdin: false
-        hover-type: ""
+        hover-type: &#34;&#34;
         env: []
     html:
       - lint-formats: []
         lint-stdin: false
         lint-offset: 0
-        lint-command: ""
+        lint-command: &#34;&#34;
         lint-ignore-exit-code: false
         format-command: npx --no-install prettier ${INPUT}
         format-stdin: false
-        symbol-command: ""
+        symbol-command: &#34;&#34;
         symbol-stdin: false
         symbol-formats: []
-        completion-command: ""
-        hover-command: ""
+        completion-command: &#34;&#34;
+        hover-command: &#34;&#34;
         hover-stdin: false
-        hover-type: ""
+        hover-type: &#34;&#34;
         env: []
     javascript:
       - lint-formats: []
@@ -23635,494 +23635,494 @@ languages:
         lint-offset: 0
         lint-command: npx --no-install eslint -f unix --stdin --stdin-filename ${INPUT}
         lint-ignore-exit-code: true
-        format-command: ""
+        format-command: &#34;&#34;
         format-stdin: false
-        symbol-command: ""
+        symbol-command: &#34;&#34;
         symbol-stdin: false
         symbol-formats: []
-        completion-command: ""
-        hover-command: ""
+        completion-command: &#34;&#34;
+        hover-command: &#34;&#34;
         hover-stdin: false
-        hover-type: ""
+        hover-type: &#34;&#34;
         env: []
       - lint-formats: []
         lint-stdin: false
         lint-offset: 0
-        lint-command: ""
+        lint-command: &#34;&#34;
         lint-ignore-exit-code: false
         format-command: npx --no-install eslint --fix ${INPUT}
         format-stdin: false
-        symbol-command: ""
+        symbol-command: &#34;&#34;
         symbol-stdin: false
         symbol-formats: []
-        completion-command: ""
-        hover-command: ""
+        completion-command: &#34;&#34;
+        hover-command: &#34;&#34;
         hover-stdin: false
-        hover-type: ""
+        hover-type: &#34;&#34;
         env: []
     json:
       - lint-formats: []
         lint-stdin: false
         lint-offset: 0
-        lint-command: ""
+        lint-command: &#34;&#34;
         lint-ignore-exit-code: false
         format-command: jq .
         format-stdin: false
-        symbol-command: ""
+        symbol-command: &#34;&#34;
         symbol-stdin: false
         symbol-formats: []
-        completion-command: ""
-        hover-command: ""
+        completion-command: &#34;&#34;
+        hover-command: &#34;&#34;
         hover-stdin: false
-        hover-type: ""
+        hover-type: &#34;&#34;
         env: []
       - lint-formats: []
         lint-stdin: false
         lint-offset: 0
-        lint-command: ""
+        lint-command: &#34;&#34;
         lint-ignore-exit-code: false
         format-command: fixjson
         format-stdin: false
-        symbol-command: ""
+        symbol-command: &#34;&#34;
         symbol-stdin: false
         symbol-formats: []
-        completion-command: ""
-        hover-command: ""
+        completion-command: &#34;&#34;
+        hover-command: &#34;&#34;
         hover-stdin: false
-        hover-type: ""
+        hover-type: &#34;&#34;
         env: []
       - lint-formats: []
         lint-stdin: false
         lint-offset: 0
-        lint-command: ""
+        lint-command: &#34;&#34;
         lint-ignore-exit-code: false
         format-command: npx --no-install prettier ${INPUT}
         format-stdin: false
-        symbol-command: ""
+        symbol-command: &#34;&#34;
         symbol-stdin: false
         symbol-formats: []
-        completion-command: ""
-        hover-command: ""
+        completion-command: &#34;&#34;
+        hover-command: &#34;&#34;
         hover-stdin: false
-        hover-type: ""
+        hover-type: &#34;&#34;
         env: []
     json5:
       - lint-formats: []
         lint-stdin: false
         lint-offset: 0
-        lint-command: ""
+        lint-command: &#34;&#34;
         lint-ignore-exit-code: false
         format-command: fixjson
         format-stdin: false
-        symbol-command: ""
+        symbol-command: &#34;&#34;
         symbol-stdin: false
         symbol-formats: []
-        completion-command: ""
-        hover-command: ""
+        completion-command: &#34;&#34;
+        hover-command: &#34;&#34;
         hover-stdin: false
-        hover-type: ""
+        hover-type: &#34;&#34;
         env: []
       - lint-formats: []
         lint-stdin: false
         lint-offset: 0
-        lint-command: ""
+        lint-command: &#34;&#34;
         lint-ignore-exit-code: false
         format-command: npx --no-install prettier ${INPUT}
         format-stdin: false
-        symbol-command: ""
+        symbol-command: &#34;&#34;
         symbol-stdin: false
         symbol-formats: []
-        completion-command: ""
-        hover-command: ""
+        completion-command: &#34;&#34;
+        hover-command: &#34;&#34;
         hover-stdin: false
-        hover-type: ""
+        hover-type: &#34;&#34;
         env: []
     less:
       - lint-formats:
-          - '%f:%l:%c: %m [%trror]'
-          - '%f:%l:%c: %m [%tarning]'
+          - &#39;%f:%l:%c: %m [%trror]&#39;
+          - &#39;%f:%l:%c: %m [%tarning]&#39;
         lint-stdin: true
         lint-offset: 0
         lint-command: npx --no-install stylelint --formatter unix --stdin --stdin-filename
             ${INPUT}
         lint-ignore-exit-code: false
-        format-command: ""
+        format-command: &#34;&#34;
         format-stdin: false
-        symbol-command: ""
+        symbol-command: &#34;&#34;
         symbol-stdin: false
         symbol-formats: []
-        completion-command: ""
-        hover-command: ""
+        completion-command: &#34;&#34;
+        hover-command: &#34;&#34;
         hover-stdin: false
-        hover-type: ""
+        hover-type: &#34;&#34;
         env: []
     markdown:
       - lint-formats:
-          - '%f:%l %m'
-          - '%f: %l: %m'
+          - &#39;%f:%l %m&#39;
+          - &#39;%f: %l: %m&#39;
         lint-stdin: true
         lint-offset: 0
         lint-command: markdownlint -s
         lint-ignore-exit-code: false
-        format-command: ""
+        format-command: &#34;&#34;
         format-stdin: false
-        symbol-command: ""
+        symbol-command: &#34;&#34;
         symbol-stdin: false
         symbol-formats: []
-        completion-command: ""
-        hover-command: ""
+        completion-command: &#34;&#34;
+        hover-command: &#34;&#34;
         hover-stdin: false
-        hover-type: ""
+        hover-type: &#34;&#34;
         env: []
       - lint-formats: []
         lint-stdin: false
         lint-offset: 0
-        lint-command: ""
+        lint-command: &#34;&#34;
         lint-ignore-exit-code: false
         format-command: markdownlint -f ${INPUT}
         format-stdin: false
-        symbol-command: ""
+        symbol-command: &#34;&#34;
         symbol-stdin: false
         symbol-formats: []
-        completion-command: ""
-        hover-command: ""
+        completion-command: &#34;&#34;
+        hover-command: &#34;&#34;
         hover-stdin: false
-        hover-type: ""
+        hover-type: &#34;&#34;
         env: []
       - lint-formats:
-          - '%f:%l:%c:%*[^:]:%m'
+          - &#39;%f:%l:%c:%*[^:]:%m&#39;
         lint-stdin: false
         lint-offset: 0
         lint-command: vale --relative --output line ${INPUT}
         lint-ignore-exit-code: true
-        format-command: ""
+        format-command: &#34;&#34;
         format-stdin: false
-        symbol-command: ""
+        symbol-command: &#34;&#34;
         symbol-stdin: false
         symbol-formats: []
-        completion-command: ""
-        hover-command: ""
+        completion-command: &#34;&#34;
+        hover-command: &#34;&#34;
         hover-stdin: false
-        hover-type: ""
+        hover-type: &#34;&#34;
         env: []
       - lint-formats:
-          - '%f:%l: %m'
+          - &#39;%f:%l: %m&#39;
         lint-stdin: false
         lint-offset: 0
         lint-command: nvcheck ${INPUT}
         lint-ignore-exit-code: false
-        format-command: ""
+        format-command: &#34;&#34;
         format-stdin: false
-        symbol-command: ""
+        symbol-command: &#34;&#34;
         symbol-stdin: false
         symbol-formats: []
-        completion-command: ""
-        hover-command: ""
+        completion-command: &#34;&#34;
+        hover-command: &#34;&#34;
         hover-stdin: false
-        hover-type: ""
+        hover-type: &#34;&#34;
         env: []
       - lint-formats: []
         lint-stdin: false
         lint-offset: 0
-        lint-command: ""
+        lint-command: &#34;&#34;
         lint-ignore-exit-code: false
         format-command: nvcheck -r ${INPUT}
         format-stdin: false
-        symbol-command: ""
+        symbol-command: &#34;&#34;
         symbol-stdin: false
         symbol-formats: []
-        completion-command: ""
-        hover-command: ""
+        completion-command: &#34;&#34;
+        hover-command: &#34;&#34;
         hover-stdin: false
-        hover-type: ""
+        hover-type: &#34;&#34;
         env: []
       - lint-formats: []
         lint-stdin: false
         lint-offset: 0
-        lint-command: ""
+        lint-command: &#34;&#34;
         lint-ignore-exit-code: false
         format-command: npx --no-install prettier ${INPUT}
         format-stdin: false
-        symbol-command: ""
+        symbol-command: &#34;&#34;
         symbol-stdin: false
         symbol-formats: []
-        completion-command: ""
-        hover-command: ""
+        completion-command: &#34;&#34;
+        hover-command: &#34;&#34;
         hover-stdin: false
-        hover-type: ""
+        hover-type: &#34;&#34;
         env: []
     python:
       - lint-formats:
-          - '%f:%l:%c: %m'
+          - &#39;%f:%l:%c: %m&#39;
         lint-stdin: true
         lint-offset: 0
         lint-command: flake8 --stdin-display-name ${INPUT} -
         lint-ignore-exit-code: false
-        format-command: ""
+        format-command: &#34;&#34;
         format-stdin: false
-        symbol-command: ""
+        symbol-command: &#34;&#34;
         symbol-stdin: false
         symbol-formats: []
-        completion-command: ""
-        hover-command: ""
+        completion-command: &#34;&#34;
+        hover-command: &#34;&#34;
         hover-stdin: false
-        hover-type: ""
+        hover-type: &#34;&#34;
         env: []
       - lint-formats:
-          - '%f:%l:%c: %trror: %m'
-          - '%f:%l:%c: %tarning: %m'
-          - '%f:%l:%c: %tote: %m'
+          - &#39;%f:%l:%c: %trror: %m&#39;
+          - &#39;%f:%l:%c: %tarning: %m&#39;
+          - &#39;%f:%l:%c: %tote: %m&#39;
         lint-stdin: false
         lint-offset: 0
         lint-command: mypy --show-column-numbers
         lint-ignore-exit-code: false
-        format-command: ""
+        format-command: &#34;&#34;
         format-stdin: false
-        symbol-command: ""
+        symbol-command: &#34;&#34;
         symbol-stdin: false
         symbol-formats: []
-        completion-command: ""
-        hover-command: ""
+        completion-command: &#34;&#34;
+        hover-command: &#34;&#34;
         hover-stdin: false
-        hover-type: ""
+        hover-type: &#34;&#34;
         env: []
     rst:
       - lint-formats:
-          - '%tARNING %f:%l %m'
-          - '%tRROR %f:%l %m'
+          - &#39;%tARNING %f:%l %m&#39;
+          - &#39;%tRROR %f:%l %m&#39;
         lint-stdin: false
         lint-offset: 0
         lint-command: restructuredtext-lint --encoding utf-8 --level warning --format
             text ${INPUT}
         lint-ignore-exit-code: true
-        format-command: ""
+        format-command: &#34;&#34;
         format-stdin: false
-        symbol-command: ""
+        symbol-command: &#34;&#34;
         symbol-stdin: false
         symbol-formats: []
-        completion-command: ""
-        hover-command: ""
+        completion-command: &#34;&#34;
+        hover-command: &#34;&#34;
         hover-stdin: false
-        hover-type: ""
+        hover-type: &#34;&#34;
         env: []
       - lint-formats:
-          - '%f:%l:%c:%*[^:]:%m'
+          - &#39;%f:%l:%c:%*[^:]:%m&#39;
         lint-stdin: false
         lint-offset: 0
         lint-command: vale --relative --output line ${INPUT}
         lint-ignore-exit-code: true
-        format-command: ""
+        format-command: &#34;&#34;
         format-stdin: false
-        symbol-command: ""
+        symbol-command: &#34;&#34;
         symbol-stdin: false
         symbol-formats: []
-        completion-command: ""
-        hover-command: ""
+        completion-command: &#34;&#34;
+        hover-command: &#34;&#34;
         hover-stdin: false
-        hover-type: ""
+        hover-type: &#34;&#34;
         env: []
       - lint-formats:
-          - '%f:%l: %m'
+          - &#39;%f:%l: %m&#39;
         lint-stdin: false
         lint-offset: 0
         lint-command: nvcheck ${INPUT}
         lint-ignore-exit-code: false
-        format-command: ""
+        format-command: &#34;&#34;
         format-stdin: false
-        symbol-command: ""
+        symbol-command: &#34;&#34;
         symbol-stdin: false
         symbol-formats: []
-        completion-command: ""
-        hover-command: ""
+        completion-command: &#34;&#34;
+        hover-command: &#34;&#34;
         hover-stdin: false
-        hover-type: ""
+        hover-type: &#34;&#34;
         env: []
       - lint-formats: []
         lint-stdin: false
         lint-offset: 0
-        lint-command: ""
+        lint-command: &#34;&#34;
         lint-ignore-exit-code: false
         format-command: nvcheck -r ${INPUT}
         format-stdin: false
-        symbol-command: ""
+        symbol-command: &#34;&#34;
         symbol-stdin: false
         symbol-formats: []
-        completion-command: ""
-        hover-command: ""
+        completion-command: &#34;&#34;
+        hover-command: &#34;&#34;
         hover-stdin: false
-        hover-type: ""
+        hover-type: &#34;&#34;
         env: []
     ruby:
       - lint-formats:
-          - '%f:%l:%c: %m'
+          - &#39;%f:%l:%c: %m&#39;
         lint-stdin: true
         lint-offset: 0
         lint-command: bundle exec rubocop --format emacs --force-exclusion --stdin
             ${INPUT}
         lint-ignore-exit-code: true
-        format-command: ""
+        format-command: &#34;&#34;
         format-stdin: false
-        symbol-command: ""
+        symbol-command: &#34;&#34;
         symbol-stdin: false
         symbol-formats: []
-        completion-command: ""
-        hover-command: ""
+        completion-command: &#34;&#34;
+        hover-command: &#34;&#34;
         hover-stdin: false
-        hover-type: ""
+        hover-type: &#34;&#34;
         env: []
     sass:
       - lint-formats:
-          - '%f:%l:%c: %m [%trror]'
-          - '%f:%l:%c: %m [%tarning]'
+          - &#39;%f:%l:%c: %m [%trror]&#39;
+          - &#39;%f:%l:%c: %m [%tarning]&#39;
         lint-stdin: true
         lint-offset: 0
         lint-command: npx --no-install stylelint --formatter unix --stdin --stdin-filename
             ${INPUT}
         lint-ignore-exit-code: false
-        format-command: ""
+        format-command: &#34;&#34;
         format-stdin: false
-        symbol-command: ""
+        symbol-command: &#34;&#34;
         symbol-stdin: false
         symbol-formats: []
-        completion-command: ""
-        hover-command: ""
+        completion-command: &#34;&#34;
+        hover-command: &#34;&#34;
         hover-stdin: false
-        hover-type: ""
+        hover-type: &#34;&#34;
         env: []
     scss:
       - lint-formats:
-          - '%f:%l:%c: %m [%trror]'
-          - '%f:%l:%c: %m [%tarning]'
+          - &#39;%f:%l:%c: %m [%trror]&#39;
+          - &#39;%f:%l:%c: %m [%tarning]&#39;
         lint-stdin: true
         lint-offset: 0
         lint-command: npx --no-install stylelint --formatter unix --stdin --stdin-filename
             ${INPUT}
         lint-ignore-exit-code: false
-        format-command: ""
+        format-command: &#34;&#34;
         format-stdin: false
-        symbol-command: ""
+        symbol-command: &#34;&#34;
         symbol-stdin: false
         symbol-formats: []
-        completion-command: ""
-        hover-command: ""
+        completion-command: &#34;&#34;
+        hover-command: &#34;&#34;
         hover-stdin: false
-        hover-type: ""
+        hover-type: &#34;&#34;
         env: []
       - lint-formats: []
         lint-stdin: false
         lint-offset: 0
-        lint-command: ""
+        lint-command: &#34;&#34;
         lint-ignore-exit-code: false
         format-command: npx --no-install prettier ${INPUT}
         format-stdin: false
-        symbol-command: ""
+        symbol-command: &#34;&#34;
         symbol-stdin: false
         symbol-formats: []
-        completion-command: ""
-        hover-command: ""
+        completion-command: &#34;&#34;
+        hover-command: &#34;&#34;
         hover-stdin: false
-        hover-type: ""
+        hover-type: &#34;&#34;
         env: []
     sh:
       - lint-formats:
-          - '%f:%l:%c: %trror: %m'
-          - '%f:%l:%c: %tarning: %m'
-          - '%f:%l:%c: %tote: %m'
+          - &#39;%f:%l:%c: %trror: %m&#39;
+          - &#39;%f:%l:%c: %tarning: %m&#39;
+          - &#39;%f:%l:%c: %tote: %m&#39;
         lint-stdin: true
         lint-offset: 0
         lint-command: shellcheck -s bash -f gcc -x -o all -
         lint-ignore-exit-code: false
-        format-command: ""
+        format-command: &#34;&#34;
         format-stdin: false
-        symbol-command: ""
+        symbol-command: &#34;&#34;
         symbol-stdin: false
         symbol-formats: []
-        completion-command: ""
-        hover-command: ""
+        completion-command: &#34;&#34;
+        hover-command: &#34;&#34;
         hover-stdin: false
-        hover-type: ""
+        hover-type: &#34;&#34;
         env: []
       - lint-formats: []
         lint-stdin: false
         lint-offset: 0
-        lint-command: ""
+        lint-command: &#34;&#34;
         lint-ignore-exit-code: false
         format-command: shfmt -ln bash -kp
         format-stdin: false
-        symbol-command: ""
+        symbol-command: &#34;&#34;
         symbol-stdin: false
         symbol-formats: []
-        completion-command: ""
-        hover-command: ""
+        completion-command: &#34;&#34;
+        hover-command: &#34;&#34;
         hover-stdin: false
-        hover-type: ""
+        hover-type: &#34;&#34;
         env: []
     sugarss:
       - lint-formats:
-          - '%f:%l:%c: %m [%trror]'
-          - '%f:%l:%c: %m [%tarning]'
+          - &#39;%f:%l:%c: %m [%trror]&#39;
+          - &#39;%f:%l:%c: %m [%tarning]&#39;
         lint-stdin: true
         lint-offset: 0
         lint-command: npx --no-install stylelint --formatter unix --stdin --stdin-filename
             ${INPUT}
         lint-ignore-exit-code: false
-        format-command: ""
+        format-command: &#34;&#34;
         format-stdin: false
-        symbol-command: ""
+        symbol-command: &#34;&#34;
         symbol-stdin: false
         symbol-formats: []
-        completion-command: ""
-        hover-command: ""
+        completion-command: &#34;&#34;
+        hover-command: &#34;&#34;
         hover-stdin: false
-        hover-type: ""
+        hover-type: &#34;&#34;
         env: []
     text:
       - lint-formats:
-          - '%f:%l:%c:%*[^:]:%m'
+          - &#39;%f:%l:%c:%*[^:]:%m&#39;
         lint-stdin: false
         lint-offset: 0
         lint-command: vale --relative --output line ${INPUT}
         lint-ignore-exit-code: true
-        format-command: ""
+        format-command: &#34;&#34;
         format-stdin: false
-        symbol-command: ""
+        symbol-command: &#34;&#34;
         symbol-stdin: false
         symbol-formats: []
-        completion-command: ""
-        hover-command: ""
+        completion-command: &#34;&#34;
+        hover-command: &#34;&#34;
         hover-stdin: false
-        hover-type: ""
+        hover-type: &#34;&#34;
         env: []
       - lint-formats:
-          - '%f:%l: %m'
+          - &#39;%f:%l: %m&#39;
         lint-stdin: false
         lint-offset: 0
         lint-command: nvcheck ${INPUT}
         lint-ignore-exit-code: false
-        format-command: ""
+        format-command: &#34;&#34;
         format-stdin: false
-        symbol-command: ""
+        symbol-command: &#34;&#34;
         symbol-stdin: false
         symbol-formats: []
-        completion-command: ""
-        hover-command: ""
+        completion-command: &#34;&#34;
+        hover-command: &#34;&#34;
         hover-stdin: false
-        hover-type: ""
+        hover-type: &#34;&#34;
         env: []
       - lint-formats: []
         lint-stdin: false
         lint-offset: 0
-        lint-command: ""
+        lint-command: &#34;&#34;
         lint-ignore-exit-code: false
         format-command: nvcheck -r ${INPUT}
         format-stdin: false
-        symbol-command: ""
+        symbol-command: &#34;&#34;
         symbol-stdin: false
         symbol-formats: []
-        completion-command: ""
-        hover-command: ""
+        completion-command: &#34;&#34;
+        hover-command: &#34;&#34;
         hover-stdin: false
-        hover-type: ""
+        hover-type: &#34;&#34;
         env: []
     typescript:
       - lint-formats: []
@@ -24130,45 +24130,45 @@ languages:
         lint-offset: 0
         lint-command: npx --no-install eslint -f unix --stdin --stdin-filename ${INPUT}
         lint-ignore-exit-code: true
-        format-command: ""
+        format-command: &#34;&#34;
         format-stdin: false
-        symbol-command: ""
+        symbol-command: &#34;&#34;
         symbol-stdin: false
         symbol-formats: []
-        completion-command: ""
-        hover-command: ""
+        completion-command: &#34;&#34;
+        hover-command: &#34;&#34;
         hover-stdin: false
-        hover-type: ""
+        hover-type: &#34;&#34;
         env: []
       - lint-formats: []
         lint-stdin: false
         lint-offset: 0
-        lint-command: ""
+        lint-command: &#34;&#34;
         lint-ignore-exit-code: false
         format-command: npx --no-install eslint --fix ${INPUT}
         format-stdin: false
-        symbol-command: ""
+        symbol-command: &#34;&#34;
         symbol-stdin: false
         symbol-formats: []
-        completion-command: ""
-        hover-command: ""
+        completion-command: &#34;&#34;
+        hover-command: &#34;&#34;
         hover-stdin: false
-        hover-type: ""
+        hover-type: &#34;&#34;
         env: []
       - lint-formats: []
         lint-stdin: false
         lint-offset: 0
-        lint-command: ""
+        lint-command: &#34;&#34;
         lint-ignore-exit-code: false
         format-command: npx --no-install prettier ${INPUT}
         format-stdin: false
-        symbol-command: ""
+        symbol-command: &#34;&#34;
         symbol-stdin: false
         symbol-formats: []
-        completion-command: ""
-        hover-command: ""
+        completion-command: &#34;&#34;
+        hover-command: &#34;&#34;
         hover-stdin: false
-        hover-type: ""
+        hover-type: &#34;&#34;
         env: []
     vim:
       - lint-formats: []
@@ -24177,65 +24177,65 @@ languages:
         lint-command: vint --enable-neovim --style-problem --stdin-display-name ${INPUT}
             -
         lint-ignore-exit-code: false
-        format-command: ""
+        format-command: &#34;&#34;
         format-stdin: false
-        symbol-command: ""
+        symbol-command: &#34;&#34;
         symbol-stdin: false
         symbol-formats: []
-        completion-command: ""
-        hover-command: ""
+        completion-command: &#34;&#34;
+        hover-command: &#34;&#34;
         hover-stdin: false
-        hover-type: ""
+        hover-type: &#34;&#34;
         env: []
     vue:
       - lint-formats: []
         lint-stdin: false
         lint-offset: 0
-        lint-command: ""
+        lint-command: &#34;&#34;
         lint-ignore-exit-code: false
         format-command: npx --no-install prettier ${INPUT}
         format-stdin: false
-        symbol-command: ""
+        symbol-command: &#34;&#34;
         symbol-stdin: false
         symbol-formats: []
-        completion-command: ""
-        hover-command: ""
+        completion-command: &#34;&#34;
+        hover-command: &#34;&#34;
         hover-stdin: false
-        hover-type: ""
+        hover-type: &#34;&#34;
         env: []
     yaml:
       - lint-formats:
-          - '%f:%l:%c: [%trror] %m'
-          - '%f:%l:%c: [%tarning] %m'
+          - &#39;%f:%l:%c: [%trror] %m&#39;
+          - &#39;%f:%l:%c: [%tarning] %m&#39;
         lint-stdin: false
         lint-offset: 0
         lint-command: yamllint --strict --format parsable ${INPUT}
         lint-ignore-exit-code: false
-        format-command: ""
+        format-command: &#34;&#34;
         format-stdin: false
-        symbol-command: ""
+        symbol-command: &#34;&#34;
         symbol-stdin: false
         symbol-formats: []
-        completion-command: ""
-        hover-command: ""
+        completion-command: &#34;&#34;
+        hover-command: &#34;&#34;
         hover-stdin: false
-        hover-type: ""
+        hover-type: &#34;&#34;
         env:
           - PYTHONIOENCODING=UTF-8
       - lint-formats: []
         lint-stdin: false
         lint-offset: 0
-        lint-command: ""
+        lint-command: &#34;&#34;
         lint-ignore-exit-code: false
         format-command: npx --no-install prettier ${INPUT}
         format-stdin: false
-        symbol-command: ""
+        symbol-command: &#34;&#34;
         symbol-stdin: false
         symbol-formats: []
-        completion-command: ""
-        hover-command: ""
+        completion-command: &#34;&#34;
+        hover-command: &#34;&#34;
         hover-stdin: false
-        hover-type: ""
+        hover-type: &#34;&#34;
         env: []
 </code></pre>
                 </div>
@@ -34365,29 +34365,29 @@ languages:
                   <a href="/slacklog/files/FV6MQFBKK/%E7%84%A1%E9%A1%8C.txt" target="_blank" rel="noopener noreferrer">
                   <span class="f5">[[ダウンロード: 無題(Plain Text)]]</span>
                   </a>
-                  <pre><code class='language-none'>月  3/16 22:35:50 2020:[{"response":{"data":{"__data__":"vim-lsp","server_name":"gopls"},"message":"server already started"}}]
-月  3/16 22:35:50 2020:[{"response":{"data":{"__data__":"vim-lsp","init_result":{"id":1,"jsonrpc":"2.0","result":{"capabilities":{"executeCommandProvider":{"commands":["tidy","upgrade.dependency"]},"documentHighlightProvider":true,"hoverProvider":true,"typeDefinitionProvider":true,"definitionProvider":true,"referencesProvider":true,"signatureHelpProvider":{"triggerCharacters":["(",","]},"foldingRangeProvider":true,"codeActionProvider":{"codeActionKinds":["quickfix","source.organizeImports"]},"textDocumentSync":{"save":{},"change":2,"openClose":true},"codeLensProvider":{},"workspace":{"workspaceFolders":{"changeNotifications":"workspace/didChangeWorkspaceFolders","supported":true}},"documentLinkProvider":{},"implementationProvider":true,"documentOnTypeFormattingProvider":{"firstTriggerCharacter":""},"workspaceSymbolProvider":true,"documentFormattingProvider":true,"documentSymbolProvider":true,"renameProvider":true,"completionProvider":{"triggerCharacters":["."]}},"serverInfo":{"name":""}}},"server_name":"gopls"},"message":"lsp server already initialized"}}]
-月  3/16 22:35:50 2020:["--->",1,"gopls",{"method":"workspace/didChangeConfiguration","params":{"settings":{}}}]
-月  3/16 22:35:50 2020:[{"response":{"data":{"__data__":"vim-lsp","server_name":"gopls"},"message":"configuration sent"}}]
-月  3/16 22:35:50 2020:[{"response":{"data":{"path":"file:///Users/skanehira/dev/go/src/github.com/skanehira/xxx/api/main.go","__data__":"vim-lsp","server_name":"gopls"},"message":"already opened"}}]
-月  3/16 22:35:50 2020:[{"response":{"data":{"path":"file:///Users/skanehira/dev/go/src/github.com/skanehira/xxx/api/main.go","__data__":"vim-lsp","server_name":"gopls"},"message":"not dirty"}}]
-月  3/16 22:35:50 2020:["--->",1,"gopls",{"method":"textDocument/definition","on_notification":"---funcref---","params":{"textDocument":{"uri":"file:///Users/skanehira/dev/go/src/github.com/skanehira/xxx/api/main.go"},"position":{"character":6,"line":36}}}]
-月  3/16 22:35:50 2020:["<---",1,{"method":"workspace/configuration","jsonrpc":"2.0","id":4,"params":{"items":[{"section":"gopls","scopeUri":"file:///Users/skanehira/dev/go/src/github.com/skanehira/xxx"},{"section":"gopls-xxx","scopeUri":"file:///Users/skanehira/dev/go/src/github.com/skanehira/xxx"}]}}]
-月  3/16 22:35:50 2020:["--->",1,"gopls",{"id":4,"result":[null,null]}]
-月  3/16 22:35:51 2020:["<---(stderr)",1,"gopls",["2020/03/16 22:35:51 diagnose: no workspace packages: go [-e -json -compiled=true -test=true -export=false -deps=true -find=false -- ./]: exit status 1: go: cannot find main module, but found .git/config in /Users/skanehira/dev/go/src/github.com/skanehira/xxx","\tto create a module there, run:","\tgo mod init","","\tsnapshot = 1","\tdirectory = 0x16c1b80",""]]
-月  3/16 22:35:51 2020:["<---",1,"gopls",{"response":{"method":"window/logMessage","jsonrpc":"2.0","params":{"message":"2020/03/16 22:35:51 go/packages.Load\n\tsnapshot = 1\n\tquery = [./]\n\tpackages = 0","type":3}}}]
-月  3/16 22:35:51 2020:["<---",1,"gopls",{"response":{"method":"window/logMessage","jsonrpc":"2.0","params":{"message":"2020/03/16 22:35:51 diagnose: no workspace packages: go [-e -json -compiled=true -test=true -export=false -deps=true -find=false -- ./]: exit status 1: go: cannot find main module, but found .git/config in /Users/skanehira/dev/go/src/github.com/skanehira/xxx\n\tto create a module there, run:\n\tgo mod init\n\n\tsnapshot = 1\n\tdirectory = 0x16c1b80","type":1}}}]
-月  3/16 22:35:51 2020:["<---",1,"gopls",{"response":{"method":"window/logMessage","jsonrpc":"2.0","params":{"message":"2020/03/16 22:35:51 go/packages.Load\n\tsnapshot = 1\n\tquery = [file=/Users/skanehira/dev/go/src/github.com/skanehira/xxx/api/main.go]\n\tpackages = 1","type":3}}}]
-月  3/16 22:35:51 2020:["<---",1,"gopls",{"response":{"method":"window/logMessage","jsonrpc":"2.0","params":{"message":"2020/03/16 22:35:51 go/packages.Load\n\tsnapshot = 1\n\tpackage = command-line-arguments\n\tfiles = [/Users/skanehira/dev/go/src/github.com/skanehira/xxx/api/main.go]","type":3}}}]
-月  3/16 22:35:51 2020:["<---",1,"gopls",{"response":{"method":"window/logMessage","jsonrpc":"2.0","params":{"message":"2020/03/16 22:35:51 no dep handle: no metadata for github.com/jinzhu/gorm\n\tpackage = github.com/jinzhu/gorm","type":1}}}]
-月  3/16 22:35:51 2020:["<---",1,"gopls",{"response":{"method":"window/logMessage","jsonrpc":"2.0","params":{"message":"2020/03/16 22:35:51 no dep handle: no metadata for github.com/comail/colog\n\tpackage = github.com/comail/colog","type":1}}}]
-月  3/16 22:35:51 2020:["<---",1,"gopls",{"response":{"method":"window/logMessage","jsonrpc":"2.0","params":{"message":"2020/03/16 22:35:51 no dep handle: no metadata for github.com/labstack/echo/v4\n\tpackage = github.com/labstack/echo/v4","type":1}}}]
-月  3/16 22:35:51 2020:["<---",1,"gopls",{"response":{"method":"window/logMessage","jsonrpc":"2.0","params":{"message":"2020/03/16 22:35:51 no dep handle: no metadata for github.com/skanehira/xxx/api/config\n\tpackage = github.com/skanehira/xxx/api/config","type":1}}}]
-月  3/16 22:35:51 2020:["<---",1,"gopls",{"response":{"method":"window/logMessage","jsonrpc":"2.0","params":{"message":"2020/03/16 22:35:51 no dep handle: no metadata for github.com/jinzhu/gorm/dialects/mysql\n\tpackage = github.com/jinzhu/gorm/dialects/mysql","type":1}}}]
-月  3/16 22:35:51 2020:["<---",1,"gopls",{"response":{"method":"window/logMessage","jsonrpc":"2.0","params":{"message":"2020/03/16 22:35:51 no dep handle: no metadata for github.com/skanehira/xxx/api/server\n\tpackage = github.com/skanehira/xxx/api/server","type":1}}}]
-月  3/16 22:35:51 2020:["<---",1,"gopls",{"response":{"method":"window/logMessage","jsonrpc":"2.0","params":{"message":"2020/03/16 22:35:51 no dep handle: no metadata for github.com/skanehira/xxx/api/model\n\tpackage = github.com/skanehira/xxx/api/model","type":1}}}]
-月  3/16 22:35:51 2020:["<---(stderr)",1,"gopls",["2020/03/16 22:35:51 no dep handle: no metadata for github.com/comail/colog","\tpackage = github.com/comail/colog","2020/03/16 22:35:51 no dep handle: no metadata for github.com/jinzhu/gorm","\tpackage = github.com/jinzhu/gorm","2020/03/16 22:35:51 no dep handle: no metadata for github.com/jinzhu/gorm/dialects/mysql","\tpackage = github.com/jinzhu/gorm/dialects/mysql","2020/03/16 22:35:51 no dep handle: no metadata for github.com/labstack/echo/v4","\tpackage = github.com/labstack/echo/v4","2020/03/16 22:35:51 no dep handle: no metadata for github.com/skanehira/xxx/api/config","\tpackage = github.com/skanehira/xxx/api/config","2020/03/16 22:35:51 no dep handle: no metadata for github.com/skanehira/xxx/api/model","\tpackage = github.com/skanehira/xxx/api/model","2020/03/16 22:35:51 no dep handle: no metadata for github.com/skanehira/xxx/api/server","\tpackage = github.com/skanehira/xxx/api/server",""]]
-月  3/16 22:35:51 2020:["<---",1,"gopls",{"response":{"id":3,"jsonrpc":"2.0","error":{"data":null,"code":0,"message":"no object for ident AutoMigrate"}},"request":{"id":3,"jsonrpc":"2.0","method":"textDocument/definition","params":{"textDocument":{"uri":"file:///Users/skanehira/dev/go/src/github.com/skanehira/xxx/api/main.go"},"position":{"character":6,"line":36}}}}]</code></pre>
+                  <pre><code class='language-none'>月  3/16 22:35:50 2020:[{&#34;response&#34;:{&#34;data&#34;:{&#34;__data__&#34;:&#34;vim-lsp&#34;,&#34;server_name&#34;:&#34;gopls&#34;},&#34;message&#34;:&#34;server already started&#34;}}]
+月  3/16 22:35:50 2020:[{&#34;response&#34;:{&#34;data&#34;:{&#34;__data__&#34;:&#34;vim-lsp&#34;,&#34;init_result&#34;:{&#34;id&#34;:1,&#34;jsonrpc&#34;:&#34;2.0&#34;,&#34;result&#34;:{&#34;capabilities&#34;:{&#34;executeCommandProvider&#34;:{&#34;commands&#34;:[&#34;tidy&#34;,&#34;upgrade.dependency&#34;]},&#34;documentHighlightProvider&#34;:true,&#34;hoverProvider&#34;:true,&#34;typeDefinitionProvider&#34;:true,&#34;definitionProvider&#34;:true,&#34;referencesProvider&#34;:true,&#34;signatureHelpProvider&#34;:{&#34;triggerCharacters&#34;:[&#34;(&#34;,&#34;,&#34;]},&#34;foldingRangeProvider&#34;:true,&#34;codeActionProvider&#34;:{&#34;codeActionKinds&#34;:[&#34;quickfix&#34;,&#34;source.organizeImports&#34;]},&#34;textDocumentSync&#34;:{&#34;save&#34;:{},&#34;change&#34;:2,&#34;openClose&#34;:true},&#34;codeLensProvider&#34;:{},&#34;workspace&#34;:{&#34;workspaceFolders&#34;:{&#34;changeNotifications&#34;:&#34;workspace/didChangeWorkspaceFolders&#34;,&#34;supported&#34;:true}},&#34;documentLinkProvider&#34;:{},&#34;implementationProvider&#34;:true,&#34;documentOnTypeFormattingProvider&#34;:{&#34;firstTriggerCharacter&#34;:&#34;&#34;},&#34;workspaceSymbolProvider&#34;:true,&#34;documentFormattingProvider&#34;:true,&#34;documentSymbolProvider&#34;:true,&#34;renameProvider&#34;:true,&#34;completionProvider&#34;:{&#34;triggerCharacters&#34;:[&#34;.&#34;]}},&#34;serverInfo&#34;:{&#34;name&#34;:&#34;&#34;}}},&#34;server_name&#34;:&#34;gopls&#34;},&#34;message&#34;:&#34;lsp server already initialized&#34;}}]
+月  3/16 22:35:50 2020:[&#34;---&gt;&#34;,1,&#34;gopls&#34;,{&#34;method&#34;:&#34;workspace/didChangeConfiguration&#34;,&#34;params&#34;:{&#34;settings&#34;:{}}}]
+月  3/16 22:35:50 2020:[{&#34;response&#34;:{&#34;data&#34;:{&#34;__data__&#34;:&#34;vim-lsp&#34;,&#34;server_name&#34;:&#34;gopls&#34;},&#34;message&#34;:&#34;configuration sent&#34;}}]
+月  3/16 22:35:50 2020:[{&#34;response&#34;:{&#34;data&#34;:{&#34;path&#34;:&#34;file:///Users/skanehira/dev/go/src/github.com/skanehira/xxx/api/main.go&#34;,&#34;__data__&#34;:&#34;vim-lsp&#34;,&#34;server_name&#34;:&#34;gopls&#34;},&#34;message&#34;:&#34;already opened&#34;}}]
+月  3/16 22:35:50 2020:[{&#34;response&#34;:{&#34;data&#34;:{&#34;path&#34;:&#34;file:///Users/skanehira/dev/go/src/github.com/skanehira/xxx/api/main.go&#34;,&#34;__data__&#34;:&#34;vim-lsp&#34;,&#34;server_name&#34;:&#34;gopls&#34;},&#34;message&#34;:&#34;not dirty&#34;}}]
+月  3/16 22:35:50 2020:[&#34;---&gt;&#34;,1,&#34;gopls&#34;,{&#34;method&#34;:&#34;textDocument/definition&#34;,&#34;on_notification&#34;:&#34;---funcref---&#34;,&#34;params&#34;:{&#34;textDocument&#34;:{&#34;uri&#34;:&#34;file:///Users/skanehira/dev/go/src/github.com/skanehira/xxx/api/main.go&#34;},&#34;position&#34;:{&#34;character&#34;:6,&#34;line&#34;:36}}}]
+月  3/16 22:35:50 2020:[&#34;&lt;---&#34;,1,{&#34;method&#34;:&#34;workspace/configuration&#34;,&#34;jsonrpc&#34;:&#34;2.0&#34;,&#34;id&#34;:4,&#34;params&#34;:{&#34;items&#34;:[{&#34;section&#34;:&#34;gopls&#34;,&#34;scopeUri&#34;:&#34;file:///Users/skanehira/dev/go/src/github.com/skanehira/xxx&#34;},{&#34;section&#34;:&#34;gopls-xxx&#34;,&#34;scopeUri&#34;:&#34;file:///Users/skanehira/dev/go/src/github.com/skanehira/xxx&#34;}]}}]
+月  3/16 22:35:50 2020:[&#34;---&gt;&#34;,1,&#34;gopls&#34;,{&#34;id&#34;:4,&#34;result&#34;:[null,null]}]
+月  3/16 22:35:51 2020:[&#34;&lt;---(stderr)&#34;,1,&#34;gopls&#34;,[&#34;2020/03/16 22:35:51 diagnose: no workspace packages: go [-e -json -compiled=true -test=true -export=false -deps=true -find=false -- ./]: exit status 1: go: cannot find main module, but found .git/config in /Users/skanehira/dev/go/src/github.com/skanehira/xxx&#34;,&#34;\tto create a module there, run:&#34;,&#34;\tgo mod init&#34;,&#34;&#34;,&#34;\tsnapshot = 1&#34;,&#34;\tdirectory = 0x16c1b80&#34;,&#34;&#34;]]
+月  3/16 22:35:51 2020:[&#34;&lt;---&#34;,1,&#34;gopls&#34;,{&#34;response&#34;:{&#34;method&#34;:&#34;window/logMessage&#34;,&#34;jsonrpc&#34;:&#34;2.0&#34;,&#34;params&#34;:{&#34;message&#34;:&#34;2020/03/16 22:35:51 go/packages.Load\n\tsnapshot = 1\n\tquery = [./]\n\tpackages = 0&#34;,&#34;type&#34;:3}}}]
+月  3/16 22:35:51 2020:[&#34;&lt;---&#34;,1,&#34;gopls&#34;,{&#34;response&#34;:{&#34;method&#34;:&#34;window/logMessage&#34;,&#34;jsonrpc&#34;:&#34;2.0&#34;,&#34;params&#34;:{&#34;message&#34;:&#34;2020/03/16 22:35:51 diagnose: no workspace packages: go [-e -json -compiled=true -test=true -export=false -deps=true -find=false -- ./]: exit status 1: go: cannot find main module, but found .git/config in /Users/skanehira/dev/go/src/github.com/skanehira/xxx\n\tto create a module there, run:\n\tgo mod init\n\n\tsnapshot = 1\n\tdirectory = 0x16c1b80&#34;,&#34;type&#34;:1}}}]
+月  3/16 22:35:51 2020:[&#34;&lt;---&#34;,1,&#34;gopls&#34;,{&#34;response&#34;:{&#34;method&#34;:&#34;window/logMessage&#34;,&#34;jsonrpc&#34;:&#34;2.0&#34;,&#34;params&#34;:{&#34;message&#34;:&#34;2020/03/16 22:35:51 go/packages.Load\n\tsnapshot = 1\n\tquery = [file=/Users/skanehira/dev/go/src/github.com/skanehira/xxx/api/main.go]\n\tpackages = 1&#34;,&#34;type&#34;:3}}}]
+月  3/16 22:35:51 2020:[&#34;&lt;---&#34;,1,&#34;gopls&#34;,{&#34;response&#34;:{&#34;method&#34;:&#34;window/logMessage&#34;,&#34;jsonrpc&#34;:&#34;2.0&#34;,&#34;params&#34;:{&#34;message&#34;:&#34;2020/03/16 22:35:51 go/packages.Load\n\tsnapshot = 1\n\tpackage = command-line-arguments\n\tfiles = [/Users/skanehira/dev/go/src/github.com/skanehira/xxx/api/main.go]&#34;,&#34;type&#34;:3}}}]
+月  3/16 22:35:51 2020:[&#34;&lt;---&#34;,1,&#34;gopls&#34;,{&#34;response&#34;:{&#34;method&#34;:&#34;window/logMessage&#34;,&#34;jsonrpc&#34;:&#34;2.0&#34;,&#34;params&#34;:{&#34;message&#34;:&#34;2020/03/16 22:35:51 no dep handle: no metadata for github.com/jinzhu/gorm\n\tpackage = github.com/jinzhu/gorm&#34;,&#34;type&#34;:1}}}]
+月  3/16 22:35:51 2020:[&#34;&lt;---&#34;,1,&#34;gopls&#34;,{&#34;response&#34;:{&#34;method&#34;:&#34;window/logMessage&#34;,&#34;jsonrpc&#34;:&#34;2.0&#34;,&#34;params&#34;:{&#34;message&#34;:&#34;2020/03/16 22:35:51 no dep handle: no metadata for github.com/comail/colog\n\tpackage = github.com/comail/colog&#34;,&#34;type&#34;:1}}}]
+月  3/16 22:35:51 2020:[&#34;&lt;---&#34;,1,&#34;gopls&#34;,{&#34;response&#34;:{&#34;method&#34;:&#34;window/logMessage&#34;,&#34;jsonrpc&#34;:&#34;2.0&#34;,&#34;params&#34;:{&#34;message&#34;:&#34;2020/03/16 22:35:51 no dep handle: no metadata for github.com/labstack/echo/v4\n\tpackage = github.com/labstack/echo/v4&#34;,&#34;type&#34;:1}}}]
+月  3/16 22:35:51 2020:[&#34;&lt;---&#34;,1,&#34;gopls&#34;,{&#34;response&#34;:{&#34;method&#34;:&#34;window/logMessage&#34;,&#34;jsonrpc&#34;:&#34;2.0&#34;,&#34;params&#34;:{&#34;message&#34;:&#34;2020/03/16 22:35:51 no dep handle: no metadata for github.com/skanehira/xxx/api/config\n\tpackage = github.com/skanehira/xxx/api/config&#34;,&#34;type&#34;:1}}}]
+月  3/16 22:35:51 2020:[&#34;&lt;---&#34;,1,&#34;gopls&#34;,{&#34;response&#34;:{&#34;method&#34;:&#34;window/logMessage&#34;,&#34;jsonrpc&#34;:&#34;2.0&#34;,&#34;params&#34;:{&#34;message&#34;:&#34;2020/03/16 22:35:51 no dep handle: no metadata for github.com/jinzhu/gorm/dialects/mysql\n\tpackage = github.com/jinzhu/gorm/dialects/mysql&#34;,&#34;type&#34;:1}}}]
+月  3/16 22:35:51 2020:[&#34;&lt;---&#34;,1,&#34;gopls&#34;,{&#34;response&#34;:{&#34;method&#34;:&#34;window/logMessage&#34;,&#34;jsonrpc&#34;:&#34;2.0&#34;,&#34;params&#34;:{&#34;message&#34;:&#34;2020/03/16 22:35:51 no dep handle: no metadata for github.com/skanehira/xxx/api/server\n\tpackage = github.com/skanehira/xxx/api/server&#34;,&#34;type&#34;:1}}}]
+月  3/16 22:35:51 2020:[&#34;&lt;---&#34;,1,&#34;gopls&#34;,{&#34;response&#34;:{&#34;method&#34;:&#34;window/logMessage&#34;,&#34;jsonrpc&#34;:&#34;2.0&#34;,&#34;params&#34;:{&#34;message&#34;:&#34;2020/03/16 22:35:51 no dep handle: no metadata for github.com/skanehira/xxx/api/model\n\tpackage = github.com/skanehira/xxx/api/model&#34;,&#34;type&#34;:1}}}]
+月  3/16 22:35:51 2020:[&#34;&lt;---(stderr)&#34;,1,&#34;gopls&#34;,[&#34;2020/03/16 22:35:51 no dep handle: no metadata for github.com/comail/colog&#34;,&#34;\tpackage = github.com/comail/colog&#34;,&#34;2020/03/16 22:35:51 no dep handle: no metadata for github.com/jinzhu/gorm&#34;,&#34;\tpackage = github.com/jinzhu/gorm&#34;,&#34;2020/03/16 22:35:51 no dep handle: no metadata for github.com/jinzhu/gorm/dialects/mysql&#34;,&#34;\tpackage = github.com/jinzhu/gorm/dialects/mysql&#34;,&#34;2020/03/16 22:35:51 no dep handle: no metadata for github.com/labstack/echo/v4&#34;,&#34;\tpackage = github.com/labstack/echo/v4&#34;,&#34;2020/03/16 22:35:51 no dep handle: no metadata for github.com/skanehira/xxx/api/config&#34;,&#34;\tpackage = github.com/skanehira/xxx/api/config&#34;,&#34;2020/03/16 22:35:51 no dep handle: no metadata for github.com/skanehira/xxx/api/model&#34;,&#34;\tpackage = github.com/skanehira/xxx/api/model&#34;,&#34;2020/03/16 22:35:51 no dep handle: no metadata for github.com/skanehira/xxx/api/server&#34;,&#34;\tpackage = github.com/skanehira/xxx/api/server&#34;,&#34;&#34;]]
+月  3/16 22:35:51 2020:[&#34;&lt;---&#34;,1,&#34;gopls&#34;,{&#34;response&#34;:{&#34;id&#34;:3,&#34;jsonrpc&#34;:&#34;2.0&#34;,&#34;error&#34;:{&#34;data&#34;:null,&#34;code&#34;:0,&#34;message&#34;:&#34;no object for ident AutoMigrate&#34;}},&#34;request&#34;:{&#34;id&#34;:3,&#34;jsonrpc&#34;:&#34;2.0&#34;,&#34;method&#34;:&#34;textDocument/definition&#34;,&#34;params&#34;:{&#34;textDocument&#34;:{&#34;uri&#34;:&#34;file:///Users/skanehira/dev/go/src/github.com/skanehira/xxx/api/main.go&#34;},&#34;position&#34;:{&#34;character&#34;:6,&#34;line&#34;:36}}}}]</code></pre>
                 </div>
               </div>
             </div>

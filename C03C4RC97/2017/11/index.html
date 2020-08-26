@@ -3303,16 +3303,16 @@ Huge version with GTK3 GUI.  Features included (+) or not (-):
 +ex_extra        +mouse_gpm       -sun_workshop    +xterm_clipboard
 +extra_search    -mouse_jsbterm   +syntax          -xterm_save
 +farsi           +mouse_netterm   +tag_binary      
-   system vimrc file: "/etc/vimrc"
-     user vimrc file: "$HOME/.vimrc"
- 2nd user vimrc file: "~/.vim/vimrc"
-      user exrc file: "$HOME/.exrc"
-  system gvimrc file: "/etc/gvimrc"
-    user gvimrc file: "$HOME/.gvimrc"
-2nd user gvimrc file: "~/.vim/gvimrc"
-       defaults file: "$VIMRUNTIME/defaults.vim"
-    system menu file: "$VIMRUNTIME/menu.vim"
-  fall-back for $VIM: "/usr/share/vim"
+   system vimrc file: &#34;/etc/vimrc&#34;
+     user vimrc file: &#34;$HOME/.vimrc&#34;
+ 2nd user vimrc file: &#34;~/.vim/vimrc&#34;
+      user exrc file: &#34;$HOME/.exrc&#34;
+  system gvimrc file: &#34;/etc/gvimrc&#34;
+    user gvimrc file: &#34;$HOME/.gvimrc&#34;
+2nd user gvimrc file: &#34;~/.vim/gvimrc&#34;
+       defaults file: &#34;$VIMRUNTIME/defaults.vim&#34;
+    system menu file: &#34;$VIMRUNTIME/menu.vim&#34;
+  fall-back for $VIM: &#34;/usr/share/vim&#34;
 Compilation: gcc -c -I. -Iproto -DHAVE_CONFIG_H -DFEAT_GUI_GTK  -pthread -I/usr/include/gtk-3.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/dbus-1.0 -I/usr/lib/dbus-1.0/include -I/usr/include/gtk-3.0 -I/usr/include/gio-unix-2.0/ -I/usr/include/cairo -I/usr/include/pango-1.0 -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/harfbuzz -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -I/usr/include/freetype2 -I/usr/include/harfbuzz -I/usr/include/libpng16 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -D_FORTIFY_SOURCE=2  -march=x86-64 -mtune=generic -O2 -pipe -fstack-protector-strong -fno-plt -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=1       
 Linking: gcc   -L. -Wl,-O1,--sort-common,--as-needed,-z,relro,-z,now -fstack-protector -rdynamic -Wl,-export-dynamic -Wl,-E -Wl,-rpath,/usr/lib/perl5/5.26/core_perl/CORE  -Wl,-O1,--sort-common,--as-needed,-z,relro,-z,now -L/usr/local/lib -Wl,--as-needed -o vim   -lgtk-3 -lgdk-3 -lpangocairo-1.0 -lpango-1.0 -latk-1.0 -lcairo-gobject -lcairo -lgdk_pixbuf-2.0 -lgio-2.0 -lgobject-2.0 -lglib-2.0 -lSM -lICE -lXt -lX11 -lXdmcp -lSM -lICE  -lm -lncurses -lelf -lnsl    -lacl -lattr -lgpm -ldl   -Wl,-E -Wl,-rpath,/usr/lib/perl5/5.26/core_perl/CORE -Wl,-O1,--sort-common,--as-needed,-z,relro,-z,now -fstack-protector-strong -L/usr/local/lib  -L/usr/lib/perl5/5.26/core_perl/CORE -lperl -lpthread -lnsl -ldl -lm -lcrypt -lutil -lc   -L/usr/lib -ltclstub8.6 -ldl -lz -lpthread -lieee -lm     
 </code></pre>

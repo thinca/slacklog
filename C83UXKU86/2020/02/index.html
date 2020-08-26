@@ -847,7 +847,7 @@
                   <span class="f5">[[ダウンロード: my-test-program.rb(Ruby)]]</span>
                   </a>
                   <pre><code class='language-ruby'>
-die "stdin is not interactive" unless STDIN.isatty
+die &#34;stdin is not interactive&#34; unless STDIN.isatty
 
 def die(msg)
   puts msg
@@ -855,7 +855,7 @@ def die(msg)
 end
 
 def main
-  puts 'hello'
+  puts &#39;hello&#39;
 end
 
 main</code></pre>
@@ -5408,13 +5408,13 @@ main</code></pre>
                   <a href="/slacklog/files/FTDBPUDS5/Untitled.c" target="_blank" rel="noopener noreferrer">
                   <span class="f5">[[ダウンロード: Untitled(C)]]</span>
                   </a>
-                  <pre><code class='language-c'>#include <stdio.h>
-#include <stdint.h>
+                  <pre><code class='language-c'>#include &lt;stdio.h&gt;
+#include &lt;stdint.h&gt;
 #define SPLITMIX32(a, b) ( \
     (b) = ((a) += 0x9e3779b9), \
-    (b) = ((b) ^ ((b) >> 16)) * 0x85ebca6b, \
-    (b) = ((b) ^ ((b) >> 13)) * 0xc2b2ae35, \
-    (b) ^ ((b) >> 16) \
+    (b) = ((b) ^ ((b) &gt;&gt; 16)) * 0x85ebca6b, \
+    (b) = ((b) ^ ((b) &gt;&gt; 13)) * 0xc2b2ae35, \
+    (b) ^ ((b) &gt;&gt; 16) \
     )
 int main()
 {
@@ -5426,7 +5426,7 @@ int main()
     y = SPLITMIX32(a, b);
     z = SPLITMIX32(a, b);
     w = SPLITMIX32(a, b);
-    printf("%08x\n%08x\n%08x\n%08x\n", x, y, z, w);
+    printf(&#34;%08x\n%08x\n%08x\n%08x\n&#34;, x, y, z, w);
 
     // rand() init
     x = 0;
@@ -5434,7 +5434,7 @@ int main()
     y = SPLITMIX32(x, z);
     z = SPLITMIX32(x, z);
     w = SPLITMIX32(x, z);
-    printf("%08x\n%08x\n%08x\n%08x\n", x, y, z, w);
+    printf(&#34;%08x\n%08x\n%08x\n%08x\n&#34;, x, y, z, w);
 }</code></pre>
                 </div>
               </div>
@@ -16156,13 +16156,13 @@ int main()
 
 let l = range(num)
 let start = reltime()
-call map(l, {-> v:val * 2})
-echo start->reltime()->reltimestr()
+call map(l, {-&gt; v:val * 2})
+echo start-&gt;reltime()-&gt;reltimestr()
 
 let l = range(num)
 let start = reltime()
-call map(l, "v:val * 2")
-echo start->reltime()->reltimestr()
+call map(l, &#34;v:val * 2&#34;)
+echo start-&gt;reltime()-&gt;reltimestr()
 </code></pre>
                 </div>
               </div>
@@ -17305,12 +17305,12 @@ echo start->reltime()->reltimestr()
 +++ b/src/userfunc.c
 @@ -1293,6 +1293,11 @@ call_user_func(
  
-     if (default_arg_err && (fp->uf_flags & FC_ABORT))
+     if (default_arg_err &amp;&amp; (fp-&gt;uf_flags &amp; FC_ABORT))
  	did_emsg = TRUE;
 +    else if (islambda)
 +    {
-+	char_u *p = *(char_u**)fp->uf_lines.ga_data + 7;
-+	eval1(&p, rettv, TRUE);
++	char_u *p = *(char_u**)fp-&gt;uf_lines.ga_data + 7;
++	eval1(&amp;p, rettv, TRUE);
 +    }
      else
  	// call do_cmdline() to execute the lines

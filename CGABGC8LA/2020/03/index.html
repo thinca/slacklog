@@ -11498,9 +11498,9 @@
                   <pre><code class='language-none'>// API SKELETONS
 
 {{- range $n, $m := .Types.FrontendAPI.Fields }}
-{{- if hasSuffix $n "Handler" }}
-{{- $fn := lowerCamel (trimSuffix $n "Handler") }}
-{{- $pn := trimSuffix $m.Type "Handler" }}
+{{- if hasSuffix $n &#34;Handler&#34; }}
+{{- $fn := lowerCamel (trimSuffix $n &#34;Handler&#34;) }}
+{{- $pn := trimSuffix $m.Type &#34;Handler&#34; }}
 
 func (ri *RESTImpl) {{$fn}}(p {{$pn}}Params, _ interface{}) middleware.Responder {
 	// TODO: implement RESTImpl.{{$fn}}()
@@ -32871,7 +32871,7 @@ type foo struct {
 }
 
 func NewFoo() *foo {
-	return &foo{}
+	return &amp;foo{}
 }
 
 ---
@@ -36247,7 +36247,7 @@ println(f.Bar)</code></pre>
                   <a href="/slacklog/files/F010QPC99LJ/Untitled.txt" target="_blank" rel="noopener noreferrer">
                   <span class="f5">[[ダウンロード: Untitled(Plain Text)]]</span>
                   </a>
-                  <pre><code class='language-none'>$ go list -f '{{join .Imports "\n"}}' | grep -v ^github.com
+                  <pre><code class='language-none'>$ go list -f &#39;{{join .Imports &#34;\n&#34;}}&#39; | grep -v ^github.com
 bytes
 context
 encoding/json

@@ -3085,9 +3085,9 @@
                   </a>
                   <pre><code class='language-shell'>  function fzf-z-search() {
     local res
-    res=$(find ${1:-.} -type d -not -iwholename '*.git*' 2> /dev/null | fzf +m --prompt 'FindFile> ' --height 40% --reverse)
-    if [ -n "$res" ]; then
-      BUFFER+="cd $res"
+    res=$(find ${1:-.} -type d -not -iwholename &#39;*.git*&#39; 2&gt; /dev/null | fzf +m --prompt &#39;FindFile&gt; &#39; --height 40% --reverse)
+    if [ -n &#34;$res&#34; ]; then
+      BUFFER+=&#34;cd $res&#34;
       zle accept-line
     else
       zle redisplay
@@ -3095,24 +3095,24 @@
     fi
   }
   zle -N fzf-z-search
-  bindkey '^F' fzf-z-search
-  bindkey '^Xs' fzf-z-search
+  bindkey &#39;^F&#39; fzf-z-search
+  bindkey &#39;^Xs&#39; fzf-z-search
 
   function fzf-command-search-widget() {
-    LBUFFER="${LBUFFER}$(whence -pm '*' | xargs -i basename {} | fzf --prompt 'SearchCommand> ' --height 40% --reverse)"
+    LBUFFER=&#34;${LBUFFER}$(whence -pm &#39;*&#39; | xargs -i basename {} | fzf --prompt &#39;SearchCommand&gt; &#39; --height 40% --reverse)&#34;
     local ret=$?
     zle reset-prompt
     return $ret
   }
   zle -N fzf-command-search-widget
-  bindkey '^Xc' fzf-command-search-widget
-  bindkey '^o' fzf-command-search-widget
+  bindkey &#39;^Xc&#39; fzf-command-search-widget
+  bindkey &#39;^o&#39; fzf-command-search-widget
 
   function __gsel() {
-    local cmd="command git ls-files"
-    setopt localoptions pipefail 2> /dev/null
-    eval "$cmd" | $(__fzfcmd) --prompt "GitFiles> " --height ${FZF_TMUX_HEIGHT:-40%} --reverse $FZF_CTRL_T_OPTS -m "$@" | while read item; do
-      echo -n "${(q)item} "
+    local cmd=&#34;command git ls-files&#34;
+    setopt localoptions pipefail 2&gt; /dev/null
+    eval &#34;$cmd&#34; | $(__fzfcmd) --prompt &#34;GitFiles&gt; &#34; --height ${FZF_TMUX_HEIGHT:-40%} --reverse $FZF_CTRL_T_OPTS -m &#34;$@&#34; | while read item; do
+      echo -n &#34;${(q)item} &#34;
     done
     local ret=$?
     echo
@@ -3120,48 +3120,48 @@
   }
 
   function fzf-git-files-widget() {
-    LBUFFER="${LBUFFER}$(__gsel)"
+    LBUFFER=&#34;${LBUFFER}$(__gsel)&#34;
     local ret=$?
     zle reset-prompt
     return $ret
   }
   zle     -N   fzf-git-files-widget
-  bindkey '^B' fzf-git-files-widget
-  bindkey '^Xg' fzf-git-files-widget
+  bindkey &#39;^B&#39; fzf-git-files-widget
+  bindkey &#39;^Xg&#39; fzf-git-files-widget
 
   function gadd() {
     local selected
-    selected=$(stdbuf -oL git status -s | fzf -m --ansi --preview="echo {} | awk '{print \$2}' | xargs git diff --color" | awk '{print $2}')
-    if [[ -n "$selected" ]]; then
-      selected=$(tr '\n' ' ' <<< "$selected")
+    selected=$(stdbuf -oL git status -s | fzf -m --ansi --preview=&#34;echo {} | awk &#39;{print \$2}&#39; | xargs git diff --color&#34; | awk &#39;{print $2}&#39;)
+    if [[ -n &#34;$selected&#34; ]]; then
+      selected=$(tr &#39;\n&#39; &#39; &#39; &lt;&lt;&lt; &#34;$selected&#34;)
       git add $(echo $selected)
-      echo "Completed: git add $selected"
+      echo &#34;Completed: git add $selected&#34;
     fi
   }
 
   function vim-fzf-find() {
     local FILE
-    FILE=$(find ./ -path '*/\.*' -name .git -prune -o -type f -print 2> /dev/null | fzf +m)
-    if [ -n "$FILE" ]; then
+    FILE=$(find ./ -path &#39;*/\.*&#39; -name .git -prune -o -type f -print 2&gt; /dev/null | fzf +m)
+    if [ -n &#34;$FILE&#34; ]; then
       ${EDITOR:-vim} $FILE
     fi
   }
   alias fzf-vim=vim-fzf-find
   zle     -N   vim-fzf-find
-  bindkey '^Xv' vim-fzf-find
-  bindkey '^y' vim-fzf-find
+  bindkey &#39;^Xv&#39; vim-fzf-find
+  bindkey &#39;^y&#39; vim-fzf-find
 
   function _fzf_grep() {
     local selected
-    selected=$("$@" | fzf --prompt "Grep> " -m --ansi --preview='
-        f=$(echo {} | cut -d : -f 1); n=$(echo {} | cut -d : -f 2) &&
-          (bat --color=always --style=grid <(tail +$n $f) ||
-            highlight -O ansi -l <(tail +$n $f) ||
-            coderay <(tail +$n $f) ||
-            rougify <(tail +$n $f) ||
-            tail +$n $f) 2> /dev/null')
-    if [[ -n "$selected" ]]; then
-      selected=$(tr '\n' ' ' <<< "$(echo $selected | cut -d : -f 1)")
+    selected=$(&#34;$@&#34; | fzf --prompt &#34;Grep&gt; &#34; -m --ansi --preview=&#39;
+        f=$(echo {} | cut -d : -f 1); n=$(echo {} | cut -d : -f 2) &amp;&amp;
+          (bat --color=always --style=grid &lt;(tail +$n $f) ||
+            highlight -O ansi -l &lt;(tail +$n $f) ||
+            coderay &lt;(tail +$n $f) ||
+            rougify &lt;(tail +$n $f) ||
+            tail +$n $f) 2&gt; /dev/null&#39;)
+    if [[ -n &#34;$selected&#34; ]]; then
+      selected=$(tr &#39;\n&#39; &#39; &#39; &lt;&lt;&lt; &#34;$(echo $selected | cut -d : -f 1)&#34;)
       vi $(echo $selected)
     fi
   }

@@ -3434,8 +3434,8 @@
                   <span class="f5">[[ダウンロード: Untitled(Plain Text)]]</span>
                   </a>
                   <pre><code class='language-none'>function! s:match_module(modpath, lead) abort
-  if len(a:lead) > len(a:modpath)
-    return stridx(a:lead, a:modpath .. '/') == 0
+  if len(a:lead) &gt; len(a:modpath)
+    return stridx(a:lead, a:modpath .. &#39;/&#39;) == 0
   endif
   return stridx(a:modpath, a:lead) == 0
 endfunction
@@ -11298,14 +11298,14 @@ sys     0m0.045s</code></pre>
                   <span class="f5">[[ダウンロード: 無題(Shell)]]</span>
                   </a>
                   <pre><code class='language-shell'>root@1e86da145012:~/ImageMagick6-6.9.10-11# PKG_CONFIG_PATH=/usr/lib/x86_64-linux-gnu/pkgconfig ./configure \
->     --without-magick-plus-plus \
->     --without-perl \
->     --disable-openmp \
->     --with-gvc=no \
->     --disable-docs && \
->     --with-rsvg=yes && \
-> make -j$(nproc) && make install && \
-> ldconfig /usr/local/lib
+&gt;     --without-magick-plus-plus \
+&gt;     --without-perl \
+&gt;     --disable-openmp \
+&gt;     --with-gvc=no \
+&gt;     --disable-docs &amp;&amp; \
+&gt;     --with-rsvg=yes &amp;&amp; \
+&gt; make -j$(nproc) &amp;&amp; make install &amp;&amp; \
+&gt; ldconfig /usr/local/lib
 checking build system type... x86_64-pc-linux-gnu
 checking host system type... x86_64-pc-linux-gnu
 checking target system type... x86_64-pc-linux-gnu
@@ -11316,8 +11316,8 @@ checking for gawk... no
 checking for mawk... mawk
 checking whether make sets $(MAKE)... yes
 checking whether make supports nested variables... yes
-checking whether UID '0' is supported by ustar format... yes
-checking whether GID '0' is supported by ustar format... yes
+checking whether UID &#39;0&#39; is supported by ustar format... yes
+checking whether GID &#39;0&#39; is supported by ustar format... yes
 checking how to create a ustar tar archive... gnutar
 checking whether make supports nested variables... (cached) yes
 configuring ImageMagick 6.9.10-11
@@ -22334,8 +22334,8 @@ bash: --with-rsvg=yes: command not found
                   <pre><code class='language-go'>package main
 
 import (
-	"context"
-	"time"
+	&#34;context&#34;
+	&#34;time&#34;
 )
 
 type Gorilla interface {
@@ -22348,8 +22348,8 @@ type f struct {
 
 func (f *f) Uho() {
 	select {
-	case <-f.c.Done():
-		println("ウホ")
+	case &lt;-f.c.Done():
+		println(&#34;ウホ&#34;)
 	default:
 	}
 	time.Sleep(3 * time.Second)
@@ -22359,7 +22359,7 @@ func main() {
 	p := context.Background()
 	c, cancel := context.WithCancel(p)
 	go func() {
-		(&f{c: c}).Uho()
+		(&amp;f{c: c}).Uho()
 	}()
 	cancel()
 	time.Sleep(2 * time.Second)
@@ -23428,10 +23428,10 @@ func main() {
                   <pre><code class='language-go'>package main
 
 import (
-	"fmt"
-	"log"
+	&#34;fmt&#34;
+	&#34;log&#34;
 
-	"golang.org/x/sys/unix"
+	&#34;golang.org/x/sys/unix&#34;
 )
 
 func main() {
@@ -23440,8 +23440,8 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
-	if socket < 0 {
-		log.Fatal("create socket failed")
+	if socket &lt; 0 {
+		log.Fatal(&#34;create socket failed&#34;)
 	}
 
 	// bind socket to address
@@ -23450,7 +23450,7 @@ func main() {
 		Addr: [4]byte{0, 0, 0, 0},
 	}
 
-	if err := unix.Bind(socket, &addr); err != nil {
+	if err := unix.Bind(socket, &amp;addr); err != nil {
 		log.Fatal(err)
 	}
 
@@ -23458,7 +23458,7 @@ func main() {
 	if err := unix.Listen(socket, 1); err != nil {
 		log.Fatal(err)
 	}
-	fmt.Println("listen port 8888")
+	fmt.Println(&#34;listen port 8888&#34;)
 
 	// accept connection
 	for {
@@ -23466,14 +23466,14 @@ func main() {
 		if err != nil {
 			log.Fatal(err)
 		}
-		fmt.Println("accepted")
+		fmt.Println(&#34;accepted&#34;)
 
-		fmt.Println("read start")
+		fmt.Println(&#34;read start&#34;)
 		var b []byte
 		if _, err := unix.Read(nfd, b); err != nil {
 			log.Fatal(err)
 		}
-		fmt.Println("read end")
+		fmt.Println(&#34;read end&#34;)
 
 		println(string(b))
 	}
@@ -23893,10 +23893,10 @@ func main() {
                   <pre><code class='language-go'>package main
 
 import (
-	"fmt"
-	"log"
+	&#34;fmt&#34;
+	&#34;log&#34;
 
-	"golang.org/x/sys/unix"
+	&#34;golang.org/x/sys/unix&#34;
 )
 
 func main() {
@@ -23912,7 +23912,7 @@ func main() {
 		Addr: [4]byte{0, 0, 0, 0},
 	}
 
-	if err := unix.Bind(socket, &addr); err != nil {
+	if err := unix.Bind(socket, &amp;addr); err != nil {
 		log.Fatal(err)
 	}
 
@@ -23920,7 +23920,7 @@ func main() {
 	if err := unix.Listen(socket, 1); err != nil {
 		log.Fatal(err)
 	}
-	fmt.Println("listen port 8888")
+	fmt.Println(&#34;listen port 8888&#34;)
 	defer unix.Close(socket)
 
 	//L:
@@ -23930,7 +23930,7 @@ func main() {
 		if err != nil {
 			log.Fatal(err)
 		}
-		fmt.Println("accepted")
+		fmt.Println(&#34;accepted&#34;)
 
 		for {
 			b := make([]byte, 1024)
@@ -23944,10 +23944,10 @@ func main() {
 			}
 
 			print(string(b))
-			unix.Write(nfd, []byte("recived: "+string(b)))
+			unix.Write(nfd, []byte(&#34;recived: &#34;+string(b)))
 		}
 		unix.Close(nfd)
-		print("closed")
+		print(&#34;closed&#34;)
 	}
 }
 </code></pre>
@@ -29685,8 +29685,8 @@ func main() {
                   <a href="/slacklog/files/F017S2S9LD9/Untitled.txt" target="_blank" rel="noopener noreferrer">
                   <span class="f5">[[ダウンロード: Untitled(Plain Text)]]</span>
                   </a>
-                  <pre><code class='language-none'>$ grep -nr '^func ([^)]*) Seek(' .
-./archive/tar/reader_test.go:763:func (rbs *readBadSeeker) Seek(int64, int) (int64, error) { return 0, fmt.Errorf("illegal seek") }
+                  <pre><code class='language-none'>$ grep -nr &#39;^func ([^)]*) Seek(&#39; .
+./archive/tar/reader_test.go:763:func (rbs *readBadSeeker) Seek(int64, int) (int64, error) { return 0, fmt.Errorf(&#34;illegal seek&#34;) }
 ./archive/tar/tar_test.go:81:func (f *testFile) Seek(pos int64, whence int) (int64, error) {
 ./bytes/reader.go:117:func (r *Reader) Seek(offset int64, whence int) (int64, error) {
 ./debug/dwarf/entry.go:746:func (r *Reader) Seek(off Offset) {
@@ -31045,8 +31045,8 @@ func main() {
                   <pre><code class='language-go'>package main
 
 import (
-	"reflect"
-	"testing"
+	&#34;reflect&#34;
+	&#34;testing&#34;
 )
 
 const (
@@ -31073,18 +31073,18 @@ func genSlicesMakeOutLoop() [][]int {
 func TestSlices(t *testing.T) {
 	got1, got2 := genSlicesMakeInLoop(), genSlicesMakeOutLoop()
 	if !reflect.DeepEqual(got1, got2) {
-		t.Errorf("\n%v\n%v", got1, got2)
+		t.Errorf(&#34;\n%v\n%v&#34;, got1, got2)
 	}
 }
 
 func BenchmarkSlicesMakeInLoop(b *testing.B) {
-	for i := 0; i < b.N; i++ {
+	for i := 0; i &lt; b.N; i++ {
 		genSlicesMakeInLoop()
 	}
 }
 
 func BenchmarkSlicesMakeOnce(b *testing.B) {
-	for i := 0; i < b.N; i++ {
+	for i := 0; i &lt; b.N; i++ {
 		genSlicesMakeOutLoop()
 	}
 }</code></pre>

@@ -18466,7 +18466,7 @@
                   <a href="/slacklog/files/FMGDNH0KH/vim.txt" target="_blank" rel="noopener noreferrer">
                   <span class="f5">[[ダウンロード: vim(Plain Text)]]</span>
                   </a>
-                  <pre><code class='language-none'>let s:sp = fnamemodify('.', ':p')[-1:]
+                  <pre><code class='language-none'>let s:sp = fnamemodify(&#39;.&#39;, &#39;:p&#39;)[-1:]
 
 function! s:parse_element(pre, element) abort
 	let list = []
@@ -18483,14 +18483,14 @@ function! s:parse_element(pre, element) abort
 endfunction
 
 function! s:parse_file(file) abort
-	let json_data = json_decode(join(readfile(a:file), ""))
-	let list = s:parse_element(".", json_data)
+	let json_data = json_decode(join(readfile(a:file), &#34;&#34;))
+	let list = s:parse_element(&#34;.&#34;, json_data)
 
 	let files = []
 	let directories = []
 
 	for element in list
-		if values(element)[0] ==# 'f'
+		if values(element)[0] ==# &#39;f&#39;
 			call add(files, keys(element)[0])
 		else
 			call add(directories, keys(element)[0])
@@ -18500,7 +18500,7 @@ function! s:parse_file(file) abort
 	for file in files
 		for dir in directories
 			let element = split(file, s:sp)[:-1][0]
-			if  element !=# dir && element != '.'
+			if  element !=# dir &amp;&amp; element != &#39;.&#39;
 				call add(directories, element)
 			endif
 		endfor
@@ -18509,7 +18509,7 @@ function! s:parse_file(file) abort
 	echo files directories
 endfunction
 
-call s:parse_file("define")
+call s:parse_file(&#34;define&#34;)
 </code></pre>
                 </div>
               </div>

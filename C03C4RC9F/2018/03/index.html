@@ -31802,141 +31802,141 @@ Total time:   0.001459
  Self time:   0.000786
 
 count  total (s)   self (s)
-                            " ============================================================================
-                            " File:        wakatime.vim
-                            " Description: Automatic time tracking for Vim.
-                            " Maintainer:  WakaTime <support@wakatime.com>
-                            " License:     BSD, see LICENSE.txt for more details.
-                            " Website:     https://wakatime.com/
-                            " ============================================================================
+                            &#34; ============================================================================
+                            &#34; File:        wakatime.vim
+                            &#34; Description: Automatic time tracking for Vim.
+                            &#34; Maintainer:  WakaTime &lt;support@wakatime.com&gt;
+                            &#34; License:     BSD, see LICENSE.txt for more details.
+                            &#34; Website:     https://wakatime.com/
+                            &#34; ============================================================================
                             
-    1              0.000007 let s:VERSION = '7.0.7'
+    1              0.000007 let s:VERSION = &#39;7.0.7&#39;
                             
                             
-                            " Init {{{
+                            &#34; Init {{{
                             
-                                " Check Vim version
-    1              0.000002     if v:version < 700
-                                    echoerr "This plugin requires vim >= 7."
+                                &#34; Check Vim version
+    1              0.000002     if v:version &lt; 700
+                                    echoerr &#34;This plugin requires vim &gt;= 7.&#34;
                                     finish
                                 endif
                             
-                                " Use constants for truthy check to improve readability
+                                &#34; Use constants for truthy check to improve readability
     1              0.000001     let s:true = 1
     1              0.000001     let s:false = 0
                             
-                                " Only load plugin once
-    1              0.000004     if exists("g:loaded_wakatime")
+                                &#34; Only load plugin once
+    1              0.000004     if exists(&#34;g:loaded_wakatime&#34;)
                                     finish
                                 endif
     1              0.000001     let g:loaded_wakatime = s:true
                             
-                                " Backup & Override cpoptions
-    1              0.000005     let s:old_cpo = &cpo
-    1              0.000005     set cpo&vim
+                                &#34; Backup &amp; Override cpoptions
+    1              0.000005     let s:old_cpo = &amp;cpo
+    1              0.000005     set cpo&amp;vim
                             
-                                " Backup wildignore before clearing it to prevent conflicts with expand()
-    1              0.000002     let s:wildignore = &wildignore
-    1              0.000002     if s:wildignore != ""
-                                    set wildignore=""
+                                &#34; Backup wildignore before clearing it to prevent conflicts with expand()
+    1              0.000002     let s:wildignore = &amp;wildignore
+    1              0.000002     if s:wildignore != &#34;&#34;
+                                    set wildignore=&#34;&#34;
                                 endif
                             
-                                " Script Globals
-    1              0.000034     let s:home = expand("$WAKATIME_HOME")
-    1              0.000002     if s:home == '$WAKATIME_HOME'
-    1              0.000062         let s:home = expand("$HOME")
+                                &#34; Script Globals
+    1              0.000034     let s:home = expand(&#34;$WAKATIME_HOME&#34;)
+    1              0.000002     if s:home == &#39;$WAKATIME_HOME&#39;
+    1              0.000062         let s:home = expand(&#34;$HOME&#34;)
     1              0.000002     endif
-    1              0.000068     let s:cli_location = expand("<sfile>:p:h") . '/packages/wakatime/cli.py'
-    1              0.000003     let s:config_file = s:home . '/.wakatime.cfg'
-    1              0.000004     let s:default_configs = ['[settings]', 'debug = false', 'hidefilenames = false', 'ignore =', '    COMMIT_EDITMSG$', '    PULLREQ_EDITMSG$', '    MERGE_MSG$', '    TAG_EDITMSG$']
-    1              0.000002     let s:data_file = s:home . '/.wakatime.data'
-    1              0.000041     let s:has_reltime = has('reltime') && localtime() - 1 < split(split(reltimestr(reltime()))[0], '\.')[0]
+    1              0.000068     let s:cli_location = expand(&#34;&lt;sfile&gt;:p:h&#34;) . &#39;/packages/wakatime/cli.py&#39;
+    1              0.000003     let s:config_file = s:home . &#39;/.wakatime.cfg&#39;
+    1              0.000004     let s:default_configs = [&#39;[settings]&#39;, &#39;debug = false&#39;, &#39;hidefilenames = false&#39;, &#39;ignore =&#39;, &#39;    COMMIT_EDITMSG$&#39;, &#39;    PULLREQ_EDITMSG$&#39;, &#39;    MERGE_MSG$&#39;, &#39;    TAG_EDITMSG$&#39;]
+    1              0.000002     let s:data_file = s:home . &#39;/.wakatime.data&#39;
+    1              0.000041     let s:has_reltime = has(&#39;reltime&#39;) &amp;&amp; localtime() - 1 &lt; split(split(reltimestr(reltime()))[0], &#39;\.&#39;)[0]
     1              0.000002     let s:config_file_already_setup = s:false
     1              0.000002     let s:debug_mode_already_setup = s:false
     1              0.000002     let s:is_debug_on = s:false
-    1              0.000002     let s:local_cache_expire = 10  " seconds between reading s:data_file
-    1              0.000004     let s:last_heartbeat = {'last_activity_at': 0, 'last_heartbeat_at': 0, 'file': ''}
+    1              0.000002     let s:local_cache_expire = 10  &#34; seconds between reading s:data_file
+    1              0.000004     let s:last_heartbeat = {&#39;last_activity_at&#39;: 0, &#39;last_heartbeat_at&#39;: 0, &#39;file&#39;: &#39;&#39;}
     1              0.000002     let s:heartbeats_buffer = []
-    1              0.000002     let s:send_buffer_seconds = 10  " seconds between sending buffered heartbeats
+    1              0.000002     let s:send_buffer_seconds = 10  &#34; seconds between sending buffered heartbeats
     1              0.000002     let s:last_sent = localtime()
-    1              0.000008     let s:has_async = has('patch-7.4-2344') && exists('*job_start')
-    1              0.000002     let s:nvim_async = exists('*jobstart')
+    1              0.000008     let s:has_async = has(&#39;patch-7.4-2344&#39;) &amp;&amp; exists(&#39;*job_start&#39;)
+    1              0.000002     let s:nvim_async = exists(&#39;*jobstart&#39;)
                             
     1              0.000002     function! s:Init()
                             
-                                    " For backwards compatibility, rename wakatime.conf to wakatime.cfg
+                                    &#34; For backwards compatibility, rename wakatime.conf to wakatime.cfg
                                     if !filereadable(s:config_file)
-                                        if filereadable(expand("$HOME/.wakatime"))
-                                            exec "silent !mv" expand("$HOME/.wakatime") expand("$HOME/.wakatime.conf")
+                                        if filereadable(expand(&#34;$HOME/.wakatime&#34;))
+                                            exec &#34;silent !mv&#34; expand(&#34;$HOME/.wakatime&#34;) expand(&#34;$HOME/.wakatime.conf&#34;)
                                         endif
-                                        if filereadable(expand("$HOME/.wakatime.conf"))
+                                        if filereadable(expand(&#34;$HOME/.wakatime.conf&#34;))
                                             if !filereadable(s:config_file)
-                                                let contents = ['[settings]'] + readfile(expand("$HOME/.wakatime.conf"), '')
+                                                let contents = [&#39;[settings]&#39;] + readfile(expand(&#34;$HOME/.wakatime.conf&#34;), &#39;&#39;)
                                                 call writefile(contents, s:config_file)
-                                                call delete(expand("$HOME/.wakatime.conf"))
+                                                call delete(expand(&#34;$HOME/.wakatime.conf&#34;))
                                             endif
                                         endif
                                     endif
                             
-                                    " Set default python binary location
-                                    if !exists("g:wakatime_PythonBinary")
-                                        let g:wakatime_PythonBinary = 'python'
+                                    &#34; Set default python binary location
+                                    if !exists(&#34;g:wakatime_PythonBinary&#34;)
+                                        let g:wakatime_PythonBinary = &#39;python&#39;
                                     endif
                             
-                                    " Set default heartbeat frequency in minutes
-                                    if !exists("g:wakatime_HeartbeatFrequency")
+                                    &#34; Set default heartbeat frequency in minutes
+                                    if !exists(&#34;g:wakatime_HeartbeatFrequency&#34;)
                                         let g:wakatime_HeartbeatFrequency = 2
                                     endif
                             
-                                    " Get legacy g:wakatime_ScreenRedraw setting
-                                    let s:redraw_setting = 'auto'
-                                    if exists("g:wakatime_ScreenRedraw") && g:wakatime_ScreenRedraw
-                                        let s:redraw_setting = 'enabled'
+                                    &#34; Get legacy g:wakatime_ScreenRedraw setting
+                                    let s:redraw_setting = &#39;auto&#39;
+                                    if exists(&#34;g:wakatime_ScreenRedraw&#34;) &amp;&amp; g:wakatime_ScreenRedraw
+                                        let s:redraw_setting = &#39;enabled&#39;
                                     endif
                             
-                                    " Get redraw setting from wakatime.cfg file
-                                    if s:GetIniSetting('settings', 'vi_redraw') != ''
-                                        if s:GetIniSetting('settings', 'vi_redraw') == 'enabled'
-                                            let s:redraw_setting = 'enabled'
+                                    &#34; Get redraw setting from wakatime.cfg file
+                                    if s:GetIniSetting(&#39;settings&#39;, &#39;vi_redraw&#39;) != &#39;&#39;
+                                        if s:GetIniSetting(&#39;settings&#39;, &#39;vi_redraw&#39;) == &#39;enabled&#39;
+                                            let s:redraw_setting = &#39;enabled&#39;
                                         endif
-                                        if s:GetIniSetting('settings', 'vi_redraw') == 'auto'
-                                            let s:redraw_setting = 'auto'
+                                        if s:GetIniSetting(&#39;settings&#39;, &#39;vi_redraw&#39;) == &#39;auto&#39;
+                                            let s:redraw_setting = &#39;auto&#39;
                                         endif
-                                        if s:GetIniSetting('settings', 'vi_redraw') == 'disabled'
-                                            let s:redraw_setting = 'disabled'
+                                        if s:GetIniSetting(&#39;settings&#39;, &#39;vi_redraw&#39;) == &#39;disabled&#39;
+                                            let s:redraw_setting = &#39;disabled&#39;
                                         endif
                                     endif
                             
-                                    " Buffering heartbeats disabled in Windows, unless have async support
+                                    &#34; Buffering heartbeats disabled in Windows, unless have async support
                                     let s:buffering_heartbeats_enabled = s:has_async || s:nvim_async || !s:IsWindows()
                             
                                 endfunction
                             
-                            " }}}
+                            &#34; }}}
                             
                             
-                            " Function Definitions {{{
+                            &#34; Function Definitions {{{
                             
     1              0.000002     function! s:StripWhitespace(str)
-                                    return substitute(a:str, '^\s*\(.\{-}\)\s*$', '\1', '')
+                                    return substitute(a:str, &#39;^\s*\(.\{-}\)\s*$&#39;, &#39;\1&#39;, &#39;&#39;)
                                 endfunction
                             
     1              0.000001     function! s:SetupConfigFile()
                                     if !s:config_file_already_setup
                             
-                                        " Create config file if does not exist
+                                        &#34; Create config file if does not exist
                                         if !filereadable(s:config_file)
                                             call writefile(s:default_configs, s:config_file)
                                         endif
                             
-                                        " Make sure config file has api_key
+                                        &#34; Make sure config file has api_key
                                         let found_api_key = s:false
-                                        if s:GetIniSetting('settings', 'api_key') != '' || s:GetIniSetting('settings', 'apikey') != ''
+                                        if s:GetIniSetting(&#39;settings&#39;, &#39;api_key&#39;) != &#39;&#39; || s:GetIniSetting(&#39;settings&#39;, &#39;apikey&#39;) != &#39;&#39;
                                             let found_api_key = s:true
                                         endif
                                         if !found_api_key
                                             call s:PromptForApiKey()
-                                            echo "[WakaTime] Setup complete! Visit https://wakatime.com to view your coding activity."
+                                            echo &#34;[WakaTime] Setup complete! Visit https://wakatime.com to view your coding activity.&#34;
                                         endif
                             
                                         let s:config_file_already_setup = s:true
@@ -31945,7 +31945,7 @@ count  total (s)   self (s)
                             
     1              0.000001     function! s:SetupDebugMode()
                                     if !s:debug_mode_already_setup
-                                        if s:GetIniSetting('settings', 'debug') == 'true'
+                                        if s:GetIniSetting(&#39;settings&#39;, &#39;debug&#39;) == &#39;true&#39;
                                             let s:is_debug_on = s:true
                                         else
                                             let s:is_debug_on = s:false
@@ -31956,24 +31956,24 @@ count  total (s)   self (s)
                             
     1              0.000002     function! s:GetIniSetting(section, key)
                                     if !filereadable(s:config_file)
-                                        return ''
+                                        return &#39;&#39;
                                     endif
                                     let lines = readfile(s:config_file)
-                                    let currentSection = ''
+                                    let currentSection = &#39;&#39;
                                     for line in lines
                                         let line = s:StripWhitespace(line)
-                                        if matchstr(line, '^\[') != '' && matchstr(line, '\]$') != ''
-                                            let currentSection = substitute(line, '^\[\(.\{-}\)\]$', '\1', '')
+                                        if matchstr(line, &#39;^\[&#39;) != &#39;&#39; &amp;&amp; matchstr(line, &#39;\]$&#39;) != &#39;&#39;
+                                            let currentSection = substitute(line, &#39;^\[\(.\{-}\)\]$&#39;, &#39;\1&#39;, &#39;&#39;)
                                         else
                                             if currentSection == a:section
-                                                let group = split(line, '=')
-                                                if len(group) == 2 && s:StripWhitespace(group[0]) == a:key
+                                                let group = split(line, &#39;=&#39;)
+                                                if len(group) == 2 &amp;&amp; s:StripWhitespace(group[0]) == a:key
                                                     return s:StripWhitespace(group[1])
                                                 endif
                                             endif
                                         endif
                                     endfor
-                                    return ''
+                                    return &#39;&#39;
                                 endfunction
                             
     1              0.000002     function! s:SetIniSetting(section, key, val)
@@ -31982,24 +31982,24 @@ count  total (s)   self (s)
                                     let keyFound = s:false
                                     if filereadable(s:config_file)
                                         let lines = readfile(s:config_file)
-                                        let currentSection = ''
+                                        let currentSection = &#39;&#39;
                                         for line in lines
                                             let entry = s:StripWhitespace(line)
-                                            if matchstr(entry, '^\[') != '' && matchstr(entry, '\]$') != ''
-                                                if currentSection == a:section && !keyFound
-                                                    let output = output + [join([a:key, a:val], '=')]
+                                            if matchstr(entry, &#39;^\[&#39;) != &#39;&#39; &amp;&amp; matchstr(entry, &#39;\]$&#39;) != &#39;&#39;
+                                                if currentSection == a:section &amp;&amp; !keyFound
+                                                    let output = output + [join([a:key, a:val], &#39;=&#39;)]
                                                     let keyFound = s:true
                                                 endif
-                                                let currentSection = substitute(entry, '^\[\(.\{-}\)\]$', '\1', '')
+                                                let currentSection = substitute(entry, &#39;^\[\(.\{-}\)\]$&#39;, &#39;\1&#39;, &#39;&#39;)
                                                 let output = output + [line]
                                                 if currentSection == a:section
                                                     let sectionFound = s:true
                                                 endif
                                             else
                                                 if currentSection == a:section
-                                                    let group = split(entry, '=')
-                                                    if len(group) == 2 && s:StripWhitespace(group[0]) == a:key
-                                                        let output = output + [join([a:key, a:val], '=')]
+                                                    let group = split(entry, &#39;=&#39;)
+                                                    if len(group) == 2 &amp;&amp; s:StripWhitespace(group[0]) == a:key
+                                                        let output = output + [join([a:key, a:val], &#39;=&#39;)]
                                                         let keyFound = s:true
                                                     else
                                                         let output = output + [line]
@@ -32011,25 +32011,25 @@ count  total (s)   self (s)
                                         endfor
                                     endif
                                     if !sectionFound
-                                        let output = output + [printf('[%s]', a:section), join([a:key, a:val], '=')]
+                                        let output = output + [printf(&#39;[%s]&#39;, a:section), join([a:key, a:val], &#39;=&#39;)]
                                     else
                                         if !keyFound
-                                            let output = output + [join([a:key, a:val], '=')]
+                                            let output = output + [join([a:key, a:val], &#39;=&#39;)]
                                         endif
                                     endif
                                     call writefile(output, s:config_file)
                                 endfunction
                             
     1              0.000002     function! s:GetCurrentFile()
-                                    return expand("%:p")
+                                    return expand(&#34;%:p&#34;)
                                 endfunction
                             
     1              0.000001     function! s:EscapeArg(arg)
-                                    return substitute(shellescape(a:arg), '!', '\\!', '')
+                                    return substitute(shellescape(a:arg), &#39;!&#39;, &#39;\\!&#39;, &#39;&#39;)
                                 endfunction
                             
     1              0.000002     function! s:JsonEscape(str)
-                                    return substitute(a:str, '"', '\\"', 'g')
+                                    return substitute(a:str, &#39;&#34;&#39;, &#39;\\&#34;&#39;, &#39;g&#39;)
                                 endfunction
                             
     1              0.000001     function! s:JoinArgs(args)
@@ -32037,11 +32037,11 @@ count  total (s)   self (s)
                                     for arg in a:args
                                         let safeArgs = safeArgs + [s:EscapeArg(arg)]
                                     endfor
-                                    return join(safeArgs, ' ')
+                                    return join(safeArgs, &#39; &#39;)
                                 endfunction
                             
     1              0.000001     function! s:IsWindows()
-                                    if has('win32') || has('win64')
+                                    if has(&#39;win32&#39;) || has(&#39;win64&#39;)
                                         return s:true
                                     endif
                                     return s:false
@@ -32051,24 +32051,24 @@ count  total (s)   self (s)
                                     if s:has_reltime
                                         return split(reltimestr(reltime()))[0]
                                     endif
-                                    return printf('%d', localtime())
+                                    return printf(&#39;%d&#39;, localtime())
                                 endfunction
                             
     1              0.000002     function! s:AppendHeartbeat(file, now, is_write, last)
                                     let file = a:file
-                                    if file == ''
+                                    if file == &#39;&#39;
                                         let file = a:last.file
                                     endif
-                                    if file != ''
+                                    if file != &#39;&#39;
                                         let heartbeat = {}
                                         let heartbeat.entity = file
                                         let heartbeat.time = s:CurrentTimeStr()
                                         let heartbeat.is_write = a:is_write
-                                        if !empty(&syntax)
-                                            let heartbeat.language = &syntax
+                                        if !empty(&amp;syntax)
+                                            let heartbeat.language = &amp;syntax
                                         else
-                                            if !empty(&filetype)
-                                                let heartbeat.language = &filetype
+                                            if !empty(&amp;filetype)
+                                                let heartbeat.language = &amp;filetype
                                             endif
                                         endif
                                         let s:heartbeats_buffer = s:heartbeats_buffer + [heartbeat]
@@ -32082,7 +32082,7 @@ count  total (s)   self (s)
                             
     1              0.000001     function! s:SendHeartbeats()
                                     let start_time = localtime()
-                                    let stdout = ''
+                                    let stdout = &#39;&#39;
                             
                                     if len(s:heartbeats_buffer) == 0
                                         let s:last_sent = start_time
@@ -32091,91 +32091,91 @@ count  total (s)   self (s)
                             
                                     let heartbeat = s:heartbeats_buffer[0]
                                     let s:heartbeats_buffer = s:heartbeats_buffer[1:-1]
-                                    if len(s:heartbeats_buffer) > 0
+                                    if len(s:heartbeats_buffer) &gt; 0
                                         let extra_heartbeats = s:GetHeartbeatsJson()
                                     else
-                                        let extra_heartbeats = ''
+                                        let extra_heartbeats = &#39;&#39;
                                     endif
                             
                                     let python_bin = g:wakatime_PythonBinary
                                     if s:IsWindows()
-                                        if python_bin == 'python'
-                                            let python_bin = 'pythonw'
+                                        if python_bin == &#39;python&#39;
+                                            let python_bin = &#39;pythonw&#39;
                                         endif
                                     endif
-                                    let cmd = [python_bin, '-W', 'ignore', s:cli_location]
-                                    let cmd = cmd + ['--entity', heartbeat.entity]
-                                    let cmd = cmd + ['--time', heartbeat.time]
-                                    let cmd = cmd + ['--plugin', printf('vim/%d vim-wakatime/%s', v:version, s:VERSION)]
+                                    let cmd = [python_bin, &#39;-W&#39;, &#39;ignore&#39;, s:cli_location]
+                                    let cmd = cmd + [&#39;--entity&#39;, heartbeat.entity]
+                                    let cmd = cmd + [&#39;--time&#39;, heartbeat.time]
+                                    let cmd = cmd + [&#39;--plugin&#39;, printf(&#39;vim/%d vim-wakatime/%s&#39;, v:version, s:VERSION)]
                                     if heartbeat.is_write
-                                        let cmd = cmd + ['--write']
+                                        let cmd = cmd + [&#39;--write&#39;]
                                     endif
-                                    if has_key(heartbeat, 'language')
-                                        let cmd = cmd + ['--language', heartbeat.language]
+                                    if has_key(heartbeat, &#39;language&#39;)
+                                        let cmd = cmd + [&#39;--language&#39;, heartbeat.language]
                                     endif
-                                    if extra_heartbeats != ''
-                                        let cmd = cmd + ['--extra-heartbeats']
+                                    if extra_heartbeats != &#39;&#39;
+                                        let cmd = cmd + [&#39;--extra-heartbeats&#39;]
                                     endif
                             
-                                    " overwrite shell
-                                    let [sh, shellcmdflag, shrd] = [&shell, &shellcmdflag, &shellredir]
+                                    &#34; overwrite shell
+                                    let [sh, shellcmdflag, shrd] = [&amp;shell, &amp;shellcmdflag, &amp;shellredir]
                                     if !s:IsWindows()
-                                        set shell=sh shellredir=>%s\ 2>&1
+                                        set shell=sh shellredir=&gt;%s\ 2&gt;&amp;1
                                     endif
                             
                                     if s:has_async
-                                        let job = job_start([&shell, &shellcmdflag, s:JoinArgs(cmd)], {
-                                            \ 'stoponexit': '',
-                                            \ 'callback': {channel, output -> s:AsyncHandler(output, cmd)}})
-                                        if extra_heartbeats != ''
+                                        let job = job_start([&amp;shell, &amp;shellcmdflag, s:JoinArgs(cmd)], {
+                                            \ &#39;stoponexit&#39;: &#39;&#39;,
+                                            \ &#39;callback&#39;: {channel, output -&gt; s:AsyncHandler(output, cmd)}})
+                                        if extra_heartbeats != &#39;&#39;
                                             let channel = job_getchannel(job)
-                                            call ch_sendraw(channel, extra_heartbeats . "\n")
+                                            call ch_sendraw(channel, extra_heartbeats . &#34;\n&#34;)
                                         endif
                                     elseif s:nvim_async
-                                        let s:nvim_async_output = ['']
-                                        let job = jobstart([&shell, &shellcmdflag, s:JoinArgs(cmd)], {
-                                            \ 'detach': 1,
-                                            \ 'on_stdout': function('s:NeovimAsyncOutputHandler'),
-                                            \ 'on_stderr': function('s:NeovimAsyncOutputHandler'),
-                                            \ 'on_exit': function('s:NeovimAsyncExitHandler')})
-                                        if extra_heartbeats != ''
-                                            call jobsend(job, extra_heartbeats . "\n")
+                                        let s:nvim_async_output = [&#39;&#39;]
+                                        let job = jobstart([&amp;shell, &amp;shellcmdflag, s:JoinArgs(cmd)], {
+                                            \ &#39;detach&#39;: 1,
+                                            \ &#39;on_stdout&#39;: function(&#39;s:NeovimAsyncOutputHandler&#39;),
+                                            \ &#39;on_stderr&#39;: function(&#39;s:NeovimAsyncOutputHandler&#39;),
+                                            \ &#39;on_exit&#39;: function(&#39;s:NeovimAsyncExitHandler&#39;)})
+                                        if extra_heartbeats != &#39;&#39;
+                                            call jobsend(job, extra_heartbeats . &#34;\n&#34;)
                                         endif
                                     elseif s:IsWindows()
                                         if s:is_debug_on
-                                            if extra_heartbeats != ''
-                                                let stdout = system('(' . s:JoinArgs(cmd) . ')', extra_heartbeats)
+                                            if extra_heartbeats != &#39;&#39;
+                                                let stdout = system(&#39;(&#39; . s:JoinArgs(cmd) . &#39;)&#39;, extra_heartbeats)
                                             else
-                                                let stdout = system('(' . s:JoinArgs(cmd) . ')')
+                                                let stdout = system(&#39;(&#39; . s:JoinArgs(cmd) . &#39;)&#39;)
                                             endif
                                         else
-                                            exec 'silent !start /b cmd /c "' . s:JoinArgs(cmd) . ' > nul 2> nul"'
+                                            exec &#39;silent !start /b cmd /c &#34;&#39; . s:JoinArgs(cmd) . &#39; &gt; nul 2&gt; nul&#34;&#39;
                                         endif
                                     else
                                         if s:is_debug_on
-                                            if extra_heartbeats != ''
+                                            if extra_heartbeats != &#39;&#39;
                                                 let stdout = system(s:JoinArgs(cmd), extra_heartbeats)
                                             else
                                                 let stdout = system(s:JoinArgs(cmd))
                                             endif
                                         else
-                                            if extra_heartbeats != ''
-                                                let stdout = system(s:JoinArgs(cmd) . ' &', extra_heartbeats)
+                                            if extra_heartbeats != &#39;&#39;
+                                                let stdout = system(s:JoinArgs(cmd) . &#39; &amp;&#39;, extra_heartbeats)
                                             else
-                                                let stdout = system(s:JoinArgs(cmd) . ' &')
+                                                let stdout = system(s:JoinArgs(cmd) . &#39; &amp;&#39;)
                                             endif
                                         endif
                                     endif
                             
-                                    " restore shell
-                                    let [&shell, &shellcmdflag, &shellredir] = [sh, shellcmdflag, shrd]
+                                    &#34; restore shell
+                                    let [&amp;shell, &amp;shellcmdflag, &amp;shellredir] = [sh, shellcmdflag, shrd]
                             
                                     let s:last_sent = localtime()
                             
-                                    " need to repaint in case a key was pressed while sending
-                                    if !s:has_async && !s:nvim_async && s:redraw_setting != 'disabled'
-                                        if s:redraw_setting == 'auto'
-                                            if s:last_sent - start_time > 0
+                                    &#34; need to repaint in case a key was pressed while sending
+                                    if !s:has_async &amp;&amp; !s:nvim_async &amp;&amp; s:redraw_setting != &#39;disabled&#39;
+                                        if s:redraw_setting == &#39;auto&#39;
+                                            if s:last_sent - start_time &gt; 0
                                                 redraw!
                                             endif
                                         else
@@ -32183,8 +32183,8 @@ count  total (s)   self (s)
                                         endif
                                     endif
                             
-                                    if s:is_debug_on && stdout != ''
-                                        echoerr '[WakaTime] Heartbeat Command: ' . s:JoinArgs(cmd) . "\n[WakaTime] Error: " . stdout
+                                    if s:is_debug_on &amp;&amp; stdout != &#39;&#39;
+                                        echoerr &#39;[WakaTime] Heartbeat Command: &#39; . s:JoinArgs(cmd) . &#34;\n[WakaTime] Error: &#34; . stdout
                                     endif
                                 endfunction
                             
@@ -32192,28 +32192,28 @@ count  total (s)   self (s)
                                     let arr = []
                                     let loop_count = 1
                                     for heartbeat in s:heartbeats_buffer
-                                        let heartbeat_str = '{"entity": "' . s:JsonEscape(heartbeat.entity) . '", '
-                                        let heartbeat_str = heartbeat_str . '"timestamp": ' . s:OrderTime(heartbeat.time, loop_count) . ', '
-                                        let heartbeat_str = heartbeat_str . '"is_write": '
+                                        let heartbeat_str = &#39;{&#34;entity&#34;: &#34;&#39; . s:JsonEscape(heartbeat.entity) . &#39;&#34;, &#39;
+                                        let heartbeat_str = heartbeat_str . &#39;&#34;timestamp&#34;: &#39; . s:OrderTime(heartbeat.time, loop_count) . &#39;, &#39;
+                                        let heartbeat_str = heartbeat_str . &#39;&#34;is_write&#34;: &#39;
                                         if heartbeat.is_write
-                                            let heartbeat_str = heartbeat_str . 'true'
+                                            let heartbeat_str = heartbeat_str . &#39;true&#39;
                                         else
-                                            let heartbeat_str = heartbeat_str . 'false'
+                                            let heartbeat_str = heartbeat_str . &#39;false&#39;
                                         endif
-                                        if has_key(heartbeat, 'language')
-                                            let heartbeat_str = heartbeat_str . ', "language": "' . s:JsonEscape(heartbeat.language) . '"'
+                                        if has_key(heartbeat, &#39;language&#39;)
+                                            let heartbeat_str = heartbeat_str . &#39;, &#34;language&#34;: &#34;&#39; . s:JsonEscape(heartbeat.language) . &#39;&#34;&#39;
                                         endif
-                                        let heartbeat_str = heartbeat_str . '}'
+                                        let heartbeat_str = heartbeat_str . &#39;}&#39;
                                         let arr = arr + [heartbeat_str]
                                         let loop_count = loop_count + 1
                                     endfor
                                     let s:heartbeats_buffer = []
-                                    return '[' . join(arr, ',') . ']'
+                                    return &#39;[&#39; . join(arr, &#39;,&#39;) . &#39;]&#39;
                                 endfunction
                             
     1              0.000002     function! s:AsyncHandler(output, cmd)
-                                    if s:is_debug_on && a:output != ''
-                                        echoerr '[WakaTime] Heartbeat Command: ' . s:JoinArgs(a:cmd) . "\n[WakaTime] Error: " . a:output
+                                    if s:is_debug_on &amp;&amp; a:output != &#39;&#39;
+                                        echoerr &#39;[WakaTime] Heartbeat Command: &#39; . s:JoinArgs(a:cmd) . &#34;\n[WakaTime] Error: &#34; . a:output
                                     endif
                                 endfunction
                             
@@ -32223,34 +32223,34 @@ count  total (s)   self (s)
                                 endfunction
                             
     1              0.000002     function! s:NeovimAsyncExitHandler(job_id, exit_code, event)
-                                    let output = s:StripWhitespace(join(s:nvim_async_output, "\n"))
+                                    let output = s:StripWhitespace(join(s:nvim_async_output, &#34;\n&#34;))
                                     if a:exit_code == 104
-                                        let output .= 'Invalid API Key'
+                                        let output .= &#39;Invalid API Key&#39;
                                     endif
-                                    if (s:is_debug_on || a:exit_code == 103 || a:exit_code == 104) && (a:exit_code != 0 || output != '')
-                                        echoerr printf('[WakaTime] Error %d: %s', a:exit_code, output)
+                                    if (s:is_debug_on || a:exit_code == 103 || a:exit_code == 104) &amp;&amp; (a:exit_code != 0 || output != &#39;&#39;)
+                                        echoerr printf(&#39;[WakaTime] Error %d: %s&#39;, a:exit_code, output)
                                     endif
                                 endfunction
                             
     1              0.000002     function! s:OrderTime(time_str, loop_count)
-                                    " Add a milisecond to a:time.
-                                    " Time prevision doesn't matter, but order of heartbeats does.
-                                    if !(a:time_str =~ "\.")
-                                        let millisecond = printf('%d', a:loop_count)
-                                        while strlen(millisecond) < 6
-                                            let millisecond = '0' . millisecond
+                                    &#34; Add a milisecond to a:time.
+                                    &#34; Time prevision doesn&#39;t matter, but order of heartbeats does.
+                                    if !(a:time_str =~ &#34;\.&#34;)
+                                        let millisecond = printf(&#39;%d&#39;, a:loop_count)
+                                        while strlen(millisecond) &lt; 6
+                                            let millisecond = &#39;0&#39; . millisecond
                                         endwhile
-                                        return a:time_str . '.' . millisecond
+                                        return a:time_str . &#39;.&#39; . millisecond
                                     endif
                                     return a:time_str
                                 endfunction
                             
     1              0.000002     function! s:GetLastHeartbeat()
-                                    if !s:last_heartbeat.last_activity_at || localtime() - s:last_heartbeat.last_activity_at > s:local_cache_expire
+                                    if !s:last_heartbeat.last_activity_at || localtime() - s:last_heartbeat.last_activity_at &gt; s:local_cache_expire
                                         if !filereadable(s:data_file)
-                                            return {'last_activity_at': 0, 'last_heartbeat_at': 0, 'file': ''}
+                                            return {&#39;last_activity_at&#39;: 0, &#39;last_heartbeat_at&#39;: 0, &#39;file&#39;: &#39;&#39;}
                                         endif
-                                        let last = readfile(s:data_file, '', 3)
+                                        let last = readfile(s:data_file, &#39;&#39;, 3)
                                         if len(last) == 3
                                             let s:last_heartbeat.last_heartbeat_at = last[1]
                                             let s:last_heartbeat.file = last[2]
@@ -32260,17 +32260,17 @@ count  total (s)   self (s)
                                 endfunction
                             
     1              0.000002     function! s:SetLastHeartbeatInMemory(last_activity_at, last_heartbeat_at, file)
-                                    let s:last_heartbeat = {'last_activity_at': a:last_activity_at, 'last_heartbeat_at': a:last_heartbeat_at, 'file': a:file}
+                                    let s:last_heartbeat = {&#39;last_activity_at&#39;: a:last_activity_at, &#39;last_heartbeat_at&#39;: a:last_heartbeat_at, &#39;file&#39;: a:file}
                                 endfunction
                             
     1              0.000002     function! s:SetLastHeartbeat(last_activity_at, last_heartbeat_at, file)
                                     call s:SetLastHeartbeatInMemory(a:last_activity_at, a:last_heartbeat_at, a:file)
-                                    call writefile([substitute(printf('%d', a:last_activity_at), ',', '.', ''), substitute(printf('%d', a:last_heartbeat_at), ',', '.', ''), a:file], s:data_file)
+                                    call writefile([substitute(printf(&#39;%d&#39;, a:last_activity_at), &#39;,&#39;, &#39;.&#39;, &#39;&#39;), substitute(printf(&#39;%d&#39;, a:last_heartbeat_at), &#39;,&#39;, &#39;.&#39;, &#39;&#39;), a:file], s:data_file)
                                 endfunction
                             
     1              0.000002     function! s:EnoughTimePassed(now, last)
                                     let prev = a:last.last_heartbeat_at
-                                    if a:now - prev > g:wakatime_HeartbeatFrequency * 60
+                                    if a:now - prev &gt; g:wakatime_HeartbeatFrequency * 60
                                         return s:true
                                     endif
                                     return s:false
@@ -32278,38 +32278,38 @@ count  total (s)   self (s)
                             
     1              0.000001     function! s:PromptForApiKey()
                                     let api_key = s:false
-                                    let api_key = s:GetIniSetting('settings', 'api_key')
-                                    if api_key == ''
-                                        let api_key = s:GetIniSetting('settings', 'apikey')
+                                    let api_key = s:GetIniSetting(&#39;settings&#39;, &#39;api_key&#39;)
+                                    if api_key == &#39;&#39;
+                                        let api_key = s:GetIniSetting(&#39;settings&#39;, &#39;apikey&#39;)
                                     endif
                             
-                                    let api_key = inputsecret("[WakaTime] Enter your wakatime.com api key: ", api_key)
-                                    call s:SetIniSetting('settings', 'api_key', api_key)
+                                    let api_key = inputsecret(&#34;[WakaTime] Enter your wakatime.com api key: &#34;, api_key)
+                                    call s:SetIniSetting(&#39;settings&#39;, &#39;api_key&#39;, api_key)
                                 endfunction
                             
     1              0.000001     function! s:EnableDebugMode()
-                                    call s:SetIniSetting('settings', 'debug', 'true')
+                                    call s:SetIniSetting(&#39;settings&#39;, &#39;debug&#39;, &#39;true&#39;)
                                     let s:is_debug_on = s:true
                                 endfunction
                             
     1              0.000002     function! s:DisableDebugMode()
-                                    call s:SetIniSetting('settings', 'debug', 'false')
+                                    call s:SetIniSetting(&#39;settings&#39;, &#39;debug&#39;, &#39;false&#39;)
                                     let s:is_debug_on = s:false
                                 endfunction
                             
     1              0.000001     function! s:EnableScreenRedraw()
-                                    call s:SetIniSetting('settings', 'vi_redraw', 'enabled')
-                                    let s:redraw_setting = 'enabled'
+                                    call s:SetIniSetting(&#39;settings&#39;, &#39;vi_redraw&#39;, &#39;enabled&#39;)
+                                    let s:redraw_setting = &#39;enabled&#39;
                                 endfunction
                             
     1              0.000002     function! s:EnableScreenRedrawAuto()
-                                    call s:SetIniSetting('settings', 'vi_redraw', 'auto')
-                                    let s:redraw_setting = 'auto'
+                                    call s:SetIniSetting(&#39;settings&#39;, &#39;vi_redraw&#39;, &#39;auto&#39;)
+                                    let s:redraw_setting = &#39;auto&#39;
                                 endfunction
                             
     1              0.000001     function! s:DisableScreenRedraw()
-                                    call s:SetIniSetting('settings', 'vi_redraw', 'disabled')
-                                    let s:redraw_setting = 'disabled'
+                                    call s:SetIniSetting(&#39;settings&#39;, &#39;vi_redraw&#39;, &#39;disabled&#39;)
+                                    let s:redraw_setting = &#39;disabled&#39;
                                 endfunction
                             
     1              0.000002     function! s:InitAndHandleActivity(is_write)
@@ -32320,54 +32320,54 @@ count  total (s)   self (s)
                             
     1              0.000001     function! s:HandleActivity(is_write)
                                     let file = s:GetCurrentFile()
-                                    if !empty(file) && file !~ "-MiniBufExplorer-" && file !~ "--NO NAME--" && file !~ "^term:"
+                                    if !empty(file) &amp;&amp; file !~ &#34;-MiniBufExplorer-&#34; &amp;&amp; file !~ &#34;--NO NAME--&#34; &amp;&amp; file !~ &#34;^term:&#34;
                                         let last = s:GetLastHeartbeat()
                                         let now = localtime()
                             
-                                        " Create a heartbeat when saving a file, when the current file
-                                        " changes, and when still editing the same file but enough time
-                                        " has passed since the last heartbeat.
+                                        &#34; Create a heartbeat when saving a file, when the current file
+                                        &#34; changes, and when still editing the same file but enough time
+                                        &#34; has passed since the last heartbeat.
                                         if a:is_write || s:EnoughTimePassed(now, last) || file != last.file
                                             call s:AppendHeartbeat(file, now, a:is_write, last)
                                         else
-                                            if now - s:last_heartbeat.last_activity_at > s:local_cache_expire
+                                            if now - s:last_heartbeat.last_activity_at &gt; s:local_cache_expire
                                                 call s:SetLastHeartbeatInMemory(now, last.last_heartbeat_at, last.file)
                                             endif
                                         endif
                             
-                                        " When buffering heartbeats disabled, no need to re-check the
-                                        " heartbeats buffer.
+                                        &#34; When buffering heartbeats disabled, no need to re-check the
+                                        &#34; heartbeats buffer.
                                         if s:buffering_heartbeats_enabled
                             
-                                            " Only send buffered heartbeats every s:send_buffer_seconds
-                                            if now - s:last_sent > s:send_buffer_seconds
+                                            &#34; Only send buffered heartbeats every s:send_buffer_seconds
+                                            if now - s:last_sent &gt; s:send_buffer_seconds
                                                 call s:SendHeartbeats()
                                             endif
                                         endif
                                     endif
                                 endfunction
                             
-                            " }}}
+                            &#34; }}}
                             
                             
     1   0.000678   0.000005 call s:Init()
                             
                             
-                            " Autocommand Events {{{
+                            &#34; Autocommand Events {{{
                             
     1              0.000002     augroup Wakatime
     1              0.000008         autocmd BufEnter,VimEnter * call s:InitAndHandleActivity(s:false)
     1              0.000005         autocmd CursorMoved,CursorMovedI * call s:HandleActivity(s:false)
     1              0.000002         autocmd BufWritePost * call s:HandleActivity(s:true)
-    1              0.000003         if exists('##QuitPre')
+    1              0.000003         if exists(&#39;##QuitPre&#39;)
     1              0.000004             autocmd QuitPre * call s:SendHeartbeats()
     1              0.000001         endif
     1              0.000001     augroup END
                             
-                            " }}}
+                            &#34; }}}
                             
                             
-                            " Plugin Commands {{{
+                            &#34; Plugin Commands {{{
                             
     1              0.000015     :command -nargs=0 WakaTimeApiKey call s:PromptForApiKey()
     1              0.000006     :command -nargs=0 WakaTimeDebugEnable call s:EnableDebugMode()
@@ -32376,25 +32376,25 @@ count  total (s)   self (s)
     1              0.000008     :command -nargs=0 WakaTimeScreenRedrawEnable call s:EnableScreenRedraw()
     1              0.000007     :command -nargs=0 WakaTimeScreenRedrawEnableAuto call s:EnableScreenRedrawAuto()
                             
-                            " }}}
+                            &#34; }}}
                             
                             
-                            " Restore wildignore option
-    1              0.000002 if s:wildignore != ""
-                                let &wildignore=s:wildignore
+                            &#34; Restore wildignore option
+    1              0.000002 if s:wildignore != &#34;&#34;
+                                let &amp;wildignore=s:wildignore
                             endif
                             
-                            " Restore cpoptions
-    1              0.000013 let &cpo = s:old_cpo
+                            &#34; Restore cpoptions
+    1              0.000013 let &amp;cpo = s:old_cpo
 
-FUNCTION  <SNR>9_SendHeartbeats()
+FUNCTION  &lt;SNR&gt;9_SendHeartbeats()
 Called 1 time
 Total time:   0.000042
  Self time:   0.000042
 
 count  total (s)   self (s)
     1              0.000020         let start_time = localtime()
-    1              0.000001         let stdout = ''
+    1              0.000001         let stdout = &#39;&#39;
                             
     1              0.000003         if len(s:heartbeats_buffer) == 0
     1              0.000002             let s:last_sent = start_time
@@ -32403,85 +32403,85 @@ count  total (s)   self (s)
                             
                                     let heartbeat = s:heartbeats_buffer[0]
                                     let s:heartbeats_buffer = s:heartbeats_buffer[1:-1]
-                                    if len(s:heartbeats_buffer) > 0
+                                    if len(s:heartbeats_buffer) &gt; 0
                                         let extra_heartbeats = s:GetHeartbeatsJson()
                                     else
-                                        let extra_heartbeats = ''
+                                        let extra_heartbeats = &#39;&#39;
                                     endif
                             
                                     let python_bin = g:wakatime_PythonBinary
                                     if s:IsWindows()
-                                        if python_bin == 'python'
-                                            let python_bin = 'pythonw'
+                                        if python_bin == &#39;python&#39;
+                                            let python_bin = &#39;pythonw&#39;
                                         endif
                                     endif
-                                    let cmd = [python_bin, '-W', 'ignore', s:cli_location]
-                                    let cmd = cmd + ['--entity', heartbeat.entity]
-                                    let cmd = cmd + ['--time', heartbeat.time]
-                                    let cmd = cmd + ['--plugin', printf('vim/%d vim-wakatime/%s', v:version, s:VERSION)]
+                                    let cmd = [python_bin, &#39;-W&#39;, &#39;ignore&#39;, s:cli_location]
+                                    let cmd = cmd + [&#39;--entity&#39;, heartbeat.entity]
+                                    let cmd = cmd + [&#39;--time&#39;, heartbeat.time]
+                                    let cmd = cmd + [&#39;--plugin&#39;, printf(&#39;vim/%d vim-wakatime/%s&#39;, v:version, s:VERSION)]
                                     if heartbeat.is_write
-                                        let cmd = cmd + ['--write']
+                                        let cmd = cmd + [&#39;--write&#39;]
                                     endif
-                                    if has_key(heartbeat, 'language')
-                                        let cmd = cmd + ['--language', heartbeat.language]
+                                    if has_key(heartbeat, &#39;language&#39;)
+                                        let cmd = cmd + [&#39;--language&#39;, heartbeat.language]
                                     endif
-                                    if extra_heartbeats != ''
-                                        let cmd = cmd + ['--extra-heartbeats']
+                                    if extra_heartbeats != &#39;&#39;
+                                        let cmd = cmd + [&#39;--extra-heartbeats&#39;]
                                     endif
                             
-                                    " overwrite shell
-                                    let [sh, shellcmdflag, shrd] = [&shell, &shellcmdflag, &shellredir]
+                                    &#34; overwrite shell
+                                    let [sh, shellcmdflag, shrd] = [&amp;shell, &amp;shellcmdflag, &amp;shellredir]
                                     if !s:IsWindows()
-                                        set shell=sh shellredir=>%s\ 2>&1
+                                        set shell=sh shellredir=&gt;%s\ 2&gt;&amp;1
                                     endif
                             
                                     if s:has_async
-                                        let job = job_start([&shell, &shellcmdflag, s:JoinArgs(cmd)], { 'stoponexit': '', 'callback': {channel, output -> s:AsyncHandler(output, cmd)}})
-                                        if extra_heartbeats != ''
+                                        let job = job_start([&amp;shell, &amp;shellcmdflag, s:JoinArgs(cmd)], { &#39;stoponexit&#39;: &#39;&#39;, &#39;callback&#39;: {channel, output -&gt; s:AsyncHandler(output, cmd)}})
+                                        if extra_heartbeats != &#39;&#39;
                                             let channel = job_getchannel(job)
-                                            call ch_sendraw(channel, extra_heartbeats . "\n")
+                                            call ch_sendraw(channel, extra_heartbeats . &#34;\n&#34;)
                                         endif
                                     elseif s:nvim_async
-                                        let s:nvim_async_output = ['']
-                                        let job = jobstart([&shell, &shellcmdflag, s:JoinArgs(cmd)], { 'detach': 1, 'on_stdout': function('s:NeovimAsyncOutputHandler'), 'on_stderr': function('s:NeovimAsyncOutputHandler'), 'on_exit': function('s:NeovimAsyncExitHandler')})
-                                        if extra_heartbeats != ''
-                                            call jobsend(job, extra_heartbeats . "\n")
+                                        let s:nvim_async_output = [&#39;&#39;]
+                                        let job = jobstart([&amp;shell, &amp;shellcmdflag, s:JoinArgs(cmd)], { &#39;detach&#39;: 1, &#39;on_stdout&#39;: function(&#39;s:NeovimAsyncOutputHandler&#39;), &#39;on_stderr&#39;: function(&#39;s:NeovimAsyncOutputHandler&#39;), &#39;on_exit&#39;: function(&#39;s:NeovimAsyncExitHandler&#39;)})
+                                        if extra_heartbeats != &#39;&#39;
+                                            call jobsend(job, extra_heartbeats . &#34;\n&#34;)
                                         endif
                                     elseif s:IsWindows()
                                         if s:is_debug_on
-                                            if extra_heartbeats != ''
-                                                let stdout = system('(' . s:JoinArgs(cmd) . ')', extra_heartbeats)
+                                            if extra_heartbeats != &#39;&#39;
+                                                let stdout = system(&#39;(&#39; . s:JoinArgs(cmd) . &#39;)&#39;, extra_heartbeats)
                                             else
-                                                let stdout = system('(' . s:JoinArgs(cmd) . ')')
+                                                let stdout = system(&#39;(&#39; . s:JoinArgs(cmd) . &#39;)&#39;)
                                             endif
                                         else
-                                            exec 'silent !start /b cmd /c "' . s:JoinArgs(cmd) . ' > nul 2> nul"'
+                                            exec &#39;silent !start /b cmd /c &#34;&#39; . s:JoinArgs(cmd) . &#39; &gt; nul 2&gt; nul&#34;&#39;
                                         endif
                                     else
                                         if s:is_debug_on
-                                            if extra_heartbeats != ''
+                                            if extra_heartbeats != &#39;&#39;
                                                 let stdout = system(s:JoinArgs(cmd), extra_heartbeats)
                                             else
                                                 let stdout = system(s:JoinArgs(cmd))
                                             endif
                                         else
-                                            if extra_heartbeats != ''
-                                                let stdout = system(s:JoinArgs(cmd) . ' &', extra_heartbeats)
+                                            if extra_heartbeats != &#39;&#39;
+                                                let stdout = system(s:JoinArgs(cmd) . &#39; &amp;&#39;, extra_heartbeats)
                                             else
-                                                let stdout = system(s:JoinArgs(cmd) . ' &')
+                                                let stdout = system(s:JoinArgs(cmd) . &#39; &amp;&#39;)
                                             endif
                                         endif
                                     endif
                             
-                                    " restore shell
-                                    let [&shell, &shellcmdflag, &shellredir] = [sh, shellcmdflag, shrd]
+                                    &#34; restore shell
+                                    let [&amp;shell, &amp;shellcmdflag, &amp;shellredir] = [sh, shellcmdflag, shrd]
                             
                                     let s:last_sent = localtime()
                             
-                                    " need to repaint in case a key was pressed while sending
-                                    if !s:has_async && !s:nvim_async && s:redraw_setting != 'disabled'
-                                        if s:redraw_setting == 'auto'
-                                            if s:last_sent - start_time > 0
+                                    &#34; need to repaint in case a key was pressed while sending
+                                    if !s:has_async &amp;&amp; !s:nvim_async &amp;&amp; s:redraw_setting != &#39;disabled&#39;
+                                        if s:redraw_setting == &#39;auto&#39;
+                                            if s:last_sent - start_time &gt; 0
                                                 redraw!
                                             endif
                                         else
@@ -32489,11 +32489,11 @@ count  total (s)   self (s)
                                         endif
                                     endif
                             
-                                    if s:is_debug_on && stdout != ''
-                                        echoerr '[WakaTime] Heartbeat Command: ' . s:JoinArgs(cmd) . "\n[WakaTime] Error: " . stdout
+                                    if s:is_debug_on &amp;&amp; stdout != &#39;&#39;
+                                        echoerr &#39;[WakaTime] Heartbeat Command: &#39; . s:JoinArgs(cmd) . &#34;\n[WakaTime] Error: &#34; . stdout
                                     endif
 
-FUNCTION  <SNR>9_InitAndHandleActivity()
+FUNCTION  &lt;SNR&gt;9_InitAndHandleActivity()
 Called 2 times
 Total time:   0.001389
  Self time:   0.000021
@@ -32503,50 +32503,50 @@ count  total (s)   self (s)
     2   0.000626   0.000005         call s:SetupConfigFile()
     2   0.000362   0.000007         call s:HandleActivity(a:is_write)
 
-FUNCTION  <SNR>9_AsyncHandler()
+FUNCTION  &lt;SNR&gt;9_AsyncHandler()
 Called 0 times
 Total time:   0.000000
  Self time:   0.000000
 
 count  total (s)   self (s)
-                                    if s:is_debug_on && a:output != ''
-                                        echoerr '[WakaTime] Heartbeat Command: ' . s:JoinArgs(a:cmd) . "\n[WakaTime] Error: " . a:output
+                                    if s:is_debug_on &amp;&amp; a:output != &#39;&#39;
+                                        echoerr &#39;[WakaTime] Heartbeat Command: &#39; . s:JoinArgs(a:cmd) . &#34;\n[WakaTime] Error: &#34; . a:output
                                     endif
 
-FUNCTION  <SNR>9_OrderTime()
+FUNCTION  &lt;SNR&gt;9_OrderTime()
 Called 0 times
 Total time:   0.000000
  Self time:   0.000000
 
 count  total (s)   self (s)
-                                    " Add a milisecond to a:time.
-                                    " Time prevision doesn't matter, but order of heartbeats does.
-                                    if !(a:time_str =~ "\.")
-                                        let millisecond = printf('%d', a:loop_count)
-                                        while strlen(millisecond) < 6
-                                            let millisecond = '0' . millisecond
+                                    &#34; Add a milisecond to a:time.
+                                    &#34; Time prevision doesn&#39;t matter, but order of heartbeats does.
+                                    if !(a:time_str =~ &#34;\.&#34;)
+                                        let millisecond = printf(&#39;%d&#39;, a:loop_count)
+                                        while strlen(millisecond) &lt; 6
+                                            let millisecond = &#39;0&#39; . millisecond
                                         endwhile
-                                        return a:time_str . '.' . millisecond
+                                        return a:time_str . &#39;.&#39; . millisecond
                                     endif
                                     return a:time_str
 
-FUNCTION  <SNR>9_SetLastHeartbeat()
+FUNCTION  &lt;SNR&gt;9_SetLastHeartbeat()
 Called 0 times
 Total time:   0.000000
  Self time:   0.000000
 
 count  total (s)   self (s)
                                     call s:SetLastHeartbeatInMemory(a:last_activity_at, a:last_heartbeat_at, a:file)
-                                    call writefile([substitute(printf('%d', a:last_activity_at), ',', '.', ''), substitute(printf('%d', a:last_heartbeat_at), ',', '.', ''), a:file], s:data_file)
+                                    call writefile([substitute(printf(&#39;%d&#39;, a:last_activity_at), &#39;,&#39;, &#39;.&#39;, &#39;&#39;), substitute(printf(&#39;%d&#39;, a:last_heartbeat_at), &#39;,&#39;, &#39;.&#39;, &#39;&#39;), a:file], s:data_file)
 
-FUNCTION  <SNR>9_SetupDebugMode()
+FUNCTION  &lt;SNR&gt;9_SetupDebugMode()
 Called 2 times
 Total time:   0.000393
  Self time:   0.000021
 
 count  total (s)   self (s)
     2              0.000003         if !s:debug_mode_already_setup
-    1   0.000377   0.000005             if s:GetIniSetting('settings', 'debug') == 'true'
+    1   0.000377   0.000005             if s:GetIniSetting(&#39;settings&#39;, &#39;debug&#39;) == &#39;true&#39;
                                             let s:is_debug_on = s:true
                                         else
     1              0.000002                 let s:is_debug_on = s:false
@@ -32554,16 +32554,16 @@ count  total (s)   self (s)
     1              0.000002             let s:debug_mode_already_setup = s:true
     1              0.000000         endif
 
-FUNCTION  <SNR>9_EnableScreenRedrawAuto()
+FUNCTION  &lt;SNR&gt;9_EnableScreenRedrawAuto()
 Called 0 times
 Total time:   0.000000
  Self time:   0.000000
 
 count  total (s)   self (s)
-                                    call s:SetIniSetting('settings', 'vi_redraw', 'auto')
-                                    let s:redraw_setting = 'auto'
+                                    call s:SetIniSetting(&#39;settings&#39;, &#39;vi_redraw&#39;, &#39;auto&#39;)
+                                    let s:redraw_setting = &#39;auto&#39;
 
-FUNCTION  <SNR>9_GetHeartbeatsJson()
+FUNCTION  &lt;SNR&gt;9_GetHeartbeatsJson()
 Called 0 times
 Total time:   0.000000
  Self time:   0.000000
@@ -32572,25 +32572,25 @@ count  total (s)   self (s)
                                     let arr = []
                                     let loop_count = 1
                                     for heartbeat in s:heartbeats_buffer
-                                        let heartbeat_str = '{"entity": "' . s:JsonEscape(heartbeat.entity) . '", '
-                                        let heartbeat_str = heartbeat_str . '"timestamp": ' . s:OrderTime(heartbeat.time, loop_count) . ', '
-                                        let heartbeat_str = heartbeat_str . '"is_write": '
+                                        let heartbeat_str = &#39;{&#34;entity&#34;: &#34;&#39; . s:JsonEscape(heartbeat.entity) . &#39;&#34;, &#39;
+                                        let heartbeat_str = heartbeat_str . &#39;&#34;timestamp&#34;: &#39; . s:OrderTime(heartbeat.time, loop_count) . &#39;, &#39;
+                                        let heartbeat_str = heartbeat_str . &#39;&#34;is_write&#34;: &#39;
                                         if heartbeat.is_write
-                                            let heartbeat_str = heartbeat_str . 'true'
+                                            let heartbeat_str = heartbeat_str . &#39;true&#39;
                                         else
-                                            let heartbeat_str = heartbeat_str . 'false'
+                                            let heartbeat_str = heartbeat_str . &#39;false&#39;
                                         endif
-                                        if has_key(heartbeat, 'language')
-                                            let heartbeat_str = heartbeat_str . ', "language": "' . s:JsonEscape(heartbeat.language) . '"'
+                                        if has_key(heartbeat, &#39;language&#39;)
+                                            let heartbeat_str = heartbeat_str . &#39;, &#34;language&#34;: &#34;&#39; . s:JsonEscape(heartbeat.language) . &#39;&#34;&#39;
                                         endif
-                                        let heartbeat_str = heartbeat_str . '}'
+                                        let heartbeat_str = heartbeat_str . &#39;}&#39;
                                         let arr = arr + [heartbeat_str]
                                         let loop_count = loop_count + 1
                                     endfor
                                     let s:heartbeats_buffer = []
-                                    return '[' . join(arr, ',') . ']'
+                                    return &#39;[&#39; . join(arr, &#39;,&#39;) . &#39;]&#39;
 
-FUNCTION  <SNR>9_CurrentTimeStr()
+FUNCTION  &lt;SNR&gt;9_CurrentTimeStr()
 Called 0 times
 Total time:   0.000000
  Self time:   0.000000
@@ -32599,28 +32599,28 @@ count  total (s)   self (s)
                                     if s:has_reltime
                                         return split(reltimestr(reltime()))[0]
                                     endif
-                                    return printf('%d', localtime())
+                                    return printf(&#39;%d&#39;, localtime())
 
-FUNCTION  <SNR>9_AppendHeartbeat()
+FUNCTION  &lt;SNR&gt;9_AppendHeartbeat()
 Called 0 times
 Total time:   0.000000
  Self time:   0.000000
 
 count  total (s)   self (s)
                                     let file = a:file
-                                    if file == ''
+                                    if file == &#39;&#39;
                                         let file = a:last.file
                                     endif
-                                    if file != ''
+                                    if file != &#39;&#39;
                                         let heartbeat = {}
                                         let heartbeat.entity = file
                                         let heartbeat.time = s:CurrentTimeStr()
                                         let heartbeat.is_write = a:is_write
-                                        if !empty(&syntax)
-                                            let heartbeat.language = &syntax
+                                        if !empty(&amp;syntax)
+                                            let heartbeat.language = &amp;syntax
                                         else
-                                            if !empty(&filetype)
-                                                let heartbeat.language = &filetype
+                                            if !empty(&amp;filetype)
+                                                let heartbeat.language = &amp;filetype
                                             endif
                                         endif
                                         let s:heartbeats_buffer = s:heartbeats_buffer + [heartbeat]
@@ -32631,126 +32631,126 @@ count  total (s)   self (s)
                                         endif
                                     endif
 
-FUNCTION  <SNR>9_EnoughTimePassed()
+FUNCTION  &lt;SNR&gt;9_EnoughTimePassed()
 Called 0 times
 Total time:   0.000000
  Self time:   0.000000
 
 count  total (s)   self (s)
                                     let prev = a:last.last_heartbeat_at
-                                    if a:now - prev > g:wakatime_HeartbeatFrequency * 60
+                                    if a:now - prev &gt; g:wakatime_HeartbeatFrequency * 60
                                         return s:true
                                     endif
                                     return s:false
 
-FUNCTION  <SNR>9_IsWindows()
+FUNCTION  &lt;SNR&gt;9_IsWindows()
 Called 0 times
 Total time:   0.000000
  Self time:   0.000000
 
 count  total (s)   self (s)
-                                    if has('win32') || has('win64')
+                                    if has(&#39;win32&#39;) || has(&#39;win64&#39;)
                                         return s:true
                                     endif
                                     return s:false
 
-FUNCTION  <SNR>9_DisableScreenRedraw()
+FUNCTION  &lt;SNR&gt;9_DisableScreenRedraw()
 Called 0 times
 Total time:   0.000000
  Self time:   0.000000
 
 count  total (s)   self (s)
-                                    call s:SetIniSetting('settings', 'vi_redraw', 'disabled')
-                                    let s:redraw_setting = 'disabled'
+                                    call s:SetIniSetting(&#39;settings&#39;, &#39;vi_redraw&#39;, &#39;disabled&#39;)
+                                    let s:redraw_setting = &#39;disabled&#39;
 
-FUNCTION  <SNR>9_EnableScreenRedraw()
+FUNCTION  &lt;SNR&gt;9_EnableScreenRedraw()
 Called 0 times
 Total time:   0.000000
  Self time:   0.000000
 
 count  total (s)   self (s)
-                                    call s:SetIniSetting('settings', 'vi_redraw', 'enabled')
-                                    let s:redraw_setting = 'enabled'
+                                    call s:SetIniSetting(&#39;settings&#39;, &#39;vi_redraw&#39;, &#39;enabled&#39;)
+                                    let s:redraw_setting = &#39;enabled&#39;
 
-FUNCTION  <SNR>9_Init()
+FUNCTION  &lt;SNR&gt;9_Init()
 Called 1 time
 Total time:   0.000673
  Self time:   0.000174
 
 count  total (s)   self (s)
                             
-                                    " For backwards compatibility, rename wakatime.conf to wakatime.cfg
+                                    &#34; For backwards compatibility, rename wakatime.conf to wakatime.cfg
     1              0.000124         if !filereadable(s:config_file)
-                                        if filereadable(expand("$HOME/.wakatime"))
-                                            exec "silent !mv" expand("$HOME/.wakatime") expand("$HOME/.wakatime.conf")
+                                        if filereadable(expand(&#34;$HOME/.wakatime&#34;))
+                                            exec &#34;silent !mv&#34; expand(&#34;$HOME/.wakatime&#34;) expand(&#34;$HOME/.wakatime.conf&#34;)
                                         endif
-                                        if filereadable(expand("$HOME/.wakatime.conf"))
+                                        if filereadable(expand(&#34;$HOME/.wakatime.conf&#34;))
                                             if !filereadable(s:config_file)
-                                                let contents = ['[settings]'] + readfile(expand("$HOME/.wakatime.conf"), '')
+                                                let contents = [&#39;[settings]&#39;] + readfile(expand(&#34;$HOME/.wakatime.conf&#34;), &#39;&#39;)
                                                 call writefile(contents, s:config_file)
-                                                call delete(expand("$HOME/.wakatime.conf"))
+                                                call delete(expand(&#34;$HOME/.wakatime.conf&#34;))
                                             endif
                                         endif
                                     endif
                             
-                                    " Set default python binary location
-    1              0.000002         if !exists("g:wakatime_PythonBinary")
-    1              0.000002             let g:wakatime_PythonBinary = 'python'
+                                    &#34; Set default python binary location
+    1              0.000002         if !exists(&#34;g:wakatime_PythonBinary&#34;)
+    1              0.000002             let g:wakatime_PythonBinary = &#39;python&#39;
     1              0.000002         endif
                             
-                                    " Set default heartbeat frequency in minutes
-    1              0.000002         if !exists("g:wakatime_HeartbeatFrequency")
+                                    &#34; Set default heartbeat frequency in minutes
+    1              0.000002         if !exists(&#34;g:wakatime_HeartbeatFrequency&#34;)
     1              0.000002             let g:wakatime_HeartbeatFrequency = 2
     1              0.000000         endif
                             
-                                    " Get legacy g:wakatime_ScreenRedraw setting
-    1              0.000001         let s:redraw_setting = 'auto'
-    1              0.000002         if exists("g:wakatime_ScreenRedraw") && g:wakatime_ScreenRedraw
-                                        let s:redraw_setting = 'enabled'
+                                    &#34; Get legacy g:wakatime_ScreenRedraw setting
+    1              0.000001         let s:redraw_setting = &#39;auto&#39;
+    1              0.000002         if exists(&#34;g:wakatime_ScreenRedraw&#34;) &amp;&amp; g:wakatime_ScreenRedraw
+                                        let s:redraw_setting = &#39;enabled&#39;
                                     endif
                             
-                                    " Get redraw setting from wakatime.cfg file
-    1   0.000504   0.000005         if s:GetIniSetting('settings', 'vi_redraw') != ''
-                                        if s:GetIniSetting('settings', 'vi_redraw') == 'enabled'
-                                            let s:redraw_setting = 'enabled'
+                                    &#34; Get redraw setting from wakatime.cfg file
+    1   0.000504   0.000005         if s:GetIniSetting(&#39;settings&#39;, &#39;vi_redraw&#39;) != &#39;&#39;
+                                        if s:GetIniSetting(&#39;settings&#39;, &#39;vi_redraw&#39;) == &#39;enabled&#39;
+                                            let s:redraw_setting = &#39;enabled&#39;
                                         endif
-                                        if s:GetIniSetting('settings', 'vi_redraw') == 'auto'
-                                            let s:redraw_setting = 'auto'
+                                        if s:GetIniSetting(&#39;settings&#39;, &#39;vi_redraw&#39;) == &#39;auto&#39;
+                                            let s:redraw_setting = &#39;auto&#39;
                                         endif
-                                        if s:GetIniSetting('settings', 'vi_redraw') == 'disabled'
-                                            let s:redraw_setting = 'disabled'
+                                        if s:GetIniSetting(&#39;settings&#39;, &#39;vi_redraw&#39;) == &#39;disabled&#39;
+                                            let s:redraw_setting = &#39;disabled&#39;
                                         endif
                                     endif
                             
-                                    " Buffering heartbeats disabled in Windows, unless have async support
+                                    &#34; Buffering heartbeats disabled in Windows, unless have async support
     1              0.000003         let s:buffering_heartbeats_enabled = s:has_async || s:nvim_async || !s:IsWindows()
                             
 
-FUNCTION  <SNR>9_NeovimAsyncExitHandler()
+FUNCTION  &lt;SNR&gt;9_NeovimAsyncExitHandler()
 Called 0 times
 Total time:   0.000000
  Self time:   0.000000
 
 count  total (s)   self (s)
-                                    let output = s:StripWhitespace(join(s:nvim_async_output, "\n"))
+                                    let output = s:StripWhitespace(join(s:nvim_async_output, &#34;\n&#34;))
                                     if a:exit_code == 104
-                                        let output .= 'Invalid API Key'
+                                        let output .= &#39;Invalid API Key&#39;
                                     endif
-                                    if (s:is_debug_on || a:exit_code == 103 || a:exit_code == 104) && (a:exit_code != 0 || output != '')
-                                        echoerr printf('[WakaTime] Error %d: %s', a:exit_code, output)
+                                    if (s:is_debug_on || a:exit_code == 103 || a:exit_code == 104) &amp;&amp; (a:exit_code != 0 || output != &#39;&#39;)
+                                        echoerr printf(&#39;[WakaTime] Error %d: %s&#39;, a:exit_code, output)
                                     endif
 
-FUNCTION  <SNR>9_GetLastHeartbeat()
+FUNCTION  &lt;SNR&gt;9_GetLastHeartbeat()
 Called 0 times
 Total time:   0.000000
  Self time:   0.000000
 
 count  total (s)   self (s)
-                                    if !s:last_heartbeat.last_activity_at || localtime() - s:last_heartbeat.last_activity_at > s:local_cache_expire
+                                    if !s:last_heartbeat.last_activity_at || localtime() - s:last_heartbeat.last_activity_at &gt; s:local_cache_expire
                                         if !filereadable(s:data_file)
-                                            return {'last_activity_at': 0, 'last_heartbeat_at': 0, 'file': ''}
+                                            return {&#39;last_activity_at&#39;: 0, &#39;last_heartbeat_at&#39;: 0, &#39;file&#39;: &#39;&#39;}
                                         endif
-                                        let last = readfile(s:data_file, '', 3)
+                                        let last = readfile(s:data_file, &#39;&#39;, 3)
                                         if len(last) == 3
                                             let s:last_heartbeat.last_heartbeat_at = last[1]
                                             let s:last_heartbeat.file = last[2]
@@ -32758,41 +32758,41 @@ count  total (s)   self (s)
                                     endif
                                     return s:last_heartbeat
 
-FUNCTION  <SNR>9_GetCurrentFile()
+FUNCTION  &lt;SNR&gt;9_GetCurrentFile()
 Called 3 times
 Total time:   0.000463
  Self time:   0.000463
 
 count  total (s)   self (s)
-    3              0.000462         return expand("%:p")
+    3              0.000462         return expand(&#34;%:p&#34;)
 
-FUNCTION  <SNR>9_EnableDebugMode()
+FUNCTION  &lt;SNR&gt;9_EnableDebugMode()
 Called 0 times
 Total time:   0.000000
  Self time:   0.000000
 
 count  total (s)   self (s)
-                                    call s:SetIniSetting('settings', 'debug', 'true')
+                                    call s:SetIniSetting(&#39;settings&#39;, &#39;debug&#39;, &#39;true&#39;)
                                     let s:is_debug_on = s:true
 
-FUNCTION  <SNR>9_DisableDebugMode()
+FUNCTION  &lt;SNR&gt;9_DisableDebugMode()
 Called 0 times
 Total time:   0.000000
  Self time:   0.000000
 
 count  total (s)   self (s)
-                                    call s:SetIniSetting('settings', 'debug', 'false')
+                                    call s:SetIniSetting(&#39;settings&#39;, &#39;debug&#39;, &#39;false&#39;)
                                     let s:is_debug_on = s:false
 
-FUNCTION  <SNR>9_StripWhitespace()
+FUNCTION  &lt;SNR&gt;9_StripWhitespace()
 Called 32 times
 Total time:   0.000199
  Self time:   0.000199
 
 count  total (s)   self (s)
-   32              0.000192         return substitute(a:str, '^\s*\(.\{-}\)\s*$', '\1', '')
+   32              0.000192         return substitute(a:str, &#39;^\s*\(.\{-}\)\s*$&#39;, &#39;\1&#39;, &#39;&#39;)
 
-FUNCTION  <SNR>9_SetupConfigFile()
+FUNCTION  &lt;SNR&gt;9_SetupConfigFile()
 Called 2 times
 Total time:   0.000620
  Self time:   0.000188
@@ -32800,59 +32800,59 @@ Total time:   0.000620
 count  total (s)   self (s)
     2              0.000002         if !s:config_file_already_setup
                             
-                                        " Create config file if does not exist
+                                        &#34; Create config file if does not exist
     1              0.000123             if !filereadable(s:config_file)
                                             call writefile(s:default_configs, s:config_file)
                                         endif
                             
-                                        " Make sure config file has api_key
+                                        &#34; Make sure config file has api_key
     1              0.000002             let found_api_key = s:false
-    1   0.000452   0.000020             if s:GetIniSetting('settings', 'api_key') != '' || s:GetIniSetting('settings', 'apikey') != ''
+    1   0.000452   0.000020             if s:GetIniSetting(&#39;settings&#39;, &#39;api_key&#39;) != &#39;&#39; || s:GetIniSetting(&#39;settings&#39;, &#39;apikey&#39;) != &#39;&#39;
     1              0.000001                 let found_api_key = s:true
     1              0.000000             endif
     1              0.000001             if !found_api_key
                                             call s:PromptForApiKey()
-                                            echo "[WakaTime] Setup complete! Visit https://wakatime.com to view your coding activity."
+                                            echo &#34;[WakaTime] Setup complete! Visit https://wakatime.com to view your coding activity.&#34;
                                         endif
                             
     1              0.000002             let s:config_file_already_setup = s:true
     1              0.000000         endif
 
-FUNCTION  <SNR>9_JsonEscape()
+FUNCTION  &lt;SNR&gt;9_JsonEscape()
 Called 0 times
 Total time:   0.000000
  Self time:   0.000000
 
 count  total (s)   self (s)
-                                    return substitute(a:str, '"', '\\"', 'g')
+                                    return substitute(a:str, &#39;&#34;&#39;, &#39;\\&#34;&#39;, &#39;g&#39;)
 
-FUNCTION  <SNR>9_GetIniSetting()
+FUNCTION  &lt;SNR&gt;9_GetIniSetting()
 Called 3 times
 Total time:   0.001303
  Self time:   0.001104
 
 count  total (s)   self (s)
     3              0.000385         if !filereadable(s:config_file)
-                                        return ''
+                                        return &#39;&#39;
                                     endif
     3              0.000255         let lines = readfile(s:config_file)
-    3              0.000005         let currentSection = ''
+    3              0.000005         let currentSection = &#39;&#39;
    24              0.000019         for line in lines
    23   0.000218   0.000064             let line = s:StripWhitespace(line)
-   23              0.000082             if matchstr(line, '^\[') != '' && matchstr(line, '\]$') != ''
-    6              0.000034                 let currentSection = substitute(line, '^\[\(.\{-}\)\]$', '\1', '')
+   23              0.000082             if matchstr(line, &#39;^\[&#39;) != &#39;&#39; &amp;&amp; matchstr(line, &#39;\]$&#39;) != &#39;&#39;
+    6              0.000034                 let currentSection = substitute(line, &#39;^\[\(.\{-}\)\]$&#39;, &#39;\1&#39;, &#39;&#39;)
     6              0.000003             else
    17              0.000017                 if currentSection == a:section
-   17              0.000041                     let group = split(line, '=')
-   17   0.000081   0.000048                     if len(group) == 2 && s:StripWhitespace(group[0]) == a:key
+   17              0.000041                     let group = split(line, &#39;=&#39;)
+   17   0.000081   0.000048                     if len(group) == 2 &amp;&amp; s:StripWhitespace(group[0]) == a:key
     2   0.000017   0.000006                         return s:StripWhitespace(group[1])
                                                 endif
    15              0.000006                 endif
    15              0.000005             endif
    21              0.000009         endfor
-    1              0.000001         return ''
+    1              0.000001         return &#39;&#39;
 
-FUNCTION  <SNR>9_JoinArgs()
+FUNCTION  &lt;SNR&gt;9_JoinArgs()
 Called 0 times
 Total time:   0.000000
  Self time:   0.000000
@@ -32862,9 +32862,9 @@ count  total (s)   self (s)
                                     for arg in a:args
                                         let safeArgs = safeArgs + [s:EscapeArg(arg)]
                                     endfor
-                                    return join(safeArgs, ' ')
+                                    return join(safeArgs, &#39; &#39;)
 
-FUNCTION  <SNR>9_SetIniSetting()
+FUNCTION  &lt;SNR&gt;9_SetIniSetting()
 Called 0 times
 Total time:   0.000000
  Self time:   0.000000
@@ -32875,24 +32875,24 @@ count  total (s)   self (s)
                                     let keyFound = s:false
                                     if filereadable(s:config_file)
                                         let lines = readfile(s:config_file)
-                                        let currentSection = ''
+                                        let currentSection = &#39;&#39;
                                         for line in lines
                                             let entry = s:StripWhitespace(line)
-                                            if matchstr(entry, '^\[') != '' && matchstr(entry, '\]$') != ''
-                                                if currentSection == a:section && !keyFound
-                                                    let output = output + [join([a:key, a:val], '=')]
+                                            if matchstr(entry, &#39;^\[&#39;) != &#39;&#39; &amp;&amp; matchstr(entry, &#39;\]$&#39;) != &#39;&#39;
+                                                if currentSection == a:section &amp;&amp; !keyFound
+                                                    let output = output + [join([a:key, a:val], &#39;=&#39;)]
                                                     let keyFound = s:true
                                                 endif
-                                                let currentSection = substitute(entry, '^\[\(.\{-}\)\]$', '\1', '')
+                                                let currentSection = substitute(entry, &#39;^\[\(.\{-}\)\]$&#39;, &#39;\1&#39;, &#39;&#39;)
                                                 let output = output + [line]
                                                 if currentSection == a:section
                                                     let sectionFound = s:true
                                                 endif
                                             else
                                                 if currentSection == a:section
-                                                    let group = split(entry, '=')
-                                                    if len(group) == 2 && s:StripWhitespace(group[0]) == a:key
-                                                        let output = output + [join([a:key, a:val], '=')]
+                                                    let group = split(entry, &#39;=&#39;)
+                                                    if len(group) == 2 &amp;&amp; s:StripWhitespace(group[0]) == a:key
+                                                        let output = output + [join([a:key, a:val], &#39;=&#39;)]
                                                         let keyFound = s:true
                                                     else
                                                         let output = output + [line]
@@ -32904,46 +32904,46 @@ count  total (s)   self (s)
                                         endfor
                                     endif
                                     if !sectionFound
-                                        let output = output + [printf('[%s]', a:section), join([a:key, a:val], '=')]
+                                        let output = output + [printf(&#39;[%s]&#39;, a:section), join([a:key, a:val], &#39;=&#39;)]
                                     else
                                         if !keyFound
-                                            let output = output + [join([a:key, a:val], '=')]
+                                            let output = output + [join([a:key, a:val], &#39;=&#39;)]
                                         endif
                                     endif
                                     call writefile(output, s:config_file)
 
-FUNCTION  <SNR>9_PromptForApiKey()
+FUNCTION  &lt;SNR&gt;9_PromptForApiKey()
 Called 0 times
 Total time:   0.000000
  Self time:   0.000000
 
 count  total (s)   self (s)
                                     let api_key = s:false
-                                    let api_key = s:GetIniSetting('settings', 'api_key')
-                                    if api_key == ''
-                                        let api_key = s:GetIniSetting('settings', 'apikey')
+                                    let api_key = s:GetIniSetting(&#39;settings&#39;, &#39;api_key&#39;)
+                                    if api_key == &#39;&#39;
+                                        let api_key = s:GetIniSetting(&#39;settings&#39;, &#39;apikey&#39;)
                                     endif
                             
-                                    let api_key = inputsecret("[WakaTime] Enter your wakatime.com api key: ", api_key)
-                                    call s:SetIniSetting('settings', 'api_key', api_key)
+                                    let api_key = inputsecret(&#34;[WakaTime] Enter your wakatime.com api key: &#34;, api_key)
+                                    call s:SetIniSetting(&#39;settings&#39;, &#39;api_key&#39;, api_key)
 
-FUNCTION  <SNR>9_SetLastHeartbeatInMemory()
+FUNCTION  &lt;SNR&gt;9_SetLastHeartbeatInMemory()
 Called 0 times
 Total time:   0.000000
  Self time:   0.000000
 
 count  total (s)   self (s)
-                                    let s:last_heartbeat = {'last_activity_at': a:last_activity_at, 'last_heartbeat_at': a:last_heartbeat_at, 'file': a:file}
+                                    let s:last_heartbeat = {&#39;last_activity_at&#39;: a:last_activity_at, &#39;last_heartbeat_at&#39;: a:last_heartbeat_at, &#39;file&#39;: a:file}
 
-FUNCTION  <SNR>9_EscapeArg()
+FUNCTION  &lt;SNR&gt;9_EscapeArg()
 Called 0 times
 Total time:   0.000000
  Self time:   0.000000
 
 count  total (s)   self (s)
-                                    return substitute(shellescape(a:arg), '!', '\\!', '')
+                                    return substitute(shellescape(a:arg), &#39;!&#39;, &#39;\\!&#39;, &#39;&#39;)
 
-FUNCTION  <SNR>9_NeovimAsyncOutputHandler()
+FUNCTION  &lt;SNR&gt;9_NeovimAsyncOutputHandler()
 Called 0 times
 Total time:   0.000000
  Self time:   0.000000
@@ -32952,34 +32952,34 @@ count  total (s)   self (s)
                                     let s:nvim_async_output[-1] .= a:output[0]
                                     call extend(s:nvim_async_output, a:output[1:])
 
-FUNCTION  <SNR>9_HandleActivity()
+FUNCTION  &lt;SNR&gt;9_HandleActivity()
 Called 3 times
 Total time:   0.000544
  Self time:   0.000081
 
 count  total (s)   self (s)
     3   0.000474   0.000011         let file = s:GetCurrentFile()
-    3              0.000009         if !empty(file) && file !~ "-MiniBufExplorer-" && file !~ "--NO NAME--" && file !~ "^term:"
+    3              0.000009         if !empty(file) &amp;&amp; file !~ &#34;-MiniBufExplorer-&#34; &amp;&amp; file !~ &#34;--NO NAME--&#34; &amp;&amp; file !~ &#34;^term:&#34;
                                         let last = s:GetLastHeartbeat()
                                         let now = localtime()
                             
-                                        " Create a heartbeat when saving a file, when the current file
-                                        " changes, and when still editing the same file but enough time
-                                        " has passed since the last heartbeat.
+                                        &#34; Create a heartbeat when saving a file, when the current file
+                                        &#34; changes, and when still editing the same file but enough time
+                                        &#34; has passed since the last heartbeat.
                                         if a:is_write || s:EnoughTimePassed(now, last) || file != last.file
                                             call s:AppendHeartbeat(file, now, a:is_write, last)
                                         else
-                                            if now - s:last_heartbeat.last_activity_at > s:local_cache_expire
+                                            if now - s:last_heartbeat.last_activity_at &gt; s:local_cache_expire
                                                 call s:SetLastHeartbeatInMemory(now, last.last_heartbeat_at, last.file)
                                             endif
                                         endif
                             
-                                        " When buffering heartbeats disabled, no need to re-check the
-                                        " heartbeats buffer.
+                                        &#34; When buffering heartbeats disabled, no need to re-check the
+                                        &#34; heartbeats buffer.
                                         if s:buffering_heartbeats_enabled
                             
-                                            " Only send buffered heartbeats every s:send_buffer_seconds
-                                            if now - s:last_sent > s:send_buffer_seconds
+                                            &#34; Only send buffered heartbeats every s:send_buffer_seconds
+                                            if now - s:last_sent &gt; s:send_buffer_seconds
                                                 call s:SendHeartbeats()
                                             endif
                                         endif
@@ -32987,49 +32987,49 @@ count  total (s)   self (s)
 
 FUNCTIONS SORTED ON TOTAL TIME
 count  total (s)   self (s)  function
-    2   0.001389   0.000021  <SNR>9_InitAndHandleActivity()
-    3   0.001303   0.001104  <SNR>9_GetIniSetting()
-    1   0.000673   0.000174  <SNR>9_Init()
-    2   0.000620   0.000188  <SNR>9_SetupConfigFile()
-    3   0.000544   0.000081  <SNR>9_HandleActivity()
-    3   0.000463             <SNR>9_GetCurrentFile()
-    2   0.000393   0.000021  <SNR>9_SetupDebugMode()
-   32   0.000199             <SNR>9_StripWhitespace()
-    1   0.000042             <SNR>9_SendHeartbeats()
-                             <SNR>9_AppendHeartbeat()
-                             <SNR>9_EnoughTimePassed()
-                             <SNR>9_IsWindows()
-                             <SNR>9_DisableScreenRedraw()
-                             <SNR>9_EnableScreenRedraw()
-                             <SNR>9_CurrentTimeStr()
-                             <SNR>9_GetHeartbeatsJson()
-                             <SNR>9_GetLastHeartbeat()
-                             <SNR>9_EnableScreenRedrawAuto()
-                             <SNR>9_EnableDebugMode()
-                             <SNR>9_DisableDebugMode()
+    2   0.001389   0.000021  &lt;SNR&gt;9_InitAndHandleActivity()
+    3   0.001303   0.001104  &lt;SNR&gt;9_GetIniSetting()
+    1   0.000673   0.000174  &lt;SNR&gt;9_Init()
+    2   0.000620   0.000188  &lt;SNR&gt;9_SetupConfigFile()
+    3   0.000544   0.000081  &lt;SNR&gt;9_HandleActivity()
+    3   0.000463             &lt;SNR&gt;9_GetCurrentFile()
+    2   0.000393   0.000021  &lt;SNR&gt;9_SetupDebugMode()
+   32   0.000199             &lt;SNR&gt;9_StripWhitespace()
+    1   0.000042             &lt;SNR&gt;9_SendHeartbeats()
+                             &lt;SNR&gt;9_AppendHeartbeat()
+                             &lt;SNR&gt;9_EnoughTimePassed()
+                             &lt;SNR&gt;9_IsWindows()
+                             &lt;SNR&gt;9_DisableScreenRedraw()
+                             &lt;SNR&gt;9_EnableScreenRedraw()
+                             &lt;SNR&gt;9_CurrentTimeStr()
+                             &lt;SNR&gt;9_GetHeartbeatsJson()
+                             &lt;SNR&gt;9_GetLastHeartbeat()
+                             &lt;SNR&gt;9_EnableScreenRedrawAuto()
+                             &lt;SNR&gt;9_EnableDebugMode()
+                             &lt;SNR&gt;9_DisableDebugMode()
 
 FUNCTIONS SORTED ON SELF TIME
 count  total (s)   self (s)  function
-    3   0.001303   0.001104  <SNR>9_GetIniSetting()
-    3              0.000463  <SNR>9_GetCurrentFile()
-   32              0.000199  <SNR>9_StripWhitespace()
-    2   0.000620   0.000188  <SNR>9_SetupConfigFile()
-    1   0.000673   0.000174  <SNR>9_Init()
-    3   0.000544   0.000081  <SNR>9_HandleActivity()
-    1              0.000042  <SNR>9_SendHeartbeats()
-    2   0.000393   0.000021  <SNR>9_SetupDebugMode()
-    2   0.001389   0.000021  <SNR>9_InitAndHandleActivity()
-                             <SNR>9_AppendHeartbeat()
-                             <SNR>9_EnoughTimePassed()
-                             <SNR>9_IsWindows()
-                             <SNR>9_DisableScreenRedraw()
-                             <SNR>9_EnableScreenRedraw()
-                             <SNR>9_CurrentTimeStr()
-                             <SNR>9_GetHeartbeatsJson()
-                             <SNR>9_GetLastHeartbeat()
-                             <SNR>9_EnableScreenRedrawAuto()
-                             <SNR>9_EnableDebugMode()
-                             <SNR>9_DisableDebugMode()
+    3   0.001303   0.001104  &lt;SNR&gt;9_GetIniSetting()
+    3              0.000463  &lt;SNR&gt;9_GetCurrentFile()
+   32              0.000199  &lt;SNR&gt;9_StripWhitespace()
+    2   0.000620   0.000188  &lt;SNR&gt;9_SetupConfigFile()
+    1   0.000673   0.000174  &lt;SNR&gt;9_Init()
+    3   0.000544   0.000081  &lt;SNR&gt;9_HandleActivity()
+    1              0.000042  &lt;SNR&gt;9_SendHeartbeats()
+    2   0.000393   0.000021  &lt;SNR&gt;9_SetupDebugMode()
+    2   0.001389   0.000021  &lt;SNR&gt;9_InitAndHandleActivity()
+                             &lt;SNR&gt;9_AppendHeartbeat()
+                             &lt;SNR&gt;9_EnoughTimePassed()
+                             &lt;SNR&gt;9_IsWindows()
+                             &lt;SNR&gt;9_DisableScreenRedraw()
+                             &lt;SNR&gt;9_EnableScreenRedraw()
+                             &lt;SNR&gt;9_CurrentTimeStr()
+                             &lt;SNR&gt;9_GetHeartbeatsJson()
+                             &lt;SNR&gt;9_GetLastHeartbeat()
+                             &lt;SNR&gt;9_EnableScreenRedrawAuto()
+                             &lt;SNR&gt;9_EnableDebugMode()
+                             &lt;SNR&gt;9_DisableDebugMode()
 
 </code></pre>
                 </div>

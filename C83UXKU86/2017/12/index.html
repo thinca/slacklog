@@ -987,9 +987,9 @@ diff --git a/src/option.c b/src/option.c
 @@ -7410,7 +7410,7 @@ did_set_string_option(
  
  #if defined(FEAT_RENDER_OPTIONS)
-     /* 'renderoptions' */
--    else if (varp == &p_rop && gui.in_use)
-+    else if (varp == &p_rop)
+     /* &#39;renderoptions&#39; */
+-    else if (varp == &amp;p_rop &amp;&amp; gui.in_use)
++    else if (varp == &amp;p_rop)
      {
  	if (!gui_mch_set_rendering_options(p_rop))
  	    errmsg = e_invarg;
@@ -3800,8 +3800,8 @@ index d7bbc0cfe..c3f8190a4 100644
 +{
 +    proftime_T curr;
 +
-+    profile_start(&curr);
-+    if (curr.QuadPart > nextFlush.QuadPart)
++    profile_start(&amp;curr);
++    if (curr.QuadPart &gt; nextFlush.QuadPart)
 +    {
 +	_flush();
 +	if (flushTimerId != 0)
@@ -3809,12 +3809,12 @@ index d7bbc0cfe..c3f8190a4 100644
 +	    flushTimerId = 0;
 +	    KillTimer(s_textArea, flushTimerId);
 +	}
-+	_RPT0(_CRT_WARN, "flush done\n");
++	_RPT0(_CRT_WARN, &#34;flush done\n&#34;);
 +    }
 +    else
 +    {
 +	flushTimerId = SetTimer(s_textArea, 1, (UINT)15, _OnTimeFlush);
-+	_RPT0(_CRT_WARN, "flush canceled\n");
++	_RPT0(_CRT_WARN, &#34;flush canceled\n&#34;);
 +    }
 +}
 +
@@ -3830,7 +3830,7 @@ index d7bbc0cfe..c3f8190a4 100644
 +    flushTimerId = 0;
 +    KillTimer(s_textArea, idEvent);
 +    _flush();
-+    _RPT0(_CRT_WARN, "flush done (late)\n");
++    _RPT0(_CRT_WARN, &#34;flush done (late)\n&#34;);
 +}
 +
 +    void
@@ -3843,7 +3843,7 @@ index d7bbc0cfe..c3f8190a4 100644
  
      GdiFlush();
 +
-+    profile_setlimit(flushIntervalMsec, &nextFlush);
++    profile_setlimit(flushIntervalMsec, &amp;nextFlush);
  }
  
      static void
@@ -4275,11 +4275,11 @@ index d7bbc0cfe..c3f8190a4 100644
  
  #if defined(FEAT_DIRECTX)
 +    proftime_T tm;
-+    profile_start(&tm);
++    profile_start(&amp;tm);
      if (IS_ENABLE_DIRECTX())
  	DWriteContext_Flush(s_dwc);
-+    profile_end(&tm);
-+    Trace(profile_msg(&tm));
++    profile_end(&amp;tm);
++    Trace(profile_msg(&amp;tm));
  #endif
  
      GdiFlush();
@@ -4759,7 +4759,7 @@ index 119bcd579..3b1469fe8 100644
 --- a/src/gui_w32.c
 +++ b/src/gui_w32.c
 @@ -37,6 +37,7 @@ static int s_directx_scrlines = 0;
- # define IS_ENABLE_DIRECTX() (s_directx_enabled && s_dwc != NULL)
+ # define IS_ENABLE_DIRECTX() (s_directx_enabled &amp;&amp; s_dwc != NULL)
  static int directx_enabled(void);
  static void directx_binddc(void);
 +static proftime_T dx_tm;
@@ -4771,10 +4771,10 @@ index 119bcd579..3b1469fe8 100644
  #if defined(FEAT_DIRECTX)
      if (IS_ENABLE_DIRECTX())
 +    {
-+	profile_start(&dx_tm);
++	profile_start(&amp;dx_tm);
  	DWriteContext_Flush(s_dwc);
-+	profile_end(&dx_tm);
-+	Trace("%s (%s)\n", profile_msg(&dx_tm), "gui_mch_invert_rectangle");
++	profile_end(&amp;dx_tm);
++	Trace(&#34;%s (%s)\n&#34;, profile_msg(&amp;dx_tm), &#34;gui_mch_invert_rectangle&#34;);
 +    }
  #endif
  
@@ -4784,10 +4784,10 @@ index 119bcd579..3b1469fe8 100644
  #if defined(FEAT_DIRECTX)
      if (IS_ENABLE_DIRECTX())
 +    {
-+	profile_start(&dx_tm);
++	profile_start(&amp;dx_tm);
  	DWriteContext_Flush(s_dwc);
-+	profile_end(&dx_tm);
-+	Trace("%s (%s)\n", profile_msg(&dx_tm), "gui_mch_draw_hollow_cursor");
++	profile_end(&amp;dx_tm);
++	Trace(&#34;%s (%s)\n&#34;, profile_msg(&amp;dx_tm), &#34;gui_mch_draw_hollow_cursor&#34;);
 +    }
  #endif
  
@@ -4797,10 +4797,10 @@ index 119bcd579..3b1469fe8 100644
  #if defined(FEAT_DIRECTX)
      if (IS_ENABLE_DIRECTX())
 +    {
-+	profile_start(&dx_tm);
++	profile_start(&amp;dx_tm);
  	DWriteContext_Flush(s_dwc);
-+	profile_end(&dx_tm);
-+	Trace("%s (%s)\n", profile_msg(&dx_tm), "gui_mch_flash");
++	profile_end(&amp;dx_tm);
++	Trace(&#34;%s (%s)\n&#34;, profile_msg(&amp;dx_tm), &#34;gui_mch_flash&#34;);
 +    }
  #endif
  
@@ -4810,10 +4810,10 @@ index 119bcd579..3b1469fe8 100644
  	}
  	else
 +	{
-+	    profile_start(&dx_tm);
++	    profile_start(&amp;dx_tm);
  	    DWriteContext_Flush(s_dwc);
-+	    profile_end(&dx_tm);
-+	    Trace("%s (%s)\n", profile_msg(&dx_tm), "gui_mch_delete_lines");
++	    profile_end(&amp;dx_tm);
++	    Trace(&#34;%s (%s)\n&#34;, profile_msg(&amp;dx_tm), &#34;gui_mch_delete_lines&#34;);
 +	}
      }
      if (!use_redraw)
@@ -4823,10 +4823,10 @@ index 119bcd579..3b1469fe8 100644
  	}
  	else
 +	{
-+	    profile_start(&dx_tm);
++	    profile_start(&amp;dx_tm);
  	    DWriteContext_Flush(s_dwc);
-+	    profile_end(&dx_tm);
-+	    Trace("%s (%s)\n", profile_msg(&dx_tm), "gui_mch_insert_lines");
++	    profile_end(&amp;dx_tm);
++	    Trace(&#34;%s (%s)\n&#34;, profile_msg(&amp;dx_tm), &#34;gui_mch_insert_lines&#34;);
 +	}
      }
      if (!use_redraw)
@@ -4836,10 +4836,10 @@ index 119bcd579..3b1469fe8 100644
  #if defined(FEAT_DIRECTX)
      if (IS_ENABLE_DIRECTX())
 +    {
-+	profile_start(&dx_tm);
++	profile_start(&amp;dx_tm);
  	DWriteContext_Flush(s_dwc);
-+	profile_end(&dx_tm);
-+	Trace("%s (%s)\n", profile_msg(&dx_tm), "gui_mch_flush");
++	profile_end(&amp;dx_tm);
++	Trace(&#34;%s (%s)\n&#34;, profile_msg(&amp;dx_tm), &#34;gui_mch_flush&#34;);
 +    }
  #endif
  
@@ -4849,10 +4849,10 @@ index 119bcd579..3b1469fe8 100644
  #if defined(FEAT_DIRECTX)
      if (IS_ENABLE_DIRECTX())
 +    {
-+	profile_start(&dx_tm);
++	profile_start(&amp;dx_tm);
  	DWriteContext_Flush(s_dwc);
-+	profile_end(&dx_tm);
-+	Trace("%s (%s)\n", profile_msg(&dx_tm), "gui_mch_drawsign");
++	profile_end(&amp;dx_tm);
++	Trace(&#34;%s (%s)\n&#34;, profile_msg(&amp;dx_tm), &#34;gui_mch_drawsign&#34;);
 +    }
  #endif
  
@@ -4862,14 +4862,14 @@ index 119bcd579..3b1469fe8 100644
  #if defined(FEAT_DIRECTX)
      if (IS_ENABLE_DIRECTX())
 +    {
-+	profile_start(&dx_tm);
++	profile_start(&amp;dx_tm);
  	DWriteContext_Flush(s_dwc);
-+	profile_end(&dx_tm);
-+	Trace("%s (%s)\n", profile_msg(&dx_tm), "netbeans_draw_multisign_indicator");
++	profile_end(&amp;dx_tm);
++	Trace(&#34;%s (%s)\n&#34;, profile_msg(&amp;dx_tm), &#34;netbeans_draw_multisign_indicator&#34;);
 +    }
  #endif
  
-     for (i = 0; i < gui.char_height - 3; i++)
+     for (i = 0; i &lt; gui.char_height - 3; i++)
 </code></pre>
                 </div>
               </div>
@@ -5073,7 +5073,7 @@ index e1d19db8d..1aa7a6029 100644
  
      void
 @@ -1225,11 +1227,12 @@ DWriteContext_SetPixel(DWriteContext *ctx, int x, int y, COLORREF color)
- 	ctx->SetPixel(x, y, color);
+ 	ctx-&gt;SetPixel(x, y, color);
  }
  
 -    void
@@ -5081,8 +5081,8 @@ index e1d19db8d..1aa7a6029 100644
  DWriteContext_Flush(DWriteContext *ctx)
  {
      if (ctx != NULL)
--	ctx->Flush();
-+	return ctx->Flush();
+-	ctx-&gt;Flush();
++	return ctx-&gt;Flush();
 +    return -1;
  }
  
@@ -5105,7 +5105,7 @@ index 119bcd579..ff5722e75 100644
 --- a/src/gui_w32.c
 +++ b/src/gui_w32.c
 @@ -37,6 +37,8 @@ static int s_directx_scrlines = 0;
- # define IS_ENABLE_DIRECTX() (s_directx_enabled && s_dwc != NULL)
+ # define IS_ENABLE_DIRECTX() (s_directx_enabled &amp;&amp; s_dwc != NULL)
  static int directx_enabled(void);
  static void directx_binddc(void);
 +static int dx_pmode;
@@ -5119,10 +5119,10 @@ index 119bcd579..ff5722e75 100644
      if (IS_ENABLE_DIRECTX())
 -	DWriteContext_Flush(s_dwc);
 +    {
-+	profile_start(&dx_tm);
++	profile_start(&amp;dx_tm);
 +	dx_pmode = DWriteContext_Flush(s_dwc);
-+	profile_end(&dx_tm);
-+	Trace("%s (%d - %s)\n", profile_msg(&dx_tm), "gui_mch_invert_rectangle");
++	profile_end(&amp;dx_tm);
++	Trace(&#34;%s (%d - %s)\n&#34;, profile_msg(&amp;dx_tm), &#34;gui_mch_invert_rectangle&#34;);
 +    }
  #endif
  
@@ -5133,10 +5133,10 @@ index 119bcd579..ff5722e75 100644
      if (IS_ENABLE_DIRECTX())
 -	DWriteContext_Flush(s_dwc);
 +    {
-+	profile_start(&dx_tm);
++	profile_start(&amp;dx_tm);
 +	dx_pmode = DWriteContext_Flush(s_dwc);
-+	profile_end(&dx_tm);
-+	Trace("%s (%d - %s)\n", profile_msg(&dx_tm), dx_pmode, "gui_mch_draw_hollow_cursor");
++	profile_end(&amp;dx_tm);
++	Trace(&#34;%s (%d - %s)\n&#34;, profile_msg(&amp;dx_tm), dx_pmode, &#34;gui_mch_draw_hollow_cursor&#34;);
 +    }
  #endif
  
@@ -5147,10 +5147,10 @@ index 119bcd579..ff5722e75 100644
      if (IS_ENABLE_DIRECTX())
 -	DWriteContext_Flush(s_dwc);
 +    {
-+	profile_start(&dx_tm);
++	profile_start(&amp;dx_tm);
 +	dx_pmode = DWriteContext_Flush(s_dwc);
-+	profile_end(&dx_tm);
-+	Trace("%s (%d - %s)\n", profile_msg(&dx_tm), dx_pmode, "gui_mch_flash");
++	profile_end(&amp;dx_tm);
++	Trace(&#34;%s (%d - %s)\n&#34;, profile_msg(&amp;dx_tm), dx_pmode, &#34;gui_mch_flash&#34;);
 +    }
  #endif
  
@@ -5161,10 +5161,10 @@ index 119bcd579..ff5722e75 100644
  	else
 -	    DWriteContext_Flush(s_dwc);
 +	{
-+	    profile_start(&dx_tm);
++	    profile_start(&amp;dx_tm);
 +	    dx_pmode = DWriteContext_Flush(s_dwc);
-+	    profile_end(&dx_tm);
-+	    Trace("%s (%d - %s)\n", profile_msg(&dx_tm), dx_pmode, "gui_mch_delete_lines");
++	    profile_end(&amp;dx_tm);
++	    Trace(&#34;%s (%d - %s)\n&#34;, profile_msg(&amp;dx_tm), dx_pmode, &#34;gui_mch_delete_lines&#34;);
 +	}
      }
      if (!use_redraw)
@@ -5175,10 +5175,10 @@ index 119bcd579..ff5722e75 100644
  	else
 -	    DWriteContext_Flush(s_dwc);
 +	{
-+	    profile_start(&dx_tm);
++	    profile_start(&amp;dx_tm);
 +	    dx_pmode = DWriteContext_Flush(s_dwc);
-+	    profile_end(&dx_tm);
-+	    Trace("%s (%d - %s)\n", profile_msg(&dx_tm), dx_pmode, "gui_mch_insert_lines");
++	    profile_end(&amp;dx_tm);
++	    Trace(&#34;%s (%d - %s)\n&#34;, profile_msg(&amp;dx_tm), dx_pmode, &#34;gui_mch_insert_lines&#34;);
 +	}
      }
      if (!use_redraw)
@@ -5189,10 +5189,10 @@ index 119bcd579..ff5722e75 100644
      if (IS_ENABLE_DIRECTX())
 -	DWriteContext_Flush(s_dwc);
 +    {
-+	profile_start(&dx_tm);
++	profile_start(&amp;dx_tm);
 +	dx_pmode = DWriteContext_Flush(s_dwc);
-+	profile_end(&dx_tm);
-+	Trace("%s (%d - %s)\n", profile_msg(&dx_tm), dx_pmode, "gui_mch_flush");
++	profile_end(&amp;dx_tm);
++	Trace(&#34;%s (%d - %s)\n&#34;, profile_msg(&amp;dx_tm), dx_pmode, &#34;gui_mch_flush&#34;);
 +    }
  #endif
  
@@ -5203,10 +5203,10 @@ index 119bcd579..ff5722e75 100644
      if (IS_ENABLE_DIRECTX())
 -	DWriteContext_Flush(s_dwc);
 +    {
-+	profile_start(&dx_tm);
++	profile_start(&amp;dx_tm);
 +	dx_pmode = DWriteContext_Flush(s_dwc);
-+	profile_end(&dx_tm);
-+	Trace("%s (%d - %s)\n", profile_msg(&dx_tm), dx_pmode, "gui_mch_drawsign");
++	profile_end(&amp;dx_tm);
++	Trace(&#34;%s (%d - %s)\n&#34;, profile_msg(&amp;dx_tm), dx_pmode, &#34;gui_mch_drawsign&#34;);
 +    }
  #endif
  
@@ -5216,14 +5216,14 @@ index 119bcd579..ff5722e75 100644
  #if defined(FEAT_DIRECTX)
      if (IS_ENABLE_DIRECTX())
 +    {
-+	profile_start(&dx_tm);
++	profile_start(&amp;dx_tm);
  	DWriteContext_Flush(s_dwc);
-+	profile_end(&dx_tm);
-+	Trace("%s (%d - %s)\n", profile_msg(&dx_tm), dx_pmode, "netbeans_draw_multisign_indicator");
++	profile_end(&amp;dx_tm);
++	Trace(&#34;%s (%d - %s)\n&#34;, profile_msg(&amp;dx_tm), dx_pmode, &#34;netbeans_draw_multisign_indicator&#34;);
 +    }
  #endif
  
-     for (i = 0; i < gui.char_height - 3; i++)
+     for (i = 0; i &lt; gui.char_height - 3; i++)
 diff --git a/src/regexp.c b/src/regexp.c
 index 7f5e265eb..5538a24a9 100644
 --- a/src/regexp.c
@@ -5236,7 +5236,7 @@ index 7f5e265eb..5538a24a9 100644
 +#undef DEBUG
  /* #define DEBUG */
  
- #include "vim.h"
+ #include &#34;vim.h&#34;
 </code></pre>
                 </div>
               </div>
@@ -5355,7 +5355,7 @@ index 7f5e265eb..5538a24a9 100644
                   <a href="/slacklog/files/F8BQN3U1F/Untitled.txt" target="_blank" rel="noopener noreferrer">
                   <span class="f5">[[ダウンロード: Untitled(Plain Text)]]</span>
                   </a>
-                  <pre><code class='language-none'><CTRL-F>, scrlines:0
+                  <pre><code class='language-none'>&lt;CTRL-F&gt;, scrlines:0
   0.000281 (1 - gui_mch_flush)
   0.000310 (1 - gui_mch_delete_lines)
   0.000310 (1 - gui_mch_flush)
@@ -5364,7 +5364,7 @@ index 7f5e265eb..5538a24a9 100644
   0.003164 (1 - gui_mch_flush)
   0.000215 (1 - gui_mch_flush)
 
-<CTRL-F>, scrlines:1
+&lt;CTRL-F&gt;, scrlines:1
   0.000269 (1 - gui_mch_flush)
   0.000419 (1 - gui_mch_flush)
   0.000607 (1 - gui_mch_flush)
@@ -5372,7 +5372,7 @@ index 7f5e265eb..5538a24a9 100644
   0.000279 (1 - gui_mch_flush)
   0.000217 (1 - gui_mch_flush)
 
-<CTRL-E>, scrlines:0
+&lt;CTRL-E&gt;, scrlines:0
   0.000327 (1 - gui_mch_flush)
   0.000372 (1 - gui_mch_delete_lines)
   0.000238 (1 - gui_mch_flush)
@@ -5380,7 +5380,7 @@ index 7f5e265eb..5538a24a9 100644
   0.000253 (1 - gui_mch_flush)
   0.000240 (1 - gui_mch_flush)
 
-<CTRL-E>, scrlines:1
+&lt;CTRL-E&gt;, scrlines:1
   0.000624 (1 - gui_mch_flush)
   0.000697 (1 - gui_mch_flush)
   0.000397 (1 - gui_mch_flush)
@@ -5805,7 +5805,7 @@ index 4f03ed809..7cd380303 100644
 -    gui_mch_flush();
 +    gui_mch_flush(6);
  
-     if (wtime > 0)
+     if (wtime &gt; 0)
      {
 @@ -3667,7 +3667,7 @@ gui_update_tabline(void)
  	/* Updating the tabline uses direct GUI commands, flush
@@ -5862,7 +5862,7 @@ index e1d19db8d..1aa7a6029 100644
  
      void
 @@ -1225,11 +1227,12 @@ DWriteContext_SetPixel(DWriteContext *ctx, int x, int y, COLORREF color)
- 	ctx->SetPixel(x, y, color);
+ 	ctx-&gt;SetPixel(x, y, color);
  }
  
 -    void
@@ -5870,8 +5870,8 @@ index e1d19db8d..1aa7a6029 100644
  DWriteContext_Flush(DWriteContext *ctx)
  {
      if (ctx != NULL)
--	ctx->Flush();
-+	return ctx->Flush();
+-	ctx-&gt;Flush();
++	return ctx-&gt;Flush();
 +    return -1;
  }
  
@@ -5894,7 +5894,7 @@ index 119bcd579..c94bee04a 100644
 --- a/src/gui_w32.c
 +++ b/src/gui_w32.c
 @@ -37,6 +37,8 @@ static int s_directx_scrlines = 0;
- # define IS_ENABLE_DIRECTX() (s_directx_enabled && s_dwc != NULL)
+ # define IS_ENABLE_DIRECTX() (s_directx_enabled &amp;&amp; s_dwc != NULL)
  static int directx_enabled(void);
  static void directx_binddc(void);
 +static int dx_pmode;
@@ -5935,10 +5935,10 @@ index 119bcd579..c94bee04a 100644
      if (IS_ENABLE_DIRECTX())
 -	DWriteContext_Flush(s_dwc);
 +    {
-+	profile_start(&dx_tm);
++	profile_start(&amp;dx_tm);
 +	dx_pmode = DWriteContext_Flush(s_dwc);
-+	profile_end(&dx_tm);
-+	Trace("%s (%d - %s)\n", profile_msg(&dx_tm), "gui_mch_invert_rectangle");
++	profile_end(&amp;dx_tm);
++	Trace(&#34;%s (%d - %s)\n&#34;, profile_msg(&amp;dx_tm), &#34;gui_mch_invert_rectangle&#34;);
 +    }
  #endif
  
@@ -5949,10 +5949,10 @@ index 119bcd579..c94bee04a 100644
      if (IS_ENABLE_DIRECTX())
 -	DWriteContext_Flush(s_dwc);
 +    {
-+	profile_start(&dx_tm);
++	profile_start(&amp;dx_tm);
 +	dx_pmode = DWriteContext_Flush(s_dwc);
-+	profile_end(&dx_tm);
-+	Trace("%s (%d - %s)\n", profile_msg(&dx_tm), dx_pmode, "gui_mch_draw_hollow_cursor");
++	profile_end(&amp;dx_tm);
++	Trace(&#34;%s (%d - %s)\n&#34;, profile_msg(&amp;dx_tm), dx_pmode, &#34;gui_mch_draw_hollow_cursor&#34;);
 +    }
  #endif
  
@@ -5963,10 +5963,10 @@ index 119bcd579..c94bee04a 100644
      if (IS_ENABLE_DIRECTX())
 -	DWriteContext_Flush(s_dwc);
 +    {
-+	profile_start(&dx_tm);
++	profile_start(&amp;dx_tm);
 +	dx_pmode = DWriteContext_Flush(s_dwc);
-+	profile_end(&dx_tm);
-+	Trace("%s (%d - %s)\n", profile_msg(&dx_tm), dx_pmode, "gui_mch_flash");
++	profile_end(&amp;dx_tm);
++	Trace(&#34;%s (%d - %s)\n&#34;, profile_msg(&amp;dx_tm), dx_pmode, &#34;gui_mch_flash&#34;);
 +    }
  #endif
  
@@ -5974,9 +5974,9 @@ index 119bcd579..c94bee04a 100644
 @@ -3065,7 +3082,7 @@ gui_mch_flash(int msec)
      rc.right = gui.num_cols * gui.char_width;
      rc.bottom = gui.num_rows * gui.char_height;
-     InvertRect(s_hdc, &rc);
--    gui_mch_flush();			/* make sure it's displayed */
-+    gui_mch_flush(3);			/* make sure it's displayed */
+     InvertRect(s_hdc, &amp;rc);
+-    gui_mch_flush();			/* make sure it&#39;s displayed */
++    gui_mch_flush(3);			/* make sure it&#39;s displayed */
  
      ui_delay((long)msec, TRUE);	/* wait for a few msec */
  
@@ -5986,10 +5986,10 @@ index 119bcd579..c94bee04a 100644
  	else
 -	    DWriteContext_Flush(s_dwc);
 +	{
-+	    profile_start(&dx_tm);
++	    profile_start(&amp;dx_tm);
 +	    dx_pmode = DWriteContext_Flush(s_dwc);
-+	    profile_end(&dx_tm);
-+	    Trace("%s (%d - %s)\n", profile_msg(&dx_tm), dx_pmode, "gui_mch_delete_lines");
++	    profile_end(&amp;dx_tm);
++	    Trace(&#34;%s (%d - %s)\n&#34;, profile_msg(&amp;dx_tm), dx_pmode, &#34;gui_mch_delete_lines&#34;);
 +	}
      }
      if (!use_redraw)
@@ -6000,10 +6000,10 @@ index 119bcd579..c94bee04a 100644
  	else
 -	    DWriteContext_Flush(s_dwc);
 +	{
-+	    profile_start(&dx_tm);
++	    profile_start(&amp;dx_tm);
 +	    dx_pmode = DWriteContext_Flush(s_dwc);
-+	    profile_end(&dx_tm);
-+	    Trace("%s (%d - %s)\n", profile_msg(&dx_tm), dx_pmode, "gui_mch_insert_lines");
++	    profile_end(&amp;dx_tm);
++	    Trace(&#34;%s (%d - %s)\n&#34;, profile_msg(&amp;dx_tm), dx_pmode, &#34;gui_mch_insert_lines&#34;);
 +	}
      }
      if (!use_redraw)
@@ -6032,10 +6032,10 @@ index 119bcd579..c94bee04a 100644
      if (IS_ENABLE_DIRECTX())
 -	DWriteContext_Flush(s_dwc);
 +    {
-+	profile_start(&dx_tm);
++	profile_start(&amp;dx_tm);
 +	dx_pmode = DWriteContext_Flush(s_dwc);
-+	profile_end(&dx_tm);
-+	Trace("%s (%d - %s:%d)\n", profile_msg(&dx_tm), dx_pmode, "gui_mch_flush", where);
++	profile_end(&amp;dx_tm);
++	Trace(&#34;%s (%d - %s:%d)\n&#34;, profile_msg(&amp;dx_tm), dx_pmode, &#34;gui_mch_flush&#34;, where);
 +    }
  #endif
  
@@ -6046,10 +6046,10 @@ index 119bcd579..c94bee04a 100644
      if (IS_ENABLE_DIRECTX())
 -	DWriteContext_Flush(s_dwc);
 +    {
-+	profile_start(&dx_tm);
++	profile_start(&amp;dx_tm);
 +	dx_pmode = DWriteContext_Flush(s_dwc);
-+	profile_end(&dx_tm);
-+	Trace("%s (%d - %s)\n", profile_msg(&dx_tm), dx_pmode, "gui_mch_drawsign");
++	profile_end(&amp;dx_tm);
++	Trace(&#34;%s (%d - %s)\n&#34;, profile_msg(&amp;dx_tm), dx_pmode, &#34;gui_mch_drawsign&#34;);
 +    }
  #endif
  
@@ -6059,14 +6059,14 @@ index 119bcd579..c94bee04a 100644
  #if defined(FEAT_DIRECTX)
      if (IS_ENABLE_DIRECTX())
 +    {
-+	profile_start(&dx_tm);
++	profile_start(&amp;dx_tm);
  	DWriteContext_Flush(s_dwc);
-+	profile_end(&dx_tm);
-+	Trace("%s (%d - %s)\n", profile_msg(&dx_tm), dx_pmode, "netbeans_draw_multisign_indicator");
++	profile_end(&amp;dx_tm);
++	Trace(&#34;%s (%d - %s)\n&#34;, profile_msg(&amp;dx_tm), dx_pmode, &#34;netbeans_draw_multisign_indicator&#34;);
 +    }
  #endif
  
-     for (i = 0; i < gui.char_height - 3; i++)
+     for (i = 0; i &lt; gui.char_height - 3; i++)
 diff --git a/src/netbeans.c b/src/netbeans.c
 index f4b42dc8a..49ea464b3 100644
 --- a/src/netbeans.c
@@ -6141,7 +6141,7 @@ index 7f5e265eb..5538a24a9 100644
 +#undef DEBUG
  /* #define DEBUG */
  
- #include "vim.h"
+ #include &#34;vim.h&#34;
 diff --git a/src/screen.c b/src/screen.c
 index a74f75071..62d32ea82 100644
 --- a/src/screen.c
@@ -6211,7 +6211,7 @@ index 744b7dedf..3f058bd12 100644
                   <a href="/slacklog/files/F8CBRNJDS/____________.txt" target="_blank" rel="noopener noreferrer">
                   <span class="f5">[[ダウンロード: その結果(Plain Text)]]</span>
                   </a>
-                  <pre><code class='language-none'><CTRL-F>, scrlines:0
+                  <pre><code class='language-none'>&lt;CTRL-F&gt;, scrlines:0
   0.000328 (1 - gui_mch_flush:5)
   0.002816 (1 - gui_mch_delete_lines)
   0.000221 (1 - gui_mch_flush:5)
@@ -6220,7 +6220,7 @@ index 744b7dedf..3f058bd12 100644
   0.000270 (1 - gui_mch_flush:5)
   0.000193 (1 - gui_mch_flush:6)
 
-<CTRL-F>, scrlines:1
+&lt;CTRL-F&gt;, scrlines:1
   0.000351 (1 - gui_mch_flush:5)
   0.000371 (1 - gui_mch_flush:5)
   0.000738 (1 - gui_mch_flush:5)
@@ -6228,7 +6228,7 @@ index 744b7dedf..3f058bd12 100644
   0.000265 (1 - gui_mch_flush:5)
   0.000244 (1 - gui_mch_flush:6)
 
-<CTRL-E>, scrlines:0
+&lt;CTRL-E&gt;, scrlines:0
   0.000270 (1 - gui_mch_flush:5)
   0.000223 (1 - gui_mch_delete_lines)
   0.000156 (1 - gui_mch_flush:5)
@@ -6236,7 +6236,7 @@ index 744b7dedf..3f058bd12 100644
   0.000223 (1 - gui_mch_flush:5)
   0.000183 (1 - gui_mch_flush:6)
 
-<CTRL-E>, scrlines:1
+&lt;CTRL-E&gt;, scrlines:1
   0.000645 (1 - gui_mch_flush:5)
   0.001018 (1 - gui_mch_flush:5)
   0.000452 (1 - gui_mch_flush:5)
@@ -9222,38 +9222,38 @@ index 744b7dedf..3f058bd12 100644
  	D2D1_RENDER_TARGET_USAGE_GDI_COMPATIBLE,
  	D2D1_FEATURE_LEVEL_DEFAULT
      };
--    hr = mD2D1Factory->CreateDCRenderTarget(&props, &mRT);
--    _RPT2(_CRT_WARN, "CreateDCRenderTarget: hr=%p p=%p\n", hr, mRT);
+-    hr = mD2D1Factory-&gt;CreateDCRenderTarget(&amp;props, &amp;mRT);
+-    _RPT2(_CRT_WARN, &#34;CreateDCRenderTarget: hr=%p p=%p\n&#34;, hr, mRT);
 +    D2D1_SIZE_U size = D2D1::SizeU(
 +	    mBindRect.right - mBindRect.left,
 +	    mBindRect.bottom - mBindRect.top
 +	    );
-+    hr = mD2D1Factory->CreateHwndRenderTarget(&props,
-+	    &D2D1::HwndRenderTargetProperties(mHwnd, size), &mRT);
-+    _RPT2(_CRT_WARN, "CreateHwndRenderTarget: hr=%p p=%p\n", hr, mRT);
++    hr = mD2D1Factory-&gt;CreateHwndRenderTarget(&amp;props,
++	    &amp;D2D1::HwndRenderTargetProperties(mHwnd, size), &amp;mRT);
++    _RPT2(_CRT_WARN, &#34;CreateHwndRenderTarget: hr=%p p=%p\n&#34;, hr, mRT);
  
      if (SUCCEEDED(hr))
      {
 @@ -902,23 +907,23 @@ DWriteContext::Rebind()
  {
-     SafeRelease(&mBitmap);
+     SafeRelease(&amp;mBitmap);
  
--    mRT->BindDC(mHDC, &mBindRect);
-     mRT->SetTransform(D2D1::IdentityMatrix());
+-    mRT-&gt;BindDC(mHDC, &amp;mBindRect);
+     mRT-&gt;SetTransform(D2D1::IdentityMatrix());
  
 +    D2D1_SIZE_U size = D2D1::SizeU(mBindRect.right - mBindRect.left,
 +		mBindRect.bottom - mBindRect.top);
-+    mRT->Resize(size);
++    mRT-&gt;Resize(size);
 +
      D2D1_BITMAP_PROPERTIES props = {
  	{DXGI_FORMAT_B8G8R8A8_UNORM, D2D1_ALPHA_MODE_IGNORE},
  	96.0f, 96.0f
      };
--    mRT->CreateBitmap(
+-    mRT-&gt;CreateBitmap(
 -	    D2D1::SizeU(mBindRect.right - mBindRect.left,
 -		mBindRect.bottom - mBindRect.top),
--	    props, &mBitmap);
-+    mRT->CreateBitmap(size, props, &mBitmap);
+-	    props, &amp;mBitmap);
++    mRT-&gt;CreateBitmap(size, props, &amp;mBitmap);
  }
  
      void
@@ -9289,8 +9289,8 @@ index 744b7dedf..3f058bd12 100644
 +DWriteContext_BindHwnd(DWriteContext *ctx, HWND hwnd, const RECT *rect)
  {
      if (ctx != NULL)
--	ctx->BindDC(hdc, rect);
-+	ctx->BindHwnd(hwnd, rect);
+-	ctx-&gt;BindDC(hdc, rect);
++	ctx-&gt;BindHwnd(hwnd, rect);
  }
  
      void
@@ -9311,7 +9311,7 @@ diff --git a/src/gui_w32.c b/src/gui_w32.c
 +++ b/src/gui_w32.c
 @@ -39,7 +39,7 @@ static int s_directx_load_attempted = 0;
  static int s_directx_scrlines = 0;
- # define IS_ENABLE_DIRECTX() (s_directx_enabled && s_dwc != NULL && enc_utf8)
+ # define IS_ENABLE_DIRECTX() (s_directx_enabled &amp;&amp; s_dwc != NULL &amp;&amp; enc_utf8)
  static int directx_enabled(void);
 -static void directx_binddc(void);
 +static void directx_bindhwnd(void);
@@ -9334,9 +9334,9 @@ diff --git a/src/gui_w32.c b/src/gui_w32.c
      if (s_textArea != NULL)
      {
  	RECT	rect;
- 	GetClientRect(s_textArea, &rect);
--	DWriteContext_BindDC(s_dwc, s_hdc, &rect);
-+	DWriteContext_BindHwnd(s_dwc, s_textArea, &rect);
+ 	GetClientRect(s_textArea, &amp;rect);
+-	DWriteContext_BindDC(s_dwc, s_hdc, &amp;rect);
++	DWriteContext_BindHwnd(s_dwc, s_textArea, &amp;rect);
      }
  }
  #endif
