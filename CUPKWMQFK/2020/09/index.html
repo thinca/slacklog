@@ -16082,6 +16082,138 @@
             </div>
           </div>
         </div>
+        <div class="clearfix m-3" id="ts-1601438894.118000">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2018-05-31/373472791093_ed16847a152da533e013_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">Tsuyoshi CHO</span>
+              <a href="#ts-1601438894.118000">30日 13:08:14</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CUPKWMQFK/p1601438894118000" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                ちょっと質問です<br><pre>augroup qr<br>  autocmd!<br>  autocmd FileType text :echomsg &#34;text ok&#34;<br>  autocmd FileType doc  :let &amp;filetype = &#39;text&#39;<br>augroup END<br><br>let &amp;filetype = &#39;doc&#39;<br>echo &amp;filetype</pre><br>ていうカンジのコードを実行すると<br><pre>text ok<br>text</pre><br>となるんですが FileType docでnestしてないのにFiletype textが発動するもんなんですかね?
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1601439380.118500">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2018-05-31/373472791093_ed16847a152da533e013_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">Tsuyoshi CHO</span>
+              <a href="#ts-1601439380.118500">30日 13:16:20</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CUPKWMQFK/p1601439380118500" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                filetypeがセットされたあと、非同期にdetectして確定したらvimがFileTypeイベントするからそうなる、なのかな?
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1601442232.119200">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://secure.gravatar.com/avatar/7f5a1bfaf8b64cbcdfaf82a7de92506b.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0017-48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">Shougo</span>
+              <a href="#ts-1601442232.119200">30日 14:03:52</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CUPKWMQFK/p1601442232119200" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                FileTypeはnestedなくても反応するのかも
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1601442332.120700">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2018-05-31/373472791093_ed16847a152da533e013_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">Tsuyoshi CHO</span>
+              <a href="#ts-1601442332.120700">30日 14:05:32</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CUPKWMQFK/p1601442332120700" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                とすると、context_filetype/vim-preciousでスイッチ(これ自体でsyntax変更などあるので、ある意味しょうがないですが...)によって、反応として他いろいろ動くのはしょうがなし、ですねえ
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1601449452.120900">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://secure.gravatar.com/avatar/7f5a1bfaf8b64cbcdfaf82a7de92506b.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0017-48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">Shougo</span>
+              <a href="#ts-1601449452.120900">30日 16:04:12</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CUPKWMQFK/p1601449452120900" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                しかたなさそう
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1601449494.121300">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2018-05-31/373472791093_ed16847a152da533e013_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">Tsuyoshi CHO</span>
+              <a href="#ts-1601449494.121300">30日 16:04:54</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CUPKWMQFK/p1601449494121300" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                なるほど、応答してくださってありがとうございます。
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <!-- footer -->
