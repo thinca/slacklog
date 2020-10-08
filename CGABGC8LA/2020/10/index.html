@@ -8546,6 +8546,308 @@
             </div>
           </div>
         </div>
+        <div class="clearfix m-3" id="ts-1602119256.262100">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://secure.gravatar.com/avatar/4b5a6f711a4e22e617b74058239ade53.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0007-48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">KoRoN</span>
+              <a href="#ts-1602119256.262100">8日 10:07:36</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CGABGC8LA/p1602119256262100" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                <code>go test foo/...</code> で foo/ 下のパッケージをいっぺんにテストする際の、パッケージ間のテスト順序とかかぶり具合とか、気になったのでgoのコードを追ってみよう。
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1602120587.262500">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://secure.gravatar.com/avatar/4b5a6f711a4e22e617b74058239ade53.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0007-48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">KoRoN</span>
+              <a href="#ts-1602120587.262500">8日 10:29:47</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CGABGC8LA/p1602120587262500" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                だいたいわかった…
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1602120963.267900">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://secure.gravatar.com/avatar/4b5a6f711a4e22e617b74058239ade53.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0007-48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">KoRoN</span>
+              <a href="#ts-1602120963.267900">8日 10:36:03</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CGABGC8LA/p1602120963267900" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                go testはテストするパッケージ1つずつに、ビルド、実行、結果表示の3つのアクションを生成して、各アクションは依存性をもってパラレルに実行される。<br><br>ちなみに実行を担うのは cmd/go/internal/work パッケージ。こいつはいわゆるタスクグラフを実行するやつ。NumCPU 個のワーカーとなるgoroutineを起動して、ルートタスク(=アクション)とその依存タスクを順番に完了させていく。<br><br>以上のことからパッケージ間のテストは同時に実行されうる。順番が安定しているかとかまではちゃんと読んでない(今の僕には必要ない)のでわからないけど、テスト内でパッケージを超えて共有リソース(DBとか)を触る場合は同時に実行されうることを意識しないといけない。
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1602120982.268300">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://secure.gravatar.com/avatar/4b5a6f711a4e22e617b74058239ade53.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0007-48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">KoRoN</span>
+              <a href="#ts-1602120982.268300">8日 10:36:22</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CGABGC8LA/p1602120982268300" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                まぁテストで共有リソースもたないのが好ましいのは言うまでもない。
+              </div>
+
+              <div>
+                  <div>
+                    <ul class="d-flex list-style-none flex-justify-start pt-2">
+                        <li>
+                          <span class="tooltipped tooltipped-ne tooltipped-align-left-1 p-1" aria-label="Tsuyoshi CHO, lambdalisue">
+                              <img class="slacklog-emoji" alt="sorena" title="sorena" src="/slacklog/emojis/sorena.png"><span class="ml-1">2</span>
+                          </span>
+                        </li>
+                    </ul>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1602122589.268800">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://secure.gravatar.com/avatar/4b5a6f711a4e22e617b74058239ade53.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0007-48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">KoRoN</span>
+              <a href="#ts-1602122589.268800">8日 11:03:09</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CGABGC8LA/p1602122589268800" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                記事にしておいた。<br><a href='https://zenn.dev/koron/articles/ea783d5f202ef9fb68d7'>https://zenn.dev/koron/articles/ea783d5f202ef9fb68d7</a>
+              </div>
+
+              <div>
+                  <div>
+                    <ul class="d-flex list-style-none flex-justify-start pt-2">
+                        <li>
+                          <span class="tooltipped tooltipped-ne tooltipped-align-left-1 p-1" aria-label="Tsuyoshi CHO, tennashi, Shintaro Abe, 0Delta, ゴリラ(人間と通じ合いたい), kuu, rapan931, Yoichiro Shimizu">
+                              <span>👍🏾8</span>
+                          </span>
+                        </li>
+                    </ul>
+                  </div>
+              </div>
+            <div class="mt-2 border p-2" id="ts-1602122589.268800">
+              
+    <div class="d-flex">
+        <div>
+          <img class="avatar avatar-small" width="32" height="32" src="https://zenn.dev/images/icon.png" alt="Zenn" />
+        </div>
+        <div class="flex-self-baseline f4 ml-2">
+          <span class="Label Label--outline">
+            <a href="https://zenn.dev/koron/articles/ea783d5f202ef9fb68d7" target="_blank" rel="noopener noreferrer">go testの並列性について</a>
+          </span>
+        </div>
+    </div>
+
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1602126012.270200">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2019-06-23/667212021009_557c3073c5b377011dbb_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">ゴリラ(人間と通じ合いたい)</span>
+              <a href="#ts-1602126012.270200">8日 12:00:12</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CGABGC8LA/p1602126012270200" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                パッケージごとに、並列で実行されるんですね
+              </div>
+
+              <div>
+                  <div>
+                    <ul class="d-flex list-style-none flex-justify-start pt-2">
+                        <li>
+                          <span class="tooltipped tooltipped-ne tooltipped-align-left-1 p-1" aria-label="KoRoN">
+                              <span>👍1</span>
+                          </span>
+                        </li>
+                    </ul>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1602132035.270900">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2019-09-11/743073322722_bdf8016ab37bf661b19e_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">Yoichiro Shimizu</span>
+              <a href="#ts-1602132035.270900">8日 13:40:35</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CGABGC8LA/p1602132035270900" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                柴田さんの記事もよくまとまってますね<br><a href='https://engineering.mercari.com/blog/entry/how_to_use_t_parallel/'>https://engineering.mercari.com/blog/entry/how_to_use_t_parallel/</a>
+              </div>
+
+              <div>
+                  <div>
+                    <ul class="d-flex list-style-none flex-justify-start pt-2">
+                        <li>
+                          <span class="tooltipped tooltipped-ne tooltipped-align-left-1 p-1" aria-label="iwata">
+                              <img class="slacklog-emoji" alt="god" title="god" src="/slacklog/emojis/god.gif"><span class="ml-1">1</span>
+                          </span>
+                        </li>
+                    </ul>
+                  </div>
+              </div>
+            <div class="mt-2 border p-2" id="ts-1602132035.270900">
+              
+    <div class="d-flex">
+        <div>
+          <img class="avatar avatar-small" width="32" height="32" src="https://engineering.mercari.com/favicons/apple-touch-icon-57x57.png" alt="メルカリエンジニアリング" />
+        </div>
+        <div class="flex-self-baseline f4 ml-2">
+          <span class="Label Label--outline">
+            <a href="https://engineering.mercari.com/blog/entry/how_to_use_t_parallel/" target="_blank" rel="noopener noreferrer">Go言語でのテストの並列化 〜t.Parallel()メソッドを理解する〜</a>
+          </span>
+        </div>
+    </div>
+      <div class="d-flex">
+        <div class="mt-2">この記事は、Merpay Tech Openness Month 2020 の6日目の記事です。メルペイでBackendエンジニアをしている柴田（@yoshiki_shibata）です。この記事では、Go言語のtestingパッケージに用意</div>
+      </div>
+
+            </div>
+              <details class="details-reset mt-3">
+                <summary class="btn-link">
+                  <span class="f5">1 件の返信 最終返信:13:41:58 <span class="dropdown-caret"></span>
+                  </span>
+                </summary>
+                <div class="border mt-2">
+                  <div class="p-2" id="ts-1602132118.271100">
+                    <div class="float-left mr-2">
+                      <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2019-09-11/743073322722_bdf8016ab37bf661b19e_48.png" />
+                    </div>
+                    <div>
+                      <span class="text-bold mr-1">Yoichiro Shimizu</span>
+                      <a href="#ts-1602132118.271100">8日 13:41:58</a>
+                    </div>
+                    <div class="overflow-hidden">
+                      以下まとめ引用<br><br>まとめると以下の通りです。<br>• <code>-p</code>フラグによる指定は、複数のパッケージのテストを並列に異なるプロセスとして実行することを指定する。<code>-p=1</code>では、パッケージが一つずつ実行されることになる。<br>• <code>t.Parallel()</code>メソッドの呼び出しで、パッケージ内のトップレベルのテスト関数やサブテスト関数が並列に実行されることになる。<br>• <code>t.Parallel()</code>メソッドを呼び出している（トップレベルを含む）テスト関数は、その親のテスト関数の呼び出しが戻るまで、<code>t.Parallel()</code>メソッド呼び出しによる一時停止の状態から処理を再開しない。<br>• <code>t.Parallel()</code>メソッドによる並列レベルは、デフォルトで<code>GOMAXPROCS</code>の値である。明示的に変更するには、<code>-parallel</code>フラグで指定するか、環境変数<code>GOMAXPROCS</code>で設定する。<br>• テスト関数内での後処理は、<code>t.Cleanup</code>メソッドもしくは<code>defer</code>文を使うかは、含まれるサブテスト関数が<code>t.Parallel()</code>メソッドを呼び出しているかいないかで使い分ける必要がある。<br>• <code>t.Parallel()</code>メソッドを使っていても、複数のパッケージのテストが*同時に一つのテストプロセス内で実行されることはない*。<br>
+                    </div>
+                  </div>
+                </div>
+              </details>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1602165264.277200">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2019-09-19/766087996341_c4b0930af904f66d8057_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">johejo</span>
+              <a href="#ts-1602165264.277200">8日 22:54:24</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CGABGC8LA/p1602165264277200" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                SameSiteの振る舞いがちょっと変わった<br><a href='https://github.com/golang/go/commit/542693e00529fbb4248fac614ece68b127a5ec4d#diff-44567335da7512324c74b50e5fcb3def'>https://github.com/golang/go/commit/542693e00529fbb4248fac614ece68b127a5ec4d#diff-44567335da7512324c74b50e5fcb3def</a>
+              </div>
+
+              <div>
+              </div>
+            <div class="mt-2 border p-2" id="ts-1602165264.277200">
+              
+    <div class="d-flex">
+      <div>
+        <img class="avatar avatar-small" width="32" height="32" src="https://a.slack-edge.com/80588/img/unfurl_icons/github.png" alt="GitHub" />
+      </div>
+      <div class="flex-self-baseline f4 ml-2">
+        <span class="Label Label--outline">
+          <a href="https://github.com/golang/go/commit/542693e00529fbb4248fac614ece68b127a5ec4d#diff-44567335da7512324c74b50e5fcb3def" target="_blank" rel="noopener noreferrer">net/http: make SameSiteDefaultMode behavior match the specification · golang/go@542693e</a>
+        </span>
+      </div>
+    </div>
+    <div class="d-flex pl-2 mb-2">
+      <div class="mt-2">The current specification does not foresee a SameSite attribute without a value. While the existing implementation would serialize SameSite in a way that would likely be ignored by well-impelemente...</div>
+    </div>
+
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1602165327.278400">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2019-09-19/766087996341_c4b0930af904f66d8057_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">johejo</span>
+              <a href="#ts-1602165327.278400">8日 22:55:27</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CGABGC8LA/p1602165327278400" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                iOS 12だとSameSite属性自体を消さないとStrictとして振る舞ってしまうwebkit由来のバクがあってUser-Agentを見ながらhttp.SameSite(0)にしてクロスサイトクッキーを付与するワークアラウンドをやったけどこれでSameSite Defaultでも良くなったのかな<br><a href='https://bugs.webkit.org/show_bug.cgi?id=188165'>https://bugs.webkit.org/show_bug.cgi?id=188165</a>
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <!-- footer -->
