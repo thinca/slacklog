@@ -45201,6 +45201,685 @@
             </div>
           </div>
         </div>
+        <div class="clearfix m-3" id="ts-1602467220.449500">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2020-09-25/1387013984515_764ebc65576be33ac497_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">Hasu</span>
+              <a href="#ts-1602467220.449500">12日 10:47:00</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CLKR04BEF/p1602467220449500" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                UNCって具体的にどんな感じで実装するんです？<br>この辺ほぼ分からないので教えて頂けると
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1602468301.451100">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2018-07-31/407982080133_30e238cd92e6c88883f9_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">mattn</span>
+              <a href="#ts-1602468301.451100">12日 11:05:01</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CLKR04BEF/p1602468301451100" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                * Windows のパスは <code>C:\path\to</code> ですが UNC は <code>\\server\host\path\to</code> の様に先頭に slash が2つ付く事を意識する事<br>* <code>\\</code> や <code>\\host\</code> ではファイル一覧が取れない事<br>これくらいだと思います。
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1602468421.452300">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2018-07-31/407982080133_30e238cd92e6c88883f9_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">mattn</span>
+              <a href="#ts-1602468421.452300">12日 11:07:01</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CLKR04BEF/p1602468421452300" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                ローカルパスの場合は <code>file:///c:/path/to/the%20file.txt</code> こんなの、UNC の場合はホスト名が入るので <code>&lt;file://hostname/share/path/to/the%20file.txt&gt;</code> こんなのになります。
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1602468479.453100">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2018-07-31/407982080133_30e238cd92e6c88883f9_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">mattn</span>
+              <a href="#ts-1602468479.453100">12日 11:07:59</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CLKR04BEF/p1602468479453100" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                ローカルの場合に1つ多いのは Windows はボリューム名が付くので先頭が <code>/</code> じゃない、なので付ける、という感じ。
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1602468516.453500">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2018-07-31/407982080133_30e238cd92e6c88883f9_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">mattn</span>
+              <a href="#ts-1602468516.453500">12日 11:08:36</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CLKR04BEF/p1602468516453500" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                たまにローカルで2つしか付けてない実装もあるので注意。
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1602468707.454300">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2018-07-31/407982080133_30e238cd92e6c88883f9_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">mattn</span>
+              <a href="#ts-1602468707.454300">12日 11:11:47</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CLKR04BEF/p1602468707454300" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                あと RFC 上は <code>file://./share/path/to/the%20file.txt</code> も valid です。
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1602468799.454800">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2018-07-31/407982080133_30e238cd92e6c88883f9_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">mattn</span>
+              <a href="#ts-1602468799.454800">12日 11:13:19</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CLKR04BEF/p1602468799454800" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                vim-molder はパスがそのまま vim と共有なので何も加工する必要もなく動く。
+              </div>
+
+              <div>
+              </div>
+              <div class="mt-2 border p-3">
+                <div>
+                  <a href="/slacklog/files/F01CKFLTVEY/image.png" target="_blank" rel="noopener noreferrer">
+                  <img src="/slacklog/files/F01CKFLTVEY/image.png" width="431" height="239" alt="image.png" />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1602468844.455600">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2018-07-31/407982080133_30e238cd92e6c88883f9_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">mattn</span>
+              <a href="#ts-1602468844.455600">12日 11:14:04</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CLKR04BEF/p1602468844455600" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                <code>C$</code> というのは隠し共有フォルダ (<code>share</code> 部分) で見たまま <code>C:\</code> に相当します。
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1602468856.455800">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2018-07-31/407982080133_30e238cd92e6c88883f9_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">mattn</span>
+              <a href="#ts-1602468856.455800">12日 11:14:16</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CLKR04BEF/p1602468856455800" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                まぁこれは意識しなくてもいいです。
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1602469160.457300">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://secure.gravatar.com/avatar/4b5a6f711a4e22e617b74058239ade53.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0007-48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">KoRoN</span>
+              <a href="#ts-1602469160.457300">12日 11:19:20</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CLKR04BEF/p1602469160457300" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                書式としては <code>\\{host}\{sharename}\{path}</code> かな<br><br><code>{host}</code> にはIPアドレスも使える。<br><code>{path}</code> には <code>\</code> が含められるけど、ほかのには入らない。
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1602469369.461000">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://secure.gravatar.com/avatar/4b5a6f711a4e22e617b74058239ade53.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0007-48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">KoRoN</span>
+              <a href="#ts-1602469369.461000">12日 11:22:49</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CLKR04BEF/p1602469369461000" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                mattnさんの説明はちょっと混乱を招きやすいんだけど<br><br><code>\\localhost\C$\path\to\the file.txt</code> がUNCで<br>それを等価なURL形式で表現すると <code>file:///C:/path/to/the%20file.txt</code> になる。fileスキームのlocalhostは省略可ということで。<br><br>UNCが <code>\\192.168.0.123\C$\path\to\file.txt</code> だったら対応するURLは <code>&lt;file://192.168.0.123/C:/path/to/file.txt&gt;</code> になる。このURLを解釈できるUAがあるかはわかんないけど、URLの仕様上ね。
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1602469602.462200">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2018-07-31/407982080133_30e238cd92e6c88883f9_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">mattn</span>
+              <a href="#ts-1602469602.462200">12日 11:26:42</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CLKR04BEF/p1602469602462200" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                ちなみに <code>\\localhost\C$</code> はアクセスすると認証が実行されるけど <code>file:///C:/path/to...</code> は認証掛からないので、イコールとは考えない方がいいです。(釈迦説法)
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1602469731.463200">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://secure.gravatar.com/avatar/4b5a6f711a4e22e617b74058239ade53.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0007-48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">KoRoN</span>
+              <a href="#ts-1602469731.463200">12日 11:28:51</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CLKR04BEF/p1602469731463200" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                認証チェック画面がでるかどうか、って話かしら。
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1602469824.464400">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2018-07-31/407982080133_30e238cd92e6c88883f9_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">mattn</span>
+              <a href="#ts-1602469824.464400">12日 11:30:24</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CLKR04BEF/p1602469824464400" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                ですです。ファイルのアクセス方法が違うという事だけが言いたかったです。
+              </div>
+
+              <div>
+                  <div>
+                    <ul class="d-flex list-style-none flex-justify-start pt-2">
+                        <li>
+                          <span class="tooltipped tooltipped-ne tooltipped-align-left-1 p-1" aria-label="KoRoN">
+                              <span>👍1</span>
+                          </span>
+                        </li>
+                    </ul>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1602469897.465400">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2018-07-31/407982080133_30e238cd92e6c88883f9_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">mattn</span>
+              <a href="#ts-1602469897.465400">12日 11:31:37</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CLKR04BEF/p1602469897465400" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                とはいえ Windows の UNC は透過でアクセスできるので便利。
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1602470172.466100">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2018-07-31/407982080133_30e238cd92e6c88883f9_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">mattn</span>
+              <a href="#ts-1602470172.466100">12日 11:36:12</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CLKR04BEF/p1602470172466100" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                ちょっと試しに<br><pre>C:\&gt;dir &#34;//localhost/C$/&#34;<br>C:\&gt;dir &#34;//localhost//C$/&#34;<br>C:\&gt;dir &#34;//localhost///C$/&#34;<br>C:\&gt;dir &#34;//localhost////C$/&#34;</pre><br>してみたら表示された。
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1602470193.466500">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2018-07-31/407982080133_30e238cd92e6c88883f9_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">mattn</span>
+              <a href="#ts-1602470193.466500">12日 11:36:33</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CLKR04BEF/p1602470193466500" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                UNIX の <code>/</code> が <code>//</code> でも行けるのと同じ理屈だろうか。
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1602470305.467500">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2018-07-31/407982080133_30e238cd92e6c88883f9_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">mattn</span>
+              <a href="#ts-1602470305.467500">12日 11:38:25</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CLKR04BEF/p1602470305467500" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                上記の通り、ローカルパスなのに <code>&lt;file://C&gt;:/</code> と <code>file:///C:/</code> の2つの実装が残念ながら存在するので、親切にするなら両方サポートしてしまうのもありかも。
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1602470355.468200">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2018-07-31/407982080133_30e238cd92e6c88883f9_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">mattn</span>
+              <a href="#ts-1602470355.468200">12日 11:39:15</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CLKR04BEF/p1602470355468200" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                最初の <code>C:</code> に <code>:</code> が付いてる事は確認した方がいいかもですね。 <code>C:\</code> 直下に <code>c</code> というディレクトリを作ると混乱しかねないので。
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1602470385.468600">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2018-07-31/407982080133_30e238cd92e6c88883f9_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">mattn</span>
+              <a href="#ts-1602470385.468600">12日 11:39:45</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CLKR04BEF/p1602470385468600" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                いろいろ書いてると UNC サポートは難しいという話になってきた。
+              </div>
+
+              <div>
+                  <div>
+                    <ul class="d-flex list-style-none flex-justify-start pt-2">
+                        <li>
+                          <span class="tooltipped tooltipped-ne tooltipped-align-left-1 p-1" aria-label="lambdalisue">
+                              <span>😇1</span>
+                          </span>
+                        </li>
+                    </ul>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1602473545.468800">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://secure.gravatar.com/avatar/7f5a1bfaf8b64cbcdfaf82a7de92506b.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0017-48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">Shougo</span>
+              <a href="#ts-1602473545.468800">12日 12:32:25</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CLKR04BEF/p1602473545468800" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                きつそう
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1602474451.470500">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://secure.gravatar.com/avatar/7817559eedcf07a777dbf9dd734cc0b1.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0001-48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">Ken Takata</span>
+              <a href="#ts-1602474451.470500">12日 12:47:31</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CLKR04BEF/p1602474451470500" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                <code>dir &#34;//localhost///C$/////////Windows&#34;</code> とかも行けますが、<code>/</code> を連続してもいいのはunixもなので…
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1602474696.471600">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2018-07-31/407982080133_30e238cd92e6c88883f9_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">mattn</span>
+              <a href="#ts-1602474696.471600">12日 12:51:36</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CLKR04BEF/p1602474696471600" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                さらに僕の場合は <code>C:\</code> 直下に <code>C</code> という名前の <code>C:\</code> へのシンボリックリンク貼ってるので <code>&#34;//localhost///C$/////c/c/c///////c//c/c///c&#34;</code> とか出来て便利。
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1602474706.471800">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2018-07-31/407982080133_30e238cd92e6c88883f9_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">mattn</span>
+              <a href="#ts-1602474706.471800">12日 12:51:46</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CLKR04BEF/p1602474706471800" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                モールス信号できそう。
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1602474718.472000">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2015-01-15/3417067010_04a676b32692fb2507e1_48.jpg" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">thinca</span>
+              <a href="#ts-1602474718.472000">12日 12:51:58</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CLKR04BEF/p1602474718472000" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                cc ができなさそう
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1602477543.472800">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2018-07-31/407982080133_30e238cd92e6c88883f9_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">mattn</span>
+              <a href="#ts-1602477543.472800">12日 13:39:03</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CLKR04BEF/p1602477543472800" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                asyncomplete-skk で絵文字も入力できる様にした。
+              </div>
+
+              <div>
+                  <div>
+                    <ul class="d-flex list-style-none flex-justify-start pt-2">
+                        <li>
+                          <span class="tooltipped tooltipped-ne tooltipped-align-left-1 p-1" aria-label="raa0121">
+                              <img class="slacklog-emoji" alt="sasumatsu" title="sasumatsu" src="/slacklog/emojis/sasumatsu.gif"><span class="ml-1">1</span>
+                          </span>
+                        </li>
+                    </ul>
+                  </div>
+              </div>
+              <div class="mt-2 border p-3">
+                <div>
+                  <a href="/slacklog/files/F01D3A4NB3J/screenshot.gif" target="_blank" rel="noopener noreferrer">
+                  <img src="/slacklog/files/F01D3A4NB3J/screenshot.gif" width="958" height="601" alt="screenshot.gif" />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1602479066.475200">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2020-09-25/1387013984515_764ebc65576be33ac497_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">Hasu</span>
+              <a href="#ts-1602479066.475200">12日 14:04:26</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CLKR04BEF/p1602479066475200" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                UNCパスについて<br>* Windows のパスは C:\path\to だが UNC は \\server\host\path\to の様に先頭に slash が2つ付く<br>* \\ や \\host\ ではファイル一覧が取れない<br>\\{host}\{sharename}\{path}でホスト名にはIPアドレスも使える<br>\\localhost\C$　は認証画面が出るが　file:///C:/path/to...は認証画面が出ない<br>という認識で大丈夫ですか？
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1602479447.475600">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2018-07-31/407982080133_30e238cd92e6c88883f9_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">mattn</span>
+              <a href="#ts-1602479447.475600">12日 14:10:47</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CLKR04BEF/p1602479447475600" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                たぶん ok です。
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1602479650.475900">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2020-09-25/1387013984515_764ebc65576be33ac497_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">Hasu</span>
+              <a href="#ts-1602479650.475900">12日 14:14:10</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CLKR04BEF/p1602479650475900" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                ありがとうございます！
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <!-- footer -->
