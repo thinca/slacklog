@@ -1,0 +1,6 @@
+	case kindInterface:
+		type u struct {
+			interfacetype
+			u uncommontype
+		}
+		return &(*u)(unsafe.Pointer(t)).u
