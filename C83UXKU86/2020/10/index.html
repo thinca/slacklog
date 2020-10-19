@@ -8867,6 +8867,28 @@
             </div>
           </div>
         </div>
+        <div class="clearfix m-3" id="ts-1603062677.375900">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2019-06-13/665645250359_d442daaeb755fdff97d2_48.jpg" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">nb1839</span>
+              <a href="#ts-1603062677.375900">19日 08:11:17</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C83UXKU86/p1603062677375900" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                昨日の wrap + yank 問題の件ですが、組み合わせテストの延長で別の再現例を見付けたので一応共有しときます。<br>今度は wrap すら関係なかった…。<br>(1) 全角がずれた 2 行の文字列を用意する。例) &#34; ＡＢＣ\nａｂｃ&#34; (Ａの行頭に半角空白)<br>(2) 0l&lt;C-V&gt;jy (Visual Block で 2 行を yank) -&gt; p (ペースト)<br>こんな単純なのがよく残ってたなぁ…、wrap の境界問題じゃなくて Visual Block の問題っぽいですね。<br>あとは夜にでもまたゆっくり考えてみます。
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <!-- footer -->
