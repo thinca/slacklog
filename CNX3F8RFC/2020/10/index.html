@@ -11180,6 +11180,30 @@
                     </ul>
                   </div>
               </div>
+              <details class="details-reset mt-3">
+                <summary class="btn-link">
+                  <span class="f5">1 件の返信 最終返信:23日 01:20:55 <span class="dropdown-caret"></span>
+                  </span>
+                </summary>
+                <div class="border mt-2">
+                  <div class="p-2" id="ts-1603383655.459000">
+                    <div class="d-flex flex-wrap">
+                      <div class="f6 ml-3 text-gray-light">#←</div>
+                      <div class="f6 ml-2 text-gray-light">チャンネルにも投稿済</div>
+                    </div>
+                    <div class="float-left mr-2">
+                      <img class="avatar" width="36" height="36" src="https://secure.gravatar.com/avatar/8e497efbe99e2fa051316337d03624d9.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0016-48.png" />
+                    </div>
+                    <div>
+                      <span class="text-bold mr-1">Kazuhiro NISHIYAMA</span>
+                      <a href="#ts-1603383655.459000">23日 01:20:55</a>
+                    </div>
+                    <div class="overflow-hidden">
+                      こういう特定のバージョンに依存してないものは /usr/bin/ruby とかのシステムの ruby 決め打ちにしちゃうなあ。
+                    </div>
+                  </div>
+                </div>
+              </details>
             </div>
           </div>
         </div>
@@ -14091,6 +14115,285 @@
             <div class="overflow-hidden mb-3">
               <div class="pt-1 pb-1">
                 Requirementに書いてるけどfzf-tmux不要では・・・？
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1603383655.459000">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://secure.gravatar.com/avatar/8e497efbe99e2fa051316337d03624d9.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0016-48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">Kazuhiro NISHIYAMA</span>
+              <a href="#ts-1603383655.459000">23日 01:20:55</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CNX3F8RFC/p1603383655459000" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                こういう特定のバージョンに依存してないものは /usr/bin/ruby とかのシステムの ruby 決め打ちにしちゃうなあ。
+              </div>
+
+              <div>
+              </div>
+            <span class="f6 text-gray-light">
+              このスレッドに返信しました : <a href="#ts-1603338105.391000">.ruby-versionあるリポジトリ ...</a>
+            </span>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1603383796.459400">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://secure.gravatar.com/avatar/8e497efbe99e2fa051316337d03624d9.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0016-48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">Kazuhiro NISHIYAMA</span>
+              <a href="#ts-1603383796.459400">23日 01:23:16</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CNX3F8RFC/p1603383796459400" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                bash のみで tmux 以外の外部コマンドを使わずに書いてみたらこうなった。
+              </div>
+
+              <div>
+                  <div>
+                    <ul class="d-flex list-style-none flex-justify-start pt-2">
+                        <li>
+                          <span class="tooltipped tooltipped-ne tooltipped-align-left-1 p-1" aria-label="yutakatay, 0Delta">
+                              <span>👍2</span>
+                          </span>
+                        </li>
+                    </ul>
+                  </div>
+              </div>
+              <div class="mt-2 border p-3">
+                <div>
+                  <a href="/slacklog/files/F01CQ3SKRAT/%E7%84%A1%E9%A1%8C.sh" target="_blank" rel="noopener noreferrer">
+                  <span class="f5">[[ダウンロード: 無題(Shell)]]</span>
+                  </a>
+                  <pre><code class='language-shell'>#!/bin/bash
+OUT=()
+IFS=$&#39;\n&#39;
+for line in $(tmux ls); do
+  case &#34;$line&#34; in
+    *attach*)
+      OUT=($OUT &#34;#[bold][${line%%:*}]#[nobold]&#34;)
+      ;;
+    *)
+      OUT=($OUT &#34;${line%%:*}&#34;)
+      ;;
+  esac
+done
+echo &#34;${OUT[@]}&#34;</code></pre>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1603433057.461100">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://secure.gravatar.com/avatar/d9d0ceb387e3b6de5c4562af78e8a910.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0004-48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">ujihisa</span>
+              <a href="#ts-1603433057.461100">23日 15:04:17</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CNX3F8RFC/p1603433057461100" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                👀 <a href='https://github.com/talayhan/dotfiles/blob/master/config/vimrc'>https://github.com/talayhan/dotfiles/blob/master/config/vimrc</a> from <a href='https://twitter.com/talayhans'>https://twitter.com/talayhans</a>
+              </div>
+
+              <div>
+                  <div>
+                    <ul class="d-flex list-style-none flex-justify-start pt-2">
+                        <li>
+                          <span class="tooltipped tooltipped-ne tooltipped-align-left-1 p-1" aria-label="yutakatay">
+                              <span>👀1</span>
+                          </span>
+                        </li>
+                    </ul>
+                  </div>
+              </div>
+            <div class="mt-2 border p-2" id="ts-1603433057.461100">
+              
+    <div class="d-flex">
+      <div>
+        <img class="avatar avatar-small" width="32" height="32" src="https://a.slack-edge.com/80588/img/unfurl_icons/github.png" alt="GitHub" />
+      </div>
+      <div class="flex-self-baseline f4 ml-2">
+        <span class="Label Label--outline">
+          <a href="https://github.com/talayhan/dotfiles/blob/master/config/vimrc" target="_blank" rel="noopener noreferrer">talayhan/dotfiles</a>
+        </span>
+      </div>
+    </div>
+    <div class="d-flex pl-2 mb-2">
+      <div class="mt-2">my personal configurations. Contribute to talayhan/dotfiles development by creating an account on GitHub.</div>
+    </div>
+    <div class="d-flex">
+        <div>
+          <img class="avatar avatar-small" width="32" height="32" src="https://abs.twimg.com/icons/apple-touch-icon-192x192.png" alt="twitter.com" />
+        </div>
+        <div class="flex-self-baseline f4 ml-2">
+          <span class="Label Label--outline">
+            <a href="https://twitter.com/talayhans" target="_blank" rel="noopener noreferrer">Talayhan Samet (@talayhans) | Twitter</a>
+          </span>
+        </div>
+    </div>
+      <div class="d-flex">
+        <div class="mt-2">The latest Tweets from Talayhan Samet (@talayhans). Software Engineer 🔥🤙</div>
+      </div>
+
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1603433136.461700">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2018-03-19/331496519296_b6fceab653cf61d7dd8b_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">kuu</span>
+              <a href="#ts-1603433136.461700">23日 15:05:36</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CNX3F8RFC/p1603433136461700" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                :h &#39;gdefault&#39;
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1603433136.461800">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2019-10-31/816062168560_170f8c3ffca39a8b27f7_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">vim-jp-bot</span>
+              <a href="#ts-1603433136.461800">23日 15:05:36</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CNX3F8RFC/p1603433136461800" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                <pre><br>                                   *&#39;gdefault&#39;* *&#39;gd&#39;* *&#39;nogdefault&#39;* *&#39;nogd&#39;*<br>&#39;gdefault&#39; &#39;gd&#39;         切替    (既定ではオフ)<br>                        グローバル<br>        オンのときは、コマンド &#34;:substitute&#34; のフラグ &#39;g&#39; がオンであることが既<br>        定になる。つまり行内のマッチする文字列が、1番目のものだけでなく、全て<br>        置換される。&#34;:substitute&#34; に &#39;g&#39; が指定されると、逆に1番目のみを置換す<br>        るようになる。|complex-change| を参照。<br> <br>                コマンド    &#39;gdefault&#39; がオン   &#39;gdefault&#39; がオフ        <br>                :s///         全て置換            最初だけ置換<br>                :s///g        最初だけ置換        全て置換<br>                :s///gg       全て置換            最初だけ置換<br> <br>        NOTE: このオプションは、&#39;compatible&#39; がオンになるとオフになるので注意。<br>        DEPRECATED: このオプションを設定すると、このオプションを知らないプラグ<br>        インを壊すかもしれない。また、多くのユーザーが標準の /g とは正反対の効<br>        果を持っている /g フラグを付けることについて混乱する。<br></pre>
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1603433146.462100">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2018-03-19/331496519296_b6fceab653cf61d7dd8b_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">kuu</span>
+              <a href="#ts-1603433146.462100">23日 15:05:46</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CNX3F8RFC/p1603433146462100" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                これセットしてるのは勇気あるなあ
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1603433252.463000">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://secure.gravatar.com/avatar/d9d0ceb387e3b6de5c4562af78e8a910.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0004-48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">ujihisa</span>
+              <a href="#ts-1603433252.463000">23日 15:07:32</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CNX3F8RFC/p1603433252463000" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                おお、なるほど
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1603445959.466000">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2019-07-28/696621453314_0edf66561724b8e38e6a_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">monaqa</span>
+              <a href="#ts-1603445959.466000">23日 18:39:19</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CNX3F8RFC/p1603445959466000" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                deprecatedではあるけど、セットしたくなる気持ちはわかります。私もdeprecatedに書いてあるような問題がなかったら、単に便利オプションの一つとして間違いなくセットしてた
+              </div>
+
+              <div>
+                  <div>
+                    <ul class="d-flex list-style-none flex-justify-start pt-2">
+                        <li>
+                          <span class="tooltipped tooltipped-ne tooltipped-align-left-1 p-1" aria-label="kuu">
+                              <img class="slacklog-emoji" alt="me-too" title="me-too" src="/slacklog/emojis/me-too.png"><span class="ml-1">1</span>
+                          </span>
+                        </li>
+                    </ul>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1603446017.466900">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2018-03-19/331496519296_b6fceab653cf61d7dd8b_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">kuu</span>
+              <a href="#ts-1603446017.466900">23日 18:40:17</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CNX3F8RFC/p1603446017466900" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                読書会で見る→<img class='slacklog-emoji' title=':otxu:' alt=':otxu:' src='/slacklog/emojis/otxu.png'>→help出す→😇という流れなら通った
               </div>
 
               <div>
