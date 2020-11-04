@@ -592,6 +592,72 @@
             </div>
           </div>
         </div>
+        <div class="clearfix m-3" id="ts-1604468194.212700">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2018-03-09/327298108645_48b1c10b3cf4092337c5_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">ycino</span>
+              <a href="#ts-1604468194.212700">4日 14:36:34</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CGZTGR6E6/p1604468194212700" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                <code>webpack --watch</code> するとなんか初回に2回ビルドが走ってるように見えるんですけど、設定おかしいか分かる方いらっしゃるでしょうか<br>ちょっと長いですがこんな感じです<br><pre>$ yarn run dev:coc<br>yarn run v1.22.10<br>warning coc-fzf-preview@0.4.25: The engine &#34;coc&#34; appears to be invalid.<br>$ yarn run clean &amp;&amp; TS_NODE_PROJECT=&#34;tsconfig.webpack-jest.json&#34; yarn run webpack --watch --config webpack.coc.ts<br>warning coc-fzf-preview@0.4.25: The engine &#34;coc&#34; appears to be invalid.<br>$ rimraf lib rplugin/node/fzf-preview.vim/index.js<br>warning coc-fzf-preview@0.4.25: The engine &#34;coc&#34; appears to be invalid.<br>$ /Users/yuki_yano/repos/github.com/yuki-ycino/fzf-preview.vim/node_modules/.bin/webpack --watch --config webpack.coc.ts<br>[webpack-cli] Compilation starting...<br>(node:87519) [DEP_WEBPACK_WATCH_WITHOUT_CALLBACK] DeprecationWarning: A &#39;callback&#39; argument need to be provided to the &#39;webpack(options, callback)&#39; function when the &#39;watch&#39; option is set. There is no way to handle the &#39;watch&#39; option without a callback.<br>(Use `node --trace-deprecation ...` to show where the warning was created)<br>[webpack-cli] Compilation finished<br>asset index.js 1.12 MiB [emitted] (name: main)<br>runtime modules 1.37 KiB 6 modules<br>modules by path ./src/ 222 KiB 155 modules<br>modules by path ./node_modules/ 893 KiB<br>  cacheable modules 892 KiB 28 modules<br>  ./node_modules/yargs/ sync 160 bytes [built] [code generated]<br>  ./node_modules/yargs/build/ sync 160 bytes [built] [code generated]<br>  ./node_modules/yargs/node_modules/yargs-parser/build/ sync 160 bytes [built] [code generated]<br>external &#34;coc.nvim&#34; 42 bytes [built] [code generated]<br>external &#34;fs&#34; 42 bytes [built] [code generated]<br>external &#34;path&#34; 42 bytes [built] [code generated]<br>external &#34;util&#34; 42 bytes [built] [code generated]<br>external &#34;child_process&#34; 42 bytes [built] [code generated]<br>external &#34;assert&#34; 42 bytes [built] [code generated]<br>external &#34;crypto&#34; 42 bytes [built] [code generated]<br>external &#34;stream&#34; 42 bytes [built] [code generated]<br>webpack 5.3.2 compiled successfully in 5321 ms<br>[webpack-cli] watching files for updates...<br>[webpack-cli] Compilation starting...<br>[webpack-cli] Compilation finished<br>asset index.js 1.12 MiB [emitted] (name: main)<br>runtime modules 1.37 KiB 6 modules<br>modules by path ./src/ 222 KiB 155 modules<br>modules by path ./node_modules/ 893 KiB<br>  cacheable modules 892 KiB 28 modules<br>  ./node_modules/yargs/ sync 160 bytes [built] [code generated]<br>  ./node_modules/yargs/build/ sync 160 bytes [built] [code generated]<br>  ./node_modules/yargs/node_modules/yargs-parser/build/ sync 160 bytes [built] [code generated]<br>external &#34;coc.nvim&#34; 42 bytes [built] [code generated]<br>external &#34;fs&#34; 42 bytes [built] [code generated]<br>external &#34;path&#34; 42 bytes [built] [code generated]<br>external &#34;util&#34; 42 bytes [built] [code generated]<br>external &#34;child_process&#34; 42 bytes [built] [code generated]<br>external &#34;assert&#34; 42 bytes [built] [code generated]<br>external &#34;crypto&#34; 42 bytes [built] [code generated]<br>external &#34;stream&#34; 42 bytes [built] [code generated]<br>webpack 5.3.2 compiled successfully in 3508 ms<br>[webpack-cli] watching files for updates...</pre>
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1604468229.213000">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2018-03-09/327298108645_48b1c10b3cf4092337c5_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">ycino</span>
+              <a href="#ts-1604468229.213000">4日 14:37:09</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CGZTGR6E6/p1604468229213000" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                npm scriptsはこうなんですが<br><pre>&#34;dev:coc&#34;: &#34;yarn run clean &amp;&amp; TS_NODE_PROJECT=\&#34;tsconfig.webpack-jest.json\&#34; yarn run webpack --watch --config webpack.coc.ts&#34;,<br>&#34;clean&#34;: &#34;rimraf lib rplugin/node/fzf-preview.vim/index.js&#34;,</pre>
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1604468289.213300">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2018-03-09/327298108645_48b1c10b3cf4092337c5_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">ycino</span>
+              <a href="#ts-1604468289.213300">4日 14:38:09</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CGZTGR6E6/p1604468289213300" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                webpack configはこれです<br><a href='https://github.com/yuki-ycino/fzf-preview.vim/blob/master/webpack.coc.ts'>https://github.com/yuki-ycino/fzf-preview.vim/blob/master/webpack.coc.ts</a>
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <!-- footer -->
