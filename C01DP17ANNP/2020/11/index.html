@@ -6916,6 +6916,138 @@
             </div>
           </div>
         </div>
+        <div class="clearfix m-3" id="ts-1605514712.164200">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2018-05-31/373472791093_ed16847a152da533e013_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">Tsuyoshi CHO</span>
+              <a href="#ts-1605514712.164200">16日 17:18:32</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C01DP17ANNP/p1605514712164200" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                <code>質問です</code><br>vimであるオブジェクト的なものがあったとき、メソッドチェイン的に以下ができると嬉しいでしょうか?<br><pre>hoge.fuga().piyo(fugo).zzz()</pre><br>またそれを別関数 <code>Class.piyo(hoge,fugo)</code> 提供するとき、実装はクラス側、オブジェクト側? (そうじゃない方は、実装してる処理をうまく呼ぶことで処理を実現する)<br>どういうのが、「良いVimのオブジェクト的なもの」だと思っているか助言いただきたいです。
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1605514856.164800">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2018-03-19/331496519296_b6fceab653cf61d7dd8b_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">kuu</span>
+              <a href="#ts-1605514856.164800">16日 17:20:56</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C01DP17ANNP/p1605514856164800" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                Vim scriptでOOP的なのをやりたいとは思わないな
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1605514953.166600">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2018-05-31/373472791093_ed16847a152da533e013_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">Tsuyoshi CHO</span>
+              <a href="#ts-1605514953.166600">16日 17:22:33</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C01DP17ANNP/p1605514953166600" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                あんまり頑張るわけじゃないんですが、ある程度生えてたほうが便利な関数付きにしたときに、どういう整理がいいかなと...
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1605515244.171000">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2018-05-31/373472791093_ed16847a152da533e013_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">Tsuyoshi CHO</span>
+              <a href="#ts-1605515244.171000">16日 17:27:24</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C01DP17ANNP/p1605515244171000" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                ある程度ぶっちゃけると、先日、自分のvitalのライブラリにMath.Fraction(有理数/分数)のモジュールつくりまして、これはオブジェクトにメソッドが生えていて、それをクラスの関数は利用する<br><pre>let f = F.new(&#39;3/5&#39;)<br>let result = f.div(5).mul(8)<br>echo F.add(result,F.new(&#39;5/7&#39;))</pre><br>のですが、ここに渡せるデータの1つとして、中でも使ってるBigNumがあるんですが、これはクラス的関数しかないんですよ、で記述が冗長になりやすそうで<br>BigNumに既存の関数をメソッドで生やすPRを考えてはいるものの、「やるのはアリ?」「アリならどっちに処理を寄せるといい?」で気になってまして...
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1605515408.172000">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2018-03-19/331496519296_b6fceab653cf61d7dd8b_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">kuu</span>
+              <a href="#ts-1605515408.172000">16日 17:30:08</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C01DP17ANNP/p1605515408172000" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                速度を気にしない領域であればアリだとは思う
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1605515455.172700">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2018-05-31/373472791093_ed16847a152da533e013_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">Tsuyoshi CHO</span>
+              <a href="#ts-1605515455.172700">16日 17:30:55</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C01DP17ANNP/p1605515455172700" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                <img class='slacklog-emoji' title=':hai-small:' alt=':hai-small:' src='/slacklog/emojis/hai-small.png'>  ありがとうございます。処理はアリとしても、どっちにしたもんかな...
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <!-- footer -->
