@@ -3466,6 +3466,663 @@
             </div>
           </div>
         </div>
+        <div class="clearfix m-3" id="ts-1606582616.211700">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2020-04-14/1081287266064_cb2d6ab85d9530d8a126_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">yutakatay</span>
+              <a href="#ts-1606582616.211700">29日 01:56:56</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CQ88WB7B3/p1606582616211700" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                結局diagnostic-languageserverを使うことにした。開発者がNeovimユーザーのほうがなにかと便利だろうという結論になった。
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1606637744.215900">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://secure.gravatar.com/avatar/5fdfdb07562333a5563abfb18ec29560.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0006-48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">kkiyama117</span>
+              <a href="#ts-1606637744.215900">29日 17:15:44</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CQ88WB7B3/p1606637744215900" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                cocの拡張機能作成時に await client.onReady() が終わらない、という現象に陥ったのですが原因の調べ方ってあるんでしょうか? 素人質問で申し訳ないんですがどなたかわかる方いらっしゃればと思いまして……<br><br>追記しますと<br><a href='https://github.com/fannheyward/coc-rust-analyzer/blob/42109e326f3edf03c7c20819410638441f8c2fba/src/ctx.ts#L38'>https://github.com/fannheyward/coc-rust-analyzer/blob/42109e326f3edf03c7c20819410638441f8c2fba/src/ctx.ts#L38</a> みたいな処理なんですが、この中のonReady の前に入れたloggerは走ってるんですが後ろが走らず、どの条件が間違っているかがわからなくなり伺った次第です<br><pre>async startServer(args: string[] = [&#39;run&#39;]) {<br>    const bin = this.resolveBin();<br>    if (!bin) {<br>      return;<br>    }<br>    const client = createClient(bin, args);<br>    await client.onReady();<br>    this.client = client;<br>}</pre>
+              </div>
+
+              <div>
+              </div>
+            <div class="mt-2 border p-2" id="ts-1606637744.215900">
+              
+    <div class="d-flex">
+      <div>
+        <img class="avatar avatar-small" width="32" height="32" src="https://a.slack-edge.com/80588/img/unfurl_icons/github.png" alt="GitHub" />
+      </div>
+      <div class="flex-self-baseline f4 ml-2">
+        <span class="Label Label--outline">
+          <a href="https://github.com/fannheyward/coc-rust-analyzer/blob/42109e326f3edf03c7c20819410638441f8c2fba/src/ctx.ts#L38" target="_blank" rel="noopener noreferrer">fannheyward/coc-rust-analyzer</a>
+        </span>
+      </div>
+    </div>
+    <div class="d-flex pl-2 mb-2">
+      <div class="mt-2">rust-analyzer extension for coc.nvim. Contribute to fannheyward/coc-rust-analyzer development by creating an account on GitHub.</div>
+    </div>
+
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1606638346.216400">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2020-02-25/956372982963_479264cbe2e1ea3d83ee_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">hrsh7th</span>
+              <a href="#ts-1606638346.216400">29日 17:25:46</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CQ88WB7B3/p1606638346216400" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                実際に終わらない方のコードを見てみないと難しそうです。
+              </div>
+
+              <div>
+              </div>
+              <details class="details-reset mt-3">
+                <summary class="btn-link">
+                  <span class="f5">2 件の返信 最終返信:17:40:10 <span class="dropdown-caret"></span>
+                  </span>
+                </summary>
+                <div class="border mt-2">
+                  <div class="p-2" id="ts-1606638963.217900">
+                    <div class="d-flex flex-wrap">
+                      <div class="f6 ml-3 text-gray-light">#←</div>
+                      <div class="f6 ml-2 text-gray-light">チャンネルにも投稿済</div>
+                    </div>
+                    <div class="float-left mr-2">
+                      <img class="avatar" width="36" height="36" src="https://secure.gravatar.com/avatar/5fdfdb07562333a5563abfb18ec29560.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0006-48.png" />
+                    </div>
+                    <div>
+                      <span class="text-bold mr-1">kkiyama117</span>
+                      <a href="#ts-1606638963.217900">29日 17:36:03</a>
+                    </div>
+                    <div class="overflow-hidden">
+                      お返事ありがとうございます・・・<br><a href='https://github.com/kkiyama117/coc-toml/tree/new-taplo'>https://github.com/kkiyama117/coc-toml/tree/new-taplo</a><br>です
+                    </div>
+                      
+    <div class="d-flex">
+      <div>
+        <img class="avatar avatar-small" width="32" height="32" src="https://a.slack-edge.com/80588/img/unfurl_icons/github.png" alt="GitHub" />
+      </div>
+      <div class="flex-self-baseline f4 ml-2">
+        <span class="Label Label--outline">
+          <a href="https://github.com/kkiyama117/coc-toml/tree/new-taplo" target="_blank" rel="noopener noreferrer">kkiyama117/coc-toml</a>
+        </span>
+      </div>
+    </div>
+    <div class="d-flex pl-2 mb-2">
+      <div class="mt-2">(!Alpha version) Toml extension for coc-nvim using taplo - kkiyama117/coc-toml</div>
+    </div>
+
+                  </div>
+                  <div class="p-2" id="ts-1606639210.219400">
+                    <div class="float-left mr-2">
+                      <img class="avatar" width="36" height="36" src="https://secure.gravatar.com/avatar/5fdfdb07562333a5563abfb18ec29560.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0006-48.png" />
+                    </div>
+                    <div>
+                      <span class="text-bold mr-1">kkiyama117</span>
+                      <a href="#ts-1606639210.219400">29日 17:40:10</a>
+                    </div>
+                    <div class="overflow-hidden">
+                      ただ、申し訳ないですがまだlinux以外の <code>taplo</code> (toml-lsp)のbuildを用意できていないので<br><a href='https://github.com/tamasfe/taplo/tree/feat-lsp'>https://github.com/tamasfe/taplo/tree/feat-lsp</a><br>こいつが必要、とかいう曲者です・・・
+                    </div>
+                      
+    <div class="d-flex">
+      <div>
+        <img class="avatar avatar-small" width="32" height="32" src="https://a.slack-edge.com/80588/img/unfurl_icons/github.png" alt="GitHub" />
+      </div>
+      <div class="flex-self-baseline f4 ml-2">
+        <span class="Label Label--outline">
+          <a href="https://github.com/tamasfe/taplo/tree/feat-lsp" target="_blank" rel="noopener noreferrer">tamasfe/taplo</a>
+        </span>
+      </div>
+    </div>
+    <div class="d-flex pl-2 mb-2">
+      <div class="mt-2">A TOML parser and analyzer library written in Rust - tamasfe/taplo</div>
+    </div>
+
+                  </div>
+                </div>
+              </details>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1606638416.217200">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2020-02-25/956372982963_479264cbe2e1ea3d83ee_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">hrsh7th</span>
+              <a href="#ts-1606638416.217200">29日 17:26:56</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CQ88WB7B3/p1606638416217200" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                やっと coc がやっているマッチング処理とほぼ同等レベルのマッチング処理ができました。。。<br>bora -&gt; border-radius<br>fmodify -&gt; fnamemodify<br>の両方がヒットするやつです。
+              </div>
+
+              <div>
+                  <div>
+                    <ul class="d-flex list-style-none flex-justify-start pt-2">
+                        <li>
+                          <span class="tooltipped tooltipped-ne tooltipped-align-left-1 p-1" aria-label="yutakatay, kkiyama117">
+                              <img class="slacklog-emoji" alt="subara" title="subara" src="/slacklog/emojis/subara.png"><span class="ml-1">2</span>
+                          </span>
+                        </li>
+                    </ul>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1606638963.217900">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://secure.gravatar.com/avatar/5fdfdb07562333a5563abfb18ec29560.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0006-48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">kkiyama117</span>
+              <a href="#ts-1606638963.217900">29日 17:36:03</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CQ88WB7B3/p1606638963217900" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                お返事ありがとうございます・・・<br><a href='https://github.com/kkiyama117/coc-toml/tree/new-taplo'>https://github.com/kkiyama117/coc-toml/tree/new-taplo</a><br>です
+              </div>
+
+              <div>
+              </div>
+            <span class="f6 text-gray-light">
+              このスレッドに返信しました : <a href="#ts-1606638346.216400">実際に終わらない方のコードを見てみないと ...</a>
+            </span>
+            <div class="mt-2 border p-2" id="ts-1606638963.217900">
+              
+    <div class="d-flex">
+      <div>
+        <img class="avatar avatar-small" width="32" height="32" src="https://a.slack-edge.com/80588/img/unfurl_icons/github.png" alt="GitHub" />
+      </div>
+      <div class="flex-self-baseline f4 ml-2">
+        <span class="Label Label--outline">
+          <a href="https://github.com/kkiyama117/coc-toml/tree/new-taplo" target="_blank" rel="noopener noreferrer">kkiyama117/coc-toml</a>
+        </span>
+      </div>
+    </div>
+    <div class="d-flex pl-2 mb-2">
+      <div class="mt-2">(!Alpha version) Toml extension for coc-nvim using taplo - kkiyama117/coc-toml</div>
+    </div>
+
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1606639200.219100">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2020-02-25/956372982963_479264cbe2e1ea3d83ee_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">hrsh7th</span>
+              <a href="#ts-1606639200.219100">29日 17:40:00</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CQ88WB7B3/p1606639200219100" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                @kkiyama117 正直ここまでくると自信はないですが、最新の coc.nvim で治ったやつな気がしました。
+              </div>
+
+              <div>
+                  <div>
+                    <ul class="d-flex list-style-none flex-justify-start pt-2">
+                        <li>
+                          <span class="tooltipped tooltipped-ne tooltipped-align-left-1 p-1" aria-label="kkiyama117">
+                              <span>👀1</span>
+                          </span>
+                        </li>
+                        <li>
+                          <span class="tooltipped tooltipped-ne tooltipped-align-left-1 p-1" aria-label="yutakatay, T H">
+                              <img class="slacklog-emoji" alt="sasu" title="sasu" src="/slacklog/emojis/sasu.png"><span class="ml-1">2</span>
+                          </span>
+                        </li>
+                    </ul>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1606639208.219300">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2020-02-25/956372982963_479264cbe2e1ea3d83ee_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">hrsh7th</span>
+              <a href="#ts-1606639208.219300">29日 17:40:08</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CQ88WB7B3/p1606639208219300" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                <a href='https://github.com/neoclide/coc.nvim/commit/351404e736f9bc6adef193aa238a900778887f6d'>https://github.com/neoclide/coc.nvim/commit/351404e736f9bc6adef193aa238a900778887f6d</a>
+              </div>
+
+              <div>
+              </div>
+            <div class="mt-2 border p-2" id="ts-1606639208.219300">
+              
+    <div class="d-flex">
+      <div>
+        <img class="avatar avatar-small" width="32" height="32" src="https://a.slack-edge.com/80588/img/unfurl_icons/github.png" alt="GitHub" />
+      </div>
+      <div class="flex-self-baseline f4 ml-2">
+        <span class="Label Label--outline">
+          <a href="https://github.com/neoclide/coc.nvim/commit/351404e736f9bc6adef193aa238a900778887f6d" target="_blank" rel="noopener noreferrer">fix(channels): support whitespace in channel name · neoclide/coc.nvim@351404e</a>
+        </span>
+      </div>
+    </div>
+    <div class="d-flex pl-2 mb-2">
+      <div class="mt-2">Intellisense engine for Vim8 &amp; Neovim, full language server protocol support as VSCode - neoclide/coc.nvim</div>
+    </div>
+
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1606639222.220000">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2020-02-25/956372982963_479264cbe2e1ea3d83ee_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">hrsh7th</span>
+              <a href="#ts-1606639222.220000">29日 17:40:22</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CQ88WB7B3/p1606639222220000" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                <a href='https://github.com/kkiyama117/coc-toml/blob/new-taplo/src/client.ts#L55'>https://github.com/kkiyama117/coc-toml/blob/new-taplo/src/client.ts#L55</a>
+              </div>
+
+              <div>
+              </div>
+            <div class="mt-2 border p-2" id="ts-1606639222.220000">
+              
+    <div class="d-flex">
+      <div>
+        <img class="avatar avatar-small" width="32" height="32" src="https://a.slack-edge.com/80588/img/unfurl_icons/github.png" alt="GitHub" />
+      </div>
+      <div class="flex-self-baseline f4 ml-2">
+        <span class="Label Label--outline">
+          <a href="https://github.com/kkiyama117/coc-toml/blob/new-taplo/src/client.ts#L55" target="_blank" rel="noopener noreferrer">kkiyama117/coc-toml</a>
+        </span>
+      </div>
+    </div>
+    <div class="d-flex pl-2 mb-2">
+      <div class="mt-2">(!Alpha version) Toml extension for coc-nvim using taplo - kkiyama117/coc-toml</div>
+    </div>
+
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1606639239.220700">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2020-02-25/956372982963_479264cbe2e1ea3d83ee_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">hrsh7th</span>
+              <a href="#ts-1606639239.220700">29日 17:40:39</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CQ88WB7B3/p1606639239220700" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                _このコミットメッセージの <code>channel name</code> とかいうのが <code>outputChannel</code> も含んでいるならそのものずばりっぽいなと_
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1606639316.221400">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://secure.gravatar.com/avatar/5fdfdb07562333a5563abfb18ec29560.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0006-48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">kkiyama117</span>
+              <a href="#ts-1606639316.221400">29日 17:41:56</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CQ88WB7B3/p1606639316221400" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                ありがとうございます、ちょっと更新して再度試してみます！
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1606639333.221800">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2020-02-25/956372982963_479264cbe2e1ea3d83ee_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">hrsh7th</span>
+              <a href="#ts-1606639333.221800">29日 17:42:13</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CQ88WB7B3/p1606639333221800" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                もしくは、チャンネル名をアンダースコアで区切るなどもお手軽かもしれません。
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1606640571.224500">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://secure.gravatar.com/avatar/5fdfdb07562333a5563abfb18ec29560.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0006-48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">kkiyama117</span>
+              <a href="#ts-1606640571.224500">29日 18:02:51</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CQ88WB7B3/p1606640571224500" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                だめでした・・・ 一応もう少し試してみます
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1606640985.225800">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2020-02-25/956372982963_479264cbe2e1ea3d83ee_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">hrsh7th</span>
+              <a href="#ts-1606640985.225800">29日 18:09:45</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CQ88WB7B3/p1606640985225800" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                (T_T)<br>別原因なのかもしれないですね…。coc を更新しても駄目だったということですよね？(master ブランチ側でしょうか？)
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1606641505.226000">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://secure.gravatar.com/avatar/5fdfdb07562333a5563abfb18ec29560.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0006-48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">kkiyama117</span>
+              <a href="#ts-1606641505.226000">29日 18:18:25</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CQ88WB7B3/p1606641505226000" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                cocのreleaseブランチを引っ張っていてそれをmasterにするよりも早かったので、結果的にアンダースコアの方で試しました(ズルしてすみません)
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1606642137.227500">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2020-02-25/956372982963_479264cbe2e1ea3d83ee_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">hrsh7th</span>
+              <a href="#ts-1606642137.227500">29日 18:28:57</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CQ88WB7B3/p1606642137227500" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                りかいです。ちょっとあとでもう一度目グレップしてみます
+              </div>
+
+              <div>
+                  <div>
+                    <ul class="d-flex list-style-none flex-justify-start pt-2">
+                        <li>
+                          <span class="tooltipped tooltipped-ne tooltipped-align-left-1 p-1" aria-label="kkiyama117">
+                              <span>❤️1</span>
+                          </span>
+                        </li>
+                    </ul>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1606646045.228000">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2020-02-25/956372982963_479264cbe2e1ea3d83ee_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">hrsh7th</span>
+              <a href="#ts-1606646045.228000">29日 19:34:05</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CQ88WB7B3/p1606646045228000" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                かなり目を凝らして見ましたが、おかしそうなところは見当たりませんでした。。。
+              </div>
+
+              <div>
+                  <div>
+                    <ul class="d-flex list-style-none flex-justify-start pt-2">
+                        <li>
+                          <span class="tooltipped tooltipped-ne tooltipped-align-left-1 p-1" aria-label="kkiyama117">
+                              <span>❤️1</span>
+                          </span>
+                        </li>
+                    </ul>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1606646175.228500">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2020-02-25/956372982963_479264cbe2e1ea3d83ee_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">hrsh7th</span>
+              <a href="#ts-1606646175.228500">29日 19:36:15</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CQ88WB7B3/p1606646175228500" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                taplo の VSCode の拡張は node-ipc でつなげてるみたいですね。<br><a href='https://github.com/tamasfe/taplo/blob/master/js/vscode/src/extension.ts'>https://github.com/tamasfe/taplo/blob/master/js/vscode/src/extension.ts</a>
+              </div>
+
+              <div>
+              </div>
+            <div class="mt-2 border p-2" id="ts-1606646175.228500">
+              
+    <div class="d-flex">
+      <div>
+        <img class="avatar avatar-small" width="32" height="32" src="https://a.slack-edge.com/80588/img/unfurl_icons/github.png" alt="GitHub" />
+      </div>
+      <div class="flex-self-baseline f4 ml-2">
+        <span class="Label Label--outline">
+          <a href="https://github.com/tamasfe/taplo/blob/master/js/vscode/src/extension.ts" target="_blank" rel="noopener noreferrer">tamasfe/taplo</a>
+        </span>
+      </div>
+    </div>
+    <div class="d-flex pl-2 mb-2">
+      <div class="mt-2">A TOML parser and analyzer library written in Rust - tamasfe/taplo</div>
+    </div>
+
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1606646240.229100">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2020-02-25/956372982963_479264cbe2e1ea3d83ee_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">hrsh7th</span>
+              <a href="#ts-1606646240.229100">29日 19:37:20</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CQ88WB7B3/p1606646240229100" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                でも冷静に考えるとどうやって。。。？って感じですね。（rust 製のはずなのに。。。）
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1606648329.233200">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://secure.gravatar.com/avatar/5fdfdb07562333a5563abfb18ec29560.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0006-48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">kkiyama117</span>
+              <a href="#ts-1606648329.233200">29日 20:12:09</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CQ88WB7B3/p1606648329233200" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                本家の方はwasmでコンパイルしたものを挟んでいるんです<br>それではじめ(というか今のcoc-tomlのmaster)は同じやり方をしようと思っていたんですが、<br>tamasfeさんが「vimとかに使うならstdioな方がいいよね」って事で<br>「どうしたらいいんすかね?このままだとwasm専用っすよね、直したいけど自分がRustクソ初心者でわからないっす」<br>とissueで会話をしていたら最終的にstandaloneなやつを作ってくれた、という感じです
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1606648447.235000">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://secure.gravatar.com/avatar/5fdfdb07562333a5563abfb18ec29560.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0006-48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">kkiyama117</span>
+              <a href="#ts-1606648447.235000">29日 20:14:07</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CQ88WB7B3/p1606648447235000" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                個人的にやりたかったのが 「deinのtomlのformatやvalidation」で、cocの後はvim-lspとかでも実装して頒布したい、というモチベだったので
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1606648650.238300">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://secure.gravatar.com/avatar/5fdfdb07562333a5563abfb18ec29560.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0006-48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">kkiyama117</span>
+              <a href="#ts-1606648650.238300">29日 20:17:30</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CQ88WB7B3/p1606648650238300" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                後はwasmだとjsのpackageにして配布しないといけないのでどっちみちバイナリを配布するのと工数ややることが同じ、というのもあります
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <!-- footer -->

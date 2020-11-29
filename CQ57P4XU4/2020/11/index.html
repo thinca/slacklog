@@ -9403,6 +9403,196 @@
             </div>
           </div>
         </div>
+        <div class="clearfix m-3" id="ts-1606621897.094200">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2018-07-31/407982080133_30e238cd92e6c88883f9_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">mattn</span>
+              <a href="#ts-1606621897.094200">29日 12:51:37</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CQ57P4XU4/p1606621897094200" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                この方、config.yaml なしがゴールなんですよね。
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1606622575.095000">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2018-05-31/373472791093_ed16847a152da533e013_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">Tsuyoshi CHO</span>
+              <a href="#ts-1606622575.095000">29日 13:02:55</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CQ57P4XU4/p1606622575095000" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                まあ、そうなると vim-efm-langserver-settings も柔軟性が上るけど、よほどでなれば設定ファイルバンドルですんでるしな...
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1606651785.096900">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2015-01-15/3417067010_04a676b32692fb2507e1_48.jpg" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">thinca</span>
+              <a href="#ts-1606651785.096900">29日 21:09:45</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CQ57P4XU4/p1606651785096900" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                vim-lsp が補完とかの時に出すドキュメントのポップアップウィンドウで、 <code>**foo**</code> みたいな装飾文字の背景色がポップアップの背景色ではなくて通常バッファの背景色になってしまうのって、直すの難しいのですっけ
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1606657401.097500">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2018-07-31/407982080133_30e238cd92e6c88883f9_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">mattn</span>
+              <a href="#ts-1606657401.097500">29日 22:43:21</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CQ57P4XU4/p1606657401097500" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                ソース見る限り <code>vimLspMarkdownEscape</code> みたいなのが作られてる。
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1606657428.098100">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2018-07-31/407982080133_30e238cd92e6c88883f9_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">mattn</span>
+              <a href="#ts-1606657428.098100">29日 22:43:48</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CQ57P4XU4/p1606657428098100" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                efm-langserver の件、vim-lsp だとこれで行けた。<br><pre>{<br>	&#34;efm-langserver&#34;: {<br>        &#34;workspace_config&#34;: {<br>            &#34;languages&#34;: {<br>                &#34;javascript&#34;: [<br>                    {<br>                        &#34;lintCommand&#34;: &#34;eslint -f unix --stdin&#34;,<br>                        &#34;lintIgnoreExitCode&#34;: true,<br>                        &#34;lintStdin&#34;: true<br>                    }<br>                ]<br>            }<br>        }<br>    }<br>}</pre>
+              </div>
+
+              <div>
+                  <div>
+                    <ul class="d-flex list-style-none flex-justify-start pt-2">
+                        <li>
+                          <span class="tooltipped tooltipped-ne tooltipped-align-left-1 p-1" aria-label="Tsuyoshi CHO">
+                              <span>👀1</span>
+                          </span>
+                        </li>
+                        <li>
+                          <span class="tooltipped tooltipped-ne tooltipped-align-left-1 p-1" aria-label="Tsuyoshi CHO">
+                              <img class="slacklog-emoji" alt="hee" title="hee" src="/slacklog/emojis/hee.png"><span class="ml-1">1</span>
+                          </span>
+                        </li>
+                    </ul>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1606658176.098700">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2018-07-31/407982080133_30e238cd92e6c88883f9_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">mattn</span>
+              <a href="#ts-1606658176.098700">29日 22:56:16</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CQ57P4XU4/p1606658176098700" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                やりたい人は脱 config.yaml やっても面白いかもね。
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1606658211.099300">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2018-07-31/407982080133_30e238cd92e6c88883f9_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">mattn</span>
+              <a href="#ts-1606658211.099300">29日 22:56:51</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CQ57P4XU4/p1606658211099300" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                まぁあれか、config.yaml にデフォルト設定しといて <code>:LspSettingsEditLocal</code> でプロジェクト専用の
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1606658222.099800">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2018-07-31/407982080133_30e238cd92e6c88883f9_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">mattn</span>
+              <a href="#ts-1606658222.099800">29日 22:57:02</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CQ57P4XU4/p1606658222099800" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                カスタマイズが出来るって点では良いのか。
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <!-- footer -->
