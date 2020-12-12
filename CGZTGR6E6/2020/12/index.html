@@ -1990,6 +1990,406 @@
             </div>
           </div>
         </div>
+        <div class="clearfix m-3" id="ts-1607707356.494600">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2015-01-15/3417067010_04a676b32692fb2507e1_48.jpg" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">thinca</span>
+              <a href="#ts-1607707356.494600">12日 02:22:36</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CGZTGR6E6/p1607707356494600" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                Promise でタイムアウト処理をする場合、Promise.race() を使うと思うんですが、正規処理が成功した場合、正規処理が失敗した場合、タイムアウトした場合とあり、タイムアウトした時だけ走る処理があるんですが、この処理はタイムアウト以外の時には走らせたくないって場合、別途フラグを用意するしかないですかね…? 今はフラグ用意して正規処理が終わった場合はフラグ立ててタイムアウト時にフラグが立ってたら何もしないってやってるんですが、どうも泥臭くて、他に方法ないのかなぁって考えてます。
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1607774043.495200">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://secure.gravatar.com/avatar/09aab32950ce6edc99beced8dae978d9.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0018-48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">Milly</span>
+              <a href="#ts-1607774043.495200">12日 20:54:03</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CGZTGR6E6/p1607774043495200" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                タイムアウトをキャンセルできるようにするくらいしか
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1607774291.497400">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2018-05-31/373472791093_ed16847a152da533e013_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">Tsuyoshi CHO</span>
+              <a href="#ts-1607774291.497400">12日 20:58:11</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CGZTGR6E6/p1607774291497400" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                タイムアウト処理が正常処理のPromiseも抱えるようにしておいて、タイムアウト処理内で完了してるかチェックするように作れたりしませんかね? 邪道かな...?<br>raceでチェックするPromiseは正常処理とタイムアウト処理でもちろん正常処理から結果がくれば普通に、タイムアウトが発動したら上のチェックして後結果を返すと思うのでそれでどうかなと
+              </div>
+
+              <div>
+                  <div>
+                    <ul class="d-flex list-style-none flex-justify-start pt-2">
+                        <li>
+                          <span class="tooltipped tooltipped-ne tooltipped-align-left-1 p-1" aria-label="hrsh7th">
+                              <img class="slacklog-emoji" alt="me-too" title="me-too" src="/slacklog/emojis/me-too.png"><span class="ml-1">1</span>
+                          </span>
+                        </li>
+                    </ul>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1607774360.498000">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://secure.gravatar.com/avatar/09aab32950ce6edc99beced8dae978d9.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0018-48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">Milly</span>
+              <a href="#ts-1607774360.498000">12日 20:59:20</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CGZTGR6E6/p1607774360498000" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                メインの処理を race の then で処理すれば timeout かどうか判定できますね
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1607774420.498300">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2018-05-31/373472791093_ed16847a152da533e013_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">Tsuyoshi CHO</span>
+              <a href="#ts-1607774420.498300">12日 21:00:20</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CGZTGR6E6/p1607774420498300" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                そうですね、処理を分解してそういう風にするのがいいか
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1607774935.498600">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2015-01-15/3417067010_04a676b32692fb2507e1_48.jpg" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">thinca</span>
+              <a href="#ts-1607774935.498600">12日 21:08:55</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CGZTGR6E6/p1607774935498600" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                どういうことかよくわからない…
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1607775028.000900">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2018-05-31/373472791093_ed16847a152da533e013_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">Tsuyoshi CHO</span>
+              <a href="#ts-1607775028.000900">12日 21:10:28</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CGZTGR6E6/p1607775028000900" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                サンプル書ける人プリーズ(自分ももやっとこんなかなを言っただけなので)
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1607775167.001400">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2015-01-15/3417067010_04a676b32692fb2507e1_48.jpg" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">thinca</span>
+              <a href="#ts-1607775167.001400">12日 21:12:47</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CGZTGR6E6/p1607775167001400" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                &gt; タイムアウト処理が正常処理のPromiseも抱えるようにしておいて、タイムアウト処理内で完了してるかチェックするように作れたりしませんかね? 邪道かな...?<br>これってつまり私が言ったフラグ立てておくって話ですよね…? なにか違う?
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1607777328.002600">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2015-01-15/3417067010_04a676b32692fb2507e1_48.jpg" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">thinca</span>
+              <a href="#ts-1607777328.002600">12日 21:48:48</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CGZTGR6E6/p1607777328002600" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                うーん、あとは例外の種類を変えるようにしてタイムアウト時の処理はタイムアウト例外を catch した時に実行する、とかかなぁ<br>JS の例外、型指定して catch できないのでめんどいんだよな。あんまり使いたくない
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1607777398.003700">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2018-05-31/373472791093_ed16847a152da533e013_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">Tsuyoshi CHO</span>
+              <a href="#ts-1607777398.003700">12日 21:49:58</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CGZTGR6E6/p1607777398003700" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                フラグといえばフラグですが、フラグという変数とか外部のなにかじゃなくて、Promiseそのものでのつもりでした。<br>大差はないか...
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1607777522.004300">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2015-01-15/3417067010_04a676b32692fb2507e1_48.jpg" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">thinca</span>
+              <a href="#ts-1607777522.004300">12日 21:52:02</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CGZTGR6E6/p1607777522004300" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                Promise 自体からその Promise の状態を取る API はないと思うんですが、どうやるんでしょう?
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1607777740.004800">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2018-05-31/373472791093_ed16847a152da533e013_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">Tsuyoshi CHO</span>
+              <a href="#ts-1607777740.004800">12日 21:55:40</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CGZTGR6E6/p1607777740004800" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                あー、すみません他と思い違いしてAPIあった気でいたかも...じゃあ無理ですねえ
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1607777950.005300">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2018-05-31/373472791093_ed16847a152da533e013_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">Tsuyoshi CHO</span>
+              <a href="#ts-1607777950.005300">12日 21:59:10</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CGZTGR6E6/p1607777950005300" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                <a href='https://qiita.com/KuwaK/items/0193cddf9d96fdc53728'>https://qiita.com/KuwaK/items/0193cddf9d96fdc53728</a><br>こんなんあるし、なんかしらフラグやらを差し込むとかしないとだめなんでしょうね...
+              </div>
+
+              <div>
+              </div>
+            <div class="mt-2 border p-2" id="ts-1607777950.005300">
+              
+    <div class="d-flex">
+        <div>
+          <img class="avatar avatar-small" width="32" height="32" src="https://cdn.qiita.com/assets/favicons/public/apple-touch-icon-ec5ba42a24ae923f16825592efdc356f.png" alt="Qiita" />
+        </div>
+        <div class="flex-self-baseline f4 ml-2">
+          <span class="Label Label--outline">
+            <a href="https://qiita.com/KuwaK/items/0193cddf9d96fdc53728" target="_blank" rel="noopener noreferrer">キャンセル可能でPromiseなsetTimeout()を作る - Qiita</a>
+          </span>
+        </div>
+    </div>
+      <div class="d-flex">
+        <div class="mt-2">async/awaitを使ってきちんと非同期処理の実行順序を制御するためには、async関数内で使用するsetTimeout()のようなコールバック関数をPromise化する必要があります。 で、普通にPromise化する分にはいい...</div>
+      </div>
+
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1607778732.006800">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://secure.gravatar.com/avatar/09aab32950ce6edc99beced8dae978d9.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0018-48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">Milly</span>
+              <a href="#ts-1607778732.006800">12日 22:12:12</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CGZTGR6E6/p1607778732006800" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                timeout の Promise の resolve (か reject) から <code>&#39;timeout&#39;</code> とかを引数で投げればいいのでは、という意味
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1607779201.007600">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2018-05-31/373472791093_ed16847a152da533e013_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">Tsuyoshi CHO</span>
+              <a href="#ts-1607779201.007600">12日 22:20:01</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CGZTGR6E6/p1607779201007600" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                いやそれだと正規処理が実行されたときにタイムアウト処理をキャンセルする要件とは関係がないような...
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1607780499.008000">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2015-01-15/3417067010_04a676b32692fb2507e1_48.jpg" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">thinca</span>
+              <a href="#ts-1607780499.008000">12日 22:41:39</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CGZTGR6E6/p1607780499008000" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                なるほど &gt;思い違い<br><br>やっぱ面倒ですねぇ
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1607780701.010100">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2015-01-15/3417067010_04a676b32692fb2507e1_48.jpg" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">thinca</span>
+              <a href="#ts-1607780701.010100">12日 22:45:01</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CGZTGR6E6/p1607780701010100" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                @ Milly 現状、タイムアウト時の処理は Promise を解決する前、setTimeout に渡した関数で直接やってるんですよね。大元の Promise の処理は外部がやってて、そちらではタイムアウト時の処理について意識したくなかったので
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <!-- footer -->
