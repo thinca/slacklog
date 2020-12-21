@@ -4556,6 +4556,2797 @@
             </div>
           </div>
         </div>
+        <div class="clearfix m-3" id="ts-1608355863.117700">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2020-11-26/1524329807430_630fb5c095dfae55277c_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">herophan</span>
+              <a href="#ts-1608355863.117700">19日 14:31:03</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C01A6GCLF3N/p1608355863117700" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                malloc &amp; freeはなんとかできたけど、linkerは100%完成できなかったｗ
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1608355869.118000">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2020-11-26/1524329807430_630fb5c095dfae55277c_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">herophan</span>
+              <a href="#ts-1608355869.118000">19日 14:31:09</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C01A6GCLF3N/p1608355869118000" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                難しすぎた
+              </div>
+
+              <div>
+                  <div>
+                    <ul class="d-flex list-style-none flex-justify-start pt-2">
+                        <li>
+                          <span class="tooltipped tooltipped-ne tooltipped-align-left-1 p-1" aria-label="YABUKI Yukiharu">
+                              <img class="slacklog-emoji" alt="naruhodo" title="naruhodo" src="/slacklog/emojis/naruhodo.png"><span class="ml-1">1</span>
+                          </span>
+                        </li>
+                    </ul>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1608356238.119500">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2020-11-26/1524329807430_630fb5c095dfae55277c_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">herophan</span>
+              <a href="#ts-1608356238.119500">19日 14:37:18</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C01A6GCLF3N/p1608356238119500" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                ちなみに@mattn さんのmallocはどのアルゴリズム使ってたんですか。アルゴリズムいくつかありますね
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1608356242.119700">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2020-11-26/1524329807430_630fb5c095dfae55277c_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">herophan</span>
+              <a href="#ts-1608356242.119700">19日 14:37:22</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C01A6GCLF3N/p1608356242119700" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                <a href='https://en.wikipedia.org/wiki/Free_list#:<del>:text=A%20free%20list%20is%20a,a%20pointer%20to%20the%20next'>https://en.wikipedia.org/wiki/Free_list#:</del>:text=A%20free%20list%20is%20a,a%20pointer%20to%20the%20next</a>.
+              </div>
+
+              <div>
+              </div>
+            <div class="mt-2 border p-2" id="ts-1608356242.119700">
+              
+    <div class="d-flex">
+        <div class="flex-self-baseline f4 ml-2">
+          <span class="Label Label--outline">
+            <a href="https://en.wikipedia.org/wiki/Free_list#:~:text=A%20free%20list%20is%20a,a%20pointer%20to%20the%20next" target="_blank" rel="noopener noreferrer">Free list</a>
+          </span>
+        </div>
+    </div>
+      <div class="d-flex">
+        <div class="mt-2">A free list is a data structure used in a scheme for dynamic memory allocation. It operates by connecting unallocated regions of memory together in a linked list, using the first word of each unallocated region as a pointer to the next. It is most suitable for allocating from a memory pool, where all objects have the same size.<br>Free lists make the allocation and deallocation operations very simple. To free a region, one would just link it to the free list. To allocate a region, one would simply remove a single region from the end of the free list and use it. If the regions are variable-sized, one may have to search for a region of large enough size, which can be expensive.<br>Free lists have the disadvantage, inherited from linked lists, of poor locality of reference and so poor data cache utilization, and they do not automatically consolidate adjacent regions to fulfill allocation requests for large regions, unlike the buddy allocation system. Nevertheless, they&#39;re still useful in a variety of simple applications where a full-blown memory allocator is unnecessary or requires too much overhead.<br>The OCaml runtime uses free lists to satisfy allocation requests.</div>
+      </div>
+
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1608356245.120000">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2020-11-26/1524329807430_630fb5c095dfae55277c_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">herophan</span>
+              <a href="#ts-1608356245.120000">19日 14:37:25</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C01A6GCLF3N/p1608356245120000" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                <a href='https://en.wikipedia.org/wiki/Buddy_memory_allocation'>https://en.wikipedia.org/wiki/Buddy_memory_allocation</a>
+              </div>
+
+              <div>
+              </div>
+            <div class="mt-2 border p-2" id="ts-1608356245.120000">
+              
+    <div class="d-flex">
+        <div class="flex-self-baseline f4 ml-2">
+          <span class="Label Label--outline">
+            <a href="https://en.wikipedia.org/wiki/Buddy_memory_allocation" target="_blank" rel="noopener noreferrer">Buddy memory allocation</a>
+          </span>
+        </div>
+    </div>
+      <div class="d-flex">
+        <div class="mt-2">The buddy memory allocation technique is a memory allocation algorithm that divides memory into partitions to try to satisfy a memory request as suitably as possible. This system makes use of splitting memory into halves to try to give a best fit.  According to Donald Knuth, the buddy system was invented in 1963 by Harry Markowitz, and was first described by Kenneth C. Knowlton (published 1965). The Buddy memory allocation is relatively easy to implement. It supports limited but efficient splitting and coalescing of memory blocks.</div>
+      </div>
+
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1608356258.120400">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2020-11-26/1524329807430_630fb5c095dfae55277c_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">herophan</span>
+              <a href="#ts-1608356258.120400">19日 14:37:38</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C01A6GCLF3N/p1608356258120400" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                日本語版記事なかったｗ
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1608356915.120900">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2018-03-19/331496519296_b6fceab653cf61d7dd8b_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">kuu</span>
+              <a href="#ts-1608356915.120900">19日 14:48:35</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C01A6GCLF3N/p1608356915120900" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                linker、作るのに必要な情報がインターネット上に少なすぎる<br>みんな使ってるはずなのに
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1608356949.121200">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2020-11-26/1524329807430_630fb5c095dfae55277c_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">herophan</span>
+              <a href="#ts-1608356949.121200">19日 14:49:09</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C01A6GCLF3N/p1608356949121200" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                いろんなフォーマットありますね…
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1608356961.121600">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2020-11-26/1524329807430_630fb5c095dfae55277c_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">herophan</span>
+              <a href="#ts-1608356961.121600">19日 14:49:21</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C01A6GCLF3N/p1608356961121600" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                教科書に載っていたのはインターネット上なかったｗ＜フォーマット
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1608356985.122000">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://secure.gravatar.com/avatar/31d1a776c4f467d26bded3719cba2652.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0013-48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">Hajime Hoshi</span>
+              <a href="#ts-1608356985.122000">19日 14:49:45</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C01A6GCLF3N/p1608356985122000" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                linker は何度も作り直している方がいらっしゃるな
+              </div>
+
+              <div>
+                  <div>
+                    <ul class="d-flex list-style-none flex-justify-start pt-2">
+                        <li>
+                          <span class="tooltipped tooltipped-ne tooltipped-align-left-1 p-1" aria-label="herophan">
+                              <img class="slacklog-emoji" alt="hee" title="hee" src="/slacklog/emojis/hee.png"><span class="ml-1">1</span>
+                          </span>
+                        </li>
+                    </ul>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1608357052.123100">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2020-11-26/1524329807430_630fb5c095dfae55277c_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">herophan</span>
+              <a href="#ts-1608357052.123100">19日 14:50:52</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C01A6GCLF3N/p1608357052123100" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                mallocよりlinkerの方が実用性あったんですかｗｗ
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1608357074.123600">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://secure.gravatar.com/avatar/31d1a776c4f467d26bded3719cba2652.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0013-48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">Hajime Hoshi</span>
+              <a href="#ts-1608357074.123600">19日 14:51:14</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C01A6GCLF3N/p1608357074123600" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                どうなんでしょうね。
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1608357085.124000">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://secure.gravatar.com/avatar/31d1a776c4f467d26bded3719cba2652.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0013-48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">Hajime Hoshi</span>
+              <a href="#ts-1608357085.124000">19日 14:51:25</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C01A6GCLF3N/p1608357085124000" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                改善の余地が大きいのかもしれない
+              </div>
+
+              <div>
+                  <div>
+                    <ul class="d-flex list-style-none flex-justify-start pt-2">
+                        <li>
+                          <span class="tooltipped tooltipped-ne tooltipped-align-left-1 p-1" aria-label="herophan">
+                              <img class="slacklog-emoji" alt="naruhodo" title="naruhodo" src="/slacklog/emojis/naruhodo.png"><span class="ml-1">1</span>
+                          </span>
+                        </li>
+                    </ul>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1608357104.124400">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2020-11-26/1524329807430_630fb5c095dfae55277c_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">herophan</span>
+              <a href="#ts-1608357104.124400">19日 14:51:44</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C01A6GCLF3N/p1608357104124400" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                まぁ、セオリーくらい理解していると思うので、後で時間ができたら作れなくもない（？）
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1608357133.125000">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2020-11-26/1524329807430_630fb5c095dfae55277c_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">herophan</span>
+              <a href="#ts-1608357133.125000">19日 14:52:13</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C01A6GCLF3N/p1608357133125000" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                プログラミング言語実装にはどっちも大事ですね
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1608357143.125300">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2020-11-26/1524329807430_630fb5c095dfae55277c_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">herophan</span>
+              <a href="#ts-1608357143.125300">19日 14:52:23</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C01A6GCLF3N/p1608357143125300" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                GCの場合もありえますが
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1608357153.125600">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2020-11-26/1524329807430_630fb5c095dfae55277c_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">herophan</span>
+              <a href="#ts-1608357153.125600">19日 14:52:33</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C01A6GCLF3N/p1608357153125600" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                確かにlinkerは欠かせない存在
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1608357186.126200">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2018-03-19/331496519296_b6fceab653cf61d7dd8b_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">kuu</span>
+              <a href="#ts-1608357186.126200">19日 14:53:06</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C01A6GCLF3N/p1608357186126200" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                lld作ってた方が言ってたけどcompilerより先にあったらしいですからね、linker
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1608357227.126600">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2020-11-26/1524329807430_630fb5c095dfae55277c_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">herophan</span>
+              <a href="#ts-1608357227.126600">19日 14:53:47</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C01A6GCLF3N/p1608357227126600" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                lld?
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1608357237.126900">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://secure.gravatar.com/avatar/31d1a776c4f467d26bded3719cba2652.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0013-48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">Hajime Hoshi</span>
+              <a href="#ts-1608357237.126900">19日 14:53:57</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C01A6GCLF3N/p1608357237126900" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                linker の一種
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1608357243.127200">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2018-03-19/331496519296_b6fceab653cf61d7dd8b_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">kuu</span>
+              <a href="#ts-1608357243.127200">19日 14:54:03</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C01A6GCLF3N/p1608357243127200" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                <a href='https://lld.llvm.org/'>https://lld.llvm.org/</a>
+              </div>
+
+              <div>
+                  <div>
+                    <ul class="d-flex list-style-none flex-justify-start pt-2">
+                        <li>
+                          <span class="tooltipped tooltipped-ne tooltipped-align-left-1 p-1" aria-label="herophan">
+                              <img class="slacklog-emoji" alt="naruhodo" title="naruhodo" src="/slacklog/emojis/naruhodo.png"><span class="ml-1">1</span>
+                          </span>
+                        </li>
+                    </ul>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1608357244.127400">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://secure.gravatar.com/avatar/31d1a776c4f467d26bded3719cba2652.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0013-48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">Hajime Hoshi</span>
+              <a href="#ts-1608357244.127400">19日 14:54:04</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C01A6GCLF3N/p1608357244127400" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                LLVM の今デファクトスタンダード?
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1608357290.128000">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2020-11-26/1524329807430_630fb5c095dfae55277c_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">herophan</span>
+              <a href="#ts-1608357290.128000">19日 14:54:50</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C01A6GCLF3N/p1608357290128000" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                gccやg++が使うリンカーですか
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1608357309.128400">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2020-11-26/1524329807430_630fb5c095dfae55277c_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">herophan</span>
+              <a href="#ts-1608357309.128400">19日 14:55:09</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C01A6GCLF3N/p1608357309128400" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                clangはあんまり詳しくない
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1608357351.128700">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://secure.gravatar.com/avatar/31d1a776c4f467d26bded3719cba2652.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0013-48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">Hajime Hoshi</span>
+              <a href="#ts-1608357351.128700">19日 14:55:51</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C01A6GCLF3N/p1608357351128700" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                gcc/g++ ではないです
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1608357358.129100">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://secure.gravatar.com/avatar/31d1a776c4f467d26bded3719cba2652.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0013-48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">Hajime Hoshi</span>
+              <a href="#ts-1608357358.129100">19日 14:55:58</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C01A6GCLF3N/p1608357358129100" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                clang のほう
+              </div>
+
+              <div>
+                  <div>
+                    <ul class="d-flex list-style-none flex-justify-start pt-2">
+                        <li>
+                          <span class="tooltipped tooltipped-ne tooltipped-align-left-1 p-1" aria-label="herophan">
+                              <img class="slacklog-emoji" alt="naruhodo" title="naruhodo" src="/slacklog/emojis/naruhodo.png"><span class="ml-1">1</span>
+                          </span>
+                        </li>
+                    </ul>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1608357387.129800">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2020-11-26/1524329807430_630fb5c095dfae55277c_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">herophan</span>
+              <a href="#ts-1608357387.129800">19日 14:56:27</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C01A6GCLF3N/p1608357387129800" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                じゃ、gcc/g++は？
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1608357392.130000">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://secure.gravatar.com/avatar/31d1a776c4f467d26bded3719cba2652.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0013-48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">Hajime Hoshi</span>
+              <a href="#ts-1608357392.130000">19日 14:56:32</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C01A6GCLF3N/p1608357392130000" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                I don&#39;t know...
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1608357397.130200">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2020-11-26/1524329807430_630fb5c095dfae55277c_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">herophan</span>
+              <a href="#ts-1608357397.130200">19日 14:56:37</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C01A6GCLF3N/p1608357397130200" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                調べよう
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1608357402.130400">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2020-11-26/1524329807430_630fb5c095dfae55277c_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">herophan</span>
+              <a href="#ts-1608357402.130400">19日 14:56:42</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C01A6GCLF3N/p1608357402130400" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                うんん。。。。
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1608357420.131000">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2020-11-26/1524329807430_630fb5c095dfae55277c_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">herophan</span>
+              <a href="#ts-1608357420.131000">19日 14:57:00</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C01A6GCLF3N/p1608357420131000" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                大学じゃgcc/g++だけですからね
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1608357423.131100">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2020-05-13/1105762495703_ba20bc886c8f30c85e78_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">YABUKI Yukiharu</span>
+              <a href="#ts-1608357423.131100">19日 14:57:03</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C01A6GCLF3N/p1608357423131100" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                gnu はgoldだっけ。
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1608357429.131400">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2020-05-13/1105762495703_ba20bc886c8f30c85e78_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">YABUKI Yukiharu</span>
+              <a href="#ts-1608357429.131400">19日 14:57:09</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C01A6GCLF3N/p1608357429131400" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                linker
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1608357441.131700">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2018-03-19/331496519296_b6fceab653cf61d7dd8b_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">kuu</span>
+              <a href="#ts-1608357441.131700">19日 14:57:21</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C01A6GCLF3N/p1608357441131700" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                何もしないと未だにbinutilsのやつが使われる
+              </div>
+
+              <div>
+                  <div>
+                    <ul class="d-flex list-style-none flex-justify-start pt-2">
+                        <li>
+                          <span class="tooltipped tooltipped-ne tooltipped-align-left-1 p-1" aria-label="herophan">
+                              <span>👀1</span>
+                          </span>
+                        </li>
+                    </ul>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1608357445.132000">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2020-11-26/1524329807430_630fb5c095dfae55277c_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">herophan</span>
+              <a href="#ts-1608357445.132000">19日 14:57:25</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C01A6GCLF3N/p1608357445132000" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                gold
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1608357448.132100">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2018-03-19/331496519296_b6fceab653cf61d7dd8b_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">kuu</span>
+              <a href="#ts-1608357448.132100">19日 14:57:28</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C01A6GCLF3N/p1608357448132100" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                bfdと呼ばれてるやつ
+              </div>
+
+              <div>
+                  <div>
+                    <ul class="d-flex list-style-none flex-justify-start pt-2">
+                        <li>
+                          <span class="tooltipped tooltipped-ne tooltipped-align-left-1 p-1" aria-label="herophan">
+                              <span>👀1</span>
+                          </span>
+                        </li>
+                    </ul>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1608357477.132800">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2018-03-19/331496519296_b6fceab653cf61d7dd8b_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">kuu</span>
+              <a href="#ts-1608357477.132800">19日 14:57:57</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C01A6GCLF3N/p1608357477132800" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                goldもbinutilsに付いてるけど設定いりますね
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1608357529.133600">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2020-05-13/1105762495703_ba20bc886c8f30c85e78_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">YABUKI Yukiharu</span>
+              <a href="#ts-1608357529.133600">19日 14:58:49</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C01A6GCLF3N/p1608357529133600" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                build職人がいる理由の一つだったが、ruiさんが楽をさせてくれるかも。
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1608357601.134100">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2020-11-26/1524329807430_630fb5c095dfae55277c_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">herophan</span>
+              <a href="#ts-1608357601.134100">19日 15:00:01</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C01A6GCLF3N/p1608357601134100" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                build職人。。compilerを作る人ですか。
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1608357616.134400">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2020-11-26/1524329807430_630fb5c095dfae55277c_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">herophan</span>
+              <a href="#ts-1608357616.134400">19日 15:00:16</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C01A6GCLF3N/p1608357616134400" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                build = compile?
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1608357659.135000">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2018-03-19/331496519296_b6fceab653cf61d7dd8b_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">kuu</span>
+              <a href="#ts-1608357659.135000">19日 15:00:59</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C01A6GCLF3N/p1608357659135000" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                linker作りたいというのが山積みされた予定に入っているが、放置されている
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1608357673.135700">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2018-03-19/331496519296_b6fceab653cf61d7dd8b_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">kuu</span>
+              <a href="#ts-1608357673.135700">19日 15:01:13</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C01A6GCLF3N/p1608357673135700" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                機械語にELFヘッダー付けるやつなら作ったが、ELFのパースがだるくて放置
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1608357686.136000">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2020-05-13/1105762495703_ba20bc886c8f30c85e78_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">YABUKI Yukiharu</span>
+              <a href="#ts-1608357686.136000">19日 15:01:26</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C01A6GCLF3N/p1608357686136000" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                ソースコードからバイナリーを作るのは大変なので職人芸がいるというはなし
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1608357714.136700">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://secure.gravatar.com/avatar/31d1a776c4f467d26bded3719cba2652.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0013-48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">Hajime Hoshi</span>
+              <a href="#ts-1608357714.136700">19日 15:01:54</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C01A6GCLF3N/p1608357714136700" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                コンパイラがなかった時代の話?
+              </div>
+
+              <div>
+                  <div>
+                    <ul class="d-flex list-style-none flex-justify-start pt-2">
+                        <li>
+                          <span class="tooltipped tooltipped-ne tooltipped-align-left-1 p-1" aria-label="herophan">
+                              <span>⁉️1</span>
+                          </span>
+                        </li>
+                    </ul>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1608357721.136900">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2020-05-13/1105762495703_ba20bc886c8f30c85e78_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">YABUKI Yukiharu</span>
+              <a href="#ts-1608357721.136900">19日 15:02:01</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C01A6GCLF3N/p1608357721136900" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                おもに、distroを作る人やでかいchromeなどを作る仕事系
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1608357759.137800">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2018-03-19/331496519296_b6fceab653cf61d7dd8b_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">kuu</span>
+              <a href="#ts-1608357759.137800">19日 15:02:39</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C01A6GCLF3N/p1608357759137800" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                Cのビルド周りは本当に地獄
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1608357764.138000">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2020-05-13/1105762495703_ba20bc886c8f30c85e78_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">YABUKI Yukiharu</span>
+              <a href="#ts-1608357764.138000">19日 15:02:44</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C01A6GCLF3N/p1608357764138000" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                いかにはやく、バイナリを生成するか。
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1608357778.138200">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2018-03-19/331496519296_b6fceab653cf61d7dd8b_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">kuu</span>
+              <a href="#ts-1608357778.138200">19日 15:02:58</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C01A6GCLF3N/p1608357778138200" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                Goが天国に見える
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1608357809.138900">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2020-05-13/1105762495703_ba20bc886c8f30c85e78_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">YABUKI Yukiharu</span>
+              <a href="#ts-1608357809.138900">19日 15:03:29</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C01A6GCLF3N/p1608357809138900" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                automake/autoconfとか、バージョンごとに大変なのでは。
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1608357852.139500">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2020-11-26/1524329807430_630fb5c095dfae55277c_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">herophan</span>
+              <a href="#ts-1608357852.139500">19日 15:04:12</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C01A6GCLF3N/p1608357852139500" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                「ビルド」＝「コンパイル」じゃないんですか。なるほど
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1608357871.140100">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2020-11-26/1524329807430_630fb5c095dfae55277c_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">herophan</span>
+              <a href="#ts-1608357871.140100">19日 15:04:31</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C01A6GCLF3N/p1608357871140100" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                コンパイル＋リンク?
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1608357876.140300">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2020-05-13/1105762495703_ba20bc886c8f30c85e78_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">YABUKI Yukiharu</span>
+              <a href="#ts-1608357876.140300">19日 15:04:36</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C01A6GCLF3N/p1608357876140300" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                リンクも含める＞ビルド
+              </div>
+
+              <div>
+                  <div>
+                    <ul class="d-flex list-style-none flex-justify-start pt-2">
+                        <li>
+                          <span class="tooltipped tooltipped-ne tooltipped-align-left-1 p-1" aria-label="herophan">
+                              <img class="slacklog-emoji" alt="naruhodo" title="naruhodo" src="/slacklog/emojis/naruhodo.png"><span class="ml-1">1</span>
+                          </span>
+                        </li>
+                    </ul>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1608357904.141300">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2020-05-13/1105762495703_ba20bc886c8f30c85e78_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">YABUKI Yukiharu</span>
+              <a href="#ts-1608357904.141300">19日 15:05:04</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C01A6GCLF3N/p1608357904141300" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                ほかの使うのに必要なバイナリを生成する。たとえばIMなら辞書とか
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1608357905.141500">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2020-11-26/1524329807430_630fb5c095dfae55277c_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">herophan</span>
+              <a href="#ts-1608357905.141500">19日 15:05:05</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C01A6GCLF3N/p1608357905141500" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                確かにリンクはコンパイルとは毛色違いますね
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1608357908.141700">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://secure.gravatar.com/avatar/31d1a776c4f467d26bded3719cba2652.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0013-48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">Hajime Hoshi</span>
+              <a href="#ts-1608357908.141700">19日 15:05:08</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C01A6GCLF3N/p1608357908141700" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                Go はツールチェーンめちゃくちゃ良く出来てますね
+              </div>
+
+              <div>
+                  <div>
+                    <ul class="d-flex list-style-none flex-justify-start pt-2">
+                        <li>
+                          <span class="tooltipped tooltipped-ne tooltipped-align-left-1 p-1" aria-label="kuu">
+                              <img class="slacklog-emoji" alt="wakaru" title="wakaru" src="/slacklog/emojis/wakaru.png"><span class="ml-1">1</span>
+                          </span>
+                        </li>
+                    </ul>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1608357929.142400">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://secure.gravatar.com/avatar/31d1a776c4f467d26bded3719cba2652.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0013-48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">Hajime Hoshi</span>
+              <a href="#ts-1608357929.142400">19日 15:05:29</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C01A6GCLF3N/p1608357929142400" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                言語は 80 点かもしれないがツールチェーンで 100000 点くらいとっている
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1608357931.142500">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2020-11-26/1524329807430_630fb5c095dfae55277c_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">herophan</span>
+              <a href="#ts-1608357931.142500">19日 15:05:31</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C01A6GCLF3N/p1608357931142500" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                Goにゲーム作らなきゃ
+              </div>
+
+              <div>
+                  <div>
+                    <ul class="d-flex list-style-none flex-justify-start pt-2">
+                        <li>
+                          <span class="tooltipped tooltipped-ne tooltipped-align-left-1 p-1" aria-label="eihigh, kuu">
+                              <img class="slacklog-emoji" alt="gopher-dance" title="gopher-dance" src="/slacklog/emojis/gopher-dance.gif"><span class="ml-1">2</span>
+                          </span>
+                        </li>
+                    </ul>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1608357937.142700">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://secure.gravatar.com/avatar/31d1a776c4f467d26bded3719cba2652.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0013-48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">Hajime Hoshi</span>
+              <a href="#ts-1608357937.142700">19日 15:05:37</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C01A6GCLF3N/p1608357937142700" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                つくりましょう
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1608357941.143000">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2020-11-26/1524329807430_630fb5c095dfae55277c_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">herophan</span>
+              <a href="#ts-1608357941.143000">19日 15:05:41</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C01A6GCLF3N/p1608357941143000" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                yes!
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1608357987.143800">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2020-05-13/1105762495703_ba20bc886c8f30c85e78_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">YABUKI Yukiharu</span>
+              <a href="#ts-1608357987.143800">19日 15:06:27</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C01A6GCLF3N/p1608357987143800" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                あと、完全一致のバイナリを作り出すための、reproduce buildが求められているし。
+              </div>
+
+              <div>
+                  <div>
+                    <ul class="d-flex list-style-none flex-justify-start pt-2">
+                        <li>
+                          <span class="tooltipped tooltipped-ne tooltipped-align-left-1 p-1" aria-label="herophan">
+                              <span>👀1</span>
+                          </span>
+                        </li>
+                    </ul>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1608358006.144300">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2020-05-13/1105762495703_ba20bc886c8f30c85e78_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">YABUKI Yukiharu</span>
+              <a href="#ts-1608358006.144300">19日 15:06:46</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C01A6GCLF3N/p1608358006144300" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                日付を埋めるな。外部から取り込めるようにしろ。
+              </div>
+
+              <div>
+                  <div>
+                    <ul class="d-flex list-style-none flex-justify-start pt-2">
+                        <li>
+                          <span class="tooltipped tooltipped-ne tooltipped-align-left-1 p-1" aria-label="herophan">
+                              <img class="slacklog-emoji" alt="naruhodo" title="naruhodo" src="/slacklog/emojis/naruhodo.png"><span class="ml-1">1</span>
+                          </span>
+                        </li>
+                    </ul>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1608358043.145100">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2020-05-13/1105762495703_ba20bc886c8f30c85e78_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">YABUKI Yukiharu</span>
+              <a href="#ts-1608358043.145100">19日 15:07:23</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C01A6GCLF3N/p1608358043145100" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                日付だけでないのがつらみですが。
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1608358135.145700">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2020-11-26/1524329807430_630fb5c095dfae55277c_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">herophan</span>
+              <a href="#ts-1608358135.145700">19日 15:08:55</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C01A6GCLF3N/p1608358135145700" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                完全一致のバイナリを作り出す必要ありますか
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1608358159.146200">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2020-05-13/1105762495703_ba20bc886c8f30c85e78_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">YABUKI Yukiharu</span>
+              <a href="#ts-1608358159.146200">19日 15:09:19</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C01A6GCLF3N/p1608358159146200" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                はい。長期サポートがいる環境では。
+              </div>
+
+              <div>
+                  <div>
+                    <ul class="d-flex list-style-none flex-justify-start pt-2">
+                        <li>
+                          <span class="tooltipped tooltipped-ne tooltipped-align-left-1 p-1" aria-label="herophan">
+                              <img class="slacklog-emoji" alt="hee" title="hee" src="/slacklog/emojis/hee.png"><span class="ml-1">1</span>
+                          </span>
+                        </li>
+                    </ul>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1608358204.146900">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://secure.gravatar.com/avatar/31d1a776c4f467d26bded3719cba2652.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0013-48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">Hajime Hoshi</span>
+              <a href="#ts-1608358204.146900">19日 15:10:04</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C01A6GCLF3N/p1608358204146900" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                バイナリを git に含めなきゃいけないケースがあって、 reproducible じゃないと何もしなくても差分が生まれて無駄になる
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1608358213.147100">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2020-05-13/1105762495703_ba20bc886c8f30c85e78_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">YABUKI Yukiharu</span>
+              <a href="#ts-1608358213.147100">19日 15:10:13</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C01A6GCLF3N/p1608358213147100" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                Reproducible Builds — a set of software development practices that create an independently-verifiable path from source to binary code<br><a href='https://reproducible-builds.org/'>https://reproducible-builds.org/</a>
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1608358225.147500">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2018-03-19/331496519296_b6fceab653cf61d7dd8b_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">kuu</span>
+              <a href="#ts-1608358225.147500">19日 15:10:25</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C01A6GCLF3N/p1608358225147500" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                バイナリの差分はつらい
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1608358280.148400">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2020-11-26/1524329807430_630fb5c095dfae55277c_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">herophan</span>
+              <a href="#ts-1608358280.148400">19日 15:11:20</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C01A6GCLF3N/p1608358280148400" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                gitにふくめなきゃいけないケースもありましたか…確かにビルドするのに長時間かかるとgitに含めた方が良いかも
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1608358281.148500">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://secure.gravatar.com/avatar/31d1a776c4f467d26bded3719cba2652.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0013-48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">Hajime Hoshi</span>
+              <a href="#ts-1608358281.148500">19日 15:11:21</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C01A6GCLF3N/p1608358281148500" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                <code>-Wl,--no-insert-timestamp</code> でかいけつ
+              </div>
+
+              <div>
+                  <div>
+                    <ul class="d-flex list-style-none flex-justify-start pt-2">
+                        <li>
+                          <span class="tooltipped tooltipped-ne tooltipped-align-left-1 p-1" aria-label="YABUKI Yukiharu, Tsuyoshi CHO, kuu">
+                              <img class="slacklog-emoji" alt="naruhodo" title="naruhodo" src="/slacklog/emojis/naruhodo.png"><span class="ml-1">3</span>
+                          </span>
+                        </li>
+                        <li>
+                          <span class="tooltipped tooltipped-ne tooltipped-align-left-1 p-1" aria-label="herophan">
+                              <span>❓1</span>
+                          </span>
+                        </li>
+                    </ul>
+                  </div>
+              </div>
+              <details class="details-reset mt-3">
+                <summary class="btn-link">
+                  <span class="f5">1 件の返信 最終返信:15:12:47 <span class="dropdown-caret"></span>
+                  </span>
+                </summary>
+                <div class="border mt-2">
+                  <div class="p-2" id="ts-1608358367.149700">
+                    <div class="d-flex flex-wrap">
+                      <div class="f6 ml-3 text-gray-light">#←</div>
+                      <div class="f6 ml-2 text-gray-light">チャンネルにも投稿済</div>
+                    </div>
+                    <div class="float-left mr-2">
+                      <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2020-11-26/1524329807430_630fb5c095dfae55277c_48.png" />
+                    </div>
+                    <div>
+                      <span class="text-bold mr-1">herophan</span>
+                      <a href="#ts-1608358367.149700">19日 15:12:47</a>
+                    </div>
+                    <div class="overflow-hidden">
+                      gccフラグ？
+                    </div>
+                  </div>
+                </div>
+              </details>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1608358309.149000">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://secure.gravatar.com/avatar/31d1a776c4f467d26bded3719cba2652.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0013-48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">Hajime Hoshi</span>
+              <a href="#ts-1608358309.149000">19日 15:11:49</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C01A6GCLF3N/p1608358309149000" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                git に含めなきゃいけないのは稀だと思いますけど
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1608358317.149400">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://secure.gravatar.com/avatar/31d1a776c4f467d26bded3719cba2652.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0013-48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">Hajime Hoshi</span>
+              <a href="#ts-1608358317.149400">19日 15:11:57</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C01A6GCLF3N/p1608358317149400" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                reproducible のほうがデバッグなどはしやすい
+              </div>
+
+              <div>
+                  <div>
+                    <ul class="d-flex list-style-none flex-justify-start pt-2">
+                        <li>
+                          <span class="tooltipped tooltipped-ne tooltipped-align-left-1 p-1" aria-label="herophan">
+                              <img class="slacklog-emoji" alt="naruhodo" title="naruhodo" src="/slacklog/emojis/naruhodo.png"><span class="ml-1">1</span>
+                          </span>
+                        </li>
+                    </ul>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1608358367.149700">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2020-11-26/1524329807430_630fb5c095dfae55277c_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">herophan</span>
+              <a href="#ts-1608358367.149700">19日 15:12:47</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C01A6GCLF3N/p1608358367149700" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                gccフラグ？
+              </div>
+
+              <div>
+              </div>
+            <span class="f6 text-gray-light">
+              このスレッドに返信しました : <a href="#ts-1608358281.148500">`-Wl,--no-insert-tim ...</a>
+            </span>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1608358427.150400">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2020-11-26/1524329807430_630fb5c095dfae55277c_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">herophan</span>
+              <a href="#ts-1608358427.150400">19日 15:13:47</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C01A6GCLF3N/p1608358427150400" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                <a href='https://www.linux.org/docs/man1/ld.html'>https://www.linux.org/docs/man1/ld.html</a>
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1608358430.150500">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://secure.gravatar.com/avatar/31d1a776c4f467d26bded3719cba2652.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0013-48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">Hajime Hoshi</span>
+              <a href="#ts-1608358430.150500">19日 15:13:50</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C01A6GCLF3N/p1608358430150500" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                gcc でも clang でも。
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1608358437.150900">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2020-11-26/1524329807430_630fb5c095dfae55277c_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">herophan</span>
+              <a href="#ts-1608358437.150900">19日 15:13:57</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C01A6GCLF3N/p1608358437150900" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                <pre>       --insert-timestamp<br>       --no-insert-timestamp<br>           Insert a real timestamp into the image.  This is the default behaviour as it matches legacy code and it<br>           means that the image will work with other, proprietary tools.  The problem with this default is that it<br>           will result in slightly different images being produced each tiem the same sources are linked.  The option<br>           --no-insert-timestamp can be used to insert a zero value for the timestamp, this ensuring that binaries<br>           produced from indentical sources will compare identically.</pre><br>なるほど
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1608358448.151200">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2018-03-19/331496519296_b6fceab653cf61d7dd8b_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">kuu</span>
+              <a href="#ts-1608358448.151200">19日 15:14:08</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C01A6GCLF3N/p1608358448151200" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                そんな便利オプションがあったんだ（知らなかった）
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1608358480.151700">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://secure.gravatar.com/avatar/31d1a776c4f467d26bded3719cba2652.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0013-48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">Hajime Hoshi</span>
+              <a href="#ts-1608358480.151700">19日 15:14:40</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C01A6GCLF3N/p1608358480151700" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                自分の場合逆に言うとこれだけで reproducible になりました
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1608358483.151900">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://secure.gravatar.com/avatar/31d1a776c4f467d26bded3719cba2652.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0013-48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">Hajime Hoshi</span>
+              <a href="#ts-1608358483.151900">19日 15:14:43</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C01A6GCLF3N/p1608358483151900" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                MinGW でしたけど。
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1608358651.153100">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2020-11-26/1524329807430_630fb5c095dfae55277c_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">herophan</span>
+              <a href="#ts-1608358651.153100">19日 15:17:31</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C01A6GCLF3N/p1608358651153100" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                へぇぇ…<br>皆さんはCをなんのために使っているんですか<br><br>MinGWも初耳。実用性多いですねー＞C
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1608358660.153400">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2018-03-19/331496519296_b6fceab653cf61d7dd8b_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">kuu</span>
+              <a href="#ts-1608358660.153400">19日 15:17:40</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C01A6GCLF3N/p1608358660153400" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                Vimのため
+              </div>
+
+              <div>
+                  <div>
+                    <ul class="d-flex list-style-none flex-justify-start pt-2">
+                        <li>
+                          <span class="tooltipped tooltipped-ne tooltipped-align-left-1 p-1" aria-label="herophan">
+                              <img class="slacklog-emoji" alt="naruhodo" title="naruhodo" src="/slacklog/emojis/naruhodo.png"><span class="ml-1">1</span>
+                          </span>
+                        </li>
+                        <li>
+                          <span class="tooltipped tooltipped-ne tooltipped-align-left-1 p-1" aria-label="herophan">
+                              <span>✔️1</span>
+                          </span>
+                        </li>
+                    </ul>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1608358668.153700">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://secure.gravatar.com/avatar/31d1a776c4f467d26bded3719cba2652.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0013-48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">Hajime Hoshi</span>
+              <a href="#ts-1608358668.153700">19日 15:17:48</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C01A6GCLF3N/p1608358668153700" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                C のライブラリを使うため
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1608358680.154100">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2020-11-26/1524329807430_630fb5c095dfae55277c_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">herophan</span>
+              <a href="#ts-1608358680.154100">19日 15:18:00</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C01A6GCLF3N/p1608358680154100" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                FFIとか？
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1608358692.154300">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://secure.gravatar.com/avatar/31d1a776c4f467d26bded3719cba2652.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0013-48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">Hajime Hoshi</span>
+              <a href="#ts-1608358692.154300">19日 15:18:12</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C01A6GCLF3N/p1608358692154300" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                そのようなものです
+              </div>
+
+              <div>
+                  <div>
+                    <ul class="d-flex list-style-none flex-justify-start pt-2">
+                        <li>
+                          <span class="tooltipped tooltipped-ne tooltipped-align-left-1 p-1" aria-label="herophan">
+                              <img class="slacklog-emoji" alt="naruhodo" title="naruhodo" src="/slacklog/emojis/naruhodo.png"><span class="ml-1">1</span>
+                          </span>
+                        </li>
+                    </ul>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1608358717.154900">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2020-05-13/1105762495703_ba20bc886c8f30c85e78_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">YABUKI Yukiharu</span>
+              <a href="#ts-1608358717.154900">19日 15:18:37</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C01A6GCLF3N/p1608358717154900" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                仕事でいることがあるから。
+              </div>
+
+              <div>
+                  <div>
+                    <ul class="d-flex list-style-none flex-justify-start pt-2">
+                        <li>
+                          <span class="tooltipped tooltipped-ne tooltipped-align-left-1 p-1" aria-label="herophan">
+                              <img class="slacklog-emoji" alt="naruhodo" title="naruhodo" src="/slacklog/emojis/naruhodo.png"><span class="ml-1">1</span>
+                          </span>
+                        </li>
+                    </ul>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1608358781.156100">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2020-11-26/1524329807430_630fb5c095dfae55277c_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">herophan</span>
+              <a href="#ts-1608358781.156100">19日 15:19:41</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C01A6GCLF3N/p1608358781156100" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                YABUKIさんはシステム・エンジニアなんですか（実はシステム・エンジニア英訳分かりません）<br>それともゲーム・プログラマーとか？
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1608358798.156700">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2018-03-19/331496519296_b6fceab653cf61d7dd8b_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">kuu</span>
+              <a href="#ts-1608358798.156700">19日 15:19:58</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C01A6GCLF3N/p1608358798156700" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                日本のSEは独特だと思う（悪い文明）
+              </div>
+
+              <div>
+                  <div>
+                    <ul class="d-flex list-style-none flex-justify-start pt-2">
+                        <li>
+                          <span class="tooltipped tooltipped-ne tooltipped-align-left-1 p-1" aria-label="yutakatay">
+                              <img class="slacklog-emoji" alt="sorena" title="sorena" src="/slacklog/emojis/sorena.png"><span class="ml-1">1</span>
+                          </span>
+                        </li>
+                        <li>
+                          <span class="tooltipped tooltipped-ne tooltipped-align-left-1 p-1" aria-label="herophan, Shougo">
+                              <img class="slacklog-emoji" alt="hee" title="hee" src="/slacklog/emojis/hee.png"><span class="ml-1">2</span>
+                          </span>
+                        </li>
+                    </ul>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1608358811.157200">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2018-03-19/331496519296_b6fceab653cf61d7dd8b_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">kuu</span>
+              <a href="#ts-1608358811.157200">19日 15:20:11</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C01A6GCLF3N/p1608358811157200" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                海外にもそんなのあったりするんだろうか
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1608358827.158100">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2020-05-13/1105762495703_ba20bc886c8f30c85e78_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">YABUKI Yukiharu</span>
+              <a href="#ts-1608358827.158100">19日 15:20:27</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C01A6GCLF3N/p1608358827158100" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                英語の肩書きは programmerにしていますが。最近は、Project manager とかの仕事が多い。
+              </div>
+
+              <div>
+                  <div>
+                    <ul class="d-flex list-style-none flex-justify-start pt-2">
+                        <li>
+                          <span class="tooltipped tooltipped-ne tooltipped-align-left-1 p-1" aria-label="herophan">
+                              <img class="slacklog-emoji" alt="naruhodo" title="naruhodo" src="/slacklog/emojis/naruhodo.png"><span class="ml-1">1</span>
+                          </span>
+                        </li>
+                    </ul>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1608358840.158600">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2020-11-26/1524329807430_630fb5c095dfae55277c_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">herophan</span>
+              <a href="#ts-1608358840.158600">19日 15:20:40</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C01A6GCLF3N/p1608358840158600" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                System Engineer確かに和製英語かもしれない
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1608358847.158900">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2020-11-26/1524329807430_630fb5c095dfae55277c_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">herophan</span>
+              <a href="#ts-1608358847.158900">19日 15:20:47</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C01A6GCLF3N/p1608358847158900" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                聞いたことがないワード
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1608358852.159300">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2020-11-26/1524329807430_630fb5c095dfae55277c_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">herophan</span>
+              <a href="#ts-1608358852.159300">19日 15:20:52</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C01A6GCLF3N/p1608358852159300" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                in 英語
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1608358858.159400">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2020-04-14/1081287266064_cb2d6ab85d9530d8a126_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">yutakatay</span>
+              <a href="#ts-1608358858.159400">19日 15:20:58</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C01A6GCLF3N/p1608358858159400" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                ProductManagerじゃなくてProjectManagerだと闇が深そう
+              </div>
+
+              <div>
+                  <div>
+                    <ul class="d-flex list-style-none flex-justify-start pt-2">
+                        <li>
+                          <span class="tooltipped tooltipped-ne tooltipped-align-left-1 p-1" aria-label="YABUKI Yukiharu">
+                              <img class="slacklog-emoji" alt="sorena" title="sorena" src="/slacklog/emojis/sorena.png"><span class="ml-1">1</span>
+                          </span>
+                        </li>
+                        <li>
+                          <span class="tooltipped tooltipped-ne tooltipped-align-left-1 p-1" aria-label="herophan">
+                              <img class="slacklog-emoji" alt="naruhodo" title="naruhodo" src="/slacklog/emojis/naruhodo.png"><span class="ml-1">1</span>
+                          </span>
+                        </li>
+                    </ul>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1608358913.160500">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2020-11-26/1524329807430_630fb5c095dfae55277c_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">herophan</span>
+              <a href="#ts-1608358913.160500">19日 15:21:53</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C01A6GCLF3N/p1608358913160500" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                Product Manager目指す同期が結構いますね<br>Project Managerの方は一人くらい（？）
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1608358959.161700">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2020-04-14/1081287266064_cb2d6ab85d9530d8a126_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">yutakatay</span>
+              <a href="#ts-1608358959.161700">19日 15:22:39</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C01A6GCLF3N/p1608358959161700" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                日本のシステムエンジニアはプログラムを書かないです。<br>つかここCか <a href='/slacklog/C01BAQYHBMX/'>#tech-management</a>
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1608359004.162600">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2020-05-13/1105762495703_ba20bc886c8f30c85e78_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">YABUKI Yukiharu</span>
+              <a href="#ts-1608359004.162600">19日 15:23:24</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C01A6GCLF3N/p1608359004162600" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                英語の consultant に似て下っ端の仕事のこともあれば上位の仕事もあって
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1608359028.163200">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2020-05-13/1105762495703_ba20bc886c8f30c85e78_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">YABUKI Yukiharu</span>
+              <a href="#ts-1608359028.163200">19日 15:23:48</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C01A6GCLF3N/p1608359028163200" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                実態が分からん言葉でもある＞システム・エンジニア
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1608359670.163700">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://secure.gravatar.com/avatar/d9d0ceb387e3b6de5c4562af78e8a910.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0004-48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">ujihisa</span>
+              <a href="#ts-1608359670.163700">19日 15:34:30</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C01A6GCLF3N/p1608359670163700" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                こんにちは、実は大学での専攻はsystems engineeringでした
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1608359696.164500">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://secure.gravatar.com/avatar/d9d0ceb387e3b6de5c4562af78e8a910.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0004-48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">ujihisa</span>
+              <a href="#ts-1608359696.164500">19日 15:34:56</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C01A6GCLF3N/p1608359696164500" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                <a href='https://en.wikipedia.org/wiki/Systems_engineering'>https://en.wikipedia.org/wiki/Systems_engineering</a>
+              </div>
+
+              <div>
+                  <div>
+                    <ul class="d-flex list-style-none flex-justify-start pt-2">
+                        <li>
+                          <span class="tooltipped tooltipped-ne tooltipped-align-left-1 p-1" aria-label="herophan">
+                              <img class="slacklog-emoji" alt="hee" title="hee" src="/slacklog/emojis/hee.png"><span class="ml-1">1</span>
+                          </span>
+                        </li>
+                    </ul>
+                  </div>
+              </div>
+            <div class="mt-2 border p-2" id="ts-1608359696.164500">
+              
+    <div class="d-flex">
+        <div class="flex-self-baseline f4 ml-2">
+          <span class="Label Label--outline">
+            <a href="https://en.wikipedia.org/wiki/Systems_engineering" target="_blank" rel="noopener noreferrer">Systems engineering</a>
+          </span>
+        </div>
+    </div>
+      <div class="d-flex">
+        <div class="mt-2">Systems engineering is an interdisciplinary field of engineering and engineering management that focuses on how to design, integrate, and manage complex systems over their life cycles. At its core, systems engineering utilizes systems thinking principles to organize this body of knowledge. The individual outcome of such efforts, an engineered system, can be defined as a combination of components that work in synergy to collectively perform a useful function.<br>Issues such as requirements engineering, reliability, logistics, coordination of different teams, testing and evaluation, maintainability and many other disciplines necessary for successful system design, development, implementation, and ultimate decommission become more difficult when dealing with large or complex projects. Systems engineering deals with work-processes, optimization methods, and risk management tools in such projects. It overlaps technical and human-centered disciplines such as industrial engineering, process systems engineering, mechanical engineering, manufacturing engineering, production engineering, control engineering, software engineering, electrical engineering, cybernetics, aerospace engineering, organizational studies, civil engineering and project management. Systems engineering ensures that all likely aspects of a project or system are considered and integrated into a whole.<br>The systems engineering process is a discovery process that is quite unlike a manufacturing process. A manufacturing process is focused on repetitive activities that achieve high quality outputs with minimum cost and time. The systems engineering process must begin by discovering the real problems that need to be resolved, and identifying the most probable or highest impact failures that can occur – systems engineering involves finding solutions to these problems.</div>
+      </div>
+
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1608359729.165000">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://secure.gravatar.com/avatar/d9d0ceb387e3b6de5c4562af78e8a910.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0004-48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">ujihisa</span>
+              <a href="#ts-1608359729.165000">19日 15:35:29</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C01A6GCLF3N/p1608359729165000" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                とくにpattern recognition 系
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1608359743.165400">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://secure.gravatar.com/avatar/d9d0ceb387e3b6de5c4562af78e8a910.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0004-48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">ujihisa</span>
+              <a href="#ts-1608359743.165400">19日 15:35:43</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C01A6GCLF3N/p1608359743165400" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                なので一応システムエンジニアです
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1608359755.165900">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://secure.gravatar.com/avatar/d9d0ceb387e3b6de5c4562af78e8a910.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0004-48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">ujihisa</span>
+              <a href="#ts-1608359755.165900">19日 15:35:55</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C01A6GCLF3N/p1608359755165900" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                でも結局システムエンジニアの仕事まったくしたことないです・・・
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1608366585.171800">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2020-07-11/1248264156545_0f2b42815bfbc22779a9_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">takker</span>
+              <a href="#ts-1608366585.171800">19日 17:29:45</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C01A6GCLF3N/p1608366585171800" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                systems engineeringは宇宙工学関連で学びました。ぜんぜん理解していませんが。<br>programmingとはほとんど関係なかったことだけは覚えています。たしかprojectの立ち上げや運用の話だったような
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1608367395.173800">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2020-04-14/1081287266064_cb2d6ab85d9530d8a126_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">yutakatay</span>
+              <a href="#ts-1608367395.173800">19日 17:43:15</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C01A6GCLF3N/p1608367395173800" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                （宇宙工学関係のシステムエンジニアリングはだいぶ古臭いので参考にしないほうがいいかと・・・あとハードも強く絡んでくるんで、純粋なソフトウェア業界ともIoT業界とも特性がだいぶ違いますね）
+              </div>
+
+              <div>
+                  <div>
+                    <ul class="d-flex list-style-none flex-justify-start pt-2">
+                        <li>
+                          <span class="tooltipped tooltipped-ne tooltipped-align-left-1 p-1" aria-label="takker">
+                              <img class="slacklog-emoji" alt="hee" title="hee" src="/slacklog/emojis/hee.png"><span class="ml-1">1</span>
+                          </span>
+                        </li>
+                    </ul>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1608367432.174200">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2018-05-31/373472791093_ed16847a152da533e013_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">Tsuyoshi CHO</span>
+              <a href="#ts-1608367432.174200">19日 17:43:52</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C01A6GCLF3N/p1608367432174200" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                失敗学の場所としては、かなりよいけど、今の状況とはだいぶちがいますな
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1608367438.174500">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2018-05-31/373472791093_ed16847a152da533e013_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">Tsuyoshi CHO</span>
+              <a href="#ts-1608367438.174500">19日 17:43:58</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C01A6GCLF3N/p1608367438174500" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                SpaceXはどうやってるか気になる
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1608367488.175100">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2020-04-14/1081287266064_cb2d6ab85d9530d8a126_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">yutakatay</span>
+              <a href="#ts-1608367488.175100">19日 17:44:48</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C01A6GCLF3N/p1608367488175100" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                ちなみに失敗学という点でも宇宙業界はイケてなくって航空業界がおすすめですね。あそこはすごい。
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1608367536.175600">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2018-05-31/373472791093_ed16847a152da533e013_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">Tsuyoshi CHO</span>
+              <a href="#ts-1608367536.175600">19日 17:45:36</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C01A6GCLF3N/p1608367536175600" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                あー、回復まで含めるとそうか<br>失敗しまくった、という意味では素材としてことかかないかなと思ってw
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1608367564.176200">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2018-05-31/373472791093_ed16847a152da533e013_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">Tsuyoshi CHO</span>
+              <a href="#ts-1608367564.176200">19日 17:46:04</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C01A6GCLF3N/p1608367564176200" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                航空業界は失敗の致命的さは宇宙系とかわりなく、なのに日常業務かつ利益が必須という厳しさ
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1608367669.177900">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2020-04-14/1081287266064_cb2d6ab85d9530d8a126_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">yutakatay</span>
+              <a href="#ts-1608367669.177900">19日 17:47:49</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C01A6GCLF3N/p1608367669177900" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                航空業界は全体で知見を共有して２度と起こさないことを徹底してますよね。他の業界はなんだかんだ会社を超えての失敗を共有する文化があまりないんで、別の人が同じことをまたしてしまう。<br>(完全に <a href='/slacklog/C01BAQYHBMX/'>#tech-management</a> になってきたけどw)
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1608384865.179100">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2018-07-31/407982080133_30e238cd92e6c88883f9_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">mattn</span>
+              <a href="#ts-1608384865.179100">19日 22:34:25</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C01A6GCLF3N/p1608384865179100" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                だいぶ遅レスだけど、僕が作った malloc はめちゃ単純な奴で、デカいページの場所と使用量を覚えておくくらいのやつです。
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1608419740.179500">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2020-11-26/1524329807430_630fb5c095dfae55277c_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">herophan</span>
+              <a href="#ts-1608419740.179500">20日 08:15:40</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C01A6GCLF3N/p1608419740179500" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                特にアルゴリズムなしですか
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1608419742.179700">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2020-11-26/1524329807430_630fb5c095dfae55277c_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">herophan</span>
+              <a href="#ts-1608419742.179700">20日 08:15:42</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C01A6GCLF3N/p1608419742179700" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                なるほど
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1608419781.180500">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2020-11-26/1524329807430_630fb5c095dfae55277c_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">herophan</span>
+              <a href="#ts-1608419781.180500">20日 08:16:21</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C01A6GCLF3N/p1608419781180500" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                大学じゃ基本のC以外使っちゃダメだったので hash mapライブラリなど使えなかった
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <!-- footer -->

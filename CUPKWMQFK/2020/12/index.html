@@ -9085,6 +9085,328 @@ endfunction</code></pre>
             </div>
           </div>
         </div>
+        <div class="clearfix m-3" id="ts-1608330584.041300">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2020-12-08/1552282240341_cc09c55264460c114f4a_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">obcat</span>
+              <a href="#ts-1608330584.041300">19日 07:29:44</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CUPKWMQFK/p1608330584041300" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                :h :const
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1608330585.041400">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2020-11-07/1490761289812_fdff01c40c53cad518c0_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">vim-jp-bot</span>
+              <a href="#ts-1608330585.041400">19日 07:29:45</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CUPKWMQFK/p1608330585041400" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                <pre><br>                                                *:cons* *:const*<br>:cons[t] {var-name} = {expr1}<br>:cons[t] [{name1}, {name2}, ...] = {expr1}<br>:cons[t] [{name}, ..., ; {lastname}] = {expr1}<br>:cons[t] {var-name} =&lt;&lt; [trim] {marker}<br>text...<br>text...<br>{marker}<br>                        |:let|に似ているが、加えて、値がセットされたあとに変数<br>                        がロックされる。これは、ロックされた変数と同じで、<br>                        |:let|のすぐ後に|:lockvar|を使うことで変数をロックする<br>                        ことと同義である。したがって:  <br>                                :const x = 1<br>                        は、以下と同義である:  <br>                                :let x = 1<br>                                :lockvar 1 x<br>                        これは、変数が変更されないことを確実にしたいときに便利<br>                        である。<br></pre>
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1608330611.041700">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2020-12-08/1552282240341_cc09c55264460c114f4a_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">obcat</span>
+              <a href="#ts-1608330611.041700">19日 07:30:11</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CUPKWMQFK/p1608330611041700" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                :h :lockvar
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1608330611.041800">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2020-11-07/1490761289812_fdff01c40c53cad518c0_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">vim-jp-bot</span>
+              <a href="#ts-1608330611.041800">19日 07:30:11</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CUPKWMQFK/p1608330611041800" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                <pre><br>:lockv[ar][!] [depth] {name} ...                        *:lockvar* *:lockv*<br>                        内部変数{name}をロックする。ロックすると、それ以降変更<br>                        ができなくなる(アンロックするまで)。<br>                        ロックされた変数を削除することはできる:  <br>                                :lockvar v<br>                                :let v = &#39;asdf&#39;         &#34; 失敗!<br>                                :unlet v<br></pre>
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1608330701.042400">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2020-12-08/1552282240341_cc09c55264460c114f4a_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">obcat</span>
+              <a href="#ts-1608330701.042400">19日 07:31:41</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CUPKWMQFK/p1608330701042400" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                <pre>let s:foo = &#39;bar&#39;<br>lockvar s:foo</pre><br>というスクリプトを複数回実行してもエラーにならないのって仕様ですか？<br>2 回目以降では  <code>lockvar</code> でロックされた <code>s:foo</code> がすでに存在しているので、 <code>let</code> で <code>s:foo</code> の値を変更しようとするとエラーになるのではと思ったんですが・・・
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1608332438.043400">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2020-12-08/1552282240341_cc09c55264460c114f4a_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">obcat</span>
+              <a href="#ts-1608332438.043400">19日 08:00:38</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CUPKWMQFK/p1608332438043400" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                :h E127<br>これと同じような話ですかね...？
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1608332439.043500">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2020-11-07/1490761289812_fdff01c40c53cad518c0_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">vim-jp-bot</span>
+              <a href="#ts-1608332439.043500">19日 08:00:39</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CUPKWMQFK/p1608332439043500" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                <pre><br>                                                                *E127* *E122*<br>                        この名前で定義される関数が既に定義済みで [!] が使用さ<br>                        れなかった場合、エラーとなる。1つの例外がある: スクリ<br>                        プトを再読み込みすると、そのスクリプトで以前に定義され<br>                        ていた関数は、静かに置き換えられる。<br>                        [!] が使用されていれば、それまで存在していた関数は、速<br>                        やかに新しいものへ置換えられる。<br>                        NOTE: ! は十分に注意して使用すること。注意せずに使用し<br>                        た場合は既存の関数を期待せず置き換える可能性があり、デ<br>                        バッグが難しくなる。<br>                        NOTE: Vim9 スクリプトのスクリプトローカル関数は、削除<br>                        または再定義はできない。<br> <br>                        引数{arguments}については|function-argument|を参照。<br></pre>
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1608332474.044000">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2020-12-08/1552282240341_cc09c55264460c114f4a_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">obcat</span>
+              <a href="#ts-1608332474.044000">19日 08:01:14</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CUPKWMQFK/p1608332474044000" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                （例外があるのところ）
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1608332503.044600">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2020-12-01/1534038598261_1391644901d20bf082ca_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">みら</span>
+              <a href="#ts-1608332503.044600">19日 08:01:43</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CUPKWMQFK/p1608332503044600" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                読み込み直しと内部の関数を使うとかは違うはず...
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1608332507.044800">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2020-12-01/1534038598261_1391644901d20bf082ca_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">みら</span>
+              <a href="#ts-1608332507.044800">19日 08:01:47</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CUPKWMQFK/p1608332507044800" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                ちゃんとエラーになるやつ
+              </div>
+
+              <div>
+              </div>
+              <div class="mt-2 border p-3">
+                <div>
+                  <a href="/slacklog/files/F01H9UMT4H1/image.png" target="_blank" rel="noopener noreferrer">
+                  <img src="/slacklog/files/F01H9UMT4H1/image.png" width="384" height="180" alt="image.png" />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1608332652.046700">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2020-12-01/1534038598261_1391644901d20bf082ca_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">みら</span>
+              <a href="#ts-1608332652.046700">19日 08:04:12</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CUPKWMQFK/p1608332652046700" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                これをスクリプトに書いてfooの中書き換えて複数回読み込ませてもエラーにはならない
+              </div>
+
+              <div>
+              </div>
+              <div class="mt-2 border p-3">
+                <div>
+                  <a href="/slacklog/files/F01H314PZC6/image.png" target="_blank" rel="noopener noreferrer">
+                  <img src="/slacklog/files/F01H314PZC6/image.png" width="192" height="120" alt="image.png" />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1608332708.047200">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2020-12-08/1552282240341_cc09c55264460c114f4a_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">obcat</span>
+              <a href="#ts-1608332708.047200">19日 08:05:08</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CUPKWMQFK/p1608332708047200" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                ですよね
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1608332844.048200">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2020-12-08/1552282240341_cc09c55264460c114f4a_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">obcat</span>
+              <a href="#ts-1608332844.048200">19日 08:07:24</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CUPKWMQFK/p1608332844048200" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                help にそのあたりの処理の違いについて説明されている部分ってあります？　探したけど見つからないんですよね...
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1608334227.048700">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2020-12-08/1552282240341_cc09c55264460c114f4a_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">obcat</span>
+              <a href="#ts-1608334227.048700">19日 08:30:27</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CUPKWMQFK/p1608334227048700" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                補足しておくと別にこの挙動に困っているわけではなくて、むしろこれが仕様であってほしいと思っています（エラーになるとしたらリロードされうるスクリプト内で <code>const</code> / <code>lockvar</code> をうかつに使えなくなるので・・）
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <!-- footer -->
