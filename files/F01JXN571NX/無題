@@ -1,0 +1,17 @@
+let userProcesses = []
+
+export const setUserProcesses = (processes) => {
+  userProcesses = [...userProcesses, processes]
+}
+
+export const getProcessesDefinition = () => {
+  return [
+    ...[userProcesses],
+    ...[
+      {
+        name: "open-file",
+        processes: openFileProcesses,
+      },
+    ],
+  ]
+}
