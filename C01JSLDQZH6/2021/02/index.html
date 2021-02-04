@@ -133,6 +133,68 @@
             </div>
           </div>
         </div>
+        <div class="clearfix m-3" id="ts-1612444658.006600">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">Reacji Channeler</span>
+              <a href="#ts-1612444658.006600">4日 22:17:38</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C01JSLDQZH6/p1612444658006600" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                <a href='https://vim-jp.slack.com/archives/CMBKN4MNE/p1612444636062700'>https://vim-jp.slack.com/archives/CMBKN4MNE/p1612444636062700</a>
+              </div>
+
+              <div>
+              </div>
+            <div class="mt-2 border p-2" id="ts-1612444658.006600">
+              
+    <div class="d-flex">
+    </div>
+      <div class="d-flex">
+        <div class="mt-2"><pre>function! CopyHover()<br>  let l:hover = join(CocAction(&#39;getHover&#39;))<br>  if empty(l:hover) | echoerr &#34;No Hover!&#34; | return | endif<br>  let @+ = l:hover<br>  let @* = l:hover<br>  echom &#34;Hover copied!&#34;<br>endfunction<br><br>nnoremap &lt;silent&gt; &lt;leader&gt;k :call CopyHover()&lt;CR&gt;</pre><br>私はこうマッピングした</div>
+      </div>
+
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1612446601.006800">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">Reacji Channeler</span>
+              <a href="#ts-1612446601.006800">4日 22:50:01</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C01JSLDQZH6/p1612446601006800" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                <a href='https://vim-jp.slack.com/archives/CJ3BV8EMA/p1612446594298800'>https://vim-jp.slack.com/archives/CJ3BV8EMA/p1612446594298800</a>
+              </div>
+
+              <div>
+              </div>
+            <div class="mt-2 border p-2" id="ts-1612446601.006800">
+              
+    <div class="d-flex">
+    </div>
+      <div class="d-flex">
+        <div class="mt-2">必ずフロートウィンドウにフォーカスするマッピング<br><br><pre><br>&#34; Focus floating window with &lt;C-w&gt;&lt;C-w&gt; &#123;&#123;{<br>if has(&#39;nvim&#39;)<br>  function! s:focus_floating() abort<br>    if !empty(nvim_win_get_config(win_getid()).relative)<br>      wincmd p<br>      return<br>    endif<br>    for winnr in range(1, winnr(&#39;$&#39;))<br>      let winid = win_getid(winnr)<br>      let conf = nvim_win_get_config(winid)<br>      if conf.focusable &amp;&amp; !empty(conf.relative)<br>        call win_gotoid(winid)<br>        return<br>      endif<br>    endfor<br>  endfunction<br>  nnoremap &lt;silent&gt; &lt;C-w&gt;&lt;C-w&gt; :&lt;C-u&gt;call &lt;SID&gt;focus_floating()&lt;CR&gt;<br>endif<br>&#34; }}}</pre></div>
+      </div>
+
+            </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <!-- footer -->

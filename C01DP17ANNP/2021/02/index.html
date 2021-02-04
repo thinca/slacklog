@@ -217,6 +217,807 @@ let g:lightline = {
             </div>
           </div>
         </div>
+        <div class="clearfix m-3" id="ts-1612394488.013300">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2021-01-06/1621211956228_09947ad089d6e790ca09_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">ゴリラ（強くなれる理由を知った）</span>
+              <a href="#ts-1612394488.013300">4日 08:21:28</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C01DP17ANNP/p1612394488013300" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                <pre>k=[a,b,c],k=[v]</pre><br>Goで↑を正規表現で↓のように抽出したいんですが、上手くいないのでアドバイスを頂きたいです<br><pre>[&#34;k&#34;, &#34;a,b,c&#34;, &#34;k&#34;, &#34;v&#34;]</pre><br>↓のように実装していますが、k=[v] のあとに <code>,</code> が無い場合はどういう正規表現になるんでしょうか？（そこがポイントな気がします）<br><pre>var p = regexp.MustCompile(`(?:(.+)=\[(.+)\],?)+`)<br><br>func main() {<br>	arg := &#34;k=[a,b,c],k=[v]&#34;<br>	fmt.Printf(&#34;%#+v\n&#34;, p.FindStringSubmatch(arg))<br>}</pre>
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1612397308.015000">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2019-08-09/721207338820_626bbc95c10c7b6c7738_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">eihigh</span>
+              <a href="#ts-1612397308.015000">4日 09:08:28</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C01DP17ANNP/p1612397308015000" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                自分なら []の中身を正規表現で取ったあとにstrings.Splitしちゃうかなあ<br>むろん入れ子になってると使えないですが
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1612397320.015200">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2019-11-14/833953864853_aa245483338df08cd3b2_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">heavenshell</span>
+              <a href="#ts-1612397320.015200">4日 09:08:40</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C01DP17ANNP/p1612397320015200" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                自分なら = で split しちゃいそう
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1612397326.015500">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2019-11-14/833953864853_aa245483338df08cd3b2_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">heavenshell</span>
+              <a href="#ts-1612397326.015500">4日 09:08:46</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C01DP17ANNP/p1612397326015500" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                被ったw
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1612397361.016300">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2019-08-09/721207338820_626bbc95c10c7b6c7738_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">eihigh</span>
+              <a href="#ts-1612397361.016300">4日 09:09:21</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C01DP17ANNP/p1612397361016300" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                あ、そっちの,だったんすね<br>自分のは見間違いでした
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1612397494.016800">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2021-01-06/1621211956228_09947ad089d6e790ca09_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">ゴリラ（強くなれる理由を知った）</span>
+              <a href="#ts-1612397494.016800">4日 09:11:34</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C01DP17ANNP/p1612397494016800" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                <pre>k=[a,b,c],k=[v]</pre><br>そもそもこのsyntaxがあまり行けない気がしてきました…
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1612397521.017500">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2021-01-06/1621211956228_09947ad089d6e790ca09_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">ゴリラ（強くなれる理由を知った）</span>
+              <a href="#ts-1612397521.017500">4日 09:12:01</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C01DP17ANNP/p1612397521017500" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                1つずつトークンをパースしていくしか無いスカね…
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1612398703.018400">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2015-01-15/3417067010_04a676b32692fb2507e1_48.jpg" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">thinca</span>
+              <a href="#ts-1612398703.018400">4日 09:31:43</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C01DP17ANNP/p1612398703018400" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                Go の正規表現エンジンについては詳しくないですが、 <code>.+</code> だと最後までマッチしちゃいますよね
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1612398982.018600">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2015-01-15/3417067010_04a676b32692fb2507e1_48.jpg" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">thinca</span>
+              <a href="#ts-1612398982.018600">4日 09:36:22</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C01DP17ANNP/p1612398982018600" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                <a href='https://play.golang.org/p/Xg6LfT738zy'>https://play.golang.org/p/Xg6LfT738zy</a> こういうこと?
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1612399018.018800">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2015-01-15/3417067010_04a676b32692fb2507e1_48.jpg" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">thinca</span>
+              <a href="#ts-1612399018.018800">4日 09:36:58</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C01DP17ANNP/p1612399018018800" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                最後の <code>,?</code> はいらんな
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1612399069.019000">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2021-01-06/1621211956228_09947ad089d6e790ca09_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">ゴリラ（強くなれる理由を知った）</span>
+              <a href="#ts-1612399069.019000">4日 09:37:49</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C01DP17ANNP/p1612399069019000" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                おお
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1612399074.019300">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2021-01-06/1621211956228_09947ad089d6e790ca09_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">ゴリラ（強くなれる理由を知った）</span>
+              <a href="#ts-1612399074.019300">4日 09:37:54</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C01DP17ANNP/p1612399074019300" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                それです
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1612399089.019700">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2021-01-06/1621211956228_09947ad089d6e790ca09_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">ゴリラ（強くなれる理由を知った）</span>
+              <a href="#ts-1612399089.019700">4日 09:38:09</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C01DP17ANNP/p1612399089019700" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                <pre>(.+?)=\[(.+?)\],?</pre>
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1612399092.020000">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2021-01-06/1621211956228_09947ad089d6e790ca09_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">ゴリラ（強くなれる理由を知った）</span>
+              <a href="#ts-1612399092.020000">4日 09:38:12</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C01DP17ANNP/p1612399092020000" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                これだけでよいのか
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1612399110.020400">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2021-01-06/1621211956228_09947ad089d6e790ca09_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">ゴリラ（強くなれる理由を知った）</span>
+              <a href="#ts-1612399110.020400">4日 09:38:30</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C01DP17ANNP/p1612399110020400" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                グルーピングして繰り返す必要があるかと思った…
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1612399143.020800">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2021-01-06/1621211956228_09947ad089d6e790ca09_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">ゴリラ（強くなれる理由を知った）</span>
+              <a href="#ts-1612399143.020800">4日 09:39:03</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C01DP17ANNP/p1612399143020800" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                そっか、matchした部分が繰り返し取得できるのか
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1612399174.021100">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2021-01-06/1621211956228_09947ad089d6e790ca09_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">ゴリラ（強くなれる理由を知った）</span>
+              <a href="#ts-1612399174.021100">4日 09:39:34</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C01DP17ANNP/p1612399174021100" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                <pre>FindAllStringSubmatch</pre>
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1612399176.021300">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2021-01-06/1621211956228_09947ad089d6e790ca09_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">ゴリラ（強くなれる理由を知った）</span>
+              <a href="#ts-1612399176.021300">4日 09:39:36</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C01DP17ANNP/p1612399176021300" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                これか
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1612399184.021500">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2021-01-06/1621211956228_09947ad089d6e790ca09_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">ゴリラ（強くなれる理由を知った）</span>
+              <a href="#ts-1612399184.021500">4日 09:39:44</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C01DP17ANNP/p1612399184021500" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                <img class='slacklog-emoji' title=':rikai:' alt=':rikai:' src='/slacklog/emojis/rikai.png'>
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1612399204.021700">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2021-01-06/1621211956228_09947ad089d6e790ca09_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">ゴリラ（強くなれる理由を知った）</span>
+              <a href="#ts-1612399204.021700">4日 09:40:04</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C01DP17ANNP/p1612399204021700" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                ありがとうございます！
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1612399285.022000">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2021-01-06/1621211956228_09947ad089d6e790ca09_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">ゴリラ（強くなれる理由を知った）</span>
+              <a href="#ts-1612399285.022000">4日 09:41:25</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C01DP17ANNP/p1612399285022000" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                あれ、 <code>.+?</code>これじゃないといけないんですか？
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1612399307.022600">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2021-01-06/1621211956228_09947ad089d6e790ca09_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">ゴリラ（強くなれる理由を知った）</span>
+              <a href="#ts-1612399307.022600">4日 09:41:47</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C01DP17ANNP/p1612399307022600" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                <code>(.+)</code> これだけで行けると思っていた
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1612399729.025200">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2021-01-06/1621211956228_09947ad089d6e790ca09_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">ゴリラ（強くなれる理由を知った）</span>
+              <a href="#ts-1612399729.025200">4日 09:48:49</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C01DP17ANNP/p1612399729025200" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                +? の理解ができていない…
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1612399761.025400">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2021-01-06/1621211956228_09947ad089d6e790ca09_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">ゴリラ（強くなれる理由を知った）</span>
+              <a href="#ts-1612399761.025400">4日 09:49:21</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C01DP17ANNP/p1612399761025400" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                <a href='https://www.megasoft.co.jp/mifes/seiki/about.html'>https://www.megasoft.co.jp/mifes/seiki/about.html</a>
+              </div>
+
+              <div>
+              </div>
+            <div class="mt-2 border p-2" id="ts-1612399761.025400">
+              
+    <div class="d-flex">
+    </div>
+      <div class="d-flex">
+        <div class="mt-2">Perlのプログラムやテキストエディタの「検索」で指定ができる正規表現サンプル集です。コピー&amp;ペーストでご利用ください。</div>
+      </div>
+
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1612399768.025800">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2021-01-06/1621211956228_09947ad089d6e790ca09_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">ゴリラ（強くなれる理由を知った）</span>
+              <a href="#ts-1612399768.025800">4日 09:49:28</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C01DP17ANNP/p1612399768025800" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                <pre>&lt;.+&gt;　の一致例　→　&lt;h1&gt;タイトルタイトル&lt;/h1&gt; （最長一致）<br>&lt;.+?&gt;　の一致例　→　&lt;h1&gt;タイトルタイトル&lt;/h1&gt; （最短一致）</pre>
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1612399771.026000">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2021-01-06/1621211956228_09947ad089d6e790ca09_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">ゴリラ（強くなれる理由を知った）</span>
+              <a href="#ts-1612399771.026000">4日 09:49:31</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C01DP17ANNP/p1612399771026000" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                なるほど
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1612400141.026200">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2021-01-06/1621211956228_09947ad089d6e790ca09_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">ゴリラ（強くなれる理由を知った）</span>
+              <a href="#ts-1612400141.026200">4日 09:55:41</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C01DP17ANNP/p1612400141026200" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                これ、便利だなぁ
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1612401212.026500">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2015-01-15/3417067010_04a676b32692fb2507e1_48.jpg" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">thinca</span>
+              <a href="#ts-1612401212.026500">4日 10:13:32</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C01DP17ANNP/p1612401212026500" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                引用結果に色が付いてないので何もわからないw
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1612401718.027600">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2018-07-31/407982080133_30e238cd92e6c88883f9_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">mattn</span>
+              <a href="#ts-1612401718.027600">4日 10:21:58</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C01DP17ANNP/p1612401718027600" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                物によるけど、パーサ書いた方が確実そう。
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1612401740.027900">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2018-07-31/407982080133_30e238cd92e6c88883f9_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">mattn</span>
+              <a href="#ts-1612401740.027900">4日 10:22:20</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C01DP17ANNP/p1612401740027900" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                エスケープ混じってくると死んじゃうし。。
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1612402829.028500">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2021-01-06/1621211956228_09947ad089d6e790ca09_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">ゴリラ（強くなれる理由を知った）</span>
+              <a href="#ts-1612402829.028500">4日 10:40:29</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C01DP17ANNP/p1612402829028500" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                引用に色なかった…
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1612402845.029000">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2021-01-06/1621211956228_09947ad089d6e790ca09_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">ゴリラ（強くなれる理由を知った）</span>
+              <a href="#ts-1612402845.029000">4日 10:40:45</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C01DP17ANNP/p1612402845029000" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                やっぱりパーサ書いた方が確実すよね…
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1612403988.029600">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2019-07-28/696621453314_0edf66561724b8e38e6a_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">monaqa</span>
+              <a href="#ts-1612403988.029600">4日 10:59:48</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C01DP17ANNP/p1612403988029600" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                対象が正規文法であるかどうかに注目すれば確実
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1612406323.030400">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2015-01-15/3417067010_04a676b32692fb2507e1_48.jpg" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">thinca</span>
+              <a href="#ts-1612406323.030400">4日 11:38:43</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C01DP17ANNP/p1612406323030400" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                目的次第ですねぇ。エスケープなんて入り込む余地がないのであればパーサはオーバースペックとも感じる
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1612407442.030700">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2021-01-06/1621211956228_09947ad089d6e790ca09_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">ゴリラ（強くなれる理由を知った）</span>
+              <a href="#ts-1612407442.030700">4日 11:57:22</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C01DP17ANNP/p1612407442030700" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                ですねぇ
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1612407574.031300">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2018-07-31/407982080133_30e238cd92e6c88883f9_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">mattn</span>
+              <a href="#ts-1612407574.031300">4日 11:59:34</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/C01DP17ANNP/p1612407574031300" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                <code>k=[&#34;=&#34;,a,b]</code> みたいなのが混じるとつらい。
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <!-- footer -->
