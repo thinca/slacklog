@@ -6997,7 +6997,17 @@
                   <a href="/slacklog/files/F01NMT2833J/Dockerfile.dockerfile" target="_blank" rel="noopener noreferrer">
                   <span class="f5">[[ダウンロード: Dockerfile(Docker)]]</span>
                   </a>
-                  <pre><span class="file-error">no files found: open ../pages/files/F01NMT2833J/Dockerfile.dockerfile: no such file or directory</span></pre>
+                  <pre><code class='language-dockerfile'>FROM thinca/vim:latest-full-ubuntu
+
+RUN apt-get -y update
+RUN apt-get -y install curl git
+RUN curl -fsSL https://deno.land/x/install/install.sh | sh
+ENV PATH $PATH:/root/.deno/bin
+
+RUN mkdir -p ~/.vim/pack/tmp/start
+RUN git clone --depth=1 https://github.com/vim-denops/denops.vim ~/.vim/pack/tmp/start/denops.vim
+RUN git clone --depth=1 https://github.com/vim-denops/denops-helloworld.vim ~/.vim/pack/tmp/start/denops-helloworld.vim
+RUN echo packloadall! &gt; ~/.vim/vimrc</code></pre>
                 </div>
               </div>
             </div>
@@ -26122,7 +26132,17 @@
                   <a href="/slacklog/files/F01PLQK78SU/%E7%84%A1%E9%A1%8C.txt" target="_blank" rel="noopener noreferrer">
                   <span class="f5">[[ダウンロード: 無題(プレーンテキスト)]]</span>
                   </a>
-                  <pre><span class="file-error">no files found: open ../pages/files/F01PLQK78SU/無題.txt: no such file or directory</span></pre>
+                  <pre><code class='language-none'>a.vim
+```
+let j = job_start(&#34;./a.sh&#34;, {&#34;mode&#34;: &#34;json&#34;})
+```
+
+a.sh
+```
+cat &lt;&lt;EOF
+[&#34;ex&#34;, &#34;call setline(1, &#39;aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa&#39;)&#34;]
+EOF
+```</code></pre>
                 </div>
               </div>
             </div>
@@ -35840,7 +35860,23 @@
                   <a href="/slacklog/files/F01P74KBMM2/______.ts" target="_blank" rel="noopener noreferrer">
                   <span class="f5">[[ダウンロード: 無題(TypeScript)]]</span>
                   </a>
-                  <pre><span class="file-error">no files found: open ../pages/files/F01P74KBMM2/______.ts: no such file or directory</span></pre>
+                  <pre><code class='language-typescript'>vim.register({
+  async callback(lines: Array&lt;string&gt;): Promise&lt;void&gt; {
+    // ...
+  }
+})
+
+await vim.execute(`
+  function! denops#fzf(source) abort
+    call fzf#run({
+    \ &#39;source&#39;: a:source,
+    \ &#39;sink*&#39;:  { lines -&gt; denops#request(&#39;${vim.name}&#39;, &#39;callback&#39;, [lines]) },
+    \ })
+  endfunction
+`);
+
+await vim.call(&#34;denops#fzf&#34;, getProjectFiles());
+</code></pre>
                 </div>
               </div>
               <details class="details-reset mt-3">
@@ -43075,7 +43111,29 @@
                   <a href="/slacklog/files/F01PJUZ24BT/%E7%84%A1%E9%A1%8C.txt" target="_blank" rel="noopener noreferrer">
                   <span class="f5">[[ダウンロード: 無題(プレーンテキスト)]]</span>
                   </a>
-                  <pre><span class="file-error">no files found: open ../pages/files/F01PJUZ24BT/無題.txt: no such file or directory</span></pre>
+                  <pre><code class='language-none'>Check file:///home/arch/a.ts
+error: TS2451 [ERROR]: Cannot redeclare block-scoped variable &#39;a&#39;.
+const a = &#34;hoge&#34;;
+      ^
+    at file:///home/arch/b.ts:1:7
+
+    &#39;a&#39; was also declared here.
+    const a = import(&#34;./b.ts&#34;);
+          ^
+        at file:///home/arch/a.ts:1:7
+
+TS2451 [ERROR]: Cannot redeclare block-scoped variable &#39;a&#39;.
+const a = import(&#34;./b.ts&#34;);
+      ^
+    at file:///home/arch/a.ts:1:7
+
+    &#39;a&#39; was also declared here.
+    const a = &#34;hoge&#34;;
+          ^
+        at file:///home/arch/b.ts:1:7
+
+Found 2 errors.
+</code></pre>
                 </div>
               </div>
             </div>

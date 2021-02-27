@@ -3901,7 +3901,76 @@
                   <a href="/slacklog/files/F01M3R6A2DQ/hoge_pl.pl" target="_blank" rel="noopener noreferrer">
                   <span class="f5">[[ダウンロード: hoge.pl(Perl)]]</span>
                   </a>
-                  <pre><span class="file-error">no files found: open ../pages/files/F01M3R6A2DQ/hoge_pl.pl: no such file or directory</span></pre>
+                  <pre><code class='language-perl'>#!/usr/bin/env perl
+
+use strict;
+
+open (F, &#39;git ls-tree -r HEAD|&#39;);
+
+my %list;
+
+# 辞書作る
+while (&lt;F&gt;) {
+    my @info = split /\s+/;
+
+    my $filename = $info[-1];
+    my $hash     = $info[-2];
+
+    $list{$filename} = $hash;
+}
+
+close(F);
+
+open (COMMITS, &#39;git rev-list HEAD |&#39;);
+
+# timestamp 取りつつ tree を get
+my $prevtimestamp;
+my $timestamp;
+while (&lt;COMMITS&gt;) {
+    my $commit = $_;
+
+    (keys %list) or last;
+
+    open (TMP, &#39;git cat-file -p &#39; . $commit . &#39;|&#39;);
+    my $tree;
+    while (&lt;TMP&gt;) {
+        if (/tree/) {
+            my @tmp = split /\s+/;
+            $tree = $tmp[1];
+            next
+        }
+        if (/committer/) {
+            my @tmp = split /\s+/;
+            $timestamp = $tmp[-2];
+            last;
+        }
+    }
+    close(TMP);
+
+    open (BLOBS, &#34;git ls-tree -r $tree |&#34;);
+
+    while (&lt;BLOBS&gt;) {
+        my @tmp = split(/\s+/);
+        my $filename = $tmp[-1];
+        my $blobhash = $tmp[-2];
+
+        if (!$list{$filename}) {
+            next;
+        }
+
+        if ($list{$filename} !~ /$blobhash/) {
+            print $filename . &#34;: &#34; . $prevtimestamp . &#34; \n&#34;;
+            delete ($list{$filename});
+        }
+    }
+
+    $prevtimestamp = $timestamp;
+
+    close (BLOBS);
+}
+
+close (COMMITS);
+</code></pre>
                 </div>
               </div>
               <details class="details-reset mt-3">
@@ -17828,7 +17897,12 @@
                   <a href="/slacklog/files/F01PF7RSBPU/.gitconfig" target="_blank" rel="noopener noreferrer">
                   <span class="f5">[[ダウンロード: .gitconfig(プレーンテキスト)]]</span>
                   </a>
-                  <pre><span class="file-error">no files found: open ../pages/files/F01PF7RSBPU/.gitconfig: no such file or directory</span></pre>
+                  <pre><code class='language-none'>[alias]
+	branches = &#34;!f () {\
+		git branch --format=\&#34;%(align:width=8)local%(end) %(align:width=48)%(refname:short)%(end) %(align:width=16)%(committername)%(end)  %(if)%(upstream)%(then)%(upstream:short)%(end)\&#34;;\
+		git branch --remotes --format=\&#34;%(align:width=8)remote%(end) %(align:width=48)%(refname:short)%(end) %(committername)\&#34;;\
+	};f&#34;
+</code></pre>
                 </div>
               </div>
             </div>

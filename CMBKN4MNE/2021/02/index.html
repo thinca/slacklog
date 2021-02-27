@@ -1488,7 +1488,15 @@
                   <a href="/slacklog/files/F01MA0R4V2R/%E7%84%A1%E9%A1%8C.rs" target="_blank" rel="noopener noreferrer">
                   <span class="f5">[[ダウンロード: 無題(Rust)]]</span>
                   </a>
-                  <pre><span class="file-error">no files found: open ../pages/files/F01MA0R4V2R/無題.rs: no such file or directory</span></pre>
+                  <pre><code class='language-rust'>match stream.poll_next(cx) {
+    Poll::Ready(Some(Ok(data))) =&gt; {
+        let data: Vec&lt;u8&gt; = data.into();
+        let message = proto::Message::decode(bytes::Bytes::from(data));
+        Poll::Ready(Some(message.context(&#34;Failed to decode message&#34;)))
+    }
+    Poll::Ready(Some(Err(error))) =&gt; Poll::Ready(Some(Err(error.into()))),
+    x =&gt; x,
+}</code></pre>
                 </div>
               </div>
             </div>

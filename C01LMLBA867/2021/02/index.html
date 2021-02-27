@@ -6465,7 +6465,36 @@
                   <a href="/slacklog/files/F01MU5XTKM4/bool_txt.txt" target="_blank" rel="noopener noreferrer">
                   <span class="f5">[[ダウンロード: bool.txt(プレーンテキスト)]]</span>
                   </a>
-                  <pre><span class="file-error">no files found: open ../pages/files/F01MU5XTKM4/bool_txt.txt: no such file or directory</span></pre>
+                  <pre><code class='language-none'>x Or y = (x Nand x) Nand (y Nand y)
+
+a  or  b = x
+0      0   0
+1      0   1
+0      1   1
+1      1   1
+
+a and  b = x
+0      0   0
+1      0   0
+0      1   0
+1      1   1
+
+a nand b = x (= not (a and  b))
+0      0   1    0    0      0
+1      0   1    0    1      0
+0      1   1    0    0      1
+1      1   0    1    1      1
+
+a nand a = x
+0      0   1
+1      1   0
+
+(a nand a) nand (b nand b) = x = (a  or  b)
+ 0      0| 1     0      0| 1 0    0      0
+ 1      1| 0     0      0| 1 1    1      0
+ 0      0| 1     1      1| 0 1    0      1
+ 1      1| 0     1      1| 0 1    1      1
+</code></pre>
                 </div>
               </div>
             </div>
@@ -6498,7 +6527,14 @@
                   <a href="/slacklog/files/F01MU7EPWFQ/case.txt" target="_blank" rel="noopener noreferrer">
                   <span class="f5">[[ダウンロード: case.txt(プレーンテキスト)]]</span>
                   </a>
-                  <pre><span class="file-error">no files found: open ../pages/files/F01MU7EPWFQ/case.txt: no such file or directory</span></pre>
+                  <pre><code class='language-none'>x Or y = (x Nand x) Nand (y Nand y)
+
+a b | (a nand a) nand (b nand b) = x = (a  or  b)
+0 0 |  0      0|&gt;1     0      0|&gt;1 0    0      0
+1 0 |  1      1|&gt;0     0      0|&gt;1 1    1      0
+0 1 |  0      0|&gt;1     1      1|&gt;0 1    0      1
+1 1 |  1      1|&gt;0     1      1|&gt;0 1    1      1
+</code></pre>
                 </div>
               </div>
             </div>
@@ -6550,7 +6586,20 @@
                   <a href="/slacklog/files/F01N75Z0FFE/demorganlaw.txt" target="_blank" rel="noopener noreferrer">
                   <span class="f5">[[ダウンロード: demorganlaw.txt(プレーンテキスト)]]</span>
                   </a>
-                  <pre><span class="file-error">no files found: open ../pages/files/F01N75Z0FFE/demorganlaw.txt: no such file or directory</span></pre>
+                  <pre><code class='language-none'>ド・モルガンの法則
+
+not (a and b) = (not a) or  (not b)
+not (a or  b) = (not a) and (not b)
+
+(a nand a) nand (b nand b)
+= not (a and a) nand not (b and b)
+= not a nand not b
+= not (not a and not b)
+= (not not a) or (not not b)
+= a or b
+
+https://ja.wikipedia.org/wiki/%E5%90%A6%E5%AE%9A%E8%AB%96%E7%90%86%E7%A9%8D#%E5%AE%8C%E5%85%A8%E6%80%A7
+</code></pre>
                 </div>
               </div>
             </div>
