@@ -39772,6 +39772,886 @@ export default window.React;
             </div>
           </div>
         </div>
+        <div class="clearfix m-3" id="ts-1614512383.335200">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2018-03-09/327298108645_48b1c10b3cf4092337c5_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">ycino</span>
+              <a href="#ts-1614512383.335200">28日 20:39:43</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CGZTGR6E6/p1614512383335200" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                material-uiとemotion or styled-componentsのstyled組み合わせて使ってる人います？
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1614512455.336300">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2019-11-14/833953864853_aa245483338df08cd3b2_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">heavenshell</span>
+              <a href="#ts-1614512455.336300">28日 20:40:55</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CGZTGR6E6/p1614512455336300" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                はい(使ってた)
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1614512464.336500">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2018-03-09/327298108645_48b1c10b3cf4092337c5_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">ycino</span>
+              <a href="#ts-1614512464.336500">28日 20:41:04</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CGZTGR6E6/p1614512464336500" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                結構末端の方なんだけど、そこから下に更に数段Componentがネストしてるような状況で雑に<br><pre>const FileList = styled(_FileList)&lt;{ disabled: boolean }&gt;`<br>  padding-bottom: ${SPACING_REGULAR}px;<br>  .MuiTypography-root {<br>    ${({ disabled }) =&gt; disabled &amp;&amp; &#39;color: #A5A5A5;&#39;};<br>  }<br>  .MuiSvgIcon-root {<br>    ${({ disabled }) =&gt; disabled &amp;&amp; &#39;color: #A5A5A5;&#39;};<br>  }<br>  .MuiAvatar-colorDefault {<br>    ${({ disabled }) =&gt; disabled &amp;&amp; &#39;color: initial;&#39;};<br>    ${({ disabled }) =&gt; disabled &amp;&amp; &#39;background-color: initial;&#39;};<br>  }<br>`;</pre><br>みたいにガッとCSS流し込んでるんですけど、これやっちゃっていいのかって気持ちになってきた
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1614512546.337400">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2018-03-09/327298108645_48b1c10b3cf4092337c5_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">ycino</span>
+              <a href="#ts-1614512546.337400">28日 20:42:26</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CGZTGR6E6/p1614512546337400" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                styledでAPIのGlobal class名を指定して数段下に直でCSS流し込んでひとまず動くようにした状態なんですよね
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1614512723.338800">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2019-11-14/833953864853_aa245483338df08cd3b2_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">heavenshell</span>
+              <a href="#ts-1614512723.338800">28日 20:45:23</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CGZTGR6E6/p1614512723338800" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                どうでしょうね。コンポーネントが閉じてるのならありな気もするし、メンテナブルかと言われると微妙な気もするしw
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1614512724.339000">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2018-03-09/327298108645_48b1c10b3cf4092337c5_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">ycino</span>
+              <a href="#ts-1614512724.339000">28日 20:45:24</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CGZTGR6E6/p1614512724339000" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                material-uiのstyled使ってRuleで指定してもいいと思うんですけど、本質的にやりたいことは同じかと思ったのでひとまずこういう指定してます
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1614512745.339500">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2018-03-09/327298108645_48b1c10b3cf4092337c5_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">ycino</span>
+              <a href="#ts-1614512745.339500">28日 20:45:45</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CGZTGR6E6/p1614512745339500" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                現状閉じてはいると思うんだけど、うーんって感じもするんですよね
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1614512753.339700">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2018-03-09/327298108645_48b1c10b3cf4092337c5_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">ycino</span>
+              <a href="#ts-1614512753.339700">28日 20:45:53</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CGZTGR6E6/p1614512753339700" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                拡張性が閉じすぎてるのはあって
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1614512791.340300">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2019-11-14/833953864853_aa245483338df08cd3b2_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">heavenshell</span>
+              <a href="#ts-1614512791.340300">28日 20:46:31</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CGZTGR6E6/p1614512791340300" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                <pre>const StyledHr = &lt;http://styled.hr|styled.hr&gt;&lt;any&gt;`<br>  border: none;<br>  height: 1px;<br>  margin: 0;<br>  flex-shrink: 0;<br>  background-color: ${(props) =&gt;<br>    props.theme[&#39;palette&#39;][&#39;type&#39;] === &#39;dark&#39;<br>      ? &#39;rgba(255, 255, 255, 0.12)&#39;<br>      : &#39;rgba(0, 0, 0, 0.12)&#39;};<br></pre>`<br>こんなことをしたことあるので、あんま人のこと言えない気はしますw
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1614512837.340800">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2018-03-09/327298108645_48b1c10b3cf4092337c5_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">ycino</span>
+              <a href="#ts-1614512837.340800">28日 20:47:17</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CGZTGR6E6/p1614512837340800" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                なるほど、結構雑だけどGlobal class使ってるかどうかって差はありますね・・・
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1614512884.341600">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2019-11-14/833953864853_aa245483338df08cd3b2_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">heavenshell</span>
+              <a href="#ts-1614512884.341600">28日 20:48:04</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CGZTGR6E6/p1614512884341600" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                css の意見言えるほどわかってないのであれ…。
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1614512926.342500">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2018-03-09/327298108645_48b1c10b3cf4092337c5_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">ycino</span>
+              <a href="#ts-1614512926.342500">28日 20:48:46</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CGZTGR6E6/p1614512926342500" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                雑にいうと <code>FileList -&gt; FileListItem -&gt; Grid -&gt; Icon, Typography, Button</code> みたいになっていて、下の方がまぁネストしてはいるんですよね
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1614512970.343500">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2018-03-09/327298108645_48b1c10b3cf4092337c5_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">ycino</span>
+              <a href="#ts-1614512970.343500">28日 20:49:30</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CGZTGR6E6/p1614512970343500" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                これに対して <code>FileList</code> レベルからglobalなclass nameを指定してスタイル流し込んでいいのかどうかみたいな、ただ末端でそれぞれ指定するのも面倒なんですよね
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1614512988.343700">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2019-11-14/833953864853_aa245483338df08cd3b2_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">heavenshell</span>
+              <a href="#ts-1614512988.343700">28日 20:49:48</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CGZTGR6E6/p1614512988343700" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                なるほど
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1614513039.344100">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2018-03-09/327298108645_48b1c10b3cf4092337c5_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">ycino</span>
+              <a href="#ts-1614513039.344100">28日 20:50:39</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CGZTGR6E6/p1614513039344100" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                あとはdisabledみたいなpropsを完全に末端までバケツリレー必須にするのもだるいなーって感じです
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1614513111.344700">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2018-03-09/327298108645_48b1c10b3cf4092337c5_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">ycino</span>
+              <a href="#ts-1614513111.344700">28日 20:51:51</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CGZTGR6E6/p1614513111344700" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                <code>FileListItem</code> 以下のの独立性次第みたいなのもあるんですかねぇ、ただこれ予測しておくのも変わっていきそうだしなぁ
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1614513202.345900">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2018-03-09/327298108645_48b1c10b3cf4092337c5_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">ycino</span>
+              <a href="#ts-1614513202.345900">28日 20:53:22</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CGZTGR6E6/p1614513202345900" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                これ、結局名前空間がある程度縛られてはいるけど、どこかのレイヤでglobalなCSSがいきなり流れ込んでくるって話になるから大局的には従来の辛いCSSになりそうな気もする・・・
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1614513224.346200">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2019-11-14/833953864853_aa245483338df08cd3b2_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">heavenshell</span>
+              <a href="#ts-1614513224.346200">28日 20:53:44</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CGZTGR6E6/p1614513224346200" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                あー確かに。
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1614513251.346700">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2018-03-09/327298108645_48b1c10b3cf4092337c5_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">ycino</span>
+              <a href="#ts-1614513251.346700">28日 20:54:11</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CGZTGR6E6/p1614513251346700" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                うーん、今回はこれで済ませたいけどどこまでやるか難しいなこれ・・・
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1614513382.348200">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2018-03-09/327298108645_48b1c10b3cf4092337c5_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">ycino</span>
+              <a href="#ts-1614513382.348200">28日 20:56:22</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CGZTGR6E6/p1614513382348200" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                CSS自体はstringでgrepしにくいのもあって、後々制御する必要が出たとき辛そう<br>だけど実装の都合的にはある程度雑にやった方が楽だしひとまずの可読性は高くなる的な感じかなぁ
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1614513461.349600">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2018-03-09/327298108645_48b1c10b3cf4092337c5_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">ycino</span>
+              <a href="#ts-1614513461.349600">28日 20:57:41</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CGZTGR6E6/p1614513461349600" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                この辺いい感じに運用できてる人がいたら話聞きたいな、Organismsとかのレイヤリングも関わってきそう
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1614513494.350100">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2019-11-14/833953864853_aa245483338df08cd3b2_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">heavenshell</span>
+              <a href="#ts-1614513494.350100">28日 20:58:14</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CGZTGR6E6/p1614513494350100" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                そこらへんは tomoya san かなぁ。
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1614513529.350500">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2018-03-09/327298108645_48b1c10b3cf4092337c5_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">ycino</span>
+              <a href="#ts-1614513529.350500">28日 20:58:49</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CGZTGR6E6/p1614513529350500" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                一回使っちゃうとmaterial-uiでGlobal class使うのが楽なんですよねぇ
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1614513876.351700">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2021-02-24/1769267615079_a3a2d7805a5d0be059df_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">tomoya</span>
+              <a href="#ts-1614513876.351700">28日 21:04:36</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CGZTGR6E6/p1614513876351700" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                もし、全体で統一感を出せるのであれば、テーマを拡張した方が楽だと思いますね。
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1614513909.352100">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2018-03-09/327298108645_48b1c10b3cf4092337c5_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">ycino</span>
+              <a href="#ts-1614513909.352100">28日 21:05:09</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CGZTGR6E6/p1614513909352100" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                テーマの拡張、確かに全体で統一するならそもそもそっちの方がいいですね
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1614513953.353300">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2018-03-09/327298108645_48b1c10b3cf4092337c5_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">ycino</span>
+              <a href="#ts-1614513953.353300">28日 21:05:53</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CGZTGR6E6/p1614513953353300" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                今やってるのはなんか違う気がするんだよなー・・・<br>特定の機能を持つフォームのコンポーネントについて閉じたdisabledなテーマが欲しい感じです
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1614514048.354800">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2018-03-09/327298108645_48b1c10b3cf4092337c5_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">ycino</span>
+              <a href="#ts-1614514048.354800">28日 21:07:28</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CGZTGR6E6/p1614514048354800" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                FileUploaderがあるんだけど、ある程度使う場所が限られてるコンポーネントって状態です<br>別の画面から数カ所では使われていそうくらい
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1614514097.356100">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2021-02-24/1769267615079_a3a2d7805a5d0be059df_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">tomoya</span>
+              <a href="#ts-1614514097.356100">28日 21:08:17</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CGZTGR6E6/p1614514097356100" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                元のdisabled は残しつつ、別の見た目をもつdisabledなコンポーネントを用意したいって感じですかね
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1614514175.357400">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2018-03-09/327298108645_48b1c10b3cf4092337c5_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">ycino</span>
+              <a href="#ts-1614514175.357400">28日 21:09:35</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CGZTGR6E6/p1614514175357400" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                そんな感じですね、今回はFileUploader全体をdisabledにしたコンポーネントが独自に必要になりました（DisabledFileUploader的なの）
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1614514254.358200">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2018-03-09/327298108645_48b1c10b3cf4092337c5_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">ycino</span>
+              <a href="#ts-1614514254.358200">28日 21:10:54</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CGZTGR6E6/p1614514254358200" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                他の場所でいうとModalに閉じた検索フォームみたいなのが独自に必要になった場合も迷いました、これも全体のテーマと違ってそう
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1614514318.358600">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2018-03-09/327298108645_48b1c10b3cf4092337c5_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">ycino</span>
+              <a href="#ts-1614514318.358600">28日 21:11:58</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CGZTGR6E6/p1614514318358600" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                これはnpmパッケージを独自に切れば幸せになるみたいなのはありそう
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1614514811.359600">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2021-02-24/1769267615079_a3a2d7805a5d0be059df_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">tomoya</span>
+              <a href="#ts-1614514811.359600">28日 21:20:11</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CGZTGR6E6/p1614514811359600" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                それだと、可能であればテーマ作ってしまった方が管理が楽な気がしますね。
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1614514881.360100">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2018-03-09/327298108645_48b1c10b3cf4092337c5_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">ycino</span>
+              <a href="#ts-1614514881.360100">28日 21:21:21</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CGZTGR6E6/p1614514881360100" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                なるほど、material-ui側でどうにかするべきですか
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1614514956.360500">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2018-03-09/327298108645_48b1c10b3cf4092337c5_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">ycino</span>
+              <a href="#ts-1614514956.360500">28日 21:22:36</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CGZTGR6E6/p1614514956360500" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                テーマって自由にプロパティ生やして拡張できるんですかね、その辺も知らない・・・
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1614515392.362500">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2021-02-24/1769267615079_a3a2d7805a5d0be059df_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">tomoya</span>
+              <a href="#ts-1614515392.362500">28日 21:29:52</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CGZTGR6E6/p1614515392362500" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                必要に応じてThemeProviderを使ってテーマを切り替えて使えば、オリジナルへの影響はゼロになるが楽ですね。<br>
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1614515416.362800">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2018-03-09/327298108645_48b1c10b3cf4092337c5_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">ycino</span>
+              <a href="#ts-1614515416.362800">28日 21:30:16</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CGZTGR6E6/p1614515416362800" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                おっThemeProviderって途中で差し替えれるのか
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1614515421.363000">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2018-03-09/327298108645_48b1c10b3cf4092337c5_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">ycino</span>
+              <a href="#ts-1614515421.363000">28日 21:30:21</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CGZTGR6E6/p1614515421363000" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                それ知らなかったです、なるほど
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1614515449.363400">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2018-03-09/327298108645_48b1c10b3cf4092337c5_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">ycino</span>
+              <a href="#ts-1614515449.363400">28日 21:30:49</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CGZTGR6E6/p1614515449363400" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                どこでどのテーマ差し込まれてるのか分からなくなるみたいなのはもしかしたらあるかもしれない
+              </div>
+
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix m-3" id="ts-1614515776.364200">
+          <div class="border-bottom">
+            <div class="float-left mr-2">
+              <img class="avatar" width="36" height="36" src="https://avatars.slack-edge.com/2021-02-24/1769267615079_a3a2d7805a5d0be059df_48.png" />
+            </div>
+            <div>
+              <span class="text-bold mr-1">tomoya</span>
+              <a href="#ts-1614515776.364200">28日 21:36:16</a>
+              <span class="Label Label--outline">
+                <a href="https://vim-jp.slack.com/archives/CGZTGR6E6/p1614515776364200" target="_blank" rel="noopener noreferrer">Slack</a>
+              </span>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <div class="pt-1 pb-1">
+                それはまぁあるかもですね。テーマはネストが可能になっています。<br><a href='https://material-ui.com/styles/advanced/#theme-nesting'>https://material-ui.com/styles/advanced/#theme-nesting</a>
+              </div>
+
+              <div>
+              </div>
+            <div class="mt-2 border p-2" id="ts-1614515776.364200">
+              
+    <div class="d-flex">
+        <div>
+          <img class="avatar avatar-small" width="32" height="32" src="https://material-ui.com/static/icons/180x180.png" alt="material-ui.com" />
+        </div>
+        <div class="flex-self-baseline f4 ml-2">
+          <span class="Label Label--outline">
+            <a href="https://material-ui.com/styles/advanced/#theme-nesting" target="_blank" rel="noopener noreferrer">Advanced - Material-UI</a>
+          </span>
+        </div>
+    </div>
+      <div class="d-flex">
+        <div class="mt-2">This section covers more advanced usage of @material-ui/core/styles.</div>
+      </div>
+      <div class="d-flex">
+        <div class="mt-2">
+          <img src="https://material-ui.com/static/logo.png" width="80" alt="Advanced - Material-UI" />
+        </div>
+      </div>
+
+            </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <!-- footer -->
