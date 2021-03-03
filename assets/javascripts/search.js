@@ -65,7 +65,7 @@ const onLoad = () => {
           let mesCount = reader.readVInt();
           while (0 <= --mesCount) {
             const tsSec = reader.readInt();
-            const tsMicrosec = reader.readInt();
+            const tsMicrosec = reader.readVInt();
             const ts = `${tsSec}.${tsMicrosec.toString().padStart(6, "0")}`;
 
             const key = `${channelNumber}:${ts}`;
