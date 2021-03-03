@@ -3,6 +3,9 @@ const onLoad = () => {
   const toHexString = (n) => {
     return n.toString(16).padStart(2, "0");
   };
+  const to2dString = (n) => {
+    return n.toString().padStart(2, "0");
+  };
 
   class Uint8ArrayReader {
     constructor(u8ary) {
@@ -59,14 +62,13 @@ const onLoad = () => {
         const reader = new Uint8ArrayReader(new Uint8Array(await blob.arrayBuffer()));
         while (!reader.isEOF()) {
           const channelNumber = reader.readVInt();
-          const channelId = numToChannel.get(channelNumber);
           let mesCount = reader.readVInt();
           while (0 <= --mesCount) {
             const tsSec = reader.readInt();
             const tsMicrosec = reader.readInt();
             const ts = `${tsSec}.${tsMicrosec.toString().padStart(6, "0")}`;
 
-            const key = `${channelId}:${ts}`;
+            const key = `${channelNumber}:${ts}`;
             let posSet = index.get(key);
             if (posSet == null) {
               posSet = new Set();
@@ -96,18 +98,16 @@ const onLoad = () => {
   (async () => {
     const res = await fetch("./index/channel");
     for (const line of (await res.text()).split("\n")) {
-      const [n, channelId] = line.split("\t");
-      if (channelId != null) {
-        numToChannel.set(n - 0, channelId);
+      const [n, channelID, channelName] = line.split("\t");
+      if (channelID != null) {
+        numToChannel.set(n - 0, {channelID, channelName});
       }
     }
   })();
 
-  document.getElementById("search-button").addEventListener("click", async () => {
-    const startTime = Date.now();
-    const text = document.getElementById("search-text");
+  const search = async (query) => {
     const indexes = await Promise.all(
-      [...text.value.matchAll(sepRegexp)].map(async (chunk) => index.get(chunk[0]))
+      [...query.matchAll(sepRegexp)].map(async (chunk) => index.get(chunk[0]))
     );
     const result = indexes.reduce((acc, cur) => {
       const next = new Map();
@@ -127,15 +127,36 @@ const onLoad = () => {
       return next;
     });
 
-    const links = [...result.entries()].map(([doc, ]) => {
-      const [channel, ts] = doc.split(":");
-      const date = new Date(ts.split(".")[0] * 1000);
-      const link = `${channel}/${date.getFullYear()}/${(date.getMonth() + 1).toString().padStart(2, "0")}/#ts-${ts}`;
-      return `<a href="${link}">${link}</a>`;
-    });
-    const processTime = Date.now() - startTime;
+    return result;
+  };
+
+  const execute = async () => {
     const resultElement = document.getElementById("result");
-    resultElement.innerHTML = `<p>${links.length} 件ヒットしました (${processTime / 1000} 秒)</p>${links.join("<br>")}`;
+    try {
+      const startTime = Date.now();
+      const text = document.getElementById("search-text");
+
+      const result = await search(text.value);
+
+      const links = [...result.keys()].map((doc) => {
+        const [channelNumber, ts] = doc.split(":");
+        const {channelID, channelName} = numToChannel.get(channelNumber - 0);
+        const date = new Date(ts.split(".")[0] * 1000);
+        const link = `${channelID}/${date.getFullYear()}/${(date.getMonth() + 1).toString().padStart(2, "0")}/#ts-${ts}`;
+        return `<a href="${link}">&#35;${channelName}: ${date.getFullYear()}-${to2dString(date.getMonth() + 1)}-${to2dString(date.getDay())} ${to2dString(date.getHours())}:${to2dString(date.getMinutes())}:${to2dString(date.getSeconds())}</a>`;
+      });
+      const processTime = Date.now() - startTime;
+      resultElement.innerHTML = `<p>${links.length} 件ヒットしました (${processTime / 1000} 秒)</p>${links.join("<br>")}`;
+    } catch (e) {
+      resultElement.innerHTML = `検索中にエラーが発生しました: ${e.name}: ${e.message}`;
+    }
+  }
+
+  document.getElementById("search-button").addEventListener("click", execute);
+  document.getElementById("search-text").addEventListener("keypress", (event) => {
+    if (event.key === "Enter") {
+      execute();
+    }
   });
 };
 
